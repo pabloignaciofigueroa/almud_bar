@@ -435,3 +435,4 @@ html:not(.has-gsap) .nooks__track{width:auto;overflow-x:auto}
 html:not(.has-gsap) .nook{height:auto;max-height:none}
 html:not(.has-gsap) .nook__media{aspect-ratio:4/5;flex:none}
 html:not(.has-gsap) .manifesto__text .w{opacity:1}
+.foot__emoji{font-size:.42em;vertical-align:.55em;display:inline-block}
