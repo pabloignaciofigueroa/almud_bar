@@ -13,7 +13,7 @@ Correcciones mínimas documentadas al final.
 - Bajada: "Coctelería de autor, comida & música bonita desde 2014" — [BIO]
 - Datos: "Abrimos de Mar a Sáb a las 18:00hrs" · "Serrano 325, Castro" — [BIO]
 - Botones: "Ver la carta" / "Cómo llegar" — [UI]
-- Cinta (marquee) de léxico propio, todas palabras literales de sus captions: guarisnaque [IG-013] · güergüero [IG-013] · comilona [IG-003] · empinar el codo [IG-037] · celebreichon [IG-049] · refreskeichon [IG-044] · ñam ñam [IG-069] · glup glup [IG-105] · picho caluga [IG-047] · macanúo [IG-041] · choriflai [IG-009] · Besi 😘 [todos]
+- Cinta (marquee) de léxico propio, todas palabras literales de sus captions: guarisnaque [IG-013] · güergüero [IG-013] · comilona [IG-003] · empinar el codo [IG-010] · celebreichon [IG-049] · refreskeichon [IG-044] · ñam ñam [IG-069] · glup glup [IG-105] · picho caluga [IG-047] · macanúo [IG-041] · choriflai [IG-009] · Besi 😘 [todos]
 
 ## 2. Momento memorable — "El almud se abre" (isotipo → ventana al video IG-061 con sonido opcional)
 - Rótulo: "Nuestra historia" [UI]
@@ -28,14 +28,14 @@ Correcciones mínimas documentadas al final.
   8. "donde cada persona que ha pasado por nuestro barcito ha sido muy importante y ha dejado su huella!"
   9. "Eso es lo que queremos lograr con Almud, que sea una experiencia, llena de música, coctelería y comida sabrosa."
 - Crédito: "Video @estudiouno.prod" — [IG-061]
-- Nota del nombre: "un almud es la unidad de medida chilota" — dato de reseña (Seo2, Tripadvisor 2015: "usando la unidad de medida chilota, el almud…") [RESEÑA]
+- Nota del nombre (manuscrita): "un almud: la unidad de medida chilota" — recorte de reseña (Seo2, Tripadvisor 2015: "usando la unidad de medida chilota, el almud…") [RESEÑA]; EN [UI]: "an almud: Chiloé's unit of measure"
 
 ## 3. Manifiesto
 - "Somos su Almudcito ito ito desbordando amor, locura, pasión, frenesí y un derroshe de coctelcitos y comilona ona ona!" — [IG-092]
 - Firma: "Les amamos, les esperamos!" — [IG-092]
 
 ## 4. Los rincones (galería horizontal)
-Intro: "Somos inquietos y nos gusta el colorssss!" — [IG-111]
+Intro: "Somos inquietos y nos gusta el colorssss!" — [IG-111] · nota manuscrita: "Tratando siempre de hacer nuestro Almudcito beio para su deleite" — [IG-111]
 | Rincón (título [UI]) | Texto | Fuente | Foto |
 |---|---|---|---|
 | La barra | "Pucha que nos gusta nuestra barrita!!" + "y una gran barra, larga, de esas para sentarse y quedarse ahí" | [IG-087] [VID-061] | IG-108/00 |
@@ -60,7 +60,7 @@ Intro: "Somos inquietos y nos gusta el colorssss!" — [IG-111]
 - "Puro manjarshhhh 👌🏼" — [IG-022]
 
 ## 7. Jornadas recreativas (eventos, como recuerdo)
-- Titular: "No somos ná sin ustedes!" — [IG-026]
+- Titular: "Ya saben que no somos ná sin ustedes!" — [IG-026]
 - Bajada: "Una pequeña muestra del disfrute que se vive en nuestro barsucho ucho ucho!" — [IG-026]
 - Tarjetas (año + nombre + cita):
   - 12 años · "Doce años! Cuánto coctelcito ha pasado bajo este puente" — [IG-010] (2026)
@@ -72,7 +72,7 @@ Intro: "Somos inquietos y nos gusta el colorssss!" — [IG-111]
   - Desfile de modas · "un desfile de modas que nada tiene que envidiarle al fashion week de Paris 😜!" — [IG-055] (2025)
   - 14F · "Amamos el 14F pa brindar en honor al amor!" — [IG-116] (2024)
   - Bendita Primavera · "Estamos shosh@s 🫶🏼 con nuestro día de Bendita Primavera que estuvo onfayaaaa!!" — [IG-076] (2024)
-  - Tardes en el Almud · disco en vivo de Isleños grabado en el bar — [IG-028]/[IG-029] (2026)
+  - Tardes en el Almud · "@almud_bar es un lugar emblemático en nuestro querido Castro" — Isleños [IG-029] (2026)
 
 ## 8. El equipo
 - Titular: "Peazo de equipo que tenemos!" — [IG-048]
@@ -102,4 +102,6 @@ Ver `content/reviews.json` (cada una con autor, país, fecha, fuente, `lang`). D
 ---
 
 ## Correcciones mínimas
-- Ninguna. Se mantiene la ortografía original (p. ej. "qué hay" en IG-160, "beios", "usté").
+- Carta: "Le llea" → "Le lleva" (Peter); "refrecante" → "refrescante" (Desde que te conocí); punto agregado donde el PDF tiene un emoji (Tukulito: "bigoteli. Acompañado"); glifos de emoji omitidos.
+- Se mantiene la ortografía original en todo lo demás (p. ej. "qué hay" en IG-160, "beios", "usté").
+- [BIO] archivada en `content/bio.txt`.

@@ -31,12 +31,12 @@ def img_tag(name, sizes, alt='', alt_en='', extra=''):
 def item_html(it, kind, i):
     name = it['n']; img = IMG_FOR.get(it.get('img', ''))
     pic = img_tag(img, '(max-width: 900px) 80vw, 34vw', ES_ALT[img], EN_ALT[img]) if img else ''
-    plate = '' if img else f'<div class="plate plate--{i % 6}" aria-hidden="true"><span>{E(name)}</span></div>'
+    plate = '' if img else f'<div class="plate plate--{i % 6}" aria-hidden="true"><span lang="es">{E(name)}</span></div>'
     desc = f'<p class="dish__d" lang="es">{E(it["d"])}</p>' if it.get('d') else ''
     return (f'<li class="dish{" has-img" if img else ""}" data-img="{img or ""}">'
             f'<button class="dish__btn" type="button" aria-expanded="{"true" if i == 0 else "false"}">'
             f'<span class="dish__n" lang="es">{E(name)}</span><span class="dish__p">${E(it["p"])}</span></button>'
-            f'<div class="dish__more"><div class="dish__media">{pic}{plate}</div>{desc}</div></li>')
+            f'<div class="dish__more"><div class="dish__in"><div class="dish__media">{pic}{plate}</div>{desc}</div></div></li>')
 
 def panel(kind, items, active):
     out = [f'<div class="carta" role="tabpanel" id="panel-{kind}" aria-labelledby="tab-{kind}"{"" if active else " hidden"}>',
@@ -56,10 +56,10 @@ def promos():
     cards = []
     for i, p in enumerate(carta['promos']):
         img = IMG_FOR.get(p.get('img', ''))
-        pic = img_tag(img, '(max-width: 760px) 80vw, 22vw') if img else '<div class="plate plate--4" aria-hidden="true"><span>Ramón</span></div>'
+        pic = img_tag(img, '(max-width: 760px) 80vw, 22vw') if img else '<div class="plate plate--4" aria-hidden="true"><span lang="es">Ramón</span></div>'
         cards.append(f'<li class="promo c{i}" data-day="{p["dia"]}"><div class="promo__media">{pic}</div>'
                      f'<p class="promo__d" lang="es">{E(p["d"])}</p><p class="promo__t" lang="es">{E(p["t"])}</p>'
-                     f'<p class="promo__today" data-en="Today!">¡Hoy!</p></li>')
+                     f'<p class="promo__today" data-en="Today!">Hoy!</p></li>')
     return (f'<div class="carta" role="tabpanel" id="panel-promos" aria-labelledby="tab-promos" hidden>'
             f'<p class="promos__head" lang="es"><span class="promos__price">{E(carta["promo_precio"])}</span> {E(carta["promo_hora"])}</p>'
             f'<ul class="promos">{"".join(cards)}</ul><p class="promos__note" lang="es">{E(carta["promo_nota"])}</p></div>')
@@ -68,11 +68,12 @@ def resenas():
     out = []
     flag = {'es': 'ES', 'en': 'EN', 'fr': 'FR'}
     for r in reviews:
-        who = r['who'] if r['who'] != 'Visitante' else 'Visitante de Google Maps'
+        who = r['who']
         frm = f'<span class="rev__from">{E(r["from"])}</span>' if r['from'] else ''
+        whoh = '<b data-en="Google Maps visitor">Visitante de Google Maps</b>' if who == 'Visitante' else f'<b>{E(who)}</b>'
         out.append(f'<div class="swiper-slide"><figure class="rev rev--{r["lang"]}"><span class="rev__lang">{flag[r["lang"]]}</span>'
                    f'<blockquote lang="{r["lang"]}"><p>{E(r["q"])}</p></blockquote>'
-                   f'<figcaption><b>{E(who)}</b>{frm}<span class="rev__src">{E(r["src"])} · {r["date"][:4]}</span></figcaption></figure></div>')
+                   f'<figcaption>{whoh}{frm}<span class="rev__src">{E(r["src"])} · {r["date"][:4]}</span></figcaption></figure></div>')
     return '\n'.join(out)
 
 def logo_defs():

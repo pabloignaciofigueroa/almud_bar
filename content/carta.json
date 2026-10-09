@@ -1,71 +1,347 @@
 {
-  "_fuente": "Carta oficial Almud Bar (uqr.to/ppvi), PDFs descargados 2026-10-08. Textos literales. Se omiten los glifos de emoji de la fuente 'whatsappemoticons' que pdftotext muestra como letras sueltas (M, MR, A, S, ^). Correcciones mínimas: 'Le llea' -> 'Le lleva' (Peter), 'refrecante' -> 'refrescante' (Desde que te conocí).",
-  "coctel": [
-    {"n": "Pinche Güey", "d": "Un guarisnaque complejo pa l@s que disfrutan sabores más potentes: Mezcal, tequila, horchata de maní tostado y merkén, pomelo y limón! Un cóctel cítrico, picantito, tostado, ahumado. Atrévase se se se!", "p": "8.800"},
-    {"n": "Aquí te las traigo Peter", "d": "Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí!", "p": "6.700", "img": "IG-044", "src": "IG-044"},
-    {"n": "Cómo te voy a olvidar", "d": "Este es un cóctel sencillo, pero muuuuuy rico [y bonito]: va con Vodka Pera, un toque cítrico de limoncito, jarabe pal dulzor y terminamos con Vino tinteli, que tiñe de un color hermoso este cóctel que está 10/10", "p": "6.800", "img": "IG-002"},
-    {"n": "Guarever como sea", "d": "Dulcecito y aromático, nos lleva al caribe con el licor de plátano y licor de café, luego aterrizamos al mejor país de Chile con el pisqueli, su toque con el mix sagüer y rematamos con una cremosa espuma de ron de coco. Hit!", "p": "6.200"},
-    {"n": "Not Collins", "d": "Conoce el Tom Collins? Este es así, pero en una variante un poco más dulce y super refrescante: amaretto disaronno, jarabe, limón y soda. Infalible!", "p": "6.700"},
-    {"n": "Te espero en la cuneta", "d": "Esta es una versión más dulzona del siempre bien ponderado Margarita: tequila blanco, curaçao, limón y jugo de piña: pum!", "p": "7.800"},
-    {"n": "Deja tomao", "d": "Este nació como un cóctel sin alcohol; pero la mezcla de pepino, jugo de mango, limón y miel nos pidió probarlo con gin ..... y nos enamoró!", "p": "7.400"},
-    {"n": "Sagüer on Faia", "d": "Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!!", "p": "7.900", "img": "IG-063"},
-    {"n": "Sangría Foreva!", "d": "Esta versión te dejará como perro con dos colas! Vino Carménère, toda la malicia del pisco añejado, jarabe de canela, unos toques frutales infaltables y mucho amor", "p": "6.500", "img": "IG-039"},
-    {"n": "Ramón", "d": "Es una precisa mezcla: gin, licor marrasquino, limón y romero. Para los fanáticos de los cócteles cítricos y el frescor del romero! [el vasito va con crusta de sal de romero]", "p": "7.100"},
-    {"n": "Tranquilein John Wayne", "d": "Esta maravilla lleva una mezcla de Whiskys [blended scotch], jugo de manzana, jarabe de canela y limón: un cóctel muy balanceado y refrescante!", "p": "6.800"},
-    {"n": "Desde que te conocí", "d": "Muy refrescante coctelcito, con base de Ramazzotti más el sabor imperdible de la maracuyá, limoncito y terminamos con un toque de espumante... déjese cautivar por esta maravilla!", "p": "6.900"},
-    {"n": "A veces me pongo Coquette", "d": "Este es de lo más que hay: mezcla perfecta de pisco berries con crema de whisky, frambuesa, naranja y jarabe de canela: una delicia rosada, cremosa y dulzona!", "p": "7.100", "img": "IG-096"},
-    {"n": "Iquique Glorioso", "d": "Maracuyá, mango y piña, enlazados al destilado patagónico Trä·kàl y Pisco. Oh si! Este cóctel trae el trópico mezclado con el sur de nuestro país a tu boca: no lo olvidarás!", "p": "7.400"}
-  ],
-  "mocktail": [
-    {"n": "Otra cosa mariposa", "d": "Si te gusta el café, este te hará llegar al cielo!: extracción de café en frío, jugo de maracuyá, jarabe de canela y ginger ale", "p": "6.400"},
-    {"n": "La moto chantá", "d": "Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino! [El vasito va con crusta de sal]", "p": "6.400", "img": "IG-011"},
-    {"n": "Embolinando la perdiz", "d": "Un poco más cítrico y sobretodo refrescante: jugo de pomelo y manzana, miel, limón y menta!", "p": "5.900"},
-    {"n": "Soy una limonhada", "d": "Refrescante como una limonada, pero con un toque mágico! Jugo de apio, jugo de manzana, jarabe y limón.", "p": "6.200"},
-    {"n": "Efecto placebo", "d": "Rico rico: jugo de frambuesa, jugo de maracuyá, jarabe, limón, menta y rematamos con tónica", "p": "6.400"},
-    {"n": "Six Seven", "d": "Dulcecito, sencillo y muy delicioso: Jugo de piña, jarabe de almendras y el infaltable toque del limón!", "p": "5.900"},
-    {"n": "Sangría sin alcohol, olé!", "d": "", "p": "6.600"},
-    {"n": "Ramazzotti Spritz sin copetín!", "d": "[Zerozotti]", "p": "6.200"},
-    {"n": "Piña colada virginsísima", "d": "", "p": "6.400"},
-    {"n": "Pisco sagüer sin alcohol", "d": "[Puedes pedirlo con miel, jengibre o maracuyá]", "p": "5.900"}
-  ],
-  "comilona": [
-    {"g": "Picoteos", "n": "Aceitunas", "d": "Porción de aceitunas aliñaditas ricas delichus!", "p": "6.500"},
-    {"g": "Picoteos", "n": "Tukulito Sakayama", "d": "Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.", "p": "15.900", "img": "IG-139"},
-    {"g": "Picoteos", "n": "Una cosa poca", "d": "Que tan poca cosa no es! Este es como le fondiú franchuto pero mejor porque es shileno!: mix de quesos con tomatito al horno, palta y pesto. Acompañado de pancito de la casa! Real manjarsh!", "p": "11.900"},
-    {"g": "Picoteos", "n": "La carne es débil", "d": "Muy sabrosón & jugosito: carne de res, champiñones y tomate cherry, salteados en oliva y ajo, con un toque de paprika y cilantro. Acompañado de pancito de la casa!", "p": "11.900"},
-    {"g": "Picoteos", "n": "Con tuti si no pa qué!", "d": "[Versión 2.0] Especial pa compartir: champis salteados en mantequilla y nuez moscada, paltita con aceite de ajo y pimentón asado, queso de cabra, queso de campo, aceitunas, tomatito cherry, frutos secos, fruta de la temporada, nuestra deliciosa salsa ajo cilantro y pancito de la casa!", "p": "19.900", "img": "IG-066"},
-    {"g": "Picoteos", "n": "A ponerle wendy!", "d": "Entre ponerle y no ponerle [mejor ponerle!]: carne, pollo, champis, tomate en gajos y cebolla, todo salteado con aceite de ajo, queso de cabra y de campo, pepinos y ají encurtidos de la casa, jamón serrano crudo y crispy, pebrecito, nuestra deliciosa salsa ajo cilantro y pancito de la casa!", "p": "26.700"},
-    {"g": "Picoteos", "n": "Eres tan exótica", "d": "Esta mezcla recuerda la comida al estilo thai: camarones y pollo en un cremosito menjunje de curry verde, leche de coco, cebolla morada, humus y cilantro. Acompañado de pancito de la casa. Pa paladares exóticos y singulares :)", "p": "16.500"},
-    {"g": "Picoteos", "n": "Todo que ver!", "d": "Este es un cevichito pa chuparse el bigoteli. Atún rojo, pimentón amarillo, palta, cebolla morá, piña y rematamos con cilantro. El pescadín está aliñado con tremenda injundia basada en leche de coco, curry verde, y limón sutil. Va con pan de la casa!", "p": "16.000"},
-    {"g": "Greditas", "n": "Campestre", "d": "Este gustoso menjunje combina puras cosas güenazas: champiñones, parmesano, pesto, crema y hierbas. Rematamos con pimentón rojo asado", "p": "13.500"},
-    {"g": "Greditas", "n": "Camarón que se duerme", "d": "Delichus mix: camarones, mezclado con queso crema, cebollín, cilantro, champiñones, jengibre desglasado con vino blanco", "p": "15.900", "img": "IG-077"},
-    {"g": "Greditas", "n": "Muéveme el pollo", "d": "Medio dulzón y muy sabrosón: pollito, crema, nuestra rica pomodoro, curry, maní tostado y salsa teriyaki casera [También en versión veggie]", "p": "14.900"},
-    {"g": "Sanguches", "n": "Chambreao", "d": "Hamburguesa 100% vacuno, queso de campo, cebolla caramelizada, hojas verdes de temporada, pepinillo dill del Almudcito y salsa barbacoa-bourbon casera. En pan de hamburguesa de masa mami.", "p": "10.900"},
-    {"g": "Sanguches", "n": "Hamburguesa Almud", "d": "Hamburguesa de lentejas de la casa muy sabrosa!, palta fileteada, tomatito, mix verde de temporada y salsa ajo cilantro en base a acquafaba. En pan de hamburguesa de masa mami.", "p": "8.900"},
-    {"g": "Sanguches", "n": "Cabrone", "d": "Quesito de cabra, palta fileteada, pimentón rojo asado, hojas verdes de temporada y salsa ajo cilantro en base a acquafaba. En pan ciabatta de masa mami.", "p": "9.500"},
-    {"g": "Pizzas artesanales", "n": "Trufona", "d": "Menjunje de hongos al vino tinto y aceite de trufa", "p": "13.900"},
-    {"g": "Pizzas artesanales", "n": "Caprichosa", "d": "Queso de cabra, nueces, aceitunas, cilantro y aceite de cilantro", "p": "15.900"},
-    {"g": "Pizzas artesanales", "n": "Huerta sabrosa", "d": "Tomate cherry, champiñones, hojas verdes de temporada y salsa ajo cilantro", "p": "13.900"},
-    {"g": "Pizzas artesanales", "n": "Chanchito azul", "d": "Queso azul, jamón serrano y aceite de ajo", "p": "15.900"},
-    {"g": "Pizzas artesanales", "n": "Blanquita", "d": "Esta no tiene pomodoro, es una pizza blanca: base de crema, mozzarella, palta fileteada, cebolla caramelizada, ají verde y un toque de merkén!", "p": "14.500"},
-    {"g": "Pizzas artesanales", "n": "Tartufita", "d": "Quesito de cabra, tomate, pimentón rojo asado y un toque sabrosón de aceite de trufa. Una delicia!", "p": "15.900"},
-    {"g": "Pizzas artesanales", "n": "Cabras a la higuera", "d": "Queso de cabra, higos, tomate cherry glaseado y reducción de aceto balsámico.", "p": "15.900"},
-    {"g": "Pizzas artesanales", "n": "Zorrona", "d": "Carne en trozos [200 grs asiento], cebolla morada, ajo, champiñones y hojas verdes de temporada", "p": "16.900"},
-    {"g": "Pizzas artesanales", "n": "Terrible pollo", "d": "Pollito en cubos salteado en pesto, queso crema y un toque de vino blanco, además lleva tomate, cebolla caramelizada, champiñones y hojas verdes de temporada", "p": "16.900"},
-    {"g": "Pa los chichichos", "n": "Pollito pío", "d": "Dados de pollito salteado, acompañado de palta fileteada", "p": "7.500"},
-    {"g": "Pa los chichichos", "n": "Bartolito", "d": "Pizza de 30 cms diámetro. Base de pomodoro, mozzarella, tomate y aceitunas.", "p": "9.900"},
-    {"g": "Pa los chichichos", "n": "La vaca Lola", "d": "Hamburguesa casera 100% vacuno con queso derretido y tomate. En pan de hamburguesa de masa mami!", "p": "8.900"},
-    {"g": "Somos dulzones", "n": "Pizza dulzona", "d": "Ideal para compartir! Es una pizza, pero dulce, está super delichus! Pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas y hojitas de menta.", "p": "12.500"},
-    {"g": "Somos dulzones", "n": "Topiturrón", "d": "[Reloaded] Turrón de chocolate con galletas y nueces, gel de naranja y arándanos, acompañado de un sorbete de frutos rojos sobre tierra de galletas y almendras", "p": "6.900", "img": "IG-040"},
-    {"g": "Somos dulzones", "n": "Crumblecito ito ito", "d": "Este es un postre calientito! Crumble de manzana, chips de chocolate, almendras y nueces, acompañado con heladito de pepino de la casa, que además de ser delichussss, da un toque refrescante", "p": "5.900"}
-  ],
-  "promos": [
-    {"dia": 2, "d": "Martes", "t": "Negroni & Fernet c/Coca Cola", "img": "IG-016"},
-    {"dia": 3, "d": "Miércoles", "t": "Piscolein & Gin Tonic", "img": "IG-019"},
-    {"dia": 4, "d": "Jueves", "t": "Sangría de la casa", "img": "IG-039"},
-    {"dia": 6, "d": "Sábado", "t": "Ramón a $ 4.500!"}
-  ],
-  "promo_precio": "$ 4.500",
-  "promo_hora": "de 18:00 a 22:00 hrs",
-  "promo_nota": "* Siempre sujeto a stock! *"
+ "_fuente": "Carta oficial Almud Bar (uqr.to/ppvi), PDFs descargados 2026-10-08. Textos literales. Se omiten los glifos de emoji de la fuente 'whatsappemoticons' que pdftotext muestra como letras sueltas (M, MR, A, S, ^). Correcciones mínimas: 'Le llea' -> 'Le lleva' (Peter), 'refrecante' -> 'refrescante' (Desde que te conocí). Tukulito: se agrega un punto donde el PDF tiene un emoji ('bigoteli. Acompañado').",
+ "coctel": [
+  {
+   "n": "Pinche Güey",
+   "d": "Un guarisnaque complejo pa l@s que disfrutan sabores más potentes: Mezcal, tequila, horchata de maní tostado y merkén, pomelo y limón! Un cóctel cítrico, picantito, tostado, ahumado. Atrévase se se se!",
+   "p": "8.800"
+  },
+  {
+   "n": "Aquí te las traigo Peter",
+   "d": "Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí!",
+   "p": "6.700",
+   "img": "IG-044",
+   "src": "IG-044"
+  },
+  {
+   "n": "Cómo te voy a olvidar",
+   "d": "Este es un cóctel sencillo, pero muuuuuy rico [y bonito]: va con Vodka Pera, un toque cítrico de limoncito, jarabe pal dulzor y terminamos con Vino tinteli, que tiñe de un color hermoso este cóctel que está 10/10",
+   "p": "6.800",
+   "img": "IG-002"
+  },
+  {
+   "n": "Guarever como sea",
+   "d": "Dulcecito y aromático, nos lleva al caribe con el licor de plátano y licor de café, luego aterrizamos al mejor país de Chile con el pisqueli, su toque con el mix sagüer y rematamos con una cremosa espuma de ron de coco. Hit!",
+   "p": "6.200"
+  },
+  {
+   "n": "Not Collins",
+   "d": "Conoce el Tom Collins? Este es así, pero en una variante un poco más dulce y super refrescante: amaretto disaronno, jarabe, limón y soda. Infalible!",
+   "p": "6.700"
+  },
+  {
+   "n": "Te espero en la cuneta",
+   "d": "Esta es una versión más dulzona del siempre bien ponderado Margarita: tequila blanco, curaçao, limón y jugo de piña: pum!",
+   "p": "7.800"
+  },
+  {
+   "n": "Deja tomao",
+   "d": "Este nació como un cóctel sin alcohol; pero la mezcla de pepino, jugo de mango, limón y miel nos pidió probarlo con gin ..... y nos enamoró!",
+   "p": "7.400"
+  },
+  {
+   "n": "Sagüer on Faia",
+   "d": "Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!!",
+   "p": "7.900",
+   "img": "IG-063"
+  },
+  {
+   "n": "Sangría Foreva!",
+   "d": "Esta versión te dejará como perro con dos colas! Vino Carménère, toda la malicia del pisco añejado, jarabe de canela, unos toques frutales infaltables y mucho amor",
+   "p": "6.500",
+   "img": "IG-039"
+  },
+  {
+   "n": "Ramón",
+   "d": "Es una precisa mezcla: gin, licor marrasquino, limón y romero. Para los fanáticos de los cócteles cítricos y el frescor del romero! [el vasito va con crusta de sal de romero]",
+   "p": "7.100"
+  },
+  {
+   "n": "Tranquilein John Wayne",
+   "d": "Esta maravilla lleva una mezcla de Whiskys [blended scotch], jugo de manzana, jarabe de canela y limón: un cóctel muy balanceado y refrescante!",
+   "p": "6.800"
+  },
+  {
+   "n": "Desde que te conocí",
+   "d": "Muy refrescante coctelcito, con base de Ramazzotti más el sabor imperdible de la maracuyá, limoncito y terminamos con un toque de espumante... déjese cautivar por esta maravilla!",
+   "p": "6.900"
+  },
+  {
+   "n": "A veces me pongo Coquette",
+   "d": "Este es de lo más que hay: mezcla perfecta de pisco berries con crema de whisky, frambuesa, naranja y jarabe de canela: una delicia rosada, cremosa y dulzona!",
+   "p": "7.100",
+   "img": "IG-096"
+  },
+  {
+   "n": "Iquique Glorioso",
+   "d": "Maracuyá, mango y piña, enlazados al destilado patagónico Trä·kàl y Pisco. Oh si! Este cóctel trae el trópico mezclado con el sur de nuestro país a tu boca: no lo olvidarás!",
+   "p": "7.400"
+  }
+ ],
+ "mocktail": [
+  {
+   "n": "Otra cosa mariposa",
+   "d": "Si te gusta el café, este te hará llegar al cielo!: extracción de café en frío, jugo de maracuyá, jarabe de canela y ginger ale",
+   "p": "6.400"
+  },
+  {
+   "n": "La moto chantá",
+   "d": "Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino! [El vasito va con crusta de sal]",
+   "p": "6.400",
+   "img": "IG-011"
+  },
+  {
+   "n": "Embolinando la perdiz",
+   "d": "Un poco más cítrico y sobretodo refrescante: jugo de pomelo y manzana, miel, limón y menta!",
+   "p": "5.900"
+  },
+  {
+   "n": "Soy una limonhada",
+   "d": "Refrescante como una limonada, pero con un toque mágico! Jugo de apio, jugo de manzana, jarabe y limón.",
+   "p": "6.200"
+  },
+  {
+   "n": "Efecto placebo",
+   "d": "Rico rico: jugo de frambuesa, jugo de maracuyá, jarabe, limón, menta y rematamos con tónica",
+   "p": "6.400"
+  },
+  {
+   "n": "Six Seven",
+   "d": "Dulcecito, sencillo y muy delicioso: Jugo de piña, jarabe de almendras y el infaltable toque del limón!",
+   "p": "5.900"
+  },
+  {
+   "n": "Sangría sin alcohol, olé!",
+   "d": "",
+   "p": "6.600"
+  },
+  {
+   "n": "Ramazzotti Spritz sin copetín!",
+   "d": "[Zerozotti]",
+   "p": "6.200"
+  },
+  {
+   "n": "Piña colada virginsísima",
+   "d": "",
+   "p": "6.400"
+  },
+  {
+   "n": "Mojito sin alcohol",
+   "d": "[Puedes pedirlo con miel, jengibre o maracuyá]",
+   "p": "4.900"
+  },
+  {
+   "n": "Pisco sagüer sin alcohol",
+   "d": "[Puedes pedirlo con miel, jengibre o maracuyá]",
+   "p": "5.900"
+  }
+ ],
+ "comilona": [
+  {
+   "g": "Picoteos",
+   "n": "Aceitunas",
+   "d": "Porción de aceitunas aliñaditas ricas delichus!",
+   "p": "6.500"
+  },
+  {
+   "g": "Picoteos",
+   "n": "Tukulito Sakayama",
+   "d": "Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.",
+   "p": "15.900",
+   "img": "IG-139"
+  },
+  {
+   "g": "Picoteos",
+   "n": "Una cosa poca",
+   "d": "Que tan poca cosa no es! Este es como le fondiú franchuto pero más mejor porque es shileno!: mix de quesos con tomatito al horno, palta y pesto. Acompañado de pancito de la casa! Real manjarsh!",
+   "p": "11.900"
+  },
+  {
+   "g": "Picoteos",
+   "n": "La carne es débil",
+   "d": "Muy sabrosón & jugosito: carne de res, champiñones y tomate cherry, salteados en oliva y ajo, con un toque de paprika y cilantro. Acompañado de pancito de la casa!",
+   "p": "11.900"
+  },
+  {
+   "g": "Picoteos",
+   "n": "Con tuti si no pa qué!",
+   "d": "[Versión 2.0] Especial pa compartir: champis salteados en mantequilla y nuez moscada, paltita con aceite de ajo y pimentón asado, queso de cabra, queso de campo, aceitunas, tomatito cherry, frutos secos, fruta de la temporada, nuestra deliciosa salsa ajo cilantro y pancito de la casa!",
+   "p": "19.900",
+   "img": "IG-066"
+  },
+  {
+   "g": "Picoteos",
+   "n": "A ponerle wendy!",
+   "d": "Entre ponerle y no ponerle [mejor ponerle!]: carne, pollo, champis, tomate en gajos y cebolla, todo salteado con aceite de ajo, queso de cabra y de campo, pepinos y ají encurtidos de la casa, jamón serrano crudo y crispy, pebrecito, nuestra deliciosa salsa ajo cilantro y pancito de la casa!",
+   "p": "26.700"
+  },
+  {
+   "g": "Picoteos",
+   "n": "Eres tan exótica",
+   "d": "Esta mezcla recuerda la comida al estilo thai: camarones y pollo en un cremosito menjunje de curry verde, leche de coco, cebolla morada, humus y cilantro. Acompañado de pancito de la casa. Pa paladares exóticos y singulares :)",
+   "p": "16.500"
+  },
+  {
+   "g": "Picoteos",
+   "n": "Todo que ver!",
+   "d": "Este es un cevichito pa chuparse el bigoteli. Atún rojo, pimentón amarillo, palta, cebolla morá, piña y rematamos con cilantro. El pescadín está aliñado con tremenda injundia basada en leche de coco, curry verde, y limón sutil. Va con pan de la casa!",
+   "p": "16.000"
+  },
+  {
+   "g": "Greditas",
+   "n": "Campestre",
+   "d": "Este gustoso menjunje combina puras cosas güenazas: champiñones, parmesano, pesto, crema y hierbas. Rematamos con pimentón rojo asado",
+   "p": "13.500"
+  },
+  {
+   "g": "Greditas",
+   "n": "Camarón que se duerme",
+   "d": "Delichus mix: camarones, mezclado con queso crema, cebollín, cilantro, champiñones, jengibre desglasado con vino blanco",
+   "p": "15.900",
+   "img": "IG-077"
+  },
+  {
+   "g": "Greditas",
+   "n": "Muéveme el pollo",
+   "d": "Medio dulzón y muy sabrosón: pollito, crema, nuestra rica pomodoro, curry, maní tostado y salsa teriyaki casera [También en versión veggie]",
+   "p": "14.900"
+  },
+  {
+   "g": "Sanguches",
+   "n": "Chambreao",
+   "d": "Hamburguesa 100% vacuno, queso de campo, cebolla caramelizada, hojas verdes de temporada, pepinillo dill del Almudcito y salsa barbacoa-bourbon casera. En pan de hamburguesa de masa mami.",
+   "p": "10.900"
+  },
+  {
+   "g": "Sanguches",
+   "n": "Hamburguesa Almud",
+   "d": "Hamburguesa de lentejas de la casa muy sabrosa!, palta fileteada, tomatito, mix verde de temporada y salsa ajo cilantro en base a acquafaba. En pan de hamburguesa de masa mami.",
+   "p": "8.900"
+  },
+  {
+   "g": "Sanguches",
+   "n": "Cabrone",
+   "d": "Quesito de cabra, palta fileteada, pimentón rojo asado, hojas verdes de temporada y salsa ajo cilantro en base a acquafaba. En pan ciabatta de masa mami.",
+   "p": "9.500"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Trufona",
+   "d": "Menjunje de hongos al vino tinto y aceite de trufa",
+   "p": "13.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Caprichosa",
+   "d": "Queso de cabra, nueces, aceitunas, cilantro y aceite de cilantro",
+   "p": "15.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Huerta sabrosa",
+   "d": "Tomate cherry, champiñones, hojas verdes de temporada y salsa ajo cilantro",
+   "p": "13.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Chanchito azul",
+   "d": "Queso azul, jamón serrano y aceite de ajo",
+   "p": "15.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Blanquita",
+   "d": "Esta no tiene pomodoro, es una pizza blanca: base de crema, mozzarella, palta fileteada, cebolla caramelizada, ají verde y un toque de merkén!",
+   "p": "14.500"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Tartufita",
+   "d": "Quesito de cabra, tomate, pimentón rojo asado y un toque sabrosón de aceite de trufa. Una delicia!",
+   "p": "15.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Cabras a la higuera",
+   "d": "Queso de cabra, higos, tomate cherry glaseado y reducción de aceto balsámico.",
+   "p": "15.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Zorrona",
+   "d": "Carne en trozos [200 grs asiento], cebolla morada, ajo, champiñones y hojas verdes de temporada",
+   "p": "16.900"
+  },
+  {
+   "g": "Pizzas artesanales",
+   "n": "Terrible pollo",
+   "d": "Pollito en cubos salteado en pesto, queso crema y un toque de vino blanco, además lleva tomate, cebolla caramelizada, champiñones y hojas verdes de temporada",
+   "p": "16.900"
+  },
+  {
+   "g": "Pa los chichichos",
+   "n": "Pollito pío",
+   "d": "Dados de pollito salteado, acompañado de palta fileteada",
+   "p": "7.500"
+  },
+  {
+   "g": "Pa los chichichos",
+   "n": "Bartolito",
+   "d": "Pizza de 30 cms diámetro. Base de pomodoro, mozzarella, tomate y aceitunas.",
+   "p": "9.900"
+  },
+  {
+   "g": "Pa los chichichos",
+   "n": "La vaca Lola",
+   "d": "Hamburguesa casera 100% vacuno con queso derretido y tomate. En pan de hamburguesa de masa mami!",
+   "p": "8.900"
+  },
+  {
+   "g": "Somos dulzones",
+   "n": "Pizza dulzona",
+   "d": "Ideal para compartir! Es una pizza, pero dulce, está super delichus! Pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas y hojitas de menta.",
+   "p": "12.500"
+  },
+  {
+   "g": "Somos dulzones",
+   "n": "Topiturrón",
+   "d": "[Reloaded] Turrón de chocolate con galletas y nueces, gel de naranja y arándanos, acompañado de un sorbete de frutos rojos sobre tierra de galletas y almendras",
+   "p": "6.900",
+   "img": "IG-040"
+  },
+  {
+   "g": "Somos dulzones",
+   "n": "Crumblecito ito ito",
+   "d": "Este es un postre calientito! Crumble de manzana, chips de chocolate, almendras y nueces, acompañado con heladito de pepino de la casa, que además de ser delichussss, da un toque refrescante",
+   "p": "5.900"
+  }
+ ],
+ "promos": [
+  {
+   "dia": 2,
+   "d": "Martes",
+   "t": "Negroni & Fernet c/Coca Cola",
+   "img": "IG-016"
+  },
+  {
+   "dia": 3,
+   "d": "Miércoles",
+   "t": "Piscolein & Gin Tonic",
+   "img": "IG-019"
+  },
+  {
+   "dia": 4,
+   "d": "Jueves",
+   "t": "Sangría de la casa",
+   "img": "IG-039"
+  },
+  {
+   "dia": 6,
+   "d": "Sábado",
+   "t": "Ramón a $ 4.500!"
+  }
+ ],
+ "promo_precio": "$ 4.500",
+ "promo_hora": "de 18:00 a 22:00 hrs",
+ "promo_nota": "* Siempre sujeto a stock! *"
 }

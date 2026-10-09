@@ -32,7 +32,7 @@ IMAGES = {
  'e-12': (f('IG-009', 0), None), 'e-12b': (f('IG-008', 9), None), 'e-12c': (f('IG-010'), None),
  'e-jaloguin': (f('IG-038', 4), None), 'e-jaloguin-2': (f('IG-070', 8), None),
  'e-fondita': (f('IG-079', 4), None), 'e-negroni': (f('IG-005', 0), None), 'e-tiki': (f('IG-053', 0), None),
- 'e-rucalaf': (f('IG-025', 14), None), 'e-desfile': (f('IG-057'), None), 'e-amor': (f('IG-116'), None),
+ 'e-rucalaf': (f('IG-030'), None), 'e-desfile': (f('IG-057'), None), 'e-amor': (f('IG-116'), None),
  'e-primavera': (f('IG-075', 4), None), 'e-islenos': (f('IG-029'), None), 'e-10': (f('IG-100'), None),
  'e-fiesta': (f('IG-008', 4), None), 'e-fiesta-2': (f('IG-009', 15), None),
  # equipo
