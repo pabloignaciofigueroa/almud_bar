@@ -1,0 +1,73 @@
+{
+ "cls": 0,
+ "H": 3835,
+ "sw": 390,
+ "imgs": [
+  "http://localhost:8790/assets/v2/img/tragos-sours-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-grupo-negroni-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-grupo-spritz-a-480.webp",
+  "http://localhost:8790/assets/v2/img/carta-lamina-negroni-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-lamina-vino-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-moto-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-grupo-pizzas-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-tukulito-a-480.webp",
+  "http://localhost:8790/assets/v2/img/carta-contuti-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-camaron-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-pizza-dulzona-a-720.webp",
+  "http://localhost:8790/assets/v2/img/carta-topiturron-a-960.webp",
+  "http://localhost:8790/assets/v2/img/carta-promo-negroni-a-480.webp",
+  "http://localhost:8790/assets/v2/img/hoy-miercoles-garzona-a-960.webp"
+ ],
+ "vids": [
+  {
+   "src": "http://localhost:8790/assets/v2/video/carta-muro-rosa.webm",
+   "paused": true,
+   "ready": 4,
+   "poster": "http://localhost:8790/assets/v2/video/carta-muro-rosa-poster.webp"
+  },
+  {
+   "src": "http://localhost:8790/assets/v2/video/carta-cazuela.webm",
+   "paused": true,
+   "ready": 0,
+   "poster": "http://localhost:8790/assets/v2/video/carta-cazuela-poster.webp"
+  }
+ ],
+ "heads": [
+  {
+   "t": "La carta",
+   "lines": 1,
+   "fs": "96px"
+  },
+  {
+   "t": "Coctelería de la casa",
+   "lines": 1,
+   "fs": "56px"
+  },
+  {
+   "t": "Que no se lo cuenten! Besiiiii",
+   "lines": 1,
+   "fs": "56px"
+  }
+ ],
+ "small": [
+  {
+   "t": "Almud Bar, inicio",
+   "w": 57,
+   "h": 42
+  }
+ ],
+ "badAnchors": [],
+ "links": [
+  "../",
+  "https://uqr.to/ppvi",
+  "https://www.instagram.com/catarsis.fotografia/",
+  "https://www.instagram.com/tamillanquileo/",
+  "https://www.instagram.com/estudiouno.prod/",
+  "https://www.google.com/maps/search/?api=1&query=-42.4825681,-73.7617619",
+  "https://ig.me/m/almud_bar"
+ ],
+ "overflow": [],
+ "errs": [],
+ "failed": [],
+ "n": 5
+}

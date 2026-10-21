@@ -1,0 +1,313 @@
+{
+ "cls": 0,
+ "H": 26153,
+ "sw": 390,
+ "imgs": [
+  "http://localhost:8790/assets/v2/img/hoy-viernes-mesa-a-720.webp"
+ ],
+ "vids": [
+  {
+   "src": "http://localhost:8790/assets/v2/video/hoy-martes-negroni.webm",
+   "paused": true,
+   "ready": 0,
+   "poster": "http://localhost:8790/assets/v2/video/hoy-martes-negroni-poster.webp"
+  },
+  {
+   "src": "http://localhost:8790/assets/v2/video/hoy-martes-negroni.webm",
+   "paused": true,
+   "ready": 0,
+   "poster": "http://localhost:8790/assets/v2/video/hoy-martes-negroni-poster.webp"
+  },
+  {
+   "src": "http://localhost:8790/assets/v2/video/lugar-techo-flecos.mp4",
+   "paused": true,
+   "ready": 0,
+   "poster": "http://localhost:8790/assets/v2/video/lugar-techo-flecos-poster.webp"
+  },
+  {
+   "src": "http://localhost:8790/assets/v2/video/donde-letrero.webm",
+   "paused": true,
+   "ready": 4,
+   "poster": "http://localhost:8790/assets/v2/video/donde-letrero-poster.webp"
+  }
+ ],
+ "heads": [
+  {
+   "t": "Almud Bar",
+   "lines": 1,
+   "fs": "96px"
+  },
+  {
+   "t": "Miércoles depiscoleinnnn!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "nos gusta elcolorssss!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "mejor lostomamos todos!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "no dejamos a nadie ajuera",
+   "lines": 1,
+   "fs": "56px"
+  },
+  {
+   "t": "pa chuparseel bigoteli",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "The menu",
+   "lines": 1,
+   "fs": "96px"
+  },
+  {
+   "t": "Peazo de equipoque tenemos!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "no somos násin ustedes!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "lo rico denuestro barsucho",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "tirar la casapor la ventana!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "Venga venga,le esperamos!",
+   "lines": 2,
+   "fs": "96px"
+  },
+  {
+   "t": "Que no se lo cuenten! Besiiiii",
+   "lines": 1,
+   "fs": "56px"
+  }
+ ],
+ "small": [
+  {
+   "t": "Almud Bar, home",
+   "w": 57,
+   "h": 42
+  },
+  {
+   "t": "Menu",
+   "w": 33,
+   "h": 44
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@rober.patagonico",
+   "w": 99,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@catarsis.fotografia",
+   "w": 107,
+   "h": 21
+  },
+  {
+   "t": "@isosur.prod",
+   "w": 69,
+   "h": 21
+  },
+  {
+   "t": "@cepaz",
+   "w": 42,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@catarsis.fotografia",
+   "w": 107,
+   "h": 21
+  },
+  {
+   "t": "@pablete_bartender_",
+   "w": 172,
+   "h": 32
+  },
+  {
+   "t": "@javier.agmc",
+   "w": 109,
+   "h": 32
+  },
+  {
+   "t": "@lizzearellano",
+   "w": 118,
+   "h": 32
+  },
+  {
+   "t": "@milagroosjm",
+   "w": 118,
+   "h": 32
+  },
+  {
+   "t": "@eduu.ardoo",
+   "w": 107,
+   "h": 32
+  },
+  {
+   "t": "@elymar_bocarejo",
+   "w": 149,
+   "h": 32
+  },
+  {
+   "t": "@jaav11",
+   "w": 68,
+   "h": 32
+  },
+  {
+   "t": "@daweed.cagliano",
+   "w": 150,
+   "h": 32
+  },
+  {
+   "t": "@haqum.v99",
+   "w": 107,
+   "h": 32
+  },
+  {
+   "t": "@rusio_mezclao",
+   "w": 97,
+   "h": 25
+  },
+  {
+   "t": "@cepaz",
+   "w": 48,
+   "h": 25
+  },
+  {
+   "t": "@milagroosjm",
+   "w": 77,
+   "h": 21
+  },
+  {
+   "t": "@lizzearellanol",
+   "w": 80,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@isosur.prod",
+   "w": 69,
+   "h": 21
+  },
+  {
+   "t": "+56 65 253 0084",
+   "w": 111,
+   "h": 32
+  },
+  {
+   "t": "@almud_bar",
+   "w": 79,
+   "h": 32
+  },
+  {
+   "t": "@bazar_almud",
+   "w": 88,
+   "h": 25
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  },
+  {
+   "t": "@estudiouno.prod",
+   "w": 95,
+   "h": 21
+  }
+ ],
+ "badAnchors": [],
+ "links": [
+  "carta/",
+  "https://www.google.com/maps/search/?api=1&query=-42.4825681,-73.7617619",
+  "https://ig.me/m/almud_bar",
+  "https://www.instagram.com/estudiouno.prod/",
+  "carta/#promos",
+  "https://www.instagram.com/rober.patagonico/",
+  "https://www.instagram.com/catarsis.fotografia/",
+  "https://www.instagram.com/isosur.prod/",
+  "https://www.instagram.com/cepaz/",
+  "carta/#casa",
+  "carta/#sin-alcohol-mocktails",
+  "carta/#sin-alcohol-jugos",
+  "carta/#sin-alcohol-cervezas",
+  "carta/#sin-alcohol-calientes",
+  "carta/#sin-alcohol",
+  "carta/#comilona-picoteos",
+  "carta/#comilona-greditas",
+  "carta/#comilona-sanguches",
+  "carta/#comilona-pizzas",
+  "carta/#comilona-chichichos",
+  "carta/#comilona-dulzones",
+  "carta/#comilona",
+  "https://www.instagram.com/pablete_bartender_/",
+  "https://www.instagram.com/javier.agmc/",
+  "https://www.instagram.com/lizzearellano/",
+  "https://www.instagram.com/milagroosjm/",
+  "https://www.instagram.com/eduu.ardoo/",
+  "https://www.instagram.com/elymar_bocarejo/",
+  "https://www.instagram.com/jaav11/",
+  "https://www.instagram.com/daweed.cagliano/",
+  "https://www.instagram.com/haqum.v99/",
+  "https://www.instagram.com/rusio_mezclao/",
+  "https://www.instagram.com/lizzearellanol/",
+  "https://www.instagram.com/almud_bar/",
+  "tel:+56652530084",
+  "https://www.instagram.com/bazar_almud/"
+ ],
+ "overflow": [],
+ "errs": [],
+ "failed": [
+  "http://localhost:8790/assets/v2/video/lugar-techo-flecos.mp4"
+ ],
+ "n": 31
+}
