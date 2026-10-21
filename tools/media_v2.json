@@ -1,170 +1,1171 @@
 {
- "_doc": "Manifiesto de medios v2 (fase 10). Lo consume tools/media_v2.py, que escribe assets/v2/img, assets/v2/video y assets/v2/media.json. crops: ratio 'W:H' o 'orig'; focal = [x%, y%] del centro deseado en la fuente; max = ancho máximo a emitir para ese recorte (además del tope del recorte y de 'cap'). Nunca se amplía: solo se emiten anchos de WIDTHS <= ancho real del recorte. 'alias' reutiliza otro asset sin generar archivos. alt = placeholder desde catalogo.csv (descripcion); el alt final se escribe después.",
- "widths": [480, 720, 960, 1280, 1440, 1920, 2560],
- "quality": {"avif": 52, "webp": 76, "jpg": 84},
+ "_doc": "Manifiesto de medios v2 (fase 10). Lo consume tools/media_v2.py, que escribe assets/v2/img, assets/v2/video y assets/v2/media.json. crops: ratio 'W:H' o 'orig'; focal = [x%, y%] del centro deseado en la fuente; max = ancho máximo a emitir para ese recorte (además del tope del recorte y de 'cap'). Nunca se amplía: solo se emiten anchos de WIDTHS <= ancho real del recorte. 'alias' reutiliza otro asset sin generar archivos. alt = placeholder desde catalogo.csv (descripcion); el alt final se escribe después. Fase 16: un recorte puede llevar 'widths' y 'quality' propios; 'extra_widths' agrega anchos chicos (miniaturas de la carta); si el recorte es más angosto que el tope, se emite además su ancho nativo (nunca se amplía).",
+ "widths": [
+  480,
+  720,
+  960,
+  1280,
+  1440,
+  1920,
+  2560
+ ],
+ "quality": {
+  "avif": 52,
+  "webp": 76,
+  "jpg": 84
+ },
  "images": [
-  {"id": "portada-terraza", "ref": "P189", "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg", "section": "portada",
-   "crops": [{"name": "a", "ratio": "orig", "focal": [30, 50], "max": 1440}], "quality": {"avif": 60, "webp": 80},
-   "note": "Nativa 1440x1919 sin recorte: escritorio a 1:1 anclada con top:-19.7% del ancho; teléfono object-fit cover con object-position 30% 50% (tile). Asterisco del veredicto vigente."},
-  {"id": "og-terraza", "ref": "P189", "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg", "section": "og",
-   "crops": [{"name": "og", "ratio": "1200:630", "focal": [50, 45], "size": [1200, 630]}], "formats": ["jpg"],
-   "note": "Open Graph, único JPEG del sitio."},
-
-  {"id": "hoy-miercoles-garzona", "ref": "P331", "src": "assets/raw/ig/DZap3klI-um_00.jpg", "section": "hoy",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [40, 45], "max": 1280}],
-   "note": "Foto de IG-019 (miércoles). Revisada: nítida, cálida, jockey ALMUD. Se mantiene."},
-  {"id": "hoy-jueves-sangria", "ref": "P228", "src": "assets/raw/ig/DRkwz2OlC01_00.jpg", "section": "hoy",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1280}],
-   "note": "Foto de IG-039 (jueves). Revisada: nítida, noche cálida. Se mantiene. También es la foto de la Sangría en la carta."},
-  {"id": "hoy-jueves-fiesta", "ref": "P084", "src": "assets/raw/ig/C_1WAXNy651_00.jpg", "section": "hoy", "post": "IG-082",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [45, 45], "max": 1280}],
-   "note": "Fase 15 (crítica 1): foto del jueves en Hoy en Almud (IG-082, «jueves de sangriita»: abrazo y carcajada). La de IG-039 (P228) queda solo para la Sangría Foreva! de los destacados y la carta: así ninguna foto se repite en el landing."},
-  {"id": "hoy-viernes-mesa", "ref": "P386", "src": "assets/raw/ig/DeAdh-JFOsY_00.jpg", "section": "hoy",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [62, 55], "max": 1280}], "fallback": "con-quien-barra",
-   "note": "Foto de IG-003 (viernes). Nítida pero apaisada de 1280x1024: el 4:5 deja 819 px (máx 720 emitido), justa para 5 col en DPR1 y floja en teléfono 3x. Se emite como opción; media.json marca fallback con-quien-barra (P031)."},
-  {"id": "hoy-sabado", "alias": "con-quien-barra", "ref": "P031", "section": "hoy",
-   "note": "Fase 15 (crítica 1): antes era alias de con-quien-solo (P194), que se repetía en Con quién. P031 (brindis en la barra, IG-152) no se usa en otra parte del landing."},
-  {"id": "hoy-martes-fallback", "alias": "tragos-bartender-muro-rosa", "ref": "P184", "section": "hoy",
-   "note": "Respaldo del martes si el loop V054 no se usa (sin JS / reduced data el póster basta)."},
-
-  {"id": "lugar-barra-curva", "ref": "P093", "src": "assets/raw/ig/DAMHps8JVVr_07.jpg", "section": "lugar",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 55], "max": 1440}], "credit_note": "IG-079 sin crédito: no se acredita"},
-  {"id": "lugar-faroles", "ref": "P090", "src": "assets/raw/ig/DAMHps8JVVr_04.jpg", "section": "lugar",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 40], "max": 1440}, {"name": "m", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-  {"id": "lugar-patio", "ref": "P039", "src": "assets/raw/ig/Cqn78DFp5Nm_00.jpg", "section": "lugar",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1440}]},
-  {"id": "lugar-sillon", "ref": "P114", "src": "assets/raw/ig/DBMtYELSzNS_14.jpg", "section": "lugar",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [45, 45], "max": 1440}]},
-  {"id": "lugar-salon-mimbre", "ref": "P339", "src": "assets/raw/ig/Dbg3ekilC4P_02.jpg", "section": "lugar",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 45], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 45], "max": 1440}]},
-  {"id": "lugar-mural-ojos", "ref": "F:V031_mural-ojos_6.60s", "catalog_ref": "V031", "src": "_plan/diag/frames/V031_mural-ojos_6.60s.jpg", "section": "lugar",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 50], "max": 1280}, {"name": "m", "ratio": "4:5", "focal": [40, 50], "max": 720}],
+  {
+   "id": "portada-terraza",
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "portada",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      30,
+      50
+     ],
+     "max": 1440
+    },
+    {
+     "name": "m",
+     "ratio": "1440:1343",
+     "focal": [
+      50,
+      0
+     ],
+     "widths": [
+      720,
+      960,
+      1170
+     ],
+     "quality": {
+      "avif": 48,
+      "webp": 70
+     }
+    }
+   ],
+   "quality": {
+    "avif": 60,
+    "webp": 80
+   },
+   "note": "Nativa 1440x1919 sin recorte: escritorio a 1:1 anclada con top:-19.7% del ancho; teléfono object-fit cover con object-position 30% 50% (tile). Asterisco del veredicto vigente. Fase 16: recorte 'm' (70 % superior, todo el ancho) solo para teléfono (<900 px): es la zona que la portada muestra ahí; 1170 px máx. para que el LCP del teléfono quede ≲130 KB."
+  },
+  {
+   "id": "og-terraza",
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "og",
+   "crops": [
+    {
+     "name": "og",
+     "ratio": "1200:630",
+     "focal": [
+      50,
+      45
+     ],
+     "size": [
+      1200,
+      630
+     ]
+    }
+   ],
+   "formats": [
+    "jpg"
+   ],
+   "note": "Open Graph, único JPEG del sitio."
+  },
+  {
+   "id": "og-carta",
+   "ref": "V038-cover",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.jpg",
+   "section": "og",
+   "post": "IG-044",
+   "crops": [
+    {
+     "name": "og",
+     "ratio": "1200:630",
+     "focal": [
+      50,
+      42
+     ],
+     "size": [
+      1200,
+      630
+     ]
+    }
+   ],
+   "formats": [
+    "jpg"
+   ],
+   "note": "Fase 16: Open Graph de /carta/: Aquí te las traigo Peter con su burbuja (la misma foto del ítem en la carta)."
+  },
+  {
+   "id": "hoy-miercoles-brindis",
+   "ref": "P364",
+   "src": "assets/raw/ig/Dbok2NyFNdb_07.jpg",
+   "section": "hoy",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      42,
+      45
+     ],
+     "max": 1280
+    }
+   ],
+   "note": "Fase 16: reemplaza a P331 (la garzona del jockey es la misma persona de la banda del Equipo, P333). Clienta riendo con su vaso, IG-008 (2026)."
+  },
+  {
+   "id": "hoy-jueves-sangria",
+   "ref": "P228",
+   "src": "assets/raw/ig/DRkwz2OlC01_00.jpg",
+   "section": "hoy",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1280
+    }
+   ],
+   "note": "Foto de IG-039 (jueves). Revisada: nítida, noche cálida. Se mantiene. También es la foto de la Sangría en la carta.",
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "hoy-jueves-fiesta",
+   "ref": "P084",
+   "src": "assets/raw/ig/C_1WAXNy651_00.jpg",
+   "section": "hoy",
+   "post": "IG-082",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      45
+     ],
+     "max": 1280
+    }
+   ],
+   "note": "Fase 15 (crítica 1): foto del jueves en Hoy en Almud (IG-082, «jueves de sangriita»: abrazo y carcajada). La de IG-039 (P228) queda solo para la Sangría Foreva! de los destacados y la carta: así ninguna foto se repite en el landing."
+  },
+  {
+   "id": "hoy-viernes-mesa",
+   "ref": "P386",
+   "src": "assets/raw/ig/DeAdh-JFOsY_00.jpg",
+   "section": "hoy",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      62,
+      55
+     ],
+     "max": 1280
+    }
+   ],
+   "fallback": "con-quien-barra",
+   "note": "Foto de IG-003 (viernes). Nítida pero apaisada de 1280x1024: el 4:5 deja 819 px (máx 720 emitido), justa para 5 col en DPR1 y floja en teléfono 3x. Se emite como opción; media.json marca fallback con-quien-barra (P031)."
+  },
+  {
+   "id": "hoy-sabado",
+   "alias": "con-quien-barra",
+   "ref": "P031",
+   "section": "hoy",
+   "note": "Fase 15 (crítica 1): antes era alias de con-quien-solo (P194), que se repetía en Con quién. P031 (brindis en la barra, IG-152) no se usa en otra parte del landing."
+  },
+  {
+   "id": "lugar-barra-curva",
+   "ref": "P093",
+   "src": "assets/raw/ig/DAMHps8JVVr_07.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "credit_note": "IG-079 sin crédito: no se acredita"
+  },
+  {
+   "id": "lugar-salon",
+   "ref": "P076",
+   "src": "assets/raw/ig/C-V5Lc7SZ-K_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Fase 16: el salón de verdad (mesas interiores tras la reja, muro rojo, lámparas, luz ámbar) en lugar del aro de luz (P339). Nativa 1335 px: la banda se limita a 1335 px CSS."
+  },
+  {
+   "id": "lugar-faroles",
+   "ref": "P090",
+   "src": "assets/raw/ig/DAMHps8JVVr_04.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "lugar-patio",
+   "ref": "P039",
+   "src": "assets/raw/ig/Cqn78DFp5Nm_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "lugar-sillon",
+   "ref": "P114",
+   "src": "assets/raw/ig/DBMtYELSzNS_14.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      45
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "lugar-mural-ojos",
+   "ref": "F:V031_mural-ojos_6.60s",
+   "catalog_ref": "V031",
+   "src": "_plan/diag/frames/V031_mural-ojos_6.60s.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1280
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      40,
+      50
+     ],
+     "max": 720
+    }
+   ],
    "alt": "Pared de fotos de ojos (fotograma del video V031)",
-   "note": "Fotograma 1278x720: 16:9 hasta 960, 4:5 solo 480. Nunca más grande que media columna."},
-  {"id": "lugar-lampara-pinzas", "ref": "V014-cover", "src": "assets/raw/ig/C9BDvFvJk4z_00.jpg", "section": "lugar",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 30], "max": 1440}], "cap": 1080},
-
-  {"id": "tragos-splash", "ref": "P297", "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg", "section": "tragos",
-   "crops": [{"name": "d", "ratio": "1:1", "focal": [50, 45], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 45], "max": 1440}],
-   "note": "Marco que crece 1:1 -> 16:9: el 1:1 a 2560 cubre la banda de 1920 con object-fit cover."},
-  {"id": "tragos-sours", "ref": "P086", "src": "assets/raw/ig/DAMHps8JVVr_00.jpg", "section": "tragos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 1440}]},
-  {"id": "tragos-bartender-muro-rosa", "ref": "P184", "src": "assets/raw/ig/DM_Ih5dyVKH_02.jpg", "section": "tragos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [45, 40], "max": 1440}]},
-  {"id": "tragos-bartender-letrero", "ref": "P362", "src": "assets/raw/ig/Dbok2NyFNdb_05.jpg", "section": "tragos",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 46], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 40], "max": 1440}],
-   "credit_note": "12.º aniversario; IG-009 acredita a @isosur.prod esas fotos: por confirmar, no se publica sin confirmar"},
-  {"id": "tragos-copa-naranja", "ref": "P097", "src": "assets/raw/ig/DAMHps8JVVr_11.jpg", "section": "tragos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 55], "max": 1440}]},
-
-  {"id": "comida-garzona-pizza", "ref": "P036", "src": "assets/raw/ig/CqEI2nSJP2__00.jpg", "section": "comida",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-  {"id": "comida-garzon-plato", "ref": "P393", "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg", "section": "comida",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 25], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-  {"id": "comida-hamburguesa", "ref": "P305", "src": "assets/raw/ig/DY0AUvhlHjI_13.jpg", "section": "comida",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 1440}]},
-  {"id": "comida-cazuela", "ref": "P091", "src": "assets/raw/ig/DAMHps8JVVr_05.jpg", "section": "comida",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 1440}]},
-
-  {"id": "equipo-garzonas", "ref": "P333", "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg", "section": "equipo",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 35], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-
-  {"id": "con-quien-solo", "ref": "P194", "src": "assets/raw/ig/DM_Ih5dyVKH_12.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 1440}]},
-  {"id": "con-quien-pareja", "ref": "P258", "src": "assets/raw/ig/DYiMMUrlBk1_02.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1440}], "note": "Flash: va en su grupo del mosaico con P259."},
-  {"id": "con-quien-amigos", "ref": "P259", "src": "assets/raw/ig/DYiMMUrlBk1_03.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1440}], "note": "Flash: va en su grupo del mosaico con P258."},
-  {"id": "con-quien-amigas", "ref": "P254", "src": "assets/raw/ig/DU35ZDPCBcH_00.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 40], "max": 1440}], "note": "Son del equipo (IG-031): sin pie que las haga pasar por clientas."},
-  {"id": "con-quien-celebrar", "ref": "P198", "src": "assets/raw/ig/DM_Ih5dyVKH_16.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 35], "max": 1440}]},
-  {"id": "con-quien-sin-motivo", "ref": "P041", "src": "assets/raw/ig/CrMRBMNpdIF_00.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-  {"id": "con-quien-barra", "ref": "P031", "src": "assets/raw/ig/CpVyxXJJrhO_00.jpg", "section": "con-quien",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-
-  {"id": "eventos-diez", "ref": "P073", "src": "assets/raw/ig/C9dHAAxJkSi_00.jpg", "section": "eventos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1440}]},
-  {"id": "eventos-torta", "ref": "P221", "src": "assets/raw/ig/DNT1_BYS_Yf_18.jpg", "section": "eventos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 40], "max": 1440}]},
-  {"id": "eventos-doce", "ref": "P348", "src": "assets/raw/ig/Dbg3ekilC4P_11.jpg", "section": "eventos",
-   "crops": [{"name": "d", "ratio": "16:9", "focal": [50, 45], "max": 2560}, {"name": "m", "ratio": "4:5", "focal": [50, 45], "max": 1440}]},
-  {"id": "eventos-jaloguin", "ref": "P229", "src": "assets/raw/ig/DShtzZ0FD9H_00.jpg", "section": "eventos",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 45], "max": 1440}], "note": "Fuera de los 31; el guion la permite solo en Eventos (octubre)."},
-
-  {"id": "donde-puerta", "ref": "P199", "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg", "section": "donde",
-   "crops": [{"name": "d", "ratio": "4:5", "focal": [50, 40], "max": 1440}, {"name": "m", "ratio": "4:5", "focal": [50, 35], "max": 1440}],
-   "note": "Mismo ratio, foco distinto: en teléfono sube para leer la polera."},
-
-  {"id": "carta-lamina-negroni", "ref": "P003", "src": "assets/raw/ig/Cmce2h1J3Wl_00.jpg", "section": "carta",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 960}], "note": "Sin nombre de trago (no es Negroni según IG-178)."},
-  {"id": "carta-lamina-tacos", "ref": "P070", "src": "assets/raw/ig/C7HV31OLXTJ_00.jpg", "section": "carta",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}], "note": "Sin nombre de plato (no está en la carta actual)."},
-
-  {"id": "carta-peter", "ref": "V038-cover", "post": "IG-044", "src": "assets/raw/ig/DOO7fgniNI6_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-olvidar", "ref": "V057-cover", "post": "IG-002", "src": "assets/raw/ig/DeC9NEioZFw_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}], "note": "720x720 de día: solo 480."},
-  {"id": "carta-saguer", "ref": "V030-cover", "post": "IG-063", "src": "assets/raw/ig/DEieMaByhUU_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-sangria", "alias": "hoy-jueves-sangria", "ref": "P228", "post": "IG-039", "section": "carta-item"},
-  {"id": "carta-coquette", "ref": "P074", "post": "IG-096", "src": "assets/raw/ig/C9xrKP8Jehi_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-moto", "ref": "P336", "post": "IG-011", "src": "assets/raw/ig/DaquSYCofM8_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-tukulito", "ref": "P044", "post": "IG-139", "src": "assets/raw/ig/CsXCLdZpgB7_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}], "note": "852x852: solo 480."},
-  {"id": "carta-contuti", "ref": "P158", "post": "IG-066", "src": "assets/raw/ig/DEVtFfySKVY_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-camaron", "ref": "P099", "post": "IG-077", "src": "assets/raw/ig/DAbw0xKSimd_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-  {"id": "carta-topiturron", "ref": "P227", "post": "IG-040", "src": "assets/raw/ig/DRNqIPslOds_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
-
-  {"id": "carta-pizza-dulzona", "ref": "P310", "post": "IG-022", "src": "assets/raw/ig/DY0AUvhlHjI_18.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 720}],
-   "note": "Fase 15: es la única pizza dulce de la carta y se ve lo que dice su descripción (pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). La caption (IG-022) no la nombra. 900x900: hasta 720."},
-  {"id": "carta-promo-negroni", "ref": "V054-cover", "post": "IG-016", "src": "assets/raw/ig/DZ8c3yiIdpa_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 480}],
-   "note": "Fase 15: promo del martes (carta.json › promos › img IG-016, «Amamos los martes porque son de Negronicito»). 721x721: solo 480."},
-  {"id": "carta-promo-piscolein", "alias": "hoy-miercoles-garzona", "ref": "P331", "post": "IG-019", "section": "carta-item",
-   "note": "Fase 15: promo del miércoles (carta.json › promos › img IG-019): bandeja de piscolas."},
-  {"id": "carta-grupo-negroni", "ref": "P226", "src": "assets/raw/ig/DP7O0BElPhW_00.jpg", "section": "carta-grupo",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 960}],
-   "note": "Fase 15: lámina del grupo Negroni (IG-042: «cómo estamoh pa un Negroni? o su Boulevardier?»). Sin nombre de ítem: no dice cuál de los cinco."},
-  {"id": "carta-grupo-spritz", "ref": "P016", "src": "assets/raw/ig/CnU8qLjJ5zx_00.jpg", "section": "carta-grupo",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 55], "max": 480}],
-   "note": "Fase 15: lámina del grupo Spritz (dos copas de spritz; IG-167 no nombra el trago). 1280x853: el 4:5 deja 682 px, se emite 480."},
-  {"id": "carta-grupo-pizzas", "ref": "P042", "src": "assets/raw/ig/CreVnAOJ6WR_00.jpg", "section": "carta-grupo",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 55], "max": 960}],
-   "note": "Fase 15: lámina del grupo Pizzas artesanales (IG-141 habla de sus pizzas, no nombra cuál; jamón serrano y rúcula no calzan con ninguna de las 9 actuales)."},
-  {"id": "carta-lamina-vino", "ref": "P191", "src": "assets/raw/ig/DM_Ih5dyVKH_09.jpg", "section": "carta",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [40, 45], "max": 960}],
-   "note": "Fase 15: lámina de Vinos & espumantes (bartender sirviendo vino; no se sabe cuál)."}
+   "note": "Fotograma 1278x720: 16:9 hasta 960, 4:5 solo 480. Nunca más grande que media columna."
+  },
+  {
+   "id": "lugar-lampara-pinzas",
+   "ref": "V014-cover",
+   "src": "assets/raw/ig/C9BDvFvJk4z_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      30
+     ],
+     "max": 1440
+    }
+   ],
+   "cap": 1080
+  },
+  {
+   "id": "tragos-sours",
+   "ref": "P086",
+   "src": "assets/raw/ig/DAMHps8JVVr_00.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "tragos-bartender-muro-rosa",
+   "ref": "P184",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_02.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "tragos-bartender-letrero",
+   "ref": "P362",
+   "src": "assets/raw/ig/Dbok2NyFNdb_05.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      46
+     ],
+     "max": 2560
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ],
+   "credit_note": "12.º aniversario; IG-009 acredita a @isosur.prod esas fotos: por confirmar, no se publica sin confirmar"
+  },
+  {
+   "id": "tragos-copa-naranja",
+   "ref": "P097",
+   "src": "assets/raw/ig/DAMHps8JVVr_11.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "comida-garzona-pizza",
+   "ref": "P036",
+   "src": "assets/raw/ig/CqEI2nSJP2__00.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "comida-garzon-plato",
+   "ref": "P393",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      25
+     ],
+     "max": 2560
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "comida-pizza-mano",
+   "ref": "P029",
+   "src": "assets/raw/ig/CpOIeP9JFF8_00.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Fase 16: la pizza en tránsito reemplaza a la hamburguesa (P305, fría y plana)."
+  },
+  {
+   "id": "comida-tabla",
+   "ref": "P299",
+   "src": "assets/raw/ig/DY0AUvhlHjI_02.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      55
+     ],
+     "max": 1280
+    }
+   ],
+   "note": "Fase 16: la tabla de picoteo reemplaza a la cazuela (P091), que repetía el Camarón que se duerme de los destacados."
+  },
+  {
+   "id": "equipo-garzonas",
+   "ref": "P333",
+   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      35
+     ],
+     "max": 2560
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "con-quien-solo",
+   "ref": "P194",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_12.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "con-quien-pareja",
+   "ref": "P258",
+   "src": "assets/raw/ig/DYiMMUrlBk1_02.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Flash: va en su grupo del mosaico con P259."
+  },
+  {
+   "id": "con-quien-amigos",
+   "ref": "P259",
+   "src": "assets/raw/ig/DYiMMUrlBk1_03.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Flash: va en su grupo del mosaico con P258."
+  },
+  {
+   "id": "con-quien-amigas",
+   "ref": "P254",
+   "src": "assets/raw/ig/DU35ZDPCBcH_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Son del equipo (IG-031): sin pie que las haga pasar por clientas."
+  },
+  {
+   "id": "con-quien-celebrar",
+   "ref": "P198",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_16.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "con-quien-sin-motivo",
+   "ref": "P041",
+   "src": "assets/raw/ig/CrMRBMNpdIF_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "con-quien-barra",
+   "ref": "P031",
+   "src": "assets/raw/ig/CpVyxXJJrhO_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "eventos-diez",
+   "ref": "P073",
+   "src": "assets/raw/ig/C9dHAAxJkSi_00.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "eventos-torta",
+   "ref": "P221",
+   "src": "assets/raw/ig/DNT1_BYS_Yf_18.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "eventos-doce",
+   "ref": "P348",
+   "src": "assets/raw/ig/Dbg3ekilC4P_11.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 2560
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ]
+  },
+  {
+   "id": "eventos-jaloguin",
+   "ref": "P229",
+   "src": "assets/raw/ig/DShtzZ0FD9H_00.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Fuera de los 31; el guion la permite solo en Eventos (octubre)."
+  },
+  {
+   "id": "donde-puerta",
+   "ref": "P199",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
+   "section": "donde",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "max": 1440
+    }
+   ],
+   "note": "Mismo ratio, foco distinto: en teléfono sube para leer la polera."
+  },
+  {
+   "id": "carta-lamina-negroni",
+   "ref": "P003",
+   "src": "assets/raw/ig/Cmce2h1J3Wl_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Sin nombre de trago (no es Negroni según IG-178)."
+  },
+  {
+   "id": "carta-lamina-tacos",
+   "ref": "P070",
+   "src": "assets/raw/ig/C7HV31OLXTJ_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Sin nombre de plato (no está en la carta actual)."
+  },
+  {
+   "id": "carta-peter",
+   "ref": "V038-cover",
+   "post": "IG-044",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-olvidar",
+   "ref": "V057-cover",
+   "post": "IG-002",
+   "src": "assets/raw/ig/DeC9NEioZFw_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "note": "720x720 de día: solo 480.",
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-saguer",
+   "ref": "V030-cover",
+   "post": "IG-063",
+   "src": "assets/raw/ig/DEieMaByhUU_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-sangria",
+   "alias": "hoy-jueves-sangria",
+   "ref": "P228",
+   "post": "IG-039",
+   "section": "carta-item"
+  },
+  {
+   "id": "carta-coquette",
+   "ref": "P074",
+   "post": "IG-096",
+   "src": "assets/raw/ig/C9xrKP8Jehi_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-moto",
+   "ref": "P336",
+   "post": "IG-011",
+   "src": "assets/raw/ig/DaquSYCofM8_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-tukulito",
+   "ref": "P044",
+   "post": "IG-139",
+   "src": "assets/raw/ig/CsXCLdZpgB7_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "note": "852x852: solo 480.",
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-contuti",
+   "ref": "P158",
+   "post": "IG-066",
+   "src": "assets/raw/ig/DEVtFfySKVY_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-camaron",
+   "ref": "P099",
+   "post": "IG-077",
+   "src": "assets/raw/ig/DAbw0xKSimd_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-topiturron",
+   "ref": "P227",
+   "post": "IG-040",
+   "src": "assets/raw/ig/DRNqIPslOds_00.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-pizza-dulzona",
+   "ref": "P310",
+   "post": "IG-022",
+   "src": "assets/raw/ig/DY0AUvhlHjI_18.jpg",
+   "section": "carta-item",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 720
+    }
+   ],
+   "note": "Fase 15: es la única pizza dulce de la carta y se ve lo que dice su descripción (pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). La caption (IG-022) no la nombra. 900x900: hasta 720.",
+   "extra_widths": [
+    240,
+    320
+   ]
+  },
+  {
+   "id": "carta-grupo-negroni",
+   "ref": "P226",
+   "src": "assets/raw/ig/DP7O0BElPhW_00.jpg",
+   "section": "carta-grupo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Fase 15: lámina del grupo Negroni (IG-042: «cómo estamoh pa un Negroni? o su Boulevardier?»). Sin nombre de ítem: no dice cuál de los cinco."
+  },
+  {
+   "id": "carta-grupo-spritz",
+   "ref": "P016",
+   "src": "assets/raw/ig/CnU8qLjJ5zx_00.jpg",
+   "section": "carta-grupo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      55
+     ],
+     "max": 480
+    }
+   ],
+   "note": "Fase 15: lámina del grupo Spritz (dos copas de spritz; IG-167 no nombra el trago). 1280x853: el 4:5 deja 682 px, se emite 480."
+  },
+  {
+   "id": "carta-grupo-pizzas",
+   "ref": "P042",
+   "src": "assets/raw/ig/CreVnAOJ6WR_00.jpg",
+   "section": "carta-grupo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Fase 15: lámina del grupo Pizzas artesanales (IG-141 habla de sus pizzas, no nombra cuál; jamón serrano y rúcula no calzan con ninguna de las 9 actuales)."
+  },
+  {
+   "id": "carta-lamina-vino",
+   "ref": "P191",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_09.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      40,
+      45
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Fase 15: lámina de Vinos & espumantes (bartender sirviendo vino; no se sabe cuál)."
+  },
+  {
+   "id": "carta-lamina-barra",
+   "ref": "P109",
+   "src": "assets/raw/ig/DBMtYELSzNS_09.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 960
+    }
+   ],
+   "note": "Fase 16: lámina de Coctelería de la casa (el bartender del muro rosa P184 queda solo en el landing)."
+  }
  ],
  "videos": [
-  {"id": "hoy-martes-negroni", "ref": "V054", "src": "assets/raw/ig/DZ8c3yiIdpa_00.mp4", "section": "hoy",
-   "start": 0.0, "end": 3.29, "loop": "crossfade", "xfade": 0.3, "ratio": "4:5", "focal": [50, 50], "width": 720, "budget_kb": 400, "poster_t": 1.2,
-   "note": "Revisado: piel de naranja sobre el vaso, noche cálida, 720p nativo (4:5 sin ampliar). Se mantiene; respaldo P184."},
-  {"id": "lugar-techo-flecos", "ref": "V009", "src": "assets/raw/ig/C5WAi8PLHni_00.mp4", "section": "lugar",
-   "start": 0.0, "end": 7.1, "loop": "crossfade", "xfade": 0.5, "ratio": "4:5", "focal": [50, 50], "width": 720, "budget_kb": 1500, "crf_start": 26, "poster_t": 2.0},
-  {"id": "carta-muro-rosa", "ref": "V021", "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4", "section": "carta",
-   "start": 0.2, "end": 5.2, "loop": "boomerang", "ratio": "4:5", "focal": [50, 45], "width": 720, "budget_kb": 1500, "crf_start": 26, "poster_t": 1.8,
-   "note": "Único reel 1080x1920: 4:5 de 1080x1350 bajado a 720x900. Presupuestos rebalanceados: V038 (1,2 MB en web.md) no entra, su margen sube CRF de V009, V021 y V031 a <=29."},
-  {"id": "carta-cazuela", "ref": "V052", "src": "assets/raw/ig/DZgLFzooZB__00.mp4", "section": "carta",
-   "start": 0.0, "end": 4.0, "loop": "boomerang", "ratio": "4:5", "focal": [50, 50], "width": 720, "budget_kb": 600, "poster_t": 1.0,
-   "note": "Es un paneo lento, no un burbujeo fijo: boomerang en vez de corte."},
-  {"id": "donde-letrero", "ref": "V031", "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4", "section": "donde",
-   "start": 1.0, "end": 10.4, "loop": "crossfade", "xfade": 0.4, "ratio": "orig", "focal": [50, 50], "width": 1278, "budget_kb": 1200, "crf_start": 26, "poster_t": 0.6,
-   "credit": "@estudiouno.prod", "credit_src": "IG-061",
-   "note": "Tramo del guion (1-10,4 s): letrero, puerta, techo, ojos, lámparas; termina antes del corte de 10,53 s. Sin audio."}
+  {
+   "id": "hoy-martes-negroni",
+   "ref": "V054",
+   "src": "assets/raw/ig/DZ8c3yiIdpa_00.mp4",
+   "section": "hoy",
+   "start": 0.0,
+   "end": 3.29,
+   "loop": "crossfade",
+   "xfade": 0.3,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "width": 720,
+   "budget_kb": 400,
+   "poster_t": 1.2,
+   "note": "Revisado: piel de naranja sobre el vaso, noche cálida, 720p nativo (4:5 sin ampliar). Se mantiene; respaldo P184."
+  },
+  {
+   "id": "donde-letrero",
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "donde",
+   "start": 1.0,
+   "end": 10.4,
+   "loop": "crossfade",
+   "xfade": 0.4,
+   "ratio": "orig",
+   "focal": [
+    50,
+    50
+   ],
+   "width": 1278,
+   "budget_kb": 1200,
+   "crf_start": 26,
+   "poster_t": 0.6,
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "note": "Tramo del guion (1-10,4 s): letrero, puerta, techo, ojos, lámparas; termina antes del corte de 10,53 s. Sin audio."
+  }
  ],
  "rejected": [
-  {"ref": "V051", "reason": "Sábado: mismo paneo del muro rosa que V021 (carta) y 720p; se usa P194 (con-quien-solo)."},
-  {"ref": "V014", "reason": "Loop opcional del guion: no entra en el presupuesto de 7 MB sin quitar otro; queda la portada V014-cover."},
-  {"ref": "V038", "reason": "No figura en el guion v2 (la carta usa V021 y V052)."}
+  {
+   "ref": "V051",
+   "reason": "Sábado: mismo paneo del muro rosa que V021 (carta) y 720p; se usa P194 (con-quien-solo)."
+  },
+  {
+   "ref": "V014",
+   "reason": "Loop opcional del guion: no entra en el presupuesto de 7 MB sin quitar otro; queda la portada V014-cover."
+  },
+  {
+   "ref": "V038",
+   "reason": "No figura en el guion v2 (la carta usa V021 y V052)."
+  }
  ],
- "credits": {"IG-050": "@estudiouno.prod", "IG-075": "@estudiouno.prod", "IG-061": "@estudiouno.prod", "IG-100": "@estudiouno.prod",
-  "IG-144": "@catarsis.fotografia", "IG-147": "@catarsis.fotografia", "IG-141": "@catarsis.fotografia", "IG-167": "@catarsis.fotografia", "IG-009": "@isosur.prod", "IG-178": "@tamillanquileo", "IG-103": "@rober.patagonico"}
+ "credits": {
+  "IG-050": "@estudiouno.prod",
+  "IG-075": "@estudiouno.prod",
+  "IG-061": "@estudiouno.prod",
+  "IG-100": "@estudiouno.prod",
+  "IG-144": "@catarsis.fotografia",
+  "IG-147": "@catarsis.fotografia",
+  "IG-141": "@catarsis.fotografia",
+  "IG-167": "@catarsis.fotografia",
+  "IG-009": "@isosur.prod",
+  "IG-178": "@tamillanquileo",
+  "IG-103": "@rober.patagonico"
+ }
 }

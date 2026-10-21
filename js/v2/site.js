@@ -45,8 +45,13 @@
     if (e.isIntersecting && !box._paused && !reduce.matches) { v.preload = 'auto'; const p = v.play(); if (p) p.catch(() => {}); }
     else if (!v.paused) v.pause();
   }), { threshold: 0.25 }) : null;
+  /* fase 16: el póster se pide recién cuando el video está a una pantalla (no compite con la portada) */
+  const pio = hasIO ? new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return; const v = $('video', e.target); if (v.dataset.poster) { v.poster = v.dataset.poster; delete v.dataset.poster; } pio.unobserve(e.target);
+  }), { rootMargin: '100% 0px' }) : null;
   vids.forEach((box) => {
     const v = $('video', box), b = $('.vid-b', box);
+    if (pio) pio.observe(box); else if (v.dataset.poster) v.poster = v.dataset.poster;
     box._paused = reduce.matches;
     if (b) {
       b.dataset.es = b.textContent;
@@ -77,9 +82,12 @@
   let byKey = false;
   d.addEventListener('keydown', () => { byKey = true; }, true);
   d.addEventListener('pointerdown', () => { byKey = false; }, true);
+  /* fase 16: con la hoja abierta, lo de atrás queda inerte (ni foco ni lector de pantalla): el foco no se escapa de la hoja */
+  const behind = () => [$('main'), $('.pie-sitio'), $('.skip'), $('.nav-logo'), $('.nav-links'), $('.nav .btn')].filter(Boolean);
   function setMenu(open, instant) {
     if (!mb || !hoja) return;
     const now = instant || byKey;
+    behind().forEach((el) => { el.inert = open; if (open) el.setAttribute('aria-hidden', 'true'); else el.removeAttribute('aria-hidden'); });
     if (now) hoja.classList.add('al-instante');
     hoja.classList.toggle('abierta', open);
     mb.setAttribute('aria-expanded', String(open));
@@ -91,6 +99,15 @@
     hoja.hidden = false;  /* sin JS la hoja queda oculta con [hidden]; con JS la ocultan visibility y clip-path */
     mb.addEventListener('click', () => setMenu(mb.getAttribute('aria-expanded') !== 'true', false));
     $$('a', hoja).forEach((a) => a.addEventListener('click', () => setMenu(false, true)));
+    /* Tab desde el último control de la hoja vuelve al botón Menú (y Mayús+Tab desde Menú, al último): el foco da la vuelta adentro */
+    hoja.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab' || e.shiftKey) return;
+      const f = $$('a, button', hoja); if (d.activeElement === f[f.length - 1]) { e.preventDefault(); mb.focus(); }
+    });
+    mb.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab' || !e.shiftKey || mb.getAttribute('aria-expanded') !== 'true') return;
+      const f = $$('a, button', hoja); e.preventDefault(); f[f.length - 1].focus();
+    });
     d.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { setMenu(false, true); mb.focus(); } });
     matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) setMenu(false, true); });
   }
@@ -129,6 +146,19 @@
     } catch (e) { /* sin Intl con zona horaria: el calendario queda sin marca */ }
   }
 
+  /* ───────── nav de escritorio: la sección a la vista lleva aria-current (y su subrayado) ───────── */
+  const navl = $$('.nav-links a[href^="#"]');
+  if (navl.length && hasIO) {
+    const byId = new Map(navl.map((a) => [a.getAttribute('href').slice(1), a]));
+    const nio = new IntersectionObserver((es) => es.forEach((e) => {
+      const a = byId.get(e.target.id);
+      if (!a) return;
+      if (e.isIntersecting) { navl.forEach((x) => x.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true'); }
+      else if (a.getAttribute('aria-current')) a.removeAttribute('aria-current');
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    byId.forEach((a, id) => { const sec = d.getElementById(id); if (sec) nio.observe(sec); });
+  }
+
   /* ───────── reseñas: en el teléfono, tres y "Ver más reseñas" ───────── */
   const rg = $('.res-g'), rb = $('.res-mas-b');
   if (rg && rb && matchMedia('(max-width: 699px)').matches) {
@@ -147,8 +177,9 @@
   const below = (el) => el.getBoundingClientRect().top > innerHeight * 0.92;
   /* se observa el padre: un blanco recortado entero por clip-path no cuenta como visible para el observador */
   const armed = new Map();
+  /* fase 16: también se revela lo que ya quedó arriba (un salto de ancla o un scroll rápido no deja nada escondido) */
   const io = new IntersectionObserver((es) => es.forEach((e) => {
-    if (!e.isIntersecting) return;
+    if (!e.isIntersecting && e.boundingClientRect.top > 0) return;
     (armed.get(e.target) || [e.target]).forEach((el) => { eager(el); el.classList.add('rv-in'); });
     io.unobserve(e.target);
   }), { rootMargin: '0px 0px -12% 0px', threshold: 0 });
@@ -166,16 +197,23 @@
     io.observe(h);
   });
 
-  /* el momento autoral: "la franja se imprime", una vez, al entrar Hoy en Almud */
+  /* el momento autoral: "la franja se imprime", una vez, al entrar Hoy en Almud.
+     Fase 16: el recorte vive en el hijo (.hoy-dia), no en la sección observada, así que la sección siempre "se ve" para el
+     observador; y se imprime apenas cualquier parte asoma o si ya quedó arriba (menú → El lugar y luego subir; 1920 bajando
+     exactamente una pantalla). Nunca queda en blanco. */
   const hoy = $('#hoy');
   if (hoy && below(hoy)) {
     hoy.classList.add('arm');
-    const hio = new IntersectionObserver((es) => {
-      if (!es[0].isIntersecting) return;
+    const imprime = () => {
+      if (hoy.classList.contains('imprime')) return;
       eager(hoy.querySelector('.hoy-dia:not([hidden])') || hoy);
       hoy.classList.add('imprime');
       hio.disconnect();
-    }, { rootMargin: '0px 0px -25% 0px' });
+    };
+    const hio = new IntersectionObserver((es) => {
+      const r = es[0].boundingClientRect;
+      if (es[0].isIntersecting || r.top < innerHeight * 0.75) imprime();
+    }, { rootMargin: '0px 0px -25% 0px', threshold: 0 });
     hio.observe(hoy);
   }
 })();

@@ -35,16 +35,17 @@
   --carta-magenta: #cd007a;     /* precios en pantalla (4,6:1); el impreso #ec008c da 3,6:1 y no se usa en texto */
   --carta-tinta: var(--noche);  /* descripciones (16,3:1) */
 
-  /* ---- La carta en su página (fase 15): un tinte suave por pestaña, derivado del campo y mezclado con blanco cálido.
-     El magenta es el par más justo: todos los tintes dan ≥ 4,5:1 con magenta y ≥ 7:1 con azul carta (contraste.py).
-     -fuerte: fondo de los chips de grupo (solo tinta noche encima, ≥ 10:1). */
-  --tinte-fucsia: #fae7ef;    --tinte-fucsia-fuerte: #eeacc9;     /* magenta 4,58 · azul 7,32 */
-  --tinte-turquesa: #ddf2f4;  --tinte-turquesa-fuerte: #bee7ea;   /* magenta 4,66 · azul 7,47 */
-  --tinte-amarillo: #feeec4;  --tinte-amarillo-fuerte: #fde69f;   /* magenta 4,71 · azul 7,53 */
-  --tinte-coral: #fee9dd;     --tinte-coral-fuerte: #fbc5b4;      /* magenta 4,62 · azul 7,40 */
-  --tinte-verde: #e1efde;     --tinte-verde-fuerte: #aaddc1;      /* magenta 4,54 · azul 7,27 */
-  --tinte-papel: var(--papel); --tinte-papel-fuerte: #eadbc4;     /* magenta 4,63 · azul 7,41 (fuerte: noche 13,97) */
-  --carta-hoja: #fffaf3;      /* la promo de hoy: hoja más clara sobre el tinte (magenta 5,22 · azul 8,35) */
+  /* ---- La carta en su página: un tinte suave por pestaña (lo pidió el cliente).
+     Fase 16: ya no son hex a mano; cada tinte se DERIVA de su campo mezclado con --carta-hoja (la hoja clara),
+     12 % de campo (8 % el fucsia, que oscurece más). Contraste calculado (contraste.py / sistema.md §2.5):
+     todos ≥ 4,56:1 con magenta, ≥ 6,79:1 con azul carta y ≥ 14,9:1 con noche. */
+  --carta-hoja: #fffaf3;      /* la hoja clara: base de los tintes (magenta 5,22 · azul 8,35) */
+  --tinte-fucsia: color-mix(in srgb, var(--fucsia) 8%, var(--carta-hoja));      /* #fbe7e7 · magenta 4,56 */
+  --tinte-turquesa: color-mix(in srgb, var(--turquesa) 12%, var(--carta-hoja));  /* #e8f2ed · magenta 4,73 */
+  --tinte-amarillo: color-mix(in srgb, var(--amarillo) 12%, var(--carta-hoja));  /* #fef3d7 · magenta 4,90 */
+  --tinte-coral: color-mix(in srgb, var(--coral) 12%, var(--carta-hoja));        /* #fde8de · magenta 4,58 */
+  --tinte-verde: color-mix(in srgb, var(--verde) 12%, var(--carta-hoja));        /* #e1f0e3 · magenta 4,58 */
+  --tinte-papel: var(--papel);                                                    /* comilona: el papel (magenta 4,63) */
 
   /* ---- Scrim funcional (único degradado del sistema, solo bajo texto sobre foto) ---- */
   --scrim: 12 7 5;              /* rgb neutro-cálido para rgb(var(--scrim) / a) */

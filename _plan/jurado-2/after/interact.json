@@ -1,0 +1,714 @@
+{
+ "hoy": {
+  "menu-lugar-subir-390": {
+   "top": -120,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "1920-una-pantalla": {
+   "top": -8,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "salto+50-390": {
+   "top": -50,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "salto+50-1024": {
+   "top": -50,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "salto+50-1440": {
+   "top": -50,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "salto+50-1920": {
+   "top": -50,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "hash-lugar-subir-1440": {
+   "top": 0,
+   "arm": true,
+   "imprime": true,
+   "clip": "inset(0px)",
+   "bg": "rgb(64, 185, 194)"
+  },
+  "errors": [],
+  "ok": true
+ },
+ "menu": {
+  "abierto": {
+   "mainInert": true,
+   "footInert": true,
+   "ariaHidden": "true",
+   "active": "El lugar"
+  },
+  "tabs": [
+   "hoja:Tragos",
+   "hoja:Comida",
+   "hoja:Con quién",
+   "hoja:Eventos",
+   "hoja:Cuándo y dónde",
+   "hoja:ES",
+   "hoja:EN",
+   "menu:Menú",
+   "hoja:El lugar",
+   "hoja:Tragos",
+   "hoja:Comida",
+   "hoja:Con quién",
+   "hoja:Eventos",
+   "hoja:Cuándo y dónde",
+   "hoja:Eventos",
+   "hoja:Con quién",
+   "hoja:Comida"
+  ],
+  "escapa": false,
+  "cerrado": {
+   "mainInert": false,
+   "focus": "menu-b"
+  },
+  "errors": []
+ },
+ "carta": {
+  "320#casa": {
+   "activo": "Coctelería de la casa",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-der",
+   "chipVisible": null,
+   "sw": 320
+  },
+  "320#promos": {
+   "activo": "Nuestras promos",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq",
+   "chipVisible": null,
+   "sw": 320
+  },
+  "320#comilona-pizzas": {
+   "activo": "Comilona",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq mas-der",
+   "chipVisible": true,
+   "sw": 320
+  },
+  "320#sin-alcohol-cervezas": {
+   "activo": "Mocktails sin alcohol",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq mas-der",
+   "chipVisible": true,
+   "sw": 320
+  },
+  "390#casa": {
+   "activo": "Coctelería de la casa",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-der",
+   "chipVisible": null,
+   "sw": 390
+  },
+  "390#promos": {
+   "activo": "Nuestras promos",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq",
+   "chipVisible": null,
+   "sw": 390
+  },
+  "390#comilona-pizzas": {
+   "activo": "Comilona",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq mas-der",
+   "chipVisible": true,
+   "sw": 390
+  },
+  "390#sin-alcohol-cervezas": {
+   "activo": "Mocktails sin alcohol",
+   "activoVisible": true,
+   "barH": 52,
+   "filas": 1,
+   "minTabH": 44,
+   "mascara": "tabs-l mas-izq mas-der",
+   "chipVisible": true,
+   "sw": 390
+  },
+  "768#casa": {
+   "activo": "Coctelería de la casa",
+   "activoVisible": true,
+   "barH": 96,
+   "filas": 2,
+   "minTabH": 44,
+   "mascara": "tabs-l",
+   "chipVisible": null,
+   "sw": 768
+  },
+  "768#promos": {
+   "activo": "Nuestras promos",
+   "activoVisible": true,
+   "barH": 96,
+   "filas": 2,
+   "minTabH": 44,
+   "mascara": "tabs-l",
+   "chipVisible": null,
+   "sw": 768
+  },
+  "768#comilona-pizzas": {
+   "activo": "Comilona",
+   "activoVisible": true,
+   "barH": 96,
+   "filas": 2,
+   "minTabH": 44,
+   "mascara": "tabs-l",
+   "chipVisible": true,
+   "sw": 768
+  },
+  "768#sin-alcohol-cervezas": {
+   "activo": "Mocktails sin alcohol",
+   "activoVisible": true,
+   "barH": 96,
+   "filas": 2,
+   "minTabH": 44,
+   "mascara": "tabs-l",
+   "chipVisible": true,
+   "sw": 768
+  },
+  "1440#casa": {
+   "activo": "Coctelería de la casa",
+   "activoVisible": true,
+   "barH": 64,
+   "filas": 1,
+   "minTabH": 48,
+   "mascara": "tabs-l",
+   "chipVisible": null,
+   "sw": 1440
+  },
+  "1440#promos": {
+   "activo": "Nuestras promos",
+   "activoVisible": true,
+   "barH": 64,
+   "filas": 1,
+   "minTabH": 48,
+   "mascara": "tabs-l",
+   "chipVisible": null,
+   "sw": 1440
+  },
+  "1440#comilona-pizzas": {
+   "activo": "Comilona",
+   "activoVisible": true,
+   "barH": 64,
+   "filas": 1,
+   "minTabH": 48,
+   "mascara": "tabs-l",
+   "chipVisible": true,
+   "sw": 1440
+  },
+  "1440#sin-alcohol-cervezas": {
+   "activo": "Mocktails sin alcohol",
+   "activoVisible": true,
+   "barH": 64,
+   "filas": 1,
+   "minTabH": 48,
+   "mascara": "tabs-l",
+   "chipVisible": true,
+   "sw": 1440
+  }
+ },
+ "targets": {
+  "index.html-390": [],
+  "index.html-1440": [],
+  "carta/index.html-390": [],
+  "carta/index.html-1440": []
+ },
+ "dpr": {
+  "index.html-390@3x": {
+   "n": 36,
+   "mediana": 1.21,
+   "min": [
+    "portada-terraza-m-1170.avif",
+    517,
+    1170,
+    0.75,
+    526
+   ],
+   "max": [
+    "tragos-sours-a-720.avif",
+    173,
+    720,
+    1.39,
+    195
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": [
+    [
+     "tragos-sours-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "tragos-copa-naranja-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "comida-pizza-mano-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "comida-garzon-plato-m-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "eventos-diez-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "eventos-torta-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "eventos-doce-m-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ],
+    [
+     "eventos-jaloguin-a-720.avif",
+     173,
+     720,
+     1.39,
+     195
+    ]
+   ]
+  },
+  "carta/index.html-390@3x": {
+   "n": 5,
+   "mediana": 1.03,
+   "min": [
+    "carta-peter-a-320.avif",
+    104,
+    320,
+    1.03,
+    104
+   ],
+   "max": [
+    "carta-peter-a-320.avif",
+    104,
+    320,
+    1.03,
+    104
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
+  },
+  "index.html-390@2x": {
+   "n": 36,
+   "mediana": 1.36,
+   "min": [
+    "portada-terraza-m-1170.avif",
+    517,
+    1170,
+    1.13,
+    526
+   ],
+   "max": [
+    "tragos-sours-a-480.avif",
+    173,
+    480,
+    1.39,
+    194
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": [
+    [
+     "tragos-sours-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "tragos-copa-naranja-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "comida-pizza-mano-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "comida-garzon-plato-m-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "eventos-diez-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "eventos-torta-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "eventos-doce-m-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ],
+    [
+     "eventos-jaloguin-a-480.avif",
+     173,
+     480,
+     1.39,
+     194
+    ]
+   ]
+  },
+  "carta/index.html-390@2x": {
+   "n": 5,
+   "mediana": 1.15,
+   "min": [
+    "carta-peter-a-240.avif",
+    104,
+    240,
+    1.15,
+    104
+   ],
+   "max": [
+    "carta-peter-a-240.avif",
+    104,
+    240,
+    1.15,
+    104
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
+  },
+  "index.html-1440@1x": {
+   "n": 36,
+   "mediana": 1.08,
+   "min": [
+    "donde-puerta-d-480.avif",
+    560,
+    480,
+    0.86,
+    460
+   ],
+   "max": [
+    "tragos-copa-naranja-a-480.avif",
+    327,
+    480,
+    1.47,
+    345
+   ],
+   "css_mayor_que_archivo": [
+    [
+     "carta-peter-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "carta-saguer-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "hoy-jueves-sangria-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "carta-moto-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "carta-tukulito-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "carta-camaron-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "carta-pizza-dulzona-a-320.avif",
+     327,
+     320,
+     0.98,
+     316
+    ],
+    [
+     "donde-puerta-d-480.avif",
+     560,
+     480,
+     0.86,
+     460
+    ]
+   ],
+   "sizes_desajustado": [
+    [
+     "donde-puerta-d-480.avif",
+     560,
+     480,
+     0.86,
+     460
+    ]
+   ]
+  },
+  "carta/index.html-1440@1x": {
+   "n": 7,
+   "mediana": 1.67,
+   "min": [
+    "carta-lamina-barra-a-480.avif",
+    444,
+    480,
+    1.08,
+    432
+   ],
+   "max": [
+    "carta-peter-a-240.avif",
+    144,
+    240,
+    1.67,
+    144
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
+  },
+  "index.html-1440@2x": {
+   "n": 36,
+   "mediana": 1.08,
+   "min": [
+    "portada-terraza-a-1440.avif",
+    1440,
+    1440,
+    0.5,
+    1440
+   ],
+   "max": [
+    "hoy-miercoles-brindis-a-1280.avif",
+    560,
+    1280,
+    1.14,
+    576
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": [
+    [
+     "donde-puerta-d-960.avif",
+     560,
+     960,
+     0.86,
+     460
+    ]
+   ]
+  },
+  "carta/index.html-1440@2x": {
+   "n": 7,
+   "mediana": 1.11,
+   "min": [
+    "carta-lamina-barra-a-960.avif",
+    444,
+    960,
+    1.08,
+    432
+   ],
+   "max": [
+    "carta-peter-a-320.avif",
+    144,
+    320,
+    1.11,
+    144
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
+  },
+  "index.html-1920@1x": {
+   "n": 36,
+   "mediana": 1.19,
+   "min": [
+    "donde-puerta-d-720.avif",
+    759,
+    720,
+    0.95,
+    614
+   ],
+   "max": [
+    "hoy-miercoles-brindis-a-960.avif",
+    759,
+    960,
+    1.26,
+    768
+   ],
+   "css_mayor_que_archivo": [
+    [
+     "donde-puerta-d-720.avif",
+     759,
+     720,
+     0.95,
+     614
+    ]
+   ],
+   "sizes_desajustado": [
+    [
+     "donde-puerta-d-720.avif",
+     759,
+     720,
+     0.95,
+     614
+    ]
+   ]
+  },
+  "carta/index.html-1920@1x": {
+   "n": 7,
+   "mediana": 1.67,
+   "min": [
+    "carta-lamina-barra-a-720.avif",
+    603,
+    720,
+    1.19,
+    576
+   ],
+   "max": [
+    "carta-peter-a-240.avif",
+    144,
+    240,
+    1.67,
+    144
+   ],
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
+  }
+ },
+ "lcp": {
+  "landing-390@3x": {
+   "runs": [
+    [
+     2132,
+     "portada-terraza-m-1170.avif"
+    ],
+    [
+     2152,
+     "portada-terraza-m-1170.avif"
+    ],
+    [
+     2140,
+     "portada-terraza-m-1170.avif"
+    ]
+   ],
+   "mediana_ms": 2140
+  },
+  "landing-1440": {
+   "runs": [
+    [
+     3136,
+     "portada-terraza-a-1440.avif"
+    ],
+    [
+     3152,
+     "portada-terraza-a-1440.avif"
+    ],
+    [
+     3148,
+     "portada-terraza-a-1440.avif"
+    ]
+   ],
+   "mediana_ms": 3148
+  },
+  "carta-390@3x": {
+   "runs": [
+    [
+     1260,
+     "P"
+    ],
+    [
+     1264,
+     "P"
+    ],
+    [
+     1456,
+     "P"
+    ]
+   ],
+   "mediana_ms": 1264
+  }
+ }
+}

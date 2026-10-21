@@ -145,7 +145,14 @@ def do_image(a, M, credits):
         cr = im.crop(box)
         cw = cr.width
         cap = min(cw, a.get('cap', 10 ** 6), c.get('max', 10 ** 6))
-        widths = [w for w in M['widths'] if w <= cap] or [cw]
+        if c.get('widths'):  # fase 16: anchos propios del recorte (p. ej. la portada del teléfono)
+            widths = [w for w in c['widths'] if w <= cw] or [cw]
+        else:
+            widths = [w for w in M['widths'] if w <= cap] or [cw]
+            if cap - widths[-1] >= 64:  # fase 16: el ancho nativo del recorte, si los estándar se quedan cortos (nunca se amplía)
+                widths.append(cap)
+        widths = sorted(set(widths) | {w for w in a.get('extra_widths', []) if w < widths[0]})
+        qc = dict(q, **c.get('quality', {}))
         files = {f: {} for f in fmts}
         for w in widths:
             out = None
@@ -153,7 +160,7 @@ def do_image(a, M, credits):
                 p = os.path.join(OUT_IMG, f"{a['id']}-{c['name']}-{w}.{f}")
                 if not fresh(p, src, MAN):
                     out = out or resize(cr, w)
-                    save(out, p, f, q)
+                    save(out, p, f, qc)
                 files[f][str(w)] = {'path': rel(p), 'bytes': os.path.getsize(p)}
         wmax = widths[-1]
         hmax = round(cr.height * wmax / cw)

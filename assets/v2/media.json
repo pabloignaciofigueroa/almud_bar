@@ -84,10 +84,66 @@
        }
       }
      }
+    },
+    "m": {
+     "ratio": "1440:1343",
+     "focal": [
+      50,
+      0
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1343
+     ],
+     "crop_size": [
+      1440,
+      1343
+     ],
+     "width": 1170,
+     "height": 1091,
+     "widths": [
+      720,
+      960,
+      1170
+     ],
+     "lqip": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBgCdASoYABYAPwF4tFOrJyUiqAgBYCAJaACdMuz/d42BxRIf+0d1Hw/C8JGbeefot/Y/sn7obuoAAP7MZoDFi1klR12sAIO5HoKCb7q/J9wKLvLd8df84lx9eTZ6IeBQSKGDTNJui1h9HOpieDtsSS6Erg2MCsVOl3v2+PWP3drjeSgCEc2BPN7SP9bzlSJLADw8Hg4qFCrFqHepvJyr/to1mfyHhsFjhhM7uUGIsuFRFGezmAMjokr/gWdNVbVAjIL0+NQ3kBCpFMetrwAA",
+     "color": "#ae6450",
+     "files": {
+      "avif": {
+       "720": {
+        "path": "assets/v2/img/portada-terraza-m-720.avif",
+        "bytes": 62662
+       },
+       "960": {
+        "path": "assets/v2/img/portada-terraza-m-960.avif",
+        "bytes": 90486
+       },
+       "1170": {
+        "path": "assets/v2/img/portada-terraza-m-1170.avif",
+        "bytes": 119827
+       }
+      },
+      "webp": {
+       "720": {
+        "path": "assets/v2/img/portada-terraza-m-720.webp",
+        "bytes": 116588
+       },
+       "960": {
+        "path": "assets/v2/img/portada-terraza-m-960.webp",
+        "bytes": 167116
+       },
+       "1170": {
+        "path": "assets/v2/img/portada-terraza-m-1170.webp",
+        "bytes": 219016
+       }
+      }
+     }
     }
    },
    "credit": "@estudiouno.prod",
-   "note": "Nativa 1440x1919 sin recorte: escritorio a 1:1 anclada con top:-19.7% del ancho; teléfono object-fit cover con object-position 30% 50% (tile). Asterisco del veredicto vigente."
+   "note": "Nativa 1440x1919 sin recorte: escritorio a 1:1 anclada con top:-19.7% del ancho; teléfono object-fit cover con object-position 30% 50% (tile). Asterisco del veredicto vigente. Fase 16: recorte 'm' (70 % superior, todo el ancho) solo para teléfono (<900 px): es la zona que la portada muestra ahí; 1170 px máx. para que el LCP del teléfono quede ≲130 KB."
   },
   "tragos-bartender-letrero": {
    "ref": "P362",
@@ -397,86 +453,6 @@
    "credit": "@estudiouno.prod",
    "note": "Open Graph, único JPEG del sitio."
   },
-  "hoy-miercoles-garzona": {
-   "ref": "P331",
-   "src": "assets/raw/ig/DZap3klI-um_00.jpg",
-   "section": "hoy",
-   "source_size": [
-    3072,
-    4096
-   ],
-   "alt_placeholder": "Garzona con jockey ALMUD y bandeja de tragos (alta res)",
-   "post": "IG-019",
-   "crops": {
-    "a": {
-     "ratio": "4:5",
-     "focal": [
-      40,
-      45
-     ],
-     "box": [
-      0,
-      0,
-      3072,
-      3840
-     ],
-     "crop_size": [
-      3072,
-      3840
-     ],
-     "width": 1280,
-     "height": 1600,
-     "widths": [
-      480,
-      720,
-      960,
-      1280
-     ],
-     "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBQCdASoTABgAPwFys1GrJqSiqAqpYCAJaAC7Mt8Bp4hS8zQ5Ht9BIDdAIGUnKe74AP7LzyZxfkROxWUF4LDEIp7r8IWmPHRGJfelmOXXSvSlnanIOIR2ei8sQoR0MkLeuJHdqS6/NOD3NehstyhD2Aak+sG+qVJNhpl8Zuobk+rKWYkdjWbE3fOIqAAA",
-     "color": "#4a3536",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-480.avif",
-        "bytes": 16691
-       },
-       "720": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-720.avif",
-        "bytes": 29858
-       },
-       "960": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-960.avif",
-        "bytes": 43420
-       },
-       "1280": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-1280.avif",
-        "bytes": 63940
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-480.webp",
-        "bytes": 27106
-       },
-       "720": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-720.webp",
-        "bytes": 47574
-       },
-       "960": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-960.webp",
-        "bytes": 70206
-       },
-       "1280": {
-        "path": "assets/v2/img/hoy-miercoles-garzona-a-1280.webp",
-        "bytes": 100388
-       }
-      }
-     }
-    }
-   },
-   "credit": null,
-   "note": "Foto de IG-019 (miércoles). Revisada: nítida, cálida, jockey ALMUD. Se mantiene."
-  },
   "hoy-jueves-sangria": {
    "ref": "P228",
    "src": "assets/raw/ig/DRkwz2OlC01_00.jpg",
@@ -507,6 +483,8 @@
      "width": 1280,
      "height": 1600,
      "widths": [
+      240,
+      320,
       480,
       720,
       960,
@@ -516,6 +494,14 @@
      "color": "#8a5237",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-240.avif",
+        "bytes": 5967
+       },
+       "320": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-320.avif",
+        "bytes": 8589
+       },
        "480": {
         "path": "assets/v2/img/hoy-jueves-sangria-a-480.avif",
         "bytes": 14560
@@ -534,6 +520,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-240.webp",
+        "bytes": 9190
+       },
+       "320": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-320.webp",
+        "bytes": 13312
+       },
        "480": {
         "path": "assets/v2/img/hoy-jueves-sangria-a-480.webp",
         "bytes": 22514
@@ -584,11 +578,12 @@
       819,
       1024
      ],
-     "width": 720,
-     "height": 900,
+     "width": 819,
+     "height": 1024,
      "widths": [
       480,
-      720
+      720,
+      819
      ],
      "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoTABgAPwFwrFErJiQiqA1RYCAJaAC1F8CA5uqd+Oj8fjkhT68aEx+2KgcBVQZWgAD+zxhiH0m+jLy+uvx4Tk8Y/e7ZYSm9BGiLth3bAyGuH7Qm/eyKZrhQoCDJasD7MEB568Wgtoh5WjYttVb+mY/gQ3r/3XmSVFqIU3sIg5iI0w5Gzw9RFRvgbLlkRzw97Gu2NN2fSBOcb+oUkqOqhzeAAAA=",
      "color": "#a04b3d",
@@ -601,6 +596,10 @@
        "720": {
         "path": "assets/v2/img/hoy-viernes-mesa-a-720.avif",
         "bytes": 33088
+       },
+       "819": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-819.avif",
+        "bytes": 38920
        }
       },
       "webp": {
@@ -611,6 +610,10 @@
        "720": {
         "path": "assets/v2/img/hoy-viernes-mesa-a-720.webp",
         "bytes": 50110
+       },
+       "819": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-819.webp",
+        "bytes": 57732
        }
       }
      }
@@ -625,12 +628,6 @@
    "ref": "P031",
    "section": "hoy",
    "note": "Fase 15 (crítica 1): antes era alias de con-quien-solo (P194), que se repetía en Con quién. P031 (brindis en la barra, IG-152) no se usa en otra parte del landing."
-  },
-  "hoy-martes-fallback": {
-   "alias": "tragos-bartender-muro-rosa",
-   "ref": "P184",
-   "section": "hoy",
-   "note": "Respaldo del martes si el loop V054 no se usa (sin JS / reduced data el póster basta)."
   },
   "lugar-barra-curva": {
    "ref": "P093",
@@ -1032,186 +1029,6 @@
    },
    "credit": "@estudiouno.prod"
   },
-  "lugar-salon-mimbre": {
-   "ref": "P339",
-   "src": "assets/raw/ig/Dbg3ekilC4P_02.jpg",
-   "section": "lugar",
-   "source_size": [
-    3072,
-    4096
-   ],
-   "alt_placeholder": "Mujeres con aro de luz bajo lámpara mimbre, muro rojo",
-   "post": "IG-009",
-   "crops": {
-    "d": {
-     "ratio": "16:9",
-     "focal": [
-      50,
-      45
-     ],
-     "box": [
-      0,
-      979,
-      3072,
-      2707
-     ],
-     "crop_size": [
-      3072,
-      1728
-     ],
-     "width": 2560,
-     "height": 1440,
-     "widths": [
-      480,
-      720,
-      960,
-      1280,
-      1440,
-      1920,
-      2560
-     ],
-     "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQBACdASoYAA4APwFqrE6rJiQiMAgBYCAJZACdACHf/lWicbMjHC3uy0sAAP7cbf75DIgcknvgN1f0ijlFVUc1YqM/LdAbdPzZXrhaDbItyVB0nUWKT5gmEX3m0aivzgAAAA==",
-     "color": "#2e0a07",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-480.avif",
-        "bytes": 7389
-       },
-       "720": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-720.avif",
-        "bytes": 11955
-       },
-       "960": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-960.avif",
-        "bytes": 16811
-       },
-       "1280": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1280.avif",
-        "bytes": 24346
-       },
-       "1440": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1440.avif",
-        "bytes": 28225
-       },
-       "1920": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1920.avif",
-        "bytes": 41970
-       },
-       "2560": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-2560.avif",
-        "bytes": 69172
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-480.webp",
-        "bytes": 10796
-       },
-       "720": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-720.webp",
-        "bytes": 18260
-       },
-       "960": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-960.webp",
-        "bytes": 25724
-       },
-       "1280": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1280.webp",
-        "bytes": 36482
-       },
-       "1440": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1440.webp",
-        "bytes": 42598
-       },
-       "1920": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-1920.webp",
-        "bytes": 62048
-       },
-       "2560": {
-        "path": "assets/v2/img/lugar-salon-mimbre-d-2560.webp",
-        "bytes": 94572
-       }
-      }
-     }
-    },
-    "m": {
-     "ratio": "4:5",
-     "focal": [
-      50,
-      45
-     ],
-     "box": [
-      0,
-      0,
-      3072,
-      3840
-     ],
-     "crop_size": [
-      3072,
-      3840
-     ],
-     "width": 1440,
-     "height": 1800,
-     "widths": [
-      480,
-      720,
-      960,
-      1280,
-      1440
-     ],
-     "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoTABgAPwFysVIrJqSiqAqpYCAJYgCw7BDccDxz/JmABgAA/sAzPF4h6FVt5oNnlCihO0Y9K3bkjXn2Ne41q+yjo7OHuCOfwjApEchjZw9E3uzfu83CrSCCedjUSW7K6SmAAA==",
-     "color": "#200806",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-480.avif",
-        "bytes": 14410
-       },
-       "720": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-720.avif",
-        "bytes": 24955
-       },
-       "960": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-960.avif",
-        "bytes": 36433
-       },
-       "1280": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-1280.avif",
-        "bytes": 53714
-       },
-       "1440": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-1440.avif",
-        "bytes": 62981
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-480.webp",
-        "bytes": 22764
-       },
-       "720": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-720.webp",
-        "bytes": 41892
-       },
-       "960": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-960.webp",
-        "bytes": 62012
-       },
-       "1280": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-1280.webp",
-        "bytes": 90620
-       },
-       "1440": {
-        "path": "assets/v2/img/lugar-salon-mimbre-m-1440.webp",
-        "bytes": 105262
-       }
-      }
-     }
-    }
-   },
-   "credit": "@isosur.prod"
-  },
   "lugar-mural-ojos": {
    "ref": "F:V031_mural-ojos_6.60s",
    "src": "_plan/diag/frames/V031_mural-ojos_6.60s.jpg",
@@ -1390,187 +1207,6 @@
     }
    },
    "credit": "@rober.patagonico"
-  },
-  "tragos-splash": {
-   "ref": "P297",
-   "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
-   "section": "tragos",
-   "source_size": [
-    3177,
-    3177
-   ],
-   "alt_placeholder": "Splash de cóctel rojo en copa coupe, fondo rojo y bokeh (estudio)",
-   "post": "IG-023",
-   "crops": {
-    "d": {
-     "ratio": "1:1",
-     "focal": [
-      50,
-      45
-     ],
-     "box": [
-      0,
-      0,
-      3177,
-      3177
-     ],
-     "crop_size": [
-      3177,
-      3177
-     ],
-     "width": 2560,
-     "height": 2560,
-     "widths": [
-      480,
-      720,
-      960,
-      1280,
-      1440,
-      1920,
-      2560
-     ],
-     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACQBQCdASoYABgAPwF0rlKrJqQiqAqpYCAJagCdMuN14P2xjXcACe28STuHE87OWRCbdEKXAAD+eOe7i5bxcwY7rrCkJNephMGtmOBtVOZPVKv2dfLmgWOjLIHKplsJs//yMajzb6vx69fWIbnr/EmA9KeaojiuTPORQwjmOqGX8fpjFcNPD0SOIUykH9AqGLWeWYYAbax1Et9VVB3fGIO4RznFpJG2QSTcwYpwO/HjnPwj5qJ8Na/kTIXgneRsAAA=",
-     "color": "#85300f",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/tragos-splash-d-480.avif",
-        "bytes": 14937
-       },
-       "720": {
-        "path": "assets/v2/img/tragos-splash-d-720.avif",
-        "bytes": 26720
-       },
-       "960": {
-        "path": "assets/v2/img/tragos-splash-d-960.avif",
-        "bytes": 40067
-       },
-       "1280": {
-        "path": "assets/v2/img/tragos-splash-d-1280.avif",
-        "bytes": 61095
-       },
-       "1440": {
-        "path": "assets/v2/img/tragos-splash-d-1440.avif",
-        "bytes": 72278
-       },
-       "1920": {
-        "path": "assets/v2/img/tragos-splash-d-1920.avif",
-        "bytes": 109045
-       },
-       "2560": {
-        "path": "assets/v2/img/tragos-splash-d-2560.avif",
-        "bytes": 176568
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/tragos-splash-d-480.webp",
-        "bytes": 23094
-       },
-       "720": {
-        "path": "assets/v2/img/tragos-splash-d-720.webp",
-        "bytes": 41258
-       },
-       "960": {
-        "path": "assets/v2/img/tragos-splash-d-960.webp",
-        "bytes": 61668
-       },
-       "1280": {
-        "path": "assets/v2/img/tragos-splash-d-1280.webp",
-        "bytes": 92668
-       },
-       "1440": {
-        "path": "assets/v2/img/tragos-splash-d-1440.webp",
-        "bytes": 109612
-       },
-       "1920": {
-        "path": "assets/v2/img/tragos-splash-d-1920.webp",
-        "bytes": 162084
-       },
-       "2560": {
-        "path": "assets/v2/img/tragos-splash-d-2560.webp",
-        "bytes": 253338
-       }
-      }
-     }
-    },
-    "m": {
-     "ratio": "4:5",
-     "focal": [
-      50,
-      45
-     ],
-     "box": [
-      317,
-      0,
-      2859,
-      3177
-     ],
-     "crop_size": [
-      2542,
-      3177
-     ],
-     "width": 1440,
-     "height": 1800,
-     "widths": [
-      480,
-      720,
-      960,
-      1280,
-      1440
-     ],
-     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoTABgAPwF0r1KrJqQjqAqpYCAJbACdMuOBD6TcrIf4B49dUxsbCx/4dEdZsOQwAP7BCKKkCmqCOtl1ZYSbp2jIvGW3GiqtA08tMjxngVXKyVAI8Awrw9Gf0Guc8n1yuA5iGHa/iI+ggtAzOVuuEmSqeKMnFf1U7GDsWE2Sut0x5oHYr/rOHYWbvxJeNBrTWcSjAVnfU6BscZEgT/v+rpA8AROGsAAA",
-     "color": "#8a3013",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/tragos-splash-m-480.avif",
-        "bytes": 18226
-       },
-       "720": {
-        "path": "assets/v2/img/tragos-splash-m-720.avif",
-        "bytes": 31989
-       },
-       "960": {
-        "path": "assets/v2/img/tragos-splash-m-960.avif",
-        "bytes": 48938
-       },
-       "1280": {
-        "path": "assets/v2/img/tragos-splash-m-1280.avif",
-        "bytes": 73314
-       },
-       "1440": {
-        "path": "assets/v2/img/tragos-splash-m-1440.avif",
-        "bytes": 86742
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/tragos-splash-m-480.webp",
-        "bytes": 28088
-       },
-       "720": {
-        "path": "assets/v2/img/tragos-splash-m-720.webp",
-        "bytes": 50136
-       },
-       "960": {
-        "path": "assets/v2/img/tragos-splash-m-960.webp",
-        "bytes": 75448
-       },
-       "1280": {
-        "path": "assets/v2/img/tragos-splash-m-1280.webp",
-        "bytes": 110072
-       },
-       "1440": {
-        "path": "assets/v2/img/tragos-splash-m-1440.webp",
-        "bytes": 130854
-       }
-      }
-     }
-    }
-   },
-   "credit": null,
-   "note": "Marco que crece 1:1 -> 16:9: el 1:1 a 2560 cubre la banda de 1920 con object-fit cover."
   },
   "tragos-sours": {
    "ref": "P086",
@@ -2070,173 +1706,6 @@
        "1440": {
         "path": "assets/v2/img/comida-garzon-plato-m-1440.webp",
         "bytes": 192390
-       }
-      }
-     }
-    }
-   },
-   "credit": null
-  },
-  "comida-hamburguesa": {
-   "ref": "P305",
-   "src": "assets/raw/ig/DY0AUvhlHjI_13.jpg",
-   "section": "comida",
-   "source_size": [
-    3024,
-    4032
-   ],
-   "alt_placeholder": "Hamburguesa con cebolla caramelizada, alta res",
-   "post": "IG-022",
-   "crops": {
-    "a": {
-     "ratio": "4:5",
-     "focal": [
-      50,
-      50
-     ],
-     "box": [
-      0,
-      126,
-      3024,
-      3906
-     ],
-     "crop_size": [
-      3024,
-      3780
-     ],
-     "width": 1440,
-     "height": 1800,
-     "widths": [
-      480,
-      720,
-      960,
-      1280,
-      1440
-     ],
-     "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoTABgAPwFys1IrJqSiqAqpYCAJYgCdM2c6Jn/AMAbgyTREkLh3dJJ+BcMksAD3dEdpodCTMpbyZB3AtR3RevtyM5/6QRPLJVy4x6R1lt0qcs5frzuL8OLU2TgIGUsTTmoCeCuymgrSvHyWA3MVBmCp80bGL2PyMtG3bkElu5q+wBLbASR9bCwGiNIa6JGYQIAAAA==",
-     "color": "#7b461a",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/comida-hamburguesa-a-480.avif",
-        "bytes": 26621
-       },
-       "720": {
-        "path": "assets/v2/img/comida-hamburguesa-a-720.avif",
-        "bytes": 45250
-       },
-       "960": {
-        "path": "assets/v2/img/comida-hamburguesa-a-960.avif",
-        "bytes": 64234
-       },
-       "1280": {
-        "path": "assets/v2/img/comida-hamburguesa-a-1280.avif",
-        "bytes": 89565
-       },
-       "1440": {
-        "path": "assets/v2/img/comida-hamburguesa-a-1440.avif",
-        "bytes": 102322
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/comida-hamburguesa-a-480.webp",
-        "bytes": 39020
-       },
-       "720": {
-        "path": "assets/v2/img/comida-hamburguesa-a-720.webp",
-        "bytes": 64962
-       },
-       "960": {
-        "path": "assets/v2/img/comida-hamburguesa-a-960.webp",
-        "bytes": 88584
-       },
-       "1280": {
-        "path": "assets/v2/img/comida-hamburguesa-a-1280.webp",
-        "bytes": 120434
-       },
-       "1440": {
-        "path": "assets/v2/img/comida-hamburguesa-a-1440.webp",
-        "bytes": 136288
-       }
-      }
-     }
-    }
-   },
-   "credit": null
-  },
-  "comida-cazuela": {
-   "ref": "P091",
-   "src": "assets/raw/ig/DAMHps8JVVr_05.jpg",
-   "section": "comida",
-   "source_size": [
-    1440,
-    1708
-   ],
-   "alt_placeholder": "Cazuela negra con ñoquis y crema",
-   "post": "IG-079",
-   "crops": {
-    "a": {
-     "ratio": "4:5",
-     "focal": [
-      50,
-      50
-     ],
-     "box": [
-      37,
-      0,
-      1403,
-      1708
-     ],
-     "crop_size": [
-      1366,
-      1708
-     ],
-     "width": 1280,
-     "height": 1600,
-     "widths": [
-      480,
-      720,
-      960,
-      1280
-     ],
-     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADwBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdMoRwMIHxrAJUBfOYsIVRmG4C2UVs8nqvfvEEwAD+7A7SS42w8Ge6zQXqPYL62bPJYztvmxDq1TBWp6s/opSK3MDZu3pZArNypiukNk9eWVMOppT7RAreKdXTrQNE9BkkSfEXLdUz2+YtaIs00yyqgCrAL9ljTXSiWZT8Vj1OHNmgbxhZmYvUC4JvVmHWoMxsEteRM6bAAAA=",
-     "color": "#7b491c",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/comida-cazuela-a-480.avif",
-        "bytes": 17212
-       },
-       "720": {
-        "path": "assets/v2/img/comida-cazuela-a-720.avif",
-        "bytes": 28123
-       },
-       "960": {
-        "path": "assets/v2/img/comida-cazuela-a-960.avif",
-        "bytes": 41082
-       },
-       "1280": {
-        "path": "assets/v2/img/comida-cazuela-a-1280.avif",
-        "bytes": 59748
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/comida-cazuela-a-480.webp",
-        "bytes": 28650
-       },
-       "720": {
-        "path": "assets/v2/img/comida-cazuela-a-720.webp",
-        "bytes": 44836
-       },
-       "960": {
-        "path": "assets/v2/img/comida-cazuela-a-960.webp",
-        "bytes": 62500
-       },
-       "1280": {
-        "path": "assets/v2/img/comida-cazuela-a-1280.webp",
-        "bytes": 87178
        }
       }
      }
@@ -3707,6 +3176,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -3715,6 +3186,14 @@
      "color": "#d2865d",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-peter-a-240.avif",
+        "bytes": 5178
+       },
+       "320": {
+        "path": "assets/v2/img/carta-peter-a-320.avif",
+        "bytes": 7503
+       },
        "480": {
         "path": "assets/v2/img/carta-peter-a-480.avif",
         "bytes": 13076
@@ -3729,6 +3208,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-peter-a-240.webp",
+        "bytes": 7324
+       },
+       "320": {
+        "path": "assets/v2/img/carta-peter-a-320.webp",
+        "bytes": 10728
+       },
        "480": {
         "path": "assets/v2/img/carta-peter-a-480.webp",
         "bytes": 18750
@@ -3774,24 +3261,51 @@
       576,
       720
      ],
-     "width": 480,
-     "height": 600,
+     "width": 576,
+     "height": 720,
      "widths": [
-      480
+      240,
+      320,
+      480,
+      576
      ],
      "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwBACdASoTABgAPwFosFGrJSSisBgIAWAgCWQAqPQO7KWaO5hpdVz30d5canML1VAA/sAG1ML2hUi+SBoT4rjK3E7OgTqMw1H8EJTdQb3Bjh2T+GaUxjmbtje+G8MIN7yMlnRCOD6xDDpJRcZsIXmfw/UYJz5cURt+oplN4AA=",
      "color": "#ae9279",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-olvidar-a-240.avif",
+        "bytes": 6026
+       },
+       "320": {
+        "path": "assets/v2/img/carta-olvidar-a-320.avif",
+        "bytes": 8898
+       },
        "480": {
         "path": "assets/v2/img/carta-olvidar-a-480.avif",
         "bytes": 16773
+       },
+       "576": {
+        "path": "assets/v2/img/carta-olvidar-a-576.avif",
+        "bytes": 22460
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-olvidar-a-240.webp",
+        "bytes": 7954
+       },
+       "320": {
+        "path": "assets/v2/img/carta-olvidar-a-320.webp",
+        "bytes": 11524
+       },
        "480": {
         "path": "assets/v2/img/carta-olvidar-a-480.webp",
         "bytes": 19932
+       },
+       "576": {
+        "path": "assets/v2/img/carta-olvidar-a-576.webp",
+        "bytes": 24664
        }
       }
      }
@@ -3830,6 +3344,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -3838,6 +3354,14 @@
      "color": "#633217",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-saguer-a-240.avif",
+        "bytes": 5032
+       },
+       "320": {
+        "path": "assets/v2/img/carta-saguer-a-320.avif",
+        "bytes": 7504
+       },
        "480": {
         "path": "assets/v2/img/carta-saguer-a-480.avif",
         "bytes": 13443
@@ -3852,6 +3376,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-saguer-a-240.webp",
+        "bytes": 7260
+       },
+       "320": {
+        "path": "assets/v2/img/carta-saguer-a-320.webp",
+        "bytes": 10656
+       },
        "480": {
         "path": "assets/v2/img/carta-saguer-a-480.webp",
         "bytes": 19762
@@ -3903,16 +3435,27 @@
       854,
       1067
      ],
-     "width": 720,
-     "height": 900,
+     "width": 854,
+     "height": 1067,
      "widths": [
+      240,
+      320,
       480,
-      720
+      720,
+      854
      ],
      "lqip": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADwBQCdASoTABgAPwFkq0+rJSOiMBgMAWAgCWwAnTMl+PCBazwDAQRpQloCfQEkBzpM/SVXq8j/vAD+6/4qvnTHPaFrkK73fYrp0l8+P7bud2lelp339MhB7gXbYtUFi0q/YcLXZ4q9YmjrGTwozHj4IzLdYIDQK71cVWFL0zT94Njg5kaopnJ5ritxHdFtSprN/fHmCytvSs1dUDDL/h0LLry4PjQ7UyhWmjiYYwv7PhVH2ejgAAAA",
      "color": "#8c4729",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-coquette-a-240.avif",
+        "bytes": 4825
+       },
+       "320": {
+        "path": "assets/v2/img/carta-coquette-a-320.avif",
+        "bytes": 6614
+       },
        "480": {
         "path": "assets/v2/img/carta-coquette-a-480.avif",
         "bytes": 10316
@@ -3920,9 +3463,21 @@
        "720": {
         "path": "assets/v2/img/carta-coquette-a-720.avif",
         "bytes": 17075
+       },
+       "854": {
+        "path": "assets/v2/img/carta-coquette-a-854.avif",
+        "bytes": 21653
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-coquette-a-240.webp",
+        "bytes": 7406
+       },
+       "320": {
+        "path": "assets/v2/img/carta-coquette-a-320.webp",
+        "bytes": 10238
+       },
        "480": {
         "path": "assets/v2/img/carta-coquette-a-480.webp",
         "bytes": 15328
@@ -3930,6 +3485,10 @@
        "720": {
         "path": "assets/v2/img/carta-coquette-a-720.webp",
         "bytes": 24344
+       },
+       "854": {
+        "path": "assets/v2/img/carta-coquette-a-854.webp",
+        "bytes": 30014
        }
       }
      }
@@ -3967,6 +3526,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -3975,6 +3536,14 @@
      "color": "#965e2b",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-moto-a-240.avif",
+        "bytes": 4547
+       },
+       "320": {
+        "path": "assets/v2/img/carta-moto-a-320.avif",
+        "bytes": 6129
+       },
        "480": {
         "path": "assets/v2/img/carta-moto-a-480.avif",
         "bytes": 10254
@@ -3989,6 +3558,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-moto-a-240.webp",
+        "bytes": 6302
+       },
+       "320": {
+        "path": "assets/v2/img/carta-moto-a-320.webp",
+        "bytes": 8810
+       },
        "480": {
         "path": "assets/v2/img/carta-moto-a-480.webp",
         "bytes": 14378
@@ -4034,24 +3611,51 @@
       682,
       852
      ],
-     "width": 480,
-     "height": 600,
+     "width": 682,
+     "height": 852,
      "widths": [
-      480
+      240,
+      320,
+      480,
+      682
      ],
      "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBQCdASoTABgAPwFwslGrJiSiqAqpYCAJZgCxH1XBrR11scww2Tp0X29XFZcyOu+rAAD8eoQWSfUrYVHbtlOoS8Pwc3oCy8eHMl1X1wkXfIbsNvQyw2qx/VKfFOlY2uSmdCJ0fx41ypUmXToUa16p7ra4jxZQ3SdLag0HSzBUCHwADsAAAA==",
      "color": "#ba9181",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-tukulito-a-240.avif",
+        "bytes": 8247
+       },
+       "320": {
+        "path": "assets/v2/img/carta-tukulito-a-320.avif",
+        "bytes": 12010
+       },
        "480": {
         "path": "assets/v2/img/carta-tukulito-a-480.avif",
         "bytes": 19899
+       },
+       "682": {
+        "path": "assets/v2/img/carta-tukulito-a-682.avif",
+        "bytes": 30879
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-tukulito-a-240.webp",
+        "bytes": 12940
+       },
+       "320": {
+        "path": "assets/v2/img/carta-tukulito-a-320.webp",
+        "bytes": 19226
+       },
        "480": {
         "path": "assets/v2/img/carta-tukulito-a-480.webp",
         "bytes": 31066
+       },
+       "682": {
+        "path": "assets/v2/img/carta-tukulito-a-682.webp",
+        "bytes": 45698
        }
       }
      }
@@ -4090,6 +3694,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -4098,6 +3704,14 @@
      "color": "#d28638",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-contuti-a-240.avif",
+        "bytes": 9150
+       },
+       "320": {
+        "path": "assets/v2/img/carta-contuti-a-320.avif",
+        "bytes": 13236
+       },
        "480": {
         "path": "assets/v2/img/carta-contuti-a-480.avif",
         "bytes": 22558
@@ -4112,6 +3726,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-contuti-a-240.webp",
+        "bytes": 14992
+       },
+       "320": {
+        "path": "assets/v2/img/carta-contuti-a-320.webp",
+        "bytes": 21738
+       },
        "480": {
         "path": "assets/v2/img/carta-contuti-a-480.webp",
         "bytes": 35472
@@ -4160,6 +3782,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -4168,6 +3792,14 @@
      "color": "#79491c",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-camaron-a-240.avif",
+        "bytes": 7330
+       },
+       "320": {
+        "path": "assets/v2/img/carta-camaron-a-320.avif",
+        "bytes": 10342
+       },
        "480": {
         "path": "assets/v2/img/carta-camaron-a-480.avif",
         "bytes": 17453
@@ -4182,6 +3814,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-camaron-a-240.webp",
+        "bytes": 11850
+       },
+       "320": {
+        "path": "assets/v2/img/carta-camaron-a-320.webp",
+        "bytes": 17172
+       },
        "480": {
         "path": "assets/v2/img/carta-camaron-a-480.webp",
         "bytes": 28414
@@ -4230,6 +3870,8 @@
      "width": 960,
      "height": 1200,
      "widths": [
+      240,
+      320,
       480,
       720,
       960
@@ -4238,6 +3880,14 @@
      "color": "#a99181",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-topiturron-a-240.avif",
+        "bytes": 9937
+       },
+       "320": {
+        "path": "assets/v2/img/carta-topiturron-a-320.avif",
+        "bytes": 16935
+       },
        "480": {
         "path": "assets/v2/img/carta-topiturron-a-480.avif",
         "bytes": 36181
@@ -4252,6 +3902,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-topiturron-a-240.webp",
+        "bytes": 18270
+       },
+       "320": {
+        "path": "assets/v2/img/carta-topiturron-a-320.webp",
+        "bytes": 31180
+       },
        "480": {
         "path": "assets/v2/img/carta-topiturron-a-480.webp",
         "bytes": 67414
@@ -4300,6 +3958,8 @@
      "width": 720,
      "height": 900,
      "widths": [
+      240,
+      320,
       480,
       720
      ],
@@ -4307,6 +3967,14 @@
      "color": "#845536",
      "files": {
       "avif": {
+       "240": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-240.avif",
+        "bytes": 14886
+       },
+       "320": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-320.avif",
+        "bytes": 24692
+       },
        "480": {
         "path": "assets/v2/img/carta-pizza-dulzona-a-480.avif",
         "bytes": 47850
@@ -4317,6 +3985,14 @@
        }
       },
       "webp": {
+       "240": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-240.webp",
+        "bytes": 25404
+       },
+       "320": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-320.webp",
+        "bytes": 42238
+       },
        "480": {
         "path": "assets/v2/img/carta-pizza-dulzona-a-480.webp",
         "bytes": 80004
@@ -4331,65 +4007,6 @@
    },
    "credit": null,
    "note": "Fase 15: es la única pizza dulce de la carta y se ve lo que dice su descripción (pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). La caption (IG-022) no la nombra. 900x900: hasta 720."
-  },
-  "carta-promo-negroni": {
-   "ref": "V054-cover",
-   "src": "assets/raw/ig/DZ8c3yiIdpa_00.jpg",
-   "section": "carta-item",
-   "source_size": [
-    721,
-    721
-   ],
-   "alt_placeholder": "Bartender pone piel de naranja a negroni sobre barra (3.3 s, loop)",
-   "post": "IG-016",
-   "crops": {
-    "a": {
-     "ratio": "4:5",
-     "focal": [
-      55,
-      50
-     ],
-     "box": [
-      108,
-      0,
-      685,
-      721
-     ],
-     "crop_size": [
-      577,
-      721
-     ],
-     "width": 480,
-     "height": 600,
-     "widths": [
-      480
-     ],
-     "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBQCdASoTABgAPwFwsFIrJiSiqAqpYCAJbACdMyNgAAD/1bXLYel1vHDrHr9lNkGAAP53STAl14bwwmTDD3k20CCrei4gRrkJ1c00W0s7LM4NcevqmBZ0/Vyhi0Ai9zIz93biOlcpvpO+bnn1zRNfvdxdA/q2EB2roFKFXY53i672krRg0mHqlIV9E/G1Yvn0hH+LY+BVQxDhzvSJcAAA",
-     "color": "#a14d1f",
-     "files": {
-      "avif": {
-       "480": {
-        "path": "assets/v2/img/carta-promo-negroni-a-480.avif",
-        "bytes": 20282
-       }
-      },
-      "webp": {
-       "480": {
-        "path": "assets/v2/img/carta-promo-negroni-a-480.webp",
-        "bytes": 29692
-       }
-      }
-     }
-    }
-   },
-   "credit": null,
-   "note": "Fase 15: promo del martes (carta.json › promos › img IG-016, «Amamos los martes porque son de Negronicito»). 721x721: solo 480."
-  },
-  "carta-promo-piscolein": {
-   "alias": "hoy-miercoles-garzona",
-   "ref": "P331",
-   "section": "carta-item",
-   "note": "Fase 15: promo del miércoles (carta.json › promos › img IG-019): bandeja de piscolas."
   },
   "carta-grupo-negroni": {
    "ref": "P226",
@@ -4736,6 +4353,435 @@
    },
    "credit": null,
    "note": "Fase 15 (crítica 1): foto del jueves en Hoy en Almud (IG-082, «jueves de sangriita»: abrazo y carcajada). La de IG-039 (P228) queda solo para la Sangría Foreva! de los destacados y la carta: así ninguna foto se repite en el landing."
+  },
+  "og-carta": {
+   "ref": "V038-cover",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.jpg",
+   "section": "og",
+   "source_size": [
+    3660,
+    6500
+   ],
+   "alt_placeholder": "Coupe roja con burbuja de humo que estalla sobre barra de madera (17 s)",
+   "post": "IG-044",
+   "crops": {
+    "og": {
+     "ratio": "1200:630",
+     "focal": [
+      50,
+      42
+     ],
+     "box": [
+      0,
+      1769,
+      3660,
+      3691
+     ],
+     "width": 1200,
+     "height": 630,
+     "files": {
+      "jpg": {
+       "1200": {
+        "path": "assets/v2/img/og-carta.jpg",
+        "bytes": 63105
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 16: Open Graph de /carta/: Aquí te las traigo Peter con su burbuja (la misma foto del ítem en la carta)."
+  },
+  "hoy-miercoles-brindis": {
+   "ref": "P364",
+   "src": "assets/raw/ig/Dbok2NyFNdb_07.jpg",
+   "section": "hoy",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Mujer de rulos con vaso, bokeh cálido y azul",
+   "post": "IG-008",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      42,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABwBQCdASoTABgAPwFurlArJiQiqA1RYCAJahwACxOHGFgBuAQQfYHHEjjsv/VvN/YONZoAAP6yMjPgVc1tDhnAYWX+GPSmY5hT1oLqI+0d50bluqafk++pzRy/9JNOgs0XsiH2mrUI2SYKqZ0IfKyKIUPpOgxfR6MKfK4nV+ErX7n1aQdldN9Ex5t8Z/h8iU9gtt/JLARGQ5MllUNHlQ2Mt8wLBelymsZxp/oAxmLit6uZ3aFHX0H7LTloc48HN8KIRI4GAAA=",
+     "color": "#473539",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-480.avif",
+        "bytes": 18428
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-720.avif",
+        "bytes": 32949
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-960.avif",
+        "bytes": 49647
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-1280.avif",
+        "bytes": 76924
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-480.webp",
+        "bytes": 27824
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-720.webp",
+        "bytes": 48618
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-960.webp",
+        "bytes": 74022
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-miercoles-brindis-a-1280.webp",
+        "bytes": 117738
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 16: reemplaza a P331 (la garzona del jockey es la misma persona de la banda del Equipo, P333). Clienta riendo con su vaso, IG-008 (2026)."
+  },
+  "lugar-salon": {
+   "ref": "P076",
+   "src": "assets/raw/ig/C-V5Lc7SZ-K_00.jpg",
+   "section": "lugar",
+   "source_size": [
+    1335,
+    890
+   ],
+   "alt_placeholder": "Mesas interiores con ventanales de reja y muro rojo, luz ámbar",
+   "post": "IG-094",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      69,
+      1335,
+      820
+     ],
+     "crop_size": [
+      1335,
+      751
+     ],
+     "width": 1280,
+     "height": 720,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoYAA4APwFqrE8rJaQiMAgBYCAJbACdMoADK5343VepABeAAP4xiFDB7syfDcgm1ec+NjUSasG1hwpHiD8NkNfHOLp3Kyby4UEp+ji/Qk9nD+X+DEWMw9td6/MG8hdUyE8A3IqdvqH3izOmgAA=",
+     "color": "#3e1b0b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-d-480.avif",
+        "bytes": 15336
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-d-720.avif",
+        "bytes": 25619
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-d-960.avif",
+        "bytes": 36401
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-d-1280.avif",
+        "bytes": 50970
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-d-480.webp",
+        "bytes": 24184
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-d-720.webp",
+        "bytes": 40134
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-d-960.webp",
+        "bytes": 55722
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-d-1280.webp",
+        "bytes": 73448
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 16: el salón de verdad (mesas interiores tras la reja, muro rojo, lámparas, luz ámbar) en lugar del aro de luz (P339). Nativa 1335 px: la banda se limita a 1335 px CSS."
+  },
+  "comida-pizza-mano": {
+   "ref": "P029",
+   "src": "assets/raw/ig/CpOIeP9JFF8_00.jpg",
+   "section": "comida",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Pizza con rúcula en la mano del garzón",
+   "post": "IG-154",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADwBACdASoTABgAPwFwtFGrJiUiqAqpYCAJaACdMw6BH1zpcedEpoYbUVQcCBwGX2AA/U6SSBhIj77+hLMjjGiTD6Q4qsOZ/h0wvjUPHXb+tsjogHcew8ZVtaQ40Uv0poX1lm5c+nvGYiseSWfthIkZpS0Rx6Lv+QVCmRuazZzzpm71lwdNKKTDSwGa5RvoF27/ds+ZkchUOSpjtTRT6u5mUAAAAA==",
+     "color": "#997e4b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-pizza-mano-a-480.avif",
+        "bytes": 13481
+       },
+       "720": {
+        "path": "assets/v2/img/comida-pizza-mano-a-720.avif",
+        "bytes": 21336
+       },
+       "960": {
+        "path": "assets/v2/img/comida-pizza-mano-a-960.avif",
+        "bytes": 30403
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-pizza-mano-a-1280.avif",
+        "bytes": 43958
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-pizza-mano-a-480.webp",
+        "bytes": 22168
+       },
+       "720": {
+        "path": "assets/v2/img/comida-pizza-mano-a-720.webp",
+        "bytes": 34366
+       },
+       "960": {
+        "path": "assets/v2/img/comida-pizza-mano-a-960.webp",
+        "bytes": 48034
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-pizza-mano-a-1280.webp",
+        "bytes": 66204
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 16: la pizza en tránsito reemplaza a la hamburguesa (P305, fría y plana)."
+  },
+  "comida-tabla": {
+   "ref": "P299",
+   "src": "assets/raw/ig/DY0AUvhlHjI_02.jpg",
+   "section": "comida",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Tabla de jamón, maní y naranja, primer plano",
+   "post": "IG-022",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      55
+     ],
+     "box": [
+      0,
+      256,
+      3072,
+      4096
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBgCdASoTABgAPwFusFErJiSisBgIAWAgCWwAsR7jcDDfc+AFdsbUcTSLKUXXT5ky8D4f14rapsAA/n5cuBTvVUa/Tv58woH2c3vhcP47iheddVYYvj3/Mxzs3AtAsk1OU+I+sNC3PwC8/LhXymhYXaxvE057ITvG+TC7naLdR5R/RQCkASKbe9OMq1EAJIzoCLouIlE1Cve+GmSPjovAAAA=",
+     "color": "#cf8539",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-tabla-a-480.avif",
+        "bytes": 12893
+       },
+       "720": {
+        "path": "assets/v2/img/comida-tabla-a-720.avif",
+        "bytes": 20908
+       },
+       "960": {
+        "path": "assets/v2/img/comida-tabla-a-960.avif",
+        "bytes": 29258
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-tabla-a-1280.avif",
+        "bytes": 40955
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-tabla-a-480.webp",
+        "bytes": 19508
+       },
+       "720": {
+        "path": "assets/v2/img/comida-tabla-a-720.webp",
+        "bytes": 31564
+       },
+       "960": {
+        "path": "assets/v2/img/comida-tabla-a-960.webp",
+        "bytes": 44308
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-tabla-a-1280.webp",
+        "bytes": 62356
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 16: la tabla de picoteo reemplaza a la cazuela (P091), que repetía el Camarón que se duerme de los destacados."
+  },
+  "carta-lamina-barra": {
+   "ref": "P109",
+   "src": "assets/raw/ig/DBMtYELSzNS_09.jpg",
+   "section": "carta",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "alt_placeholder": "Bartender barbudo riendo con camisa floreada, muro de botellas rosa",
+   "post": "IG-075",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADQBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJZgCdMoGv/gGkbUCSOp2KeE5jhgZdLzwkXYgkoDwAAPjZ2N62R8TQoPwugg5bdxW57rtvl+qtFwb63yIWnmAmPfQm+rZG2DoSR+MGECSJMsbH4MKGaSkIoC95NorX65hLvYJKgrOUYh2jEZIRT+qGGYFUq+IKNDWhavaqmd7Kj/5/Zyg45DOMLoskigqIGRX3f2NLvzchIinYyP0AAA==",
+     "color": "#9c513e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-barra-a-480.avif",
+        "bytes": 19932
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-barra-a-720.avif",
+        "bytes": 32609
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-barra-a-960.avif",
+        "bytes": 45145
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-barra-a-480.webp",
+        "bytes": 32132
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-barra-a-720.webp",
+        "bytes": 50282
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-barra-a-960.webp",
+        "bytes": 67488
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Fase 16: lámina de Coctelería de la casa (el bartender del muro rosa P184 queda solo en el landing)."
   }
  },
  "videos": {
@@ -4790,155 +4836,6 @@
    "alt_placeholder": "Bartender pone piel de naranja a negroni sobre barra (3.3 s, loop)",
    "post": "IG-016",
    "note": "Revisado: piel de naranja sobre el vaso, noche cálida, 720p nativo (4:5 sin ampliar). Se mantiene; respaldo P184."
-  },
-  "lugar-techo-flecos": {
-   "ref": "V009",
-   "src": "assets/raw/ig/C5WAi8PLHni_00.mp4",
-   "section": "lugar",
-   "source_size": [
-    720,
-    1280
-   ],
-   "width": 720,
-   "height": 900,
-   "ratio": "4:5",
-   "focal": [
-    50,
-    50
-   ],
-   "start": 0.0,
-   "end": 7.1,
-   "loop": "crossfade",
-   "duration": 6.6,
-   "fps": 30.0,
-   "muted": true,
-   "crf_h264": 29,
-   "files": {
-    "mp4": {
-     "path": "assets/v2/video/lugar-techo-flecos.mp4",
-     "bytes": 1382275,
-     "codec": "avc1.640028"
-    }
-   },
-   "poster": {
-    "avif": {
-     "path": "assets/v2/video/lugar-techo-flecos-poster.avif",
-     "bytes": 50122
-    },
-    "webp": {
-     "path": "assets/v2/video/lugar-techo-flecos-poster.webp",
-     "bytes": 70644
-    }
-   },
-   "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoTABgAPwFyrFGrJqQiqA1RYCAJZgCdMzLnrCGJOurcFd/9Bej0bSu4h8hkAAD+vgDw4dGWdjI5dTNV1TyXJHfCxoWdfkfmN8DA46CG2/O42Ua/1yOOZTHqW6LMsjPGhQPbO5KqD875eNwKvkbqm9pefLkoVSX6qbYAc521EabfYjssvToXU8AA",
-   "color": "#4c2d1c",
-   "budget_kb": 1500,
-   "alt_placeholder": "Paneo lento del techo de flecos de papel multicolor con luces (7 s, loop ideal)",
-   "post": "IG-111"
-  },
-  "carta-muro-rosa": {
-   "ref": "V021",
-   "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4",
-   "section": "carta",
-   "source_size": [
-    1080,
-    1920
-   ],
-   "width": 720,
-   "height": 900,
-   "ratio": "4:5",
-   "focal": [
-    50,
-    45
-   ],
-   "start": 0.2,
-   "end": 5.2,
-   "loop": "boomerang",
-   "duration": 10.0,
-   "fps": 27.93,
-   "muted": true,
-   "crf_h264": 30,
-   "files": {
-    "mp4": {
-     "path": "assets/v2/video/carta-muro-rosa.mp4",
-     "bytes": 1491173,
-     "codec": "avc1.640028"
-    },
-    "webm": {
-     "path": "assets/v2/video/carta-muro-rosa.webm",
-     "bytes": 1214518,
-     "codec": "av01",
-     "crf": 44
-    }
-   },
-   "poster": {
-    "avif": {
-     "path": "assets/v2/video/carta-muro-rosa-poster.avif",
-     "bytes": 28554
-    },
-    "webp": {
-     "path": "assets/v2/video/carta-muro-rosa-poster.webp",
-     "bytes": 37202
-    }
-   },
-   "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoTABgAPwFwrFErJiQiqA1RYCAJaAC1EIAA4vU57So16M32Yc73mAQF5YAA/nJ3SQ3mafQS2hO7IX/EuAgDYwNwjoHg04eKWkH+S0iII1TzB+aYSRcdhW2yCaGDA+nY6OgCgfUMatl+TgD4KFzakYwGmGSxSr3xXA5FZUeijC58AAAA",
-   "color": "#532d35",
-   "budget_kb": 1500,
-   "alt_placeholder": "Muro rosa con botellas y letrero ALMUD, terraza con estufa, guest bartender sirve shots (1080p)",
-   "post": "IG-090",
-   "note": "Único reel 1080x1920: 4:5 de 1080x1350 bajado a 720x900. Presupuestos rebalanceados: V038 (1,2 MB en web.md) no entra, su margen sube CRF de V009, V021 y V031 a <=29."
-  },
-  "carta-cazuela": {
-   "ref": "V052",
-   "src": "assets/raw/ig/DZgLFzooZB__00.mp4",
-   "section": "carta",
-   "source_size": [
-    720,
-    1280
-   ],
-   "width": 720,
-   "height": 900,
-   "ratio": "4:5",
-   "focal": [
-    50,
-    50
-   ],
-   "start": 0.0,
-   "end": 4.0,
-   "loop": "boomerang",
-   "duration": 8.0,
-   "fps": 30.0,
-   "muted": true,
-   "crf_h264": 29,
-   "files": {
-    "mp4": {
-     "path": "assets/v2/video/carta-cazuela.mp4",
-     "bytes": 595846,
-     "codec": "avc1.640028"
-    },
-    "webm": {
-     "path": "assets/v2/video/carta-cazuela.webm",
-     "bytes": 464377,
-     "codec": "av01",
-     "crf": 43
-    }
-   },
-   "poster": {
-    "avif": {
-     "path": "assets/v2/video/carta-cazuela-poster.avif",
-     "bytes": 31140
-    },
-    "webp": {
-     "path": "assets/v2/video/carta-cazuela-poster.webp",
-     "bytes": 40942
-    }
-   },
-   "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoTABgAPwF0sFIrJqSiqAqpYCAJQBYj4eDYAbL+RRCGe8nDNwb172N21r+lcAD+kJG31GNZahmll5nhfBjPOjVWmMHY3EVq3JPS0OkOm8mp+j4BxY67L0Jr5dtrPdyos2SUZimLe+1nXY836AQwLrY7piOz+HE8jMHgM5W5DiM2u/BbYk+ZnrJ67P79ugVOXA+4AA==",
-   "color": "#998d63",
-   "budget_kb": 600,
-   "alt_placeholder": "Cazuela cremosa de mariscos burbujeando (4 s)",
-   "post": "IG-018",
-   "note": "Es un paneo lento, no un burbujeo fijo: boomerang en vez de corte."
   },
   "donde-letrero": {
    "ref": "V031",

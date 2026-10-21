@@ -47,7 +47,7 @@ REVIEWS = json.loads((ROOT / "content/reviews.json").read_text())
 HOY = json.loads((ROOT / "content/hoy-v2.json").read_text())
 COPY_TEXT = (ROOT / "content/copy-v2.md").read_text()
 
-MAPS = "https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619"
+MAPS = "https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro"  # fase 16: abre la ficha de Google, no un pin pelado
 DM = "https://ig.me/m/almud_bar"
 
 # Etiquetas de interfaz nuestras que el guion no lista (accesibilidad y controles). Se declaran en el informe.
@@ -115,7 +115,16 @@ def check_file(path):
         fail(f"media: falta el archivo {path}")
 
 
-def picture(mid, crop=None, sizes="100vw", cls="", eager=False):
+def srcset_of(c, fmt):
+    parts = []
+    for w in sorted(c["files"].get(fmt, {}), key=int):
+        p = c["files"][fmt][w]["path"]
+        check_file(p)
+        parts.append(f"{p} {w}w")
+    return ", ".join(parts)
+
+
+def picture(mid, crop=None, sizes="100vw", cls="", eager=False, mcrop=None, msizes=None, media=None):
     e, real = media_entry(mid)
     if not e:
         return ""
@@ -143,7 +152,15 @@ def picture(mid, crop=None, sizes="100vw", cls="", eager=False):
     fx, fy = c.get("focal", [50, 50])
     style = f"--pos:{fx}% {fy}%;--dom:{c.get('color', '#2a1a14')};--lqip:url({c['lqip']})" if c.get("lqip") else f"--pos:{fx}% {fy}%"
     load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
-    return (f'<picture class="ph {cls}">'
+    msrc = ""
+    if mcrop:  # fase 16: recorte propio para el teléfono (art direction), con su alto y ancho
+        mc = crops.get(mcrop)
+        if not mc:
+            fail(f"media: «{mid}» no tiene el recorte «{mcrop}»")
+            return ""
+        msrc = "".join(f'<source media="{media}" type="image/{f}" srcset="{srcset_of(mc, f)}" sizes="{msizes}" width="{mc["width"]}" height="{mc["height"]}">'
+                       for f in ("avif", "webp"))
+    return (f'<picture class="ph {cls}">{msrc}'
             f'<source type="image/avif" srcset="{srcsets["avif"]}" sizes="{sizes}">'
             f'<source type="image/webp" srcset="{srcsets["webp"]}" sizes="{sizes}">'
             f'<img src="{files["webp"][fallback]["path"]}" width="{c["width"]}" height="{c["height"]}" '
@@ -151,13 +168,19 @@ def picture(mid, crop=None, sizes="100vw", cls="", eager=False):
             f'</picture>')
 
 
-def preload(mid, crop, sizes):
+def preload(mid, crop, sizes, media=None, mcrop=None, msizes=None):
     e, _ = media_entry(mid)
     if not e:
         return ""
-    files = e["crops"][crop]["files"]["avif"]
-    ss = ", ".join(f'{files[w]["path"]} {w}w' for w in sorted(files, key=int))
-    return f'<link rel="preload" as="image" type="image/avif" imagesrcset="{ss}" imagesizes="{sizes}" fetchpriority="high">'
+    def one(c, sz, med):
+        files = e["crops"][c]["files"]["avif"]
+        ss = ", ".join(f'{files[w]["path"]} {w}w' for w in sorted(files, key=int))
+        m = f' media="{med}"' if med else ""
+        return f'<link rel="preload" as="image" type="image/avif" imagesrcset="{ss}" imagesizes="{sz}"{m} fetchpriority="high">'
+    if not mcrop:
+        return one(crop, sizes, None)
+    # fase 16: dos preloads excluyentes, igual que los <source media> de la portada
+    return one(mcrop, msizes, media) + "\n" + one(crop, sizes, media.replace("max-width: 899px", "min-width: 900px"))
 
 
 def video(mid, cls="", sizes=""):
@@ -176,7 +199,7 @@ def video(mid, cls="", sizes=""):
     check_file(poster)
     fx, fy = v.get("focal", [50, 50])
     return (f'<div class="vid {cls}" style="--pos:{fx}% {fy}%;--dom:{v.get("color", "#2a1a14")}">'
-            f'<video muted playsinline loop preload="none" poster="{poster}" width="{v["width"]}" height="{v["height"]}" '
+            f'<video muted playsinline loop preload="none" data-poster="{poster}" width="{v["width"]}" height="{v["height"]}" '
             f'aria-label="{html.escape(alt_es)}" data-aria-en="{html.escape(alt_en)}">{"".join(srcs)}</video>'
             f'<button type="button" class="vid-b" aria-pressed="false" data-ui data-en="Pause video" data-es-alt="Reproducir video" data-en-alt="Play video">Pausar video</button>'
             f'</div>')
@@ -252,11 +275,11 @@ SUB_SLUG = {
     "Somos dulzones": "dulzones",
 }
 TAB_LAM = {  # láminas de pestaña: foto real del ambiente, sin nombre de ítem
-    "casa": [("img", "tragos-bartender-muro-rosa"), ("img", "tragos-copa-naranja")],  # + una copa tallada (P097), sin nombre de trago  # crítica 1: foto nítida del muro rosa donde se hacen (P184, IG-050) en vez del loop V021 borroso
+    "casa": [("img", "carta-lamina-barra"), ("img", "tragos-copa-naranja")],  # fase 16: P109; el bartender del muro rosa (P184) queda solo en el landing  # + una copa tallada (P097), sin nombre de trago  # crítica 1: foto nítida del muro rosa donde se hacen (P184, IG-050) en vez del loop V021 borroso
     "mundo": [("img", "tragos-sours")],  # tres copas con espuma y flores (P086, IG-079): ambiente, sin nombre de trago
     "espirituosos": [("img", "carta-lamina-negroni")],
     "vinos": [("img", "carta-lamina-vino")],
-    "comilona": [("img", "comida-cazuela")],  # crítica 1: foto nítida de una gredita (P091, IG-079) en vez del loop V052 movido; la columna no cambia de ancho entre grupos
+    "comilona": [("img", "carta-lamina-tacos")],  # fase 16: la cazuela repetía el Camarón que se duerme  # crítica 1: foto nítida de una gredita (P091, IG-079) en vez del loop V052 movido; la columna no cambia de ancho entre grupos
 }
 GROUP_LAM = {  # láminas de grupo: se ven solo con su grupo
     "mundo-negroni": [("img", "carta-grupo-negroni")],
@@ -275,9 +298,7 @@ ITEM_IMG = {  # foto del ítem: solo cuando la foto es ese ítem (caption que lo
     ("comilona", "Camarón que se duerme"): "carta-camaron",
     ("comilona", "Topiturrón"): "carta-topiturron",
     ("comilona", "Pizza dulzona"): "carta-pizza-dulzona",
-    ("nuestras-promos", "Negroni & Fernet c/Coca Cola"): "carta-promo-negroni",
-    ("nuestras-promos", "Piscolein & Gin Tonic"): "carta-promo-piscolein",
-    ("nuestras-promos", "Sangría de la casa"): "carta-sangria",
+    # fase 16: las promos van sin foto (todas o ninguna: el sábado no tiene, y la del miércoles repetía a la garzona del Equipo)
 }
 DIA_TINTE = {0: "coral", 1: "coral", 2: "coral", 3: "turquesa", 4: "fucsia", 5: "amarillo", 6: "verde"}  # como Hoy en Almud
 THUMB_SIZES = "(min-width: 1024px) 144px, 104px"
@@ -448,15 +469,13 @@ def carta_estado(state):
     on_s = ",".join(f'html[data-sub-{t}="{s}"] #{s}' + (f',html[data-sub-{t}="{s}"] .lam-g[data-g="{s}"]' if s in GROUP_LAM else "")
                     for t, ss in state.items() for s in ss)
     on_c = ",".join(f'html[data-sub-{t}="{s}"] .chip[data-sub="{s}"]' for t, ss in state.items() for s in ss)
-    hoy = ",".join(f'html[data-dia="{d}"] .promo-d{d}' for d in range(2, 7))
-    tint = "".join(f'html[data-dia="{d}"] #promos{{--tinte:var(--tinte-{c});--tinte-fuerte:var(--tinte-{c}-fuerte)}}'
+    tint = "".join(f'html[data-dia="{d}"] #promos{{--tinte:var(--tinte-{c})}}'
                    for d, c in DIA_TINTE.items())
     css = ("<style>/* estado de la carta (generado por build_v2.py): sin JS no aplica y todo queda a la vista */"
            ".js .cp,.js .csub,.js .lam-g{display:none}"
            f"{on_p},{on_s}{{display:block}}"
            f"{on_t}{{background:var(--tab-on-bg);color:var(--tab-on-ink);text-decoration-color:transparent}}"
            f"{on_c}{{background:var(--chip-on-bg);color:var(--chip-on-ink)}}"
-           f"{hoy}{{background:var(--hoy-bg)}}"
            + ",".join(f'html[data-dia="{d}"] .promo-d{d} .hoy-m' for d in range(2, 7)) + "{display:inline-flex}"
            f"{tint}"
            + (",".join(f'html[data-sub-{t}="{u}"] #{t} .laminas' for t, u in NOLAM) + "{display:none}" if NOLAM else "")
@@ -487,7 +506,7 @@ def destacados_html():
                 fail(f"destacados: «{n}» no está en {sid} o no tiene foto")
                 continue
             cards.append(
-                f'<li class="dest"><div class="f r45">{picture(mid, sizes="(min-width: 1024px) 22vw, (min-width: 700px) 30vw, 38vw")}</div>'
+                f'<li class="dest"><div class="f r45">{picture(mid, sizes="(min-width: 1024px) 23vw, (min-width: 700px) 30vw, 38vw")}</div>'
                 f'<div class="dest-t"><p class="dest-n"><span class="fn" data-src="{src}">{esc(it["nombre"])}</span> '
                 f'<span class="fp num" data-carta>{esc(it["precio"])}</span></p>'
                 f'<p class="fd" data-src="{src}">{esc(it["desc"])}</p></div></li>')
@@ -633,8 +652,8 @@ def attrs_of(s):
 def expand(src):
     src = src.replace("<x-symbols/>", symbols())
     src = re.sub(r"<x-handles>(.*?)</x-handles>", handles, src, flags=re.S)
-    src = re.sub(r"<x-preload\s([^>]*?)/>", lambda m: (lambda a: preload(a["id"], a["crop"], a["sizes"]))(attrs_of(m.group(1))), src)
-    src = re.sub(r"<x-img\s([^>]*?)/>", lambda m: (lambda a: picture(a["id"], a.get("crop"), a.get("sizes", "100vw"), a.get("class", ""), "eager" in a))(attrs_of(m.group(1))), src)
+    src = re.sub(r"<x-preload\s([^>]*?)/>", lambda m: (lambda a: preload(a["id"], a["crop"], a["sizes"], a.get("media"), a.get("mcrop"), a.get("msizes")))(attrs_of(m.group(1))), src)
+    src = re.sub(r"<x-img\s([^>]*?)/>", lambda m: (lambda a: picture(a["id"], a.get("crop"), a.get("sizes", "100vw"), a.get("class", ""), "eager" in a, a.get("mcrop"), a.get("msizes"), a.get("media")))(attrs_of(m.group(1))), src)
     src = re.sub(r"<x-video\s([^>]*?)/>", lambda m: (lambda a: video(a["id"], a.get("class", ""), a.get("sizes", "")))(attrs_of(m.group(1))), src)
     src = re.sub(r"<x-credit\s([^>]*?)/>", lambda m: (lambda a: credit(a["id"], a.get("ui", "Foto"), "inline" in a, a.get("class", "")))(attrs_of(m.group(1))), src)
     src = re.sub(r"\{\{precio:([^}]+)\}\}", lambda m: esc(precio_de(m.group(1))), src)

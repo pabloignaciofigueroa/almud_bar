@@ -6,18 +6,30 @@
 <title>Almud Bar · Castro, Chiloé</title>
 <meta name="description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Abrimos de Mar a Sáb a las 18:00hrs. Serrano 325, Castro." data-meta-en="Signature cocktails, food &amp; lovely music since 2014. Open Tue to Sat from 6 pm. Serrano 325, Castro.">
 <meta name="theme-color" content="#170e0b">
+<link rel="canonical" href="https://almudbar.pages.dev/">
+<meta property="og:site_name" content="Almud Bar">
 <meta property="og:title" content="Almud Bar · Castro, Chiloé">
 <meta property="og:description" content="Coctelería de autor, comida &amp; música bonita desde 2014">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/v2/img/og-terraza.jpg">
+<meta property="og:url" content="https://almudbar.pages.dev/">
+<meta property="og:locale" content="es_CL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://almudbar.pages.dev/assets/v2/img/og-terraza.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La terraza techada de Almud Bar llena de gente riendo bajo un techo de cintas de colores">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Almud Bar · Castro, Chiloé">
+<meta name="twitter:description" content="Coctelería de autor, comida &amp; música bonita desde 2014">
+<meta name="twitter:image" content="https://almudbar.pages.dev/assets/v2/img/og-terraza.jpg">
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="brand/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="brand/png/favicon-180.png">
-<link rel="preload" href="assets/fonts/six-caps-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<!-- fase 16: la portada primero (LCP); solo las dos fuentes de la primera pantalla -->
+<x-preload id="portada-terraza" crop="a" sizes="min(100vw, 1440px)" mcrop="m" msizes="135vw" media="(max-width: 899px)"/>
 <link rel="preload" href="assets/fonts/oswald-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/oswald-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/oswald-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<x-preload id="portada-terraza" crop="a" sizes="(min-width: 900px) min(100vw, 1440px), 150vw"/>
 <link rel="stylesheet" href="css/v2/fonts.css">
 <link rel="stylesheet" href="css/v2/tokens.css">
 <link rel="stylesheet" href="css/v2/site.css">
@@ -37,6 +49,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
     <li><a class="link" href="#comida" data-ui data-en="Food">Comida</a></li>
     <li><a class="link" href="#quien" data-ui data-en="Who with">Con quién</a></li>
     <li><a class="link" href="#eventos" data-ui data-en="Events">Eventos</a></li>
+    <li><a class="link" href="#donde" data-ui data-en="Where">Dónde</a></li>
   </ul>
   <div class="nav-end">
     <div class="lang" role="group" aria-label="Idioma" data-aria-en="Language">
@@ -74,7 +87,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
 <header class="cover" id="inicio">
   <div class="cover-stage">
     <div class="cover-ph">
-      <x-img id="portada-terraza" crop="a" class="cover-img" sizes="(min-width: 900px) min(100vw, 1440px), 150vw" eager/>
+      <x-img id="portada-terraza" crop="a" class="cover-img" sizes="min(100vw, 1440px)" mcrop="m" msizes="135vw" media="(max-width: 899px)" eager/>
     </div>
     <div class="cover-tipo">
       <div class="cover-title-box">
@@ -83,8 +96,10 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <div class="cover-info">
         <p class="cover-bio" data-src="BIO">Coctelería de autor, comida &amp; música bonita desde 2014</p>
         <p class="gl gl-lead" lang="en">Signature cocktails, food &amp; lovely music since 2014</p>
+        <p class="cover-voz" data-src="IG-013">Véngase pal Almudcito ito ito</p>
+        <p class="gl" lang="en">Come on over to our little Almud</p>
         <p class="cover-data num"><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span><span data-src="BIO">Serrano 325, Castro</span></p>
-        <p class="cover-acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
+        <p class="cover-acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
       </div>
       <x-credit id="portada-terraza" class="cover-credit"/>
     </div>
@@ -97,41 +112,34 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
 
 <!-- ============ EL LUGAR (noche) · esqueleto: titular → banda a sangre → la barra ancha → mosaico → par ============ -->
 <section class="sec lugar on-night" id="lugar" aria-labelledby="lugar-h">
+  <!-- fase 16: la cabecera lleva su foto líder 4:5 (la barra curva, P093) a la derecha, alineada con el titular -->
   <div class="g lugar-cab">
     <h2 class="display lugar-h" id="lugar-h" data-src="IG-111" data-lines>nos gusta el<br>colorssss!</h2>
     <p class="gl gl-h lugar-glh" lang="en">we love colourrrs!</p>
     <div class="lugar-txt">
-      <div><p class="body" data-src="IG-111">Somos inquietos y nos gusta el colorssss! Tratando siempre de hacer nuestro Almudcito beio para su deleite</p>
-      <p class="gl" lang="en">We're restless and we love colourrrs! Always trying to make our Almudcito [our little Almud] lovely for your delight</p></div>
-      <div class="sub"><p class="lead-q" data-src="VID-061">Un lugar que fuera cálido, acogedor</p>
-      <p class="gl" lang="en">A place that would be warm and welcoming</p></div>
+      <p class="body" data-src="IG-111">Somos inquietos y nos gusta el colorssss! Tratando siempre de hacer nuestro Almudcito beio para su deleite</p>
+      <p class="gl" lang="en">We're restless and we love colourrrs! Always trying to make our Almudcito [our little Almud] lovely for your delight</p>
     </div>
+    <figure class="lugar-lider">
+      <div class="f r45" data-rv><x-img id="lugar-barra-curva" crop="a" sizes="(min-width: 1024px) 39vw, (min-width: 700px) 75vw, 100vw"/></div>
+      <figcaption>
+        <p class="lead-q" data-src="VID-061">Un lugar que fuera cálido, acogedor</p>
+        <p class="gl" lang="en">A place that would be warm and welcoming</p>
+        <p class="body" data-src="VID-061">y una gran barra, larga, de esas para sentarse y quedarse ahí</p>
+        <p class="gl" lang="en">and a great long bar, the kind you sit at and stay</p>
+      </figcaption>
+    </figure>
   </div>
 
-  <!-- banda a sangre: el salón -->
+  <!-- banda: el salón (P076, nativa 1335 px: la banda no pasa de 1280 px, su mayor archivo) -->
   <figure class="banda lugar-banda">
-    <div class="f r169" data-rv><x-img id="lugar-salon-mimbre" crop="d" sizes="100vw"/></div>
+    <div class="f r169" data-rv><x-img id="lugar-salon" crop="d" sizes="(min-width: 1280px) 1280px, 100vw"/></div>
     <figcaption class="g banda-pie">
       <h3 class="rot" data-ui data-en="The room">El salón</h3>
       <p class="lead-q" data-src="IG-067">Se deslizan como angelitos, con trago en mano por los salones</p>
       <p class="gl" lang="en">They glide like little angels, drink in hand, through the rooms</p>
-      <x-credit id="lugar-salon-mimbre"/>
     </figcaption>
   </figure>
-
-  <!-- la barra: la barra larga y curva, ancha (P093) -->
-  <div class="g barra">
-    <figure class="barra-foto">
-      <div class="f barra-f" data-rv><x-img id="lugar-barra-curva" crop="a" sizes="(min-width: 1024px) 66vw, 100vw"/></div>
-    </figure>
-    <div class="barra-txt">
-      <h3 class="rot" data-ui data-en="The bar">La barra</h3>
-      <p class="lead-q" data-src="IG-087">Pucha que nos gusta nuestra barrita!!</p>
-      <p class="gl" lang="en">Gosh, we love our little bar!!</p>
-      <p class="body" data-src="VID-061">y una gran barra, larga, de esas para sentarse y quedarse ahí</p>
-      <p class="gl" lang="en">and a great long bar, the kind you sit at and stay</p>
-    </div>
-  </div>
 
   <!-- mosaico desigual: tres rincones -->
   <div class="g mosaico mosaico-tx lugar-mos">
@@ -169,14 +177,14 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
   <!-- dos: el mural y las luces -->
   <div class="g par">
     <figure class="par-a">
-      <div class="f r169" data-rv><x-img id="lugar-mural-ojos" crop="d" sizes="(min-width: 1024px) 57vw, 100vw"/></div>
+      <div class="f r169" data-rv><x-img id="lugar-mural-ojos" crop="d" sizes="(min-width: 1024px) 39vw, (min-width: 700px) 75vw, 100vw"/></div>
       <figcaption>
         <h3 class="rot" data-ui data-en="The mural">El mural</h3>
         <p class="body" data-src="IG-118">Dicen que una mirada vale más que mil palabras…</p>
         <p class="gl" lang="en">They say a look is worth more than a thousand words…</p>
         <p class="body" data-src="IG-118">OJO PIOJO es un proyecto hecho con mucho amor, paciencia y tiempo</p>
         <p class="gl" lang="en">OJO PIOJO [‘eyes peeled’] is a project made with a lot of love, patience and time</p>
-        <p class="pie"><span data-src="IG-118">Proyecto <a href="https://www.instagram.com/cepaz/">@cepaz</a></span><span class="gl" lang="en"> Project by @cepaz</span> · <x-credit id="lugar-mural-ojos" ui="Video" inline/></p>
+        <p class="pie"><span data-src="IG-118">Proyecto <a href="https://www.instagram.com/cepaz/">@cepaz</a></span><span class="gl" lang="en"> Project by @cepaz</span> · <x-credit id="lugar-mural-ojos" inline/></p>
       </figcaption>
     </figure>
     <figure class="par-b">
@@ -184,8 +192,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <figcaption>
         <p class="lead-q" data-src="IG-147">Nos gustan los brillitos, las luces</p>
         <p class="gl" lang="en">We like sparkles and lights</p>
-        <x-credit id="lugar-lampara-pinzas" ui="Video"/>
-        <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a></p>
+        <x-credit id="lugar-lampara-pinzas"/>
       </figcaption>
     </figure>
   </div>
@@ -206,8 +213,8 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <div class="f crece tragos-f" data-rv="crece"><x-img id="tragos-bartender-muro-rosa" crop="a" sizes="(min-width: 1024px) 66vw, 100vw"/></div>
       <figcaption><p class="body" data-src="IG-045">En esta barrita pasan tantas maravillas en forma de coctelcitos</p><p class="gl" lang="en">So many wonders happen at this little bar, in the shape of little cocktails</p><x-credit id="tragos-bartender-muro-rosa"/></figcaption>
     </figure>
-    <figure class="tragos-m1"><div class="f r45" data-rv><x-img id="tragos-sours" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="tragos-m2"><div class="f r45" data-rv><x-img id="tragos-copa-naranja" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
+    <figure class="tragos-m1"><div class="f r45" data-rv><x-img id="tragos-sours" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 45vw"/></div></figure>
+    <figure class="tragos-m2"><div class="f r45" data-rv><x-img id="tragos-copa-naranja" crop="a" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 50vw, 45vw"/></div></figure>
     <div class="casa">
       <h3 class="rot" data-src="CARTA-2">Coctelería de la casa</h3>
       <p class="gl" lang="en">House cocktails</p>
@@ -268,9 +275,9 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
     </div>
   </div>
   <div class="g mosaico comida-mos">
-    <figure class="mo mo-1"><div class="f r45" data-rv><x-img id="comida-hamburguesa" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="mo mo-2"><div class="f r45" data-rv><x-img id="comida-garzon-plato" crop="m" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="mo mo-3"><div class="f r45" data-rv><x-img id="comida-cazuela" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div></figure>
+    <figure class="mo mo-1"><div class="f r45" data-rv><x-img id="comida-pizza-mano" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 45vw"/></div></figure>
+    <figure class="mo mo-2"><div class="f r45" data-rv><x-img id="comida-garzon-plato" crop="m" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 45vw"/></div></figure>
+    <figure class="mo mo-3"><div class="f r45" data-rv><x-img id="comida-tabla" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 60vw, 75vw"/></div></figure>
   </div>
 </section>
 
@@ -300,7 +307,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
     <div class="quien-txt">
       <p class="lead-q" data-src="IG-060">Pa agarrar perso, pa pasar las penas, las alegrías, celebreichons, pa entrar en calor, pa refrescarse</p>
       <p class="gl" lang="en">To work up the nerve, to get over sorrows, for joys, for celebreichons [celebrations], to warm up, to cool down</p>
-      <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a></p>
+      <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro" data-ui data-en="Get directions">Cómo llegar</a></p>
     </div>
   </div>
   <div class="g mosaico mosaico-tx quien-mos">
@@ -354,7 +361,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <p class="gl" lang="en">they bring a big smile with every little cocktail, delichus [delicious] food and the best service!</p>
     </div>
     <div class="equipo-nombres">
-      <p class="lead-q arrobas" data-src="IG-010"><x-handles>@pablete_bartender_ @javier.agmc @lizzearellano @milagroosjm @eduu.ardoo @elymar_bocarejo @jaav11 @daweed.cagliano @haqum.v99</x-handles></p>
+      <p class="lead-q arrobas"><x-handles><span data-src="IG-010">@pablete_bartender_ @javier.agmc</span> <span data-src="IG-014">@lizzearellanol</span> <span data-src="IG-010">@milagroosjm @eduu.ardoo @elymar_bocarejo @jaav11 @daweed.cagliano @haqum.v99</span></x-handles></p>
       <p class="body" data-src="IG-067"><x-handles>los papis del almud: el franchuto @rusio_mezclao y la disharashera @cepaz</x-handles></p>
       <p class="gl" lang="en">the Almud parents: the Frenchie @rusio_mezclao and the disharashera [a play on ‘dicharachera’, chatty] @cepaz</p>
     </div>
@@ -366,7 +373,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
   <div class="g">
     <h2 class="display resenas-h" id="resenas-h" data-src="IG-088" data-lines>lo rico de<br>nuestro barsucho</h2>
     <p class="gl gl-h resenas-glh" lang="en">how good our little bar is</p>
-    <p class="cifras body num"><span class="dato-es"><span data-src="DATO">4,6</span> <span data-ui>Google</span> (<span data-src="DATO">848 reseñas</span>) · <span data-src="DATO">4,6</span> <span data-ui>Tripadvisor</span> (<span data-src="DATO">209</span> <span data-ui lang="es">reseñas</span>, <span data-ui lang="es">#1 de 6 bares en Castro</span>) · <span data-ui>oct-2026</span></span><span class="gl" lang="en">Google 4.6 · 848 reviews — Tripadvisor 4.6 · 209 reviews · #1 of 6 bars in Castro</span></p>
+    <p class="cifras body num"><span class="dato-es"><span data-src="DATO">4,6</span> <span data-ui>Google</span> (<span data-src="DATO">848 reseñas</span>) · <span data-src="DATO">4,6</span> <span data-ui>Tripadvisor</span> (<span data-src="DATO">209</span> <span data-ui lang="es">reseñas</span>, <span data-ui lang="es">#1 en bares de Castro</span>) · <span data-ui>oct-2026</span></span><span class="gl" lang="en">Google 4.6 · 848 reviews — Tripadvisor 4.6 · 209 reviews · #1 bar in Castro</span></p>
   </div>
   <x-resenas/>
 </section>
@@ -389,13 +396,13 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <li data-mes="9"><p class="mes"><span data-ui data-en="September">Septiembre</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-005">negroni week</p><p class="body" data-src="IG-005">esperada por much@s ya está aquí</p><p class="gl" lang="en">awaited by many, it's here</p></div><p class="anos num">2025 · 2026</p></li>
       <li data-mes="10"><p class="mes"><span data-ui data-en="October">Octubre</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-071">Jalogüín</p><p class="body" data-src="IG-124">traguitos y travesuras 1313</p><p class="gl" lang="en">little drinks and mischief, hee hee [1313]</p></div><p class="anos num">2023 · 2024 · 2025</p></li>
     </ol>
-    <p class="acc eventos-acc"><a class="link" href="https://ig.me/m/almud_bar" data-src="IG-057">asegure su entrá hablándonos al DM!</a><span class="gl" lang="en">get your ticket by messaging us on Instagram!</span><a class="link" href="https://www.instagram.com/almud_bar/" data-ui data-en="See on Instagram">Ver en Instagram</a></p>
+    <p class="acc eventos-acc"><a class="link" href="https://www.instagram.com/almud_bar/" data-ui data-en="See on Instagram">Ver en Instagram</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
   </div>
   <div class="g tira eventos-tira">
-    <figure class="ti ti-1"><div class="f r45" data-rv><x-img id="eventos-diez" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div><x-credit id="eventos-diez"/></figure>
-    <figure class="ti ti-2"><div class="f r45" data-rv><x-img id="eventos-torta" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
-    <figure class="ti ti-3"><div class="f r45" data-rv><x-img id="eventos-doce" crop="m" sizes="(min-width: 1024px) 24vw, 50vw"/></div><x-credit id="eventos-doce"/></figure>
-    <figure class="ti ti-4"><div class="f r45" data-rv><x-img id="eventos-jaloguin" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
+    <figure class="ti ti-1"><div class="f r45" data-rv><x-img id="eventos-diez" crop="a" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 24vw, 45vw"/></div><x-credit id="eventos-diez"/></figure>
+    <figure class="ti ti-2"><div class="f r45" data-rv><x-img id="eventos-torta" crop="a" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 24vw, 45vw"/></div></figure>
+    <figure class="ti ti-3"><div class="f r45" data-rv><x-img id="eventos-doce" crop="m" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 24vw, 45vw"/></div><x-credit id="eventos-doce"/></figure>
+    <figure class="ti ti-4"><div class="f r45" data-rv><x-img id="eventos-jaloguin" crop="a" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 24vw, 45vw"/></div></figure>
   </div>
 </section>
 
@@ -410,21 +417,20 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <dl class="datos num">
         <div><dt data-ui data-en="Hours">Horario</dt><dd><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span></dd></div>
         <div><dt data-ui data-en="Address">Dirección</dt><dd><span data-src="BIO">Serrano 325, Castro</span><br><span data-src="DATO">Al frente del Centro Cultural de Castro</span><span class="gl" lang="en">Opposite the Castro Cultural Centre</span></dd></div>
-        <div><dt data-ui data-en="Phone">Teléfono</dt><dd><a class="link" href="tel:+56652530084" data-src="DATO">+56 65 253 0084</a></dd></div>
-        <div><dt data-ui>Instagram</dt><dd><a class="link" href="https://www.instagram.com/almud_bar/" data-ui>@almud_bar</a><br><span data-src="BIO">Nuestro bazar <a href="https://www.instagram.com/bazar_almud/">@bazar_almud</a></span><span class="gl" lang="en">Our shop: @bazar_almud</span></dd></div>
+        <div><dt data-ui>Instagram</dt><dd><a class="link" href="https://www.instagram.com/almud_bar/" data-ui>@almud_bar</a><br><span data-src="BIO">Nuestro bazar <a class="link" href="https://www.instagram.com/bazar_almud/">@bazar_almud</a></span><span class="gl" lang="en">Our shop: @bazar_almud</span></dd></div>
       </dl>
-      <p class="acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
+      <p class="acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
     </div>
-    <!-- mapa: el iframe de Google Maps se crea solo al tocar "Ver mapa" (cero pedidos a terceros antes) -->
-    <div class="mapa" data-mapa="https://www.google.com/maps?q=-42.4825681,-73.7617619&amp;hl=es&amp;z=17&amp;output=embed" data-title-es="Mapa: Serrano 325, Castro" data-title-en="Map: Serrano 325, Castro">
-      <a class="mapa-b" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619"><span class="head mapa-dir" data-src="BIO">Serrano 325, Castro</span><span class="mapa-t" data-ui data-en="See map">Ver mapa</span></a>
+    <!-- mapa (fase 16): sin panel con la dirección repetida; "Ver mapa" crea el iframe de Google Maps al tocar (cero pedidos a terceros antes) -->
+    <div class="mapa" data-mapa="https://www.google.com/maps?q=Almud+Bar,+Serrano+325,+Castro&amp;hl=es&amp;z=17&amp;output=embed" data-title-es="Mapa: Serrano 325, Castro" data-title-en="Map: Serrano 325, Castro">
+      <a class="link mapa-b" href="https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro" data-ui data-en="See map">Ver mapa</a>
     </div>
     <figure class="donde-video">
-      <x-video id="donde-letrero" class="f r169" sizes="(min-width: 1024px) 57vw, 100vw"/>
+      <x-video id="donde-letrero" class="f r169" sizes="(min-width: 1024px) 39vw, 100vw"/>
       <figcaption><x-credit id="donde-letrero" ui="Video"/></figcaption>
     </figure>
     <figure class="donde-foto">
-      <div class="f r45" data-rv><x-img id="donde-puerta" crop="d" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 100vw"/></div>
+      <div class="f r45" data-rv><x-img id="donde-puerta" crop="d" sizes="(min-width: 1024px) 39vw, (min-width: 700px) 50vw, 100vw"/></div>
       <x-credit id="donde-puerta"/>
     </figure>
   </div>

@@ -61,10 +61,11 @@
   /* la barra que se desliza de lado muestra siempre la pestaña o el chip activo (sin mover la página) */
   function reveal(el) {
     const bar = el.parentElement;
-    const pad = parseFloat(getComputedStyle(bar).paddingLeft) || 0;
+    const pad = Math.max(parseFloat(getComputedStyle(bar).paddingLeft) || 0, matchMedia('(max-width: 699px)').matches ? 52 : 0);  /* fase 16: fuera del borde que se desvanece */
     const l = el.offsetLeft - bar.offsetLeft, r = l + el.offsetWidth;
     if (l < bar.scrollLeft + pad) bar.scrollLeft = l - pad;
     else if (r > bar.scrollLeft + bar.clientWidth - pad) bar.scrollLeft = r - bar.clientWidth + pad;
+    if (typeof edge === 'function') edge(bar);
   }
 
   /* si ya se había bajado más allá de la barra, el contenido nuevo empieza justo bajo ella: nunca un recorrido largo */
@@ -100,6 +101,7 @@
     reveal(tabs.find((t) => t.dataset.tab === tab));
     const cs = chipsOf.get(tab);
     if (cs) reveal(cs.find((c) => c.dataset.sub === subOf(tab)) || cs[0]);
+    edges();
     return true;
   }
 
@@ -162,7 +164,28 @@
   if ('ResizeObserver' in window && bar) new ResizeObserver(measure).observe(bar);
   addEventListener('resize', measure);
 
+  /* fase 16: en el teléfono la fila se desliza de lado; el borde se desvanece solo del lado que tiene más */
+  const rows = [tablist, ...$$('.chips')];
+  function edge(el) {
+    const max = el.scrollWidth - el.clientWidth;
+    el.classList.toggle('mas-izq', max > 1 && el.scrollLeft > 1);
+    el.classList.toggle('mas-der', max > 1 && el.scrollLeft < max - 1);
+  }
+  rows.forEach((el) => el.addEventListener('scroll', () => edge(el), { passive: true }));
+  const edges = () => rows.forEach(edge);
+  addEventListener('resize', edges);
+
   paint();
   reveal(tabs.find((t) => t.dataset.tab === R.dataset.tab) || tabs[0]);
   chipsOf.forEach((cs, t) => reveal(cs.find((c) => c.dataset.sub === subOf(t)) || cs[0]));
+  edges();
+  /* las fuentes cambian el ancho de las pestañas: se vuelve a mostrar la activa cuando terminan de cargar */
+  const again = () => { measure(); reveal(tabs.find((t) => t.dataset.tab === R.dataset.tab) || tabs[0]);
+    chipsOf.forEach((cs, t) => reveal(cs.find((c) => c.dataset.sub === subOf(t)) || cs[0])); edges(); };
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(again);
+  /* un enlace profundo enfoca su panel al cargar: sin anillo de foco que nadie pidió con el teclado */
+  const unfocus = () => { const ae = d.activeElement;
+    if (ae && ae.getAttribute('role') === 'tabpanel' && !R.classList.contains('kb') && location.hash && ae.id === decodeURIComponent(location.hash.slice(1))) ae.blur(); };
+  unfocus(); addEventListener('load', () => setTimeout(unfocus, 0)); addEventListener('focusin', function f() { setTimeout(unfocus, 0); removeEventListener('focusin', f); });
+  addEventListener('load', again);
 })();
