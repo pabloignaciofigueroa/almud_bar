@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Almud Bar · style tile v2</title>
+<meta name="theme-color" content="#170e0b">
+<link rel="stylesheet" href="../../../css/v2/fonts.css">
+<link rel="stylesheet" href="../../../css/v2/tokens.css">
+<style>
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-tap-highlight-color: transparent; scrollbar-color: var(--papel-suave) var(--noche); }
+body { margin: 0; background: var(--noche); color: var(--papel); font: var(--w-light) var(--t-body)/var(--lh-body) var(--font-text); letter-spacing: var(--track-body-dark); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+::selection { background: var(--barra); color: var(--barra-tinta); }
+:focus-visible { outline: var(--focus-w) solid currentColor; outline-offset: var(--focus-offset); }
+a { color: inherit; }
+button, a, [role="button"] { touch-action: manipulation; }
+
+.sec { container-type: inline-size; padding-inline: var(--margin); }
+.grid { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); column-gap: var(--gutter); }
+
+/* ---------- type roles ---------- */
+.display { font: var(--w-regular) var(--t-display)/var(--lh-display) var(--font-display); letter-spacing: var(--track-display); text-wrap: balance; hyphens: none; }
+.head { font: var(--w-regular) var(--t-head)/var(--lh-head) var(--font-display); letter-spacing: var(--track-display); text-wrap: balance; hyphens: none; }
+.lead { font: var(--w-regular) var(--t-lead)/var(--lh-lead) var(--font-text); letter-spacing: 0; text-wrap: balance; }
+.body { font: var(--w-light) var(--t-body)/var(--lh-body) var(--font-text); max-width: var(--measure); text-wrap: pretty; }
+.small { font: var(--w-regular) var(--t-small)/var(--lh-small) var(--font-text); letter-spacing: 0.01em; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- components: button + link ---------- */
+.btn { display: inline-flex; align-items: center; height: var(--btn-h); padding: 0 var(--btn-px); border: 0; border-radius: var(--radius); font: var(--btn-font); letter-spacing: 0.01em; text-decoration: none; cursor: pointer; white-space: nowrap;
+  background: var(--btn-bg, var(--barra)); color: var(--btn-ink, var(--barra-tinta));
+  transition: transform var(--d-press) var(--ease-out), background-color var(--d-hover) var(--ease-hover), color var(--d-hover) var(--ease-hover); }
+.btn:active, .btn.is-active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--btn-hover-bg, var(--papel)); color: var(--btn-hover-ink, var(--noche)); } }
+.btn.is-hover { background: var(--btn-hover-bg, var(--papel)); color: var(--btn-hover-ink, var(--noche)); }
+.btn:focus-visible, .btn.is-focus { outline: var(--focus-w) solid var(--ring, var(--papel)); outline-offset: var(--focus-offset); }
+.on-field .btn { --btn-bg: var(--noche); --btn-ink: var(--papel); --btn-hover-bg: var(--papel); --btn-hover-ink: var(--noche); --ring: var(--noche); }
+.on-fucsia .btn { --ring: var(--papel); }
+.on-paper .btn { --btn-bg: var(--carta-azul); --btn-ink: var(--papel); --btn-hover-bg: var(--noche); --btn-hover-ink: var(--papel); --ring: var(--carta-azul); }
+
+.link { font: var(--w-regular) var(--t-lead)/1.2 var(--font-text); letter-spacing: 0; color: inherit; text-decoration: underline; text-decoration-thickness: var(--underline-w); text-underline-offset: var(--underline-offset); text-decoration-color: currentColor; display: inline-flex; align-items: center; min-height: 44px; transition: text-decoration-color var(--d-hover) var(--ease-hover); }
+.link-s { font-size: var(--t-body); }
+@media (hover: hover) and (pointer: fine) { .on-night .link:hover, .cover .link:hover { text-decoration-color: var(--barra); } .on-field .link:hover, .on-paper .link:hover { text-decoration-thickness: 0.16em; } }
+.on-night .link.is-hover { text-decoration-color: var(--barra); }
+.on-field .link.is-hover, .on-paper .link.is-hover { text-decoration-thickness: 0.16em; }
+.link:focus-visible, .link.is-focus { outline: var(--focus-w) solid currentColor; outline-offset: var(--focus-offset); }
+
+/* ---------- tile chrome ([UI], neutral) ---------- */
+.tile-top { display: flex; justify-content: space-between; gap: var(--sp-5); padding: var(--sp-4) var(--margin); color: var(--papel-suave); }
+.nota { font: var(--w-regular) var(--t-small)/var(--lh-small) var(--font-text); letter-spacing: 0.01em; color: var(--papel-suave); }
+.tile-h { padding-top: var(--section); padding-bottom: var(--sp-7); }
+
+/* ================= PORTADA ================= */
+.cover-host { container-type: inline-size; background: var(--noche); }
+.cover { position: relative; color: var(--papel); --S: min(100cqi, var(--photo-max)); }
+.cover-nav { height: 56px; display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); padding-inline: var(--margin); background: var(--noche); }
+.cover-nav ul { display: none; gap: var(--sp-6); }
+.cover-nav .menu { font: var(--w-regular) var(--t-body)/1 var(--font-text); background: none; border: 0; color: var(--papel); padding: 0; height: 44px; cursor: pointer; text-decoration: underline; text-decoration-thickness: var(--underline-w); text-underline-offset: var(--underline-offset); }
+.cover-stage { position: relative; height: var(--cover-h, clamp(560px, calc(100svh - 56px), 900px)); max-width: var(--photo-max); margin-inline: auto; overflow: hidden; }
+.cover-stage > img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.cover-scrim { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgb(var(--scrim) / .84) 0%, rgb(var(--scrim) / .66) 24%, rgb(var(--scrim) / 0) 40%); /* taste-skill-ignore: scrim funcional neutro bajo el texto */ }
+.cover-type { position: absolute; left: var(--margin); right: var(--margin); bottom: var(--sp-4); display: grid; gap: var(--sp-3); }
+.cover-title { position: relative; }
+.cover-logo { width: min(250px, 66cqi); height: auto; }
+.cover-info { display: grid; gap: var(--sp-3); }
+.cover-bio { font: var(--w-regular) var(--t-lead)/1.25 var(--font-text); letter-spacing: 0; max-width: 17em; text-wrap: balance; }
+.cover-data { font: var(--w-light) var(--t-body)/1.45 var(--font-text); }
+.cover-data span { display: block; }
+.cover-links { display: flex; gap: var(--sp-5); }
+
+@container (min-width: 900px) {
+  .cover-nav { height: var(--nav-h); }
+  .cover-nav ul { display: flex; }
+  .cover-nav .menu { display: none; }
+  .cover-nav .link { font-size: var(--t-body); text-decoration-color: transparent; }
+  .cover-stage { height: var(--cover-h, clamp(640px, calc(100svh - var(--nav-h)), 1000px)); }
+  /* P189 a 1:1 en 1440: la foto se ancla por arriba para que el tipo caiga sobre la pared, entre el techo y las caras */
+  .cover-stage > img { position: absolute; left: 0; top: calc(var(--S) * -0.197); width: 100%; height: auto; object-fit: initial; }
+  .cover-scrim { display: none; }
+  .cover-type { position: absolute; inset: 0; display: block; }
+  .cover-title { position: absolute; z-index: 0; left: var(--margin); top: calc(var(--S) * 0.243); }
+  .cover-info { position: absolute; z-index: 0; right: var(--margin); top: calc(var(--S) * 0.262); width: calc(var(--S) * 0.27); gap: var(--sp-4); }
+  .cover-title::before, .cover-info::before { content: ""; position: absolute; inset: -18% -14%; z-index: -1; pointer-events: none;
+    background: radial-gradient(closest-side, rgb(var(--scrim) / .82), rgb(var(--scrim) / .62) 58%, rgb(var(--scrim) / 0)); /* taste-skill-ignore: scrim funcional neutro, solo detrás del tipo */ }
+  .cover-logo { width: calc(var(--S) * 0.38); display: block; }
+  .cover-bio { font-size: var(--t-lead); max-width: none; }
+}
+
+/* ================= HOY EN ALMUD (la cosa viva) ================= */
+.hoy { background: var(--hoy-campo, var(--turquesa)); color: var(--hoy-tinta, var(--noche)); padding-block: var(--sp-8) var(--sp-8); }
+.hoy-grid { row-gap: var(--sp-5); }
+.hoy h2 { grid-column: 1 / -1; }
+.hoy-foto { grid-column: 1 / -1; aspect-ratio: var(--ratio-retrato); overflow: hidden; }
+.hoy-foto img { width: 100%; height: 100%; object-fit: cover; }
+.hoy-promo { grid-column: 1 / -1; display: grid; gap: var(--sp-2); }
+.hoy-promo .que { font: var(--w-semi) var(--t-lead)/1.15 var(--font-text); letter-spacing: 0; }
+.hoy-promo .precio { font: var(--w-regular) var(--t-head)/0.9 var(--font-display); letter-spacing: var(--track-display); font-variant-numeric: tabular-nums; margin-top: var(--sp-3); }
+.hoy-promo .cuando { font: var(--w-regular) var(--t-body)/1.4 var(--font-text); }
+.hoy .body { grid-column: 1 / -1; }
+.hoy-acc { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3) var(--sp-6); margin-top: var(--sp-2); }
+.semana { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4) var(--gutter); margin-top: var(--sp-6); }
+.semana li { font: var(--w-light) var(--t-body)/1.35 var(--font-text); }
+.semana b { display: block; font-weight: var(--w-semi); }
+.semana .es-hoy { font-weight: var(--w-regular); }
+@container (min-width: 900px) {
+  .hoy { padding-block: var(--sp-9); }
+  .hoy h2 { grid-column: 1 / span 7; grid-row: 1; align-self: start; }
+  .hoy-foto { grid-column: 8 / span 5; grid-row: 1 / span 4; align-self: start; }
+  .hoy-promo { grid-column: 1 / span 3; grid-row: 2; margin-top: var(--sp-7); }
+  .hoy .body { grid-column: 4 / span 3; grid-row: 2; margin-top: var(--sp-7); align-self: end; }
+  .hoy-acc { grid-column: 1 / span 7; grid-row: 3; align-self: start; margin-top: var(--sp-6); }
+  .semana { grid-column: 1 / span 7; grid-row: 4; grid-template-columns: repeat(4, 1fr); align-self: end; }
+}
+/* el momento autoral: la franja se imprime (una vez) */
+@media (prefers-reduced-motion: no-preference) {
+  .hoy.imprime { animation: franja var(--d-reveal) var(--ease-in-out) both; }
+  .hoy.imprime h2 { animation: sube var(--d-hero) var(--ease-out) 240ms both; }
+  .hoy.imprime .hoy-foto { animation: abre 600ms var(--ease-in-out) 360ms both; }
+  @keyframes franja { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+  @keyframes sube { from { clip-path: inset(0 0 100% 0); transform: translateY(16px); } to { clip-path: inset(0 0 -10% 0); transform: none; } }
+  @keyframes abre { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+}
+@media (prefers-reduced-motion: reduce) { .hoy.imprime { animation: fade var(--d-fade-reduced) ease both; } @keyframes fade { from { opacity: 0; } } }
+
+/* ================= CAPÍTULO: LOS TRAGOS ================= */
+.capitulo { background: var(--campo-tragos); color: var(--campo-tragos-tinta); padding-block: var(--sp-8); }
+.cap-grid { row-gap: var(--sp-5); }
+.cap-grid h2 { grid-column: 1 / -1; }
+.cap-text { grid-column: 1 / -1; display: grid; gap: var(--sp-4); }
+.m { overflow: hidden; aspect-ratio: var(--ratio-retrato); background: var(--noche); }
+.m img { width: 100%; height: 100%; object-fit: cover; }
+.m-1 { grid-column: 1 / -1; }
+.m-2 { grid-column: 1 / span 2; }
+.m-4 { grid-column: 3 / span 2; margin-top: var(--sp-9); }
+.m-3 { grid-column: 2 / span 3; }
+.pie { font: var(--w-regular) var(--t-small)/var(--lh-small) var(--font-text); margin-top: var(--sp-2); }
+@container (min-width: 900px) {
+  .capitulo { padding-block: var(--sp-9) calc(var(--sp-9) + var(--sp-6)); }
+  .cap-grid h2 { grid-column: 1 / span 7; grid-row: 1; }
+  .cap-text { grid-column: 1 / span 4; grid-row: 2; align-self: start; margin-top: var(--sp-5); }
+  .m-1 { grid-column: 8 / span 5; grid-row: 1 / span 2; }
+  .m-2 { grid-column: 1 / span 4; grid-row: 3; margin-top: var(--sp-8); align-self: start; }
+  .m-4 { grid-column: 5 / span 4; grid-row: 3; margin-top: calc(var(--sp-8) + 160px); align-self: start; }
+  .m-3 { grid-column: 9 / span 4; grid-row: 3; margin-top: calc(var(--sp-8) + 56px); align-self: start; }
+}
+
+/* ================= LA CARTA (la única hoja de papel) ================= */
+.carta { background: var(--carta-suelo); color: var(--carta-tinta); padding-block: var(--sp-8); }
+.carta h2 { color: var(--carta-azul); grid-column: 1 / -1; }
+.carta-intro { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--sp-3) var(--sp-6); align-items: center; margin-top: var(--sp-5); }
+.cat { grid-column: 1 / -1; margin-top: var(--sp-8); }
+.cat h3 { font: var(--w-regular) var(--t-head)/var(--lh-head) var(--font-display); letter-spacing: var(--track-display); color: var(--carta-tinta); margin-bottom: var(--sp-6); }
+.filas { display: grid; gap: var(--sp-6) var(--gutter); }
+.fila { display: grid; align-content: start; grid-template-columns: 1fr auto; column-gap: var(--sp-4); row-gap: var(--sp-1); align-items: baseline; }
+.fila h4 { margin: 0; font: var(--w-semi) var(--t-lead)/1.15 var(--font-text); letter-spacing: 0; color: var(--carta-azul); text-transform: uppercase; }
+.fila .precio { font: var(--w-semi) var(--t-lead)/1.15 var(--font-text); color: var(--carta-magenta); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fila p { grid-column: 1 / -1; font: var(--w-light) var(--t-body)/1.5 var(--font-text); max-width: 40em; }
+.lamina { margin-top: var(--sp-6); }
+.lamina .m { aspect-ratio: var(--ratio-retrato); }
+.lamina figcaption { font: var(--w-semi) var(--t-body)/1.3 var(--font-text); color: var(--carta-azul); margin-top: var(--sp-2); text-transform: uppercase; }
+.carta-nota { grid-column: 1 / -1; margin-top: var(--sp-8); display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-4) var(--sp-6); }
+@container (min-width: 900px) {
+  .carta { padding-block: var(--sp-9); }
+  .carta h2 { grid-column: 1 / span 6; }
+  .carta-intro { grid-column: 7 / span 6; align-self: end; justify-content: flex-end; margin-top: 0; }
+  .cat { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+  .cat h3 { grid-column: 1 / -1; }
+  .cat-a .filas { grid-column: 1 / span 8; grid-template-columns: 1fr 1fr; align-content: start; }
+  .cat-a .lamina { grid-column: 9 / span 4; margin-top: 0; }
+  .cat-b .lamina { grid-column: 1 / span 4; margin-top: 0; grid-row: 2; }
+  .cat-b .filas { grid-column: 5 / span 8; grid-template-columns: 1fr 1fr; align-content: start; grid-row: 2; }
+}
+
+/* ================= ESPECÍMENES ================= */
+.specs { padding-bottom: var(--section); }
+.spec-row { display: grid; gap: var(--gutter); grid-template-columns: minmax(0, 1fr); }
+.panel { min-width: 0; padding: var(--sp-6) var(--sp-4); display: grid; gap: var(--sp-5); align-content: start; }
+.g-noche-alta { background: var(--noche-alta); color: var(--papel); }
+.g-fucsia { background: var(--fucsia); color: var(--fucsia-tinta); }
+.g-papel { background: var(--papel); color: var(--carta-tinta); }
+.estados { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: var(--sp-5) var(--sp-6); align-items: center; }
+.estados .nota { color: inherit; opacity: 1; }
+.estado { display: grid; gap: var(--sp-2); justify-items: start; }
+.sel-demo { font: var(--w-light) var(--t-body)/1.5 var(--font-text); }
+.sel-demo mark { background: var(--barra); color: var(--barra-tinta); }
+@container (min-width: 900px) { .spec-row { grid-template-columns: repeat(3, 1fr); } }
+
+.escala { display: grid; gap: var(--sp-7); }
+.paso { display: grid; gap: var(--sp-3); grid-template-columns: 1fr; }
+.paso .nota { order: 2; }
+@container (min-width: 900px) { .paso { grid-template-columns: 3fr 9fr; column-gap: var(--gutter); align-items: baseline; } .paso .nota { order: 0; } }
+
+.paleta { display: grid; gap: var(--gutter); grid-template-columns: repeat(2, 1fr); }
+.sw { min-height: 168px; padding: var(--sp-4); display: grid; align-content: space-between; gap: var(--sp-5); }
+.sw .aa { font: var(--w-regular) var(--t-head)/0.9 var(--font-display); letter-spacing: var(--track-display); }
+.sw .d { font: var(--w-regular) 14px/1.35 var(--font-text); letter-spacing: 0.01em; }
+.sw .d b { font-weight: var(--w-semi); display: block; }
+@container (min-width: 900px) { .paleta { grid-template-columns: repeat(6, 1fr); } }
+.rechazos { margin-top: var(--sp-6); display: grid; gap: var(--sp-2); }
+
+/* ================= FILA "EN EL TELÉFONO" (solo en pantallas anchas) ================= */
+.telefonos { display: none; }
+@media (min-width: 1200px) {
+  .telefonos { display: flex; justify-content: space-between; gap: var(--sp-7); padding: var(--section) var(--margin) 0; }
+  .tel { width: 390px; flex: none; }
+  .tel-frame { width: 390px; height: 844px; overflow: hidden; container-type: inline-size; background: var(--noche);
+    --t-body: 17px; --t-lead: 22px; --t-head: 56px; --t-display: 96px; --margin: 16px; --gutter: 12px; --cols: 4; --nav-h: 56px; --cover-h: 788px; }
+  .tel .nota { margin-top: var(--sp-3); }
+}
+</style>
+</head>
+<body>
+
+<div class="tile-top nota"><span>Almud Bar · sistema visual v2 · style tile</span><span>Fase 8 · 21-10-2026</span></div>
+
+<!-- ================= PORTADA (escritorio a 1440; teléfono a 390) ================= -->
+<div class="cover-host">
+  <header class="cover">
+    <nav class="cover-nav" aria-label="Principal">
+      <button class="menu" type="button">Menú</button>
+      <ul>
+        <li><a class="link" href="#lugar">El lugar</a></li>
+        <li><a class="link" href="#tragos">Tragos</a></li>
+        <li><a class="link" href="#comida">Comida</a></li>
+        <li><a class="link" href="#quien">Con quién</a></li>
+        <li><a class="link" href="#eventos">Eventos</a></li>
+      </ul>
+      <a class="btn" href="#carta">Ver la carta</a>
+    </nav>
+    <div class="cover-stage">
+      <img src="img/p189-1440.jpg" width="1440" height="1919" alt="La terraza techada de Almud llena de gente, bajo el techo de cintas de colores" fetchpriority="high">
+      <div class="cover-scrim"></div>
+      <div class="cover-type">
+        <h1 class="cover-title"><img class="cover-logo" src="../../../brand/almud-horizontal-claro.svg" width="1956" height="897" alt="Almud Bar"></h1>
+        <div class="cover-info">
+          <p class="cover-bio">Coctelería de autor, comida &amp; música bonita desde 2014</p>
+          <p class="cover-data num"><span>Abrimos de Mar a Sáb a las 18:00hrs</span><span>Serrano 325, Castro</span></p>
+          <p class="cover-links"><a class="link link-s" href="https://maps.google.com/?q=Serrano+325,+Castro">Cómo llegar</a><a class="link link-s" href="https://ig.me/m/almud_bar">Escríbanos al DM</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<p class="nota" style="padding:var(--sp-3) var(--margin) 0">Portada · P189 a tamaño real (1440 px), sin ampliar · sobre 1440 px, noche a los lados · scrim solo donde está el tipo</p>
+
+<!-- ================= EN EL TELÉFONO (réplicas a 390, solo en la lámina ancha) ================= -->
+<div class="telefonos" aria-hidden="true" inert>
+  <div class="tel">
+    <div class="tel-frame" id="tel-cover"></div>
+    <p class="nota">Portada · teléfono 390 × 844</p>
+  </div>
+  <div class="tel">
+    <div class="tel-frame" id="tel-hoy"></div>
+    <p class="nota">Hoy en Almud · teléfono</p>
+  </div>
+  <div class="tel">
+    <div class="tel-frame" id="tel-carta"></div>
+    <p class="nota">La carta · teléfono</p>
+  </div>
+</div>
+
+<!-- ================= HOY EN ALMUD ================= -->
+<section class="hoy sec on-field" id="hoy" aria-labelledby="hoy-h" data-dia="3">
+  <div class="grid hoy-grid">
+    <h2 class="display" id="hoy-h">Miércoles de piscoleinnnn!</h2>
+    <figure class="hoy-foto"><img src="img/ig019-promo.jpg" width="960" height="1200" alt="Garzona de Almud con una bandeja de piscolas"></figure>
+    <div class="hoy-promo">
+      <p class="que">Piscolein &amp; Gin Tonic</p>
+      <p class="precio">$ 4.500</p>
+      <p class="cuando num">de 18:00 a 22:00 hrs</p>
+      <p class="small">* Siempre sujeto a stock! *</p>
+    </div>
+    <p class="body">Mitad de semana, y es justo y necesario salir a tomar aire y muchos combinaitos itos itos!!!</p>
+    <div class="hoy-acc"><a class="btn" href="#carta">Ver la carta</a><a class="link link-s" href="https://maps.google.com/?q=Serrano+325,+Castro">Cómo llegar</a></div>
+    <ol class="semana num" aria-label="Promos de la semana">
+      <li><b>Martes</b>Negroni &amp; Fernet c/Coca Cola</li>
+      <li class="es-hoy"><b>Miércoles</b>Piscolein &amp; Gin Tonic</li>
+      <li><b>Jueves</b>Sangría de la casa</li>
+      <li><b>Sábado</b>Ramón a $ 4.500!</li>
+    </ol>
+  </div>
+</section>
+<p class="nota" style="padding:var(--sp-3) var(--margin) 0">Hoy en Almud · la promo real del día según la hora de Chile (carta, promos) · campo del día: Mié turquesa · <button class="link link-s" type="button" id="replay" style="background:none;border:0;color:inherit;padding:0;font-size:14px;min-height:0">Repetir la franja</button></p>
+
+<!-- ================= CAPÍTULO: LOS TRAGOS ================= -->
+<section class="capitulo sec on-field" id="tragos" aria-labelledby="tragos-h" style="margin-top:var(--section)">
+  <div class="grid cap-grid">
+    <h2 class="display" id="tragos-h">mejor los<br>tomamos todos!</h2>
+    <div class="cap-text"><p class="body">Tantos coctelcitos entre los cuales decidirse! Demasiada complikeichon elegir, mejor los tomamos todos!</p>
+    <p class="cap-acc"><a class="link link-s" href="#carta">Coctelería de la casa</a></p></div>
+    <figure class="m m-1"><img src="img/p362.jpg" width="1200" height="1500" alt="Bartender sirviendo frente al muro de botellas rojo con el letrero de Almud"></figure>
+    <figure class="m-2"><div class="m"><img src="img/p297.jpg" width="880" height="1100" alt="Cóctel rojo salpicando en una copa coupé"></div></figure>
+    <figure class="m-4"><div class="m"><img src="img/p086.jpg" width="880" height="1100" alt="Tres sours con espuma y flores secas sobre la barra"></div></figure>
+    <figure class="m-3"><div class="m"><img src="img/p184.jpg" width="880" height="1100" alt="Bartender preparando un trago frente al muro de botellas rosa"></div><figcaption class="pie">Foto @estudiouno.prod</figcaption></figure>
+  </div>
+</section>
+<p class="nota" style="padding:var(--sp-3) var(--margin) 0">Capítulo · campo amarillo, un color por pantalla · titular literal IG-046 en Six Caps, 2 líneas · mosaico 4:5</p>
+
+<!-- ================= LA CARTA ================= -->
+<section class="carta sec on-paper" id="carta" aria-labelledby="carta-h" style="margin-top:var(--section)">
+  <div class="grid">
+    <h2 class="display" id="carta-h">La carta</h2>
+
+    <div class="cat cat-a">
+      <h3>Coctelería de la casa</h3>
+      <div class="filas">
+        <article class="fila"><h4>Pinche Güey</h4><span class="precio">$ 8.800</span><p>Un guarisnaque complejo pa l@s que disfrutan sabores más potentes: Mezcal, tequila, horchata de maní tostado y merkén, pomelo y limón! Un cóctel cítrico, picantito, tostado, ahumado. Atrévase se se se!</p></article>
+        <article class="fila"><h4>Aquí te las traigo Peter</h4><span class="precio">$ 6.700</span><p>Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí!</p></article>
+        <article class="fila"><h4>Sagüer on Faia</h4><span class="precio">$ 7.900</span><p>Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!!</p></article>
+        <article class="fila"><h4>Cómo te voy a olvidar</h4><span class="precio">$ 6.800</span><p>Este es un cóctel sencillo, pero muuuuuy rico [y bonito]: va con Vodka Pera, un toque cítrico de limoncito, jarabe pal dulzor y terminamos con Vino tinteli, que tiñe de un color hermoso este cóctel que está 10/10</p></article>
+        <article class="fila"><h4>A veces me pongo Coquette</h4><span class="precio">$ 7.100</span><p>Este es de lo más que hay: mezcla perfecta de pisco berries con crema de whisky, frambuesa, naranja y jarabe de canela: una delicia rosada, cremosa y dulzona!</p></article>
+        <article class="fila"><h4>Te espero en la cuneta</h4><span class="precio">$ 7.800</span><p>Esta es una versión más dulzona del siempre bien ponderado Margarita: tequila blanco, curaçao, limón y jugo de piña: pum!</p></article>
+      </div>
+      <figure class="lamina"><div class="m"><img src="img/ig044-peter.jpg" width="800" height="1000" alt="Aquí te las traigo Peter, con su burbuja de humo"></div></figure>
+    </div>
+
+    <div class="cat cat-b">
+      <h3>Picoteos</h3>
+      <figure class="lamina"><div class="m"><img src="img/ig066-contuti.jpg" width="800" height="1000" alt="Tabla Con tuti si no pa qué: quesos, jamón serrano, aceitunas, frutos secos y fruta"></div></figure>
+      <div class="filas">
+        <article class="fila"><h4>Con tuti si no pa qué!</h4><span class="precio">$ 19.900</span><p>[Versión 2.0] Especial pa compartir: champis salteados en mantequilla y nuez moscada, paltita con aceite de ajo y pimentón asado, queso de cabra, queso de campo, aceitunas, tomatito cherry, frutos secos, fruta de la temporada, nuestra deliciosa salsa ajo cilantro y pancito de la casa!</p></article>
+        <article class="fila"><h4>Tukulito Sakayama</h4><span class="precio">$ 15.900</span><p>Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.</p></article>
+        <article class="fila"><h4>Una cosa poca</h4><span class="precio">$ 11.900</span><p>Que tan poca cosa no es! Este es como le fondiú franchuto pero más mejor porque es shileno!: mix de quesos con tomatito al horno, palta y pesto. Acompañado de pancito de la casa! Real manjarsh!</p></article>
+        <article class="fila"><h4>Aceitunas</h4><span class="precio">$ 6.500</span><p>Porción de aceitunas aliñaditas ricas delichus!</p></article>
+      </div>
+    </div>
+    <div class="carta-nota"><a class="btn" href="https://uqr.to/ppvi">Carta completa</a><p class="small">Precios de la carta oficial, octubre 2026.</p></div>
+  </div>
+</section>
+<p class="nota" style="padding:var(--sp-3) var(--margin) 0">La carta · papel #f6ecdc, nombres azul carta, precios magenta en cifras tabulares, filas separadas por espacio, sin líneas</p>
+
+<!-- ================= COMPONENTES ================= -->
+<section class="sec specs" aria-labelledby="comp-h">
+  <h2 class="head tile-h" id="comp-h">Componentes</h2>
+  <div class="spec-row">
+    <div class="panel g-noche-alta on-night">
+      <p class="nota" style="color:var(--papel-suave)">Sobre noche · acción primaria = barra</p>
+      <div class="estados">
+        <div class="estado"><a class="btn" href="#carta">Ver la carta</a><span class="nota">Reposo</span></div>
+        <div class="estado"><a class="btn is-hover" href="#carta">Ver la carta</a><span class="nota">Hover</span></div>
+        <div class="estado"><a class="btn is-active" href="#carta">Ver la carta</a><span class="nota">Presión .97</span></div>
+        <div class="estado"><a class="btn is-focus" href="#carta">Ver la carta</a><span class="nota">Foco</span></div>
+        <div class="estado"><a class="link link-s" href="#x">Cómo llegar</a><span class="nota">Enlace</span></div>
+        <div class="estado"><a class="link link-s is-hover" href="#x">Cómo llegar</a><span class="nota">Enlace hover</span></div>
+        <div class="estado"><a class="link link-s is-focus" href="#x">Escríbanos al DM</a><span class="nota">Enlace foco</span></div>
+      </div>
+      <p class="sel-demo">Somos su Almudcito ito ito <mark>desbordando amor, locura, pasión</mark>, frenesí</p>
+      <p class="nota" style="color:var(--papel-suave)">Selección y caret: barra · scrollbar: papel suave sobre noche</p>
+    </div>
+    <div class="panel g-fucsia on-field on-fucsia">
+      <p class="small">Sobre un campo · el botón pasa a noche, el foco toma la tinta del campo</p>
+      <div class="estados">
+        <div class="estado"><a class="btn" href="#carta">Ver la carta</a><span class="small">Reposo</span></div>
+        <div class="estado"><a class="btn is-hover" href="#carta">Ver la carta</a><span class="small">Hover</span></div>
+        <div class="estado"><a class="btn is-active" href="#carta">Ver la carta</a><span class="small">Presión .97</span></div>
+        <div class="estado"><a class="btn is-focus" href="#carta">Ver la carta</a><span class="small">Foco</span></div>
+        <div class="estado"><a class="link link-s" href="#x">Cómo llegar</a><span class="small">Enlace</span></div>
+        <div class="estado"><a class="link link-s is-focus" href="#x">Escríbanos al DM</a><span class="small">Enlace foco</span></div>
+      </div>
+    </div>
+    <div class="panel g-papel on-paper">
+      <p class="small">Sobre papel · botón azul carta</p>
+      <div class="estados">
+        <div class="estado"><a class="btn" href="#carta">Carta completa</a><span class="small">Reposo</span></div>
+        <div class="estado"><a class="btn is-hover" href="#carta">Carta completa</a><span class="small">Hover</span></div>
+        <div class="estado"><a class="btn is-active" href="#carta">Carta completa</a><span class="small">Presión .97</span></div>
+        <div class="estado"><a class="btn is-focus" href="#carta">Carta completa</a><span class="small">Foco</span></div>
+      </div>
+      <article class="fila"><h4>Ramón</h4><span class="precio">$ 7.100</span><p>Es una precisa mezcla: gin, licor marrasquino, limón y romero. Para los fanáticos de los cócteles cítricos y el frescor del romero! [el vasito va con crusta de sal de romero]</p></article>
+      <p class="small">Fila de carta · nombre 600 azul, precio 600 magenta tabular, descripción 300</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIPO ================= -->
+<section class="sec specs" aria-labelledby="tipo-h">
+  <h2 class="head tile-h" id="tipo-h">Tipo</h2>
+  <div class="escala">
+    <div class="paso"><p class="nota">Display · Six Caps 400<br>clamp(96px, 52px + 11vw, 216px) / 0,86</p><p class="display">Venga venga que nadie le detenga!</p></div>
+    <div class="paso"><p class="nota">Head · Six Caps 400<br>clamp(56px, 40px + 4vw, 104px) / 0,9</p><p class="head">Peazo de equipo que tenemos!</p></div>
+    <div class="paso"><p class="nota">Lead · Oswald 400 (600 en nombres y promo)<br>clamp(22px, 18px + 0.6vw, 28px) / 1,25</p><p class="lead">Coctelería de autor, comida &amp; música bonita desde 2014</p></div>
+    <div class="paso"><p class="nota">Body · Oswald 300, +0,01em sobre oscuro<br>clamp(17px, 16px + 0.14vw, 18px) / 1,55 · medida 34em</p><p class="body">Almud nace en el invierno de 2014 con el objetivo de entregar una propuesta de bar diferente a la que ya había en ese momento en Castro. Un lugar que fuera cálido, acogedor, con una cocina muy sencilla y una gran barra, larga, de esas para sentarse y quedarse ahí.</p></div>
+    <div class="paso"><p class="nota">Small · Oswald 400<br>14px / 1,4</p><p class="small">Fotos @estudiouno.prod, @catarsis.fotografia, @tamillanquileo, @isosur.prod y @dosistudio</p></div>
+  </div>
+</section>
+
+<!-- ================= PALETA ================= -->
+<section class="sec specs" aria-labelledby="pal-h">
+  <h2 class="head tile-h" id="pal-h">Color</h2>
+  <div class="paleta">
+    <div class="sw" style="background:var(--noche);color:var(--papel);outline:2px solid var(--noche-alta);outline-offset:-2px"><span class="aa">Aa</span><p class="d"><b>noche #170e0b</b>Suelo · papel encima 16,3:1</p></div>
+    <div class="sw" style="background:var(--noche-alta);color:var(--papel)"><span class="aa">Aa</span><p class="d"><b>noche alta #2a1a14</b>Escalón · papel 14,3:1 · papel suave 8,8:1</p></div>
+    <div class="sw" style="background:var(--papel);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>papel #f6ecdc</b>Tinta y hoja de la carta · noche 16,3:1</p></div>
+    <div class="sw" style="background:var(--noche);color:var(--papel-suave);outline:2px solid var(--noche-alta);outline-offset:-2px"><span class="aa">Aa</span><p class="d"><b>papel suave #cbb9a5</b>Secundario sobre noche 10,0:1</p></div>
+    <div class="sw" style="background:var(--barra);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>barra #ff3f6c</b>El único acento · noche 5,6:1</p></div>
+    <div class="sw" style="background:var(--papel);color:var(--carta-azul)"><span class="aa">Aa</span><p class="d"><b>azul carta #2023e4</b>Nombres, solo sobre papel · 7,4:1</p></div>
+    <div class="sw" style="background:var(--coral);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>coral #f26343</b>Eventos · Mar · noche 6,0:1</p></div>
+    <div class="sw" style="background:var(--turquesa);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>turquesa #40b9c2</b>Mié · noche 8,1:1</p></div>
+    <div class="sw" style="background:var(--fucsia);color:var(--papel)"><span class="aa">Aa</span><p class="d"><b>fucsia #cd0b61</b>Con quién · Jue · papel 4,7:1</p></div>
+    <div class="sw" style="background:var(--amarillo);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>amarillo #fac307</b>Tragos · Vie · noche 11,7:1</p></div>
+    <div class="sw" style="background:var(--verde);color:var(--noche)"><span class="aa">Aa</span><p class="d"><b>verde #06aa6b</b>Comida · Sáb · noche 6,3:1</p></div>
+    <div class="sw" style="background:var(--papel);color:var(--carta-magenta)"><span class="aa">$ 4.500</span><p class="d" style="color:var(--noche)"><b style="color:var(--carta-magenta)">magenta precio #cd007a</b>Sobre papel 4,6:1 · el impreso #ec008c da 3,6:1</p></div>
+  </div>
+  <div class="rechazos">
+    <p class="nota">Pares rechazados por contraste: papel sobre coral 2,7 · turquesa 2,0 · amarillo 1,4 · verde 2,6 · barra 2,9 · noche sobre fucsia 3,5 · barra sobre fucsia 1,6</p>
+  </div>
+</section>
+
+<script>
+/* Hoy en Almud: promo literal de la carta (CARTA-7) según el día en Chile. Sin JS queda la del día del render y la semana completa. */
+(function () {
+  var P = { 2: ['Martes', 'Negroni & Fernet c/Coca Cola', '$ 4.500'], 3: ['Miércoles de piscoleinnnn!', 'Piscolein & Gin Tonic', '$ 4.500'], 4: ['hoy es Jueves de Sangría!', 'Sangría de la casa', '$ 4.500'], 6: ['Sábado', 'Ramón a $ 4.500!', ''] };
+  var C = { 2: 'coral', 3: 'turquesa', 4: 'fucsia', 5: 'amarillo', 6: 'verde' };
+  var INK = { coral: 'noche', turquesa: 'noche', fucsia: 'papel', amarillo: 'noche', verde: 'noche' };
+  var d; try { var w = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Santiago', weekday: 'short' }).format(new Date()); d = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[w]; } catch (e) { return; }
+  var s = document.getElementById('hoy'); if (!s || d === 3) return;
+  var col = C[d] || 'coral'; s.style.setProperty('--hoy-campo', 'var(--' + col + ')'); s.style.setProperty('--hoy-tinta', 'var(--' + INK[col] + ')');
+  if (col === 'fucsia') s.classList.add('on-fucsia');
+  var h = document.getElementById('hoy-h'), q = s.querySelector('.que'), pr = s.querySelector('.precio');
+  if (d === 5) { h.textContent = 'Venga venga que nadie le detenga!'; q.textContent = 'Viernes ya!'; pr.textContent = ''; }
+  else if (P[d]) { h.textContent = P[d][0]; q.textContent = P[d][1]; pr.textContent = P[d][2]; }
+  else { h.textContent = 'Abrimos de Mar a Sáb a las 18:00hrs'; q.textContent = 'Martes · ' + P[2][1]; }
+})();
+/* réplicas de teléfono: clonan los componentes reales dentro de marcos de 390 px */
+(function () {
+  var map = { 'tel-cover': '.cover', 'tel-hoy': '#hoy', 'tel-carta': '#carta' };
+  Object.keys(map).forEach(function (id) {
+    var f = document.getElementById(id), src = document.querySelector(map[id]); if (!f || !src) return;
+    var host = document.createElement('div'); host.className = id === 'tel-cover' ? 'cover-host' : '';
+    var c = src.cloneNode(true); c.removeAttribute('id'); c.querySelectorAll('h1').forEach(function (h) { var d = document.createElement('div'); d.className = h.className; d.innerHTML = h.innerHTML; h.replaceWith(d); }); c.querySelectorAll('[id]').forEach(function (n) { n.removeAttribute('id'); });
+    c.querySelectorAll('img').forEach(function (i) { if (/p189-1440/.test(i.src)) i.src = 'img/p189-900.jpg'; i.loading = 'eager'; });
+    if (id === 'tel-carta') c.style.marginTop = '0';
+    host.appendChild(c); f.appendChild(host);
+  });
+})();
+document.getElementById('replay').addEventListener('click', function () { var s = document.getElementById('hoy'); s.classList.remove('imprime'); void s.offsetWidth; s.classList.add('imprime'); });
+</script>
+</body>
+</html>
