@@ -26,14 +26,17 @@
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="brand/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="brand/png/favicon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- pulido 3: datos estructurados, solo hechos literales (bio, content/research_web.md S1/S2/S13; sin calificaciones ni horario de cierre, que no publican) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","@id":"https://almudbar.pages.dev/#bar","name":"Almud Bar","description":"Coctelería de autor, comida & música bonita desde 2014","url":"https://almudbar.pages.dev/","image":"https://almudbar.pages.dev/assets/v2/img/og-terraza.jpg","logo":"https://almudbar.pages.dev/brand/png/favicon-512.png","address":{"@type":"PostalAddress","streetAddress":"Serrano 325","addressLocality":"Castro","addressRegion":"Los Lagos","addressCountry":"CL"},"geo":{"@type":"GeoCoordinates","latitude":-42.4826,"longitude":-73.76176},"hasMap":"https://www.google.com/maps/search/?api=1&query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro","hasMenu":"https://almudbar.pages.dev/carta/","servesCuisine":["Bar","Pub","Chilena"],"foundingDate":"2014","sameAs":["https://www.instagram.com/almud_bar/"]}</script>
 <!-- fase 16: la portada primero (LCP); solo las dos fuentes de la primera pantalla -->
 <link rel="preload" as="image" type="image/avif" imagesrcset="assets/v2/img/portada-terraza-m-720.avif 720w, assets/v2/img/portada-terraza-m-960.avif 960w, assets/v2/img/portada-terraza-m-1170.avif 1170w" imagesizes="135vw" media="(max-width: 899px)" fetchpriority="high">
 <link rel="preload" as="image" type="image/avif" imagesrcset="assets/v2/img/portada-terraza-a-480.avif 480w, assets/v2/img/portada-terraza-a-720.avif 720w, assets/v2/img/portada-terraza-a-960.avif 960w, assets/v2/img/portada-terraza-a-1280.avif 1280w, assets/v2/img/portada-terraza-a-1440.avif 1440w" imagesizes="min(100vw, 1440px)" media="(min-width: 900px)" fetchpriority="high">
 <link rel="preload" href="assets/fonts/oswald-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/oswald-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/v2/fonts.css">
-<link rel="stylesheet" href="css/v2/tokens.css">
-<link rel="stylesheet" href="css/v2/site.css">
+<link rel="stylesheet" href="css/v2/fonts.css?v=5c13587971">
+<link rel="stylesheet" href="css/v2/tokens.css?v=eed6ed11bb">
+<link rel="stylesheet" href="css/v2/site.css?v=92b1d8ecfc">
 <script>try{if(localStorage.getItem('almud-lang')==='en'){document.documentElement.lang='en';}}catch(e){}document.documentElement.classList.add('js');
 /* rótulos del primer pliegue en inglés antes de pintar (sin corrimiento); site.js hace el resto */
 window.__en=function(){if(document.documentElement.lang!=='en')return;var l=document.querySelectorAll('[data-en]:not([data-es])');for(var i=0;i<l.length;i++){l[i].setAttribute('data-es',l[i].textContent);l[i].textContent=l[i].getAttribute('data-en');}};</script>
@@ -458,6 +461,6 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
   <svg class="pie-logo" viewBox="1 0 1956 897" aria-hidden="true"><use href="#logo-h"/></svg>
 </footer>
 
-<script src="js/v2/site.js" defer></script>
+<script src="js/v2/site.js?v=cff5802625" defer></script>
 </body>
 </html>

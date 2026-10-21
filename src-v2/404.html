@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Almud Bar · Castro, Chiloé</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#170e0b">
+<link rel="icon" href="/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/brand/png/favicon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="css/v2/fonts.css">
+<link rel="stylesheet" href="css/v2/tokens.css">
+<link rel="stylesheet" href="css/v2/site.css">
+<script>try{if(localStorage.getItem('almud-lang')==='en'){document.documentElement.lang='en';}}catch(e){}document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<x-symbols/>
+<!-- pulido 3 (fase 17): la 404 de Cloudflare Pages. Solo líneas literales de Almud y etiquetas [UI]; rutas absolutas
+     porque se sirve en cualquier ruta que no exista. -->
+<nav class="nav" aria-label="Principal" data-aria-en="Main">
+  <a class="nav-logo" href="/" aria-label="Almud Bar, inicio" data-aria-en="Almud Bar, home"><svg viewBox="1 0 1956 897" aria-hidden="true"><use href="#logo-h"/></svg></a>
+  <div class="nav-end">
+    <a class="btn" href="/carta/" data-ui data-en="See the menu">Ver la carta</a>
+  </div>
+</nav>
+<main class="on-night no-existe">
+  <div class="g">
+    <h1 class="lead-q no-existe-h" data-ui data-en="This page doesn't exist">Esta página no existe</h1>
+    <p class="display no-existe-d" data-src="IG-160" data-lines>Venga venga,<br>le esperamos!</p>
+    <p class="body num no-existe-datos"><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl gl-in" lang="en">Open Tue to Sat from 6 pm</span><br><span data-src="BIO">Serrano 325, Castro</span></p>
+    <p class="acc"><a class="link" href="/" data-ui data-en="Home">Inicio</a> <a class="link" href="/carta/" data-ui data-en="See the menu">Ver la carta</a> <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Almud%20Bar%2C%20Serrano%20325%2C%20Castro" data-ui data-en="Get directions">Cómo llegar</a></p>
+  </div>
+</main>
+<script>/* rótulos en inglés si el visitante eligió EN (sin site.js: esta página no tiene nada más que mover) */
+(function(){if(document.documentElement.lang!=='en')return;var l=document.querySelectorAll('[data-en]');for(var i=0;i<l.length;i++){l[i].textContent=l[i].getAttribute('data-en');}
+var a=document.querySelectorAll('[data-aria-en]');for(var j=0;j<a.length;j++){a[j].setAttribute('aria-label',a[j].getAttribute('data-aria-en'));}})();</script>
+</body>
+</html>

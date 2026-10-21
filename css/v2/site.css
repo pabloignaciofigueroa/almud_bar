@@ -72,12 +72,16 @@ p.gl, p.gl-es { margin-top: var(--sp-1); }
 .on-paper .btn { --btn-bg: var(--carta-azul); --btn-ink: var(--papel); --btn-hover-bg: var(--noche); --btn-hover-ink: var(--papel); }
 .link { display: inline-flex; align-items: center; min-height: 44px; font: var(--w-regular) var(--t-body)/1.25 var(--font-text); letter-spacing: 0; color: inherit; text-decoration: underline; text-decoration-thickness: var(--underline-w); text-underline-offset: var(--underline-offset); text-decoration-color: currentColor;
   transition: transform var(--d-press) var(--ease-out), text-decoration-color var(--d-hover) var(--ease-hover); }
-.btn:active, .link:active, .lang-b:active, .menu-b:active, .vid-b:active, .mapa-b:active { transform: scale(0.97); }
+.btn:active, .link:active, .lang-b:active, .menu-b:active, .vid-b:active, .mapa-b:active, .pie-logo-a:active { transform: scale(0.97); }
+/* pulido 3: los @ y créditos son enlaces en línea (no se pueden escalar) y iOS no pinta el resalte de toque: la presión se ve en la tinta */
+a:not([class]):active { opacity: 0.72; }
+.pie-logo-a { transition: transform var(--d-press) var(--ease-out); }
 @media (hover: hover) and (pointer: fine) {
   .btn:hover { background: var(--btn-hover-bg, var(--papel)); color: var(--btn-hover-ink, var(--noche)); }
   .on-night .link:hover, .nav .link:hover, .cover .link:hover, .hoja .link:hover { text-decoration-color: var(--barra); }
   .on-field .link:hover, .on-paper .link:hover { text-decoration-thickness: 0.16em; }
-  .pie a:hover, .arrobas a:hover { text-decoration-color: var(--barra); }
+  .pie a:hover, .arrobas a:hover, .on-night a:not([class]):hover, .cover a:not([class]):hover { text-decoration-color: var(--barra); }
+  .on-field a:not([class]):hover, .on-paper a:not([class]):hover, .campo a:not([class]):hover { text-decoration-thickness: 0.16em; }
 }
 
 /* ================= saltar ================= */
@@ -125,7 +129,7 @@ html.hoja-on { overflow: hidden; }
 
 /* ================= portada (ruta B · P189) ================= */
 .cover { container-type: inline-size; background: var(--noche); color: var(--papel); --S: min(100cqi, var(--photo-max)); }
-.cover-stage { position: relative; height: max(560px, calc(100svh - var(--nav-h))); max-width: var(--photo-max); margin-inline: auto; overflow: hidden; }
+.cover-stage { position: relative; height: max(560px, calc(100vh - var(--nav-h))); height: max(560px, calc(100svh - var(--nav-h))); max-width: var(--photo-max); margin-inline: auto; overflow: hidden; }
 .cover-img { display: block; }
 .cover-img img { background: var(--lqip) center / cover no-repeat; }
 .cover-logo { width: min(250px, 66cqi); height: auto; aspect-ratio: 1956 / 897; color: var(--papel); }
@@ -170,6 +174,8 @@ html[lang="en"] .cover-data > .gl { display: block; }
   /* el ancla de la lámina (1440 × 900) sube en pantallas bajas para que las caras sigan a la vista y el tipo sobre la pared */
   .cover { --H: clamp(640px, calc(100svh - var(--nav-h)), 1000px); --lift: max(0px, calc((var(--S) * 0.575 - var(--H)) * 0.75)); }
   .cover-stage { height: var(--H); }
+  /* pulido 3: Safari < 15.4 no conoce svh; una propiedad personalizada inválida dejaría la portada sin alto */
+  @supports not (height: 100svh) { .cover { --H: clamp(640px, calc(100vh - var(--nav-h)), 1000px); } }
   .cover-ph { position: absolute; inset: 0; }
   .cover-img { position: absolute; left: 0; top: calc(var(--S) * -0.197 - var(--lift)); width: 100%; }
   .cover-img img { width: 100%; height: auto; }
@@ -192,7 +198,9 @@ html[lang="en"] .cover-data > .gl { display: block; }
 .r169 { aspect-ratio: var(--ratio-banda); }
 .f > .ph, .f > .ph img, .f video { position: absolute; inset: 0; width: 100%; height: 100%; }
 .f img, .f video { object-fit: cover; object-position: var(--pos, 50% 50%); }
-.f img { background: var(--lqip) center / cover no-repeat; }  /* solo el LQIP: el color plano dominante se leía como un campo de color */
+.f img { background: var(--lqip) center / cover no-repeat; }
+/* pulido 3: si una foto no llega (red caída), queda su LQIP y no el alt impreso encima (el alt sigue para el lector) */
+picture img { color: transparent; }  /* solo el LQIP: el color plano dominante se leía como un campo de color */
 .vid { background: var(--dom, var(--noche-alta)); }
 .vid-b { position: absolute; left: var(--sp-2); bottom: var(--sp-2); z-index: 1; min-height: 44px; padding: 0 var(--sp-3); background: var(--noche); color: var(--papel); font: var(--w-regular) var(--t-small)/1 var(--font-text); letter-spacing: 0.01em; transition: transform var(--d-press) var(--ease-out); --ring: var(--papel); }
 html:not(.js) .vid-b { display: none; }
@@ -398,7 +406,7 @@ figcaption .rot { margin-bottom: var(--sp-1); }
 .cifras { margin-top: var(--sp-5); font-weight: var(--w-regular); color: var(--papel-suave); max-width: none; }
 .res-g { margin-top: var(--sp-8); row-gap: var(--sp-8); }
 .res { display: grid; gap: var(--sp-3); align-content: start; }
-.res-q { font: var(--w-regular) var(--t-lead)/var(--lh-lead) var(--font-text); letter-spacing: 0; text-wrap: pretty; }
+.res-q { font: var(--w-regular) var(--t-lead)/var(--lh-lead) var(--font-text); letter-spacing: 0; text-wrap: pretty; hanging-punctuation: first; }
 .res figcaption { color: var(--papel-suave); margin-top: var(--sp-1); }
 .res-pocas .res-4, .res-pocas .res-5, .res-pocas .res-6 { display: none; }
 .res-mas { display: none; padding-inline: var(--margin); margin-top: var(--sp-6); }
@@ -561,3 +569,9 @@ html[lang="en"] .datos dd > .gl { display: block; }
   .btn, .link, .lang-b, .menu-b, .vid-b, .nav-logo { transition-property: background-color, color, text-decoration-color; }
   .btn:active, .link:active, .lang-b:active, .menu-b:active, .vid-b:active, .nav-logo:active { transform: none; }
 }
+
+/* ================= 404 (pulido 3) ================= */
+.no-existe { min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); display: grid; align-content: center; padding-block: var(--sp-8); }
+.no-existe-h { color: var(--papel-suave); }
+.no-existe-d { margin-top: var(--sp-4); }
+.no-existe-datos { margin-top: var(--sp-6); }

@@ -17,7 +17,8 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html']  # fase 15: la carta en su propia página
+INCLUDE_FILES = ['index.html', 'carta/index.html',  # fase 15: la carta en su propia página
+                 '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
 INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand']
 
@@ -27,21 +28,38 @@ BLOCKED_NAMES = {'.DS_Store', 'Thumbs.db', '__pycache__', 'node_modules', '.git'
 MAX_BYTES = 25 * 1024 * 1024
 
 # Caché (antes en vercel.json). Cloudflare Pages lee public/_headers.
+# Pulido 3: css/v2 y js/v2 se piden con ?v=<hash del contenido> (build_v2.py), así que son immutable por un año: un cambio
+# cambia la URL. Las fuentes no cambian nunca de contenido con el mismo nombre. Las fotos (assets/v2) se nombran por id y ancho,
+# no por contenido: una semana + revalidación. Las páginas siempre se revalidan.
 HEADERS = """\
-/assets/*
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
 
-/vendor/*
-  Cache-Control: public, max-age=2592000, immutable
+/
+  Cache-Control: public, max-age=0, must-revalidate
 
-/brand/*
-  Cache-Control: public, max-age=604800
+/carta/
+  Cache-Control: public, max-age=0, must-revalidate
 
 /css/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Cache-Control: public, max-age=31536000, immutable
 
 /js/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/v2/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/brand/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/site.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400
 """
 
 
@@ -74,7 +92,7 @@ def used_files() -> set[str]:
         if f in seen or not (ROOT / f).is_file():
             continue
         seen.add(f)
-        if pathlib.PurePosixPath(f).suffix not in ('.html', '.css', '.js'):
+        if pathlib.PurePosixPath(f).suffix not in ('.html', '.css', '.js', '.webmanifest'):
             continue
         text = (ROOT / f).read_text(errors='ignore').replace(SITE, '/')
         base = pathlib.PurePosixPath('.') if f.endswith('.js') else pathlib.PurePosixPath(f).parent

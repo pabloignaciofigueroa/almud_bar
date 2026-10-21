@@ -40,6 +40,8 @@ SRC = ROOT / "src-v2" / "index.html"
 OUT = ROOT / "index.html"
 SRC_CARTA = ROOT / "src-v2" / "carta.html"
 OUT_CARTA = ROOT / "carta" / "index.html"
+SRC_404 = ROOT / "src-v2" / "404.html"   # pulido 3: Cloudflare Pages la sirve en cualquier ruta que no exista (rutas absolutas)
+OUT_404 = ROOT / "404.html"
 MEDIA = json.loads((ROOT / "assets/v2/media.json").read_text())
 ALTS = json.loads((ROOT / "content/alts-v2.json").read_text())
 CARTA = json.loads((ROOT / "content/carta-v2.json").read_text())
@@ -55,6 +57,8 @@ UI_EXTRA = {
     "Saltar al contenido", "Skip to content", "Almud Bar", "Pausar video", "Pause video",
     "Reproducir video", "Play video",
     "Secciones de la carta", "Menu sections",
+    # pulido 3 (fase 17): la página 404
+    "Esta página no existe", "This page doesn't exist",
 }
 
 errors = []
@@ -799,10 +803,25 @@ def rebase(src, prefix):
     return re.sub(r'(?<=[\s"\'(,])(assets|css|js|brand|vendor)/', prefix + r"\1/", src)
 
 
+def versioned(out):
+    """Pulido 3: css/v2 y js/v2 llevan ?v=<hash del contenido>; así public/_headers los puede marcar immutable por un año
+    y un cambio de CSS o JS llega igual al instante (la URL cambia)."""
+    import hashlib
+
+    def rep(m):
+        f = ROOT / re.sub(r"^(\.\./|/)+", "", m.group(2))
+        if not f.is_file():
+            fail(f"versión: falta {f.relative_to(ROOT)}")
+            return m.group(0)
+        return f'{m.group(1)}{m.group(2)}?v={hashlib.sha256(f.read_bytes()).hexdigest()[:10]}"'
+    return re.sub(r'((?:href|src)=")((?:\.\./|/)?(?:css|js)/v2/[\w.-]+\.(?:css|js))"', rep, out)
+
+
 def build(src_path, prefix=""):
     out, n_items = expand(src_path.read_text())
     if prefix:
         out = rebase(out, prefix)
+    out = versioned(out)
     body = re.split(r"<body[^>]*>", out, maxsplit=1)[1]
     ch = Checker()
     ch.feed(body)
@@ -814,7 +833,7 @@ def build(src_path, prefix=""):
 
 
 def main():
-    pages = [(SRC, OUT, ""), (SRC_CARTA, OUT_CARTA, "../")]
+    pages = [(SRC, OUT, ""), (SRC_CARTA, OUT_CARTA, "../"), (SRC_404, OUT_404, "/")]
     built = []
     for src, dst, prefix in pages:
         before = len(errors)
