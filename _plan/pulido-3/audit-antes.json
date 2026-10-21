@@ -1,0 +1,276 @@
+{
+ "landing": {
+  "axe-390": [],
+  "kb-390": {
+   "stops": 40,
+   "sin_anillo": [],
+   "fuera_de_vista": [],
+   "primeros": [
+    "Saltar al contenido",
+    "Almud Bar, inicio",
+    "Menú",
+    "Ver la carta",
+    "Cómo llegar",
+    "Escríbanos al DM",
+    "@estudiouno.prod",
+    "Ver la carta",
+    "Cómo llegar",
+    "@estudiouno.prod",
+    "@catarsis.fotografia",
+    "@cepaz"
+   ]
+  },
+  "console-390": [],
+  "failed-390": [],
+  "axe-1440": [],
+  "static": {
+   "hs": [
+    "H1 Almud Bar",
+    "H2 Amamos losmartes",
+    "H2 Miércoles depiscoleinnnn!",
+    "H2 Jueves deSangría!",
+    "H2 Viernes ya!",
+    "H2 Último díade la semana",
+    "H2 Abrimos deMar a Sáb",
+    "H2 nos gusta elcolorssss!",
+    "H3 El salón",
+    "H3 La terraza techada",
+    "H3 La terraza",
+    "H3 El mural",
+    "H2 mejor lostomamos todos!",
+    "H3 Coctelería de la casa",
+    "H2 no dejamos a nadie ajuera",
+    "H2 pa chuparseel bigoteli",
+    "H2 La carta",
+    "H3 Coctelería de la casa",
+    "H3 Mocktails de la casa",
+    "H3 Comilona",
+    "H2 no somos násin ustedes!",
+    "H3 Solo",
+    "H3 En pareja",
+    "H3 Con amigos",
+    "H3 A celebrar",
+    "H3 Sin motivo",
+    "H2 Peazo de equipoque tenemos!",
+    "H2 lo rico denuestro barsucho",
+    "H2 tirar la casapor la ventana!",
+    "H2 Venga venga,le esperamos!"
+   ],
+   "imgs_total": 39,
+   "img_noalt": 0,
+   "img_nowh": [],
+   "img_nodecoding": 0,
+   "img_lazy": 10,
+   "img_fp_high": [
+    "portada-terraza-a-960.webp"
+   ],
+   "dup_ids": [],
+   "head": {
+    "favicon": true,
+    "manifest": false,
+    "theme": true,
+    "ld": 0,
+    "preload": [
+     "portada-terraza-m-1170.avif 1170w",
+     "portada-terraza-a-1440.avif 1440w",
+     "oswald-latin-400-normal.woff2",
+     "oswald-latin-300-normal.woff2"
+    ],
+    "hreflang": 0
+   },
+   "landmarks": {
+    "main": 1,
+    "nav": 1,
+    "footer": 1,
+    "header": 1
+   }
+  },
+  "kb-1440": {
+   "stops": 40,
+   "sin_anillo": [],
+   "fuera_de_vista": [],
+   "primeros": [
+    "Saltar al contenido",
+    "Almud Bar, inicio",
+    "El lugar",
+    "Tragos",
+    "Comida",
+    "Con quién",
+    "Eventos",
+    "Dónde",
+    "ES",
+    "EN",
+    "Ver la carta",
+    "Cómo llegar"
+   ]
+  },
+  "console-1440": [],
+  "failed-1440": [],
+  "nojs": {
+   "H": 23258,
+   "sw": 390,
+   "ocultos": 0,
+   "h2": 16
+  },
+  "sin-img": {
+   "sw": 390,
+   "broken": 0
+  },
+  "zoom200": {
+   "sw": 640,
+   "cw": 640
+  },
+  "letra24": {
+   "body": "17px",
+   "small": "14px",
+   "sw": 390
+  },
+  "320-en": {
+   "sw": 320,
+   "desbordes": []
+  }
+ },
+ "carta": {
+  "axe-390": [],
+  "kb-390": {
+   "stops": 38,
+   "sin_anillo": [],
+   "fuera_de_vista": [],
+   "primeros": [
+    "Saltar al contenido",
+    "Almud Bar, inicio",
+    "Cómo llegar",
+    "Escríbanos al DMDM",
+    "ES",
+    "EN",
+    "Carta oficial (PDF)",
+    "Coctelería de la casa",
+    "Coctelería de la casaHouse c",
+    "Cómo llegar",
+    "Escríbanos al DM",
+    "Carta oficial (PDF)"
+   ]
+  },
+  "console-390": [],
+  "failed-390": [],
+  "axe-1440": [],
+  "static": {
+   "hs": [
+    "H1 La carta",
+    "H2 Coctelería de la casa",
+    "H2 Cócteles del mundo mundial",
+    "H3 Clásicos",
+    "H3 Vermú",
+    "H3 Mule",
+    "H3 Negroni",
+    "H3 Spritz",
+    "H3 Sagüer",
+    "H3 Mojitos",
+    "H3 Red Bull te da aaalas",
+    "H2 Espirituosos",
+    "H3 Piscolein o combinadito",
+    "H3 Vodkita",
+    "H3 Ron poromponpon",
+    "H3 Whiscachos",
+    "H4 Blended",
+    "H4 Irish",
+    "H4 Single Malt",
+    "H4 Bourbon / Tennessee",
+    "H3 Amamos el GIN!",
+    "H3 Tequilazos & mezcalazos",
+    "H2 Vinos & espumantes",
+    "H3 Tintelis",
+    "H3 Blanquelis",
+    "H3 Espumantes",
+    "H3 Por copa",
+    "H2 Mocktails sin alcohol",
+    "H3 Mocktails de la casa",
+    "H3 Mocktails clásicos",
+    "H3 Jugos & bebidas",
+    "H3 Cervezas sin alcohol",
+    "H3 Bebidas calientes",
+    "H2 Comilona",
+    "H3 Picoteos",
+    "H3 Greditas",
+    "H3 Sanguches",
+    "H3 Pizzas artesanales",
+    "H3 Pa los chichichos",
+    "H3 Somos dulzones",
+    "H2 Nuestras promos"
+   ],
+   "imgs_total": 20,
+   "img_noalt": 0,
+   "img_nowh": [],
+   "img_nodecoding": 0,
+   "img_lazy": 15,
+   "img_fp_high": [],
+   "dup_ids": [],
+   "head": {
+    "favicon": true,
+    "manifest": false,
+    "theme": true,
+    "ld": 0,
+    "preload": [
+     "six-caps-latin-400-normal.woff2",
+     "oswald-latin-400-normal.woff2",
+     "oswald-latin-300-normal.woff2",
+     "oswald-latin-600-normal.woff2"
+    ],
+    "hreflang": 0
+   },
+   "landmarks": {
+    "main": 1,
+    "nav": 1,
+    "footer": 1,
+    "header": 1
+   }
+  },
+  "kb-1440": {
+   "stops": 38,
+   "sin_anillo": [],
+   "fuera_de_vista": [],
+   "primeros": [
+    "Saltar al contenido",
+    "Almud Bar, inicio",
+    "Inicio",
+    "Cómo llegar",
+    "Escríbanos al DMDM",
+    "ES",
+    "EN",
+    "Carta oficial (PDF)",
+    "Coctelería de la casa",
+    "Coctelería de la casaHouse c",
+    "@estudiouno.prod",
+    "Cómo llegar"
+   ]
+  },
+  "console-1440": [],
+  "failed-1440": [],
+  "nojs": {
+   "H": 30591,
+   "sw": 390,
+   "ocultos": 0,
+   "h2": 7
+  },
+  "sin-img": {
+   "sw": 390,
+   "broken": 0
+  },
+  "zoom200": {
+   "sw": 640,
+   "cw": 640
+  },
+  "letra24": {
+   "body": "17px",
+   "small": "14px",
+   "sw": 390
+  },
+  "320-en": {
+   "sw": 320,
+   "desbordes": []
+  }
+ },
+ "404": {
+  "status": 404
+ }
+}
