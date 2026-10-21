@@ -1,0 +1,4546 @@
+{
+ "images": {
+  "portada-terraza": {
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "portada",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Terraza techada repleta, techo de banderines multicolor, vertical",
+   "post": "IG-050",
+   "crops": {
+    "a": {
+     "ratio": "orig",
+     "focal": [
+      30,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1919
+     ],
+     "crop_size": [
+      1440,
+      1919
+     ],
+     "width": 1440,
+     "height": 1919,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoSABgAPwF0r1KrJqQiqAqpYCAJaACdIIjBnbHdOa73fMalWQy0mIKOxNpwYAD+v7nkePbZnr80cn9uNXHA2CON7f+ITzaQAT/CoX218jJEpEQecgg+Ll8CgKHWC+ZezRe4SIVCemO8R32CSP3eYrngwocKKQXFB+QI+0VtAcHtIii2cuW1fWidlIjSz4kJ+XerVC8p+70QzLl3hM5SWDDSJ7K0VMihBvD1AAwAAAA=",
+     "color": "#8a4b3b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/portada-terraza-a-480.avif",
+        "bytes": 61622
+       },
+       "720": {
+        "path": "assets/v2/img/portada-terraza-a-720.avif",
+        "bytes": 112058
+       },
+       "960": {
+        "path": "assets/v2/img/portada-terraza-a-960.avif",
+        "bytes": 162734
+       },
+       "1280": {
+        "path": "assets/v2/img/portada-terraza-a-1280.avif",
+        "bytes": 240841
+       },
+       "1440": {
+        "path": "assets/v2/img/portada-terraza-a-1440.avif",
+        "bytes": 275569
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/portada-terraza-a-480.webp",
+        "bytes": 89742
+       },
+       "720": {
+        "path": "assets/v2/img/portada-terraza-a-720.webp",
+        "bytes": 166100
+       },
+       "960": {
+        "path": "assets/v2/img/portada-terraza-a-960.webp",
+        "bytes": 238700
+       },
+       "1280": {
+        "path": "assets/v2/img/portada-terraza-a-1280.webp",
+        "bytes": 353068
+       },
+       "1440": {
+        "path": "assets/v2/img/portada-terraza-a-1440.webp",
+        "bytes": 402914
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Nativa 1440x1919 sin recorte: escritorio a 1:1 anclada con top:-19.7% del ancho; teléfono object-fit cover con object-position 30% 50% (tile). Asterisco del veredicto vigente."
+  },
+  "tragos-bartender-letrero": {
+   "ref": "P362",
+   "src": "assets/raw/ig/Dbok2NyFNdb_05.jpg",
+   "section": "tragos",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Bartender joven sirviendo frente a muro de botellas rojo con letrero ALMUD",
+   "post": "IG-008",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      46
+     ],
+     "box": [
+      0,
+      1020,
+      3072,
+      2748
+     ],
+     "crop_size": [
+      3072,
+      1728
+     ],
+     "width": 2560,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoYAA4APwFqrU8rJiQiMAgBYCAJbACdMoR4GCG9TA02d6x+8olPCAD9eC30UpN0nkhDdBsdnjEBZS2k02TNLkmbslOiK4b+5v8WqP44Ddi9YMGeOoPcvET2c746Q2f16Gzrp6s+V3G+eIDIjhY9Rsqjx5Dp/9Ty/FRMkMObA76ycmQc5PmrdCd6AAA=",
+     "color": "#752b25",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-480.avif",
+        "bytes": 8990
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-720.avif",
+        "bytes": 15311
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-960.avif",
+        "bytes": 21975
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1280.avif",
+        "bytes": 32457
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1440.avif",
+        "bytes": 39397
+       },
+       "1920": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1920.avif",
+        "bytes": 61435
+       },
+       "2560": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-2560.avif",
+        "bytes": 112950
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-480.webp",
+        "bytes": 13680
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-720.webp",
+        "bytes": 21658
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-960.webp",
+        "bytes": 30770
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1280.webp",
+        "bytes": 44614
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1440.webp",
+        "bytes": 54642
+       },
+       "1920": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-1920.webp",
+        "bytes": 90294
+       },
+       "2560": {
+        "path": "assets/v2/img/tragos-bartender-letrero-d-2560.webp",
+        "bytes": 182376
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACwBQCdASoTABgAPwF2slOrJyQiqAgBYCAJaACdM1dv/gHrW7qDwJn78ugQmoFQ84Xkb480WYAA/go01Ago+a6y6FLiJiP9IRx6o/e/rRzL96uv3NJQLT4Dmk/9Sp3bgSEKFdE49KAc3d47sK1tuaXA3hsjbpjYqH5PtW6iKovU7cc3QNXw/l9GYTll7DZIR5VaOvKSZtAm/ql6c+l+aMzu4bE1pHANvzgbdtmqSFwEDuBYJijAAA==",
+     "color": "#8f4333",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-480.avif",
+        "bytes": 21649
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-720.avif",
+        "bytes": 36033
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-960.avif",
+        "bytes": 52546
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-1280.avif",
+        "bytes": 78772
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-1440.avif",
+        "bytes": 94602
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-480.webp",
+        "bytes": 35248
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-720.webp",
+        "bytes": 56096
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-960.webp",
+        "bytes": 77768
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-1280.webp",
+        "bytes": 115238
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-letrero-m-1440.webp",
+        "bytes": 142924
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "credit_note": "12.º aniversario; IG-009 acredita a @isosur.prod esas fotos: por confirmar, no se publica sin confirmar"
+  },
+  "con-quien-amigas": {
+   "ref": "P254",
+   "src": "assets/raw/ig/DU35ZDPCBcH_00.jpg",
+   "section": "con-quien",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "alt_placeholder": "Dos clientas brindan frente a muro de botellas rosa",
+   "post": "IG-031",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoTABgAPwF0rlKrJqQiqAqpYCAJbACdMuOA/9LwcAWaThlcRieFD4mnyH4ui9nTAAD+oUHO14qaC9x0YdEkKNfl4Q30FGh9oWJBFG9QW/n8nhg832GOECbZdYsIRJJyuIndgzakPZjmph7CYTo3pFG4KJdEeiuuhAyy9pC7P0lkUtt3xdDW+fquWl7h1y8xrMsxtg25vm5ZVoaG5w3GRFmlAb8gINZYZ6QAAA==",
+     "color": "#934244",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-amigas-a-480.avif",
+        "bytes": 32272
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-amigas-a-720.avif",
+        "bytes": 63084
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-amigas-a-960.avif",
+        "bytes": 93912
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-amigas-a-1280.avif",
+        "bytes": 139423
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-amigas-a-1440.avif",
+        "bytes": 165498
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-amigas-a-480.webp",
+        "bytes": 54440
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-amigas-a-720.webp",
+        "bytes": 109080
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-amigas-a-960.webp",
+        "bytes": 158930
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-amigas-a-1280.webp",
+        "bytes": 231024
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-amigas-a-1440.webp",
+        "bytes": 258652
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Son del equipo (IG-031): sin pie que las haga pasar por clientas."
+  },
+  "og-terraza": {
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "og",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Terraza techada repleta, techo de banderines multicolor, vertical",
+   "post": "IG-050",
+   "crops": {
+    "og": {
+     "ratio": "1200:630",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      485,
+      1440,
+      1241
+     ],
+     "width": 1200,
+     "height": 630,
+     "files": {
+      "jpg": {
+       "1200": {
+        "path": "assets/v2/img/og-terraza.jpg",
+        "bytes": 214984
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Open Graph, único JPEG del sitio."
+  },
+  "hoy-miercoles-garzona": {
+   "ref": "P331",
+   "src": "assets/raw/ig/DZap3klI-um_00.jpg",
+   "section": "hoy",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Garzona con jockey ALMUD y bandeja de tragos (alta res)",
+   "post": "IG-019",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      40,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBQCdASoTABgAPwFys1GrJqSiqAqpYCAJaAC7Mt8Bp4hS8zQ5Ht9BIDdAIGUnKe74AP7LzyZxfkROxWUF4LDEIp7r8IWmPHRGJfelmOXXSvSlnanIOIR2ei8sQoR0MkLeuJHdqS6/NOD3NehstyhD2Aak+sG+qVJNhpl8Zuobk+rKWYkdjWbE3fOIqAAA",
+     "color": "#4a3536",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-480.avif",
+        "bytes": 16691
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-720.avif",
+        "bytes": 29858
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-960.avif",
+        "bytes": 43420
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-1280.avif",
+        "bytes": 63940
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-480.webp",
+        "bytes": 27106
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-720.webp",
+        "bytes": 47574
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-960.webp",
+        "bytes": 70206
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-miercoles-garzona-a-1280.webp",
+        "bytes": 100388
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Foto de IG-019 (miércoles). Revisada: nítida, cálida, jockey ALMUD. Se mantiene."
+  },
+  "hoy-jueves-sangria": {
+   "ref": "P228",
+   "src": "assets/raw/ig/DRkwz2OlC01_00.jpg",
+   "section": "hoy",
+   "source_size": [
+    1440,
+    1814
+   ],
+   "alt_placeholder": "Copa tallada con trago morado y canela, barra",
+   "post": "IG-039",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBQCdASoTABgAPwF0r1KrJqQiqAqpYCAJagCdMtU8DZAAW5FlQz2p54+A1YT0JB5vv/CszQ6gAP7un2QuFOcw4YBg7XlPIbsFuPxpbSS4PI9yLCyPErNicBf/pOdttN4o7aiWFxO/jtDzPhkwNhj6hrRRsPojCIw91FzMa3xM7jpFSmwK5bqPptMUq8HhKlmKoGcSUFnygQ6FE17m8SwwDE9MaBTEfAAAAA==",
+     "color": "#8a5237",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-480.avif",
+        "bytes": 14560
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-720.avif",
+        "bytes": 24246
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-960.avif",
+        "bytes": 33555
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-1280.avif",
+        "bytes": 48279
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-480.webp",
+        "bytes": 22514
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-720.webp",
+        "bytes": 37328
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-960.webp",
+        "bytes": 51256
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-jueves-sangria-a-1280.webp",
+        "bytes": 72822
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Foto de IG-039 (jueves). Revisada: nítida, noche cálida. Se mantiene. También es la foto de la Sangría en la carta."
+  },
+  "hoy-viernes-mesa": {
+   "ref": "P386",
+   "src": "assets/raw/ig/DeAdh-JFOsY_00.jpg",
+   "section": "hoy",
+   "source_size": [
+    1280,
+    1024
+   ],
+   "alt_placeholder": "Mesa con pizza y tragos, manos",
+   "post": "IG-003",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      62,
+      55
+     ],
+     "box": [
+      384,
+      0,
+      1203,
+      1024
+     ],
+     "crop_size": [
+      819,
+      1024
+     ],
+     "width": 720,
+     "height": 900,
+     "widths": [
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoTABgAPwFwrFErJiQiqA1RYCAJaAC1F8CA5uqd+Oj8fjkhT68aEx+2KgcBVQZWgAD+zxhiH0m+jLy+uvx4Tk8Y/e7ZYSm9BGiLth3bAyGuH7Qm/eyKZrhQoCDJasD7MEB568Wgtoh5WjYttVb+mY/gQ3r/3XmSVFqIU3sIg5iI0w5Gzw9RFRvgbLlkRzw97Gu2NN2fSBOcb+oUkqOqhzeAAAA=",
+     "color": "#a04b3d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-480.avif",
+        "bytes": 20478
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-720.avif",
+        "bytes": 33088
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-480.webp",
+        "bytes": 31108
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-viernes-mesa-a-720.webp",
+        "bytes": 50110
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Foto de IG-003 (viernes). Nítida pero apaisada de 1280x1024: el 4:5 deja 819 px (máx 720 emitido), justa para 5 col en DPR1 y floja en teléfono 3x. Se emite como opción; media.json marca fallback con-quien-barra (P031).",
+   "fallback": "con-quien-barra"
+  },
+  "hoy-sabado": {
+   "alias": "con-quien-solo",
+   "ref": "P194",
+   "section": "hoy",
+   "note": "Reemplaza a V051 (paneo del muro rosa, 720p): duplica el mismo plano que el loop V021 de la carta en la misma página. Respaldo declarado en el guion: P194."
+  },
+  "hoy-martes-fallback": {
+   "alias": "tragos-bartender-muro-rosa",
+   "ref": "P184",
+   "section": "hoy",
+   "note": "Respaldo del martes si el loop V054 no se usa (sin JS / reduced data el póster basta)."
+  },
+  "lugar-barra-curva": {
+   "ref": "P093",
+   "src": "assets/raw/ig/DAMHps8JVVr_07.jpg",
+   "section": "lugar",
+   "source_size": [
+    1440,
+    1701
+   ],
+   "alt_placeholder": "Barra curva completa con banderines, botellas y bancas, gran angular",
+   "post": "IG-079",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      39,
+      0,
+      1400,
+      1701
+     ],
+     "crop_size": [
+      1361,
+      1701
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJagCdMoABYcwfb+jdA+n9OKDeZ2Gw8AFaCdAA/tp3kU72WfImFs6yd3B1xUKELNUaUp0nViXzTXmFrWk5c+2Wztt01B0vMAqiYD8kqEfETHdaY/AefcQewM8HznOeLZswvp19tcldm0dv2lQJzLI5eNaopBfyvhGVmZqph1XUvNOAAAA=",
+     "color": "#6d321c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-barra-curva-a-480.avif",
+        "bytes": 35614
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-barra-curva-a-720.avif",
+        "bytes": 57830
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-barra-curva-a-960.avif",
+        "bytes": 82121
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-barra-curva-a-1280.avif",
+        "bytes": 117159
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-barra-curva-a-480.webp",
+        "bytes": 59516
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-barra-curva-a-720.webp",
+        "bytes": 97462
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-barra-curva-a-960.webp",
+        "bytes": 134838
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-barra-curva-a-1280.webp",
+        "bytes": 182250
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "credit_note": "IG-079 sin crédito: no se acredita"
+  },
+  "lugar-faroles": {
+   "ref": "P090",
+   "src": "assets/raw/ig/DAMHps8JVVr_04.jpg",
+   "section": "lugar",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "alt_placeholder": "Techo de banderines y faroles de papel multicolor sobre clientes (Fondita)",
+   "post": "IG-079",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      278,
+      1440,
+      1088
+     ],
+     "crop_size": [
+      1440,
+      810
+     ],
+     "width": 1440,
+     "height": 810,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACQBACdASoYAA4APwFqrE8rJiQiMAgBYCAJbACdMoADT6qvqy3Y03W9eEDVGUgA/tzvxlngetiXzbDaNyHl5PPYWB2L14FRK+m/RAQAFOdy52nF9t+F+SM0zCAhhO3+uGclQcxAjREB9KlY5+9wRl32S+UBuW7UpuXrA4pJy1VzMVZifYXfOWMMLBHcd0gOGeH/kQ03YAA=",
+     "color": "#a54e39",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-faroles-d-480.avif",
+        "bytes": 20828
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-faroles-d-720.avif",
+        "bytes": 35314
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-faroles-d-960.avif",
+        "bytes": 48153
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-faroles-d-1280.avif",
+        "bytes": 68259
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-faroles-d-1440.avif",
+        "bytes": 77870
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-faroles-d-480.webp",
+        "bytes": 36060
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-faroles-d-720.webp",
+        "bytes": 59936
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-faroles-d-960.webp",
+        "bytes": 79344
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-faroles-d-1280.webp",
+        "bytes": 107256
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-faroles-d-1440.webp",
+        "bytes": 120330
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAADwBQCdASoTABgAPwF2s1OrJySiqAgBYCAJaACdOUFSNVH5AttgA9Sy8gVB8GojlPYzjVRVWd2lQAD+6RPYv0B84A9ZkB95lmCHqy93N8ZL0x6rLZs+a597vdqvTwNH6B83WH2bLsK2kxYPVdUPAd81gZ8InnbCM6N2E2CJ4YO/GkVQoXH7KSQ8hUAHHM8skQ/spngYtKsloCjf83F1CV4nhGL17CjvczcFUEXcLgAAAA==",
+     "color": "#8b3e27",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-faroles-m-480.avif",
+        "bytes": 38504
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-faroles-m-720.avif",
+        "bytes": 62601
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-faroles-m-960.avif",
+        "bytes": 89477
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-faroles-m-1280.avif",
+        "bytes": 129394
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-faroles-m-480.webp",
+        "bytes": 66412
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-faroles-m-720.webp",
+        "bytes": 105148
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-faroles-m-960.webp",
+        "bytes": 144478
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-faroles-m-1280.webp",
+        "bytes": 199324
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "lugar-patio": {
+   "ref": "P039",
+   "src": "assets/raw/ig/Cqn78DFp5Nm_00.jpg",
+   "section": "lugar",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Patio descubierto de noche: guirnaldas, árboles, bancas, mesas llenas",
+   "post": "IG-144",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoTABgAPwFqsFGrJaSisBgIAWAgCWIArAAQvKdtCe5cEuXFX9rcQAD+7EJ7fxQ6BYy12v6knrwTQYACNJSqPTw62lOejLWzgtcs3BplGKdcixkk/ojbHDMvGUjc/5J5Nt9p6C2zRx1CNEXFQcCukXK/PMISIAAA",
+     "color": "#5d392e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-patio-a-480.avif",
+        "bytes": 32265
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-patio-a-720.avif",
+        "bytes": 56306
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-patio-a-960.avif",
+        "bytes": 84079
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-patio-a-1280.avif",
+        "bytes": 118908
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-patio-a-480.webp",
+        "bytes": 51098
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-patio-a-720.webp",
+        "bytes": 87632
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-patio-a-960.webp",
+        "bytes": 127990
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-patio-a-1280.webp",
+        "bytes": 172320
+       }
+      }
+     }
+    }
+   },
+   "credit": "@catarsis.fotografia"
+  },
+  "lugar-sillon": {
+   "ref": "P114",
+   "src": "assets/raw/ig/DBMtYELSzNS_14.jpg",
+   "section": "lugar",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "alt_placeholder": "Mujer riendo y aplaudiendo en sillón con cojines estampados",
+   "post": "IG-075",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBQCdASoTABgAPwFyr1KrJqQiqAqpYCAJYgC7M2QBpXPygC/9LanHPN+6KXZdm3rgAP7yqOiNn1EHx5SZIya7pp1m+V4LV/TojtBiRfJmJzlipPZy8mM0Bq9IWCGxtHcNih0IJuXmjK1RmqVcSYTRF1XInYOs4Iq0j2cUlYlMmXttlG8MhfnK8LKy4jDPdbbKyku6MAAAAA==",
+     "color": "#412a1a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-sillon-a-480.avif",
+        "bytes": 15947
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-sillon-a-720.avif",
+        "bytes": 25846
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-sillon-a-960.avif",
+        "bytes": 35508
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-sillon-a-1280.avif",
+        "bytes": 50039
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-sillon-a-1440.avif",
+        "bytes": 57356
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-sillon-a-480.webp",
+        "bytes": 23946
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-sillon-a-720.webp",
+        "bytes": 38070
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-sillon-a-960.webp",
+        "bytes": 51776
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-sillon-a-1280.webp",
+        "bytes": 71358
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-sillon-a-1440.webp",
+        "bytes": 82070
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod"
+  },
+  "lugar-salon-mimbre": {
+   "ref": "P339",
+   "src": "assets/raw/ig/Dbg3ekilC4P_02.jpg",
+   "section": "lugar",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Mujeres con aro de luz bajo lámpara mimbre, muro rojo",
+   "post": "IG-009",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      979,
+      3072,
+      2707
+     ],
+     "crop_size": [
+      3072,
+      1728
+     ],
+     "width": 2560,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQBACdASoYAA4APwFqrE6rJiQiMAgBYCAJZACdACHf/lWicbMjHC3uy0sAAP7cbf75DIgcknvgN1f0ijlFVUc1YqM/LdAbdPzZXrhaDbItyVB0nUWKT5gmEX3m0aivzgAAAA==",
+     "color": "#2e0a07",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-480.avif",
+        "bytes": 7389
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-720.avif",
+        "bytes": 11955
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-960.avif",
+        "bytes": 16811
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1280.avif",
+        "bytes": 24346
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1440.avif",
+        "bytes": 28225
+       },
+       "1920": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1920.avif",
+        "bytes": 41970
+       },
+       "2560": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-2560.avif",
+        "bytes": 69172
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-480.webp",
+        "bytes": 10796
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-720.webp",
+        "bytes": 18260
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-960.webp",
+        "bytes": 25724
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1280.webp",
+        "bytes": 36482
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1440.webp",
+        "bytes": 42598
+       },
+       "1920": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-1920.webp",
+        "bytes": 62048
+       },
+       "2560": {
+        "path": "assets/v2/img/lugar-salon-mimbre-d-2560.webp",
+        "bytes": 94572
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoTABgAPwFysVIrJqSiqAqpYCAJYgCw7BDccDxz/JmABgAA/sAzPF4h6FVt5oNnlCihO0Y9K3bkjXn2Ne41q+yjo7OHuCOfwjApEchjZw9E3uzfu83CrSCCedjUSW7K6SmAAA==",
+     "color": "#200806",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-480.avif",
+        "bytes": 14410
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-720.avif",
+        "bytes": 24955
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-960.avif",
+        "bytes": 36433
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-1280.avif",
+        "bytes": 53714
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-1440.avif",
+        "bytes": 62981
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-480.webp",
+        "bytes": 22764
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-720.webp",
+        "bytes": 41892
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-960.webp",
+        "bytes": 62012
+       },
+       "1280": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-1280.webp",
+        "bytes": 90620
+       },
+       "1440": {
+        "path": "assets/v2/img/lugar-salon-mimbre-m-1440.webp",
+        "bytes": 105262
+       }
+      }
+     }
+    }
+   },
+   "credit": "@isosur.prod"
+  },
+  "lugar-mural-ojos": {
+   "ref": "F:V031_mural-ojos_6.60s",
+   "src": "_plan/diag/frames/V031_mural-ojos_6.60s.jpg",
+   "section": "lugar",
+   "source_size": [
+    1278,
+    720
+   ],
+   "alt_placeholder": "Pared de fotos de ojos (fotograma del video V031)",
+   "post": "IG-061",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1278,
+      719
+     ],
+     "crop_size": [
+      1278,
+      719
+     ],
+     "width": 960,
+     "height": 540,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYAA4APwForE6rJaQiMAgBYCAJZACsABtlmm9QNQAA8n+QkXf7BYA+yomfI/WGoGH0n7joOFYy66YBRhAUM+BJW2eNgq8ACt4swASxcJ0+8RVyv071q8EK/dDsEwjotx0YBjn6jGlAAA==",
+     "color": "#cb797d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-480.avif",
+        "bytes": 9960
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-720.avif",
+        "bytes": 16035
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-960.avif",
+        "bytes": 22301
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-480.webp",
+        "bytes": 15940
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-720.webp",
+        "bytes": 24934
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-mural-ojos-d-960.webp",
+        "bytes": 34740
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      40,
+      50
+     ],
+     "box": [
+      223,
+      0,
+      799,
+      720
+     ],
+     "crop_size": [
+      576,
+      720
+     ],
+     "width": 480,
+     "height": 600,
+     "widths": [
+      480
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoTABgAPwF0r1KrJqQiqAqpYCAJYgC3uAufZe7nKxjkMPDOL8iAf7it4gAA++p5E6I5uo8gll1E/G3orizs+vdJUJuo25OXAejpTXSPno8ePC17Lqy1GRKh1xPec1+dbwB7KKbD4DARCY1PmOcBjnMHRxju1t4htZ5kRyubHDk5kF6U3whw84lqVtlvWec/FcayYAB5IAA=",
+     "color": "#d6878c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-mural-ojos-m-480.avif",
+        "bytes": 13748
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-mural-ojos-m-480.webp",
+        "bytes": 18770
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Fotograma 1278x720: 16:9 hasta 960, 4:5 solo 480. Nunca más grande que media columna."
+  },
+  "lugar-lampara-pinzas": {
+   "ref": "V014-cover",
+   "src": "assets/raw/ig/C9BDvFvJk4z_00.jpg",
+   "section": "lugar",
+   "source_size": [
+    3216,
+    5712
+   ],
+   "alt_placeholder": "Lámpara de pinzas de madera, bartender sirviendo, tragos en barra",
+   "post": "IG-103",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      30
+     ],
+     "box": [
+      0,
+      0,
+      3216,
+      4020
+     ],
+     "crop_size": [
+      3216,
+      4020
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwBACdASoTABgAPwF2s1OrJySiqAgBYCAJZACnFAx4CQKwmUpu7uUlKrWa9JirWQAA/u6bvLA9awjLtU6R+vkPiIur3wArDTj5c/kc8czdqbvyv9msG5lFCvZq+CVVK3YiP0EFY/qNfJQq501z04r4o+QuSHmmHMMye88WjgAAAA==",
+     "color": "#352c28",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-480.avif",
+        "bytes": 30120
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-720.avif",
+        "bytes": 58769
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-960.avif",
+        "bytes": 91443
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-480.webp",
+        "bytes": 48632
+       },
+       "720": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-720.webp",
+        "bytes": 96548
+       },
+       "960": {
+        "path": "assets/v2/img/lugar-lampara-pinzas-a-960.webp",
+        "bytes": 152724
+       }
+      }
+     }
+    }
+   },
+   "credit": "@rober.patagonico"
+  },
+  "tragos-splash": {
+   "ref": "P297",
+   "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
+   "section": "tragos",
+   "source_size": [
+    3177,
+    3177
+   ],
+   "alt_placeholder": "Splash de cóctel rojo en copa coupe, fondo rojo y bokeh (estudio)",
+   "post": "IG-023",
+   "crops": {
+    "d": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3177,
+      3177
+     ],
+     "crop_size": [
+      3177,
+      3177
+     ],
+     "width": 2560,
+     "height": 2560,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACQBQCdASoYABgAPwF0rlKrJqQiqAqpYCAJagCdMuN14P2xjXcACe28STuHE87OWRCbdEKXAAD+eOe7i5bxcwY7rrCkJNephMGtmOBtVOZPVKv2dfLmgWOjLIHKplsJs//yMajzb6vx69fWIbnr/EmA9KeaojiuTPORQwjmOqGX8fpjFcNPD0SOIUykH9AqGLWeWYYAbax1Et9VVB3fGIO4RznFpJG2QSTcwYpwO/HjnPwj5qJ8Na/kTIXgneRsAAA=",
+     "color": "#85300f",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-splash-d-480.avif",
+        "bytes": 14937
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-splash-d-720.avif",
+        "bytes": 26720
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-splash-d-960.avif",
+        "bytes": 40067
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-splash-d-1280.avif",
+        "bytes": 61095
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-splash-d-1440.avif",
+        "bytes": 72278
+       },
+       "1920": {
+        "path": "assets/v2/img/tragos-splash-d-1920.avif",
+        "bytes": 109045
+       },
+       "2560": {
+        "path": "assets/v2/img/tragos-splash-d-2560.avif",
+        "bytes": 176568
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-splash-d-480.webp",
+        "bytes": 23094
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-splash-d-720.webp",
+        "bytes": 41258
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-splash-d-960.webp",
+        "bytes": 61668
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-splash-d-1280.webp",
+        "bytes": 92668
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-splash-d-1440.webp",
+        "bytes": 109612
+       },
+       "1920": {
+        "path": "assets/v2/img/tragos-splash-d-1920.webp",
+        "bytes": 162084
+       },
+       "2560": {
+        "path": "assets/v2/img/tragos-splash-d-2560.webp",
+        "bytes": 253338
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      317,
+      0,
+      2859,
+      3177
+     ],
+     "crop_size": [
+      2542,
+      3177
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoTABgAPwF0r1KrJqQjqAqpYCAJbACdMuOBD6TcrIf4B49dUxsbCx/4dEdZsOQwAP7BCKKkCmqCOtl1ZYSbp2jIvGW3GiqtA08tMjxngVXKyVAI8Awrw9Gf0Guc8n1yuA5iGHa/iI+ggtAzOVuuEmSqeKMnFf1U7GDsWE2Sut0x5oHYr/rOHYWbvxJeNBrTWcSjAVnfU6BscZEgT/v+rpA8AROGsAAA",
+     "color": "#8a3013",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-splash-m-480.avif",
+        "bytes": 18226
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-splash-m-720.avif",
+        "bytes": 31989
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-splash-m-960.avif",
+        "bytes": 48938
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-splash-m-1280.avif",
+        "bytes": 73314
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-splash-m-1440.avif",
+        "bytes": 86742
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-splash-m-480.webp",
+        "bytes": 28088
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-splash-m-720.webp",
+        "bytes": 50136
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-splash-m-960.webp",
+        "bytes": 75448
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-splash-m-1280.webp",
+        "bytes": 110072
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-splash-m-1440.webp",
+        "bytes": 130854
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Marco que crece 1:1 -> 16:9: el 1:1 a 2560 cubre la banda de 1920 con object-fit cover."
+  },
+  "tragos-sours": {
+   "ref": "P086",
+   "src": "assets/raw/ig/DAMHps8JVVr_00.jpg",
+   "section": "tragos",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "alt_placeholder": "Tres copas con espuma y flores secas sobre barra, fondo flores",
+   "post": "IG-079",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJagCdMyRT9Ab2pJEB+8ICiYl5TrnwI4HxKwmsAAD+wAGpKOQmceKIFJD0K4EDSQQqxzQkUG2fAm5qWUcwMP5X3aOOvKL/Dcos8+oIVF+99dkrjOQHIFsJAaxRrYjsKtKdBwXcgRu+aRn++hZ5YtS00wNdS73+IB7udAjEiKGgS42bSj4dk3pMy6MgFW76AAA=",
+     "color": "#814f27",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-sours-a-480.avif",
+        "bytes": 19136
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-sours-a-720.avif",
+        "bytes": 31496
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-sours-a-960.avif",
+        "bytes": 47787
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-sours-a-1280.avif",
+        "bytes": 77391
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-sours-a-480.webp",
+        "bytes": 29238
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-sours-a-720.webp",
+        "bytes": 46622
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-sours-a-960.webp",
+        "bytes": 69272
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-sours-a-1280.webp",
+        "bytes": 102768
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "tragos-bartender-muro-rosa": {
+   "ref": "P184",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_02.jpg",
+   "section": "tragos",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "alt_placeholder": "Bartender barbudo vierte botella frente a muro botellas rosa",
+   "post": "IG-050",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJbAC1G0xBoKGJXBxqCiy2Zn9qsm+ZKIDpuMVAAMydQ1azSmVG6f998T64U0ZrRAj1ut3fXWiaeOCAG1pSuGxWb/G3yhmsEV4uq1LI0WinJasycrW4H/JoLFLgsfeyZMqJ/5Ab+uv/kztb/qbioxHIYx7A6sMM8hUy6gwHGBZ9AmNLgfQOy+Ltiy63rbnQvZEJHCSYFSAXzFTtdrTov58Nc3GFjwAA",
+     "color": "#aa493d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-480.avif",
+        "bytes": 20909
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-720.avif",
+        "bytes": 36755
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-960.avif",
+        "bytes": 54058
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-1280.avif",
+        "bytes": 84747
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-1440.avif",
+        "bytes": 101190
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-480.webp",
+        "bytes": 33946
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-720.webp",
+        "bytes": 56792
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-960.webp",
+        "bytes": 79910
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-1280.webp",
+        "bytes": 130060
+       },
+       "1440": {
+        "path": "assets/v2/img/tragos-bartender-muro-rosa-a-1440.webp",
+        "bytes": 165668
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod"
+  },
+  "tragos-copa-naranja": {
+   "ref": "P097",
+   "src": "assets/raw/ig/DAMHps8JVVr_11.jpg",
+   "section": "tragos",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "alt_placeholder": "Copa tallada con trago naranja y espuma, fondo botellas rosa desenfocado",
+   "post": "IG-079",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACQBQCdASoTABgAPwFysFIrJqSiqAqpYCAJbACxHt687ZaQW6a6jdTGjYM7nAedK0ghY4nxAAD7myULOtrZkuLM8xUHyRKslCOc70xkNfJ/UvSKiVhUI70elBXHmIPL0V70Ju/F/u8EEzBH0Jtygi1BKhgXhlTk7wMuuKlMRh53imobAgQMKiEHQG8qTkTVpapfpvx0dAfmObiUkws520BmNz+NSFiZkJUo1KrBtuXZfLbkAAA=",
+     "color": "#e57d5f",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-480.avif",
+        "bytes": 13446
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-720.avif",
+        "bytes": 22882
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-960.avif",
+        "bytes": 39226
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-1280.avif",
+        "bytes": 71779
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-480.webp",
+        "bytes": 20620
+       },
+       "720": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-720.webp",
+        "bytes": 35800
+       },
+       "960": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-960.webp",
+        "bytes": 57844
+       },
+       "1280": {
+        "path": "assets/v2/img/tragos-copa-naranja-a-1280.webp",
+        "bytes": 90096
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "comida-garzona-pizza": {
+   "ref": "P036",
+   "src": "assets/raw/ig/CqEI2nSJP2__00.jpg",
+   "section": "comida",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Garzona mira por sobre el hombro sosteniendo pizza",
+   "post": "IG-147",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBQCdASoTABgAPwFsrVErJaQisBgIAWAgCWwArDL1yoAW8e8A6dH3b3jgt8gthxj0GdjDiQAA/ujKJuwqcr4S7tAu3yv46s6NLz4BGjh3mifzUwOtY7mUoPGiqAMqkUNzJfp2O7zxZucm0EkuqmeC6/qw0vu3xY/wdAsTvsO3rW9Ixmut1DJmKoi/VjRFltegJZiMAAA=",
+     "color": "#8c522b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-480.avif",
+        "bytes": 18889
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-720.avif",
+        "bytes": 32880
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-960.avif",
+        "bytes": 53033
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-1280.avif",
+        "bytes": 89171
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-480.webp",
+        "bytes": 28302
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-720.webp",
+        "bytes": 48230
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-960.webp",
+        "bytes": 74286
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzona-pizza-a-1280.webp",
+        "bytes": 114906
+       }
+      }
+     }
+    }
+   },
+   "credit": "@catarsis.fotografia"
+  },
+  "comida-garzon-plato": {
+   "ref": "P393",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "comida",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Garzón tatuado con camisa estampada y gorro lleva plato",
+   "post": "IG-001",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      25
+     ],
+     "box": [
+      0,
+      160,
+      3072,
+      1888
+     ],
+     "crop_size": [
+      3072,
+      1728
+     ],
+     "width": 2560,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoYAA4APwFqrE6rJiQiMAgBYCAJbACdMoACT2xZV1cM4yvkZ6wA/uwlB5b40cWKQGKik3WBAroj2EqPaA0tboD6GoewZ4g9cBIIn8y3+yP5D3n0nK3LOY4RvbVZylJie5YfScuTT2LRgiWBO2yU32eAAAA=",
+     "color": "#643327",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-garzon-plato-d-480.avif",
+        "bytes": 9738
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzon-plato-d-720.avif",
+        "bytes": 16672
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzon-plato-d-960.avif",
+        "bytes": 24144
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1280.avif",
+        "bytes": 36100
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1440.avif",
+        "bytes": 44050
+       },
+       "1920": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1920.avif",
+        "bytes": 83768
+       },
+       "2560": {
+        "path": "assets/v2/img/comida-garzon-plato-d-2560.avif",
+        "bytes": 225796
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-garzon-plato-d-480.webp",
+        "bytes": 15040
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzon-plato-d-720.webp",
+        "bytes": 25634
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzon-plato-d-960.webp",
+        "bytes": 36388
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1280.webp",
+        "bytes": 58426
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1440.webp",
+        "bytes": 77452
+       },
+       "1920": {
+        "path": "assets/v2/img/comida-garzon-plato-d-1920.webp",
+        "bytes": 158914
+       },
+       "2560": {
+        "path": "assets/v2/img/comida-garzon-plato-d-2560.webp",
+        "bytes": 367876
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABwBQCdASoTABgAPwF2s1OrJySiqAgBYCAJbACdMoPNJAwXgS/4WWAeqBu+bEwXym6HSygAAP7sJOU8mIYP/nhaqHnDSl2l30w+woGfX7e4WUFmHYyETZvxqCweuAdRmfd9/8+FgyoewkzvTehEA8EjqwjEePjYwzeO/Ly8h2DCMGneFowicRGDXCe4+W0JTsowUk3PNw/SA9xxgTTAb/9J+epf4hshT/lBYYkAo442AAAA",
+     "color": "#743729",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-garzon-plato-m-480.avif",
+        "bytes": 24936
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzon-plato-m-720.avif",
+        "bytes": 41451
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzon-plato-m-960.avif",
+        "bytes": 60454
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzon-plato-m-1280.avif",
+        "bytes": 90447
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-garzon-plato-m-1440.avif",
+        "bytes": 112045
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-garzon-plato-m-480.webp",
+        "bytes": 39106
+       },
+       "720": {
+        "path": "assets/v2/img/comida-garzon-plato-m-720.webp",
+        "bytes": 66188
+       },
+       "960": {
+        "path": "assets/v2/img/comida-garzon-plato-m-960.webp",
+        "bytes": 93798
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-garzon-plato-m-1280.webp",
+        "bytes": 148080
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-garzon-plato-m-1440.webp",
+        "bytes": 192390
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "comida-hamburguesa": {
+   "ref": "P305",
+   "src": "assets/raw/ig/DY0AUvhlHjI_13.jpg",
+   "section": "comida",
+   "source_size": [
+    3024,
+    4032
+   ],
+   "alt_placeholder": "Hamburguesa con cebolla caramelizada, alta res",
+   "post": "IG-022",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      126,
+      3024,
+      3906
+     ],
+     "crop_size": [
+      3024,
+      3780
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoTABgAPwFys1IrJqSiqAqpYCAJYgCdM2c6Jn/AMAbgyTREkLh3dJJ+BcMksAD3dEdpodCTMpbyZB3AtR3RevtyM5/6QRPLJVy4x6R1lt0qcs5frzuL8OLU2TgIGUsTTmoCeCuymgrSvHyWA3MVBmCp80bGL2PyMtG3bkElu5q+wBLbASR9bCwGiNIa6JGYQIAAAA==",
+     "color": "#7b461a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-hamburguesa-a-480.avif",
+        "bytes": 26621
+       },
+       "720": {
+        "path": "assets/v2/img/comida-hamburguesa-a-720.avif",
+        "bytes": 45250
+       },
+       "960": {
+        "path": "assets/v2/img/comida-hamburguesa-a-960.avif",
+        "bytes": 64234
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-hamburguesa-a-1280.avif",
+        "bytes": 89565
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-hamburguesa-a-1440.avif",
+        "bytes": 102322
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-hamburguesa-a-480.webp",
+        "bytes": 39020
+       },
+       "720": {
+        "path": "assets/v2/img/comida-hamburguesa-a-720.webp",
+        "bytes": 64962
+       },
+       "960": {
+        "path": "assets/v2/img/comida-hamburguesa-a-960.webp",
+        "bytes": 88584
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-hamburguesa-a-1280.webp",
+        "bytes": 120434
+       },
+       "1440": {
+        "path": "assets/v2/img/comida-hamburguesa-a-1440.webp",
+        "bytes": 136288
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "comida-cazuela": {
+   "ref": "P091",
+   "src": "assets/raw/ig/DAMHps8JVVr_05.jpg",
+   "section": "comida",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "alt_placeholder": "Cazuela negra con ñoquis y crema",
+   "post": "IG-079",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADwBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdMoRwMIHxrAJUBfOYsIVRmG4C2UVs8nqvfvEEwAD+7A7SS42w8Ge6zQXqPYL62bPJYztvmxDq1TBWp6s/opSK3MDZu3pZArNypiukNk9eWVMOppT7RAreKdXTrQNE9BkkSfEXLdUz2+YtaIs00yyqgCrAL9ljTXSiWZT8Vj1OHNmgbxhZmYvUC4JvVmHWoMxsEteRM6bAAAA=",
+     "color": "#7b491c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/comida-cazuela-a-480.avif",
+        "bytes": 17212
+       },
+       "720": {
+        "path": "assets/v2/img/comida-cazuela-a-720.avif",
+        "bytes": 28123
+       },
+       "960": {
+        "path": "assets/v2/img/comida-cazuela-a-960.avif",
+        "bytes": 41082
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-cazuela-a-1280.avif",
+        "bytes": 59748
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/comida-cazuela-a-480.webp",
+        "bytes": 28650
+       },
+       "720": {
+        "path": "assets/v2/img/comida-cazuela-a-720.webp",
+        "bytes": 44836
+       },
+       "960": {
+        "path": "assets/v2/img/comida-cazuela-a-960.webp",
+        "bytes": 62500
+       },
+       "1280": {
+        "path": "assets/v2/img/comida-cazuela-a-1280.webp",
+        "bytes": 87178
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "equipo-garzonas": {
+   "ref": "P333",
+   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "equipo",
+   "source_size": [
+    3219,
+    4096
+   ],
+   "alt_placeholder": "Dos garzonas sonrientes con corbata y jockey (alta res)",
+   "post": "IG-014",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      35
+     ],
+     "box": [
+      0,
+      528,
+      3219,
+      2339
+     ],
+     "crop_size": [
+      3219,
+      1811
+     ],
+     "width": 2560,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwBACdASoYAA4APwFqrU8rJaQiMAgBYCAJbACdMoRwACodJt6Q4fR0JZMeW3TwAP6IZ/F/MuvQrWN/8wd6Jrn+g1Hvx2/Gb3o2u6Bssxv9RFKt1L2UEriMNJbmWkWsoM+8URt1Dv02pcrcuHiom/YV5o13CmrdDa8AAA==",
+     "color": "#683f34",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/equipo-garzonas-d-480.avif",
+        "bytes": 9996
+       },
+       "720": {
+        "path": "assets/v2/img/equipo-garzonas-d-720.avif",
+        "bytes": 17103
+       },
+       "960": {
+        "path": "assets/v2/img/equipo-garzonas-d-960.avif",
+        "bytes": 24563
+       },
+       "1280": {
+        "path": "assets/v2/img/equipo-garzonas-d-1280.avif",
+        "bytes": 35047
+       },
+       "1440": {
+        "path": "assets/v2/img/equipo-garzonas-d-1440.avif",
+        "bytes": 40503
+       },
+       "1920": {
+        "path": "assets/v2/img/equipo-garzonas-d-1920.avif",
+        "bytes": 59496
+       },
+       "2560": {
+        "path": "assets/v2/img/equipo-garzonas-d-2560.avif",
+        "bytes": 108575
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/equipo-garzonas-d-480.webp",
+        "bytes": 15494
+       },
+       "720": {
+        "path": "assets/v2/img/equipo-garzonas-d-720.webp",
+        "bytes": 25812
+       },
+       "960": {
+        "path": "assets/v2/img/equipo-garzonas-d-960.webp",
+        "bytes": 36060
+       },
+       "1280": {
+        "path": "assets/v2/img/equipo-garzonas-d-1280.webp",
+        "bytes": 50610
+       },
+       "1440": {
+        "path": "assets/v2/img/equipo-garzonas-d-1440.webp",
+        "bytes": 59004
+       },
+       "1920": {
+        "path": "assets/v2/img/equipo-garzonas-d-1920.webp",
+        "bytes": 86416
+       },
+       "2560": {
+        "path": "assets/v2/img/equipo-garzonas-d-2560.webp",
+        "bytes": 171034
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      3219,
+      4024
+     ],
+     "crop_size": [
+      3219,
+      4024
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADwBQCdASoTABgAPwF0r1KrJqQiqAqpYCAJbACdMoR6eK7BN6Vbml1tcLKOKX3ev4UfBul/PKtGgAD+o2sha8lDLh/yKdw5RQxkr8EtLAZMRN8vIVVA5PtH7HqQCVLhmPoBRtUPVTfu4XPVq1caeh0ruwglATZeioCOXqTp/CTcWlzQ7hNP8IsIKFPquGVydcvQDCE0//qXfn6Jl8kcactnMskYkwAKrSEXTFYEtlFOMAAA",
+     "color": "#673c32",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/equipo-garzonas-m-480.avif",
+        "bytes": 21938
+       },
+       "720": {
+        "path": "assets/v2/img/equipo-garzonas-m-720.avif",
+        "bytes": 37975
+       },
+       "960": {
+        "path": "assets/v2/img/equipo-garzonas-m-960.avif",
+        "bytes": 54152
+       },
+       "1280": {
+        "path": "assets/v2/img/equipo-garzonas-m-1280.avif",
+        "bytes": 77770
+       },
+       "1440": {
+        "path": "assets/v2/img/equipo-garzonas-m-1440.avif",
+        "bytes": 90706
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/equipo-garzonas-m-480.webp",
+        "bytes": 34634
+       },
+       "720": {
+        "path": "assets/v2/img/equipo-garzonas-m-720.webp",
+        "bytes": 56296
+       },
+       "960": {
+        "path": "assets/v2/img/equipo-garzonas-m-960.webp",
+        "bytes": 78798
+       },
+       "1280": {
+        "path": "assets/v2/img/equipo-garzonas-m-1280.webp",
+        "bytes": 111558
+       },
+       "1440": {
+        "path": "assets/v2/img/equipo-garzonas-m-1440.webp",
+        "bytes": 130606
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "con-quien-solo": {
+   "ref": "P194",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_12.jpg",
+   "section": "con-quien",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Clientes acodados en barra con lámpara mimbre, bartender trabajando",
+   "post": "IG-050",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      59,
+      1440,
+      1859
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoTABgAPwFosFGrJSSisBgIAWAgCWwAnTLT9GwfuVby6Ei3NuWUYOQORy1BwTG6csAA/ppO8+ccudk1cSOFXOxlEku02hSmhbCI7aOvy+8nPX0u612F4GujM5t3dQpKC5jfeLuDWRQLM4+UyAAJ4XY1DFbOZTKYv2OvhGNvB5bFAvmpKIL1+Aw4WRqJFxzJTOexBInSgqlWN1MBED+sU6waE0rqznAAAAA=",
+     "color": "#8a4c3d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-solo-a-480.avif",
+        "bytes": 26701
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-solo-a-720.avif",
+        "bytes": 45019
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-solo-a-960.avif",
+        "bytes": 64284
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-solo-a-1280.avif",
+        "bytes": 96008
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-solo-a-1440.avif",
+        "bytes": 112345
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-solo-a-480.webp",
+        "bytes": 44138
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-solo-a-720.webp",
+        "bytes": 73948
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-solo-a-960.webp",
+        "bytes": 103358
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-solo-a-1280.webp",
+        "bytes": 150564
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-solo-a-1440.webp",
+        "bytes": 180504
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod"
+  },
+  "con-quien-pareja": {
+   "ref": "P258",
+   "src": "assets/raw/ig/DYiMMUrlBk1_02.jpg",
+   "section": "con-quien",
+   "source_size": [
+    3277,
+    2622
+   ],
+   "alt_placeholder": "Pareja madura sonriente frente a barra",
+   "post": "IG-026",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      589,
+      0,
+      2687,
+      2622
+     ],
+     "crop_size": [
+      2098,
+      2622
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBACdASoTABgAPwF0rlKrJqQiqAqpYCAJZgCpFSAAjQI6tHVLWeNRaNBkslgA/tOWbPlMDuTkc4kOrYtPpKtPEctOHmxzinrsdjeyvsnCTN1nateJjyVRl+xd1IIkX6viDkb78h9xuv2o44oo9Kp+X/v02iU6o7DWAAAA",
+     "color": "#5a3835",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-pareja-a-480.avif",
+        "bytes": 24502
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-pareja-a-720.avif",
+        "bytes": 51945
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-pareja-a-960.avif",
+        "bytes": 89958
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-pareja-a-1280.avif",
+        "bytes": 148924
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-pareja-a-1440.avif",
+        "bytes": 188601
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-pareja-a-480.webp",
+        "bytes": 37772
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-pareja-a-720.webp",
+        "bytes": 81234
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-pareja-a-960.webp",
+        "bytes": 141982
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-pareja-a-1280.webp",
+        "bytes": 236006
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-pareja-a-1440.webp",
+        "bytes": 300936
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Flash: va en su grupo del mosaico con P259."
+  },
+  "con-quien-amigos": {
+   "ref": "P259",
+   "src": "assets/raw/ig/DYiMMUrlBk1_03.jpg",
+   "section": "con-quien",
+   "source_size": [
+    3276,
+    2621
+   ],
+   "alt_placeholder": "Tres amigos sonriendo con brocheta",
+   "post": "IG-026",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      589,
+      0,
+      2686,
+      2621
+     ],
+     "crop_size": [
+      2097,
+      2621
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBQCdASoTABgAPwF2s1OrJySiqAgBYCAJZgCxHtpBj1CL4qlNzVoVRXkYYfY/6VAAAP7jzHSmfGfLyFtkj9DS69jeBSdVoK8wEO/C7tmqVwOet/fMCGO2DJPNLiIiaYC7IaTgLEbVdrvFu3yjkMluXqnLirsuxO2huAyNJiWCemtmg2jJXN/QyaePbo+rioEN4AAA",
+     "color": "#3f3630",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-amigos-a-480.avif",
+        "bytes": 29450
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-amigos-a-720.avif",
+        "bytes": 66980
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-amigos-a-960.avif",
+        "bytes": 126349
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-amigos-a-1280.avif",
+        "bytes": 234251
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-amigos-a-1440.avif",
+        "bytes": 309306
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-amigos-a-480.webp",
+        "bytes": 46260
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-amigos-a-720.webp",
+        "bytes": 111542
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-amigos-a-960.webp",
+        "bytes": 224566
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-amigos-a-1280.webp",
+        "bytes": 430096
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-amigos-a-1440.webp",
+        "bytes": 570432
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Flash: va en su grupo del mosaico con P258."
+  },
+  "con-quien-celebrar": {
+   "ref": "P198",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_16.jpg",
+   "section": "con-quien",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "alt_placeholder": "Hombre con gorro levanta copa en brindis eufórico",
+   "post": "IG-050",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACQBQCdASoTABgAPwF2s1OrJySiqAgBYCAJZgCdMoR7Pf/gFVTSHjv1wUToL5jZ9cndc9goAAD7RN6zohTsZAxtCue0zxU2bGg86hava8M2coQSib73OZxyt/ejokPcHVpoQFc5eAk3wYcx9IgJPPaG6SdBzh9oZzOJw1xakPYFGMnOqVdi89ueoJ6aHDw+Z4wikd1IQS8LCSYnXESj4srK9DI+baNvxTXv63mx6CzAbnIMP/3iAAAA",
+     "color": "#c07254",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-celebrar-a-480.avif",
+        "bytes": 14367
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-celebrar-a-720.avif",
+        "bytes": 23388
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-celebrar-a-960.avif",
+        "bytes": 32712
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-celebrar-a-1280.avif",
+        "bytes": 48838
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-celebrar-a-1440.avif",
+        "bytes": 58018
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-celebrar-a-480.webp",
+        "bytes": 21456
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-celebrar-a-720.webp",
+        "bytes": 35690
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-celebrar-a-960.webp",
+        "bytes": 49688
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-celebrar-a-1280.webp",
+        "bytes": 75440
+       },
+       "1440": {
+        "path": "assets/v2/img/con-quien-celebrar-a-1440.webp",
+        "bytes": 93100
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod"
+  },
+  "con-quien-sin-motivo": {
+   "ref": "P041",
+   "src": "assets/raw/ig/CrMRBMNpdIF_00.jpg",
+   "section": "con-quien",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Clienta riendo a carcajadas frente a muro de cintas de colores",
+   "post": "IG-142",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBQCdASoTABgAPwFyr1KrJqQiqAqpYCAJYgCdM1XBoYfxnLXMgABwsc6fsftCm7qgANw9T+2IJSCbehM9CA9ZQ2XkkDQZ1yrhUQaQ6ko0VCoyuTTXx4ldIs86NKv00j5WCovPMZpmH5T/SHkHR9N1j1NbL1z/M/hY2llJfb9cC5bkb3iKfuror9CeiAoIe10/Ch1AAAA=",
+     "color": "#7d5235",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-480.avif",
+        "bytes": 14285
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-720.avif",
+        "bytes": 23725
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-960.avif",
+        "bytes": 36733
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-1280.avif",
+        "bytes": 60165
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-480.webp",
+        "bytes": 20836
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-720.webp",
+        "bytes": 33760
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-960.webp",
+        "bytes": 50924
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-sin-motivo-a-1280.webp",
+        "bytes": 76658
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "con-quien-barra": {
+   "ref": "P031",
+   "src": "assets/raw/ig/CpVyxXJJrhO_00.jpg",
+   "section": "con-quien",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Clientas riendo y brindando en la barra con tragos de colores",
+   "post": "IG-152",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdOUE68ATmz1MaJy2tGas5N+UGsSbqAPXHOzPaZh2KMHiAaKyDAmi+1aCxajXl4bnGvC95RdD6nDIwTG2aqrI4NKMPCGgUvWn+eAY61CAhNU0YgFBOPyxWSUSGN/gG526/moKxt8EAItxhcgEahzqLu9AO0N/9euLczRo/Tpjvm27HbiRKMA2QQy4ADxrG7gAA",
+     "color": "#924d31",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/con-quien-barra-a-480.avif",
+        "bytes": 16577
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-barra-a-720.avif",
+        "bytes": 27484
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-barra-a-960.avif",
+        "bytes": 42480
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-barra-a-1280.avif",
+        "bytes": 70824
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/con-quien-barra-a-480.webp",
+        "bytes": 25196
+       },
+       "720": {
+        "path": "assets/v2/img/con-quien-barra-a-720.webp",
+        "bytes": 40376
+       },
+       "960": {
+        "path": "assets/v2/img/con-quien-barra-a-960.webp",
+        "bytes": 59710
+       },
+       "1280": {
+        "path": "assets/v2/img/con-quien-barra-a-1280.webp",
+        "bytes": 91928
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "eventos-diez": {
+   "ref": "P073",
+   "src": "assets/raw/ig/C9dHAAxJkSi_00.jpg",
+   "section": "eventos",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "alt_placeholder": "Número 10 gigante de flores bajo techo de banderines, aniversario",
+   "post": "IG-100",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBACdASoTABgAPwFys1IrJqSiqAqpYCAJZACdMs8ftCPcPodtljx/tOwJSCd4AAD+mEBxlNHk+bQ+OZR5gxJ1O7yOQ8+i1UGm5TYWEzFWyKXwqgcxenjGYwlSpNjclhrwQ99zNcwvZ7Hc2WX83VuvLnP+qiSS+p8799hXqJmEMxx+YAZ4IKVxa0lLIcIy8yZeLeQjY6u6AAAA",
+     "color": "#895227",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/eventos-diez-a-480.avif",
+        "bytes": 31472
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-diez-a-720.avif",
+        "bytes": 54019
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-diez-a-960.avif",
+        "bytes": 78894
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-diez-a-1280.avif",
+        "bytes": 109481
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/eventos-diez-a-480.webp",
+        "bytes": 50122
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-diez-a-720.webp",
+        "bytes": 87382
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-diez-a-960.webp",
+        "bytes": 126692
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-diez-a-1280.webp",
+        "bytes": 170976
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod"
+  },
+  "eventos-torta": {
+   "ref": "P221",
+   "src": "assets/raw/ig/DNT1_BYS_Yf_18.jpg",
+   "section": "eventos",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "alt_placeholder": "Hombre con torta de velas bajo letrero luminoso ALMUD BAR",
+   "post": "IG-047",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoTABgAPwFurlCrJiQiqA1RYCAJaAC7L68AbdShgXFF+rlVF7b8oAD+g2zxfMZwnOw1BuhaeJ6xZNOLMVMcHtcwdQK+c+9u1HTbho8/WJb3yxKC2oWo8VHk6veuOYG8UIiOqmT9j4ib3XSqCnFc3a1oN4jPIAAA",
+     "color": "#442127",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/eventos-torta-a-480.avif",
+        "bytes": 16789
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-torta-a-720.avif",
+        "bytes": 28655
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-torta-a-960.avif",
+        "bytes": 40784
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-torta-a-1280.avif",
+        "bytes": 61549
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-torta-a-1440.avif",
+        "bytes": 72597
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/eventos-torta-a-480.webp",
+        "bytes": 28068
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-torta-a-720.webp",
+        "bytes": 46144
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-torta-a-960.webp",
+        "bytes": 62986
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-torta-a-1280.webp",
+        "bytes": 91368
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-torta-a-1440.webp",
+        "bytes": 108028
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "eventos-doce": {
+   "ref": "P348",
+   "src": "assets/raw/ig/Dbg3ekilC4P_11.jpg",
+   "section": "eventos",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "alt_placeholder": "Multitud de celebración del 12° aniversario bajo banderines, desde arriba",
+   "post": "IG-009",
+   "crops": {
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      979,
+      3072,
+      2707
+     ],
+     "crop_size": [
+      3072,
+      1728
+     ],
+     "width": 2560,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920,
+      2560
+     ],
+     "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoYAA4APwFqrE6rJiQiMAgBYCAJZgCdACFsiTQ50YWgrye4mDxUQAD+6ckyKlvnn/6pjL5BfJa7bXFreFoJQooP+dKqjcvKB5ZuqqEAsW6njx9jpAIeZSV/Z9GyxeEMRlEI2Kr38Fl29FsiI1WHj8chlsy8gB8MgAA=",
+     "color": "#462f4a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/eventos-doce-d-480.avif",
+        "bytes": 18151
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-doce-d-720.avif",
+        "bytes": 36201
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-doce-d-960.avif",
+        "bytes": 56917
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-doce-d-1280.avif",
+        "bytes": 88322
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-doce-d-1440.avif",
+        "bytes": 106326
+       },
+       "1920": {
+        "path": "assets/v2/img/eventos-doce-d-1920.avif",
+        "bytes": 157348
+       },
+       "2560": {
+        "path": "assets/v2/img/eventos-doce-d-2560.avif",
+        "bytes": 247003
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/eventos-doce-d-480.webp",
+        "bytes": 30242
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-doce-d-720.webp",
+        "bytes": 58350
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-doce-d-960.webp",
+        "bytes": 89508
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-doce-d-1280.webp",
+        "bytes": 135100
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-doce-d-1440.webp",
+        "bytes": 159730
+       },
+       "1920": {
+        "path": "assets/v2/img/eventos-doce-d-1920.webp",
+        "bytes": 226166
+       },
+       "2560": {
+        "path": "assets/v2/img/eventos-doce-d-2560.webp",
+        "bytes": 340188
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoTABgAPwF2slQrJqQjKAgBYCAJaACxH0LBBvGWOu1dWtgBD5TEu6pvWZ7TAAD+7qGahD4t3VGYg4cPHV945VioisdliYpp45wIzgErfi1NQIMZqZ8rpMDKD8pO49DLlF1N6BxWDe4GUaKBHFC/RgqouSd+AScwX0uGxw8nOtCGgkNZbLwnDFsWLQvcri48Yk13oNI+AAA=",
+     "color": "#4b3149",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/eventos-doce-m-480.avif",
+        "bytes": 38131
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-doce-m-720.avif",
+        "bytes": 71416
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-doce-m-960.avif",
+        "bytes": 110957
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-doce-m-1280.avif",
+        "bytes": 170858
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-doce-m-1440.avif",
+        "bytes": 204676
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/eventos-doce-m-480.webp",
+        "bytes": 61630
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-doce-m-720.webp",
+        "bytes": 116154
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-doce-m-960.webp",
+        "bytes": 175118
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-doce-m-1280.webp",
+        "bytes": 258946
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-doce-m-1440.webp",
+        "bytes": 305226
+       }
+      }
+     }
+    }
+   },
+   "credit": "@isosur.prod"
+  },
+  "eventos-jaloguin": {
+   "ref": "P229",
+   "src": "assets/raw/ig/DShtzZ0FD9H_00.jpg",
+   "section": "eventos",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Grupo disfrazado (catrinas, gótica) frente a barra rosa",
+   "post": "IG-038",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBQCdASoTABgAPwF2s1QrJySjKAgBYCAJaACxHuN+Ff/gH1L6hAOdXwTf6QsQENfCe8thyQAA/kTjhvrpJOHRRp6uXTpZ+o9i1z2TSAMxz1XMWuqEC/LmxdG09s1cir9w4iDhMVlHLfisBo68D4C0zrSi20DpzpdAWLZ8lWtKIuQkTzJAT2JihL0psYkbartgAx+wrOYSTQIMqVHK1xfJDrCsD6BgAAA=",
+     "color": "#854439",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/eventos-jaloguin-a-480.avif",
+        "bytes": 36739
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-jaloguin-a-720.avif",
+        "bytes": 67668
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-jaloguin-a-960.avif",
+        "bytes": 99534
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-jaloguin-a-1280.avif",
+        "bytes": 149714
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-jaloguin-a-1440.avif",
+        "bytes": 170734
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/eventos-jaloguin-a-480.webp",
+        "bytes": 60694
+       },
+       "720": {
+        "path": "assets/v2/img/eventos-jaloguin-a-720.webp",
+        "bytes": 112894
+       },
+       "960": {
+        "path": "assets/v2/img/eventos-jaloguin-a-960.webp",
+        "bytes": 161900
+       },
+       "1280": {
+        "path": "assets/v2/img/eventos-jaloguin-a-1280.webp",
+        "bytes": 236734
+       },
+       "1440": {
+        "path": "assets/v2/img/eventos-jaloguin-a-1440.webp",
+        "bytes": 267216
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fuera de los 31; el guion la permite solo en Eventos (octubre)."
+  },
+  "donde-puerta": {
+   "ref": "P199",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
+   "section": "donde",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Mujer con megáfono en puerta de madera (polera Te espero en la cuneta)",
+   "post": "IG-050",
+   "crops": {
+    "d": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJbACdMoMeYCI1l+KMtrSnOI6xJqAq1a5oK5iNQADiQsRuThh0TEfadue9HqRZi4GxdKIxDwwOA1Q9PUBHe3E4ZedoYUB7iq+9otfLXBEWH0LSPRyz1XDcsKfxZg/0CBTO+GXzn9QEV+gFN17DUS0QfeFXayMQ7dwQzuCTjzIPu1KAZ5ENp/tKMYRtWFTHkzGLBh5FKioAAA==",
+     "color": "#af5d3a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/donde-puerta-d-480.avif",
+        "bytes": 24079
+       },
+       "720": {
+        "path": "assets/v2/img/donde-puerta-d-720.avif",
+        "bytes": 43428
+       },
+       "960": {
+        "path": "assets/v2/img/donde-puerta-d-960.avif",
+        "bytes": 68001
+       },
+       "1280": {
+        "path": "assets/v2/img/donde-puerta-d-1280.avif",
+        "bytes": 142418
+       },
+       "1440": {
+        "path": "assets/v2/img/donde-puerta-d-1440.avif",
+        "bytes": 184992
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/donde-puerta-d-480.webp",
+        "bytes": 39836
+       },
+       "720": {
+        "path": "assets/v2/img/donde-puerta-d-720.webp",
+        "bytes": 71730
+       },
+       "960": {
+        "path": "assets/v2/img/donde-puerta-d-960.webp",
+        "bytes": 119726
+       },
+       "1280": {
+        "path": "assets/v2/img/donde-puerta-d-1280.webp",
+        "bytes": 269616
+       },
+       "1440": {
+        "path": "assets/v2/img/donde-puerta-d-1440.webp",
+        "bytes": 366916
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJbACdMoMeYCI1l+KMtrSnOI6xJqAq1a5oK5iNQADiQsRuThh0TEfadue9HqRZi4GxdKIxDwwOA1Q9PUBHe3E4ZedoYUB7iq+9otfLXBEWH0LSPRyz1XDcsKfxZg/0CBTO+GXzn9QEV+gFN17DUS0QfeFXayMQ7dwQzuCTjzIPu1KAZ5ENp/tKMYRtWFTHkzGLBh5FKioAAA==",
+     "color": "#af5d3a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/donde-puerta-m-480.avif",
+        "bytes": 24079
+       },
+       "720": {
+        "path": "assets/v2/img/donde-puerta-m-720.avif",
+        "bytes": 43428
+       },
+       "960": {
+        "path": "assets/v2/img/donde-puerta-m-960.avif",
+        "bytes": 68001
+       },
+       "1280": {
+        "path": "assets/v2/img/donde-puerta-m-1280.avif",
+        "bytes": 142418
+       },
+       "1440": {
+        "path": "assets/v2/img/donde-puerta-m-1440.avif",
+        "bytes": 184992
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/donde-puerta-m-480.webp",
+        "bytes": 39836
+       },
+       "720": {
+        "path": "assets/v2/img/donde-puerta-m-720.webp",
+        "bytes": 71730
+       },
+       "960": {
+        "path": "assets/v2/img/donde-puerta-m-960.webp",
+        "bytes": 119726
+       },
+       "1280": {
+        "path": "assets/v2/img/donde-puerta-m-1280.webp",
+        "bytes": 269616
+       },
+       "1440": {
+        "path": "assets/v2/img/donde-puerta-m-1440.webp",
+        "bytes": 366916
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Mismo ratio, foco distinto: en teléfono sube para leer la polera."
+  },
+  "carta-lamina-negroni": {
+   "ref": "P003",
+   "src": "assets/raw/ig/Cmce2h1J3Wl_00.jpg",
+   "section": "carta",
+   "source_size": [
+    1280,
+    1600
+   ],
+   "alt_placeholder": "Negroni con frutilla sobre posavaso Almud, fondo madera cálido",
+   "post": "IG-178",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1280,
+      1600
+     ],
+     "crop_size": [
+      1280,
+      1600
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBQCdASoTABgAPwFyrlArJyQisBgIAWAgCUATplAAJJ8Qy4vx8TsPlLREN1BmdjIkdtAAAP7uoK/bVyghtYqUxK7Qg/iKd9a37bBONSSmnM3uJWc4luVsbV/y2gSwHBq8/iiWQglicYlyEy59aBthdW+BpAAA",
+     "color": "#6b3824",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-480.avif",
+        "bytes": 10608
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-720.avif",
+        "bytes": 17750
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-960.avif",
+        "bytes": 26842
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-480.webp",
+        "bytes": 14252
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-720.webp",
+        "bytes": 24284
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-negroni-a-960.webp",
+        "bytes": 36012
+       }
+      }
+     }
+    }
+   },
+   "credit": "@tamillanquileo",
+   "note": "Sin nombre de trago (no es Negroni según IG-178)."
+  },
+  "carta-lamina-tacos": {
+   "ref": "P070",
+   "src": "assets/raw/ig/C7HV31OLXTJ_00.jpg",
+   "section": "carta",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "alt_placeholder": "Tacos de atún en tabla, primer plano",
+   "post": "IG-105",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACwBQCdASoTABgAPwF2slOrJyQiqAgBYCAJbACdMoMpLJ3z4AB4PZIk94k/cc1PQYShQtD0m/AA/FO4PGypNfDGL1AUjiz6qXA3GBHdyMAzXPbnSHYsd9qQwAQaZsxezRech8OLc31aWZlOoHpyA+vcQ6fS0Us6oAYGX9Z+IBrqFGJKjWfM7QUvahftxzzJFg1+AsI84VM6C5XisaY32XCurBqt1WG4PrSLSK9kvkAAAA==",
+     "color": "#c1884e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-480.avif",
+        "bytes": 22979
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-720.avif",
+        "bytes": 39479
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-960.avif",
+        "bytes": 56062
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-480.webp",
+        "bytes": 32408
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-720.webp",
+        "bytes": 54192
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-tacos-a-960.webp",
+        "bytes": 73098
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Sin nombre de plato (no está en la carta actual)."
+  },
+  "carta-peter": {
+   "ref": "V038-cover",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    3660,
+    6500
+   ],
+   "alt_placeholder": "Coupe roja con burbuja de humo que estalla sobre barra de madera (17 s)",
+   "post": "IG-044",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      962,
+      3660,
+      5537
+     ],
+     "crop_size": [
+      3660,
+      4575
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBQCdASoTABgAPwFwtFGrJiUiqAqpYCAJaACdMoR5j+UBloGaEYH/sWWZkxg5ZU2Pq12wAP7AIsDYeo7Q+pHiLF77WnMiTG+VEsfqXjPAr27bXBoY9kWnokCI6JBNBijGYcc688bksoWwpHkpqDF0BMxl75EpfYQDj9OSXaX9vLiGUUN+8z3aCoAAAA==",
+     "color": "#d2865d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-peter-a-480.avif",
+        "bytes": 13076
+       },
+       "720": {
+        "path": "assets/v2/img/carta-peter-a-720.avif",
+        "bytes": 22134
+       },
+       "960": {
+        "path": "assets/v2/img/carta-peter-a-960.avif",
+        "bytes": 32371
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-peter-a-480.webp",
+        "bytes": 18750
+       },
+       "720": {
+        "path": "assets/v2/img/carta-peter-a-720.webp",
+        "bytes": 32220
+       },
+       "960": {
+        "path": "assets/v2/img/carta-peter-a-960.webp",
+        "bytes": 46564
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-olvidar": {
+   "ref": "V057-cover",
+   "src": "assets/raw/ig/DeC9NEioZFw_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    720,
+    720
+   ],
+   "alt_placeholder": "Trago rojo sobre esfera de hielo con manzana seca (repost de V050, 9:16)",
+   "post": "IG-002",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      72,
+      0,
+      648,
+      720
+     ],
+     "crop_size": [
+      576,
+      720
+     ],
+     "width": 480,
+     "height": 600,
+     "widths": [
+      480
+     ],
+     "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwBACdASoTABgAPwFosFGrJSSisBgIAWAgCWQAqPQO7KWaO5hpdVz30d5canML1VAA/sAG1ML2hUi+SBoT4rjK3E7OgTqMw1H8EJTdQb3Bjh2T+GaUxjmbtje+G8MIN7yMlnRCOD6xDDpJRcZsIXmfw/UYJz5cURt+oplN4AA=",
+     "color": "#ae9279",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-olvidar-a-480.avif",
+        "bytes": 16773
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-olvidar-a-480.webp",
+        "bytes": 19932
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "720x720 de día: solo 480."
+  },
+  "carta-saguer": {
+   "ref": "V030-cover",
+   "src": "assets/raw/ig/DEieMaByhUU_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    3794,
+    6738
+   ],
+   "alt_placeholder": "Posavaso con pinzas, ahumador levantado y humo sale del vaso (10 s)",
+   "post": "IG-063",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      998,
+      3794,
+      5740
+     ],
+     "crop_size": [
+      3794,
+      4742
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBQCdASoTABgAPwFor1GrJSQisBgIAWAgCWYAqSNBAN6RTBemoX6ZyWSfxGPiw4WHms/gAP6D5ZjgJkmwfQQV6YFGLcy+7jHQ8OD7ceD458rbYrV0miFWfjgOTeIgp8gqOT7Lbvr+xWSEutAgN+T/KgidKe02Q4glL2E7RqmE4EOaMJeBWodGCOkPlyYAAAA=",
+     "color": "#633217",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-saguer-a-480.avif",
+        "bytes": 13443
+       },
+       "720": {
+        "path": "assets/v2/img/carta-saguer-a-720.avif",
+        "bytes": 24268
+       },
+       "960": {
+        "path": "assets/v2/img/carta-saguer-a-960.avif",
+        "bytes": 35918
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-saguer-a-480.webp",
+        "bytes": 19762
+       },
+       "720": {
+        "path": "assets/v2/img/carta-saguer-a-720.webp",
+        "bytes": 36360
+       },
+       "960": {
+        "path": "assets/v2/img/carta-saguer-a-960.webp",
+        "bytes": 54224
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-sangria": {
+   "alias": "hoy-jueves-sangria",
+   "ref": "P228",
+   "section": "carta-item",
+   "note": ""
+  },
+  "carta-coquette": {
+   "ref": "P074",
+   "src": "assets/raw/ig/C9xrKP8Jehi_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    1067,
+    1067
+   ],
+   "alt_placeholder": "Clienta sonriente recibe trago con flor, desenfocado",
+   "post": "IG-096",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      106,
+      0,
+      960,
+      1067
+     ],
+     "crop_size": [
+      854,
+      1067
+     ],
+     "width": 720,
+     "height": 900,
+     "widths": [
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADwBQCdASoTABgAPwFkq0+rJSOiMBgMAWAgCWwAnTMl+PCBazwDAQRpQloCfQEkBzpM/SVXq8j/vAD+6/4qvnTHPaFrkK73fYrp0l8+P7bud2lelp339MhB7gXbYtUFi0q/YcLXZ4q9YmjrGTwozHj4IzLdYIDQK71cVWFL0zT94Njg5kaopnJ5ritxHdFtSprN/fHmCytvSs1dUDDL/h0LLry4PjQ7UyhWmjiYYwv7PhVH2ejgAAAA",
+     "color": "#8c4729",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-coquette-a-480.avif",
+        "bytes": 10316
+       },
+       "720": {
+        "path": "assets/v2/img/carta-coquette-a-720.avif",
+        "bytes": 17075
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-coquette-a-480.webp",
+        "bytes": 15328
+       },
+       "720": {
+        "path": "assets/v2/img/carta-coquette-a-720.webp",
+        "bytes": 24344
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-moto": {
+   "ref": "P336",
+   "src": "assets/raw/ig/DaquSYCofM8_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    1600,
+    2000
+   ],
+   "alt_placeholder": "Trago naranja escarchado con pepino",
+   "post": "IG-011",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1600,
+      2000
+     ],
+     "crop_size": [
+      1600,
+      2000
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoTABgAPwF0sFKrJqSiqAqpYCAJbACdL8KkDl/wBYi10JLgY9Kwvaap3TSkpHVAAPa9Vf054+IFUTBTMZEoxJc6mdb6+WXFBsi2UHlzkLd8ZWQFkHxJO6ljGUKTujDoxWHgOaZlqkaXCTVZqaZhN6YbOoKPgOdhz28YhdSEBXy1PDLYxloUvKAOnRXteBzL5uoPkZdyiotOn9gd1uGAAA==",
+     "color": "#965e2b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-moto-a-480.avif",
+        "bytes": 10254
+       },
+       "720": {
+        "path": "assets/v2/img/carta-moto-a-720.avif",
+        "bytes": 16249
+       },
+       "960": {
+        "path": "assets/v2/img/carta-moto-a-960.avif",
+        "bytes": 23424
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-moto-a-480.webp",
+        "bytes": 14378
+       },
+       "720": {
+        "path": "assets/v2/img/carta-moto-a-720.webp",
+        "bytes": 23570
+       },
+       "960": {
+        "path": "assets/v2/img/carta-moto-a-960.webp",
+        "bytes": 33504
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-tukulito": {
+   "ref": "P044",
+   "src": "assets/raw/ig/CsXCLdZpgB7_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    852,
+    852
+   ],
+   "alt_placeholder": "Atún sellado con pan y salsa, plato de vidrio",
+   "post": "IG-139",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      85,
+      0,
+      767,
+      852
+     ],
+     "crop_size": [
+      682,
+      852
+     ],
+     "width": 480,
+     "height": 600,
+     "widths": [
+      480
+     ],
+     "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBQCdASoTABgAPwFwslGrJiSiqAqpYCAJZgCxH1XBrR11scww2Tp0X29XFZcyOu+rAAD8eoQWSfUrYVHbtlOoS8Pwc3oCy8eHMl1X1wkXfIbsNvQyw2qx/VKfFOlY2uSmdCJ0fx41ypUmXToUa16p7ra4jxZQ3SdLag0HSzBUCHwADsAAAA==",
+     "color": "#ba9181",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-tukulito-a-480.avif",
+        "bytes": 19899
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-tukulito-a-480.webp",
+        "bytes": 31066
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "852x852: solo 480."
+  },
+  "carta-contuti": {
+   "ref": "P158",
+   "src": "assets/raw/ig/DEVtFfySKVY_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "alt_placeholder": "Tabla de quesos, jamón, aceitunas y fruta, cenital",
+   "post": "IG-066",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADQBQCdASoTABgAPwFwrVErJiQiqA1RYCAJbACdMtU0kLWkqgGUI1BVhYDit/eBEHPkF9w9nAsAAPi9cx92+LQ9lroNvrTUDxFDhDm9iOA+x7LV//t4XrHRu1oTx1h7KzuCf6OuQ11U7Rq4Dv08bY+wxHVirWc5KbIa5+AdRlNFDAiRT5ikg9IJ/BIoKffSKovFOrQIS12ieA3gnnfIevatTvPAAA==",
+     "color": "#d28638",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-contuti-a-480.avif",
+        "bytes": 22558
+       },
+       "720": {
+        "path": "assets/v2/img/carta-contuti-a-720.avif",
+        "bytes": 37101
+       },
+       "960": {
+        "path": "assets/v2/img/carta-contuti-a-960.avif",
+        "bytes": 51284
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-contuti-a-480.webp",
+        "bytes": 35472
+       },
+       "720": {
+        "path": "assets/v2/img/carta-contuti-a-720.webp",
+        "bytes": 57288
+       },
+       "960": {
+        "path": "assets/v2/img/carta-contuti-a-960.webp",
+        "bytes": 77124
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-camaron": {
+   "ref": "P099",
+   "src": "assets/raw/ig/DAbw0xKSimd_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "alt_placeholder": "Cazuela ñoquis, variante",
+   "post": "IG-077",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdMoRwMNKBMHgjzE2gCUA+VoBr5EfOKifP3UAAAP7sHu4YhJIqOC/X0IuQSyXuFe33ryZimLumXPxRluBPjvqupz9sFi/Wck8T3ReLEcxrPqGmMSZsf/4CLrXT4v9mFZYbQ/BLx5NsZemEMkOppu8Xpak5OZIZDd1u0E8e6a73iJpfEqRXtq0lkYKQqPLn4u9kAAA=",
+     "color": "#79491c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-camaron-a-480.avif",
+        "bytes": 17453
+       },
+       "720": {
+        "path": "assets/v2/img/carta-camaron-a-720.avif",
+        "bytes": 28489
+       },
+       "960": {
+        "path": "assets/v2/img/carta-camaron-a-960.avif",
+        "bytes": 41151
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-camaron-a-480.webp",
+        "bytes": 28414
+       },
+       "720": {
+        "path": "assets/v2/img/carta-camaron-a-720.webp",
+        "bytes": 45094
+       },
+       "960": {
+        "path": "assets/v2/img/carta-camaron-a-960.webp",
+        "bytes": 63236
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  },
+  "carta-topiturron": {
+   "ref": "P227",
+   "src": "assets/raw/ig/DRNqIPslOds_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "alt_placeholder": "Postre en plato verde sobre madera (repetido)",
+   "post": "IG-040",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      60,
+      1440,
+      1860
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoTABgAPwF0r1KrJqQiqAqpYCAJZgC7L8CAtzgdIJBW8aq6uZlQAADCzVJEzz6C8+eDnLWVTrDJWBjC2uR59DTeOb067oYrvSiXBWZFeX8MVLFUzyWZf5ooiDjg9gLvehYr42DdahynF7q4+QOrNIuibPRGwAAAAAA=",
+     "color": "#a99181",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-topiturron-a-480.avif",
+        "bytes": 36181
+       },
+       "720": {
+        "path": "assets/v2/img/carta-topiturron-a-720.avif",
+        "bytes": 78554
+       },
+       "960": {
+        "path": "assets/v2/img/carta-topiturron-a-960.avif",
+        "bytes": 130602
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-topiturron-a-480.webp",
+        "bytes": 67414
+       },
+       "720": {
+        "path": "assets/v2/img/carta-topiturron-a-720.webp",
+        "bytes": 146234
+       },
+       "960": {
+        "path": "assets/v2/img/carta-topiturron-a-960.webp",
+        "bytes": 236094
+       }
+      }
+     }
+    }
+   },
+   "credit": null
+  }
+ },
+ "videos": {
+  "hoy-martes-negroni": {
+   "ref": "V054",
+   "src": "assets/raw/ig/DZ8c3yiIdpa_00.mp4",
+   "section": "hoy",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "start": 0.0,
+   "end": 3.29,
+   "loop": "crossfade",
+   "duration": 2.99,
+   "fps": 30.0,
+   "muted": true,
+   "crf_h264": 26,
+   "files": {
+    "mp4": {
+     "path": "assets/v2/video/hoy-martes-negroni.mp4",
+     "bytes": 377194,
+     "codec": "avc1.640028"
+    },
+    "webm": {
+     "path": "assets/v2/video/hoy-martes-negroni.webm",
+     "bytes": 208692,
+     "codec": "av01",
+     "crf": 40
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v2/video/hoy-martes-negroni-poster.avif",
+     "bytes": 17125
+    },
+    "webp": {
+     "path": "assets/v2/video/hoy-martes-negroni-poster.webp",
+     "bytes": 23340
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoTABgAPwFysVIrJqSiqAqpYCAJbACdMoR2WAqbJSH/8hqm+Hv4ilIGxgzAAAD+p+Smd0uG+DyfpozcQFs36G4EQccY5tUuzE62mfyEP6KHQftqSPj1osS4IT9bITIVnVDLJFubu9TaYnACHasKsf5mtKJniRM4mo3LwgNmQI8aIEVJ/QoY4AAA",
+   "color": "#64200c",
+   "budget_kb": 400,
+   "alt_placeholder": "Bartender pone piel de naranja a negroni sobre barra (3.3 s, loop)",
+   "post": "IG-016",
+   "note": "Revisado: piel de naranja sobre el vaso, noche cálida, 720p nativo (4:5 sin ampliar). Se mantiene; respaldo P184."
+  },
+  "lugar-techo-flecos": {
+   "ref": "V009",
+   "src": "assets/raw/ig/C5WAi8PLHni_00.mp4",
+   "section": "lugar",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "start": 0.0,
+   "end": 7.1,
+   "loop": "crossfade",
+   "duration": 6.6,
+   "fps": 30.0,
+   "muted": true,
+   "crf_h264": 29,
+   "files": {
+    "mp4": {
+     "path": "assets/v2/video/lugar-techo-flecos.mp4",
+     "bytes": 1382275,
+     "codec": "avc1.640028"
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v2/video/lugar-techo-flecos-poster.avif",
+     "bytes": 50122
+    },
+    "webp": {
+     "path": "assets/v2/video/lugar-techo-flecos-poster.webp",
+     "bytes": 70644
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoTABgAPwFyrFGrJqQiqA1RYCAJZgCdMzLnrCGJOurcFd/9Bej0bSu4h8hkAAD+vgDw4dGWdjI5dTNV1TyXJHfCxoWdfkfmN8DA46CG2/O42Ua/1yOOZTHqW6LMsjPGhQPbO5KqD875eNwKvkbqm9pefLkoVSX6qbYAc521EabfYjssvToXU8AA",
+   "color": "#4c2d1c",
+   "budget_kb": 1500,
+   "alt_placeholder": "Paneo lento del techo de flecos de papel multicolor con luces (7 s, loop ideal)",
+   "post": "IG-111"
+  },
+  "carta-muro-rosa": {
+   "ref": "V021",
+   "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4",
+   "section": "carta",
+   "source_size": [
+    1080,
+    1920
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    45
+   ],
+   "start": 0.2,
+   "end": 5.2,
+   "loop": "boomerang",
+   "duration": 10.0,
+   "fps": 27.93,
+   "muted": true,
+   "crf_h264": 30,
+   "files": {
+    "mp4": {
+     "path": "assets/v2/video/carta-muro-rosa.mp4",
+     "bytes": 1491173,
+     "codec": "avc1.640028"
+    },
+    "webm": {
+     "path": "assets/v2/video/carta-muro-rosa.webm",
+     "bytes": 1214518,
+     "codec": "av01",
+     "crf": 44
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v2/video/carta-muro-rosa-poster.avif",
+     "bytes": 28554
+    },
+    "webp": {
+     "path": "assets/v2/video/carta-muro-rosa-poster.webp",
+     "bytes": 37202
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoTABgAPwFwrFErJiQiqA1RYCAJaAC1EIAA4vU57So16M32Yc73mAQF5YAA/nJ3SQ3mafQS2hO7IX/EuAgDYwNwjoHg04eKWkH+S0iII1TzB+aYSRcdhW2yCaGDA+nY6OgCgfUMatl+TgD4KFzakYwGmGSxSr3xXA5FZUeijC58AAAA",
+   "color": "#532d35",
+   "budget_kb": 1500,
+   "alt_placeholder": "Muro rosa con botellas y letrero ALMUD, terraza con estufa, guest bartender sirve shots (1080p)",
+   "post": "IG-090",
+   "note": "Único reel 1080x1920: 4:5 de 1080x1350 bajado a 720x900. Presupuestos rebalanceados: V038 (1,2 MB en web.md) no entra, su margen sube CRF de V009, V021 y V031 a <=29."
+  },
+  "carta-cazuela": {
+   "ref": "V052",
+   "src": "assets/raw/ig/DZgLFzooZB__00.mp4",
+   "section": "carta",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "start": 0.0,
+   "end": 4.0,
+   "loop": "boomerang",
+   "duration": 8.0,
+   "fps": 30.0,
+   "muted": true,
+   "crf_h264": 29,
+   "files": {
+    "mp4": {
+     "path": "assets/v2/video/carta-cazuela.mp4",
+     "bytes": 595846,
+     "codec": "avc1.640028"
+    },
+    "webm": {
+     "path": "assets/v2/video/carta-cazuela.webm",
+     "bytes": 464377,
+     "codec": "av01",
+     "crf": 43
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v2/video/carta-cazuela-poster.avif",
+     "bytes": 31140
+    },
+    "webp": {
+     "path": "assets/v2/video/carta-cazuela-poster.webp",
+     "bytes": 40942
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoTABgAPwF0sFIrJqSiqAqpYCAJQBYj4eDYAbL+RRCGe8nDNwb172N21r+lcAD+kJG31GNZahmll5nhfBjPOjVWmMHY3EVq3JPS0OkOm8mp+j4BxY67L0Jr5dtrPdyos2SUZimLe+1nXY836AQwLrY7piOz+HE8jMHgM5W5DiM2u/BbYk+ZnrJ67P79ugVOXA+4AA==",
+   "color": "#998d63",
+   "budget_kb": 600,
+   "alt_placeholder": "Cazuela cremosa de mariscos burbujeando (4 s)",
+   "post": "IG-018",
+   "note": "Es un paneo lento, no un burbujeo fijo: boomerang en vez de corte."
+  },
+  "donde-letrero": {
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "donde",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 1278,
+   "height": 720,
+   "ratio": "orig",
+   "focal": [
+    50,
+    50
+   ],
+   "start": 1.0,
+   "end": 10.4,
+   "loop": "crossfade",
+   "duration": 9.0,
+   "fps": 30.0,
+   "muted": true,
+   "crf_h264": 29,
+   "files": {
+    "mp4": {
+     "path": "assets/v2/video/donde-letrero.mp4",
+     "bytes": 1200281,
+     "codec": "avc1.640028"
+    },
+    "webm": {
+     "path": "assets/v2/video/donde-letrero.webm",
+     "bytes": 924273,
+     "codec": "av01",
+     "crf": 43
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v2/video/donde-letrero-poster.avif",
+     "bytes": 15817
+    },
+    "webp": {
+     "path": "assets/v2/video/donde-letrero-poster.webp",
+     "bytes": 24624
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoYAA4APwFsrU8rJiQiMAgBYCAJYwC+SCILmM8nh7/PP0qKAAD+8MesE187IZjfeJC94lOHY0/P6i6Um70FF4tK4pRSpDJXAAA=",
+   "color": "#0b0709",
+   "budget_kb": 1200,
+   "alt_placeholder": "Video horizontal entrevista con subtítulos: mural de ojos, bartender, clientas en patio (59 s)",
+   "post": "IG-061",
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "note": "Tramo del guion (1-10,4 s): letrero, puerta, techo, ojos, lámparas; termina antes del corte de 10,53 s. Sin audio."
+  }
+ },
+ "_doc": "Generado por tools/media_v2.py desde tools/media_v2.json. images[id].crops[name].files[fmt][width] = {path, bytes}; width/height = intrínsecos del mayor ancho emitido. alias -> otro id.",
+ "rejected": [
+  {
+   "ref": "V051",
+   "reason": "Sábado: mismo paneo del muro rosa que V021 (carta) y 720p; se usa P194 (con-quien-solo)."
+  },
+  {
+   "ref": "V014",
+   "reason": "Loop opcional del guion: no entra en el presupuesto de 7 MB sin quitar otro; queda la portada V014-cover."
+  },
+  {
+   "ref": "V038",
+   "reason": "No figura en el guion v2 (la carta usa V021 y V052)."
+  }
+ ]
+}

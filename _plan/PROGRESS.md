@@ -14,3 +14,4 @@
 - 2026-10-21 Fase 7 v2: tres rutas (A afiche de hoy, B bajo las cintas, C la carta de la casa), pendiente elección
 - 2026-10-21 Fase 8 v2: contrato, sistema, tokens css/v2, lámina de estilo
 - 2026-10-21 Fase 9 v2: copy-v2.md (199/199 literal verificado), carta-v2.json (256 ítems)
+- 2026-10-21 Fase 10 v2: media_v2 (48 ids, 5 reels, 4.9MB video)
