@@ -1,0 +1,45 @@
+TASTESKILL · LINT   3 file(s)
+
+FAIL
+  [emoji] Emoji used as UI.  (18×)
+      index.html:105  😘
+      index.html:167  ♥
+      index.html:187  😉
+      index.html:191  ✨
+      index.html:307  👌
+      index.html:323  💥
+      … 12 more
+  [gradient] Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception).  (9×)
+      css/main.css:20  linear-gradient(
+      css/main.css:94  linear-gradient(
+      css/main.css:121  linear-gradient(
+      css/main.css:136  radial-gradient(
+      css/main.css:165  linear-gradient(
+      css/main.css:166  linear-gradient(
+      … 3 more
+  [shadow] Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may.  (11×)
+      css/main.css:64  drop-shadow(
+      css/main.css:140  text-shadow:
+      css/main.css:168  drop-shadow(
+      css/main.css:248  box-shadow:
+      css/main.css:257  box-shadow:
+      css/main.css:266  text-shadow:
+      … 5 more
+  [hairline] Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields.  (2×)
+      css/main.css:337  border-bottom:1px
+      css/main.css:352  border-top:1px
+
+WARN
+  [outlined-box] A 1px outlined box. Prefer a filled surface or no box.  (3×)
+      css/main.css:67  border:1px solid
+      css/main.css:78  border:1px solid
+      css/main.css:147  border:1px solid
+  [glass] Backdrop blur. One sticky bar at most; glass cards are a tell.  (2×)
+      css/main.css:67  backdrop-filter:
+      css/main.css:147  backdrop-filter:
+  [scale-zero] Entering from scale(0). Start at 0.95–0.98 with opacity 0.  (2×)
+      css/main.css:247  scale(0)
+      css/main.css:358  scale(0)
+
+RESULT: 40 FAIL, 7 WARN — fix the FAILs before rendering.
+Interface fragments marked data-ui keep their own borders and shadows. Any other line that must keep a flagged pattern for a real reason can carry the comment taste-skill-ignore.
