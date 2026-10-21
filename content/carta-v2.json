@@ -1,0 +1,2187 @@
+{
+ "_fuente": "Carta oficial Almud Bar (uqr.to/ppvi), 7 PDFs en assets/raw/carta/ descargados 2026-10-08 (CARTA-1 Comilona, CARTA-2 Coctelería de la casa, CARTA-3 Cócteles del mundo mundial, CARTA-4 Espirituosos, CARTA-5 Mocktails sin alcohol + Jugos & bebidas + Cervezas sin alcohol + Bebidas calientes, CARTA-6 Vinos & espumantes, CARTA-7 Nuestras promos). Transcripción literal verificada contra pdftotext -layout, recortes por columna con pdfplumber y render a 150 dpi. Convenciones: los títulos de sección son los nombres de cada carta; los títulos de grupo y los nombres de ítem impresos en MAYÚSCULAS display se pasan a minúscula de oración/nombre propio (como en carta.json); notas, intros y descripciones conservan las mayúsculas de la capa de texto del PDF. Los corchetes [..] que siguen al nombre impreso van en \"desc\" (o \"nota\" en vinos, donde \"desc\" es la cepa). Los ítems que ya estaban en carta.json conservan su texto exacto (ver _diferencias_con_carta_json). Precios tal como impresos (\"$ 8.800\"); multi-medida en \"precios\" con las etiquetas de columna del grupo (\"columnas\").",
+ "_correcciones": [
+  {
+   "fuente": "CARTA-2",
+   "item": "Aquí te las traigo Peter",
+   "campo": "desc",
+   "antes": "Le llea",
+   "despues": "Le lleva",
+   "motivo": "Errata documentada en copy.md (Correcciones mínimas)"
+  },
+  {
+   "fuente": "CARTA-2",
+   "item": "Desde que te conocí",
+   "campo": "desc",
+   "antes": "refrecante",
+   "despues": "refrescante",
+   "motivo": "Errata documentada en copy.md (Correcciones mínimas)"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Tukulito Sakayama",
+   "campo": "desc",
+   "antes": "bigoteli Acompañado",
+   "despues": "bigoteli. Acompañado",
+   "motivo": "copy.md: punto donde el PDF tiene un emoji (♡)"
+  },
+  {
+   "fuente": "CARTA-2",
+   "item": "Te espero en la cuneta",
+   "campo": "nombre",
+   "antes": "C U N E T A",
+   "despues": "cuneta",
+   "motivo": "Rotura OCR: letras espaciadas por tracking tipográfico"
+  },
+  {
+   "fuente": "CARTA-4",
+   "item": "Tullamore Dew Irish whiskey",
+   "campo": "precios.CORTO XL [150 cc]",
+   "antes": "$ 1 0.000",
+   "despues": "$ 10.000",
+   "motivo": "Rotura OCR/kerning: espacio dentro del número (en el render se ve \"$10.000\")"
+  },
+  {
+   "fuente": "CARTA-3",
+   "item": "Vodka / Espumante",
+   "campo": "nombre",
+   "antes": "VODKA  / ESPUMANTE",
+   "despues": "Vodka / Espumante",
+   "motivo": "Doble espacio colapsado"
+  },
+  {
+   "fuente": "CARTA-1/2/3/4/5",
+   "item": "(varios)",
+   "campo": "desc",
+   "antes": "texto con salto de línea / espacio dejado por un emoji (p. ej. \"shileno! : mix\")",
+   "despues": "una línea, espacio simple (\"shileno!: mix\")",
+   "motivo": "Saltos de línea del maquetado unidos; espacio que dejaba el glifo de emoji eliminado"
+  },
+  "\"[sin acohol]\" → \"[sin alcohol]\" (errata evidente)",
+  "\"Woodfoord\" → \"Woodford\" (errata evidente)",
+  "\"Selección / / Matusalem\" → \"Selección / Matusalem\" (errata evidente)",
+  "\"Bossa Nova Escocia, 30°]\" → \"Bossa Nova [Escocia, 30°]\" (errata evidente)",
+  "\"[Chile,43°]\" → \"[Chile, 43°]\" (errata evidente)"
+ ],
+ "_emoji_omitidos": [
+  {
+   "fuente": "CARTA-1",
+   "item": "Aceitunas",
+   "glifo_pdf": "S",
+   "aspecto": "👌 (mano OK)",
+   "tras": "ricas delichus!"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Tukulito Sakayama",
+   "glifo_pdf": "A",
+   "aspecto": "♡",
+   "tras": "pa chuparse el bigoteli (reemplazado por \".\")"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Una cosa poca",
+   "glifo_pdf": "1",
+   "aspecto": "😜 (carita guiño/lengua)",
+   "tras": "porque es shileno!"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Campestre",
+   "glifo_pdf": "S",
+   "aspecto": "👌",
+   "tras": "pimentón rojo asado"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Camarón que se duerme",
+   "glifo_pdf": "^",
+   "aspecto": "🙌 (manos arriba)",
+   "tras": "vino blanco"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Muéveme el pollo",
+   "glifo_pdf": "a",
+   "aspecto": "👏 (aplauso)",
+   "tras": "teriyaki casera"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Sanguches (nota_pie)",
+   "glifo_pdf": "A",
+   "aspecto": "♡",
+   "tras": "y mucho amor"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Pizzas artesanales (nota_pie)",
+   "glifo_pdf": "D",
+   "aspecto": "😻 (carita con corazones)",
+   "tras": "son hechas por nosotros!"
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Pizzas artesanales (nota_pie)",
+   "glifo_pdf": "l",
+   "aspecto": "👀 (ojos)",
+   "tras": "antes de \"puedes pedir\""
+  },
+  {
+   "fuente": "CARTA-1",
+   "item": "Crumblecito ito ito",
+   "glifo_pdf": "S",
+   "aspecto": "👌",
+   "tras": "da un toque refrescante"
+  },
+  {
+   "fuente": "CARTA-2",
+   "item": "Aquí te las traigo Peter",
+   "glifo_pdf": "M",
+   "aspecto": "🔥 (llama)",
+   "tras": "la burbuja que viene aquí!"
+  },
+  {
+   "fuente": "CARTA-2",
+   "item": "Te espero en la cuneta",
+   "glifo_pdf": "MR",
+   "aspecto": "🔥👊",
+   "tras": "jugo de piña: pum!"
+  },
+  {
+   "fuente": "CARTA-2",
+   "item": "Sangría Foreva!",
+   "glifo_pdf": "A",
+   "aspecto": "♡",
+   "tras": "y mucho amor"
+  },
+  {
+   "fuente": "CARTA-3",
+   "item": "Penicilin",
+   "glifo_pdf": "M",
+   "aspecto": "🔥",
+   "tras": "miel y limón"
+  },
+  {
+   "fuente": "CARTA-3",
+   "item": "St Germain",
+   "glifo_pdf": "A",
+   "aspecto": "♡",
+   "tras": "[El original flor de saúco ♡]"
+  },
+  {
+   "fuente": "CARTA-3",
+   "item": "Jägerbomb",
+   "glifo_pdf": "MR",
+   "aspecto": "🔥👊",
+   "tras": "nombre JÄGERBOMB"
+  },
+  {
+   "fuente": "CARTA-4",
+   "item": "Whiscachos (nota_pie)",
+   "glifo_pdf": "S",
+   "aspecto": "👌",
+   "tras": "tomarlo puritano"
+  },
+  {
+   "fuente": "CARTA-5",
+   "item": "Efecto placebo",
+   "glifo_pdf": "A",
+   "aspecto": "♡",
+   "tras": "rematamos con tónica"
+  },
+  {
+   "fuente": "CARTA-5",
+   "item": "Ramazzotti Spritz sin copetín!",
+   "glifo_pdf": "M",
+   "aspecto": "🔥",
+   "tras": "[ZEROZOTTI 🔥]"
+  }
+ ],
+ "_iconos_a_tags": {
+  "veggie": "Hoja verde (fuente \"Leafs\") junto al nombre. No es texto impreso; se usa \"veggie\" porque es la palabra de la propia carta (\"[También en versión veggie]\").",
+  "vegan": "Sello caligráfico \"Vegan\" (fuente \"VeganIcons\") junto a Hamburguesa Almud.",
+  "picante": "Llamita roja (fuente \"Fire\") junto a Blanquita (lleva ají verde y merkén).",
+  "nuevo": "Sello rojo \"NUEVO\" (imagen) junto a Guarever como sea y Not Collins.",
+  "omitidos": "Ornamentos decorativos (fuente \"CatShop\", espacios), viñetas ornamentales y flecha (fuente \"Arrows\") de CARTA-7."
+ },
+ "_diferencias_con_carta_json": [
+  {
+   "item": "Ramazzotti Spritz sin copetín!",
+   "campo": "desc",
+   "pdf_v2_transcripcion": "[ZEROZOTTI]",
+   "carta.json": "[Zerozotti]",
+   "usado": "carta.json"
+  },
+  {
+   "item": "Huerta sabrosa",
+   "campo": "desc",
+   "pdf_v2_transcripcion": "Tomate cherry, champiñones , hojas verdes de temporada y salsa ajo cilantro",
+   "carta.json": "Tomate cherry, champiñones, hojas verdes de temporada y salsa ajo cilantro",
+   "usado": "carta.json"
+  },
+  {
+   "item": "Topiturrón",
+   "campo": "desc",
+   "pdf_v2_transcripcion": "[RELOADED] Turrón de chocolate con galletas y nueces, gel de naranja y arándanos, acompañado de un sorbete de frutos rojos sobre tierra de galletas y almendras",
+   "carta.json": "[Reloaded] Turrón de chocolate con galletas y nueces, gel de naranja y arándanos, acompañado de un sorbete de frutos rojos sobre tierra de galletas y almendras",
+   "usado": "carta.json"
+  }
+ ],
+ "_dudas": [
+  "Erratas impresas NO corregidas (no están en copy.md): \"Undurraga Free Rosé [sin alcohol]\" (CARTA-6); \"Woodford Reserve\" (CARTA-4); \"Pampero Selección / Matusalem 7 años\" (doble barra, CARTA-4); \"Tanqueray Bossa Nova [Escocia, 30°]\" (falta \"[\", CARTA-4); \"[Escocia. 47,3°]\" (punto por coma, Tanqueray 10); \"[Chile, 43°]\" sin espacio; \"Penicilin\" (CARTA-3). Decidir si se agregan a Correcciones mínimas.",
+  "Grafías inconsistentes entre cartas, conservadas: \"Trä·kàl\" (CARTA-2) / \"Träkál\" (CARTA-3 y CARTA-4); \"Mistral 40º\" (º ordinal) vs \"Horcón Quemado 40°\" (° grado); \"Mistral Apple/ Honey/ Fire\" y \"Diplomático Reserva/ Matusalem\" (espacio sólo después de la barra).",
+  "CARTA-7: la flecha une \"SÁBADO / RAMÓN a $ 4.500!\" con \"de 18:00 a 22:00 hrs\"; no queda claro si el horario aplica sólo al sábado o a todas las promos. Se dejó como nota del grupo (igual que promo_hora en carta.json).",
+  "CARTA-1: el bloque \"Pa los chichichos\" dice \"[Para menores hasta 12 años]\"; se guardó como nota de grupo.",
+  "Whiscachos: la carta tiene un bloque de cortos de 2 oz [60 ml] con precio único y luego subgrupos Blended / Irish / Single Malt / Bourbon / Tennessee con dos medidas; los subgrupos llevan \"padre\": \"Whiscachos\".",
+  "Tags \"veggie\", \"vegan\", \"picante\", \"nuevo\" vienen de íconos, no de texto impreso (ver _iconos_a_tags).",
+  "Vermú: \"Martini\" aparece dos veces (Rosso/Bianco/Dry y Rubino/Ambrato) con precios distintos; se mantienen como dos ítems con el mismo nombre.",
+  "Bebidas (CARTA-5): \"Red Bull [Regular, Tropical, Fruta del Dragón, light ]\" y \"Espumante [Undurraga Free Rosé / 750 cc ]\" conservan el espacio antes de \"]\" tal como impreso."
+ ],
+ "secciones": [
+  {
+   "id": "cocteleria-de-la-casa",
+   "titulo": "Coctelería de la casa",
+   "fuente": "CARTA-2",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": null,
+     "items": [
+      {
+       "nombre": "Pinche Güey",
+       "desc": "Un guarisnaque complejo pa l@s que disfrutan sabores más potentes: Mezcal, tequila, horchata de maní tostado y merkén, pomelo y limón! Un cóctel cítrico, picantito, tostado, ahumado. Atrévase se se se!",
+       "precio": "$ 8.800"
+      },
+      {
+       "nombre": "Aquí te las traigo Peter",
+       "desc": "Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí!",
+       "precio": "$ 6.700"
+      },
+      {
+       "nombre": "Cómo te voy a olvidar",
+       "desc": "Este es un cóctel sencillo, pero muuuuuy rico [y bonito]: va con Vodka Pera, un toque cítrico de limoncito, jarabe pal dulzor y terminamos con Vino tinteli, que tiñe de un color hermoso este cóctel que está 10/10",
+       "precio": "$ 6.800"
+      },
+      {
+       "nombre": "Guarever como sea",
+       "desc": "Dulcecito y aromático, nos lleva al caribe con el licor de plátano y licor de café, luego aterrizamos al mejor país de Chile con el pisqueli, su toque con el mix sagüer y rematamos con una cremosa espuma de ron de coco. Hit!",
+       "precio": "$ 6.200",
+       "tags": [
+        "nuevo"
+       ]
+      },
+      {
+       "nombre": "Not Collins",
+       "desc": "Conoce el Tom Collins? Este es así, pero en una variante un poco más dulce y super refrescante: amaretto disaronno, jarabe, limón y soda. Infalible!",
+       "precio": "$ 6.700",
+       "tags": [
+        "nuevo"
+       ]
+      },
+      {
+       "nombre": "Te espero en la cuneta",
+       "desc": "Esta es una versión más dulzona del siempre bien ponderado Margarita: tequila blanco, curaçao, limón y jugo de piña: pum!",
+       "precio": "$ 7.800"
+      },
+      {
+       "nombre": "Deja tomao",
+       "desc": "Este nació como un cóctel sin alcohol; pero la mezcla de pepino, jugo de mango, limón y miel nos pidió probarlo con gin ..... y nos enamoró!",
+       "precio": "$ 7.400"
+      },
+      {
+       "nombre": "Sagüer on Faia",
+       "desc": "Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!!",
+       "precio": "$ 7.900"
+      },
+      {
+       "nombre": "Sangría Foreva!",
+       "desc": "Esta versión te dejará como perro con dos colas! Vino Carménère, toda la malicia del pisco añejado, jarabe de canela, unos toques frutales infaltables y mucho amor",
+       "precio": "$ 6.500"
+      },
+      {
+       "nombre": "Ramón",
+       "desc": "Es una precisa mezcla: gin, licor marrasquino, limón y romero. Para los fanáticos de los cócteles cítricos y el frescor del romero! [el vasito va con crusta de sal de romero]",
+       "precio": "$ 7.100"
+      },
+      {
+       "nombre": "Tranquilein John Wayne",
+       "desc": "Esta maravilla lleva una mezcla de Whiskys [blended scotch], jugo de manzana, jarabe de canela y limón: un cóctel muy balanceado y refrescante!",
+       "precio": "$ 6.800"
+      },
+      {
+       "nombre": "Desde que te conocí",
+       "desc": "Muy refrescante coctelcito, con base de Ramazzotti más el sabor imperdible de la maracuyá, limoncito y terminamos con un toque de espumante... déjese cautivar por esta maravilla!",
+       "precio": "$ 6.900"
+      },
+      {
+       "nombre": "A veces me pongo Coquette",
+       "desc": "Este es de lo más que hay: mezcla perfecta de pisco berries con crema de whisky, frambuesa, naranja y jarabe de canela: una delicia rosada, cremosa y dulzona!",
+       "precio": "$ 7.100"
+      },
+      {
+       "nombre": "Iquique Glorioso",
+       "desc": "Maracuyá, mango y piña, enlazados al destilado patagónico Trä·kàl y Pisco. Oh si! Este cóctel trae el trópico mezclado con el sur de nuestro país a tu boca: no lo olvidarás!",
+       "precio": "$ 7.400"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cocteles-del-mundo-mundial",
+   "titulo": "Cócteles del mundo mundial",
+   "fuente": "CARTA-3",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": "Clásicos",
+     "nota": "[Algunos recomendados de su Almudcito]",
+     "items": [
+      {
+       "nombre": "Daiquiri",
+       "desc": "Desde Cuba llega esta mezcla infalible: ron blanco, jarabe, limón y pulpa de fruta!",
+       "precio": "$ 5.700"
+      },
+      {
+       "nombre": "Bloody Mary",
+       "desc": "Este es saladito! Vodka, jugo de tomate casero, salsa inglesa, limón y tabasco",
+       "precio": "$ 6.700"
+      },
+      {
+       "nombre": "Espresso Martini",
+       "desc": "Esta delicia te hará entrar en calor: Vodka, Kahlúa, jarabe y extracción de café en frío [cold brew] casero!",
+       "precio": "$ 6.200"
+      },
+      {
+       "nombre": "Tom Collins",
+       "desc": "Este clásico es parecido al siempre bien ponderado sour: gin, jarabe, limón y soda.",
+       "precio": "$ 6.900",
+       "nota": "Puedes pedirlo con gin frutilla!"
+      },
+      {
+       "nombre": "Cosmopolitan",
+       "desc": "Nos encanta este coctelcito, tan sex & the city!: vodka, triple sec, jarabe de arándanos y limón. Delichus!",
+       "precio": "$ 6.200"
+      },
+      {
+       "nombre": "Penicilin",
+       "desc": "Como lo indica su nombre, este es la mejor medicina! whisky escocés, jarabe de jengibre, miel y limón",
+       "precio": "$ 8.200"
+      }
+     ]
+    },
+    {
+     "titulo": "Vermú",
+     "nota": "UN VERMUCITO CON UNA TÓNICA QUEDA PICHO CALUGA!",
+     "columnas": [
+      "NORMAL [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "nota_pie": "AGREGUE UNA TÓNICA FINOLI FENTIMANS POR $3.700 [TONIC WATER, ROSE LIMONADE O VALENCIAN ORANGE]",
+     "items": [
+      {
+       "nombre": "Carpano",
+       "desc": "Rosso / Bianco",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.500",
+        "CORTO XL [150 cc]": "$ 5.800"
+       }
+      },
+      {
+       "nombre": "Cinzano",
+       "desc": "Rosso / Bianco",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.500",
+        "CORTO XL [150 cc]": "$ 5.800"
+       }
+      },
+      {
+       "nombre": "Martini",
+       "desc": "Rosso / Bianco / Dry",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.500",
+        "CORTO XL [150 cc]": "$ 5.800"
+       }
+      },
+      {
+       "nombre": "Martini",
+       "desc": "Rubino / Ambrato",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.800",
+        "CORTO XL [150 cc]": "$ 9.600"
+       }
+      },
+      {
+       "nombre": "Dolin",
+       "desc": "Rosso / Bianco / Dry",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.800",
+        "CORTO XL [150 cc]": "$ 9.600"
+       }
+      },
+      {
+       "nombre": "La Madre",
+       "desc": "Rosso / Bianco",
+       "precios": {
+        "NORMAL [90 cc]": "$ 7.000",
+        "CORTO XL [150 cc]": "$ 11.600"
+       }
+      },
+      {
+       "nombre": "Casals",
+       "desc": "Rosso",
+       "precios": {
+        "NORMAL [90 cc]": "$ 9.200",
+        "CORTO XL [150 cc]": "$ 15.300"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Mule",
+     "nota": "DESTILADO + GINGER BEER, JUGO DE LIMÓN, MENTA Y SODA",
+     "items": [
+      {
+       "nombre": "Mistral Mule",
+       "desc": "Base de Mistral Apple/ Honey/ Fire",
+       "precio": "$ 8.400"
+      },
+      {
+       "nombre": "Moscow Mule",
+       "desc": "Base de vodka",
+       "precio": "$ 7.600"
+      },
+      {
+       "nombre": "Träkál Mule",
+       "desc": "Base de destilado patagónico de peras y manzanas",
+       "precio": "$ 9.900"
+      },
+      {
+       "nombre": "London Mule",
+       "desc": "Base de gin",
+       "precio": "$ 8.000"
+      },
+      {
+       "nombre": "Moscat Mule",
+       "desc": "Base de pisco moscatel",
+       "precio": "$ 7.200"
+      }
+     ]
+    },
+    {
+     "titulo": "Negroni",
+     "items": [
+      {
+       "nombre": "Clásico",
+       "desc": "Gin, Campari y Vermú Rosso",
+       "precio": "$ 6.200"
+      },
+      {
+       "nombre": "Premium",
+       "desc": "Gin a elección, Campari y Vermú Rosso",
+       "precio": "$ 8.600"
+      },
+      {
+       "nombre": "Patagónico",
+       "desc": "Träkál, Campari y Vermú Rosso",
+       "precio": "$ 7.200"
+      },
+      {
+       "nombre": "Boulevardier",
+       "desc": "Bourbon, Campari y Vermú Rosso",
+       "precio": "$ 6.500"
+      },
+      {
+       "nombre": "Blanconi",
+       "desc": "Gin, Cointreau y Vermú Bianco",
+       "precio": "$ 6.900"
+      }
+     ]
+    },
+    {
+     "titulo": "Spritz",
+     "items": [
+      {
+       "nombre": "Aperol / Ramazzotti / Campari / Vermú",
+       "precio": "$ 6.700"
+      },
+      {
+       "nombre": "Flor de saúco",
+       "precio": "$ 6.700"
+      },
+      {
+       "nombre": "St Germain",
+       "desc": "[El original flor de saúco]",
+       "precio": "$ 9.900"
+      },
+      {
+       "nombre": "Chambord",
+       "desc": "[Licor de frambuesas rojas y negras, miel & coñac]",
+       "precio": "$ 9.200"
+      }
+     ]
+    },
+    {
+     "titulo": "Sagüer",
+     "items": [
+      {
+       "nombre": "Tradicional / Tradicional sabores",
+       "desc": "[Chilensis!]",
+       "precio": "$ 5.200"
+      },
+      {
+       "nombre": "Peruano / Peruano maracuyá",
+       "precio": "$ 6.500"
+      },
+      {
+       "nombre": "Whisky",
+       "precio": "$ 6.500"
+      },
+      {
+       "nombre": "Niu York",
+       "desc": "[Como el whisky sour, pero con top de vino tinteli]",
+       "precio": "$ 6.500"
+      },
+      {
+       "nombre": "Träkál",
+       "desc": "[Destilado patagónico de peras y manzanas]",
+       "precio": "$ 9.900"
+      },
+      {
+       "nombre": "Amaretto",
+       "precio": "$ 4.500"
+      }
+     ]
+    },
+    {
+     "titulo": "Mojitos",
+     "items": [
+      {
+       "nombre": "Tradicional o sabores",
+       "desc": "[Frambuesa, mango, piña o maracuyá]",
+       "precio": "$ 5.900"
+      },
+      {
+       "nombre": "Vodka / Espumante",
+       "precio": "$ 5.900"
+      },
+      {
+       "nombre": "Jägermojito",
+       "precio": "$ 6.900"
+      },
+      {
+       "nombre": "Aperol",
+       "precio": "$ 6.500"
+      }
+     ]
+    },
+    {
+     "titulo": "Red Bull te da aaalas",
+     "items": [
+      {
+       "nombre": "Tropical Gin",
+       "desc": "Red bull tropical + gin + toque de maracuyá",
+       "precio": "$ 7.800"
+      },
+      {
+       "nombre": "Wild Dragon",
+       "desc": "Red Bull Dragon Fruit + Ballantines cherry",
+       "precio": "$ 7.800"
+      },
+      {
+       "nombre": "Jägerbomb",
+       "desc": "Red bull + shot de Jägermeister",
+       "precio": "$ 6.600"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "espirituosos",
+   "titulo": "Espirituosos",
+   "fuente": "CARTA-4",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": "Piscolein o combinadito",
+     "nota": "Precio del corto normal o XL\nNO INCLUYE BEBIDA",
+     "columnas": [
+      "NORMAL [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Mistral Gran Nobel",
+       "precios": {
+        "NORMAL [90 cc]": "$ 10.900",
+        "CORTO XL [150 cc]": "$ 18.100"
+       }
+      },
+      {
+       "nombre": "Mistral Nobel Cristalino",
+       "precios": {
+        "NORMAL [90 cc]": "$ 8.000",
+        "CORTO XL [150 cc]": "$ 13.300"
+       }
+      },
+      {
+       "nombre": "Mistral Nobel / Manzana / Fire / Miel",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.800",
+        "CORTO XL [150 cc]": "$ 9.600"
+       }
+      },
+      {
+       "nombre": "Mistral 40º",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.000",
+        "CORTO XL [150 cc]": "$ 6.400"
+       }
+      },
+      {
+       "nombre": "Mistral 35º",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.600",
+        "CORTO XL [150 cc]": "$ 5.700"
+       }
+      },
+      {
+       "nombre": "Kappa XO",
+       "precios": {
+        "NORMAL [90 cc]": "$ 15.600",
+        "CORTO XL [150 cc]": "$ 26.000"
+       }
+      },
+      {
+       "nombre": "Waqar 40º",
+       "precios": {
+        "NORMAL [90 cc]": "$ 13.000",
+        "CORTO XL [150 cc]": "$ 21.600"
+       }
+      },
+      {
+       "nombre": "Bou Barroeta - Cofradía",
+       "precios": {
+        "NORMAL [90 cc]": "$ 13.600",
+        "CORTO XL [150 cc]": "$ 22.600"
+       }
+      },
+      {
+       "nombre": "Bou Barroeta - Romanet",
+       "precios": {
+        "NORMAL [90 cc]": "$ 12.600",
+        "CORTO XL [150 cc]": "$ 21.000"
+       }
+      },
+      {
+       "nombre": "Bou Barroeta - Maria’s",
+       "precios": {
+        "NORMAL [90 cc]": "$ 11.400",
+        "CORTO XL [150 cc]": "$ 19.000"
+       }
+      },
+      {
+       "nombre": "Bou Barroeta - A mis nietas",
+       "precios": {
+        "NORMAL [90 cc]": "$ 9.000",
+        "CORTO XL [150 cc]": "$ 15.000"
+       }
+      },
+      {
+       "nombre": "Tololo Black",
+       "precios": {
+        "NORMAL [90 cc]": "$ 12.400",
+        "CORTO XL [150 cc]": "$ 20.600"
+       }
+      },
+      {
+       "nombre": "Tololo Blue",
+       "precios": {
+        "NORMAL [90 cc]": "$ 10.200",
+        "CORTO XL [150 cc]": "$ 17.000"
+       }
+      },
+      {
+       "nombre": "Black Heron",
+       "precios": {
+        "NORMAL [90 cc]": "$ 10.200",
+        "CORTO XL [150 cc]": "$ 17.000"
+       }
+      },
+      {
+       "nombre": "Horcón Quemado 40°",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.700",
+        "CORTO XL [150 cc]": "$ 9.000"
+       }
+      },
+      {
+       "nombre": "Alto del Carmen 40° Doble Destilado",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.400",
+        "CORTO XL [150 cc]": "$ 8.700"
+       }
+      },
+      {
+       "nombre": "Gobernador 40º",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.400",
+        "CORTO XL [150 cc]": "$ 8.700"
+       }
+      },
+      {
+       "nombre": "Horcón Quemado 35°",
+       "precios": {
+        "NORMAL [90 cc]": "$ 5.400",
+        "CORTO XL [150 cc]": "$ 8.700"
+       }
+      },
+      {
+       "nombre": "Alto del Carmen 40° High Berries",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.800",
+        "CORTO XL [150 cc]": "$ 7.700"
+       }
+      },
+      {
+       "nombre": "Alto del Carmen 40°",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.800",
+        "CORTO XL [150 cc]": "$ 7.700"
+       }
+      },
+      {
+       "nombre": "Sagrado Corazón 40º Transparente/Reservado",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.800",
+        "CORTO XL [150 cc]": "$ 7.700"
+       }
+      },
+      {
+       "nombre": "Republicano Añejado o Triple Destilado",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.800",
+        "CORTO XL [150 cc]": "$ 7.700"
+       }
+      },
+      {
+       "nombre": "Sagrado Corazón 35º",
+       "precios": {
+        "NORMAL [90 cc]": "$ 4.000",
+        "CORTO XL [150 cc]": "$ 6.400"
+       }
+      },
+      {
+       "nombre": "Alto del Carmen 35° Robles del Sur",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.800",
+        "CORTO XL [150 cc]": "$ 6.000"
+       }
+      },
+      {
+       "nombre": "Gobernador 35°",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.600",
+        "CORTO XL [150 cc]": "$ 5.700"
+       }
+      },
+      {
+       "nombre": "Alto del Carmen 35°",
+       "precios": {
+        "NORMAL [90 cc]": "$ 3.600",
+        "CORTO XL [150 cc]": "$ 5.700"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Vodkita",
+     "nota": "Precio del corto normal o XL\nNO INCLUYE BEBIDA",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Stoli Elit",
+       "precios": {
+        "CORTO [90 cc]": "$ 14.400",
+        "CORTO XL [150 cc]": "$ 24.000"
+       }
+      },
+      {
+       "nombre": "Grey Goose",
+       "desc": "[Tradicional o Sabores]",
+       "precios": {
+        "CORTO [90 cc]": "$ 12.000",
+        "CORTO XL [150 cc]": "$ 20.000"
+       }
+      },
+      {
+       "nombre": "Prairie",
+       "desc": "[Tradicional o Pepino]",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.000",
+        "CORTO XL [150 cc]": "$ 13.300"
+       }
+      },
+      {
+       "nombre": "Gabri / Zubrowka / Antártica",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.000",
+        "CORTO XL [150 cc]": "$ 11.700"
+       }
+      },
+      {
+       "nombre": "Carmela",
+       "desc": "[Vodka Chilote!]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.000",
+        "CORTO XL [150 cc]": "$ 11.700"
+       }
+      },
+      {
+       "nombre": "Absolut",
+       "desc": "[Absolut Blue o Sabores]",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.200",
+        "CORTO XL [150 cc]": "$ 8.400"
+       }
+      },
+      {
+       "nombre": "Mawunko",
+       "desc": "[Tradicional o Sabores]",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.000",
+        "CORTO XL [150 cc]": "$ 7.600"
+       }
+      },
+      {
+       "nombre": "Stolichnaya",
+       "desc": "[Tradicional o Pepino]",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.000",
+        "CORTO XL [150 cc]": "$ 7.600"
+       }
+      },
+      {
+       "nombre": "Wyborowa",
+       "precios": {
+        "CORTO [90 cc]": "$ 4.400",
+        "CORTO XL [150 cc]": "$ 7.000"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Ron poromponpon",
+     "nota": "Precio del corto normal o XL\nNO INCLUYE BEBIDA",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Diplomático Reserva/ Matusalem 15 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 14.000",
+        "CORTO XL [150 cc]": "$ 23.300"
+       }
+      },
+      {
+       "nombre": "Bacoo 11 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 12.400",
+        "CORTO XL [150 cc]": "$ 20.600"
+       }
+      },
+      {
+       "nombre": "Pampero Aniversario / Bacoo 7 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 11.000",
+        "CORTO XL [150 cc]": "$ 18.300"
+       }
+      },
+      {
+       "nombre": "Flor de Caña 18 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 10.800",
+        "CORTO XL [150 cc]": "$ 18.000"
+       }
+      },
+      {
+       "nombre": "Diplomático Mantuano",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.400",
+        "CORTO XL [150 cc]": "$ 15.600"
+       }
+      },
+      {
+       "nombre": "Zacapa Ambar 12 años / Bacoo 4 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.000",
+        "CORTO XL [150 cc]": "$ 13.300"
+       }
+      },
+      {
+       "nombre": "Bush Original / Maracuyá & Guayaba",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.000",
+        "CORTO XL [150 cc]": "$ 13.300"
+       }
+      },
+      {
+       "nombre": "Pampero Selección / Matusalem 7 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.700",
+        "CORTO XL [150 cc]": "$ 12.800"
+       }
+      },
+      {
+       "nombre": "Havana 7 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.400",
+        "CORTO XL [150 cc]": "$ 12.300"
+       }
+      },
+      {
+       "nombre": "Kraken",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.200",
+        "CORTO XL [150 cc]": "$ 10.200"
+       }
+      },
+      {
+       "nombre": "Flor de Caña 12 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.900",
+        "CORTO XL [150 cc]": "$ 9.800"
+       }
+      },
+      {
+       "nombre": "Plantation",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.400",
+        "CORTO XL [150 cc]": "$ 9.000"
+       }
+      },
+      {
+       "nombre": "Flor de Caña Coco o Spresso",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.000",
+        "CORTO XL [150 cc]": "$ 8.300"
+       }
+      },
+      {
+       "nombre": "Malibu (ron sabor coco)",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.000",
+        "CORTO XL [150 cc]": "$ 8.300"
+       }
+      },
+      {
+       "nombre": "Flor de Caña 5 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 4.500",
+        "CORTO XL [150 cc]": "$ 7.500"
+       }
+      },
+      {
+       "nombre": "Havana Añejo Especial",
+       "precios": {
+        "CORTO [90 cc]": "$ 4.500",
+        "CORTO XL [150 cc]": "$ 7.500"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Whiscachos",
+     "nota": "Empezamos con la selección de lo más pituqueli que tenemos, estos vienen en cortos de 2 oz [60 ml]",
+     "nota_pie": "Los whiscachos no incluyen bebida pal que le guste tomarlo puritano",
+     "items": [
+      {
+       "nombre": "Johnnie Walker Blue Label",
+       "desc": "Blended [Escocia], su mezcla es muy selecta: sólo uno de cada diez mil barriles sirve para crear el Etiqueta Azul.",
+       "precio": "$ 65.000"
+      },
+      {
+       "nombre": "The Dalmore Single Malt 12 años",
+       "desc": "Highland Single Malt [Escocia], envejece los primeros 9 años en barricas de bourbon de roble blanco americano, luego la mitad se transfiere a toneles de jerez los últimos 3 años.",
+       "precio": "$ 32.000"
+      },
+      {
+       "nombre": "Glenfiddich Single Malt 18 años",
+       "desc": "Whisky escocés, preparado en barricas de jerez y bourbon por 18 años, para después mezclarse en pequeñas barricas numeradas, lo que otorga una complejidad única",
+       "precio": "$ 28.000"
+      },
+      {
+       "nombre": "Macallan Sherry Oak 12 años",
+       "desc": "Highland Single Malt [Escocia] Madura exclusivamente en barricas de roble europeo que tuvieron jerez oloroso. Sabor intenso, con aromas de jerez, miel, vainilla y roble especiado",
+       "precio": "$ 27.000"
+      },
+      {
+       "nombre": "Macallan Double Cask 12 años",
+       "desc": "Highland Single Malt [Escocia] Madura en barricas de roble americano y europeo que tuvieron jerez oloroso. Sabor equilibrado y ligero: notas de vainilla, especias, cítricos, jengibre y miel.",
+       "precio": "$ 26.100"
+      }
+     ]
+    },
+    {
+     "titulo": "Blended",
+     "padre": "Whiscachos",
+     "nota": "Elija su medida 90 o 150 cc!",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Akashi Japanese blended whisky",
+       "precios": {
+        "CORTO [90 cc]": "$ 22.400",
+        "CORTO XL [150 cc]": "$ 37.300"
+       }
+      },
+      {
+       "nombre": "Johnnie Walker Gold Label",
+       "precios": {
+        "CORTO [90 cc]": "$ 16.000",
+        "CORTO XL [150 cc]": "$ 26.600"
+       }
+      },
+      {
+       "nombre": "Johnnie Walker Swing 18 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 15.200",
+        "CORTO XL [150 cc]": "$ 25.300"
+       }
+      },
+      {
+       "nombre": "Johnnie Walker Black Label",
+       "precios": {
+        "CORTO [90 cc]": "$ 10.800",
+        "CORTO XL [150 cc]": "$ 18.000"
+       }
+      },
+      {
+       "nombre": "Monkey Shoulder",
+       "desc": "[Blended]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.800",
+        "CORTO XL [150 cc]": "$ 16.300"
+       }
+      },
+      {
+       "nombre": "Ballantines Wild",
+       "desc": "[sabor cereza]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.000",
+        "CORTO XL [150 cc]": "$ 11.600"
+       }
+      },
+      {
+       "nombre": "Johnnie Walker Red Label",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.000",
+        "CORTO XL [150 cc]": "$ 8.300"
+       }
+      },
+      {
+       "nombre": "Grants Blended Scotch",
+       "precios": {
+        "CORTO [90 cc]": "$ 4.700",
+        "CORTO XL [150 cc]": "$ 7.800"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Irish",
+     "padre": "Whiscachos",
+     "nota": "Elija su medida 90 o 150 cc!",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "The Dead Rabbit Irish whiskey",
+       "precios": {
+        "CORTO [90 cc]": "$ 14.200",
+        "CORTO XL [150 cc]": "$ 23.600"
+       }
+      },
+      {
+       "nombre": "Jameson Irish whiskey",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.800",
+        "CORTO XL [150 cc]": "$ 11.300"
+       }
+      },
+      {
+       "nombre": "Tullamore Dew Irish whiskey",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "CORTO XL [150 cc]": "$ 10.000"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Single Malt",
+     "padre": "Whiscachos",
+     "nota": "Elija su medida 90 o 150 cc!",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Bruichladdich Classic Laddie",
+       "desc": "[Islay Single Malt]",
+       "precios": {
+        "CORTO [90 cc]": "$ 26.000",
+        "CORTO XL [150 cc]": "$ 43.000"
+       }
+      },
+      {
+       "nombre": "Glenfiddich Single Malt 15 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 27.000",
+        "CORTO XL [150 cc]": "$ 45.000"
+       }
+      },
+      {
+       "nombre": "Glenfiddich Single Malt 12 años",
+       "precios": {
+        "CORTO [90 cc]": "$ 11.200",
+        "CORTO XL [150 cc]": "$ 18.600"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Bourbon / Tennessee",
+     "padre": "Whiscachos",
+     "nota": "Elija su medida 90 o 150 cc!",
+     "columnas": [
+      "CORTO [90 cc]",
+      "CORTO XL [150 cc]"
+     ],
+     "items": [
+      {
+       "nombre": "Jack Daniel’s Single Barrel",
+       "precios": {
+        "CORTO [90 cc]": "$ 20.200",
+        "CORTO XL [150 cc]": "$ 33.600"
+       }
+      },
+      {
+       "nombre": "Woodford Reserve",
+       "precios": {
+        "CORTO [90 cc]": "$ 13.000",
+        "CORTO XL [150 cc]": "$ 21.600"
+       }
+      },
+      {
+       "nombre": "Jack Daniel’s Gentleman",
+       "precios": {
+        "CORTO [90 cc]": "$ 11.800",
+        "CORTO XL [150 cc]": "$ 19.600"
+       }
+      },
+      {
+       "nombre": "Ole Smoky Tennessee",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.400",
+        "CORTO XL [150 cc]": "$ 15.600"
+       }
+      },
+      {
+       "nombre": "Jack Daniel’s 7 / Honey / Fire / Apple",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.200",
+        "CORTO XL [150 cc]": "$ 15.300"
+       }
+      },
+      {
+       "nombre": "Bulleit Bourbon",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.000",
+        "CORTO XL [150 cc]": "$ 13.300"
+       }
+      },
+      {
+       "nombre": "Wild Turkey / American Honey",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.800",
+        "CORTO XL [150 cc]": "$ 11.300"
+       }
+      },
+      {
+       "nombre": "Evan Williams",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "CORTO XL [150 cc]": "$ 10.000"
+       }
+      },
+      {
+       "nombre": "Jim Beam Bourbon",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.800",
+        "CORTO XL [150 cc]": "$ 9.600"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Amamos el GIN!",
+     "nota": "Puede pedir un corteli o el gin&tonic que viene con una tónica Fentimans [200 ml]\nVariedades: tónica tradicional, rose limonade o valencian orange",
+     "columnas": [
+      "CORTO [90 cc]",
+      "GIN & TONIC"
+     ],
+     "items": [
+      {
+       "nombre": "Matsui The Hakuto",
+       "desc": "[Japón, 47°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 21.700",
+        "GIN & TONIC": "$ 25.400"
+       }
+      },
+      {
+       "nombre": "Mary Le Bone",
+       "desc": "[Inglaterra, 51,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 21.700",
+        "GIN & TONIC": "$ 25.400"
+       }
+      },
+      {
+       "nombre": "Citadelle Old Tom",
+       "desc": "[Francia, 46°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 17.400",
+        "GIN & TONIC": "$ 21.100"
+       }
+      },
+      {
+       "nombre": "The Botanist",
+       "desc": "[Escocia, 46°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 16.800",
+        "GIN & TONIC": "$ 20.500"
+       }
+      },
+      {
+       "nombre": "Mare Capri",
+       "desc": "[España, 42,7°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 16.800",
+        "GIN & TONIC": "$ 20.500"
+       }
+      },
+      {
+       "nombre": "Martin Miller’s",
+       "desc": "[Inglaterra, 40°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 16.600",
+        "GIN & TONIC": "$ 20.300"
+       }
+      },
+      {
+       "nombre": "Whitley Neill Rhubarb & Ginger Gin",
+       "desc": "[Inglaterra, 43°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 16.600",
+        "GIN & TONIC": "$ 20.300"
+       }
+      },
+      {
+       "nombre": "Goodwinds",
+       "desc": "[Chile, 42°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 15.000",
+        "GIN & TONIC": "$ 18.700"
+       }
+      },
+      {
+       "nombre": "Mare",
+       "desc": "[España, 42,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 15.000",
+        "GIN & TONIC": "$ 18.700"
+       }
+      },
+      {
+       "nombre": "London n°1",
+       "desc": "[Inglaterra, 47°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 14.000",
+        "GIN & TONIC": "$ 17.700"
+       }
+      },
+      {
+       "nombre": "Mombasa",
+       "desc": "[España, 41,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 13.200",
+        "GIN & TONIC": "$ 16.900"
+       }
+      },
+      {
+       "nombre": "Mombasa Frutilla",
+       "desc": "[España, 37,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 13.200",
+        "GIN & TONIC": "$ 16.900"
+       }
+      },
+      {
+       "nombre": "Citadelle",
+       "desc": "[Francia, 44°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 12.400",
+        "GIN & TONIC": "$ 16.100"
+       }
+      },
+      {
+       "nombre": "Luxardo",
+       "desc": "[Italia, 43°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 11.800",
+        "GIN & TONIC": "$ 15.500"
+       }
+      },
+      {
+       "nombre": "Bloom",
+       "desc": "[Inglaterra, 46°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 11.400",
+        "GIN & TONIC": "$ 15.100"
+       }
+      },
+      {
+       "nombre": "Hendrick’s",
+       "desc": "[Escocia, 41,4°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 10.900",
+        "GIN & TONIC": "$ 14.600"
+       }
+      },
+      {
+       "nombre": "Opihr",
+       "desc": "[Inglaterra, 42,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.900",
+        "GIN & TONIC": "$ 13.900"
+       }
+      },
+      {
+       "nombre": "Tanqueray 10",
+       "desc": "[Escocia. 47,3°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.800",
+        "GIN & TONIC": "$ 13.500"
+       }
+      },
+      {
+       "nombre": "Engine",
+       "desc": "[Italia, 42°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.800",
+        "GIN & TONIC": "$ 13.500"
+       }
+      },
+      {
+       "nombre": "Mom",
+       "desc": "[Inglaterra, 39,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.000",
+        "GIN & TONIC": "$ 12.700"
+       }
+      },
+      {
+       "nombre": "Mom Love",
+       "desc": "[Inglaterra, 37,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.000",
+        "GIN & TONIC": "$ 12.700"
+       }
+      },
+      {
+       "nombre": "Bulldog",
+       "desc": "[Inglaterra, 40°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 9.000",
+        "GIN & TONIC": "$ 12.700"
+       }
+      },
+      {
+       "nombre": "Puerto de Indias",
+       "desc": "[España, 37,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.400",
+        "GIN & TONIC": "$ 12.100"
+       }
+      },
+      {
+       "nombre": "Proa",
+       "desc": "[Chile, 45°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 8.400",
+        "GIN & TONIC": "$ 12.100"
+       }
+      },
+      {
+       "nombre": "Hayman’s Old Tom",
+       "desc": "[Inglaterra, 41,4°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.600",
+        "GIN & TONIC": "$ 11.300"
+       }
+      },
+      {
+       "nombre": "Carpintero Negro",
+       "desc": "[Chile, 42,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.400",
+        "GIN & TONIC": "$ 11.100"
+       }
+      },
+      {
+       "nombre": "Tanqueray Royale",
+       "desc": "[Escocia, 41,3°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.200",
+        "GIN & TONIC": "$ 10.900"
+       }
+      },
+      {
+       "nombre": "La República Amazónica / Andina",
+       "desc": "[Bolivia, 42°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 7.000",
+        "GIN & TONIC": "$ 10.700"
+       }
+      },
+      {
+       "nombre": "Tanqueray Bossa Nova",
+       "desc": "Escocia, 30°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.800",
+        "GIN & TONIC": "$ 10.500"
+       }
+      },
+      {
+       "nombre": "Tanqueray Sevilla",
+       "desc": "[Escocia, 41,3°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.800",
+        "GIN & TONIC": "$ 10.500"
+       }
+      },
+      {
+       "nombre": "Mawunko",
+       "desc": "[Chiloé-Chile, 40°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.600",
+        "GIN & TONIC": "$ 10.300"
+       }
+      },
+      {
+       "nombre": "Gabri",
+       "desc": "[Chile, 40°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.400",
+        "GIN & TONIC": "$ 10.100"
+       }
+      },
+      {
+       "nombre": "Quintal Andes / Franklin",
+       "desc": "[Chile, 43°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.400",
+        "GIN & TONIC": "$ 10.100"
+       }
+      },
+      {
+       "nombre": "Tanqueray",
+       "desc": "[Escocia, 43,1°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.400",
+        "GIN & TONIC": "$ 10.100"
+       }
+      },
+      {
+       "nombre": "Beefeater Pink",
+       "desc": "[Inglaterra, 35,7°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.400",
+        "GIN & TONIC": "$ 10.100"
+       }
+      },
+      {
+       "nombre": "Beefeater Blood Orange",
+       "desc": "[Inglaterra, 35,7°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "GIN & TONIC": "$ 9.700"
+       }
+      },
+      {
+       "nombre": "Beefeater",
+       "desc": "[Inglaterra, 40°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "GIN & TONIC": "$ 9.700"
+       }
+      },
+      {
+       "nombre": "Bombay Bramble",
+       "desc": "[Inglaterra, 37,5°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "GIN & TONIC": "$ 9.700"
+       }
+      },
+      {
+       "nombre": "Bombay Sapphire",
+       "desc": "[Inglaterra, 47°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 6.000",
+        "GIN & TONIC": "$ 9.700"
+       }
+      },
+      {
+       "nombre": "Faraway",
+       "desc": "[Chile - Chiloé, 42°]",
+       "precios": {
+        "CORTO [90 cc]": "$ 5.500",
+        "GIN & TONIC": "$ 9.200"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Tequilazos & mezcalazos",
+     "nota": "Shot de 75 cc acompañado de limón & sal",
+     "items": [
+      {
+       "nombre": "Mezcal Legendario Domingo",
+       "precio": "$ 12.900"
+      },
+      {
+       "nombre": "Mezcal 400 Conejos",
+       "precio": "$ 11.500"
+      },
+      {
+       "nombre": "Mezcal La del Bateo",
+       "precio": "$ 8.500"
+      },
+      {
+       "nombre": "Tequila Don Julio",
+       "desc": "[Blanco]",
+       "precio": "$ 13.400"
+      },
+      {
+       "nombre": "Tequila Herradura Añejo",
+       "precio": "$ 10.500"
+      },
+      {
+       "nombre": "Tequila Butterfly",
+       "desc": "[Blue, Rosa o Silver Cristalino]",
+       "precio": "$ 8.200"
+      },
+      {
+       "nombre": "Tequila Cazadores",
+       "desc": "[Blanco o Reposado]",
+       "precio": "$ 5.500"
+      },
+      {
+       "nombre": "Tequila Jimador",
+       "desc": "[Blanco o Reposado]",
+       "precio": "$ 5.200"
+      },
+      {
+       "nombre": "Tequila Olmeca",
+       "desc": "[Blanco o Reposado]",
+       "precio": "$ 4.500"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vinos-espumantes",
+   "titulo": "Vinos & espumantes",
+   "fuente": "CARTA-6",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": "Tintelis",
+     "items": [
+      {
+       "nombre": "Las Mulas",
+       "desc": "Carménère / Vino 100% orgánico & vegano",
+       "precio": "$ 15.000",
+       "nota": "[Valle Central]",
+       "bodega": "Miguel Torres"
+      },
+      {
+       "nombre": "Presumido",
+       "desc": "Carménère",
+       "precio": "$ 25.900",
+       "nota": "[Valle Central]",
+       "bodega": "Casa Bauzá"
+      },
+      {
+       "nombre": "Royale",
+       "desc": "Carménère",
+       "precio": "$ 30.900",
+       "nota": "[Valle de Colchagua]",
+       "bodega": "Koyle"
+      },
+      {
+       "nombre": "Atrevido",
+       "desc": "Mezcla Tinta",
+       "precio": "$ 31.900",
+       "nota": "[Valle del Maipo]",
+       "bodega": "Casa Bauzá"
+      },
+      {
+       "nombre": "Gran Reserva",
+       "desc": "Merlot",
+       "precio": "$ 18.000",
+       "nota": "[Valle del Maipo]",
+       "bodega": "Santa Ema"
+      },
+      {
+       "nombre": "Grand Selection",
+       "desc": "Cabernet Sauvignon",
+       "precio": "$ 18.000",
+       "nota": "[Valle de Colchagua]",
+       "bodega": "Lapostolle"
+      },
+      {
+       "nombre": "Portillo",
+       "desc": "Malbec",
+       "precio": "$ 18.000",
+       "nota": "[Valle de Uco, Mendoza]",
+       "bodega": "Salentein"
+      },
+      {
+       "nombre": "First Edition",
+       "desc": "Syrah",
+       "precio": "$ 19.500",
+       "nota": "[Valle de Cachapoal]",
+       "bodega": "Valle Secreto"
+      }
+     ]
+    },
+    {
+     "titulo": "Blanquelis",
+     "items": [
+      {
+       "nombre": "Santa Digna",
+       "desc": "Chardonnay o Sauvignon Blanc",
+       "precio": "$ 15.000",
+       "nota": "[Valle Central]",
+       "bodega": "Miguel Torres"
+      },
+      {
+       "nombre": "Boya",
+       "desc": "Chardonnay",
+       "precio": "$ 16.900",
+       "nota": "[Valle de Leyda / San Antonio]",
+       "bodega": "Garcés Silva"
+      }
+     ]
+    },
+    {
+     "titulo": "Espumantes",
+     "items": [
+      {
+       "nombre": "Miguel Torres Estelado Brut Rosé",
+       "precio": "$ 19.000"
+      },
+      {
+       "nombre": "Undurraga Brut",
+       "precio": "$ 12.000"
+      },
+      {
+       "nombre": "Undurraga Free Rosé",
+       "precio": "$ 12.000",
+       "nota": "[sin alcohol]"
+      }
+     ]
+    },
+    {
+     "titulo": "Por copa",
+     "items": [
+      {
+       "nombre": "Undurraga Brut",
+       "desc": "Espumante",
+       "precio": "$ 4.500",
+       "nota": "[botellita 187 cc]"
+      },
+      {
+       "nombre": "Santa Digna",
+       "desc": "Carménère / Cabernet Sauvignon / Sauvignon Blanc",
+       "precio": "$ 4.500",
+       "nota": "[botellita 187 cc]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mocktails-sin-alcohol",
+   "titulo": "Mocktails sin alcohol",
+   "fuente": "CARTA-5",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": "Mocktails de la casa",
+     "nota": "COCTELCITOS SIN ALCOHOL",
+     "items": [
+      {
+       "nombre": "Otra cosa mariposa",
+       "desc": "Si te gusta el café, este te hará llegar al cielo!: extracción de café en frío, jugo de maracuyá, jarabe de canela y ginger ale",
+       "precio": "$ 6.400"
+      },
+      {
+       "nombre": "La moto chantá",
+       "desc": "Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino! [El vasito va con crusta de sal]",
+       "precio": "$ 6.400"
+      },
+      {
+       "nombre": "Embolinando la perdiz",
+       "desc": "Un poco más cítrico y sobretodo refrescante: jugo de pomelo y manzana, miel, limón y menta!",
+       "precio": "$ 5.900"
+      },
+      {
+       "nombre": "Soy una limonhada",
+       "desc": "Refrescante como una limonada, pero con un toque mágico! Jugo de apio, jugo de manzana, jarabe y limón.",
+       "precio": "$ 6.200"
+      },
+      {
+       "nombre": "Efecto placebo",
+       "desc": "Rico rico: jugo de frambuesa, jugo de maracuyá, jarabe, limón, menta y rematamos con tónica",
+       "precio": "$ 6.400"
+      },
+      {
+       "nombre": "Six Seven",
+       "desc": "Dulcecito, sencillo y muy delicioso: Jugo de piña, jarabe de almendras y el infaltable toque del limón!",
+       "precio": "$ 5.900"
+      }
+     ]
+    },
+    {
+     "titulo": "Mocktails clásicos",
+     "items": [
+      {
+       "nombre": "Sangría sin alcohol, olé!",
+       "precio": "$ 6.600"
+      },
+      {
+       "nombre": "Ramazzotti Spritz sin copetín!",
+       "desc": "[Zerozotti]",
+       "precio": "$ 6.200"
+      },
+      {
+       "nombre": "Piña colada virginsísima",
+       "precio": "$ 6.400"
+      },
+      {
+       "nombre": "Mojito sin alcohol",
+       "desc": "[Puedes pedirlo con miel, jengibre o maracuyá]",
+       "precio": "$ 4.900"
+      },
+      {
+       "nombre": "Pisco sagüer sin alcohol",
+       "desc": "[Puedes pedirlo con miel, jengibre o maracuyá]",
+       "precio": "$ 5.900"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jugos-bebidas",
+   "titulo": "Jugos & bebidas",
+   "fuente": "CARTA-5",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": null,
+     "items": [
+      {
+       "nombre": "Jugos de pulpa",
+       "precio": "$ 3.000"
+      },
+      {
+       "nombre": "Limonada",
+       "desc": "[Puedes pedirla con miel, menta y/o jengibre]",
+       "precio": "$ 3.500"
+      },
+      {
+       "nombre": "Bebidas gaseosas",
+       "precio": "$ 2.400"
+      },
+      {
+       "nombre": "Agua sin gas Puyehue",
+       "desc": "[330 cc]",
+       "precio": "$ 2.300"
+      },
+      {
+       "nombre": "Perrier agua con gas",
+       "desc": "[330 cc]",
+       "precio": "$ 2.300"
+      },
+      {
+       "nombre": "Acqua Panna / S.Pellegrino",
+       "desc": "[505 cc]",
+       "precio": "$ 3.000"
+      },
+      {
+       "nombre": "Red Bull",
+       "desc": "[Regular, Tropical, Fruta del Dragón, light ]",
+       "precio": "$ 3.500"
+      },
+      {
+       "nombre": "Tónicas Fentimans",
+       "desc": "[200 cc]",
+       "precio": "$ 3.700"
+      },
+      {
+       "nombre": "Espumante",
+       "desc": "[Undurraga Free Rosé / 750 cc ]",
+       "precio": "$ 12.000"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cervezas-sin-alcohol",
+   "titulo": "Cervezas sin alcohol",
+   "fuente": "CARTA-5",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": null,
+     "items": [
+      {
+       "nombre": "Peroni 0°",
+       "precio": "$ 3.600"
+      },
+      {
+       "nombre": "Heineken 0°",
+       "precio": "$ 3.600"
+      },
+      {
+       "nombre": "Mahou 0°",
+       "precio": "$ 4.900"
+      },
+      {
+       "nombre": "Extra michelada",
+       "precio": "$ 1.500"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bebidas-calientes",
+   "titulo": "Bebidas calientes",
+   "fuente": "CARTA-5",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": null,
+     "items": [
+      {
+       "nombre": "Espresso / Americano",
+       "precio": "$ 2.500"
+      },
+      {
+       "nombre": "Té / Infusiones",
+       "precio": "$ 2.200"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "comilona",
+   "titulo": "Comilona",
+   "fuente": "CARTA-1",
+   "intro": null,
+   "grupos": [
+    {
+     "titulo": "Picoteos",
+     "items": [
+      {
+       "nombre": "Aceitunas",
+       "desc": "Porción de aceitunas aliñaditas ricas delichus!",
+       "precio": "$ 6.500",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Tukulito Sakayama",
+       "desc": "Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.",
+       "precio": "$ 15.900"
+      },
+      {
+       "nombre": "Una cosa poca",
+       "desc": "Que tan poca cosa no es! Este es como le fondiú franchuto pero más mejor porque es shileno!: mix de quesos con tomatito al horno, palta y pesto. Acompañado de pancito de la casa! Real manjarsh!",
+       "precio": "$ 11.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "La carne es débil",
+       "desc": "Muy sabrosón & jugosito: carne de res, champiñones y tomate cherry, salteados en oliva y ajo, con un toque de paprika y cilantro. Acompañado de pancito de la casa!",
+       "precio": "$ 11.900"
+      },
+      {
+       "nombre": "Con tuti si no pa qué!",
+       "desc": "[Versión 2.0] Especial pa compartir: champis salteados en mantequilla y nuez moscada, paltita con aceite de ajo y pimentón asado, queso de cabra, queso de campo, aceitunas, tomatito cherry, frutos secos, fruta de la temporada, nuestra deliciosa salsa ajo cilantro y pancito de la casa!",
+       "precio": "$ 19.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "A ponerle wendy!",
+       "desc": "Entre ponerle y no ponerle [mejor ponerle!]: carne, pollo, champis, tomate en gajos y cebolla, todo salteado con aceite de ajo, queso de cabra y de campo, pepinos y ají encurtidos de la casa, jamón serrano crudo y crispy, pebrecito, nuestra deliciosa salsa ajo cilantro y pancito de la casa!",
+       "precio": "$ 26.700"
+      },
+      {
+       "nombre": "Eres tan exótica",
+       "desc": "Esta mezcla recuerda la comida al estilo thai: camarones y pollo en un cremosito menjunje de curry verde, leche de coco, cebolla morada, humus y cilantro. Acompañado de pancito de la casa. Pa paladares exóticos y singulares :)",
+       "precio": "$ 16.500"
+      },
+      {
+       "nombre": "Todo que ver!",
+       "desc": "Este es un cevichito pa chuparse el bigoteli. Atún rojo, pimentón amarillo, palta, cebolla morá, piña y rematamos con cilantro. El pescadín está aliñado con tremenda injundia basada en leche de coco, curry verde, y limón sutil. Va con pan de la casa!",
+       "precio": "$ 16.000"
+      }
+     ]
+    },
+    {
+     "titulo": "Greditas",
+     "nota": "Base de papas en cubitos, al horno. Macanúo pa compartir!",
+     "items": [
+      {
+       "nombre": "Campestre",
+       "desc": "Este gustoso menjunje combina puras cosas güenazas: champiñones, parmesano, pesto, crema y hierbas. Rematamos con pimentón rojo asado",
+       "precio": "$ 13.500",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Camarón que se duerme",
+       "desc": "Delichus mix: camarones, mezclado con queso crema, cebollín, cilantro, champiñones, jengibre desglasado con vino blanco",
+       "precio": "$ 15.900"
+      },
+      {
+       "nombre": "Muéveme el pollo",
+       "desc": "Medio dulzón y muy sabrosón: pollito, crema, nuestra rica pomodoro, curry, maní tostado y salsa teriyaki casera [También en versión veggie]",
+       "precio": "$ 14.900"
+      }
+     ]
+    },
+    {
+     "titulo": "Sanguches",
+     "nota_pie": "Todas las salsitas de nuestros sanguches están elaboradas por nosotros, van con pan de masa mami y mucho amor",
+     "items": [
+      {
+       "nombre": "Chambreao",
+       "desc": "Hamburguesa 100% vacuno, queso de campo, cebolla caramelizada, hojas verdes de temporada, pepinillo dill del Almudcito y salsa barbacoa-bourbon casera. En pan de hamburguesa de masa mami.",
+       "precio": "$ 10.900"
+      },
+      {
+       "nombre": "Hamburguesa Almud",
+       "desc": "Hamburguesa de lentejas de la casa muy sabrosa!, palta fileteada, tomatito, mix verde de temporada y salsa ajo cilantro en base a acquafaba. En pan de hamburguesa de masa mami.",
+       "precio": "$ 8.900",
+       "tags": [
+        "veggie",
+        "vegan"
+       ]
+      },
+      {
+       "nombre": "Cabrone",
+       "desc": "Quesito de cabra, palta fileteada, pimentón rojo asado, hojas verdes de temporada y salsa ajo cilantro en base a acquafaba. En pan ciabatta de masa mami.",
+       "precio": "$ 9.500",
+       "tags": [
+        "veggie"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Pizzas artesanales",
+     "nota": "Con base de pomodoro casera y queso mozzarella",
+     "nota_pie": "Las masas de nuestras pizzas son hechas por nosotros! puedes pedir cualquiera miti mota, menos la Zorrona, la Terrible Pollo y la Blanquita",
+     "items": [
+      {
+       "nombre": "Trufona",
+       "desc": "Menjunje de hongos al vino tinto y aceite de trufa",
+       "precio": "$ 13.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Caprichosa",
+       "desc": "Queso de cabra, nueces, aceitunas, cilantro y aceite de cilantro",
+       "precio": "$ 15.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Huerta sabrosa",
+       "desc": "Tomate cherry, champiñones, hojas verdes de temporada y salsa ajo cilantro",
+       "precio": "$ 13.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Chanchito azul",
+       "desc": "Queso azul, jamón serrano y aceite de ajo",
+       "precio": "$ 15.900"
+      },
+      {
+       "nombre": "Blanquita",
+       "desc": "Esta no tiene pomodoro, es una pizza blanca: base de crema, mozzarella, palta fileteada, cebolla caramelizada, ají verde y un toque de merkén!",
+       "precio": "$ 14.500",
+       "tags": [
+        "veggie",
+        "picante"
+       ]
+      },
+      {
+       "nombre": "Tartufita",
+       "desc": "Quesito de cabra, tomate, pimentón rojo asado y un toque sabrosón de aceite de trufa. Una delicia!",
+       "precio": "$ 15.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Cabras a la higuera",
+       "desc": "Queso de cabra, higos, tomate cherry glaseado y reducción de aceto balsámico.",
+       "precio": "$ 15.900",
+       "tags": [
+        "veggie"
+       ]
+      },
+      {
+       "nombre": "Zorrona",
+       "desc": "Carne en trozos [200 grs asiento], cebolla morada, ajo, champiñones y hojas verdes de temporada",
+       "precio": "$ 16.900"
+      },
+      {
+       "nombre": "Terrible pollo",
+       "desc": "Pollito en cubos salteado en pesto, queso crema y un toque de vino blanco, además lleva tomate, cebolla caramelizada, champiñones y hojas verdes de temporada",
+       "precio": "$ 16.900"
+      }
+     ]
+    },
+    {
+     "titulo": "Pa los chichichos",
+     "nota": "[Para menores hasta 12 años]",
+     "items": [
+      {
+       "nombre": "Pollito pío",
+       "desc": "Dados de pollito salteado, acompañado de palta fileteada",
+       "precio": "$ 7.500"
+      },
+      {
+       "nombre": "Bartolito",
+       "desc": "Pizza de 30 cms diámetro. Base de pomodoro, mozzarella, tomate y aceitunas.",
+       "precio": "$ 9.900"
+      },
+      {
+       "nombre": "La vaca Lola",
+       "desc": "Hamburguesa casera 100% vacuno con queso derretido y tomate. En pan de hamburguesa de masa mami!",
+       "precio": "$ 8.900"
+      }
+     ]
+    },
+    {
+     "titulo": "Somos dulzones",
+     "items": [
+      {
+       "nombre": "Pizza dulzona",
+       "desc": "Ideal para compartir! Es una pizza, pero dulce, está super delichus! Pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas y hojitas de menta.",
+       "precio": "$ 12.500"
+      },
+      {
+       "nombre": "Topiturrón",
+       "desc": "[Reloaded] Turrón de chocolate con galletas y nueces, gel de naranja y arándanos, acompañado de un sorbete de frutos rojos sobre tierra de galletas y almendras",
+       "precio": "$ 6.900"
+      },
+      {
+       "nombre": "Crumblecito ito ito",
+       "desc": "Este es un postre calientito! Crumble de manzana, chips de chocolate, almendras y nueces, acompañado con heladito de pepino de la casa, que además de ser delichussss, da un toque refrescante",
+       "precio": "$ 5.900"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nuestras-promos",
+   "titulo": "Nuestras promos",
+   "fuente": "CARTA-7",
+   "intro": "ALMUDCITO PROMOS",
+   "grupos": [
+    {
+     "titulo": null,
+     "nota": "de 18:00 a 22:00 hrs",
+     "nota_pie": "* Siempre sujeto a stock! *",
+     "items": [
+      {
+       "nombre": "Negroni & Fernet c/Coca Cola",
+       "precio": "$ 4.500",
+       "dia": "Martes",
+       "dia_n": 2
+      },
+      {
+       "nombre": "Piscolein & Gin Tonic",
+       "precio": "$ 4.500",
+       "dia": "Miércoles",
+       "dia_n": 3
+      },
+      {
+       "nombre": "Sangría de la casa",
+       "precio": "$ 4.500",
+       "dia": "Jueves",
+       "dia_n": 4
+      },
+      {
+       "nombre": "Ramón",
+       "precio": "$ 4.500",
+       "dia": "Sábado",
+       "dia_n": 6,
+       "texto": "Ramón a $ 4.500!"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
