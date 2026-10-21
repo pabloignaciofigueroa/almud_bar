@@ -1,0 +1,25 @@
+{
+ "menu": {
+  "bursts": 40,
+  "inconsistent": [],
+  "after_escape": {
+   "exp": "false",
+   "open": false,
+   "vis": "hidden",
+   "lock": false
+  }
+ },
+ "third_party_before_map_click": [],
+ "map_iframe": true,
+ "third_party_after_click": true,
+ "next_event": [
+  "Octubre | Este mes | "
+ ],
+ "carta_key": {
+  "tab": "mundo",
+  "kb": true,
+  "tr": "0s",
+  "bg": "rgb(32, 35, 228)"
+ },
+ "carta_h_anim": false
+}

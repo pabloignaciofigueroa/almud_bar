@@ -62,35 +62,71 @@
     if (vio) vio.observe(box);
   });
 
+  /* el color dominante y el LQIP solo hacen falta mientras la foto carga */
+  const done = (i) => { i.style.background = 'none'; };
+  $$('.f img, .cover-img img').forEach((i) => { if (i.complete && i.naturalWidth) done(i); else i.addEventListener('load', () => done(i), { once: true }); });
+
   const saved = store.get('almud-lang');
   if (saved === 'en' || root.lang === 'en') setLang('en', false);
 
-  /* ───────── menú del teléfono: clip-path 400 ms drawer, cierre 250 ms; Escape y teclado sin animación ───────── */
+  /* ───────── menú del teléfono (crítica 1, P0) ─────────
+     El estado vive en una clase (.abierta) y el CSS hace una transición de clip-path: 400 ms drawer al abrir, 250 ms al cerrar,
+     interrumpible desde el valor actual. No hay animationend ni temporizadores: abrir, cerrar y reabrir rápido no deja
+     manejadores pendientes que oculten la hoja. Teclado, Escape y enlaces de la hoja: instantáneo (.al-instante). */
   const mb = $('.menu-b'), hoja = $('#hoja');
   let byKey = false;
   d.addEventListener('keydown', () => { byKey = true; }, true);
   d.addEventListener('pointerdown', () => { byKey = false; }, true);
-  function openMenu() {
-    hoja.hidden = false;
-    hoja.classList.remove('cierra');
-    if (!byKey && !reduce.matches) { hoja.classList.add('abre'); }
-    mb.setAttribute('aria-expanded', 'true');
-    root.classList.add('hoja-on');
-    const first = $('a', hoja); if (first) first.focus({ preventScroll: true });
-  }
-  function closeMenu(instant) {
-    mb.setAttribute('aria-expanded', 'false');
-    root.classList.remove('hoja-on');
-    hoja.classList.remove('abre');
-    if (instant || byKey || reduce.matches) { hoja.hidden = true; return; }
-    hoja.classList.add('cierra');
-    hoja.addEventListener('animationend', () => { hoja.classList.remove('cierra'); hoja.hidden = true; }, { once: true });
+  function setMenu(open, instant) {
+    if (!mb || !hoja) return;
+    const now = instant || byKey;
+    if (now) hoja.classList.add('al-instante');
+    hoja.classList.toggle('abierta', open);
+    mb.setAttribute('aria-expanded', String(open));
+    root.classList.toggle('hoja-on', open);
+    if (now) { void hoja.offsetWidth; hoja.classList.remove('al-instante'); }
+    if (open) { const first = $('a', hoja); if (first) first.focus({ preventScroll: true }); }
   }
   if (mb && hoja) {
-    mb.addEventListener('click', () => (mb.getAttribute('aria-expanded') === 'true' ? closeMenu(false) : openMenu()));
-    $$('a', hoja).forEach((a) => a.addEventListener('click', () => closeMenu(true)));
-    d.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { closeMenu(true); mb.focus(); } });
-    matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) closeMenu(true); });
+    hoja.hidden = false;  /* sin JS la hoja queda oculta con [hidden]; con JS la ocultan visibility y clip-path */
+    mb.addEventListener('click', () => setMenu(mb.getAttribute('aria-expanded') !== 'true', false));
+    $$('a', hoja).forEach((a) => a.addEventListener('click', () => setMenu(false, true)));
+    d.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { setMenu(false, true); mb.focus(); } });
+    matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) setMenu(false, true); });
+  }
+
+  /* ───────── mapa: el iframe de Google Maps se crea solo al tocar "Ver mapa" (ningún pedido a terceros antes) ───────── */
+  const mapa = $('.mapa');
+  if (mapa) {
+    const a = $('.mapa-b', mapa);
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const f = d.createElement('iframe');
+      f.src = mapa.dataset.mapa;
+      f.title = root.lang === 'en' ? mapa.dataset.titleEn : mapa.dataset.titleEs;
+      f.loading = 'eager';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.setAttribute('allowfullscreen', '');
+      mapa.classList.add('cargado');
+      a.replaceWith(f);
+      f.focus({ preventScroll: true });
+    });
+  }
+
+  /* ───────── eventos: el próximo mes con evento, según la fecha en America/Santiago ─────────
+     Mismo mecanismo que Hoy en Almud. Sin JS (o si Intl falla) no se marca nada y el calendario queda completo. */
+  const cal = $$('.cal li[data-mes]');
+  if (cal.length) {
+    try {
+      const m = +new Intl.DateTimeFormat('en-US', { timeZone: 'America/Santiago', month: 'numeric' }).format(new Date());
+      const months = [...new Set(cal.map((li) => +li.dataset.mes))].sort((x, y) => x - y);
+      const next = months.find((x) => x >= m) || months[0];
+      cal.filter((li) => +li.dataset.mes === next).forEach((li) => {
+        li.classList.add('es-prox');
+        const tag = $(next === m ? '.ev-este' : '.ev-prox', li);
+        if (tag) tag.hidden = false;
+      });
+    } catch (e) { /* sin Intl con zona horaria: el calendario queda sin marca */ }
   }
 
   /* ───────── reseñas: en el teléfono, tres y "Ver más reseñas" ───────── */
@@ -118,12 +154,12 @@
   }), { rootMargin: '0px 0px -12% 0px', threshold: 0 });
   $$('[data-rv]').forEach((el) => {
     if (el.closest('.hoy') || !below(el)) return;
-    el.classList.add(el.dataset.rv === 'fade' ? 'fade-arm' : 'rv-arm');
+    el.classList.add('rv-arm');
     const host = el.parentElement;
     if (!armed.has(host)) { armed.set(host, []); io.observe(host); }
     armed.get(host).push(el);
   });
-  $$('h2.display, h2.head').forEach((h) => {
+  $$('h2.display, h2.head, .firma').forEach((h) => {
     if (!$('.ln', h) || h.closest('.hoy') || !below(h)) return;
     h.classList.add('h-arm');
     armed.set(h, [h]);

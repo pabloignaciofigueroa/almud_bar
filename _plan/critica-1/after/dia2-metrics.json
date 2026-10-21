@@ -1,0 +1,14 @@
+{
+ "landing-1440": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "screens": 26,
+  "errors": [],
+  "failed": [],
+  "third_party": [],
+  "dup": [],
+  "small": [],
+  "sw": 1440,
+  "H": 22776
+ }
+}

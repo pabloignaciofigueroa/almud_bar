@@ -621,10 +621,10 @@
    "fallback": "con-quien-barra"
   },
   "hoy-sabado": {
-   "alias": "con-quien-solo",
-   "ref": "P194",
+   "alias": "con-quien-barra",
+   "ref": "P031",
    "section": "hoy",
-   "note": "Reemplaza a V051 (paneo del muro rosa, 720p): duplica el mismo plano que el loop V021 de la carta en la misma página. Respaldo declarado en el guion: P194."
+   "note": "Fase 15 (crítica 1): antes era alias de con-quien-solo (P194), que se repetía en Con quién. P031 (brindis en la barra, IG-152) no se usa en otra parte del landing."
   },
   "hoy-martes-fallback": {
    "alias": "tragos-bartender-muro-rosa",
@@ -4656,6 +4656,86 @@
    },
    "credit": "@estudiouno.prod",
    "note": "Fase 15: lámina de Vinos & espumantes (bartender sirviendo vino; no se sabe cuál)."
+  },
+  "hoy-jueves-fiesta": {
+   "ref": "P084",
+   "src": "assets/raw/ig/C_1WAXNy651_00.jpg",
+   "section": "hoy",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "alt_placeholder": "Abrazo y carcajada de clientes, fondo azul",
+   "post": "IG-082",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoTABgAPwFsrE6rJiQiMAgBYCAJQBUehDwAkEJvP6UpezeeEOEQl+eEAAD+8NGL2HCzPtux3J9ptC9W9AT6SS6B41qTqMm57pmVnjNa2X3eMOfmnuIiQAqnv9yrQ0lieVT5zh2E03NAclkAAAA=",
+     "color": "#17111c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-480.avif",
+        "bytes": 17035
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-720.avif",
+        "bytes": 28528
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-960.avif",
+        "bytes": 41078
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-1280.avif",
+        "bytes": 58563
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-480.webp",
+        "bytes": 24552
+       },
+       "720": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-720.webp",
+        "bytes": 40236
+       },
+       "960": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-960.webp",
+        "bytes": 57196
+       },
+       "1280": {
+        "path": "assets/v2/img/hoy-jueves-fiesta-a-1280.webp",
+        "bytes": 78964
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 15 (crítica 1): foto del jueves en Hoy en Almud (IG-082, «jueves de sangriita»: abrazo y carcajada). La de IG-039 (P228) queda solo para la Sangría Foreva! de los destacados y la carta: así ninguna foto se repite en el landing."
   }
  },
  "videos": {

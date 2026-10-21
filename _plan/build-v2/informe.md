@@ -239,3 +239,11 @@ Láminas sin nombre de ítem: casa loop V021 (muro rosa), mundo P086 (`tragos-so
 - `public/` se generó para probar (537 archivos, 44,0 MB, `carta/` incluida) y se restauró al HEAD (sigue en v1). Nada se commiteó ni se subió.
 - "Mocktails sin alcohol" se usa como título de la pestaña que reúne las cuatro secciones de CARTA-5 (es el título de esa carta). Glosa EN nueva: “Alcohol-free mocktails & drinks”.
 - Pendiente: confirmar con el bar si la foto de Con tuti y la de Topiturrón siguen sirviendo para la versión actual; la crítica Impeccable y la tabla de Emil de la compuerta de cierre incluyen ahora esta página.
+
+## Fase 15 · Ronda de arreglos de la crítica 1 (resumen; detalle en `_plan/critica-1/respuesta.md`)
+
+- **P189 en retina (asterisco vigente).** No hay original en alta por ahora. La portada sigue sirviendo el archivo nativo (máx. 1440 px de ancho) y nunca se muestra a más de 1440 px CSS (`--photo-max`); a DPR 1 es 1:1. A DPR ≥ 2 el navegador usa el mismo 1440w y la foto se ve a media resolución: **no tiene arreglo sin el original**. Se deja la portada como está y el original en alta queda como requisito antes de mostrársela al cliente.
+- Orden del landing según el brief: Portada, Hoy, El lugar, Los tragos (+ Sin alcohol), La comida, La carta (destacados), Con quién, **El equipo**, Reseñas, Eventos, Cuándo y dónde, pie.
+- Medios nuevos: `hoy-jueves-fiesta` (P084, IG-082, 4:5 hasta 1280, sin ampliar); `hoy-sabado` pasa a alias de `con-quien-barra` (P031). Ninguna foto se repite en el landing, en ninguno de los seis estados del día (verificado por id de medio).
+- `lugar-techo-flecos` (el único video solo MP4) sale del landing: ya no hay ningún pedido a un WebM inexistente ni un loop que no corre.
+- Etiquetas [UI] nuevas, declaradas en el guion: ‹Este mes›, ‹Próximo›, ‹Ver mapa›, ‹Mapa: Serrano 325, Castro› (título del iframe), ‹Inicio›, ‹DM›. Literal nuevo: «Viernes» [IG-003] en la semana.

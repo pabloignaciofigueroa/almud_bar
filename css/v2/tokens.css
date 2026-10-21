@@ -89,6 +89,8 @@
   --d-press: 140ms;  --d-hover: 200ms;  --d-ui: 240ms;  --d-panel: 400ms;  --d-panel-out: 250ms;
   --d-reveal: 700ms; --d-hero: 800ms;   --stagger: 40ms; --stagger-card: 60ms; --d-fade-reduced: 180ms;
   --d-tab: 200ms;    /* cambio de pestaña de la carta (Emil §6.14: opacity + 8 px; 0 ms por teclado) */
+  --d-photo: 600ms;  /* revelado de foto con clip-path (Emil §6.9) */
+  --delay-hoy-h: 240ms; --delay-hoy-foto: 360ms;  /* "la franja se imprime": titular y foto detrás del campo (contrato) */
 }
 
 @media (min-width: 700px) { :root { --cols: 8; } }

@@ -58,7 +58,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
     <li><a class="link" href="#donde" data-ui data-en="When &amp; where">Cuándo y dónde</a></li>
   </ul>
   <div class="hoja-pie">
-    <p class="num"><span data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span><br><span data-src="BIO">Serrano 325, Castro</span></p>
+    <p class="num"><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span><br><span data-src="BIO">Serrano 325, Castro</span></p>
     <div class="lang" role="group" aria-label="Idioma" data-aria-en="Language">
       <button type="button" class="lang-b" data-lang="es" lang="es" aria-pressed="true" data-ui>ES</button>
       <button type="button" class="lang-b" data-lang="en" lang="en" aria-pressed="false" data-ui>EN</button>
@@ -67,87 +67,45 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
 </div>
 
 <main>
-<!-- ============ PORTADA (ruta B, P189) ============ -->
+<!-- ============ PORTADA (ruta B, P189) ============
+     Escritorio: la lámina 1:1 anclada, tipo sobre el zinc con scrim radial (como antes).
+     Teléfono (crítica 1): la foto vive en su zona (arriba) y el tipo debajo; la línea de las caras (66 % de la foto)
+     queda siempre al borde de esa zona, así que el tipo nunca pisa una cara, mida lo que mida la pantalla. -->
 <header class="cover" id="inicio">
   <div class="cover-stage">
-    <x-img id="portada-terraza" crop="a" class="cover-img" sizes="(min-width: 900px) min(100vw, 1440px), 150vw" eager/>
-    <div class="cover-scrim"></div>
-    <div class="cover-title-box">
-      <h1 class="cover-title"><svg class="cover-logo" viewBox="1 0 1956 897" aria-hidden="true"><use href="#logo-h"/></svg><span class="vh" data-ui>Almud Bar</span></h1>
+    <div class="cover-ph">
+      <x-img id="portada-terraza" crop="a" class="cover-img" sizes="(min-width: 900px) min(100vw, 1440px), 150vw" eager/>
     </div>
-    <div class="cover-info">
-      <p class="cover-bio" data-src="BIO">Coctelería de autor, comida &amp; música bonita desde 2014</p>
-      <p class="gl gl-lead" lang="en">Signature cocktails, food &amp; lovely music since 2014</p>
-      <p class="cover-data num"><span data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span><span data-src="BIO">Serrano 325, Castro</span></p>
-      <p class="cover-acc"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
+    <div class="cover-tipo">
+      <div class="cover-title-box">
+        <h1 class="cover-title"><svg class="cover-logo" viewBox="1 0 1956 897" aria-hidden="true"><use href="#logo-h"/></svg><span class="vh" data-ui>Almud Bar</span></h1>
+      </div>
+      <div class="cover-info">
+        <p class="cover-bio" data-src="BIO">Coctelería de autor, comida &amp; música bonita desde 2014</p>
+        <p class="gl gl-lead" lang="en">Signature cocktails, food &amp; lovely music since 2014</p>
+        <p class="cover-data num"><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span><span data-src="BIO">Serrano 325, Castro</span></p>
+        <p class="cover-acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
+      </div>
+      <x-credit id="portada-terraza" class="cover-credit"/>
     </div>
-    <x-credit id="portada-terraza" class="cover-credit"/>
   </div>
 </header>
 <script>window.__en&&window.__en();</script>
 
-<!-- ============ HOY EN ALMUD (la cosa viva + el momento autoral) ============ -->
+<!-- ============ HOY EN ALMUD (la cosa viva + el momento autoral) · esqueleto: split ============ -->
 <x-hoy/>
 
-<!-- ============ EL LUGAR (noche) ============ -->
+<!-- ============ EL LUGAR (noche) · esqueleto: titular → banda a sangre → la barra ancha → mosaico → par ============ -->
 <section class="sec lugar on-night" id="lugar" aria-labelledby="lugar-h">
-  <div class="g">
+  <div class="g lugar-cab">
     <h2 class="display lugar-h" id="lugar-h" data-src="IG-111" data-lines>nos gusta el<br>colorssss!</h2>
     <p class="gl gl-h lugar-glh" lang="en">we love colourrrs!</p>
     <div class="lugar-txt">
-      <p class="body" data-src="IG-111">Somos inquietos y nos gusta el colorssss! Tratando siempre de hacer nuestro Almudcito beio para su deleite</p>
-      <p class="gl" lang="en">We're restless and we love colourrrs! Always trying to make our Almudcito [our little Almud] lovely for your delight</p>
-      <p class="small sub" data-src="VID-061">Un lugar que fuera cálido, acogedor</p>
-      <p class="gl small" lang="en">A place that would be warm and welcoming</p>
+      <div><p class="body" data-src="IG-111">Somos inquietos y nos gusta el colorssss! Tratando siempre de hacer nuestro Almudcito beio para su deleite</p>
+      <p class="gl" lang="en">We're restless and we love colourrrs! Always trying to make our Almudcito [our little Almud] lovely for your delight</p></div>
+      <div class="sub"><p class="lead-q" data-src="VID-061">Un lugar que fuera cálido, acogedor</p>
+      <p class="gl" lang="en">A place that would be warm and welcoming</p></div>
     </div>
-    <figure class="f r45 lugar-lider" data-rv>
-      <x-img id="lugar-barra-curva" crop="a" sizes="(min-width: 1024px) 40vw, (min-width: 700px) 60vw, 100vw"/>
-    </figure>
-    <div class="espacio barra-txt">
-      <h3 class="rot" data-ui data-en="The bar">La barra</h3>
-      <p class="lead-q" data-src="IG-087">Pucha que nos gusta nuestra barrita!!</p>
-      <p class="gl" lang="en">Gosh, we love our little bar!!</p>
-      <p class="body" data-src="VID-061">y una gran barra, larga, de esas para sentarse y quedarse ahí</p>
-      <p class="gl" lang="en">and a great long bar, the kind you sit at and stay</p>
-    </div>
-    <figure class="barra-foto">
-      <div class="f r45" data-rv><x-img id="lugar-lampara-pinzas" crop="a" sizes="(min-width: 1024px) 24vw, (min-width: 700px) 36vw, 75vw"/></div>
-      <x-credit id="lugar-lampara-pinzas" ui="Video"/>
-    </figure>
-  </div>
-
-  <!-- mosaico desigual: tres espacios -->
-  <div class="g mosaico lugar-mos">
-    <figure class="mo mo-1">
-      <div class="f r45" data-rv><x-img id="lugar-sillon" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-      <figcaption>
-        <h3 class="rot" data-ui data-en="The sofas">Los sillones</h3>
-        <p class="body" data-src="IG-075">pa compartir, pa escuchar güena música, pa ponerle algo delichus al buche</p>
-        <p class="gl" lang="en">to share, to listen to good music, to put something delichus [delicious] in the belly</p>
-        <x-credit id="lugar-sillon"/>
-      </figcaption>
-    </figure>
-    <figure class="mo mo-2">
-      <div class="f r45" data-rv><x-img id="lugar-faroles" crop="m" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-      <figcaption>
-        <h3 class="rot" data-ui data-en="The covered terrace">La terraza techada</h3>
-        <p class="body" data-src="IG-004">Techamos parte de la terraza, le pusimos todo el colors y calor del mundo mundial</p>
-        <p class="gl" lang="en">We roofed part of the terrace and gave it all the colours and warmth in the whole wide world</p>
-        <p class="body" data-src="IG-004">sin mojarse y calentit@, qué mejor?!</p>
-        <p class="gl" lang="en">without getting wet and nice and warm, what could be better?!</p>
-      </figcaption>
-    </figure>
-    <figure class="mo mo-3">
-      <div class="f r45" data-rv><x-img id="lugar-patio" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div>
-      <figcaption>
-        <h3 class="rot" data-ui data-en="The open terrace">La terraza</h3>
-        <p class="body" data-src="IG-160">Tardes y nochecitas de terraza! Lo más güeno qué hay</p>
-        <p class="gl" lang="en">Terrace afternoons and evenings! The best there is</p>
-        <p class="body" data-src="IG-163">Amamos los atardeceres desde nuestra terracita ita ita!</p>
-        <p class="gl" lang="en">We love the sunsets from our little terrace!</p>
-        <x-credit id="lugar-patio"/>
-      </figcaption>
-    </figure>
   </div>
 
   <!-- banda a sangre: el salón -->
@@ -161,7 +119,54 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
     </figcaption>
   </figure>
 
-  <!-- dos: el mural y el techo de flecos -->
+  <!-- la barra: la barra larga y curva, ancha (P093) -->
+  <div class="g barra">
+    <figure class="barra-foto">
+      <div class="f barra-f" data-rv><x-img id="lugar-barra-curva" crop="a" sizes="(min-width: 1024px) 66vw, 100vw"/></div>
+    </figure>
+    <div class="barra-txt">
+      <h3 class="rot" data-ui data-en="The bar">La barra</h3>
+      <p class="lead-q" data-src="IG-087">Pucha que nos gusta nuestra barrita!!</p>
+      <p class="gl" lang="en">Gosh, we love our little bar!!</p>
+      <p class="body" data-src="VID-061">y una gran barra, larga, de esas para sentarse y quedarse ahí</p>
+      <p class="gl" lang="en">and a great long bar, the kind you sit at and stay</p>
+    </div>
+  </div>
+
+  <!-- mosaico desigual: tres rincones -->
+  <div class="g mosaico mosaico-tx lugar-mos">
+    <figure class="mo mo-1">
+      <div class="f r45" data-rv><x-img id="lugar-sillon" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+      <figcaption>
+        <p class="body" data-src="IG-075">pa compartir, pa escuchar güena música, pa ponerle algo delichus al buche</p>
+        <p class="gl" lang="en">to share, to listen to good music, to put something delichus [delicious] in the belly</p>
+        <x-credit id="lugar-sillon"/>
+      </figcaption>
+    </figure>
+    <figure class="mo mo-2">
+      <div class="f r45" data-rv><x-img id="lugar-faroles" crop="m" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+      <figcaption>
+        <h3 class="rot" data-ui data-en="The covered terrace">La terraza techada</h3>
+        <p class="body" data-src="IG-004">Techamos parte de la terraza, le pusimos todo el colors y calor del mundo mundial</p>
+        <p class="gl" lang="en">We roofed part of the terrace and gave it all the colours and warmth in the whole wide world</p>
+        <p class="body" data-src="IG-004">sin mojarse y calentit@, qué mejor?!</p>
+        <p class="gl" lang="en">without getting wet and nice and warm, what could be better?!</p>
+      </figcaption>
+    </figure>
+    <figure class="mo mo-3">
+      <div class="f r45" data-rv><x-img id="lugar-patio" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 60vw, 75vw"/></div>
+      <figcaption>
+        <h3 class="rot" data-ui data-en="The open terrace">La terraza</h3>
+        <p class="body" data-src="IG-160">Tardes y nochecitas de terraza! Lo más güeno qué hay</p>
+        <p class="gl" lang="en">Terrace afternoons and evenings! The best there is</p>
+        <p class="body" data-src="IG-163">Amamos los atardeceres desde nuestra terracita ita ita!</p>
+        <p class="gl" lang="en">We love the sunsets from our little terrace!</p>
+        <x-credit id="lugar-patio"/>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- dos: el mural y las luces -->
   <div class="g par">
     <figure class="par-a">
       <div class="f r169" data-rv><x-img id="lugar-mural-ojos" crop="d" sizes="(min-width: 1024px) 57vw, 100vw"/></div>
@@ -175,48 +180,46 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       </figcaption>
     </figure>
     <figure class="par-b">
-      <x-video id="lugar-techo-flecos" class="f r45" sizes="(min-width: 1024px) 32vw, 100vw"/>
+      <div class="f r45" data-rv><x-img id="lugar-lampara-pinzas" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
       <figcaption>
         <p class="lead-q" data-src="IG-147">Nos gustan los brillitos, las luces</p>
         <p class="gl" lang="en">We like sparkles and lights</p>
+        <x-credit id="lugar-lampara-pinzas" ui="Video"/>
         <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a></p>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ============ LOS TRAGOS (amarillo) ============ -->
+<!-- ============ LOS TRAGOS (amarillo) · esqueleto: titular en una línea → marco ancho que crece → par + la casa → banda ============ -->
 <section class="sec campo campo-amarillo on-field tragos" id="tragos" aria-labelledby="tragos-h">
   <div class="g">
     <h2 class="display tragos-h" id="tragos-h" data-src="IG-046" data-lines>mejor los<br>tomamos todos!</h2>
     <p class="gl gl-h tragos-glh" lang="en">best to drink them all!</p>
-    <figure class="f r45 crece tragos-lider" data-rv="crece">
-      <x-img id="tragos-splash" crop="m" sizes="(min-width: 1024px) 40vw, (min-width: 700px) 60vw, 100vw"/>
-    </figure>
     <div class="tragos-txt">
       <p class="body" data-src="IG-046">Tantos coctelcitos entre los cuales decidirse! Demasiada complikeichon elegir, mejor los tomamos todos!</p>
       <p class="gl" lang="en">So many little cocktails to choose from! Too much complikeichon [complication] choosing, best to drink them all!</p>
       <p class="body" data-src="IG-021">Tantos creadores con tantísimo talento e innumerables horas de probar, probar y probar</p>
       <p class="gl" lang="en">So many creators with so much talent and countless hours of tasting, tasting and tasting</p>
     </div>
+    <figure class="tragos-lider">
+      <div class="f crece tragos-f" data-rv="crece"><x-img id="tragos-bartender-muro-rosa" crop="a" sizes="(min-width: 1024px) 66vw, 100vw"/></div>
+      <figcaption><p class="body" data-src="IG-045">En esta barrita pasan tantas maravillas en forma de coctelcitos</p><p class="gl" lang="en">So many wonders happen at this little bar, in the shape of little cocktails</p><x-credit id="tragos-bartender-muro-rosa"/></figcaption>
+    </figure>
+    <figure class="tragos-m1"><div class="f r45" data-rv><x-img id="tragos-sours" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
+    <figure class="tragos-m2"><div class="f r45" data-rv><x-img id="tragos-copa-naranja" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
     <div class="casa">
       <h3 class="rot" data-src="CARTA-2">Coctelería de la casa</h3>
       <p class="gl" lang="en">House cocktails</p>
       <p class="acc"><a class="btn" href="carta/#casa" data-ui data-en="See the menu">Ver la carta</a></p>
     </div>
   </div>
-  <div class="g mosaico tragos-mos">
-    <figure class="mo mo-1"><div class="f r45" data-rv><x-img id="tragos-sours" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="mo mo-2"><div class="f r45" data-rv><x-img id="tragos-copa-naranja" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="mo mo-3"><div class="f r45" data-rv><x-img id="tragos-bartender-muro-rosa" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div>
-      <figcaption><p class="body" data-src="IG-045">En esta barrita pasan tantas maravillas en forma de coctelcitos</p><p class="gl" lang="en">So many wonders happen at this little bar, in the shape of little cocktails</p><x-credit id="tragos-bartender-muro-rosa"/></figcaption></figure>
-  </div>
   <figure class="banda tragos-banda">
     <div class="f r169" data-rv><x-img id="tragos-bartender-letrero" crop="d" sizes="100vw"/></div>
   </figure>
 </section>
 
-<!-- ============ SIN ALCOHOL (noche) ============ -->
+<!-- ============ SIN ALCOHOL (noche) · esqueleto: titular de afiche + lista ============ -->
 <section class="sec on-night sin" id="sin-alcohol" aria-labelledby="sin-h">
   <div class="g">
     <h2 class="head sin-h" id="sin-h" data-src="IG-011">no dejamos a nadie ajuera</h2>
@@ -233,19 +236,19 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <li><a class="link" href="carta/#sin-alcohol-cervezas"><span data-src="CARTA-5">Cervezas sin alcohol</span></a><span class="gl" lang="en">Alcohol-free beers</span></li>
       <li><a class="link" href="carta/#sin-alcohol-calientes"><span data-src="CARTA-5">Bebidas calientes</span></a><span class="gl" lang="en">Hot drinks</span></li>
     </ul>
-    <p class="acc sin-acc"><a class="btn" href="carta/#sin-alcohol" data-ui data-en="See the menu">Ver la carta</a></p>
+    <p class="acc sin-acc"><a class="link" href="carta/#sin-alcohol" data-ui data-en="See the menu">Ver la carta</a></p>
   </div>
 </section>
 
-<!-- ============ LA COMIDA (verde) ============ -->
+<!-- ============ LA COMIDA (verde) · esqueleto: foto sostenida a la izquierda, titular y texto a la derecha → mosaico ============ -->
 <section class="sec campo campo-verde on-field comida" id="comida" aria-labelledby="comida-h">
   <div class="g">
     <h2 class="display comida-h" id="comida-h" data-src="IG-139" data-lines>pa chuparse<br>el bigoteli</h2>
     <p class="gl gl-h comida-glh" lang="en">to lick your bigoteli [little moustache]: finger-licking good</p>
-    <div class="sostenida">
-      <figure class="f r45" data-rv><x-img id="comida-garzona-pizza" crop="a" sizes="(min-width: 1024px) 40vw, 100vw"/></figure>
+    <figure class="comida-foto">
+      <div class="f r45" data-rv><x-img id="comida-garzona-pizza" crop="a" sizes="(min-width: 1024px) 40vw, 100vw"/></div>
       <x-credit id="comida-garzona-pizza"/>
-    </div>
+    </figure>
     <div class="comida-txt">
       <p class="lead-q" data-src="IG-022">Mire que tenemos una cocina sencilla pero más que sabrosona!</p>
       <p class="gl" lang="en">Look, our kitchen is simple but more than tasty!</p>
@@ -271,7 +274,7 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
   </div>
 </section>
 
-<!-- ============ LA CARTA: destacados (papel). La carta completa vive en carta/ ============ -->
+<!-- ============ LA CARTA: destacados (papel) · esqueleto: índice en grilla. La carta completa vive en carta/ ============ -->
 <section class="sec carta on-paper" id="carta" aria-labelledby="carta-h">
   <div class="g carta-cab">
     <h2 class="display carta-h" id="carta-h" data-ui data-en="The menu">La carta</h2>
@@ -289,11 +292,61 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
   </div>
 </section>
 
-<!-- ============ EL EQUIPO (noche) ============ -->
+<!-- ============ CON QUIÉN Y PARA QUÉ (fucsia) · esqueleto: titular + párrafo → mosaico × 2 ============ -->
+<section class="sec campo campo-fucsia on-field on-fucsia quien" id="quien" aria-labelledby="quien-h">
+  <div class="g">
+    <h2 class="display quien-h" id="quien-h" data-src="IG-026" data-lines>no somos ná<br>sin ustedes!</h2>
+    <p class="gl gl-h quien-glh" lang="en">we're nothing without you!</p>
+    <div class="quien-txt">
+      <p class="lead-q" data-src="IG-060">Pa agarrar perso, pa pasar las penas, las alegrías, celebreichons, pa entrar en calor, pa refrescarse</p>
+      <p class="gl" lang="en">To work up the nerve, to get over sorrows, for joys, for celebreichons [celebrations], to warm up, to cool down</p>
+      <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a></p>
+    </div>
+  </div>
+  <div class="g mosaico mosaico-tx quien-mos">
+    <figure class="mo mo-1">
+      <div class="f r45" data-rv><x-img id="con-quien-solo" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+      <figcaption><h3 class="rot" data-ui data-en="On your own">Solo</h3><p class="body" data-src="IG-162">ideal pa venir a bien-tratarse a la terracita o a la barra</p><p class="gl" lang="en">ideal for coming to treat yourself well on the terrace or at the bar</p><x-credit id="con-quien-solo"/></figcaption>
+    </figure>
+    <figure class="mo mo-2">
+      <div class="f r45" data-rv><x-img id="con-quien-pareja" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+      <figcaption><h3 class="rot" data-ui data-en="As a couple">En pareja</h3><p class="body" data-src="IG-060">celebremos el amor en todas sus formas, con las piernas, amiguis, hij@s, como usté quiera!</p><p class="gl" lang="en">let's celebrate love in all its forms: with your piernas [other half], amiguis [friends], kids, however you like!</p></figcaption>
+    </figure>
+    <figure class="mo mo-3">
+      <div class="f r45" data-rv><x-img id="con-quien-amigos" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 60vw, 75vw"/></div>
+      <figcaption><h3 class="rot" data-ui data-en="With friends">Con amigos</h3><p class="body" data-src="IG-065">celebrar la vida, la amistad, el amors y el buen clima</p><p class="gl" lang="en">celebrate life, friendship, love and good weather</p></figcaption>
+    </figure>
+  </div>
+  <div class="g mosaico mosaico-b mosaico-tx quien-mos2">
+    <figure class="mo mo-1">
+      <div class="f r45" data-rv><x-img id="con-quien-amigas" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+    </figure>
+    <figure class="mo mo-2">
+      <div class="f r45" data-rv><x-img id="con-quien-celebrar" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 75vw"/></div>
+      <figcaption><h3 class="rot" data-ui data-en="To celebrate">A celebrar</h3><p class="body" data-src="IG-015">A celebrar se ha dicho!</p><p class="gl" lang="en">Let's celebrate, it's decided!</p><x-credit id="con-quien-celebrar"/></figcaption>
+    </figure>
+    <figure class="mo mo-3">
+      <div class="f r45" data-rv><x-img id="con-quien-sin-motivo" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 60vw, 75vw"/></div>
+      <figcaption><h3 class="rot" data-ui data-en="For no reason">Sin motivo</h3><p class="body" data-src="IG-150">porque usté se lo merece y punto!</p><p class="gl" lang="en">because you deserve it, full stop!</p></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ EL EQUIPO (noche) · esqueleto: titular → banda a sangre → texto y nombres ============ -->
 <section class="sec on-night equipo" id="equipo" aria-labelledby="equipo-h">
   <div class="g">
     <h2 class="display equipo-h" id="equipo-h" data-src="IG-048" data-lines>Peazo de equipo<br>que tenemos!</h2>
     <p class="gl gl-h equipo-glh" lang="en">What a team we've got!</p>
+  </div>
+  <figure class="banda equipo-banda">
+    <div class="f r169" data-rv><x-img id="equipo-garzonas" crop="d" sizes="100vw"/></div>
+    <figcaption class="g banda-pie">
+      <p class="lead-q" data-src="IG-014">Nuestras chicas super poderosas, super bacanas y super hermosas!</p>
+      <p class="gl" lang="en">Our super-powered, super-cool, super-beautiful girls!</p>
+      <p class="pie" data-src="IG-014"><x-handles>@milagroosjm y @lizzearellanol</x-handles></p>
+    </figcaption>
+  </figure>
+  <div class="g equipo-pie">
     <div class="equipo-txt">
       <p class="body" data-src="IG-001">Est@s guapetones son parte de nuestro equipo, son los encargados de barra y salón</p>
       <p class="gl" lang="en">These good-lookers are part of our team, in charge of the bar and the room</p>
@@ -306,72 +359,19 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <p class="gl" lang="en">the Almud parents: the Frenchie @rusio_mezclao and the disharashera [a play on ‘dicharachera’, chatty] @cepaz</p>
     </div>
   </div>
-  <figure class="banda equipo-banda">
-    <div class="f r169" data-rv><x-img id="equipo-garzonas" crop="d" sizes="100vw"/></div>
-    <figcaption class="g banda-pie">
-      <p class="lead-q" data-src="IG-014">Nuestras chicas super poderosas, super bacanas y super hermosas!</p>
-      <p class="gl" lang="en">Our super-powered, super-cool, super-beautiful girls!</p>
-      <p class="pie" data-src="IG-014"><x-handles>@milagroosjm y @lizzearellanol</x-handles></p>
-    </figcaption>
-  </figure>
 </section>
 
-<!-- ============ CON QUIÉN Y PARA QUÉ (fucsia) ============ -->
-<section class="sec campo campo-fucsia on-field on-fucsia quien" id="quien" aria-labelledby="quien-h">
-  <div class="g">
-    <h2 class="display quien-h" id="quien-h" data-src="IG-026" data-lines>no somos ná<br>sin ustedes!</h2>
-    <p class="gl gl-h quien-glh" lang="en">we're nothing without you!</p>
-    <div class="quien-txt">
-      <p class="lead-q" data-src="IG-060">Pa agarrar perso, pa pasar las penas, las alegrías, celebreichons, pa entrar en calor, pa refrescarse</p>
-      <p class="gl" lang="en">To work up the nerve, to get over sorrows, for joys, for celebreichons [celebrations], to warm up, to cool down</p>
-      <p class="acc"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a></p>
-    </div>
-  </div>
-  <div class="g mosaico quien-mos">
-    <figure class="mo mo-1">
-      <div class="f r45" data-rv><x-img id="con-quien-solo" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-      <figcaption><h3 class="rot" data-ui data-en="On your own">Solo</h3><p class="body" data-src="IG-162">ideal pa venir a bien-tratarse a la terracita o a la barra</p><p class="gl" lang="en">ideal for coming to treat yourself well on the terrace or at the bar</p><x-credit id="con-quien-solo"/></figcaption>
-    </figure>
-    <figure class="mo mo-2">
-      <div class="f r45" data-rv><x-img id="con-quien-pareja" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-      <figcaption><h3 class="rot" data-ui data-en="As a couple">En pareja</h3><p class="body" data-src="IG-060">celebremos el amor en todas sus formas, con las piernas, amiguis, hij@s, como usté quiera!</p><p class="gl" lang="en">let's celebrate love in all its forms: with your piernas [other half], amiguis [friends], kids, however you like!</p></figcaption>
-    </figure>
-    <figure class="mo mo-3">
-      <div class="f r45" data-rv><x-img id="con-quien-amigos" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div>
-      <figcaption><h3 class="rot" data-ui data-en="With friends">Con amigos</h3><p class="body" data-src="IG-065">celebrar la vida, la amistad, el amors y el buen clima</p><p class="gl" lang="en">celebrate life, friendship, love and good weather</p></figcaption>
-    </figure>
-  </div>
-  <div class="g mosaico mosaico-b quien-mos2">
-    <figure class="mo mo-1">
-      <div class="f r45" data-rv><x-img id="con-quien-amigas" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-    </figure>
-    <figure class="mo mo-2">
-      <div class="f r45" data-rv><x-img id="con-quien-celebrar" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div>
-      <figcaption><h3 class="rot" data-ui data-en="To celebrate">A celebrar</h3><p class="body" data-src="IG-015">A celebrar se ha dicho!</p><p class="gl" lang="en">Let's celebrate, it's decided!</p><x-credit id="con-quien-celebrar"/></figcaption>
-    </figure>
-    <figure class="mo mo-3">
-      <div class="f r45" data-rv><x-img id="con-quien-sin-motivo" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div>
-      <figcaption><h3 class="rot" data-ui data-en="For no reason">Sin motivo</h3><p class="body" data-src="IG-150">porque usté se lo merece y punto!</p><p class="gl" lang="en">because you deserve it, full stop!</p></figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- ============ RESEÑAS (noche) ============ -->
+<!-- ============ RESEÑAS (noche) · esqueleto: titular + citas en grilla; las cifras, una línea de cuerpo ============ -->
 <section class="sec on-night resenas" id="resenas" aria-labelledby="resenas-h">
   <div class="g">
     <h2 class="display resenas-h" id="resenas-h" data-src="IG-088" data-lines>lo rico de<br>nuestro barsucho</h2>
     <p class="gl gl-h resenas-glh" lang="en">how good our little bar is</p>
-    <div class="cifras num">
-      <p><span class="cifra" data-src="DATO">4,6</span> <span data-ui>Google</span> · <span data-src="DATO">848 reseñas</span></p>
-      <p><span class="cifra" data-src="DATO">4,6</span> <span data-ui>Tripadvisor</span> · <span data-src="DATO">209</span> <span data-ui lang="es">reseñas</span> · <span data-ui lang="es">#1 de 6 bares en Castro</span></p>
-      <p class="gl small" lang="en">Google 4.6 · 848 reviews — Tripadvisor 4.6 · 209 reviews · #1 of 6 bars in Castro</p>
-      <p class="small" data-ui>oct-2026</p>
-    </div>
+    <p class="cifras body num"><span class="dato-es"><span data-src="DATO">4,6</span> <span data-ui>Google</span> (<span data-src="DATO">848 reseñas</span>) · <span data-src="DATO">4,6</span> <span data-ui>Tripadvisor</span> (<span data-src="DATO">209</span> <span data-ui lang="es">reseñas</span>, <span data-ui lang="es">#1 de 6 bares en Castro</span>) · <span data-ui>oct-2026</span></span><span class="gl" lang="en">Google 4.6 · 848 reviews — Tripadvisor 4.6 · 209 reviews · #1 of 6 bars in Castro</span></p>
   </div>
   <x-resenas/>
 </section>
 
-<!-- ============ EVENTOS (coral; calendario) ============ -->
+<!-- ============ EVENTOS (coral) · esqueleto: calendario a lo ancho → tira de fotos ============ -->
 <section class="sec campo campo-coral on-field eventos" id="eventos" aria-labelledby="eventos-h">
   <div class="g">
     <h2 class="display eventos-h" id="eventos-h" data-src="IG-010" data-lines>tirar la casa<br>por la ventana!</h2>
@@ -381,28 +381,25 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <p class="gl" lang="en">See you at the next little things coming up, they'll be a blast</p>
     </div>
     <ol class="cal">
-      <li><p class="mes" data-ui data-en="February">Febrero</p><div><p class="ev-n" data-src="IG-116">14F</p><p class="body" data-src="IG-116">Amamos el 14F pa brindar en honor al amor!</p><p class="gl" lang="en">We love 14F [Valentine's Day] to raise a glass to love!</p></div><p class="anos num">2024 · 2025 · 2026</p></li>
-      <li><p class="mes" data-ui data-en="March">Marzo</p><div><p class="ev-n" data-src="IG-030">chaolin bombín al verano</p><p class="body" data-src="IG-114">Y se nos van los mesesitos queridos de verano y vakeichons… y hay que despedirlos como corresponde</p><p class="gl" lang="en">Our dear summer months and vakeichons [holidays] are leaving us… and they must be sent off properly</p></div><p class="anos num">2024 · 2026</p></li>
-      <li><p class="mes" data-ui data-en="July">Julio</p><div><p class="ev-n" data-src="IG-098">nuestro mes de aniversario</p><p class="body" data-src="IG-010">Cuánto coctelcito ha pasado bajo este puente</p><p class="gl" lang="en">So many little cocktails under this bridge</p></div><p class="anos num">2023 (9) · 2024 (10) · 2025 (11) · 2026 (12)</p></li>
-      <li><p class="mes" data-ui data-en="July">Julio</p><div><p class="ev-n" data-src="BIO">Tiki Night</p><p class="body" data-src="IG-053">con todo el sabor tiki!</p><p class="gl" lang="en">with all the tiki flavour!</p></div><p class="anos num">2025</p></li>
-      <li><p class="mes" data-ui data-en="September">Septiembre</p><div><p class="ev-n" data-src="IG-081">fondita ita ita</p><p class="body" data-src="IG-043">Nos endieciochamos contra viento y marea</p><p class="gl" lang="en">We go full dieciocho [Chile's national holidays] come wind or high water</p></div><p class="anos num">2023 · 2024 · 2025 · 2026</p></li>
-      <li><p class="mes" data-ui data-en="September">Septiembre</p><div><p class="ev-n" data-src="IG-005">negroni week</p><p class="body" data-src="IG-005">esperada por much@s ya está aquí</p><p class="gl" lang="en">awaited by many, it's here</p></div><p class="anos num">2025 · 2026</p></li>
-      <li><p class="mes" data-ui data-en="October">Octubre</p><div><p class="ev-n" data-src="IG-071">Jalogüín</p><p class="body" data-src="IG-124">traguitos y travesuras 1313</p><p class="gl" lang="en">little drinks and mischief, hee hee [1313]</p></div><p class="anos num">2023 · 2024 · 2025</p></li>
+      <li data-mes="2"><p class="mes"><span data-ui data-en="February">Febrero</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-116">14F</p><p class="body" data-src="IG-116">Amamos el 14F pa brindar en honor al amor!</p><p class="gl" lang="en">We love 14F [Valentine's Day] to raise a glass to love!</p></div><p class="anos num">2024 · 2025 · 2026</p></li>
+      <li data-mes="3"><p class="mes"><span data-ui data-en="March">Marzo</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-030">chaolin bombín al verano</p><p class="body" data-src="IG-114">Y se nos van los mesesitos queridos de verano y vakeichons… y hay que despedirlos como corresponde</p><p class="gl" lang="en">Our dear summer months and vakeichons [holidays] are leaving us… and they must be sent off properly</p></div><p class="anos num">2024 · 2026</p></li>
+      <li data-mes="7"><p class="mes"><span data-ui data-en="July">Julio</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-098">nuestro mes de aniversario</p><p class="body" data-src="IG-010">Cuánto coctelcito ha pasado bajo este puente</p><p class="gl" lang="en">So many little cocktails under this bridge</p></div><p class="anos num">2023 (9) · 2024 (10) · 2025 (11) · 2026 (12)</p></li>
+      <li data-mes="7"><p class="mes"><span data-ui data-en="July">Julio</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="BIO">Tiki Night</p><p class="body" data-src="IG-053">con todo el sabor tiki!</p><p class="gl" lang="en">with all the tiki flavour!</p></div><p class="anos num">2025</p></li>
+      <li data-mes="9"><p class="mes"><span data-ui data-en="September">Septiembre</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-081">fondita ita ita</p><p class="body" data-src="IG-043">Nos endieciochamos contra viento y marea</p><p class="gl" lang="en">We go full dieciocho [Chile's national holidays] come wind or high water</p></div><p class="anos num">2023 · 2024 · 2025 · 2026</p></li>
+      <li data-mes="9"><p class="mes"><span data-ui data-en="September">Septiembre</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-005">negroni week</p><p class="body" data-src="IG-005">esperada por much@s ya está aquí</p><p class="gl" lang="en">awaited by many, it's here</p></div><p class="anos num">2025 · 2026</p></li>
+      <li data-mes="10"><p class="mes"><span data-ui data-en="October">Octubre</span><span class="ev-m ev-este" data-ui data-en="This month" hidden>Este mes</span><span class="ev-m ev-prox" data-ui data-en="Next" hidden>Próximo</span></p><div><p class="ev-n" data-src="IG-071">Jalogüín</p><p class="body" data-src="IG-124">traguitos y travesuras 1313</p><p class="gl" lang="en">little drinks and mischief, hee hee [1313]</p></div><p class="anos num">2023 · 2024 · 2025</p></li>
     </ol>
-    <figure class="eventos-foto">
-      <div class="f r45" data-rv><x-img id="eventos-diez" crop="a" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 100vw"/></div>
-      <x-credit id="eventos-diez"/>
-    </figure>
     <p class="acc eventos-acc"><a class="link" href="https://ig.me/m/almud_bar" data-src="IG-057">asegure su entrá hablándonos al DM!</a><span class="gl" lang="en">get your ticket by messaging us on Instagram!</span><a class="link" href="https://www.instagram.com/almud_bar/" data-ui data-en="See on Instagram">Ver en Instagram</a></p>
   </div>
-  <div class="g mosaico eventos-mos">
-    <figure class="mo mo-1"><div class="f r45" data-rv><x-img id="eventos-torta" crop="a" sizes="(min-width: 1024px) 32vw, 50vw"/></div></figure>
-    <figure class="mo mo-2"><div class="f r45" data-rv><x-img id="eventos-doce" crop="m" sizes="(min-width: 1024px) 32vw, 50vw"/></div><x-credit id="eventos-doce"/></figure>
-    <figure class="mo mo-3"><div class="f r45" data-rv><x-img id="eventos-jaloguin" crop="a" sizes="(min-width: 1024px) 32vw, 75vw"/></div></figure>
+  <div class="g tira eventos-tira">
+    <figure class="ti ti-1"><div class="f r45" data-rv><x-img id="eventos-diez" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div><x-credit id="eventos-diez"/></figure>
+    <figure class="ti ti-2"><div class="f r45" data-rv><x-img id="eventos-torta" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
+    <figure class="ti ti-3"><div class="f r45" data-rv><x-img id="eventos-doce" crop="m" sizes="(min-width: 1024px) 24vw, 50vw"/></div><x-credit id="eventos-doce"/></figure>
+    <figure class="ti ti-4"><div class="f r45" data-rv><x-img id="eventos-jaloguin" crop="a" sizes="(min-width: 1024px) 24vw, 50vw"/></div></figure>
   </div>
 </section>
 
-<!-- ============ CUÁNDO Y DÓNDE (noche) ============ -->
+<!-- ============ CUÁNDO Y DÓNDE (noche) · esqueleto: datos + mapa al tocar → la calle (video) y la puerta ============ -->
 <section class="sec on-night donde" id="donde" aria-labelledby="donde-h">
   <div class="g">
     <h2 class="display donde-h" id="donde-h" data-src="IG-160" data-lines>Venga venga,<br>le esperamos!</h2>
@@ -411,20 +408,24 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
       <p class="lead-q" data-src="IG-004">Si usté no ha venido, vengase pa acá, ya le estamos esperando</p>
       <p class="gl" lang="en">If you haven't been yet, come on over, we're expecting you</p>
       <dl class="datos num">
-        <div><dt data-ui data-en="Hours">Horario</dt><dd><span data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span></dd></div>
+        <div><dt data-ui data-en="Hours">Horario</dt><dd><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl" lang="en">Open Tue to Sat from 6 pm</span></dd></div>
         <div><dt data-ui data-en="Address">Dirección</dt><dd><span data-src="BIO">Serrano 325, Castro</span><br><span data-src="DATO">Al frente del Centro Cultural de Castro</span><span class="gl" lang="en">Opposite the Castro Cultural Centre</span></dd></div>
         <div><dt data-ui data-en="Phone">Teléfono</dt><dd><a class="link" href="tel:+56652530084" data-src="DATO">+56 65 253 0084</a></dd></div>
         <div><dt data-ui>Instagram</dt><dd><a class="link" href="https://www.instagram.com/almud_bar/" data-ui>@almud_bar</a><br><span data-src="BIO">Nuestro bazar <a href="https://www.instagram.com/bazar_almud/">@bazar_almud</a></span><span class="gl" lang="en">Our shop: @bazar_almud</span></dd></div>
       </dl>
-      <p class="acc"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
+      <p class="acc"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619" data-ui data-en="Get directions">Cómo llegar</a><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a></p>
     </div>
-    <figure class="donde-foto">
-      <div class="f r45" data-rv><x-img id="donde-puerta" crop="d" sizes="(min-width: 1024px) 40vw, (min-width: 700px) 75vw, 100vw"/></div>
-      <x-credit id="donde-puerta"/>
-    </figure>
+    <!-- mapa: el iframe de Google Maps se crea solo al tocar "Ver mapa" (cero pedidos a terceros antes) -->
+    <div class="mapa" data-mapa="https://www.google.com/maps?q=-42.4825681,-73.7617619&amp;hl=es&amp;z=17&amp;output=embed" data-title-es="Mapa: Serrano 325, Castro" data-title-en="Map: Serrano 325, Castro">
+      <a class="mapa-b" href="https://www.google.com/maps/search/?api=1&amp;query=-42.4825681,-73.7617619"><span class="head mapa-dir" data-src="BIO">Serrano 325, Castro</span><span class="mapa-t" data-ui data-en="See map">Ver mapa</span></a>
+    </div>
     <figure class="donde-video">
       <x-video id="donde-letrero" class="f r169" sizes="(min-width: 1024px) 57vw, 100vw"/>
       <figcaption><x-credit id="donde-letrero" ui="Video"/></figcaption>
+    </figure>
+    <figure class="donde-foto">
+      <div class="f r45" data-rv><x-img id="donde-puerta" crop="d" sizes="(min-width: 1024px) 32vw, (min-width: 700px) 50vw, 100vw"/></div>
+      <x-credit id="donde-puerta"/>
     </figure>
   </div>
 </section>
@@ -434,10 +435,10 @@ window.__en=function(){if(document.documentElement.lang!=='en')return;var l=docu
 <!-- ============ PIE ============ -->
 <footer class="pie-sitio on-night">
   <div class="g">
-    <p class="firma" data-src="IG-032">Que no se lo cuenten! Besiiiii</p>
+    <p class="firma" data-src="IG-032" data-lines>Que no se lo cuenten!<br>Besiiiii</p>
     <p class="gl gl-lead firma-gl" lang="en">Don't let anyone tell you about it, come see! Besiiiii [kisses]</p>
     <div class="pie-datos small num">
-      <p><span data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span> · <span data-src="BIO">Serrano 325, Castro</span></p>
+      <p><span class="dato-es" data-src="BIO">Abrimos de Mar a Sáb a las 18:00hrs</span><span class="gl gl-in" lang="en">Open Tue to Sat from 6 pm</span> · <span data-src="BIO">Serrano 325, Castro</span></p>
       <p><a class="link" href="https://ig.me/m/almud_bar" data-ui data-en="Message us on Instagram">Escríbanos al DM</a> <a class="link" href="carta/" data-ui data-en="See the menu">Ver la carta</a></p>
     </div>
     <div class="pie-creditos small">

@@ -18,7 +18,7 @@
      "promo_dia": 4, "item_en": "House sangría",
      "frase": "Además que con estos días, la hidrateichon es justa y muy necesaria!", "frase_src": "IG-039",
      "frase_en": "Besides, in weather like this, hydreichon [hydration] is fair and very necessary!",
-     "media": {"img": "hoy-jueves-sangria"}},
+     "media": {"img": "hoy-jueves-fiesta"}},
     {"id": "viernes", "dias": [5], "campo": "amarillo",
      "titular": "Viernes ya!", "titular_src": "IG-003", "titular_en": "Friday at last!",
      "item": "Venga venga que nadie le detenga!", "item_src": "IG-003", "item_en": "Come on, come on, let nobody stop you!",
@@ -40,5 +40,6 @@
   ],
   "semana_titulo": "siempre es un güen día pa compartir algo rico", "semana_titulo_src": "IG-013",
   "semana_titulo_en": "every day is a good day to share something tasty",
-  "dias_en": {"Martes": "Tuesday", "Miércoles": "Wednesday", "Jueves": "Thursday", "Sábado": "Saturday"}
+  "dias_en": {"Martes": "Tuesday", "Miércoles": "Wednesday", "Jueves": "Thursday", "Viernes": "Friday", "Sábado": "Saturday"},
+  "viernes_semana": {"dia": "Viernes", "dia_n": 5, "linea": "Venga venga que nadie le detenga!", "src": "IG-003", "_doc": "Crítica 1: el viernes entra en la semana con su línea literal de IG-003; no tiene promo y no se inventa ninguna."}
 }

@@ -8,3 +8,5 @@ dossier/*.pdf
 dossier/_render/
 _plan/diag/sheets/*
 !_plan/diag/sheets/top30.jpg
+_plan/critica-*/after/**/*.jpg
+_plan/critica-*/after/*.jpg

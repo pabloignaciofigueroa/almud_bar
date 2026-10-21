@@ -89,6 +89,7 @@
     R.dataset.tab = tab;
     if (sub) R.setAttribute('data-sub-' + tab, sub);
     paint();
+    measure();
     const panel = panels.get(tab);
     const el = sameTab && sub ? d.getElementById(sub) : panel;
     if (how !== 'history') {
@@ -143,13 +144,23 @@
     if (r) show(r[0], r[1], 'history');
   });
 
-  /* entrada única al cargar: "La carta" y el título de la sección abierta suben por línea con máscara
-     (los mismos tokens que los titulares del landing); con reduced motion no se esconde nada */
-  if (!reduce.matches) {
-    const heads = [$('.carta-h'), $('.cp-h', panels.get(R.dataset.tab))].filter((h) => h && $('.ln', h));
-    heads.forEach((h) => h.classList.add('h-arm'));
-    requestAnimationFrame(() => requestAnimationFrame(() => heads.forEach((h) => h.classList.add('rv-in'))));
+  /* crítica 1: sin entrada al cargar (es la página que el local abre cada vez; el título no espera a ninguna animación) */
+
+  /* el teclado nunca anima: mientras se navega con teclado, pestañas y chips cambian de color al instante */
+  d.addEventListener('keydown', () => R.classList.add('kb'), true);
+  d.addEventListener('pointerdown', () => R.classList.remove('kb'), true);
+
+  /* bajo 1024 px la barra de pestañas va en varias filas: su alto real (y el de los chips) pasa a las variables
+     que usan el sticky de los chips, los scroll-margin y align() */
+  const bar = $('.tabs');
+  function measure() {
+    if (bar) R.style.setProperty('--tabs-h', bar.offsetHeight + 'px');
+    const cw = $('.cp:not([hidden]) .chips-w') || [...$$('.chips-w')].find((c) => c.offsetHeight);
+    if (cw && cw.offsetHeight) R.style.setProperty('--chips-h', cw.offsetHeight + 'px');
   }
+  measure();
+  if ('ResizeObserver' in window && bar) new ResizeObserver(measure).observe(bar);
+  addEventListener('resize', measure);
 
   paint();
   reveal(tabs.find((t) => t.dataset.tab === R.dataset.tab) || tabs[0]);

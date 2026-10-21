@@ -252,11 +252,11 @@ SUB_SLUG = {
     "Somos dulzones": "dulzones",
 }
 TAB_LAM = {  # láminas de pestaña: foto real del ambiente, sin nombre de ítem
-    "casa": [("video", "carta-muro-rosa")],  # el muro rosa donde se hacen (loop V021, IG-090)
+    "casa": [("img", "tragos-bartender-muro-rosa"), ("img", "tragos-copa-naranja")],  # + una copa tallada (P097), sin nombre de trago  # crítica 1: foto nítida del muro rosa donde se hacen (P184, IG-050) en vez del loop V021 borroso
     "mundo": [("img", "tragos-sours")],  # tres copas con espuma y flores (P086, IG-079): ambiente, sin nombre de trago
     "espirituosos": [("img", "carta-lamina-negroni")],
     "vinos": [("img", "carta-lamina-vino")],
-    "comilona": [("video", "carta-cazuela")],  # loop de una gredita (IG-018), ambiente de la cocina: la columna no cambia de ancho entre grupos
+    "comilona": [("img", "comida-cazuela")],  # crítica 1: foto nítida de una gredita (P091, IG-079) en vez del loop V052 movido; la columna no cambia de ancho entre grupos
 }
 GROUP_LAM = {  # láminas de grupo: se ven solo con su grupo
     "mundo-negroni": [("img", "carta-grupo-negroni")],
@@ -526,33 +526,40 @@ def hoy_html():
             fig = f'<figure class="hoy-foto"><div class="f r45">{picture(media["img"], sizes="(min-width: 1024px) 40vw, (min-width: 700px) 60vw, 100vw")}</div></figure>'
         p = []
         if v.get("dato"):
-            p.append(f'<p class="hoy-dato num" data-src="{v["dato_src"]}">{esc(v["dato"])}</p>{gloss(v["dato_en"])}')
+            p.append(f'<p class="hoy-dato num dato-es" data-src="{v["dato_src"]}">{esc(v["dato"])}</p>{gloss(v["dato_en"], "gl hoy-dato num")}')
             p.append(f'<p class="hoy-rot" data-ui data-en="{v["rotulo_en"]}">{esc(v["rotulo"])}</p>')
         if v.get("promo_dia"):
             it, _ = promo(v["promo_dia"])
             name = it.get("texto") or it.get("nombre")
             p.append(f'<p class="que" data-src="CARTA-7">{esc(name)}</p>{gloss(v["item_en"])}')
             if not v.get("sin_precio"):
-                p.append(f'<p class="precio num" data-src="CARTA-7">{esc(it["precio"])}</p>{gloss("CLP 4,500")}')
-            p.append(f'<p class="cuando num" data-src="CARTA-7">{esc(pg["nota"])}</p>{gloss("6 to 10 pm")}')
-            p.append(f'<p class="small" data-src="CARTA-7">{esc(pg["nota_pie"])}</p>{gloss("* Always subject to stock! *", "gl small")}')
+                p.append(f'<p class="precio num dato-es" data-src="CARTA-7">{esc(it["precio"])}</p>{gloss("CLP 4,500", "gl precio num")}')
+            p.append(f'<p class="cuando num dato-es" data-src="CARTA-7">{esc(pg["nota"])}</p>{gloss("6 to 10 pm", "gl cuando num")}')
+            p.append(f'<p class="small dato-es" data-src="CARTA-7">{esc(pg["nota_pie"])}</p>{gloss("* Always subject to stock! *", "gl small")}')
         else:
             p.append(f'<p class="que" data-src="{v["item_src"]}">{esc(v["item"])}</p>{gloss(v["item_en"])}')
         frase = ""
         if v.get("frase"):
-            frase = f'<div class="hoy-frase"><p class="body" data-src="{v["frase_src"]}">{esc(v["frase"])}</p>{gloss(v["frase_en"])}</div>'
+            frase = f'<p class="body" data-src="{v["frase_src"]}">{esc(v["frase"])}</p>{gloss(v["frase_en"])}'
+        # crítica 1: «siempre es un güen día…» deja de ser rótulo chico sobre la lista y cierra la frase, en body
+        frase = (f'<div class="hoy-frase">{frase}<p class="body hoy-siempre" data-src="{HOY["semana_titulo_src"]}">{esc(HOY["semana_titulo"])}</p>'
+                 f'{gloss(HOY["semana_titulo_en"])}</div>')
         # la semana, con el día de esta variante marcado
         rows = []
-        for it in pg["items"]:
+        vie = HOY["viernes_semana"]  # crítica 1: el viernes con su línea literal (IG-003), sin promo inventada
+        semana_items = [dict(it, src="CARTA-7") for it in pg["items"] if it["dia_n"] < vie["dia_n"]]
+        semana_items.append({"dia": vie["dia"], "dia_n": vie["dia_n"], "texto": vie["linea"], "src": vie["src"]})
+        semana_items += [dict(it, src="CARTA-7") for it in pg["items"] if it["dia_n"] > vie["dia_n"]]
+        for it in semana_items:
             today = it["dia_n"] in v["dias"]
             name = it.get("texto") or it.get("nombre")
             hoy_tag = '<span class="es-hoy-m" data-ui data-en="Today">Hoy</span>' if today else ""
             rows.append(f'<li{" class=\"es-hoy\" aria-current=\"date\"" if today else ""}>'
-                        f'<b><span data-src="CARTA-7">{esc(it["dia"])}</span>{hoy_tag}</b>'
+                        f'<b><span data-src="{it["src"]}">{esc(it["dia"])}</span>{hoy_tag}</b>'
                         f'<span class="gl" lang="en">{esc(HOY["dias_en"][it["dia"]])}</span>'
-                        f'<span data-src="CARTA-7">{esc(name)}</span></li>')
-        semana = (f'<div class="semana"><p class="small" data-src="{HOY["semana_titulo_src"]}">{esc(HOY["semana_titulo"])}</p>'
-                  f'{gloss(HOY["semana_titulo_en"], "gl small")}<ol class="semana-l num">{"".join(rows)}</ol></div>')
+                        f'<span data-src="{it["src"]}">{esc(name)}</span></li>')
+        semana = f'<div class="semana"><ol class="semana-l num">{"".join(rows)}</ol></div>'
+
         acc = (f'<p class="hoy-acc acc"><a class="btn" href="carta/#promos" data-ui data-en="See the menu">Ver la carta</a>'
                f'<a class="link" href="{MAPS}" data-ui data-en="Get directions">Cómo llegar</a></p>')
         variants.append(
@@ -596,7 +603,7 @@ def resenas_html():
         if en:
             gls += f'<p class="gl" lang="en">{esc(en.group(1))}</p>'
         frm = f", {rv['from'].split(',')[0]}" if rv.get("from") else ""
-        out.append(f'<figure class="res res-{i + 1}" data-rv="fade">'
+        out.append(f'<figure class="res res-{i + 1}">'
                    f'<blockquote lang="{lang}"><p class="res-q" data-src="RESEÑA:{who}">{esc(q)}</p></blockquote>{gls}'
                    f'<figcaption class="small num" data-dato>{esc(rv["who"] if who != "Visitante" else "Visitante")}{esc(frm)} · {esc(rv["src"])} · {esc(rv["date"])}</figcaption></figure>')
     if len(out) != 6:
@@ -652,6 +659,7 @@ def expand(src):
         spans = "<br>".join(f'<span class="ln"><span class="li" style="--i:{i}">{p.strip()}</span></span>' for i, p in enumerate(parts))
         return open_tag + spans + close
     src = re.sub(r"(<h[1-6][^>]*\bdata-lines\b[^>]*>)(.*?)(</h[1-6]>)", split_lines, src, flags=re.S)
+    src = re.sub(r"(<p class=\"firma\"[^>]*\bdata-lines\b[^>]*>)(.*?)(</p>)", split_lines, src, flags=re.S)  # la firma del pie, con máscara de línea
     # el texto de Almud se queda en español también en modo EN: lang="es" en cada literal
     def add_lang(m):
         t = m.group(0)
