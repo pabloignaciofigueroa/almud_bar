@@ -63,3 +63,9 @@ Hubo tres propuestas distintas:
   - No hay foto de mocktail; P031 es lo más cercano.
   - No hay cumpleaños de un cliente; P198 sirve de celebración genérica.
   - Los cuadros solo existen en fotogramas.
+
+## * Asterisco: portada en escritorio (revisar al construir)
+La portada partida en escritorio (P189 al ~60 % del ancho) **es una solución provisoria por resolución**, no una decisión de diseño cerrada. Si al verla construida no nos gusta, hay tres alternativas, en este orden:
+1. P189 a sangre, con ancho máximo de 1440 px y fondo noche a los lados en pantallas mayores.
+2. P362 a sangre (3072 px, nítida) en escritorio y P189 en móvil.
+3. Pedir a Almud el original en alta de P189 (fase posterior al regalo).
