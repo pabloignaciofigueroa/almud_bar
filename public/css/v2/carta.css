@@ -1,0 +1,173 @@
+/* Almud Bar v2 · carta.css (fase 15): la carta completa en su página, carta/index.html.
+   Va sobre tokens.css y site.css: aquí no se escriben colores, curvas ni duraciones sueltas.
+   Una sección a la vez (pestañas sticky), un grupo a la vez en las largas (chips), y cada pestaña con su tinte suave.
+   El estado inicial (pestaña, grupo, día) lo pone un script en el <head> antes de pintar; sin JS todo queda apilado y a la vista.
+   Crítica 1: bajo 1024 px las siete pestañas (y los chips) se ven todas a la vez, en varias filas; nada queda fuera del borde. */
+
+:root {
+  --tabs-h: 64px;            /* alto de la barra de pestañas (sticky); carta.js lo mide cuando la barra va en varias filas */
+  --chips-h: 60px;           /* barra de grupos (sticky bajo las pestañas desde 700 px) */
+  --th: 104px;               /* foto del ítem en la fila */
+  --tab-on-bg: var(--carta-azul);  --tab-on-ink: var(--papel);
+  --chip-on-bg: var(--carta-tinta); --chip-on-ink: var(--papel);
+}
+@media (max-width: 1023px) { :root { --tabs-h: 112px; } }
+@media (max-width: 699px) { :root { --tabs-h: 60px; } }
+@media (min-width: 1024px) { :root { --th: 144px; } }
+html { scroll-padding-top: 0; }
+.pag-carta { background: var(--papel); }
+
+/* cabecera: la misma barra de noche del landing, pero no fija (aquí lo fijo son las pestañas).
+   Crítica 1: Inicio, Cómo llegar y el DM a mano desde la primera pantalla. */
+.nav-carta { position: relative; gap: var(--sp-4); }
+.nav-carta .lang { display: flex; }
+.nav-carta .nav-end { gap: var(--sp-4); }
+.nav-carta .link { font-size: var(--t-small); }
+.nav-carta .nav-l { min-width: 44px; justify-content: center; }  /* fase 16: "DM" en el teléfono también mide ≥ 44 × 44 */
+.nav-inicio { display: none; }
+.l-largo { display: none; }
+@media (min-width: 700px) {
+  .nav-inicio { display: inline-flex; }
+  .l-largo { display: inline; }
+  .l-corto { display: none; }
+  .nav-carta .link { font-size: var(--t-body); }
+  .nav-carta .nav-end { gap: var(--sp-5); }
+}
+
+.carta-cab { background: var(--carta-suelo); color: var(--carta-tinta); padding-block: var(--sp-8) var(--sp-7); }
+.carta-cab .carta-intro .acc { margin-top: var(--sp-1); }
+@media (max-width: 699px) { .carta-cab { padding-block: var(--sp-6) var(--sp-5); } }
+.carta-cuerpo { --ring: var(--carta-azul); --gl-c: var(--carta-tinta); color: var(--carta-tinta); }
+
+/* ================= pestañas (sticky en todos los anchos) =================
+   Fase 16: en el teléfono UNA fila que se desliza de lado (borde que se desvanece del lado que tiene más, la pestaña activa
+   siempre a la vista, barra de desplazamiento fina); en tablet dos filas como máximo; en escritorio, una. */
+.tabs { position: sticky; top: 0; z-index: 30; background: var(--carta-suelo); }
+.tabs-l { display: flex; align-items: center; gap: var(--sp-1); padding: var(--sp-2) var(--margin); flex-wrap: wrap; }
+.tab { flex: none; display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--sp-4);
+  font: var(--w-regular) var(--t-body)/1 var(--font-text); letter-spacing: 0; white-space: nowrap; color: var(--carta-azul);
+  text-decoration: underline; text-decoration-thickness: var(--underline-w); text-underline-offset: var(--underline-offset); text-decoration-color: transparent;
+  transition: transform var(--d-press) var(--ease-out), background-color var(--d-hover) var(--ease-hover), color var(--d-hover) var(--ease-hover), text-decoration-color var(--d-hover) var(--ease-hover); }
+.tab:active, .chip:active { transform: scale(0.97); }
+.tab[aria-selected="true"] { background: var(--tab-on-bg); color: var(--tab-on-ink); text-decoration-color: transparent; }
+@media (max-width: 1023px) {
+  .tabs-l { gap: 0 var(--sp-1); padding-block: var(--sp-1); }
+  .tab { min-height: 44px; padding: 0 var(--sp-3); font-size: var(--t-small); text-decoration-color: currentColor; }
+}
+/* una fila que se desliza: la usan las pestañas y los chips del teléfono */
+@media (max-width: 699px) {
+  .tabs-l, .chips { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: thin; scrollbar-color: var(--carta-azul) transparent; -webkit-overflow-scrolling: touch; }
+  .tabs-l::-webkit-scrollbar, .chips::-webkit-scrollbar { height: 4px; }
+  .tabs-l::-webkit-scrollbar-thumb, .chips::-webkit-scrollbar-thumb { background: var(--carta-azul); }
+  /* el borde se desvanece solo del lado que tiene más (carta.js pone .mas-izq / .mas-der) */
+  .mas-der { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); } /* taste-skill-ignore: máscara funcional de desborde, no color */
+  .mas-izq { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 48px), transparent); } /* taste-skill-ignore: máscara funcional de desborde */
+  .mas-izq.mas-der { -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent); } /* taste-skill-ignore: máscara funcional de desborde */
+}
+@media (max-width: 359px) {
+  :root { --th: 80px; }
+  .fila .fn, .fila .fp { font-size: var(--t-body); }
+}
+/* el teclado nunca anima: pestañas y chips cambian de color al instante (carta.js pone .kb) */
+.kb .tab, .kb .chip { transition: none; }
+
+/* ================= paneles: una sección, su tinte ================= */
+.cp { --tinte: var(--tinte-papel);
+  background: var(--tinte); padding-bottom: var(--sp-9); scroll-margin-top: var(--tabs-h); }
+.cp[data-tinte="fucsia"] { --tinte: var(--tinte-fucsia); }
+.cp[data-tinte="turquesa"] { --tinte: var(--tinte-turquesa); }
+.cp[data-tinte="amarillo"] { --tinte: var(--tinte-amarillo); }
+.cp[data-tinte="coral"] { --tinte: var(--tinte-coral); }
+.cp[data-tinte="verde"] { --tinte: var(--tinte-verde); }
+@media (max-width: 1023px) { .js .cp { min-height: calc(100svh - var(--tabs-h)); } }  /* en el teléfono el pie no salta al cambiar de pestaña */
+.cp:focus-visible { outline-offset: calc(-1 * var(--focus-w)); }
+.cp-cab { padding-top: var(--sp-7); row-gap: var(--sp-1); }
+.cp-h { color: var(--carta-tinta); }
+.cp-gl { margin-top: var(--sp-2); }
+/* «ALMUDCITO PROMOS» (impreso en caja alta): en caja de oración y en body, no como rótulo invertido */
+.cs-intro { margin-top: var(--sp-2); font: var(--w-regular) var(--t-body)/var(--lh-body) var(--font-text); letter-spacing: 0; text-transform: lowercase; }
+.cs-intro::first-letter { text-transform: uppercase; }
+
+/* chips de grupo (sticky bajo las pestañas desde 700 px, sobre el tinte del panel; en el teléfono, una fila quieta que se desliza).
+   Fase 16: sobrios: texto azul subrayado; el activo en noche. */
+.chips-w { position: sticky; top: var(--tabs-h); z-index: 20; margin-top: var(--sp-5); background: var(--tinte); }
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--sp-1); padding: var(--sp-1) var(--margin); }
+.chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--sp-3);
+  font: var(--w-regular) var(--t-body)/1 var(--font-text); letter-spacing: 0; white-space: nowrap; color: var(--carta-azul);
+  text-decoration: underline; text-decoration-thickness: var(--underline-w); text-underline-offset: var(--underline-offset);
+  transition: transform var(--d-press) var(--ease-out), background-color var(--d-hover) var(--ease-hover), color var(--d-hover) var(--ease-hover); }
+.chip:first-child { margin-left: calc(-1 * var(--sp-3)); }
+.chip[aria-selected="true"] { background: var(--chip-on-bg); color: var(--chip-on-ink); text-decoration: none; margin-left: 0; }
+@media (max-width: 699px) {
+  .chips-w { position: static; }
+  .chip { font-size: var(--t-small); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .tab:not([aria-selected="true"]):hover { text-decoration-color: currentColor; }
+  .chip:not([aria-selected="true"]):hover { text-decoration-thickness: 0.16em; }
+}
+
+.cp-cuerpo { margin-top: var(--sp-6); row-gap: var(--sp-6); align-items: start; }
+.cp-grupos { display: grid; gap: var(--sp-8); align-content: start; }
+.csub { display: grid; gap: var(--sp-8); align-content: start; scroll-margin-top: calc(var(--tabs-h) + var(--chips-h)); }
+@media (max-width: 699px) { .csub { scroll-margin-top: var(--tabs-h); } }
+.laminas { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-content: start; }
+.lamina .pie { color: var(--carta-tinta); }
+@media (max-width: 1023px) {
+  /* teléfono y tablet (crítica 1): sin lámina de pestaña (las filas con foto ya llevan la imagen y la primera pantalla
+     muestra tragos); la lámina de grupo va después de su lista, a lo ancho y en 16:9 */
+  .laminas { display: contents; }
+  .lamina:not(.lam-g) { display: none; }
+  .lam-g { grid-column: 1 / -1; order: 1; }
+  .lam-g .f { aspect-ratio: var(--ratio-banda); }
+}
+@media (min-width: 1024px) {
+  .cp-lam .laminas { grid-column: 1 / span 4; grid-row: 1; grid-template-columns: 1fr; position: sticky; top: calc(var(--tabs-h) + var(--sp-6)); }
+  .cp-lam:has(.chips) .laminas { top: calc(var(--tabs-h) + var(--chips-h) + var(--sp-5)); }
+  .cp-lam .cp-grupos { grid-column: 6 / span 7; grid-row: 1; }
+}
+
+/* ================= grupos y filas (la hoja impresa) ================= */
+/* fase 16: el título del grupo en Six Caps (sistema.md §7: las categorías van en Six Caps); el subgrupo sigue en Oswald 600 */
+.cg-h { font: var(--w-regular) var(--t-head)/var(--lh-head) var(--font-display); letter-spacing: var(--track-display); text-transform: uppercase; color: var(--carta-tinta); }
+.cg-sub { font: var(--w-semi) var(--t-lead)/1.15 var(--font-text); letter-spacing: 0; text-transform: none; }
+.cg-nota { margin-top: var(--sp-1); }
+.cg-pie { margin-top: var(--sp-5); max-width: 40em; }
+.filas { display: grid; gap: var(--sp-5) var(--gutter); margin-top: var(--sp-5); }
+.fila { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--sp-4); row-gap: var(--sp-1); align-items: baseline; align-content: start; }
+.fila .fd { grid-column: 1 / -1; }
+/* crítica 1: si un grupo tiene alguna foto, todas sus filas llevan la columna de la foto (vacía si no hay): un solo borde izquierdo */
+.fila.con-foto, .filas:has(.con-foto) > .fila { grid-template-columns: var(--th) minmax(0, 1fr) auto; }
+.fila-foto { grid-column: 1; grid-row: 1 / span 3; align-self: start; width: var(--th); }
+.con-foto .fn, .filas:has(.con-foto) > .fila > .fn { grid-column: 2; }
+.con-foto .fps, .filas:has(.con-foto) > .fila > .fps { grid-column: 3; }
+.con-foto .fd, .filas:has(.con-foto) > .fila > .fd { grid-column: 2 / -1; }
+.fdia { display: block; color: var(--carta-tinta); }
+.fps { display: flex; gap: var(--sp-3); justify-content: flex-end; }
+.tag { display: inline-flex; align-items: center; gap: 3px; margin-left: var(--sp-2); font: var(--w-regular) var(--t-small)/1 var(--font-text); letter-spacing: 0.01em; text-transform: none; color: var(--carta-tinta); vertical-align: 0.12em; }
+.tag svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+/* precios en varias medidas: columnas fijas, alineadas con su rótulo */
+.cg-m { --pw: 5.6em; max-width: 46rem; }
+.cg-cols { display: grid; grid-template-columns: minmax(0, 1fr) repeat(2, var(--pw)); column-gap: var(--sp-3); margin-top: var(--sp-4); text-align: right; }
+.cg-m .fps { display: grid; grid-template-columns: repeat(2, var(--pw)); column-gap: var(--sp-3); }
+.cg-m .fp, .cg-m .fn { font-size: var(--t-body); }
+.cg-m .filas { gap: var(--sp-3); }
+@media (min-width: 900px) {
+  .filas { grid-template-columns: 1fr 1fr; gap: var(--sp-6) calc(var(--gutter) * 2); }
+  .cg-m .filas, .cp-lam .filas { grid-template-columns: 1fr; }
+  .cg-m { --pw: 7.5em; }
+}
+
+/* la promo de hoy: solo la etiqueta "Hoy" (lo marca el script del <head>); fase 16: sin hoja blanca, ninguna superficie elevada */
+.promo { margin: 0; }
+.hoy-m { display: none; align-items: center; margin-left: var(--sp-2); padding: 3px var(--sp-2); vertical-align: 0.15em;
+  background: var(--carta-tinta); color: var(--papel); font: var(--w-regular) var(--t-small)/1 var(--font-text); letter-spacing: 0.01em; text-transform: none; }
+
+/* pie */
+.pie-logo-a { display: block; color: var(--papel); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tab, .chip { transition-property: background-color, color, text-decoration-color; }
+  .tab:active, .chip:active { transform: none; }
+}
