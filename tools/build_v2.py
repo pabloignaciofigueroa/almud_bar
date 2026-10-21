@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Almud Bar v2 · build: src-v2/index.html -> index.html (raíz).
+"""Almud Bar v2 · build: src-v2/index.html -> index.html (raíz) y src-v2/carta.html -> carta/index.html.
 
 Inyecta:
   <x-img id crop sizes class [eager]/>   <picture> AVIF/WebP con srcset+sizes, width/height, LQIP, loading/fetchpriority
@@ -8,7 +8,9 @@ Inyecta:
   <x-credit id [ui] [inline] [class]/>    "Foto @autor" con la fuente (post) de assets/v2/media.json
   <x-symbols/>                            símbolos SVG del logotipo (brand/)
   <x-handles>…</x-handles>                los @ como enlaces a Instagram (texto intacto)
-  <x-hoy/> <x-resenas/> <x-carta/>        Hoy en Almud, reseñas y la carta, desde content/*.json
+  <x-hoy/> <x-resenas/>                   Hoy en Almud y reseñas, desde content/*.json
+  <x-destacados/>                         landing: destacados de la carta (ítem con su foto real, nombre, descripción y precio)
+  <x-carta-tabs/> <x-carta-estado/>       /carta/: pestañas por sección, grupos filtrables y el estado inicial (antes de pintar)
   {{precio:Nombre}}                       precio literal de content/carta-v2.json
   data-lines                              titular partido en líneas con máscara (<br> = corte)
 
@@ -26,6 +28,7 @@ import html
 import json
 import re
 import sys
+import unicodedata
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -35,6 +38,8 @@ import verify_copy as vc  # noqa: E402  (normalización y fuentes del guion)
 
 SRC = ROOT / "src-v2" / "index.html"
 OUT = ROOT / "index.html"
+SRC_CARTA = ROOT / "src-v2" / "carta.html"
+OUT_CARTA = ROOT / "carta" / "index.html"
 MEDIA = json.loads((ROOT / "assets/v2/media.json").read_text())
 ALTS = json.loads((ROOT / "content/alts-v2.json").read_text())
 CARTA = json.loads((ROOT / "content/carta-v2.json").read_text())
@@ -49,7 +54,7 @@ DM = "https://ig.me/m/almud_bar"
 UI_EXTRA = {
     "Saltar al contenido", "Skip to content", "Almud Bar", "Pausar video", "Pause video",
     "Reproducir video", "Play video",
-    "Índice de la carta", "Menu index",
+    "Secciones de la carta", "Menu sections",
 }
 
 errors = []
@@ -213,32 +218,13 @@ def precio_de(nombre):
     return ""
 
 
-CARTA_ORDER = [  # orden del guion (tragos, sin alcohol, bebidas, comilona, promos) y su ancla
-    ("cocteleria-de-la-casa", "carta-casa", "House cocktails"),
-    ("cocteles-del-mundo-mundial", "carta-mundo", "Cocktails from all over the world [del mundo mundial]"),
-    ("espirituosos", "carta-espirituosos", "Spirits"),
-    ("mocktails-sin-alcohol", "carta-sin-alcohol", "House mocktails"),
-    ("jugos-bebidas", "carta-jugos", "Juices & soft drinks"),
-    ("cervezas-sin-alcohol", "carta-cervezas", "Alcohol-free beers"),
-    ("bebidas-calientes", "carta-calientes", "Hot drinks"),
-    ("vinos-espumantes", "carta-vinos", "Wines & sparkling"),
-    ("comilona", "carta-comilona", "Comilona [food]"),
-    ("nuestras-promos", "carta-promos", "Weekly deals"),
-]
 GROUP_EN = {
     "Tintelis": "Tintelis [reds]", "Blanquelis": "Blanquelis [whites]", "Whiscachos": "Whiscachos [whiskies]",
     "Ron poromponpon": "Ron poromponpon [rum]", "Vodkita": "Vodkita [vodka]", "Pa los chichichos": "Pa los chichichos [kids]",
     "Somos dulzones": "Somos dulzones [desserts]", "Picoteos": "Small plates", "Greditas": "Greditas [clay-pot dishes]",
     "Sanguches": "Sandwiches", "Pizzas artesanales": "Artisan pizzas", "Mocktails de la casa": "House mocktails",
+    "Jugos & bebidas": "Juices & soft drinks", "Cervezas sin alcohol": "Alcohol-free beers", "Bebidas calientes": "Hot drinks",
 }
-LAMINAS = {  # una lámina (foto real o loop) por sección de la carta, donde existe
-    "cocteleria-de-la-casa": [("img", "carta-peter")],
-    "cocteles-del-mundo-mundial": [("video", "carta-muro-rosa")],
-    "espirituosos": [("img", "carta-lamina-negroni")],
-    "mocktails-sin-alcohol": [("img", "carta-moto")],
-    "comilona": [("img", "carta-contuti"), ("video", "carta-cazuela")],
-}
-TRIO = {"jugos-bebidas", "cervezas-sin-alcohol", "bebidas-calientes"}
 TAG_EN = {"veggie": "veggie", "vegan": "vegan", "picante": "spicy", "nuevo": "new"}
 TAG_SVG = {  # iconos dibujados, un solo trazo (1.5), sin emoji
     "veggie": '<path d="M3 13c0-6 4-10 10-10 0 6-4 10-10 10Zm0 0 6-6"/>',
@@ -247,9 +233,65 @@ TAG_SVG = {  # iconos dibujados, un solo trazo (1.5), sin emoji
     "nuevo": '<path d="M8 1.5 9.8 6l4.7.3-3.6 3 1.2 4.6L8 11.4l-4.1 2.5 1.2-4.6-3.6-3L6.2 6Z"/>',
 }
 
+# ---- la carta en su página (/carta/): pestañas con las secciones de Almud, tinte suave por pestaña ----
+TABS = [  # (ancla, secciones de carta-v2.json, glosa EN, tinte)
+    ("casa", ["cocteleria-de-la-casa"], "House cocktails", "fucsia"),
+    ("mundo", ["cocteles-del-mundo-mundial"], "Cocktails from all over the world [del mundo mundial]", "turquesa"),
+    ("espirituosos", ["espirituosos"], "Spirits", "amarillo"),
+    ("vinos", ["vinos-espumantes"], "Wines & sparkling", "coral"),
+    ("sin-alcohol", ["mocktails-sin-alcohol", "jugos-bebidas", "cervezas-sin-alcohol", "bebidas-calientes"], "Alcohol-free mocktails & drinks", "verde"),
+    ("comilona", ["comilona"], "Comilona [food]", "papel"),
+    ("promos", ["nuestras-promos"], "Weekly deals", "coral"),
+]
+CHIPS = {"mundo", "espirituosos", "sin-alcohol", "comilona"}  # pestañas largas: un grupo a la vez
+SUB_SLUG = {
+    "Piscolein o combinadito": "piscolein", "Ron poromponpon": "ron", "Amamos el GIN!": "gin",
+    "Tequilazos & mezcalazos": "tequilas", "Red Bull te da aaalas": "red-bull", "Mocktails de la casa": "mocktails",
+    "Mocktails clásicos": "clasicos", "Jugos & bebidas": "jugos", "Cervezas sin alcohol": "cervezas",
+    "Bebidas calientes": "calientes", "Pizzas artesanales": "pizzas", "Pa los chichichos": "chichichos",
+    "Somos dulzones": "dulzones",
+}
+TAB_LAM = {  # láminas de pestaña: foto real del ambiente, sin nombre de ítem
+    "casa": [("video", "carta-muro-rosa")],  # el muro rosa donde se hacen (loop V021, IG-090)
+    "mundo": [("img", "tragos-sours")],  # tres copas con espuma y flores (P086, IG-079): ambiente, sin nombre de trago
+    "espirituosos": [("img", "carta-lamina-negroni")],
+    "vinos": [("img", "carta-lamina-vino")],
+    "comilona": [("video", "carta-cazuela")],  # loop de una gredita (IG-018), ambiente de la cocina: la columna no cambia de ancho entre grupos
+}
+GROUP_LAM = {  # láminas de grupo: se ven solo con su grupo
+    "mundo-negroni": [("img", "carta-grupo-negroni")],
+    "mundo-spritz": [("img", "carta-grupo-spritz")],
+    "comilona-pizzas": [("img", "carta-grupo-pizzas")],
+}
+ITEM_IMG = {  # foto del ítem: solo cuando la foto es ese ítem (caption que lo nombra o carta.json › img)
+    ("cocteleria-de-la-casa", "Aquí te las traigo Peter"): "carta-peter",
+    ("cocteleria-de-la-casa", "Cómo te voy a olvidar"): "carta-olvidar",
+    ("cocteleria-de-la-casa", "Sagüer on Faia"): "carta-saguer",
+    ("cocteleria-de-la-casa", "Sangría Foreva!"): "carta-sangria",
+    ("cocteleria-de-la-casa", "A veces me pongo Coquette"): "carta-coquette",
+    ("mocktails-sin-alcohol", "La moto chantá"): "carta-moto",
+    ("comilona", "Tukulito Sakayama"): "carta-tukulito",
+    ("comilona", "Con tuti si no pa qué!"): "carta-contuti",
+    ("comilona", "Camarón que se duerme"): "carta-camaron",
+    ("comilona", "Topiturrón"): "carta-topiturron",
+    ("comilona", "Pizza dulzona"): "carta-pizza-dulzona",
+    ("nuestras-promos", "Negroni & Fernet c/Coca Cola"): "carta-promo-negroni",
+    ("nuestras-promos", "Piscolein & Gin Tonic"): "carta-promo-piscolein",
+    ("nuestras-promos", "Sangría de la casa"): "carta-sangria",
+}
+DIA_TINTE = {0: "coral", 1: "coral", 2: "coral", 3: "turquesa", 4: "fucsia", 5: "amarillo", 6: "verde"}  # como Hoy en Almud
+THUMB_SIZES = "(min-width: 1024px) 144px, 104px"
+NOLAM = []
+
 
 def esc(s):
     return html.escape(s, quote=False)
+
+
+def slug(s):
+    s = unicodedata.normalize("NFD", s.lower())
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
 def tag_html(t):
@@ -266,10 +308,10 @@ def gloss(en_text, cls="gl"):
     return f'<p class="{cls}" lang="en">{esc(en_text)}</p>'
 
 
-def item_html(it, cols):
+def item_html(it, cols, foto=None, extra_cls=""):
     name = esc(it["nombre"])
     if it.get("dia"):
-        name = f'<span class="fdia">{esc(it["dia"])}</span> {name}'
+        name = f'<span class="fdia">{esc(it["dia"])}</span> {name}<span class="hoy-m" data-ui data-en="Today">Hoy</span>'
     tags = "".join(tag_html(t) for t in it.get("tags", []))
     if cols:
         prices = "".join(
@@ -279,63 +321,179 @@ def item_html(it, cols):
         prices = f'<span class="fp">{esc(it["precio"])}</span>'
     desc_bits = [it[k] for k in ("desc", "bodega", "nota") if it.get(k)]
     desc = f'<p class="fd">{esc(" · ".join(desc_bits))}</p>' if desc_bits else ""
-    return f'<li class="fila"><p class="fn">{name}{tags}</p><p class="fps num">{prices}</p>{desc}</li>'
+    th, cls = "", "fila" + extra_cls
+    if foto:
+        th = f'<div class="fila-foto f r45" data-rv>{picture(foto, sizes=THUMB_SIZES)}</div>'
+        cls += " con-foto"
+    return f'<li class="{cls}">{th}<p class="fn">{name}{tags}</p><p class="fps num">{prices}</p>{desc}</li>'
 
 
-def lamina_html(kind, mid):
+def lamina_html(kind, mid, data_g=""):
+    g = f' data-g="{data_g}"' if data_g else ""
+    cls = "lamina lam-g" if data_g else "lamina"
+    sizes = "(min-width: 1024px) 30vw, 45vw"
     if kind == "img":
         cred = credit(mid) if (MEDIA["images"].get(mid) or {}).get("credit") else ""
-        return f'<figure class="lamina"><div class="f r45" data-rv>{picture(mid, sizes="(min-width: 1024px) 30vw, (min-width: 700px) 45vw, 90vw")}</div>{cred}</figure>'
-    return f'<figure class="lamina">{video(mid, "f r45")}</figure>'
+        return f'<figure class="{cls}"{g}><div class="f r45" data-rv>{picture(mid, sizes=sizes)}</div>{cred}</figure>'
+    return f'<figure class="{cls}"{g}><div data-rv>{video(mid, "f r45")}</div></figure>'
 
 
-def section_html(s, anchor, en):
-    grupos = []
-    for g in s["grupos"]:
-        cols = g.get("columnas")
-        head = ""
-        if g.get("titulo"):
-            sub = " cg-sub" if g.get("padre") else ""
-            head += f'<h4 class="cg-h{sub}">{esc(g["titulo"])}</h4>'
-            if g["titulo"] in GROUP_EN:
-                head += gloss(GROUP_EN[g["titulo"]], "gl small")
-        if g.get("nota"):
-            head += "".join(f'<p class="cg-nota small">{esc(l)}</p>' for l in g["nota"].split("\n"))
-        colrow = ""
-        if cols:
-            colrow = '<p class="cg-cols small" aria-hidden="true"><span></span>' + "".join(f"<span>{esc(c)}</span>" for c in cols) + "</p>"
-        rows = "".join(item_html(it, cols) for it in g["items"])
-        foot = f'<p class="cg-pie small">{esc(g["nota_pie"])}</p>' if g.get("nota_pie") else ""
-        ncls = f" cg-m cg-m{len(cols)}" if cols else ""
-        grupos.append(f'<div class="cg{ncls}">{head}{colrow}<ul class="filas">{rows}</ul>{foot}</div>')
-    intro = f'<p class="cs-intro small">{esc(s["intro"])}</p>' if s.get("intro") else ""
-    lams = LAMINAS.get(s["id"], [])
-    lam_html = f'<div class="laminas">{"".join(lamina_html(k, m) for k, m in lams)}</div>' if lams else ""
-    cls = "cs" + (" cs-lam" if lams else "") + (" cs-trio-i" if s["id"] in TRIO else "")
-    return (f'<section class="{cls}" id="{anchor}" aria-labelledby="{anchor}-h">'
-            f'<div class="cs-cab"><h3 class="head cs-h" id="{anchor}-h">{esc(s["titulo"])}</h3>{gloss(en)}{intro}</div>'
-            f'{lam_html}<div class="cs-grupos">{"".join(grupos)}</div></section>')
+def group_html(s, g, head_title=None, sub=False):
+    cols = g.get("columnas")
+    head = ""
+    titulo = g.get("titulo") or head_title
+    if titulo:
+        h = "h4" if g.get("padre") else "h3"
+        head += f'<{h} class="cg-h{" cg-sub" if g.get("padre") else ""}">{esc(titulo)}</{h}>'
+        if titulo in GROUP_EN:
+            head += gloss(GROUP_EN[titulo], "gl small")
+    if g.get("nota"):
+        head += "".join(f'<p class="cg-nota small">{esc(l)}</p>' for l in g["nota"].split("\n"))
+    colrow = ""
+    if cols:
+        colrow = '<p class="cg-cols small" aria-hidden="true"><span></span>' + "".join(f"<span>{esc(c)}</span>" for c in cols) + "</p>"
+    rows = []
+    for it in g["items"]:
+        foto = ITEM_IMG.get((s["id"], it["nombre"]))
+        extra = f' promo promo-d{it["dia_n"]}' if it.get("dia_n") is not None else ""
+        rows.append(item_html(it, cols, foto, extra))
+    foot = f'<p class="cg-pie small">{esc(g["nota_pie"])}</p>' if g.get("nota_pie") else ""
+    ncls = f" cg-m cg-m{len(cols)}" if cols else ""
+    return f'<div class="cg{ncls}">{head}{colrow}<ul class="filas">{"".join(rows)}</ul>{foot}</div>'
 
 
-def carta_html():
+def subunits(tab, secs):
+    """Grupos de primer nivel de la pestaña (los hijos con «padre» van con su padre)."""
+    units = []
+    for i, s in enumerate(secs):
+        for g in s["grupos"]:
+            if g.get("padre") and units:
+                units[-1]["grupos"].append((s, g, None))
+                continue
+            label = g.get("titulo") or s["titulo"]
+            head = None if g.get("titulo") or i == 0 else s["titulo"]
+            sid = f"{tab}-{SUB_SLUG.get(label, slug(label))}"
+            units.append({"id": sid, "label": label, "grupos": [(s, g, head)]})
+    return units
+
+
+def tab_panel(tab, secs, en, tinte):
+    main = secs[0]
+    units = subunits(tab, secs)
+    intro = f'<p class="cs-intro small">{esc(main["intro"])}</p>' if main.get("intro") else ""
+    cab = (f'<div class="cp-cab g"><h2 class="head cp-h" id="{tab}-h" data-lines>{esc(main["titulo"])}</h2>'
+           f'{gloss(en, "gl cp-gl")}{intro}</div>')
+    chips = ""
+    if tab in CHIPS:
+        links = "".join(f'<a class="chip" href="#{u["id"]}" id="c-{u["id"]}" data-tab="{tab}" data-sub="{u["id"]}">{esc(u["label"])}</a>'
+                        for u in units)
+        chips = (f'<div class="chips-sent" aria-hidden="true"></div><div class="chips-w"><div class="chips" data-tab="{tab}" '
+                 f'aria-label="{esc(main["titulo"])}">{links}</div></div>')
+    lams = [lamina_html(k, m) for k, m in TAB_LAM.get(tab, [])]
+    for u in units:
+        lams += [lamina_html(k, m, u["id"]) for k, m in GROUP_LAM.get(u["id"], [])]
+    lam_html = f'<div class="laminas">{"".join(lams)}</div>' if lams else ""
+    body = []
+    for u in units:
+        inner = "".join(group_html(s, g, head) for s, g, head in u["grupos"])
+        if tab in CHIPS:
+            body.append(f'<div class="csub" id="{u["id"]}" data-tab="{tab}">{inner}</div>')
+        else:
+            body.append(inner)
+    cls = "cp" + (" cp-lam" if lams else "")
+    if lams and tab in CHIPS and tab not in TAB_LAM:  # grupos sin lámina en una pestaña con láminas de grupo: la lista ocupa todo
+        NOLAM.extend((tab, u["id"]) for u in units if u["id"] not in GROUP_LAM)
+    panel = (f'<section class="{cls}" id="{tab}" data-tinte="{tinte}" aria-labelledby="{tab}-h">{cab}{chips}'
+             f'<div class="cp-cuerpo g">{lam_html}<div class="cp-grupos">{"".join(body)}</div></div></section>')
+    return panel, [u["id"] for u in units] if tab in CHIPS else []
+
+
+def carta_tabs_html():
     by_id = {s["id"]: s for s in CARTA["secciones"]}
-    if set(by_id) != {k for k, _, _ in CARTA_ORDER}:
-        fail("carta: las secciones de carta-v2.json no calzan con CARTA_ORDER")
+    used = [sid for _, ss, _, _ in TABS for sid in ss]
+    if sorted(used) != sorted(by_id):
+        fail("carta: las secciones de carta-v2.json no calzan con TABS")
     n_items = sum(len(g["items"]) for s in CARTA["secciones"] for g in s["grupos"])
-    idx = "".join(f'<li><a class="link" href="#{a}">{esc(by_id[k]["titulo"])}</a></li>' for k, a, _ in CARTA_ORDER)
-    out = [f'<nav class="carta-indice g" aria-label="Índice de la carta" data-aria-en="Menu index"><ul>{idx}</ul></nav>',
-           '<div class="carta-secs">']
-    trio = []
-    for k, a, en in CARTA_ORDER:
-        h = section_html(by_id[k], a, en)
-        if k in TRIO:
-            trio.append(h)
-            if len(trio) == 3:
-                out.append(f'<div class="cs-trio">{"".join(trio)}</div>')
-            continue
-        out.append(h)
-    out.append("</div>")
-    return f'<div class="carta-cuerpo" lang="es" data-carta data-items="{n_items}">' + "".join(out) + "</div>", n_items
+    tabs = "".join(f'<a class="tab" href="#{t}" id="t-{t}" data-tab="{t}">{esc(by_id[ss[0]]["titulo"])}</a>' for t, ss, _, _ in TABS)
+    panels, state = [], {}
+    for t, ss, en, tinte in TABS:
+        p, subs = tab_panel(t, [by_id[x] for x in ss], en, tinte)
+        panels.append(p)
+        state[t] = subs
+    nav = ('<div class="tabs-sent" aria-hidden="true"></div>'
+           f'<nav class="tabs" id="secciones" aria-label="Secciones de la carta" data-aria-en="Menu sections"><div class="tabs-l">{tabs}</div></nav>')
+    out = (f'<div class="carta-cuerpo" lang="es" data-carta data-items="{n_items}">{nav}'
+           f'<div class="cps">{"".join(panels)}</div></div>')
+    return out, n_items, state
+
+
+def carta_estado(state):
+    """Estado inicial antes de pintar: pestaña y grupo desde el hash, día de la promo. Sin JS no se aplica nada."""
+    tabs = [t for t, *_ in TABS]
+    subs = {s: t for t, ss in state.items() for s in ss}
+    defs = {t: ss[0] for t, ss in state.items() if ss}
+    conf = json.dumps({"t": tabs, "s": subs, "d": defs}, separators=(",", ":"))
+    script = ("<script>(function(){var R=document.documentElement;"
+              "try{if(localStorage.getItem('almud-lang')==='en'){R.lang='en';}}catch(e){}R.classList.add('js');"
+              f"var C={conf},h='';try{{h=decodeURIComponent(location.hash.slice(1));}}catch(e){{}}"
+              "var t=C.t[0];if(C.s[h]){t=C.s[h];}else if(C.t.indexOf(h)>-1){t=h;}R.setAttribute('data-tab',t);"
+              "for(var k in C.d){R.setAttribute('data-sub-'+k,C.s[h]===k?h:C.d[k]);}"
+              "var d=-1;try{var q=/[?&]dia=(\\d)/.exec(location.search);if(q){d=+q[1];}else{"
+              "var w=new Intl.DateTimeFormat('en-US',{timeZone:'America/Santiago',weekday:'short'}).format(new Date());"
+              "d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(w);}}catch(e){}R.setAttribute('data-dia',d);})();"
+              "window.__en=function(){if(document.documentElement.lang!=='en')return;var l=document.querySelectorAll('[data-en]:not([data-es])');"
+              "for(var i=0;i<l.length;i++){l[i].setAttribute('data-es',l[i].textContent);l[i].textContent=l[i].getAttribute('data-en');}};</script>")
+    on_p = ",".join(f'html[data-tab="{t}"] #{t}' for t in tabs)
+    on_t = ",".join(f'html[data-tab="{t}"] .tab[data-tab="{t}"]' for t in tabs)
+    on_s = ",".join(f'html[data-sub-{t}="{s}"] #{s}' + (f',html[data-sub-{t}="{s}"] .lam-g[data-g="{s}"]' if s in GROUP_LAM else "")
+                    for t, ss in state.items() for s in ss)
+    on_c = ",".join(f'html[data-sub-{t}="{s}"] .chip[data-sub="{s}"]' for t, ss in state.items() for s in ss)
+    hoy = ",".join(f'html[data-dia="{d}"] .promo-d{d}' for d in range(2, 7))
+    tint = "".join(f'html[data-dia="{d}"] #promos{{--tinte:var(--tinte-{c});--tinte-fuerte:var(--tinte-{c}-fuerte)}}'
+                   for d, c in DIA_TINTE.items())
+    css = ("<style>/* estado de la carta (generado por build_v2.py): sin JS no aplica y todo queda a la vista */"
+           ".js .cp,.js .csub,.js .lam-g{display:none}"
+           f"{on_p},{on_s}{{display:block}}"
+           f"{on_t}{{background:var(--tab-on-bg);color:var(--tab-on-ink);text-decoration-color:transparent}}"
+           f"{on_c}{{background:var(--chip-on-bg);color:var(--chip-on-ink)}}"
+           f"{hoy}{{background:var(--hoy-bg)}}"
+           + ",".join(f'html[data-dia="{d}"] .promo-d{d} .hoy-m' for d in range(2, 7)) + "{display:inline-flex}"
+           f"{tint}"
+           + (",".join(f'html[data-sub-{t}="{u}"] #{t} .laminas' for t, u in NOLAM) + "{display:none}" if NOLAM else "")
+           + (",".join(f'html[data-sub-{t}="{u}"] #{t} .cp-grupos' for t, u in NOLAM) + "{grid-column:1/-1}" if NOLAM else "")
+           + "</style>")
+    return script + css
+
+
+# ---- landing: destacados de la carta (los productos con su mejor foto) ----
+DESTACADOS = [  # (sección, fuente, rótulo literal, glosa EN, ítems, ancla en /carta/)
+    ("cocteleria-de-la-casa", "CARTA-2", "Coctelería de la casa", "House cocktails",
+     ["Aquí te las traigo Peter", "Sagüer on Faia", "Sangría Foreva!"], "casa"),
+    ("mocktails-sin-alcohol", "CARTA-5", "Mocktails de la casa", "House mocktails", ["La moto chantá"], "sin-alcohol-mocktails"),
+    ("comilona", "CARTA-1", "Comilona", "Comilona [food]", ["Tukulito Sakayama", "Camarón que se duerme", "Pizza dulzona"], "comilona"),
+]
+
+
+def destacados_html():
+    by_id = {s["id"]: s for s in CARTA["secciones"]}
+    out = []
+    for sid, src, rot, en, names, anchor in DESTACADOS:
+        items = {it["nombre"]: it for g in by_id[sid]["grupos"] for it in g["items"]}
+        cards = []
+        for n in names:
+            it = items.get(n)
+            mid = ITEM_IMG.get((sid, n))
+            if not it or not mid:
+                fail(f"destacados: «{n}» no está en {sid} o no tiene foto")
+                continue
+            cards.append(
+                f'<li class="dest"><div class="f r45">{picture(mid, sizes="(min-width: 1024px) 22vw, (min-width: 700px) 30vw, 38vw")}</div>'
+                f'<div class="dest-t"><p class="dest-n"><span class="fn" data-src="{src}">{esc(it["nombre"])}</span> '
+                f'<span class="fp num" data-carta>{esc(it["precio"])}</span></p>'
+                f'<p class="fd" data-src="{src}">{esc(it["desc"])}</p></div></li>')
+        out.append(f'<div class="dest-g dest-{slug(sid)}"><h3 class="dest-h"><a class="link" href="carta/#{anchor}">'
+                   f'<span data-src="{src}">{esc(rot)}</span></a></h3>{gloss(en, "gl small")}<ul class="dest-l">{"".join(cards)}</ul></div>')
+    return "".join(out)
 
 
 # ------------------------------------------------------------------ hoy
@@ -395,7 +553,7 @@ def hoy_html():
                         f'<span data-src="CARTA-7">{esc(name)}</span></li>')
         semana = (f'<div class="semana"><p class="small" data-src="{HOY["semana_titulo_src"]}">{esc(HOY["semana_titulo"])}</p>'
                   f'{gloss(HOY["semana_titulo_en"], "gl small")}<ol class="semana-l num">{"".join(rows)}</ol></div>')
-        acc = (f'<p class="hoy-acc acc"><a class="btn" href="#carta-promos" data-ui data-en="See the menu">Ver la carta</a>'
+        acc = (f'<p class="hoy-acc acc"><a class="btn" href="carta/#promos" data-ui data-en="See the menu">Ver la carta</a>'
                f'<a class="link" href="{MAPS}" data-ui data-en="Get directions">Cómo llegar</a></p>')
         variants.append(
             f'<div class="hoy-dia g" data-dias="{" ".join(map(str, v["dias"]))}" data-campo="{v["campo"]}"{"" if on else " hidden"}>'
@@ -473,10 +631,17 @@ def expand(src):
     src = re.sub(r"<x-video\s([^>]*?)/>", lambda m: (lambda a: video(a["id"], a.get("class", ""), a.get("sizes", "")))(attrs_of(m.group(1))), src)
     src = re.sub(r"<x-credit\s([^>]*?)/>", lambda m: (lambda a: credit(a["id"], a.get("ui", "Foto"), "inline" in a, a.get("class", "")))(attrs_of(m.group(1))), src)
     src = re.sub(r"\{\{precio:([^}]+)\}\}", lambda m: esc(precio_de(m.group(1))), src)
-    src = src.replace("<x-hoy/>", hoy_html())
-    src = src.replace("<x-resenas/>", resenas_html())
-    carta, n = carta_html()
-    src = src.replace("<x-carta/>", carta)
+    if "<x-hoy/>" in src:
+        src = src.replace("<x-hoy/>", hoy_html())
+    if "<x-resenas/>" in src:
+        src = src.replace("<x-resenas/>", resenas_html())
+    if "<x-destacados/>" in src:
+        src = src.replace("<x-destacados/>", destacados_html())
+    n = 0
+    if "<x-carta-tabs/>" in src:
+        carta, n, state = carta_tabs_html()
+        src = src.replace("<x-carta-tabs/>", carta)
+        src = src.replace("<x-carta-estado/>", carta_estado(state))
     leftover = re.findall(r"<x-[\w-]+|\{\{", src)
     if leftover:
         fail(f"plantilla: quedan marcas sin expandir: {sorted(set(leftover))}")
@@ -602,27 +767,47 @@ class Checker(HTMLParser):
             fail(f"texto visible sin fuente ni marca: «{data.strip()[:80]}»")
 
 
-def main():
-    src = SRC.read_text()
-    out, n_items = expand(src)
-    body = out.split("<body>", 1)[1]
+def rebase(src, prefix):
+    """Rutas relativas a la raíz -> relativas a una página en subcarpeta (carta/index.html)."""
+    return re.sub(r'(?<=[\s"\'(,])(assets|css|js|brand|vendor)/', prefix + r"\1/", src)
+
+
+def build(src_path, prefix=""):
+    out, n_items = expand(src_path.read_text())
+    if prefix:
+        out = rebase(out, prefix)
+    body = re.split(r"<body[^>]*>", out, maxsplit=1)[1]
     ch = Checker()
     ch.feed(body)
-    # alt-en en cada imagen
     for m in re.finditer(r"<img\b[^>]*>", out):
         tag = m.group(0)
         if 'alt="' not in tag or "data-alt-en=" not in tag:
             fail(f"img sin alt o sin data-alt-en: {tag[:120]}")
+    return out, n_items, ch
+
+
+def main():
+    pages = [(SRC, OUT, ""), (SRC_CARTA, OUT_CARTA, "../")]
+    built = []
+    for src, dst, prefix in pages:
+        before = len(errors)
+        out, n_items, ch = build(src, prefix)
+        for i in range(before, len(errors)):
+            errors[i] = f"{src.relative_to(ROOT)}: {errors[i]}"
+        built.append((dst, out, n_items, ch))
     if errors:
-        print(f"build_v2.py: ERROR ({len(errors)}), index.html no se escribió", file=sys.stderr)
+        print(f"build_v2.py: ERROR ({len(errors)}), no se escribió ninguna página", file=sys.stderr)
         for e in errors:
             print("  - " + e, file=sys.stderr)
         sys.exit(1)
-    OUT.write_text(out)
-    imgs = len(re.findall(r"<picture", out))
-    vids = len(re.findall(r"<video", out))
-    print(f"index.html: {len(out) / 1024:.0f} KB · {imgs} imágenes · {vids} videos · carta {n_items} ítems · "
-          f"verificados: {ch.checked['src']} literales, {ch.checked['gl']} glosas, {ch.checked['ui']} [UI], {ch.checked['en-attr']} data-en")
+    for dst, out, n_items, ch in built:
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_text(out)
+        imgs = len(re.findall(r"<picture", out))
+        vids = len(re.findall(r"<video", out))
+        print(f"{dst.relative_to(ROOT)}: {len(out) / 1024:.0f} KB · {imgs} imágenes · {vids} videos"
+              + (f" · carta {n_items} ítems" if n_items else "")
+              + f" · verificados: {ch.checked['src']} literales, {ch.checked['gl']} glosas, {ch.checked['ui']} [UI], {ch.checked['en-attr']} data-en")
 
 
 if __name__ == "__main__":

@@ -35,13 +35,14 @@ Regla práctica: **cada línea de display ≤ 17 caracteres** en ambos anchos (e
 | 5 | Los tragos | amarillo (noche) |
 | 5b | Sin alcohol (cierre de Los tragos) | noche (papel) |
 | 6 | La comida | verde (noche) |
+| 6b | La carta: destacados (fase 15) | papel (noche, azul carta, magenta) |
 | 7 | El equipo | noche (papel) |
 | 8 | Con quién y para qué | fucsia (papel) |
 | 9 | Reseñas | noche (papel) |
 | 10 | Eventos | coral (noche) |
 | 11 | Cuándo y dónde | noche (papel) |
 | 12 | Pie | noche (papel) |
-| C | La carta (sección propia, `#carta` / `carta.html`) | papel (noche, azul carta, magenta) |
+| C | La carta completa: página propia `carta/` (fase 15) | papel; cada pestaña con su tinte suave |
 
 Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y Comida junto a Con quién (fucsia). Para cumplir "nunca dos campos seguidos" se intercalan dos beats sobre noche que el brief ya pide: **Sin alcohol** (cierra Los tragos) y **El equipo** (entre La comida y Con quién: los garzones de la comida llevan al equipo).
 
@@ -54,7 +55,7 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
 - **Logotipo:** ALMUD BAR + isotipo (SVG claro, `brand/almud-horizontal-claro.svg`), enlace al inicio.
 - **Enlaces [UI]:** ‹El lugar› [UI] · ‹Tragos› [UI] · ‹Comida› [UI] · ‹Con quién› [UI] · ‹Eventos› [UI]
   - [EN]: “The place” [EN] · “Drinks” [EN] · “Food” [EN] · “Who with” [EN] · “Events” [EN]
-- **Botón primario (barra):** ‹Ver la carta› [UI] → `#carta` · “See the menu” [EN]
+- **Botón primario (barra):** ‹Ver la carta› [UI] → `carta/` (la página de la carta, fase 15) · “See the menu” [EN]
 - **Teléfono:** ‹Menú› [UI] / “Menu” [EN] abre la hoja (incluye además ‹Cuándo y dónde› [UI] / “When & where” [EN]).
 - **Idioma:** ‹ES› [UI] · ‹EN› [UI]
 
@@ -231,7 +232,8 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
 - **Cuerpo 3 (la barra):** «En esta barrita pasan tantas maravillas en forma de coctelcitos» [IG-045]
   - “So many wonders happen at this little bar, in the shape of little cocktails” [EN]
 - **Rótulo del grupo:** «Coctelería de la casa» [CARTA-2] · “House cocktails” [EN]
-- **Cuatro de la casa** (nombre y precio de `carta.json › coctel`; una línea literal cada uno):
+- **Fase 15:** la lista de cuatro tragos sale del capítulo (el cliente pidió la carta fuera del landing; los tragos con foto van en §6b). Quedan el rótulo y el botón ‹Ver la carta› [UI] → `carta/#casa`. Lo que sigue queda como registro de la versión anterior.
+- **Cuatro de la casa** (versión anterior; nombre y precio de `carta.json › coctel`; una línea literal cada uno):
   - «Aquí te las traigo Peter» [CARTA-2] $ 6.700 · «Hermoso y ricardo» [IG-044] · “Gorgeous and ricardo [yummy]” [EN]
   - «Cómo te voy a olvidar» [CARTA-2] $ 6.800 · «este cóctel que está 10/10» [IG-002] · “this cocktail that's a 10/10” [EN]
   - «Sagüer on Faia» [CARTA-2] $ 7.900 · «es como un sour, pero acanelado y medio picantito» [IG-063] · “it's like a sour, but cinnamony and a bit spicy” [EN]
@@ -251,7 +253,8 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
   - “a treat for minors, pregnant folks, teetotallers” [EN]
 - **Cuerpo 2:** «Y si usted es sobri@ y alocad@ tenemos unos mocktail que están de pelos!» [IG-141]
   - “And if you're sober and up for fun, we've got mocktails that are just great!” [EN]
-- **Destacado:** «La moto chantá» [CARTA-5] $ 6.400 · «Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino!» [CARTA-5]
+- **Fase 15:** el destacado pasa a §6b (con su foto). Los cuatro rótulos enlazan a su grupo en `carta/` (`#sin-alcohol-mocktails`, `-jugos`, `-cervezas`, `-calientes`) y el botón a `carta/#sin-alcohol`.
+- **Destacado (versión anterior):** «La moto chantá» [CARTA-5] $ 6.400 · «Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino!» [CARTA-5]
   - “[‘The stalled motorbike’] Mango and passion-fruit juice, cucumber, simple syrup, lemon and cucumber bitters!” [EN]
 - **Rótulos de la carta que se enlazan:** «Coctelcitos sin alcohol» [CARTA-5] · «Jugos & bebidas» [CARTA-5] · «Cervezas sin alcohol» [CARTA-5] · «Bebidas calientes» [CARTA-5]
   - “Alcohol-free cocktails” [EN] · “Juices & soft drinks” [EN] · “Alcohol-free beers” [EN] · “Hot drinks” [EN]
@@ -274,16 +277,38 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
   - (si 4.7 ya usa la primera mitad, aquí va solo: «la comida que deja el ombligo pa ajuera!» [IG-147] · “food that leaves your belly button sticking out!” [EN])
 - **Rótulos (categorías):** «Picoteos» [CARTA-1] · «Greditas» [CARTA-1] · «Sanguches» [CARTA-1] · «Pizzas artesanales» [CARTA-1] · «Pa los chichichos» [CARTA-1] · «Somos dulzones» [CARTA-1]
   - “Small plates” [EN] · “Greditas [clay-pot dishes]” [EN] · “Sandwiches” [EN] · “Artisan pizzas” [EN] · “For the little ones” [EN] · “Sweet tooth” [EN]
-- **Cuatro platos** (nombre y precio de `carta.json › comilona`; una línea literal):
+- **Fase 15:** los cuatro platos salen del capítulo (van con foto en §6b). Las seis categorías enlazan a su grupo en `carta/` (`#comilona-picoteos` … `#comilona-dulzones`) y ‹Ver la comilona› [UI] a `carta/#comilona`.
+- **Cuatro platos** (versión anterior; nombre y precio de `carta.json › comilona`; una línea literal):
   - «Tukulito Sakayama» [CARTA-1] $ 15.900 · «pa usté solit@ o pa compartir!» [IG-139] · “for you alone or to share!” [EN] (si se usa en Con quién, aquí: «Tataki de lomo de atún marinado» [CARTA-1] · “Marinated tuna loin tataki” [EN])
   - «Con tuti si no pa qué!» [CARTA-1] $ 19.900 · «Especial pa compartir» [CARTA-1] · “[‘All in, or why bother!’] Made for sharing” [EN]
   - «Camarón que se duerme» [CARTA-1] $ 15.900 · «Calentitas, contundentes, enjundiosas: otsea, 10 de 10.» [IG-018] · “[Gredita] Hot, hearty, full of substance: I mean, 10 out of 10.” [EN]
   - «Topiturrón» [CARTA-1] $ 6.900 · «turrón de chocolate con galletas y nueces, gel de mango y maracuyá» [IG-040] · “chocolate nougat with biscuits and walnuts, mango and passion-fruit gel” [EN]
 - **Pizzas (una línea):** «Si le gustan las pizzas con masa delgadita y con una propuesta choriflai de mezclas» [IG-141]
   - “If you like thin-crust pizzas with choriflai [cool] combinations” [EN]
-- **CTA:** ‹Ver la comilona› [UI] → `#carta-comilona` · “See the food menu” [EN]
+- **CTA:** ‹Ver la comilona› [UI] → `carta/#comilona` · “See the food menu” [EN]
 - **Imágenes:** foto líder **P036** (`CqEI2nSJP2__00.jpg`, garzona con pizza); mosaico **P305** (hamburguesa, alta res), **P091** (cazuela de ñoquis), **P393** (`DeNQ8A2lDgg_02.jpg`, garzón tatuado con plato; 3000 px, puede ir a sangre).
   - Créditos: P036 ‹Foto› [UI] «@catarsis.fotografia» [IG-147]. P305 (IG-022), P091 (IG-079) y P393 (IG-001) sin crédito en caption.
+
+---
+
+## 6b. La carta: destacados (papel; fase 15)
+
+- **Propósito:** el cliente pidió sacar la carta completa del landing. Aquí quedan solo los productos con su mejor foto real (la foto es de ese ítem: caption que lo nombra o `carta.json › img`), con nombre, descripción y precio literales de `content/carta-v2.json`, y un botón claro a la página de la carta.
+- **Campo:** papel (entre La comida, verde, y El equipo, noche). Nombres azul carta en MAYÚSCULAS, precio magenta.
+- **Título:** ‹La carta› [UI] · “The menu” [EN] · **Bajada:** «En su Almudcito tenemos pa todos los gustos!» [IG-011] · “At your Almudcito [our little Almud] we've got something for every taste!” [EN]
+- **Grupos** (rótulo literal, enlazado a su pestaña):
+  - «Coctelería de la casa» [CARTA-2] · “House cocktails” [EN] → `carta/#casa`
+    - «Aquí te las traigo Peter» [CARTA-2] $ 6.700 · «Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí!» [CARTA-2] · foto V038 (IG-044)
+    - «Sagüer on Faia» [CARTA-2] $ 7.900 · «Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!!» [CARTA-2] · foto V030 (IG-063)
+    - «Sangría Foreva!» [CARTA-2] $ 6.500 · «Esta versión te dejará como perro con dos colas! Vino Carménère, toda la malicia del pisco añejado, jarabe de canela, unos toques frutales infaltables y mucho amor» [CARTA-2] · foto P228 (IG-039)
+  - «Mocktails de la casa» [CARTA-5] · “House mocktails” [EN] → `carta/#sin-alcohol-mocktails`
+    - «La moto chantá» [CARTA-5] $ 6.400 · «Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino! [El vasito va con crusta de sal]» [CARTA-5] · foto P336 (IG-011)
+  - «Comilona» [CARTA-1] · “Comilona [food]” [EN] → `carta/#comilona`
+    - «Tukulito Sakayama» [CARTA-1] $ 15.900 · «Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.» [CARTA-1] · foto P044 (IG-139)
+    - «Camarón que se duerme» [CARTA-1] $ 15.900 · «Delichus mix: camarones, mezclado con queso crema, cebollín, cilantro, champiñones, jengibre desglasado con vino blanco» [CARTA-1] · foto P099 (IG-077)
+    - «Pizza dulzona» [CARTA-1] $ 12.500 · «Ideal para compartir! Es una pizza, pero dulce, está super delichus! Pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas y hojitas de menta.» [CARTA-1] · foto P310 (IG-022, sin nombre en la caption: es la única pizza dulce de la carta y se ve su descripción)
+  - Fuera de los destacados, aunque tienen foto: Cómo te voy a olvidar (foto de día, 720 px), Coquette (desenfocada), Con tuti (la foto es anterior a la «[Versión 2.0]» y lleva jamón, que la versión actual no menciona) y Topiturrón (la foto es la versión con gel de mango y maracuyá; la carta actual es «[Reloaded]»). Siguen con su foto en `carta/`.
+- **CTA:** ‹Ver la carta completa› [UI] (botón azul carta → `carta/`) · “See the full menu” [EN] · ‹Precios de la carta oficial, octubre 2026.› [UI]
 
 ---
 
@@ -442,12 +467,19 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
 
 ---
 
-## C. La carta (sección propia, papel)
+## C. La carta (página propia `carta/`, papel; fase 15)
 
-- **Propósito:** la carta completa como la imprimen, separada de la portada, con acceso desde la nav, Hoy en Almud, Tragos, Sin alcohol, Comida y el pie.
-- **Campo:** papel #f6ecdc. Nombres en azul carta (Oswald 600, MAYÚSCULAS), precios en magenta (tabular, a la derecha), descripciones en noche (Oswald 300). Categorías en Six Caps head (tinta noche); el título en Six Caps display azul. Filas separadas por espacio, sin líneas; dos columnas desde 900 px.
+- **Propósito:** la carta completa como la imprimen, en su propia página (`carta/index.html`, plantilla `src-v2/carta.html`), con acceso desde la nav, Hoy en Almud, Tragos, Sin alcohol, Comida, los destacados y el pie. Antes de la fase 15 era una sección del landing (`#carta`).
+- **Campo:** papel #f6ecdc arriba; **cada pestaña con su tinte suave** (derivado del campo del landing y mezclado con blanco cálido, mucho más claro): Coctelería de la casa fucsia · Cócteles del mundo mundial turquesa · Espirituosos amarillo · Vinos & espumantes coral · Mocktails sin alcohol verde · Comilona papel · Nuestras promos el color del día (como Hoy en Almud). Nombres en azul carta (Oswald 600, MAYÚSCULAS), precios en magenta (tabular, a la derecha), descripciones en noche (Oswald 300). Contraste AA verificado en cada tinte (el magenta manda: ≥ 4,5).
+- **Cabecera:** logotipo → `../` (inicio) e ES/EN (persistente, la misma clave que el landing).
 - **Título:** ‹La carta› [UI] {display: 8 car., 1 línea} · “The menu” [EN]
 - **Bajada:** «En su Almudcito tenemos pa todos los gustos!» [IG-011] · “At your Almudcito [our little Almud] we've got something for every taste!” [EN]
+- **Pestañas** (sticky en teléfono, tablet y escritorio; una sección a la vez): los títulos literales de cada sección de `carta-v2.json`. La de sin alcohol reúne las cuatro secciones del PDF CARTA-5 bajo su título «Mocktails sin alcohol» [CARTA-5] · “Alcohol-free mocktails & drinks” [EN]. Nav de pestañas: ‹Secciones de la carta› [UI] (aria) · “Menu sections” [EN].
+- **Grupos** (chips filtrables, uno a la vez) en las pestañas largas: Cócteles del mundo mundial, Espirituosos, Mocktails sin alcohol y Comilona. Nombres literales de grupo; las glosas EN van bajo el título del grupo: “Juices & soft drinks” [EN] · “Alcohol-free beers” [EN] · “Hot drinks” [EN] (y las de abajo).
+- **Anclas:** `#casa` `#mundo` `#espirituosos` `#vinos` `#sin-alcohol` `#comilona` `#promos`, y por grupo `#<pestaña>-<grupo>` (p. ej. `#comilona-pizzas`, `#espirituosos-gin`, `#sin-alcohol-jugos`).
+- **Promos:** la del día se marca con ‹Hoy› [UI] / “Today” [EN] y la pestaña toma el tinte del día.
+- **PDF oficial:** ‹Carta oficial (PDF)› [UI] → `https://uqr.to/ppvi` · “Official menu (PDF)” [EN] (cabecera y pie). ‹Volver arriba› [UI] / “Back to top” [EN] en el pie.
+
 - **Índice (anclas) y categorías**, en el orden del brief (tragos, sin alcohol, bebidas, comilona) y agrupadas por PDF. Nombres de categoría literales del PDF; los ítems (nombre, descripción, precio) salen de `content/carta.json` (otro proceso lo está completando: aquí solo la estructura):
 
 | Ancla | Título de grupo (PDF) | Categorías (literales) | Fuente | Estado en carta.json |
@@ -464,8 +496,9 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
 - Los títulos de grupo de CARTA-3, 4 y 6 salen del nombre del PDF de la carta oficial (`carta_3_Cocteles_Del_Mundo_Mundial.pdf`, `carta_4_Espirituosos.pdf`, `carta_6_Vinos_Espumantes.pdf`); el PDF no imprime ese título en la página.
 - Las descripciones y nombres de ítems **no se traducen**; en modo EN, cada categoría lleva una glosa breve [EN] bajo su título. (Decisión abierta 3 del contrato: si el cliente pide traducción de descripciones, va como `<details>` por ítem.)
 - **Notas (small):** «* Siempre sujeto a stock! *» [CARTA-7] · ‹Precios de la carta oficial, octubre 2026.› [UI] · “Prices from the official menu, October 2026.” [EN]
-- **CTA:** ‹Carta completa› [UI] (botón azul carta → `https://uqr.to/ppvi`, los PDF oficiales) · “Full menu (PDF)” [EN] · ‹Volver arriba› [UI] / “Back to top” [EN]
-- **Imágenes (láminas dentro del papel):** **P003** (`Cmce2h1J3Wl_00.jpg`; crédito ‹Foto› [UI] «@tamillanquileo» [IG-178]) y **P070** (`C7HV31OLXTJ_00.jpg`, tacos de atún; sin crédito en caption). Reels V021 (muro rosa, IG-090) y V052 (cazuela burbujeando, IG-018) como loops. **Ninguna lleva nombre de plato o trago**: P003 no es un Negroni según su caption (es «EN QUÉ TOPAMOH?!», IG-178, ya fuera de carta) y los tacos de P070 (IG-105) no están en la carta actual.
+- **CTA (antes de la fase 15):** ‹Carta completa› [UI] (botón azul carta → `https://uqr.to/ppvi`, los PDF oficiales) · “Full menu (PDF)” [EN] · ‹Volver arriba› [UI] / “Back to top” [EN]
+- **Imágenes (fase 15):** foto por ítem solo donde la foto es ese ítem: Peter, Cómo te voy a olvidar, Sagüer on Faia, Sangría Foreva!, Coquette, La moto chantá, Tukulito, Con tuti, Camarón que se duerme, Topiturrón, Pizza dulzona (P310) y las promos del martes (V054-cover, IG-016), miércoles (P331, IG-019) y jueves (P228, IG-039). Láminas sin nombre de ítem (fotos de ambiente o de grupo): Coctelería de la casa (loop V021, el muro rosa), Cócteles del mundo mundial (P086, tres copas con espuma), grupo Negroni (P226, IG-042), grupo Spritz (P016, IG-167, ‹Foto› [UI] «@catarsis.fotografia» [IG-167]), Espirituosos (P003), Vinos & espumantes (P191, ‹Foto› [UI] «@estudiouno.prod» [IG-050]), Comilona (loop V052 de una gredita, IG-018; lámina de pestaña para que la columna no cambie de ancho entre grupos) y Pizzas artesanales (P042, ‹Foto› [UI] «@catarsis.fotografia» [IG-141]).
+- **Imágenes (antes de la fase 15; láminas dentro del papel):** **P003** (`Cmce2h1J3Wl_00.jpg`; crédito ‹Foto› [UI] «@tamillanquileo» [IG-178]) y **P070** (`C7HV31OLXTJ_00.jpg`, tacos de atún; sin crédito en caption). Reels V021 (muro rosa, IG-090) y V052 (cazuela burbujeando, IG-018) como loops. **Ninguna lleva nombre de plato o trago**: P003 no es un Negroni según su caption (es «EN QUÉ TOPAMOH?!», IG-178, ya fuera de carta) y los tacos de P070 (IG-105) no están en la carta actual.
 - La fila de un ítem con foto real usa `carta.json › img` (IG-044 Peter, IG-002 Cómo te voy a olvidar, IG-063 Sagüer on Faia, IG-039 Sangría Foreva!, IG-096 Coquette, IG-011 La moto chantá, IG-139 Tukulito, IG-066 Con tuti, IG-077 Camarón que se duerme, IG-040 Topiturrón).
 
 ---
@@ -492,7 +525,7 @@ Nota de orden: sistema.md §2.3 pone Tragos (amarillo) junto a Comida (verde) y 
 `python3 tools/verify_copy.py` extrae cada `«…» [FUENTE]` de este archivo, lo normaliza (glifos emoji fuera, saltos de línea y ` / ` como espacio, espacios colapsados, sin espacio antes de puntuación) y lo busca **literal** en el texto de su fuente (sin distinguir mayúsculas solo en CARTA). Un recorte con `…` se verifica trozo a trozo, en orden. También mide los titulares `{display}`/`{head}` con la aritmética de §0, cuenta palabras de los bloques (aviso si > 25) y busca palabras prohibidas (fila, esperar mesa, desocupar, queue…). Sale con código 1 si algo falla.
 
 <!-- VERIFICACION:INICIO -->
-Resultado: **199/199 literales pasan**; **42/42 titulares caben en 2 líneas**; palabras prohibidas: 0. Generado por `tools/verify_copy.py`.
+Resultado: **211/211 literales pasan**; **42/42 titulares caben en 2 líneas**; palabras prohibidas: 0. Generado por `tools/verify_copy.py`.
 
 ### Literales
 
@@ -607,96 +640,108 @@ Resultado: **199/199 literales pasan**; **42/42 titulares caben en 2 líneas**; 
 | 107 | turrón de chocolate con galletas y nueces, gel de mango y maracuyá | IG-040 | pasa | exacto |  |
 | 108 | Si le gustan las pizzas con masa delgadita y con una propuesta choriflai de mezclas | IG-141 | pasa | exacto |  |
 | 109 | @catarsis.fotografia | IG-147 | pasa | exacto |  |
-| 110 | Peazo de equipo / que tenemos! | IG-048 | pasa | exacto |  |
-| 111 | qué pedazo de / team tenemos! | IG-010 | pasa | exacto |  |
-| 112 | Somos una banda / variada | IG-067 | pasa | exacto |  |
-| 113 | Est@s guapetones son parte de nuestro equipo, son los encargados de barra y salón | IG-001 | pasa | exacto |  |
-| 114 | le ponen una sonrisota con cada cóctecito ito ito, comida delichus y la atención más güena! | IG-001 | pasa | exacto |  |
-| 115 | @pablete_bartender_ @javier.agmc @lizzearellano @milagroosjm @eduu.ardoo @elymar_bocarejo @jaav11 @daweed.cagliano @haqum.v99 | IG-010 | pasa | exacto |  |
-| 116 | los papis del almud: el franchuto @rusio_mezclao y la disharashera @cepaz | IG-067 | pasa | exacto |  |
-| 117 | Nuestras chicas super poderosas, super bacanas y super hermosas! | IG-014 | pasa | exacto |  |
-| 118 | @milagroosjm y @lizzearellanol | IG-014 | pasa | exacto |  |
-| 119 | no somos ná / sin ustedes! | IG-026 | pasa | exacto |  |
-| 120 | Venga a celebrar / la vida | IG-142 | pasa | exacto |  |
-| 121 | esta vida es / una sola! | IG-157 | pasa | exacto |  |
-| 122 | Pa agarrar perso, pa pasar las penas, las alegrías, celebreichons, pa entrar en calor, pa refrescarse | IG-060 | pasa | exacto |  |
-| 123 | celebremos el amor en todas sus formas, con las piernas, amiguis, hij@s, como usté quiera! | IG-060 | pasa | exacto |  |
-| 124 | celebrar la vida, la amistad, el amors y el buen clima | IG-065 | pasa | exacto |  |
-| 125 | A celebrar se ha dicho! | IG-015 | pasa | exacto |  |
-| 126 | porque usté se lo merece y punto! | IG-150 | pasa | exacto |  |
-| 127 | ideal pa venir a bien-tratarse a la terracita o a la barra | IG-162 | pasa | exacto |  |
-| 128 | lo rico de / nuestro barsucho | IG-088 | pasa | exacto |  |
-| 129 | Que no se lo / cuenten! | IG-032 | pasa | exacto |  |
-| 130 | Ya sabe ya | IG-088 | pasa | exacto |  |
-| 131 | 4,6 | DATO | pasa | exacto |  |
-| 132 | 848 reseñas | DATO | pasa | exacto |  |
-| 133 | 209 | DATO | pasa | exacto |  |
-| 134 | What really sets Almud apart is that the food isn't an afterthought – it's fantastic. | RESEÑA:Holger K | pasa | exacto |  |
-| 135 | Ahora entiendo porque se habla tanto del lugar. Lindo, rapido, rico, céntrico y económico. Super sugerido | RESEÑA:Kevin B | pasa | exacto |  |
-| 136 | The bar tenders are artists, sit on the bar and watch. | RESEÑA:Ai T | pasa | exacto |  |
-| 137 | su terraza permite con sol o lluvia una tremenda vista | RESEÑA:Visitante | pasa | exacto |  |
-| 138 | Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa! | RESEÑA:Dorothee M | pasa | exacto |  |
-| 139 | Estuve ahí cada día de mi estancia, porque es imposible no volver. | RESEÑA:arqggodoy | pasa | exacto |  |
-| 140 | tirar la casa / por la ventana! | IG-010 | pasa | exacto |  |
-| 141 | Vamos por / más! | IG-041 | pasa | exacto |  |
-| 142 | tirar el bar / por la ventana | IG-081 | pasa | exacto |  |
-| 143 | Nos vemos en las próximas cositas que se vienennnn bomba | IG-010 | pasa | exacto |  |
-| 144 | 14F | IG-116 | pasa | exacto |  |
-| 145 | Amamos el 14F pa brindar en honor al amor! | IG-116 | pasa | exacto |  |
-| 146 | chaolin bombín al verano | IG-030 | pasa | exacto |  |
-| 147 | Y se nos van los mesesitos queridos de verano y vakeichons… y hay que despedirlos como corresponde | IG-114 | pasa | exacto |  |
-| 148 | nuestro mes de aniversario | IG-098 | pasa | exacto |  |
-| 149 | Cuánto coctelcito ha pasado bajo este puente | IG-010 | pasa | exacto |  |
-| 150 | Tiki Night | BIO | pasa | exacto |  |
-| 151 | con todo el sabor tiki! | IG-053 | pasa | exacto |  |
-| 152 | fondita ita ita | IG-081 | pasa | exacto |  |
-| 153 | Nos endieciochamos contra viento y marea | IG-043 | pasa | exacto |  |
-| 154 | negroni week | IG-005 | pasa | exacto |  |
-| 155 | esperada por much@s ya está aquí | IG-005 | pasa | exacto |  |
-| 156 | Bendita Primavera | IG-076 | pasa | exacto |  |
-| 157 | nuestro día de bienvenida a la esperada primavera! | IG-075 | pasa | exacto |  |
-| 158 | Jalogüín | IG-071 | pasa | exacto |  |
-| 159 | traguitos y travesuras 1313 | IG-124 | pasa | exacto |  |
-| 160 | @estudiouno.prod | IG-100 | pasa | exacto |  |
-| 161 | asegure su entrá hablándonos al DM! | IG-057 | pasa | exacto |  |
-| 162 | Venga venga, / le esperamos! | IG-160 | pasa | exacto |  |
-| 163 | Véngase pal / Almudcito ito ito | IG-013 | pasa | exacto |  |
-| 164 | Les amamos, / les esperamos! | IG-092 | pasa | exacto |  |
-| 165 | Si usté no ha venido, vengase pa acá, ya le estamos esperando | IG-004 | pasa | exacto |  |
-| 166 | Al frente del Centro Cultural de Castro | DATO | pasa | exacto |  |
-| 167 | +56 65 253 0084 | DATO | pasa | exacto |  |
-| 168 | Nuestro bazar @bazar_almud | BIO | pasa | exacto | sí |
-| 169 | Que no se lo cuenten! Besiiiii | IG-032 | pasa | exacto |  |
-| 170 | Gracias totales! Se les quiere | IG-001 | pasa | exacto |  |
-| 171 | @tamillanquileo | IG-178 | pasa | exacto |  |
-| 172 | @dosistudio | IG-081 | pasa | exacto |  |
-| 173 | En su Almudcito tenemos pa todos los gustos! | IG-011 | pasa | exacto |  |
-| 174 | Cócteles del mundo mundial | CARTA-3 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
-| 175 | Clásicos | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 176 | [Algunos recomendados de su Almudcito] | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 177 | Vermú | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 178 | Mule | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 179 | Negroni | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 180 | Spritz | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 181 | Sagüer | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 182 | Mojitos | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 183 | Red Bull te da aaalas | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
-| 184 | Espirituosos | CARTA-4 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
-| 185 | Piscolein o combinadito | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 186 | Vodkita | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 187 | Ron poromponpon | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 188 | Whiscachos | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 189 | Amamos el GIN! | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 190 | Tequilazos & mezcalazos | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
-| 191 | Mocktails de la casa | CARTA-5 | pasa | exacto (sin mayúsc.) |  |
-| 192 | Mocktails clásicos | CARTA-5 | pasa | exacto (sin mayúsc.) |  |
-| 193 | Vinos Espumantes | CARTA-6 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
-| 194 | Tintelis | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
-| 195 | Blanquelis | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
-| 196 | Espumantes | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
-| 197 | Por copa | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
-| 198 | Comilona | CARTA-1 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
-| 199 | Promos | CARTA-7 | pasa | exacto (sin mayúsc.) |  |
+| 110 | En su Almudcito tenemos pa todos los gustos! | IG-011 | pasa | exacto |  |
+| 111 | Este es tan lindo! Le lleva: Mistral Nobel Cristalino, licor de flor de saúco, cranberry, limoncito y un toque dulce de jarabe. Pero lejos lo más bacán es la burbuja que viene aquí! | CARTA-2 | pasa | exacto (sin mayúsc.) |  |
+| 112 | Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio picantito y muy rico!!! | CARTA-2 | pasa | exacto (sin mayúsc.) |  |
+| 113 | Sangría Foreva! | CARTA-2 | pasa | exacto (sin mayúsc.) |  |
+| 114 | Esta versión te dejará como perro con dos colas! Vino Carménère, toda la malicia del pisco añejado, jarabe de canela, unos toques frutales infaltables y mucho amor | CARTA-2 | pasa | exacto (sin mayúsc.) |  |
+| 115 | Mocktails de la casa | CARTA-5 | pasa | exacto (sin mayúsc.) |  |
+| 116 | Juguito de mango y maracuyá, pepino, jarabe simple, limón y bitter pepino! [El vasito va con crusta de sal] | CARTA-5 | pasa | exacto (sin mayúsc.) |  |
+| 117 | Comilona | CARTA-1 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
+| 118 | Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa. | CARTA-1 | pasa | exacto (sin mayúsc.) |  |
+| 119 | Delichus mix: camarones, mezclado con queso crema, cebollín, cilantro, champiñones, jengibre desglasado con vino blanco | CARTA-1 | pasa | exacto (sin mayúsc.) |  |
+| 120 | Pizza dulzona | CARTA-1 | pasa | exacto (sin mayúsc.) |  |
+| 121 | Ideal para compartir! Es una pizza, pero dulce, está super delichus! Pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas y hojitas de menta. | CARTA-1 | pasa | exacto (sin mayúsc.) |  |
+| 122 | Peazo de equipo / que tenemos! | IG-048 | pasa | exacto |  |
+| 123 | qué pedazo de / team tenemos! | IG-010 | pasa | exacto |  |
+| 124 | Somos una banda / variada | IG-067 | pasa | exacto |  |
+| 125 | Est@s guapetones son parte de nuestro equipo, son los encargados de barra y salón | IG-001 | pasa | exacto |  |
+| 126 | le ponen una sonrisota con cada cóctecito ito ito, comida delichus y la atención más güena! | IG-001 | pasa | exacto |  |
+| 127 | @pablete_bartender_ @javier.agmc @lizzearellano @milagroosjm @eduu.ardoo @elymar_bocarejo @jaav11 @daweed.cagliano @haqum.v99 | IG-010 | pasa | exacto |  |
+| 128 | los papis del almud: el franchuto @rusio_mezclao y la disharashera @cepaz | IG-067 | pasa | exacto |  |
+| 129 | Nuestras chicas super poderosas, super bacanas y super hermosas! | IG-014 | pasa | exacto |  |
+| 130 | @milagroosjm y @lizzearellanol | IG-014 | pasa | exacto |  |
+| 131 | no somos ná / sin ustedes! | IG-026 | pasa | exacto |  |
+| 132 | Venga a celebrar / la vida | IG-142 | pasa | exacto |  |
+| 133 | esta vida es / una sola! | IG-157 | pasa | exacto |  |
+| 134 | Pa agarrar perso, pa pasar las penas, las alegrías, celebreichons, pa entrar en calor, pa refrescarse | IG-060 | pasa | exacto |  |
+| 135 | celebremos el amor en todas sus formas, con las piernas, amiguis, hij@s, como usté quiera! | IG-060 | pasa | exacto |  |
+| 136 | celebrar la vida, la amistad, el amors y el buen clima | IG-065 | pasa | exacto |  |
+| 137 | A celebrar se ha dicho! | IG-015 | pasa | exacto |  |
+| 138 | porque usté se lo merece y punto! | IG-150 | pasa | exacto |  |
+| 139 | ideal pa venir a bien-tratarse a la terracita o a la barra | IG-162 | pasa | exacto |  |
+| 140 | lo rico de / nuestro barsucho | IG-088 | pasa | exacto |  |
+| 141 | Que no se lo / cuenten! | IG-032 | pasa | exacto |  |
+| 142 | Ya sabe ya | IG-088 | pasa | exacto |  |
+| 143 | 4,6 | DATO | pasa | exacto |  |
+| 144 | 848 reseñas | DATO | pasa | exacto |  |
+| 145 | 209 | DATO | pasa | exacto |  |
+| 146 | What really sets Almud apart is that the food isn't an afterthought – it's fantastic. | RESEÑA:Holger K | pasa | exacto |  |
+| 147 | Ahora entiendo porque se habla tanto del lugar. Lindo, rapido, rico, céntrico y económico. Super sugerido | RESEÑA:Kevin B | pasa | exacto |  |
+| 148 | The bar tenders are artists, sit on the bar and watch. | RESEÑA:Ai T | pasa | exacto |  |
+| 149 | su terraza permite con sol o lluvia una tremenda vista | RESEÑA:Visitante | pasa | exacto |  |
+| 150 | Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa! | RESEÑA:Dorothee M | pasa | exacto |  |
+| 151 | Estuve ahí cada día de mi estancia, porque es imposible no volver. | RESEÑA:arqggodoy | pasa | exacto |  |
+| 152 | tirar la casa / por la ventana! | IG-010 | pasa | exacto |  |
+| 153 | Vamos por / más! | IG-041 | pasa | exacto |  |
+| 154 | tirar el bar / por la ventana | IG-081 | pasa | exacto |  |
+| 155 | Nos vemos en las próximas cositas que se vienennnn bomba | IG-010 | pasa | exacto |  |
+| 156 | 14F | IG-116 | pasa | exacto |  |
+| 157 | Amamos el 14F pa brindar en honor al amor! | IG-116 | pasa | exacto |  |
+| 158 | chaolin bombín al verano | IG-030 | pasa | exacto |  |
+| 159 | Y se nos van los mesesitos queridos de verano y vakeichons… y hay que despedirlos como corresponde | IG-114 | pasa | exacto |  |
+| 160 | nuestro mes de aniversario | IG-098 | pasa | exacto |  |
+| 161 | Cuánto coctelcito ha pasado bajo este puente | IG-010 | pasa | exacto |  |
+| 162 | Tiki Night | BIO | pasa | exacto |  |
+| 163 | con todo el sabor tiki! | IG-053 | pasa | exacto |  |
+| 164 | fondita ita ita | IG-081 | pasa | exacto |  |
+| 165 | Nos endieciochamos contra viento y marea | IG-043 | pasa | exacto |  |
+| 166 | negroni week | IG-005 | pasa | exacto |  |
+| 167 | esperada por much@s ya está aquí | IG-005 | pasa | exacto |  |
+| 168 | Bendita Primavera | IG-076 | pasa | exacto |  |
+| 169 | nuestro día de bienvenida a la esperada primavera! | IG-075 | pasa | exacto |  |
+| 170 | Jalogüín | IG-071 | pasa | exacto |  |
+| 171 | traguitos y travesuras 1313 | IG-124 | pasa | exacto |  |
+| 172 | @estudiouno.prod | IG-100 | pasa | exacto |  |
+| 173 | asegure su entrá hablándonos al DM! | IG-057 | pasa | exacto |  |
+| 174 | Venga venga, / le esperamos! | IG-160 | pasa | exacto |  |
+| 175 | Véngase pal / Almudcito ito ito | IG-013 | pasa | exacto |  |
+| 176 | Les amamos, / les esperamos! | IG-092 | pasa | exacto |  |
+| 177 | Si usté no ha venido, vengase pa acá, ya le estamos esperando | IG-004 | pasa | exacto |  |
+| 178 | Al frente del Centro Cultural de Castro | DATO | pasa | exacto |  |
+| 179 | +56 65 253 0084 | DATO | pasa | exacto |  |
+| 180 | Nuestro bazar @bazar_almud | BIO | pasa | exacto | sí |
+| 181 | Que no se lo cuenten! Besiiiii | IG-032 | pasa | exacto |  |
+| 182 | Gracias totales! Se les quiere | IG-001 | pasa | exacto |  |
+| 183 | @tamillanquileo | IG-178 | pasa | exacto |  |
+| 184 | @dosistudio | IG-081 | pasa | exacto |  |
+| 185 | Mocktails sin alcohol | CARTA-5 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
+| 186 | Cócteles del mundo mundial | CARTA-3 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
+| 187 | Clásicos | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 188 | [Algunos recomendados de su Almudcito] | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 189 | Vermú | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 190 | Mule | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 191 | Negroni | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 192 | Spritz | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 193 | Sagüer | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 194 | Mojitos | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 195 | Red Bull te da aaalas | CARTA-3 | pasa | exacto (sin mayúsc.) |  |
+| 196 | Espirituosos | CARTA-4 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
+| 197 | Piscolein o combinadito | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 198 | Vodkita | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 199 | Ron poromponpon | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 200 | Whiscachos | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 201 | Amamos el GIN! | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 202 | Tequilazos & mezcalazos | CARTA-4 | pasa | exacto (sin mayúsc.) |  |
+| 203 | Mocktails clásicos | CARTA-5 | pasa | exacto (sin mayúsc.) |  |
+| 204 | Vinos Espumantes | CARTA-6 | pasa | nombre del PDF (sin tildes ni mayúsc.) |  |
+| 205 | Tintelis | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
+| 206 | Blanquelis | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
+| 207 | Espumantes | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
+| 208 | Por copa | CARTA-6 | pasa | exacto (sin mayúsc.) |  |
+| 209 | Promos | CARTA-7 | pasa | exacto (sin mayúsc.) |  |
+| 210 | @catarsis.fotografia | IG-167 | pasa | exacto |  |
+| 211 | @catarsis.fotografia | IG-141 | pasa | exacto |  |
 
 ### Titulares (Six Caps, k = 0,22; car. por línea / capacidad)
 
@@ -744,4 +789,9 @@ Resultado: **199/199 literales pasan**; **42/42 titulares caben en 2 líneas**; 
 | Venga venga, / le esperamos! | IG-160 | display | 390: 12+13/17 · 1440: 12+13/17 | pasa |  |
 | Véngase pal / Almudcito ito ito | IG-013 | display | 390: 11+17/17 · 1440: 11+17/17 | pasa | justo |
 | Les amamos, / les esperamos! | IG-092 | display | 390: 11+14/17 · 1440: 11+14/17 | pasa |  |
+
+### Avisos
+
+- CARTA-2: 33 palabras «Este es tan lindo! Le lleva: Mistral Nobel Cristal…»
+- CARTA-2: 27 palabras «Esta versión te dejará como perro con dos colas! V…»
 <!-- VERIFICACION:FIN -->

@@ -168,3 +168,74 @@ Todas van en 4:5 y 16:9 (P189 en su forma original), con esquinas rectas y sin m
 - **Captura de página completa:** a veces muestra el LQIP en la foto de Hoy (768 y 390). Es un artefacto del redimensionado de Playwright: en el viewport real la imagen carga (verificado: `complete`, AVIF de 480).
 - **Falta lo que exige la compuerta de cierre:** la crítica Impeccable y la tabla Before/After de review-animations de Emil (fases 15–17), DESIGN.md, y una prueba en un teléfono real de gama media.
 - **Nada se desplegó ni se subió:** `public/` está listo para el commit.
+
+---
+
+# Fase 15 (parte 1) · La carta sale del landing
+
+Pedido del cliente: la carta completa no va en el landing; ahí solo destacados con foto y un botón a la carta; la carta vive en su propia página, sin pantallas blancas, con una barra fija de secciones que muestra una sección a la vez.
+
+## Qué cambió
+
+| Archivo | Cambio |
+|---|---|
+| `src-v2/carta.html` (nuevo) → `carta/index.html` | página de la carta: cabecera (logotipo → `../`, ES/EN persistente), "La carta" + bajada IG-011 + "Precios de la carta oficial, octubre 2026." + ‹Carta oficial (PDF)› (`uqr.to/ppvi`), pestañas, paneles y pie (horario, dirección, Cómo llegar, DM, PDF, Volver arriba, créditos) |
+| `tools/build_v2.py` | construye las dos páginas (falla sin escribir ninguna si una falla); `<x-destacados/>`, `<x-carta-tabs/>`, `<x-carta-estado/>`; rutas `../` en la subcarpeta; el Checker literal corre en ambas |
+| `src-v2/index.html` | sin la carta completa. Nueva sección **La carta (destacados)** entre La comida y El equipo. Tragos, Sin alcohol y Comida pierden sus listas de ítems (quedan titular, fotos, cuerpo y enlaces a su pestaña o grupo). Nav, Hoy, pie y capítulos enlazan a `carta/…` |
+| `css/v2/carta.css` (nuevo) · `css/v2/site.css` · `css/v2/tokens.css` | estilos de la página; destacados en el landing; 6 tintes suaves + `--carta-hoja` + `--d-tab` |
+| `js/v2/carta.js` (nuevo, 7 KB) | pestañas y grupos accesibles, historial, entrada |
+| `content/copy-v2.md` | §6b (destacados, con fuente), §C reescrita para `carta/`, notas de fase 15 en §1, §5, §5b y §6; verify 211/211 |
+| `tools/media_v2.json` · `assets/v2/media.json` · `content/alts-v2.json` | 7 assets nuevos (abajo) |
+| `tools/publish.py` | lista blanca con `carta/index.html`; verifica sus referencias desde `carta/` |
+| `_plan/build-v2/shoot_carta.py` | capturas y pruebas (`shots-carta/`, `r*-medidas.json`) |
+
+## Landing: destacados
+Siete productos con su mejor foto real, nombre, descripción y precio literales de `carta-v2.json` (nombre y descripción verificados como [CARTA-n]): Coctelería de la casa (Aquí te las traigo Peter, Sagüer on Faia, Sangría Foreva!), Mocktails de la casa (La moto chantá), Comilona (Tukulito Sakayama, Camarón que se duerme, Pizza dulzona). Cada rótulo enlaza a su pestaña. Botón ‹Ver la carta completa› → `carta/`. Escritorio: 3 + 1 / 3 + botón; tablet 3 columnas; teléfono foto a la izquierda y texto a la derecha.
+Quedaron fuera aunque tienen foto: Cómo te voy a olvidar (720 px, de día), Coquette (desenfocada), Con tuti (la foto es anterior a la "[Versión 2.0]": lleva jamón) y Topiturrón (la foto es la versión de mango y maracuyá; la carta dice "[Reloaded]"). Siguen con su foto en `carta/`.
+
+## carta/: pestañas
+- 7 pestañas con los títulos literales: Coctelería de la casa · Cócteles del mundo mundial · Espirituosos · Vinos & espumantes · Mocktails sin alcohol (las cuatro secciones del PDF CARTA-5) · Comilona · Nuestras promos.
+- Chips de grupo (filtran: un grupo a la vez) en Cócteles del mundo mundial (8), Espirituosos (6; Whiscachos lleva Blended, Irish, Single Malt y Bourbon), Mocktails sin alcohol (5) y Comilona (6). Las cortas (casa 14, vinos 15, promos 4) van enteras.
+- Barra de pestañas sticky en todos los anchos (la cabecera no es fija aquí); los chips, sticky debajo. En teléfono y tablet se deslizan de lado con barra de desplazamiento fina azul/noche; la pestaña o chip activo se trae a la vista. Objetivos ≥ 44 px.
+- Anclas: `#casa` … `#promos` y `#<pestaña>-<grupo>` (`#comilona-pizzas`, `#espirituosos-gin`, `#sin-alcohol-jugos`…). Clic = `pushState`; flechas = `replaceState`; atrás/adelante restaura (probado).
+- **Sin corrimiento al cargar:** un script en `<head>` lee el hash y el día (America/Santiago, `?dia=N` para probar) y pone `data-tab`, `data-sub-*` y `data-dia` en `<html>`; un `<style>` generado por el build muestra solo lo elegido. Sin JS no aplica nada: las 7 secciones apiladas, pestañas y chips son anclas.
+- Accesibilidad: role tablist/tab/tabpanel (también en los chips), aria-selected, tabindex itinerante, ← → ↑ ↓ Inicio Fin con activación automática, Espacio/Enter. Teclado e historial cambian al instante; ratón/toque: entrada WAAPI 200 ms opacity + 8 px con `--ease-out`; reduced motion: solo opacidad 180 ms. Si ya se bajó más allá de la barra, el panel nuevo empieza justo bajo ella (salto instantáneo, nunca un recorrido).
+- Promos: la de hoy con "Hoy" y hoja `--carta-hoja`; la pestaña toma el tinte del día (como Hoy en Almud). Nota "de 18:00 a 22:00 hrs" y "* Siempre sujeto a stock! *".
+- Entrada única al cargar: "La carta" y el título de la sección abierta suben por línea con máscara; fotos de ítem y láminas con el reveal de clip del landing; la firma del pie con fade.
+
+## Tintes (WCAG AA; se ajustó el tinte, no la tinta)
+| Pestaña | Tinte | Magenta | Azul | Noche |
+|---|---|---|---|---|
+| Coctelería de la casa | fucsia #fae7ef | 4,58 | 7,32 | 16,1 |
+| Cócteles del mundo mundial | turquesa #ddf2f4 | 4,66 | 7,47 | 16,4 |
+| Espirituosos | amarillo #feeec4 | 4,71 | 7,53 | 16,5 |
+| Vinos & espumantes / Promos (dom-mar) | coral #fee9dd | 4,62 | 7,40 | 16,2 |
+| Mocktails sin alcohol | verde #e1efde | 4,54 | 7,27 | 15,9 |
+| Comilona | papel #f6ecdc | 4,63 | 7,41 | 16,3 |
+| Promo de hoy | hoja #fffaf3 | 5,22 | 8,35 | 18,3 |
+Chips: tinte "fuerte" con tinta noche (≥ 10,3:1); activo noche/papel (16,3). Mezclas de cada campo con blanco cálido al 10–18 %: el magenta (4,63 sobre papel) no deja oscurecer más.
+
+## Fotos
+Por ítem, solo si la foto es ese ítem: las 10 de `carta.json › img` (Peter, Cómo te voy a olvidar, Sagüer on Faia, Sangría Foreva!, Coquette, La moto chantá, Tukulito, Con tuti, Camarón, Topiturrón) + **Pizza dulzona (P310, nuevo)**: la caption IG-022 no la nombra, pero es la única pizza dulce de la carta y la foto muestra su descripción (avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). Promos: martes **V054-cover (nuevo, IG-016)**, miércoles P331 (alias, IG-019: bandeja de piscolas), jueves P228.
+Láminas sin nombre de ítem: casa loop V021 (muro rosa), mundo P086 (`tragos-sours`), grupo Negroni **P226 (nuevo, IG-042)**, grupo Spritz **P016 (nuevo, IG-167, @catarsis.fotografia)**, Espirituosos P003, Vinos **P191 (nuevo, IG-050, @estudiouno.prod)**, Comilona loop V052 (gredita, IG-018), grupo Pizzas **P042 (nuevo, IG-141, @catarsis.fotografia)**. En teléfono y tablet la lámina de pestaña va arriba a media columna y la de grupo después de su lista (al cambiar de chip la lista no se mueve). Descartadas: P306 "Tartufita" (562 px y no se ve pimentón), P305/P303 hamburguesas (son de carne; la Hamburguesa Almud es de lentejas), P070 tacos y P134 (fuera de carta). `media_v2.py --only …`: sin ampliar, AVIF + WebP + LQIP.
+
+## Mediciones
+| Medición | Resultado |
+|---|---|
+| `build_v2.py` | index.html 111 KB (218 literales, 143 glosas, 102 [UI]) · carta/index.html 115 KB (256 ítems; 13 literales, 25 glosas, 23 [UI]) |
+| `verify_copy.py` | 211/211 literales, 42/42 titulares, 0 prohibidas |
+| `validate_carta.py` | OK |
+| Taste lint | index.html 0 FAIL, 1 WARN (el "more than a" literal de IG-118) · carta/index.html, carta.css, site.css, tokens.css, carta.js: 0 FAIL, 0 WARN |
+| Taste inspect | landing 0 FAIL, 1 WARN (palette-cream) · `.taste-skill/after-f15` · carta 0 FAIL, 3 WARN · `.taste-skill/carta`: palette-cream (papel, defendido), side-scroll (la barra de pestañas deslizable que pidió el cliente), still-page "little motion" (8: es una carta para leer) |
+| Consola | 0 errores en 390/768/1440, ES y EN |
+| CLS | carga 0; cambios de pestaña y chip 0 en todos los anchos, **contando también los que siguen a la interacción** (ronda 1 daba 0,20 en 390 por la lámina de grupo y 0,25 en 1440 porque la columna cambiaba de ancho: resuelto con el orden en teléfono y una lámina de pestaña en Comilona) |
+| Enlace profundo `#comilona-pizzas` | abre Comilona › Pizzas, con el grupo a 120–124 px del borde (bajo las barras) |
+| Desborde horizontal | 0 en ambas páginas |
+| Sin JS | 7 paneles a la vista |
+
+**Rondas:** r1 (todas las capturas) → alineación de las tarjetas de destacados, corrimiento al cambiar de grupo, columna que cambiaba de ancho; r2 → la pestaña activa quedaba cortada en 768 (el scroll-snap la devolvía: fuera el snap); r3/r4 inspect "still-page" FAIL (0 → 8 elementos: reveals de fotos, máscara de títulos, lámina de video en Coctelería de la casa); r5 → las glosas EN salían en papel suave sobre el tinte (ahora tinta noche). Capturas finales: `shots-carta/r4-*` (390, 768, 1440, ES y EN, cada pestaña, chips Pizzas y Gin, enlace profundo, sin JS) y `r5-*` (390 tras la corrección de glosas).
+
+## Notas
+- `public/` se generó para probar (537 archivos, 44,0 MB, `carta/` incluida) y se restauró al HEAD (sigue en v1). Nada se commiteó ni se subió.
+- "Mocktails sin alcohol" se usa como título de la pestaña que reúne las cuatro secciones de CARTA-5 (es el título de esa carta). Glosa EN nueva: “Alcohol-free mocktails & drinks”.
+- Pendiente: confirmar con el bar si la foto de Con tuti y la de Topiturrón siguen sirviendo para la versión actual; la crítica Impeccable y la tabla de Emil de la compuerta de cierre incluyen ahora esta página.

@@ -4269,6 +4269,393 @@
     }
    },
    "credit": null
+  },
+  "carta-pizza-dulzona": {
+   "ref": "P310",
+   "src": "assets/raw/ig/DY0AUvhlHjI_18.jpg",
+   "section": "carta-item",
+   "source_size": [
+    900,
+    900
+   ],
+   "alt_placeholder": "Pizza dulce con frutillas y crema",
+   "post": "IG-022",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      90,
+      0,
+      810,
+      900
+     ],
+     "crop_size": [
+      720,
+      900
+     ],
+     "width": 720,
+     "height": 900,
+     "widths": [
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBACdASoTABgAPwF4s1OrJySiqAgBYCAJZABV0AQM+w3k7tK5yjcFxE6xR/YAAP4zjGoW63emOfadcnMgV7ZP9ewgqpFdGYYg79yaWr0vTR/pz4A8p76kp2JRthMySz/4PdZf0y4kC96VmM1i37NZnCabbk+l/Mp/1PSt5zI+ChBmr1ZCIRoCxb6MM19o4aAsnKAAAAA=",
+     "color": "#845536",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-480.avif",
+        "bytes": 47850
+       },
+       "720": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-720.avif",
+        "bytes": 80306
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-480.webp",
+        "bytes": 80004
+       },
+       "720": {
+        "path": "assets/v2/img/carta-pizza-dulzona-a-720.webp",
+        "bytes": 137920
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 15: es la única pizza dulce de la carta y se ve lo que dice su descripción (pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). La caption (IG-022) no la nombra. 900x900: hasta 720."
+  },
+  "carta-promo-negroni": {
+   "ref": "V054-cover",
+   "src": "assets/raw/ig/DZ8c3yiIdpa_00.jpg",
+   "section": "carta-item",
+   "source_size": [
+    721,
+    721
+   ],
+   "alt_placeholder": "Bartender pone piel de naranja a negroni sobre barra (3.3 s, loop)",
+   "post": "IG-016",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      108,
+      0,
+      685,
+      721
+     ],
+     "crop_size": [
+      577,
+      721
+     ],
+     "width": 480,
+     "height": 600,
+     "widths": [
+      480
+     ],
+     "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBQCdASoTABgAPwFwsFIrJiSiqAqpYCAJbACdMyNgAAD/1bXLYel1vHDrHr9lNkGAAP53STAl14bwwmTDD3k20CCrei4gRrkJ1c00W0s7LM4NcevqmBZ0/Vyhi0Ai9zIz93biOlcpvpO+bnn1zRNfvdxdA/q2EB2roFKFXY53i672krRg0mHqlIV9E/G1Yvn0hH+LY+BVQxDhzvSJcAAA",
+     "color": "#a14d1f",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-promo-negroni-a-480.avif",
+        "bytes": 20282
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-promo-negroni-a-480.webp",
+        "bytes": 29692
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 15: promo del martes (carta.json › promos › img IG-016, «Amamos los martes porque son de Negronicito»). 721x721: solo 480."
+  },
+  "carta-promo-piscolein": {
+   "alias": "hoy-miercoles-garzona",
+   "ref": "P331",
+   "section": "carta-item",
+   "note": "Fase 15: promo del miércoles (carta.json › promos › img IG-019): bandeja de piscolas."
+  },
+  "carta-grupo-negroni": {
+   "ref": "P226",
+   "src": "assets/raw/ig/DP7O0BElPhW_00.jpg",
+   "section": "carta-grupo",
+   "source_size": [
+    1423,
+    1897
+   ],
+   "alt_placeholder": "Revolviendo negroni sobre barra, luz ámbar",
+   "post": "IG-042",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      59,
+      1423,
+      1838
+     ],
+     "crop_size": [
+      1423,
+      1779
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJZgCxGzwAipsBez2ttvgNL9Bk13ZQNzW44AAA/uXsdOD8hirEZNnEm2L98KIpwjAqExJ5KsC5nJ6QWyJRF1fgqSdIN1Rs1rSZThe/pdoO3N32q5HtNCqvbzSIyzpbnIA4pFQpDYTvFLRJUiT34wwLLFRYFzbtywkhJ6M1nD36mCIl5FIdjEMVWBAR0g5UAAA=",
+     "color": "#c76b45",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-480.avif",
+        "bytes": 15969
+       },
+       "720": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-720.avif",
+        "bytes": 27069
+       },
+       "960": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-960.avif",
+        "bytes": 42463
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-480.webp",
+        "bytes": 25230
+       },
+       "720": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-720.webp",
+        "bytes": 41886
+       },
+       "960": {
+        "path": "assets/v2/img/carta-grupo-negroni-a-960.webp",
+        "bytes": 64230
+       }
+      }
+     }
+    }
+   },
+   "credit": null,
+   "note": "Fase 15: lámina del grupo Negroni (IG-042: «cómo estamoh pa un Negroni? o su Boulevardier?»). Sin nombre de ítem: no dice cuál de los cinco."
+  },
+  "carta-grupo-spritz": {
+   "ref": "P016",
+   "src": "assets/raw/ig/CnU8qLjJ5zx_00.jpg",
+   "section": "carta-grupo",
+   "source_size": [
+    1280,
+    853
+   ],
+   "alt_placeholder": "Dos spritz en copas sobre barra, muro azul y luces",
+   "post": "IG-167",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      55
+     ],
+     "box": [
+      363,
+      0,
+      1045,
+      853
+     ],
+     "crop_size": [
+      682,
+      853
+     ],
+     "width": 480,
+     "height": 600,
+     "widths": [
+      480
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoTABgAPwFkq0+rJSOiMBgMAWAgCWwAqPQQ7/IPs0/EoesKEYejFAryQnRqFO0AAP7w1FDWI7jY4m3tahFa8zc2wMNjQNJDtAq/mtVOh0bF6eQZXx8+8SsixuK+u+cRjEIcA0ffEghvwFdSodhjs2jrZcHzDIWtkCM5XAN5kF3nx3sjR4oMMCD+6zoNtJ3DRXkNSAwoNLiPksEY/wWDUJ5Fm/zE1AAA",
+     "color": "#672a16",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-spritz-a-480.avif",
+        "bytes": 14514
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-spritz-a-480.webp",
+        "bytes": 20066
+       }
+      }
+     }
+    }
+   },
+   "credit": "@catarsis.fotografia",
+   "note": "Fase 15: lámina del grupo Spritz (dos copas de spritz; IG-167 no nombra el trago). 1280x853: el 4:5 deja 682 px, se emite 480."
+  },
+  "carta-grupo-pizzas": {
+   "ref": "P042",
+   "src": "assets/raw/ig/CreVnAOJ6WR_00.jpg",
+   "section": "carta-grupo",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "alt_placeholder": "Pizza de jamón serrano llevada por garzón",
+   "post": "IG-141",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoTABgAPwFsrlErJaQisBgIAWAgCWoAqPQNzOSuhbcrQheH1QTynuFYaEAA/nKAKqKq74GjlGkOcWZi3ZIMR5m9/F7VeIOfUhKnR+ImtFtrC7ClMxmInrtVkbZneoPs2vhI2wi5R7LC39rMeHYM0VdIFuDTnMHWIsZ3x4q5TxFD7+S3oD72AAAA",
+     "color": "#2b201c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-480.avif",
+        "bytes": 12117
+       },
+       "720": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-720.avif",
+        "bytes": 20562
+       },
+       "960": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-960.avif",
+        "bytes": 31414
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-480.webp",
+        "bytes": 17882
+       },
+       "720": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-720.webp",
+        "bytes": 28802
+       },
+       "960": {
+        "path": "assets/v2/img/carta-grupo-pizzas-a-960.webp",
+        "bytes": 42064
+       }
+      }
+     }
+    }
+   },
+   "credit": "@catarsis.fotografia",
+   "note": "Fase 15: lámina del grupo Pizzas artesanales (IG-141 habla de sus pizzas, no nombra cuál; jamón serrano y rúcula no calzan con ninguna de las 9 actuales)."
+  },
+  "carta-lamina-vino": {
+   "ref": "P191",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_09.jpg",
+   "section": "carta",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "alt_placeholder": "Bartender vierte vino frente a muro botellas rosa",
+   "post": "IG-050",
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      40,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACQBQCdASoTABgAPwF0rlKrJqQiqAqpYCAJZACsIQYJ/gHr5G8d4tyxWajB7QbETkEWGbonNAD6mJfycdcMAIJmvAmDhFzUIQ2hhcFec3TalULIdrU5QGr95Hnb00yc4O9gsf8+mBSrGfKE+NNoYJ4ah9YVrma+dIFKMd4aVDxPwDqFnXiAT9fjRbxr+Y6YYvy/C0prN4dXqwNMCTSut/JhEz0PnYvpzC6x1nAAAAA=",
+     "color": "#bc5a4a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-vino-a-480.avif",
+        "bytes": 27322
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-vino-a-720.avif",
+        "bytes": 46525
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-vino-a-960.avif",
+        "bytes": 64833
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v2/img/carta-lamina-vino-a-480.webp",
+        "bytes": 48618
+       },
+       "720": {
+        "path": "assets/v2/img/carta-lamina-vino-a-720.webp",
+        "bytes": 78956
+       },
+       "960": {
+        "path": "assets/v2/img/carta-lamina-vino-a-960.webp",
+        "bytes": 105622
+       }
+      }
+     }
+    }
+   },
+   "credit": "@estudiouno.prod",
+   "note": "Fase 15: lámina de Vinos & espumantes (bartender sirviendo vino; no se sabe cuál)."
   }
  },
  "videos": {

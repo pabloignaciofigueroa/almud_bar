@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenera public/: la carpeta que se publica en Cloudflare Pages.
 
-Copia solo lo que el sitio v2 usa (index.html, css/v2, js/v2, vendor, assets/v2, assets/fonts, brand),
+Copia solo lo que el sitio v2 usa (index.html, carta/index.html, css/v2, js/v2, vendor, assets/v2, assets/fonts, brand),
 deja fuera todo lo interno y escribe public/_headers con la política de caché.
 
 Falla (código 1, sin dejar un public/ a medias) si:
@@ -17,7 +17,7 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html']
+INCLUDE_FILES = ['index.html', 'carta/index.html']  # fase 15: la carta en su propia página
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
 INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand']
 
@@ -68,6 +68,7 @@ def copy_tree(stage: pathlib.Path) -> list[str]:
         src = ROOT / f
         if not src.is_file():
             sys.exit(f'ERROR: falta {f}')
+        (stage / f).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, stage / f)
     for d in INCLUDE_DIRS:
         base = ROOT / d
@@ -129,7 +130,7 @@ def check(stage: pathlib.Path) -> list[str]:
             errors.append(f'interno: {rel} ({why})')
         if p.stat().st_size > MAX_BYTES:
             errors.append(f'pesa más de 25 MB: {rel} ({p.stat().st_size / 1048576:.1f} MB)')
-    sources = [stage / 'index.html'] + list((stage / 'css').rglob('*.css')) + list((stage / 'js').rglob('*.js'))
+    sources = [stage / f for f in INCLUDE_FILES] + list((stage / 'css').rglob('*.css')) + list((stage / 'js').rglob('*.js'))
     missing = set()
     for src in sources:
         rel_dir = pathlib.PurePosixPath(src.relative_to(stage).as_posix()).parent

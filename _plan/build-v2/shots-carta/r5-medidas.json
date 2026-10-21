@@ -1,0 +1,215 @@
+{
+ "390-es": {
+  "landing_overflow": 0,
+  "cls_carga": 0,
+  "tabs": {
+   "casa": {
+    "hash": "",
+    "sel": "casa",
+    "visibles": [
+     "casa"
+    ],
+    "tabsTop": 0,
+    "panelTop": -340,
+    "alto": 2693,
+    "bg": "rgb(250, 231, 239)"
+   },
+   "mundo": {
+    "hash": "#mundo",
+    "sel": "mundo",
+    "visibles": [
+     "mundo"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1233,
+    "bg": "rgb(221, 242, 244)"
+   },
+   "espirituosos": {
+    "hash": "#espirituosos",
+    "sel": "espirituosos",
+    "visibles": [
+     "espirituosos"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1996,
+    "bg": "rgb(254, 238, 196)"
+   },
+   "vinos": {
+    "hash": "#vinos",
+    "sel": "vinos",
+    "visibles": [
+     "vinos"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1995,
+    "bg": "rgb(254, 233, 221)"
+   },
+   "sin-alcohol": {
+    "hash": "#sin-alcohol",
+    "sel": "sin-alcohol",
+    "visibles": [
+     "sin-alcohol"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1035,
+    "bg": "rgb(225, 239, 222)"
+   },
+   "comilona": {
+    "hash": "#comilona",
+    "sel": "comilona",
+    "visibles": [
+     "comilona"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1910,
+    "bg": "rgb(246, 236, 220)"
+   },
+   "promos": {
+    "hash": "#promos",
+    "sel": "promos",
+    "visibles": [
+     "promos"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 836,
+    "bg": "rgb(221, 242, 244)"
+   }
+  },
+  "chips": {
+   "comilona-pizzas": {
+    "hash": "#comilona-pizzas",
+    "visibles": [
+     "comilona-pizzas"
+    ],
+    "sel": "comilona-pizzas"
+   },
+   "espirituosos-gin": {
+    "hash": "#espirituosos-gin",
+    "visibles": [
+     "espirituosos-gin"
+    ],
+    "sel": "espirituosos-gin"
+   }
+  },
+  "cls_cambios_todo": 0,
+  "historial": {
+   "atras1": [
+    "espirituosos",
+    "#espirituosos"
+   ],
+   "atras2": [
+    "comilona",
+    "#comilona-pizzas"
+   ],
+   "adelante": [
+    "espirituosos",
+    "#espirituosos"
+   ]
+  },
+  "teclado": {
+   "flecha": [
+    "vinos",
+    "vinos",
+    "#vinos"
+   ],
+   "fin": [
+    "promos",
+    "promos"
+   ],
+   "inicio": [
+    "casa",
+    "casa"
+   ]
+  },
+  "overflow": 0,
+  "deep": [
+   "comilona",
+   "comilona-pizzas",
+   120
+  ],
+  "cls_deep": 0,
+  "errores": []
+ },
+ "390-en": {
+  "landing_overflow": 0,
+  "cls_carga": 0,
+  "tabs": {
+   "casa": {
+    "hash": "",
+    "sel": "casa",
+    "visibles": [
+     "casa"
+    ],
+    "tabsTop": 0,
+    "panelTop": -340,
+    "alto": 2728,
+    "bg": "rgb(250, 231, 239)"
+   },
+   "comilona": {
+    "hash": "#comilona",
+    "sel": "comilona",
+    "visibles": [
+     "comilona"
+    ],
+    "tabsTop": 0,
+    "panelTop": 60,
+    "alto": 1968,
+    "bg": "rgb(246, 236, 220)"
+   }
+  },
+  "chips": {
+   "comilona-pizzas": {
+    "hash": "#comilona-pizzas",
+    "visibles": [
+     "comilona-pizzas"
+    ],
+    "sel": "comilona-pizzas"
+   }
+  },
+  "cls_cambios_todo": 0,
+  "historial": {
+   "atras1": [
+    "comilona",
+    "#comilona"
+   ],
+   "atras2": [
+    "casa",
+    ""
+   ],
+   "adelante": [
+    "comilona",
+    "#comilona"
+   ]
+  },
+  "teclado": {
+   "flecha": [
+    "promos",
+    "promos",
+    "#promos"
+   ],
+   "fin": [
+    "promos",
+    "promos"
+   ],
+   "inicio": [
+    "casa",
+    "casa"
+   ]
+  },
+  "overflow": 0,
+  "deep": [
+   "comilona",
+   "comilona-pizzas",
+   120
+  ],
+  "cls_deep": 0,
+  "errores": []
+ },
+ "nojs": 7
+}

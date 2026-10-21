@@ -35,6 +35,17 @@
   --carta-magenta: #cd007a;     /* precios en pantalla (4,6:1); el impreso #ec008c da 3,6:1 y no se usa en texto */
   --carta-tinta: var(--noche);  /* descripciones (16,3:1) */
 
+  /* ---- La carta en su página (fase 15): un tinte suave por pestaña, derivado del campo y mezclado con blanco cálido.
+     El magenta es el par más justo: todos los tintes dan ≥ 4,5:1 con magenta y ≥ 7:1 con azul carta (contraste.py).
+     -fuerte: fondo de los chips de grupo (solo tinta noche encima, ≥ 10:1). */
+  --tinte-fucsia: #fae7ef;    --tinte-fucsia-fuerte: #eeacc9;     /* magenta 4,58 · azul 7,32 */
+  --tinte-turquesa: #ddf2f4;  --tinte-turquesa-fuerte: #bee7ea;   /* magenta 4,66 · azul 7,47 */
+  --tinte-amarillo: #feeec4;  --tinte-amarillo-fuerte: #fde69f;   /* magenta 4,71 · azul 7,53 */
+  --tinte-coral: #fee9dd;     --tinte-coral-fuerte: #fbc5b4;      /* magenta 4,62 · azul 7,40 */
+  --tinte-verde: #e1efde;     --tinte-verde-fuerte: #aaddc1;      /* magenta 4,54 · azul 7,27 */
+  --tinte-papel: var(--papel); --tinte-papel-fuerte: #eadbc4;     /* magenta 4,63 · azul 7,41 (fuerte: noche 13,97) */
+  --carta-hoja: #fffaf3;      /* la promo de hoy: hoja más clara sobre el tinte (magenta 5,22 · azul 8,35) */
+
   /* ---- Scrim funcional (único degradado del sistema, solo bajo texto sobre foto) ---- */
   --scrim: 12 7 5;              /* rgb neutro-cálido para rgb(var(--scrim) / a) */
 
@@ -77,6 +88,7 @@
   --ease-hover: ease;
   --d-press: 140ms;  --d-hover: 200ms;  --d-ui: 240ms;  --d-panel: 400ms;  --d-panel-out: 250ms;
   --d-reveal: 700ms; --d-hero: 800ms;   --stagger: 40ms; --stagger-card: 60ms; --d-fade-reduced: 180ms;
+  --d-tab: 200ms;    /* cambio de pestaña de la carta (Emil §6.14: opacity + 8 px; 0 ms por teclado) */
 }
 
 @media (min-width: 700px) { :root { --cols: 8; } }

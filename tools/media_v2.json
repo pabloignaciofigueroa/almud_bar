@@ -117,7 +117,28 @@
   {"id": "carta-camaron", "ref": "P099", "post": "IG-077", "src": "assets/raw/ig/DAbw0xKSimd_00.jpg", "section": "carta-item",
    "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
   {"id": "carta-topiturron", "ref": "P227", "post": "IG-040", "src": "assets/raw/ig/DRNqIPslOds_00.jpg", "section": "carta-item",
-   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]}
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 960}]},
+
+  {"id": "carta-pizza-dulzona", "ref": "P310", "post": "IG-022", "src": "assets/raw/ig/DY0AUvhlHjI_18.jpg", "section": "carta-item",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 50], "max": 720}],
+   "note": "Fase 15: es la única pizza dulce de la carta y se ve lo que dice su descripción (pasta de avellana, crema, frutos rojos glaseados, almendras fileteadas, menta). La caption (IG-022) no la nombra. 900x900: hasta 720."},
+  {"id": "carta-promo-negroni", "ref": "V054-cover", "post": "IG-016", "src": "assets/raw/ig/DZ8c3yiIdpa_00.jpg", "section": "carta-item",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 480}],
+   "note": "Fase 15: promo del martes (carta.json › promos › img IG-016, «Amamos los martes porque son de Negronicito»). 721x721: solo 480."},
+  {"id": "carta-promo-piscolein", "alias": "hoy-miercoles-garzona", "ref": "P331", "post": "IG-019", "section": "carta-item",
+   "note": "Fase 15: promo del miércoles (carta.json › promos › img IG-019): bandeja de piscolas."},
+  {"id": "carta-grupo-negroni", "ref": "P226", "src": "assets/raw/ig/DP7O0BElPhW_00.jpg", "section": "carta-grupo",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 50], "max": 960}],
+   "note": "Fase 15: lámina del grupo Negroni (IG-042: «cómo estamoh pa un Negroni? o su Boulevardier?»). Sin nombre de ítem: no dice cuál de los cinco."},
+  {"id": "carta-grupo-spritz", "ref": "P016", "src": "assets/raw/ig/CnU8qLjJ5zx_00.jpg", "section": "carta-grupo",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [55, 55], "max": 480}],
+   "note": "Fase 15: lámina del grupo Spritz (dos copas de spritz; IG-167 no nombra el trago). 1280x853: el 4:5 deja 682 px, se emite 480."},
+  {"id": "carta-grupo-pizzas", "ref": "P042", "src": "assets/raw/ig/CreVnAOJ6WR_00.jpg", "section": "carta-grupo",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [50, 55], "max": 960}],
+   "note": "Fase 15: lámina del grupo Pizzas artesanales (IG-141 habla de sus pizzas, no nombra cuál; jamón serrano y rúcula no calzan con ninguna de las 9 actuales)."},
+  {"id": "carta-lamina-vino", "ref": "P191", "src": "assets/raw/ig/DM_Ih5dyVKH_09.jpg", "section": "carta",
+   "crops": [{"name": "a", "ratio": "4:5", "focal": [40, 45], "max": 960}],
+   "note": "Fase 15: lámina de Vinos & espumantes (bartender sirviendo vino; no se sabe cuál)."}
  ],
  "videos": [
   {"id": "hoy-martes-negroni", "ref": "V054", "src": "assets/raw/ig/DZ8c3yiIdpa_00.mp4", "section": "hoy",
@@ -142,5 +163,5 @@
   {"ref": "V038", "reason": "No figura en el guion v2 (la carta usa V021 y V052)."}
  ],
  "credits": {"IG-050": "@estudiouno.prod", "IG-075": "@estudiouno.prod", "IG-061": "@estudiouno.prod", "IG-100": "@estudiouno.prod",
-  "IG-144": "@catarsis.fotografia", "IG-147": "@catarsis.fotografia", "IG-009": "@isosur.prod", "IG-178": "@tamillanquileo", "IG-103": "@rober.patagonico"}
+  "IG-144": "@catarsis.fotografia", "IG-147": "@catarsis.fotografia", "IG-141": "@catarsis.fotografia", "IG-167": "@catarsis.fotografia", "IG-009": "@isosur.prod", "IG-178": "@tamillanquileo", "IG-103": "@rober.patagonico"}
 }
