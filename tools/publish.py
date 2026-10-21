@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenera public/: la carpeta que se publica en Cloudflare Pages.
 
-Copia solo lo que el sitio usa (index.html, css, js, vendor, assets, brand),
+Copia solo lo que el sitio v2 usa (index.html, css/v2, js/v2, vendor, assets/v2, assets/fonts, brand),
 deja fuera todo lo interno y escribe public/_headers con la política de caché.
 
 Falla (código 1, sin dejar un public/ a medias) si:
@@ -18,7 +18,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
 INCLUDE_FILES = ['index.html']
-INCLUDE_DIRS = ['css', 'js', 'vendor', 'assets', 'brand']
+# v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
+INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand']
 
 BLOCKED_EXT = {'.md', '.py', '.csv', '.json', '.pyc', '.sh', '.ipynb'}
 BLOCKED_DIRS = {'assets/raw'}

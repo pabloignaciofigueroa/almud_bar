@@ -1,0 +1,83 @@
+{
+ "390": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 224,
+  "lcp_el": "IMG. portada-terraza-a-720.avif",
+  "height": 49424,
+  "scrollWidth": 390,
+  "errors": []
+ },
+ "768": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 100,
+  "lcp_el": "IMG. portada-terraza-a-1280.avif",
+  "height": 51998,
+  "scrollWidth": 768,
+  "errors": []
+ },
+ "1280": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 172,
+  "lcp_el": "IMG. portada-terraza-a-1280.avif",
+  "height": 41432,
+  "scrollWidth": 1280,
+  "errors": []
+ },
+ "1440": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 132,
+  "lcp_el": "IMG. portada-terraza-a-1440.avif",
+  "height": 42845,
+  "scrollWidth": 1440,
+  "errors": []
+ },
+ "1920": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 216,
+  "lcp_el": "IMG. portada-terraza-a-1440.avif",
+  "height": 46112,
+  "scrollWidth": 1920,
+  "errors": []
+ },
+ "390-rm": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 456,
+  "lcp_el": "IMG. portada-terraza-a-720.avif",
+  "height": 49424,
+  "scrollWidth": 390,
+  "errors": []
+ },
+ "1440-rm": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 216,
+  "lcp_el": "IMG. portada-terraza-a-1440.avif",
+  "height": 42845,
+  "scrollWidth": 1440,
+  "errors": []
+ },
+ "390-en": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 216,
+  "lcp_el": "IMG. portada-terraza-a-720.avif",
+  "height": 53491,
+  "scrollWidth": 390,
+  "errors": []
+ },
+ "1440-en": {
+  "cls_load": 0,
+  "cls_scroll": 0,
+  "lcp_ms": 200,
+  "lcp_el": "IMG. portada-terraza-a-1440.avif",
+  "height": 45345,
+  "scrollWidth": 1440,
+  "errors": []
+ }
+}

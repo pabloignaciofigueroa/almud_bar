@@ -15,3 +15,4 @@
 - 2026-10-21 Fase 8 v2: contrato, sistema, tokens css/v2, lámina de estilo
 - 2026-10-21 Fase 9 v2: copy-v2.md (199/199 literal verificado), carta-v2.json (256 ítems)
 - 2026-10-21 Fase 10 v2: media_v2 (48 ids, 5 reels, 4.9MB video)
+- 2026-10-21 Fases 11-14 v2: sitio construido (src-v2, build_v2, css/js v2); public/ sin tocar hasta fase 20
