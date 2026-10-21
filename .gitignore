@@ -10,3 +10,6 @@ _plan/diag/sheets/*
 !_plan/diag/sheets/top30.jpg
 _plan/critica-*/after/**/*.jpg
 _plan/critica-*/after/*.jpg
+_plan/jurado-2/shots-*/
+_plan/jurado-2/after/**/*.jpg
+_plan/jurado-2/after/*.jpg
