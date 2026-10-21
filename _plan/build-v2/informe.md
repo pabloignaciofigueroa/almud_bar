@@ -247,3 +247,12 @@ Láminas sin nombre de ítem: casa loop V021 (muro rosa), mundo P086 (`tragos-so
 - Medios nuevos: `hoy-jueves-fiesta` (P084, IG-082, 4:5 hasta 1280, sin ampliar); `hoy-sabado` pasa a alias de `con-quien-barra` (P031). Ninguna foto se repite en el landing, en ninguno de los seis estados del día (verificado por id de medio).
 - `lugar-techo-flecos` (el único video solo MP4) sale del landing: ya no hay ningún pedido a un WebM inexistente ni un loop que no corre.
 - Etiquetas [UI] nuevas, declaradas en el guion: ‹Este mes›, ‹Próximo›, ‹Ver mapa›, ‹Mapa: Serrano 325, Castro› (título del iframe), ‹Inicio›, ‹DM›. Literal nuevo: «Viernes» [IG-003] en la semana.
+
+## Fase 16 · Ronda de arreglos del jurado 2 (resumen; detalle en `_plan/jurado-2/respuesta.md`)
+
+- **Confirmar con Almud: el @ de Lizze.** Todo el sitio usa ahora **@lizzearellanol** (texto y enlace), la grafía de 11 de sus 14 menciones en los captions; "@lizzearellano" (IG-010, IG-031, IG-131) quedó fuera. Preguntar al bar cuál es la cuenta vigente antes de mandar el regalo.
+- **Teléfono fuera.** "+56 65 253 0084" viene de Tripadvisor y carta.menu, no de la ficha de Google (`research_web.md` §2): se quitó la fila y el `tel:`. El DM cubre ese uso.
+- **Maps:** todos los "Cómo llegar" abren la búsqueda "Almud Bar, Serrano 325, Castro" (la ficha del local); el mapa embebido sigue cargándose solo al tocar "Ver mapa".
+- **OG:** URLs absolutas en `https://almudbar.pages.dev/` (si el dominio final cambia, actualizar `og:url`, `og:image`, `canonical` y `twitter:image` en `src-v2/*.html` y `SITE` en `tools/publish.py`). `/carta/` tiene su propia imagen (`og-carta.jpg`, Peter con su burbuja).
+- **Portada en DPR 2:** sigue el asterisco (P189 nativa de 1440 px, nunca más de 1440 px CSS). En el teléfono se sirve un recorte propio (`portada-terraza-m`, 70 % superior, máx. 1170 px, 120 KB en AVIF).
+- **publish.py** publica solo lo que las páginas referencian (videos y fotos viejas, `vendor/` y `brand/` de trabajo quedan fuera). Los videos sin uso se borraron de `assets/v2/video`.

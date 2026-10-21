@@ -92,6 +92,22 @@ El **día** (cosa viva) usa su propio campo: Mar coral · Mié turquesa · Jue f
 
 `rutas.md` decía "papel sobre coral y verde": no pasa, y queda corregido. Los anillos de foco cumplen el mínimo de 3:1 contra su fondo con la tinta de la superficie: papel sobre noche, noche sobre campos claros, papel sobre fucsia y azul sobre papel.
 
+### 2.5 Tintes de la carta (fase 16)
+La carta en su página lleva un fondo suave por pestaña: lo pidió el cliente y se mantiene. Desde la fase 16 ya no son hex escritos a mano: cada tinte **se deriva** de los tokens del sistema, mezclando el campo de su pestaña con `--carta-hoja` (#fffaf3, la hoja clara) en `tokens.css`:
+
+| Token | Fórmula | Resultado | Magenta | Azul carta | Noche |
+|---|---|---|---|---|---|
+| `--tinte-fucsia` | `color-mix(in srgb, var(--fucsia) 8%, var(--carta-hoja))` | #fbe7e7 | 4,56 | 7,30 | 16,02 |
+| `--tinte-turquesa` | `… var(--turquesa) 12% …` | #e8f2ed | 4,73 | 7,58 | 16,62 |
+| `--tinte-amarillo` | `… var(--amarillo) 12% …` | #fef3d7 | 4,90 | 7,85 | 17,22 |
+| `--tinte-coral` | `… var(--coral) 12% …` | #fde8de | 4,58 | 7,34 | 16,10 |
+| `--tinte-verde` | `… var(--verde) 12% …` | #e1f0e3 | 4,58 | 7,34 | 16,10 |
+| `--tinte-papel` | `var(--papel)` (Comilona) | #f6ecdc | 4,63 | 7,41 | 16,26 |
+
+- La regla: 12 % de campo; el fucsia, que oscurece más, 8 %. Con más campo el magenta de los precios baja de 4,5:1.
+- Se fueron los `-fuerte` (fondo de chips): los chips pasan a texto azul subrayado y el activo en noche (no hay superficie nueva).
+- Se fue la hoja blanca de la promo de hoy: el día se marca solo con la etiqueta ‹Hoy›. La carta no tiene superficies elevadas.
+
 ---
 
 ## 3. Tipografía

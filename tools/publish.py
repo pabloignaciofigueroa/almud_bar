@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenera public/: la carpeta que se publica en Cloudflare Pages.
 
-Copia solo lo que el sitio v2 usa (index.html, carta/index.html, css/v2, js/v2, vendor, assets/v2, assets/fonts, brand),
+Copia solo lo que el sitio v2 usa de verdad (fase 16: se siguen las referencias desde las páginas; index.html, carta/index.html, css/v2, js/v2, vendor, assets/v2, assets/fonts, brand),
 deja fuera todo lo interno y escribe public/_headers con la política de caché.
 
 Falla (código 1, sin dejar un public/ a medias) si:
@@ -62,8 +62,29 @@ def is_internal(rel: pathlib.PurePosixPath) -> str | None:
     return None
 
 
+SITE = 'https://almudbar.pages.dev/'
+
+
+def used_files() -> set[str]:
+    """Fase 16: lo que las páginas usan de verdad (HTML → CSS/JS → fuentes e imágenes), siguiendo las referencias.
+    Lo que no se referencia no se publica (videos e imágenes viejas, vendor/ que la v2 no carga, brand/ de trabajo)."""
+    seen, todo = set(), list(INCLUDE_FILES)
+    while todo:
+        f = todo.pop()
+        if f in seen or not (ROOT / f).is_file():
+            continue
+        seen.add(f)
+        if pathlib.PurePosixPath(f).suffix not in ('.html', '.css', '.js'):
+            continue
+        text = (ROOT / f).read_text(errors='ignore').replace(SITE, '/')
+        base = pathlib.PurePosixPath('.') if f.endswith('.js') else pathlib.PurePosixPath(f).parent
+        todo += [r for r in references(text, base) if r not in seen]
+    return seen
+
+
 def copy_tree(stage: pathlib.Path) -> list[str]:
     skipped = []
+    used = used_files()
     for f in INCLUDE_FILES:
         src = ROOT / f
         if not src.is_file():
@@ -80,6 +101,9 @@ def copy_tree(stage: pathlib.Path) -> list[str]:
             rel = pathlib.PurePosixPath(src.relative_to(ROOT).as_posix())
             if is_internal(rel):
                 skipped.append(rel.as_posix())
+                continue
+            if rel.as_posix() not in used:
+                skipped.append(rel.as_posix() + ' (sin uso)')
                 continue
             dst = stage / rel
             dst.parent.mkdir(parents=True, exist_ok=True)
@@ -136,7 +160,7 @@ def check(stage: pathlib.Path) -> list[str]:
         rel_dir = pathlib.PurePosixPath(src.relative_to(stage).as_posix()).parent
         # en JS las rutas son relativas al documento, no al archivo .js
         base = pathlib.PurePosixPath('.') if src.suffix == '.js' else rel_dir
-        for ref in references(src.read_text(errors='ignore'), base):
+        for ref in references(src.read_text(errors='ignore').replace(SITE, '/'), base):
             if not (stage / ref).is_file():
                 missing.add(f'falta: {ref} (referenciado en {src.relative_to(stage)})')
     return errors + sorted(missing)
@@ -161,9 +185,11 @@ def main():
     big = max(files, key=lambda p: p.stat().st_size)
     print(f'public/ listo: {len(files)} archivos, {total / 1048576:.1f} MB '
           f'(el mayor: {big.relative_to(OUT)}, {big.stat().st_size / 1048576:.1f} MB)')
-    print(f'omitidos por internos: {len(skipped)}')
-    for s in skipped:
-        print('  - ' + s)
+    unused = [x for x in skipped if x.endswith('(sin uso)')]
+    print(f'omitidos por internos: {len(skipped) - len(unused)} · sin uso (no se publican): {len(unused)}')
+    if '-v' in sys.argv:
+        for s in skipped:
+            print('  - ' + s)
 
 
 if __name__ == '__main__':

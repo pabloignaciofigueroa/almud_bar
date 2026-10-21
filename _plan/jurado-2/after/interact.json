@@ -269,67 +269,10 @@
     173,
     720,
     1.39,
-    195
+    175
    ],
    "css_mayor_que_archivo": [],
-   "sizes_desajustado": [
-    [
-     "tragos-sours-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "tragos-copa-naranja-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "comida-pizza-mano-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "comida-garzon-plato-m-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "eventos-diez-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "eventos-torta-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "eventos-doce-m-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ],
-    [
-     "eventos-jaloguin-a-720.avif",
-     173,
-     720,
-     1.39,
-     195
-    ]
-   ]
+   "sizes_desajustado": []
   },
   "carta/index.html-390@3x": {
    "n": 5,
@@ -366,67 +309,10 @@
     173,
     480,
     1.39,
-    194
+    175
    ],
    "css_mayor_que_archivo": [],
-   "sizes_desajustado": [
-    [
-     "tragos-sours-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "tragos-copa-naranja-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "comida-pizza-mano-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "comida-garzon-plato-m-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "eventos-diez-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "eventos-torta-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "eventos-doce-m-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ],
-    [
-     "eventos-jaloguin-a-480.avif",
-     173,
-     480,
-     1.39,
-     194
-    ]
-   ]
+   "sizes_desajustado": []
   },
   "carta/index.html-390@2x": {
    "n": 5,
@@ -452,11 +338,11 @@
    "n": 36,
    "mediana": 1.08,
    "min": [
-    "donde-puerta-d-480.avif",
-    560,
-    480,
-    0.86,
-    460
+    "portada-terraza-a-1440.avif",
+    1440,
+    1440,
+    1,
+    1440
    ],
    "max": [
     "tragos-copa-naranja-a-480.avif",
@@ -465,73 +351,8 @@
     1.47,
     345
    ],
-   "css_mayor_que_archivo": [
-    [
-     "carta-peter-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "carta-saguer-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "hoy-jueves-sangria-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "carta-moto-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "carta-tukulito-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "carta-camaron-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "carta-pizza-dulzona-a-320.avif",
-     327,
-     320,
-     0.98,
-     316
-    ],
-    [
-     "donde-puerta-d-480.avif",
-     560,
-     480,
-     0.86,
-     460
-    ]
-   ],
-   "sizes_desajustado": [
-    [
-     "donde-puerta-d-480.avif",
-     560,
-     480,
-     0.86,
-     460
-    ]
-   ]
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
   },
   "carta/index.html-1440@1x": {
    "n": 7,
@@ -571,15 +392,7 @@
     576
    ],
    "css_mayor_que_archivo": [],
-   "sizes_desajustado": [
-    [
-     "donde-puerta-d-960.avif",
-     560,
-     960,
-     0.86,
-     460
-    ]
-   ]
+   "sizes_desajustado": []
   },
   "carta/index.html-1440@2x": {
    "n": 7,
@@ -605,11 +418,11 @@
    "n": 36,
    "mediana": 1.19,
    "min": [
-    "donde-puerta-d-720.avif",
-    759,
-    720,
-    0.95,
-    614
+    "portada-terraza-a-1440.avif",
+    1440,
+    1440,
+    1,
+    1440
    ],
    "max": [
     "hoy-miercoles-brindis-a-960.avif",
@@ -618,24 +431,8 @@
     1.26,
     768
    ],
-   "css_mayor_que_archivo": [
-    [
-     "donde-puerta-d-720.avif",
-     759,
-     720,
-     0.95,
-     614
-    ]
-   ],
-   "sizes_desajustado": [
-    [
-     "donde-puerta-d-720.avif",
-     759,
-     720,
-     0.95,
-     614
-    ]
-   ]
+   "css_mayor_que_archivo": [],
+   "sizes_desajustado": []
   },
   "carta/index.html-1920@1x": {
    "n": 7,
@@ -662,19 +459,19 @@
   "landing-390@3x": {
    "runs": [
     [
-     2132,
+     2180,
      "portada-terraza-m-1170.avif"
     ],
     [
-     2152,
+     2172,
      "portada-terraza-m-1170.avif"
     ],
     [
-     2140,
+     2176,
      "portada-terraza-m-1170.avif"
     ]
    ],
-   "mediana_ms": 2140
+   "mediana_ms": 2176
   },
   "landing-1440": {
    "runs": [
@@ -683,32 +480,32 @@
      "portada-terraza-a-1440.avif"
     ],
     [
-     3152,
+     3140,
      "portada-terraza-a-1440.avif"
     ],
     [
-     3148,
+     3132,
      "portada-terraza-a-1440.avif"
     ]
    ],
-   "mediana_ms": 3148
+   "mediana_ms": 3136
   },
   "carta-390@3x": {
    "runs": [
     [
-     1260,
+     1252,
      "P"
     ],
     [
-     1264,
+     1280,
      "P"
     ],
     [
-     1456,
+     1316,
      "P"
     ]
    ],
-   "mediana_ms": 1264
+   "mediana_ms": 1280
   }
  }
 }

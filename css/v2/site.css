@@ -162,6 +162,10 @@ html[lang="en"] .cover-data > .gl { display: block; }
   .cover-tipo { gap: var(--sp-1); }
   .cover-acc .link { min-height: 44px; }
 }
+@media (max-width: 899px) and (max-height: 700px) {
+  /* fase 16: en teléfonos bajos (320 × 568, 375 × 667) la línea de su voz cede el lugar: horario, dirección y acciones primero */
+  .cover-voz, .cover-voz + .gl { display: none !important; }
+}
 @media (min-width: 900px) {
   /* el ancla de la lámina (1440 × 900) sube en pantallas bajas para que las caras sigan a la vista y el tipo sobre la pared */
   .cover { --H: clamp(640px, calc(100svh - var(--nav-h)), 1000px); --lift: max(0px, calc((var(--S) * 0.575 - var(--H)) * 0.75)); }
@@ -175,7 +179,7 @@ html[lang="en"] .cover-data > .gl { display: block; }
   .cover-title-box::before, .cover-info::before { content: ""; position: absolute; inset: -22% -16%; z-index: -1; pointer-events: none;
     background: radial-gradient(closest-side, rgb(var(--scrim) / 0.86), rgb(var(--scrim) / 0.74) 62%, rgb(var(--scrim) / 0)); /* taste-skill-ignore: scrim funcional neutro, solo detrás del tipo */ }
   /* fase 16: el letrero "Cristal" de la foto ensuciaba el contorno del isotipo: el scrim se refuerza solo bajo el isotipo */
-  .cover-title-box::after { content: ""; position: absolute; z-index: -1; pointer-events: none; right: -5%; top: 28%; width: 34%; height: 90%;
+  .cover-title-box::after { content: ""; position: absolute; z-index: -1; pointer-events: none; right: 3%; top: 30%; width: 38%; height: 88%;
     background: radial-gradient(closest-side, rgb(var(--scrim) / 0.95), rgb(var(--scrim) / 0.85) 60%, rgb(var(--scrim) / 0)); /* taste-skill-ignore: scrim funcional neutro, solo bajo el isotipo */ }
   .cover-logo { width: calc(var(--S) * 0.36); }
   .cover-acc { margin-top: var(--sp-1); }

@@ -1,0 +1,1975 @@
+{
+ "url": "http://127.0.0.1:8765/carta/index.html",
+ "at": "2026-10-21T23:11:35.990Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.72,
+    0.94,
+    0.93,
+    0.99,
+    1
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 0,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3837,
+     "screens": 4.3,
+     "words": 593,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 26,
+     "uiAbuse": false,
+     "realPictures": 7,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "carta-lamina-barra-a-480.avif",
+      "tragos-copa-naranja-a-480.avif",
+      "carta-peter-a-240.avif",
+      "carta-olvidar-a-240.avif",
+      "carta-saguer-a-240.avif",
+      "hoy-jueves-sangria-a-240.avif",
+      "carta-coquette-a-240.avif"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "LA CARTA",
+     "words": 2,
+     "chars": 8,
+     "lines": 1,
+     "size": 210.4,
+     "vw": 14.6,
+     "font": "Six Caps",
+     "weight": 400,
+     "tracking": 0.01,
+     "leading": 0.86,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.47,
+     "top": 136,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LA CARTA",
+     "words": 2,
+     "lines": 1,
+     "size": 210.4,
+     "font": "Six Caps"
+    },
+    "headings": [
+     {
+      "text": "LA CARTA",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 210.4,
+      "vw": 14.6,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.86,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 136,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "COCTELERÍA DE LA CASA",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 97.6,
+      "vw": 6.8,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 477,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "QUE NO SE LO CUENTEN! BESIIIII",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 97.6,
+      "vw": 6.8,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 2963,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 6,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Oswald",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Six Caps",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      18,
+      27,
+      98
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Oswald",
+      "size": 18,
+      "leading": 1.5,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 16
+     },
+     "measureChars": 70,
+     "max": {
+      "size": 210.4,
+      "vw": 14.6,
+      "font": "Six Caps",
+      "text": "La carta"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.09,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6ecdc",
+     "bodyBgHsl": {
+      "h": 37,
+      "s": 0.59,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6ecdc",
+       "top": 72,
+       "hsl": {
+        "h": 37,
+        "s": 0.59,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#fbe7e7",
+       "top": 429,
+       "hsl": {
+        "h": 0,
+        "s": 0.71,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#170e0b",
+       "top": 2857,
+       "hsl": {
+        "h": 15,
+        "s": 0.35,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#170e0b",
+       "share": 0.75
+      },
+      {
+       "color": "#2023e4",
+       "share": 0.1
+      },
+      {
+       "color": "#f6ecdc",
+       "share": 0.06
+      },
+      {
+       "color": "#cbb9a5",
+       "share": 0.06
+      },
+      {
+       "color": "#cd007a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ff3f6c",
+      "hsl": {
+       "h": 346,
+       "s": 1,
+       "l": 0.62
+      },
+      "fg": "#170e0b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 45,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Coctelería de la casa"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.1
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "six caps",
+     "oswald"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3837,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section.carta-cab.on-paper",
+      "tag": "section",
+      "top": 72,
+      "height": 293,
+      "words": 20,
+      "media": 0,
+      "middle": 330,
+      "heading": {
+       "text": "La carta",
+       "size": 210,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 271,
+      "textLeft": 32,
+      "textRight": 271,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.carta-cuerpo",
+      "tag": "div",
+      "top": 365,
+      "height": 2492,
+      "words": 505,
+      "media": 14,
+      "middle": 36,
+      "heading": {
+       "text": "Coctelería de la casa",
+       "size": 98,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "footer.pie-sitio.on-night",
+      "tag": "footer",
+      "top": 2857,
+      "height": 979,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Que no se lo cuenten!",
+       "size": 98,
+       "tag": "span"
+      },
+      "left": 32,
+      "right": 89,
+      "textLeft": 32,
+      "textRight": 89,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LA CARTA",
+      "size": 210,
+      "top": 136,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 480,
+     "y": 420,
+     "w": 960,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.66,
+    0.8,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3372,
+     "screens": 3.3,
+     "words": 591,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 26,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "LA CARTA",
+     "words": 2,
+     "chars": 8,
+     "lines": 1,
+     "size": 136.5,
+     "vw": 17.8,
+     "font": "Six Caps",
+     "weight": 400,
+     "tracking": 0.01,
+     "leading": 0.86,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.96,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LA CARTA",
+     "words": 2,
+     "lines": 1,
+     "size": 136.5,
+     "font": "Six Caps"
+    },
+    "headings": [
+     {
+      "text": "LA CARTA",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 136.5,
+      "vw": 17.8,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.86,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "COCTELERÍA DE LA CASA",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 70.7,
+      "vw": 9.2,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 573,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "QUE NO SE LO CUENTEN! BESIIIII",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 70.7,
+      "vw": 9.2,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 2586,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 6,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Oswald",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Six Caps",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      23,
+      71
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Oswald",
+      "size": 17.1,
+      "leading": 1.5,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 16
+     },
+     "measureChars": 72,
+     "max": {
+      "size": 136.5,
+      "vw": 17.8,
+      "font": "Six Caps",
+      "text": "La carta"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.09,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6ecdc",
+     "bodyBgHsl": {
+      "h": 37,
+      "s": 0.59,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6ecdc",
+       "top": 64,
+       "hsl": {
+        "h": 37,
+        "s": 0.59,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#fbe7e7",
+       "top": 525,
+       "hsl": {
+        "h": 0,
+        "s": 0.71,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#170e0b",
+       "top": 2507,
+       "hsl": {
+        "h": 15,
+        "s": 0.35,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#170e0b",
+       "share": 0.75
+      },
+      {
+       "color": "#2023e4",
+       "share": 0.1
+      },
+      {
+       "color": "#f6ecdc",
+       "share": 0.06
+      },
+      {
+       "color": "#cbb9a5",
+       "share": 0.06
+      },
+      {
+       "color": "#cd007a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ff3f6c",
+      "hsl": {
+       "h": 346,
+       "s": 1,
+       "l": 0.62
+      },
+      "fg": "#170e0b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 45,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Coctelería de la casa"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "six caps",
+     "oswald"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3372,
+    "margins": {
+     "left": 17,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "section.carta-cab.on-paper",
+      "tag": "section",
+      "top": 64,
+      "height": 365,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "La carta",
+       "size": 136,
+       "tag": "h1"
+      },
+      "left": 17,
+      "right": 380,
+      "textLeft": 17,
+      "textRight": 380,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.carta-cuerpo",
+      "tag": "div",
+      "top": 429,
+      "height": 2078,
+      "words": 503,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Coctelería de la casa",
+       "size": 71,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.pie-sitio.on-night",
+      "tag": "footer",
+      "top": 2507,
+      "height": 865,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Que no se lo cuenten!",
+       "size": 71,
+       "tag": "span"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 179,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LA CARTA",
+      "size": 136,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 17,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.77,
+    0.93,
+    0.91,
+    0.91,
+    0.99
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4110,
+     "screens": 4.9,
+     "words": 588,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 26,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "LA CARTA",
+     "words": 2,
+     "chars": 8,
+     "lines": 1,
+     "size": 96,
+     "vw": 24.6,
+     "font": "Six Caps",
+     "weight": 400,
+     "tracking": 0,
+     "leading": 0.86,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 88,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LA CARTA",
+     "words": 2,
+     "lines": 1,
+     "size": 96,
+     "font": "Six Caps"
+    },
+    "headings": [
+     {
+      "text": "LA CARTA",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 96,
+      "vw": 24.6,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 0.86,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 88,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "En su Almudcito tenemos pa todos los gustos!",
+      "words": 8,
+      "chars": 44,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 195,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "COCTELERÍA DE LA CASA",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 56,
+      "vw": 14.4,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 457,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PINCHE GÜEY",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 564,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 8.800",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 564,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "AQUÍ TE LAS TRAIGO PETER",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 770,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.700",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 770,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "CÓMO TE VOY A OLVIDAR",
+      "words": 5,
+      "chars": 21,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 980,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.800",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 980,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "GUAREVER COMO SEA nuevo",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 1216,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.200",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 1216,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "NOT COLLINS nuevo",
+      "words": 3,
+      "chars": 17,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 1447,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.700",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1447,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "TE ESPERO EN LA CUNETA",
+      "words": 5,
+      "chars": 22,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 1628,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.800",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1628,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "DEJA TOMAO",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 1808,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.400",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1808,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "SAGÜER ON FAIA",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 1964,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.900",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1964,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "SANGRÍA FOREVA!",
+      "words": 2,
+      "chars": 15,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 2123,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.500",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 2123,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "RAMÓN",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 2333,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.100",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 2333,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "TRANQUILEIN JOHN WAYNE",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 2514,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.800",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 2514,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "DESDE QUE TE CONOCÍ",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.39,
+      "top": 2694,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 6.900",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 2694,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "A VECES ME PONGO COQUETTE",
+      "words": 5,
+      "chars": 25,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 2900,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.100",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 2900,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "IQUIQUE GLORIOSO",
+      "words": 2,
+      "chars": 16,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.4,
+      "top": 3111,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "$ 7.400",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Oswald",
+      "weight": 600,
+      "tracking": 0.008,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 3111,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "QUE NO SE LO CUENTEN! BESIIIII",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 56,
+      "vw": 14.4,
+      "font": "Six Caps",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3461,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 32,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 30,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Oswald",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "Six Caps",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      22,
+      56
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Oswald",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 16
+     },
+     "measureChars": 28,
+     "max": {
+      "size": 96,
+      "vw": 24.6,
+      "font": "Six Caps",
+      "text": "La carta"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.09,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6ecdc",
+     "bodyBgHsl": {
+      "h": 37,
+      "s": 0.59,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f6ecdc",
+       "top": 56,
+       "hsl": {
+        "h": 37,
+        "s": 0.59,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#fbe7e7",
+       "top": 409,
+       "hsl": {
+        "h": 0,
+        "s": 0.71,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#170e0b",
+       "top": 3389,
+       "hsl": {
+        "h": 15,
+        "s": 0.35,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#170e0b",
+       "share": 0.76
+      },
+      {
+       "color": "#2023e4",
+       "share": 0.1
+      },
+      {
+       "color": "#cbb9a5",
+       "share": 0.06
+      },
+      {
+       "color": "#f6ecdc",
+       "share": 0.05
+      },
+      {
+       "color": "#cd007a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ff3f6c",
+      "hsl": {
+       "h": 346,
+       "s": 1,
+       "l": 0.62
+      },
+      "fg": "#170e0b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 45,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Saltar al contenido",
+      "Coctelería de la casa"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 3,
+     "fixed": false,
+     "height": 56,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "six caps",
+     "oswald"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4110,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section.carta-cab.on-paper",
+      "tag": "section",
+      "top": 56,
+      "height": 301,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "La carta",
+       "size": 96,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 102,
+      "textLeft": 16,
+      "textRight": 102,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.carta-cuerpo",
+      "tag": "div",
+      "top": 357,
+      "height": 3032,
+      "words": 503,
+      "media": 0,
+      "middle": 369,
+      "heading": {
+       "text": "Coctelería de la casa",
+       "size": 56,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": -454,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.pie-sitio.on-night",
+      "tag": "footer",
+      "top": 3389,
+      "height": 721,
+      "words": 50,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Que no se lo cuenten!",
+       "size": 56,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LA CARTA",
+      "size": 96,
+      "top": 88,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (page background #f6ecdc, section #f6ecdc, text #f6ecdc).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 8 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/desktop-fold.jpg",
+   "pages": [
+    "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/desktop-page-01.jpg",
+    "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/tablet-fold.jpg",
+   "pages": [
+    "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/mobile-fold.jpg",
+   "pages": [
+    "/home/claude/almud_bar/_plan/jurado-2/after/inspect-carta/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

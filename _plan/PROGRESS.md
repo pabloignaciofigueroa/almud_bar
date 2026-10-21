@@ -18,3 +18,4 @@
 - 2026-10-21 Fases 11-14 v2: sitio construido (src-v2, build_v2, css/js v2); public/ sin tocar hasta fase 20
 - 2026-10-21 Fase 15a v2: carta como página aparte /carta (pestañas, subgrupos, fondos suaves, fotos referenciales) + destacados en landing
 - 2026-10-21 Fase 15 v2: correcciones ronda 1 (P0/P1 resueltos, ver critica-1/respuesta.md)
+- 2026-10-21 Fase 16 v2: correcciones del jurado aplicadas (ver jurado-2/respuesta.md)
