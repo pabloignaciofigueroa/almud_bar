@@ -1,0 +1,182 @@
+{
+ "portada_desktop": "assets/raw/ig/C-dwJHLyPpU_00.mp4 (0.20-5.20s boomerang, crop 4:5 @50,45, split 45%)",
+ "portada_mobile": "assets/raw/ig/C-dwJHLyPpU_00.mp4 (0.20-5.20s boomerang, 9:16 full-bleed, poster 2.0s)",
+ "portada_alt": "assets/raw/ig/Dbok2NyFNdb_05.jpg",
+ "picks": [
+  {
+   "file": "assets/raw/ig/DAMHps8JVVr_07.jpg",
+   "section": "El lugar",
+   "rank": 1,
+   "crop_desktop": "4:5 @50,55",
+   "crop_mobile": "4:5 @50,55"
+  },
+  {
+   "file": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "El lugar",
+   "rank": 2,
+   "crop_desktop": "16:9 @50,38",
+   "crop_mobile": "4:5 @45,40"
+  },
+  {
+   "file": "assets/raw/ig/DAMHps8JVVr_04.jpg",
+   "section": "El lugar",
+   "rank": 3,
+   "crop_desktop": "16:9 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/Cqn78DFp5Nm_00.jpg",
+   "section": "El lugar",
+   "rank": 4,
+   "crop_desktop": "4:5 @50,45",
+   "crop_mobile": "4:5 @50,45"
+  },
+  {
+   "file": "assets/raw/ig/DBMtYELSzNS_14.jpg",
+   "section": "El lugar",
+   "rank": 5,
+   "crop_desktop": "4:5 @45,45",
+   "crop_mobile": "4:5 @45,45"
+  },
+  {
+   "file": "assets/raw/ig/Dbg3ekilC4P_02.jpg",
+   "section": "El lugar",
+   "rank": 6,
+   "crop_desktop": "16:9 @50,45",
+   "crop_mobile": "4:5 @50,45"
+  },
+  {
+   "file": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
+   "section": "Los tragos",
+   "rank": 7,
+   "crop_desktop": "1:1->16:9 @50,45",
+   "crop_mobile": "4:5 @50,45"
+  },
+  {
+   "file": "assets/raw/ig/DM_Ih5dyVKH_02.jpg",
+   "section": "Los tragos",
+   "rank": 8,
+   "crop_desktop": "4:5 @45,40",
+   "crop_mobile": "4:5 @45,40"
+  },
+  {
+   "file": "assets/raw/ig/DCIEfJUylnY_03.jpg",
+   "section": "Los tragos",
+   "rank": 9,
+   "crop_desktop": "16:9 @45,38",
+   "crop_mobile": "16:9 @45,38"
+  },
+  {
+   "file": "assets/raw/ig/DAMHps8JVVr_00.jpg",
+   "section": "Los tragos",
+   "rank": 10,
+   "crop_desktop": "4:5 @50,50",
+   "crop_mobile": "4:5 @50,50"
+  },
+  {
+   "file": "assets/raw/ig/DY5WNPolGUK_14.jpg",
+   "section": "Los tragos",
+   "rank": 11,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/CqEI2nSJP2__00.jpg",
+   "section": "La comida",
+   "rank": 12,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "La comida",
+   "rank": 13,
+   "crop_desktop": "16:9 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/DY0AUvhlHjI_09.jpg",
+   "section": "La comida",
+   "rank": 14,
+   "crop_desktop": "4:5 @50,50",
+   "crop_mobile": "4:5 @50,50"
+  },
+  {
+   "file": "assets/raw/ig/DY0AUvhlHjI_19.jpg",
+   "section": "La comida",
+   "rank": 15,
+   "crop_desktop": "4:5 @45,45",
+   "crop_mobile": "4:5 @45,45"
+  },
+  {
+   "file": "assets/raw/ig/DU35ZDPCBcH_00.jpg",
+   "section": "Con quién y para qué",
+   "rank": 16,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/CpVyxXJJrhO_00.jpg",
+   "section": "Con quién y para qué",
+   "rank": 17,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/CrMRBMNpdIF_00.jpg",
+   "section": "Con quién y para qué",
+   "rank": 18,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/DBMtYELSzNS_08.jpg",
+   "section": "Con quién y para qué",
+   "rank": 19,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "Con quién y para qué",
+   "rank": 20,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,40"
+  },
+  {
+   "file": "assets/raw/ig/C9dHAAxJkSi_00.jpg",
+   "section": "Eventos",
+   "rank": 21,
+   "crop_desktop": "4:5 @50,45",
+   "crop_mobile": "4:5 @50,45"
+  },
+  {
+   "file": "assets/raw/ig/Dbg3ekilC4P_11.jpg",
+   "section": "Eventos",
+   "rank": 22,
+   "crop_desktop": "4:5 @50,45",
+   "crop_mobile": "4:5 @50,45"
+  },
+  {
+   "file": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
+   "section": "Cuándo y dónde",
+   "rank": 23,
+   "crop_desktop": "4:5 @50,40",
+   "crop_mobile": "4:5 @50,35"
+  },
+  {
+   "file": "assets/raw/ig/Cmce2h1J3Wl_00.jpg",
+   "section": "Carta",
+   "rank": 24,
+   "crop_desktop": "4:5 @55,50",
+   "crop_mobile": "4:5 @55,50"
+  },
+  {
+   "file": "assets/raw/ig/C7HV31OLXTJ_00.jpg",
+   "section": "Carta",
+   "rank": 25,
+   "crop_desktop": "4:5 @50,50",
+   "crop_mobile": "4:5 @50,50"
+  }
+ ]
+}
