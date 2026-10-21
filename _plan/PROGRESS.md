@@ -9,3 +9,4 @@
 - 2026-10-21 Fase 1 v2: skills-notes.md + notas por skill
 - 2026-10-21 Fase 2 v2: material.md, catalogo.csv, v1-antireferencia.md
 - 2026-10-21 Fases 3-4 v2: historias.json (35 cuentos, 8 capítulos), ranking top 60 + portadas
+- 2026-10-21 Fase 5 v2: jurado de 3 agentes, veredicto y selección de 31 imágenes (portada P189)
