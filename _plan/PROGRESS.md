@@ -8,3 +8,4 @@
 - 22:25 — Fase 20: Cloudflare Pages "almudbar" (main, sin build, salida public/). En línea: https://almudbar.pages.dev. Verificado: 14 rutas internas devuelven el index (no se publican), og.jpg responde image/jpeg, 51 imágenes cargan, check "Cloudflare Pages" en verde, solo rama main.
 - 2026-10-21 Fase 1 v2: skills-notes.md + notas por skill
 - 2026-10-21 Fase 2 v2: material.md, catalogo.csv, v1-antireferencia.md
+- 2026-10-21 Fases 3-4 v2: historias.json (35 cuentos, 8 capítulos), ranking top 60 + portadas
