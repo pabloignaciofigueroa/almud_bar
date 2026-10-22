@@ -53,7 +53,6 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Titular | «Somos inquietos y nos gusta el colorssss!» | [IG-111] | “We're restless and we love colour!” | sí |
 | Rincón | ‹Barra› | [UI] | “The bar” | sí |
 | línea | «Pucha que nos gusta nuestra barrita!» | [IG-087] | “We really love our bar!” | sí |
-| Rincón | ‹Salón› | [UI] | “The room” | sí |
 | Rincón | ‹Terraza techada› | [UI] | “Covered terrace” | sí |
 | línea | «Techamos parte de la terraza» | [IG-004] | “We roofed part of the terrace” | sí |
 | Rincón | ‹Terraza› | [UI] | “Terrace” | sí |
@@ -63,7 +62,7 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Rincón | «Ojo Piojo» | [IG-118] | “Ojo Piojo [mural of eyes]” | sí |
 | línea | «una mirada vale más que mil palabras» | [IG-118] | “a look is worth a thousand words” | sí |
 
-- Para el Salón no hay línea aprobada, así que va solo el nombre.
+- **Salón: va solo con foto, sin rótulo.** No tiene línea aprobada y su nombre no le dice nada al turista que la foto no muestre. Si fase 7 no consigue una foto clara del salón, el rincón se saca.
 - **Sobran:** ‹Sillones›. El material es poco y la foto P114 no muestra los sillones (crítica 1 de la v2). Vuelve, solo con su nombre, si fase 7 consigue una foto que los muestre.
 - La terracita va recortada, sin «ita ita» (nota 2 de Carmen), y una sola vez en el sitio.
 
@@ -74,7 +73,6 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
 | Titular | «mucho amor, color y trabajo» | [IG-045] | “a lot of love, colour and work” | sí |
-| Bajada | «innumerables horas de probar, probar y probar» | [IG-021] | “countless hours of tasting, tasting and tasting” | sí |
 | Destacado | «Aquí te las traigo Peter» · «$ 6.700» | [CARTA-2] | “[pisco, elderflower, cranberry, bubble]” | no·carta |
 | Destacado | «Sagüer on Faia» · «$ 7.900» | [CARTA-2] | “[spiced, slightly hot sour]” | no·carta |
 | Destacado | «Sangría Foreva!» · «$ 6.500» | [CARTA-2] | “[Carménère, aged pisco, cinnamon]” | no·carta |
@@ -82,6 +80,7 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Línea sin alcohol | «no dejamos a nadie ajuera» | [IG-011] | “we leave nobody out” | sí |
 | Destacado sin alcohol | «La moto chantá» · «$ 6.400» | [CARTA-5] | “[mango, passion fruit, cucumber]” | no·carta |
 
+- **Bajada en reserva:** «innumerables horas de probar, probar y probar» [IG-021] · “countless hours of tasting, tasting and tasting”. Carmen la aprobó, pero se saca para cumplir la meta de 150 palabras: el titular ya cuenta el oficio y la foto del bartender (P362) lo muestra. Si otra sección pierde 6 palabras o más (por ejemplo, un crédito o un rincón que no tenga foto), esta bajada vuelve primero.
 - Sin botón propio: ‹Carta› va fija en la nav y cada destacado enlaza a su ítem en `carta/`.
 - Destacados = tragos con foto propia de ese ítem, igual que en la v2 §6b (V038, V030, P228, P336). Fase 7 confirma la foto. Si una no queda, se saca el ítem; no se cambia por otro trago sin foto.
 - **Sobra en todo el sitio:** «mejor los tomamos todos!» [IG-046] (veto 1 de Carmen).
@@ -123,7 +122,6 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Evento | «Aniversario» | [IG-090] | “Anniversary” | sí |
 | Mes | ‹Sep› | [UI] | “Sep” | sí |
 | Evento | «Fondita» | [IG-080] | “Fondita [national holidays]” | sí |
-| Evento | «Negroni Week» | [IG-005] | “Negroni Week” | sí |
 | Mes | ‹Oct› | [UI] | “Oct” | sí |
 | Evento | «Jalogüín» | [IG-071] | “Jalogüín [Halloween]” | sí |
 | Marca | ‹Próximo› | [UI] | “Next” | sí |
@@ -134,8 +132,9 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 - **Sobran:**
   - «chaolin bombín al verano» [IG-030]: son 4 palabras y la edición 2026 se hizo en un local ajeno.
   - «Tiki Night» [BIO]: fue una sola noche, dentro del aniversario de 2025.
+  - «Negroni Week» [IG-005]: es una campaña internacional, no un evento propio, y lleva solo dos ediciones (2025 y 2026). Se saca para cumplir la meta. Septiembre se queda con la Fondita, que es suya y lleva cuatro años (2023 a 2026).
   - Bendita Primavera: fue una sola vez, en 2024.
-  - «Nos vemos en las próximas cositas…» [IG-010]: es una promesa.
+  - «Nos vemos en las próximas cositas» [IG-010]: es una promesa.
 
 ---
 
@@ -221,10 +220,9 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | crédito | «@tamillanquileo» | [IG-126] | = | sí |
 | crédito | «@isosur.prod» | [IG-009] | = | sí |
 | crédito | «@rober.patagonico» | [IG-103] | = | sí |
-| Rótulo créditos | ‹Afiches› | [UI] | “Posters” | sí |
 | crédito | «@dosistudio» | [IG-081] | = | sí |
 
-- **Cómo acredita la marca.** Almud firma sus fotos con «📸: @…» y sus videos con «🎥: @…» o «Video: @…». Como los emoji no van en el texto visible, se agrupan bajo ‹Imágenes›, palabra que usa la propia marca: «las imágenes de @estudiouno.prod» [IG-050]. Los afiches se acreditan aparte: «El afiche, como siempre, de manos de la querida @dosistudio» [IG-081].
+- **Cómo acredita la marca.** Almud firma sus fotos con «📸: @…» y sus videos con «🎥: @…» o «Video: @…». Como los emoji no van en el texto visible, se agrupan bajo ‹Imágenes›, palabra que usa la propia marca: «las imágenes de @estudiouno.prod» [IG-050]. @dosistudio, que hace los afiches, entra en el mismo rótulo, porque la marca también le acredita imágenes: «Todas nuestras imágenes por la sequísima @dosistudio» [IG-101]. Así sobra un segundo rótulo (‹Afiches›).
 - **Qué créditos quedan.** Solo los autores cuyas fotos o videos use la fase 7. Si un autor no queda en el sitio, se borra su @. Cada @ enlaza a su perfil.
 - **Sobran:**
   - «Que no se lo cuenten! Besiiiii» (firma de la v2): Besi está prohibido y «Que no se lo cuenten» ya es el titular de Reseñas.
@@ -286,16 +284,16 @@ Regla: se cuentan como palabra todos los tokens separados por espacios que tenga
 |---|---|
 | Nav | 2 |
 | 1 Portada | 14 |
-| 2 El lugar | 45 |
-| 3 Tragos | 17 |
+| 2 El lugar | 44 |
+| 3 Tragos | 11 |
 | 4 Comida | 7 |
 | 5 Con quién | 5 |
-| 6 Eventos | 18 |
+| 6 Eventos | 15 |
 | 7 Equipo | 11 |
-| 8 Reseñas (solo titular) | 4 |
-| 9 Cuándo y dónde | 23 |
-| 10 Pie | 12 |
-| **Total landing (ES)** | **158** |
+| 8 Reseñas (solo titular) | 5 |
+| 9 Cuándo y dónde | 24 |
+| 10 Pie | 11 |
+| **Total landing (ES)** | **149** |
 
 ---
 
@@ -312,3 +310,26 @@ Script: `/tmp/claude-0/-home-claude/011b3bf8-fa11-50bd-ba3e-4cc567dfb832/scratch
 - **Conteo.** Cuenta las palabras (tabla de arriba) y sale con código 1 si hay fallas.
 
 <!-- RESULTADO -->
+Salida del script (2026-10-21). Las 110 líneas `OK`, una por literal único, se omiten aquí: no hay ninguna `NO ENCONTRADA`, `TERCERO` ni `FUENTE DESCONOCIDA`.
+
+```
+Literales: 116 revisados (110 únicos) · OK 116 · fallas 0
+Prohibidos (landing, texto ES visible): ninguno
+| Sección | Palabras |
+|---|---|
+| Nav | 2 |
+| 1 Portada | 14 |
+| 2 El lugar | 44 |
+| 3 Tragos | 11 |
+| 4 Comida | 7 |
+| 5 Con quién | 5 |
+| 6 Eventos | 15 |
+| 7 Equipo | 11 |
+| 8 Reseñas (solo titular) | 5 |
+| 9 Cuándo y dónde | 24 |
+| 10 Pie | 11 |
+| **Total landing (ES)** | **149** |
+META ≤150: CUMPLE
+```
+
+Lectura: los 116 literales pasan, incluidos los 6 @ del equipo (etiquetas de IG-001), las 8 reseñas citadas y los nombres de la carta. No hay ninguna palabra prohibida en el texto ES visible de la landing. Total: **149 palabras visibles**, con la meta en ≤ 150.
