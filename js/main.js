@@ -306,12 +306,6 @@
       gsap.to('.hero__media', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero__inner', { yPercent: -18, opacity: .2, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
-      /* léxico: marquesina con impulso del scroll */
-      const track = $('.lexicon__track'), list = $('.lexicon__list');
-      if (!track.dataset.cloned) { const c = list.cloneNode(true); c.setAttribute('aria-hidden', 'true'); track.appendChild(c); const c2 = list.cloneNode(true); c2.setAttribute('aria-hidden', 'true'); track.appendChild(c2); track.dataset.cloned = '1'; }
-      let x = 0; const tick = () => { const w = list.offsetWidth || 1; x -= .5 + Math.min(Math.abs(vel()) * .12, 12); if (x <= -w) x += w; track.style.transform = 'translate3d(' + x + 'px,0,0)'; };
-      gsap.ticker.add(tick);
-
       /* revelados de líneas */
       $$('.h-display .line>span, .foot__besi .line>span').forEach(s => {
         gsap.from(s, { yPercent: 108, duration: 1.2, scrollTrigger: { trigger: s.closest('.line'), start: 'top 88%', once: true } });

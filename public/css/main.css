@@ -122,11 +122,6 @@ html[lang="es"] .lang__es,html[lang="en"] .lang__en{color:var(--pisco)}
 .ulink:hover,.ulink:focus-visible{background-size:100% 1.5px}
 
 /* léxico */
-.lexicon{position:relative;z-index:3;background:var(--noche);border-block:1px solid rgba(246,236,220,.12);overflow:hidden;padding:18px 0}
-.lexicon__track{display:flex;width:max-content}
-.lexicon__list{display:flex;gap:14px;list-style:none;margin:0;padding:0 7px}
-.lexicon__list li{font:400 clamp(30px,3.6vw,56px)/1 var(--f-display);padding:.1em .38em .02em;border-radius:999px;border:1.5px solid var(--c);color:var(--c);white-space:nowrap}
-.lexicon__list li:nth-child(3n){background:var(--c);color:var(--noche)}
 
 /* ═════ HISTORIA ═════ */
 .story{position:relative;height:420vh;background:var(--noche)}
@@ -408,8 +403,6 @@ html[lang="es"] .lang__es,html[lang="en"] .lang__en{color:var(--pisco)}
   .nook{height:auto;max-height:none}
   .nook__media{aspect-ratio:4/5;flex:none}
   .manifesto__text .w{opacity:1!important}
-  .lexicon__track{transform:none!important;width:auto}
-  .lexicon__list{flex-wrap:wrap;row-gap:10px;padding:0 var(--gut)}
 }
 
 /* sin GSAP (o sin JS): contenido visible y recorrible */
