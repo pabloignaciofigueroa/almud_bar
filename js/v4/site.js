@@ -34,6 +34,19 @@
     lazy.forEach(v => io.observe(v));
   } else lazy.forEach(attach);
 
+  /* ───────── Fotos diferidas (v4 fase 2): srcset/src en data-*; se asignan a ≤0,5 pantallas ───────── */
+  function loadImg(img) {
+    if (!img.dataset.src) return;
+    $$('source[data-srcset]', img.parentElement).forEach(s => { s.srcset = s.dataset.srcset; s.removeAttribute('data-srcset'); });
+    img.src = img.dataset.src; img.removeAttribute('data-src');
+  }
+  const lazyImgs = $$('img[data-src]');
+  if ('IntersectionObserver' in window) {
+    const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io2.unobserve(e.target); loadImg(e.target); } }),
+      { rootMargin: '0px 50% 50% 50%' });
+    lazyImgs.forEach(i => io2.observe(i));
+  } else lazyImgs.forEach(loadImg);
+
   /* ───────── Idioma (ES por defecto; EN solo si el usuario lo toca) ───────── */
   const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label']];
   function setLang(lang, save) {

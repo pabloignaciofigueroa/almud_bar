@@ -30,13 +30,16 @@ def pic(id_, crop='a', sizes='100vw', cls='', eager=False, alt=True, speed=None,
     a_es = E(im['alt']['es']) if alt else ''
     a_en = E(im['alt']['en']) if alt else ''
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    D = '' if eager else 'data-'  # v4 fase 2: las fotos no prioritarias se cargan por JS al acercarse (≤0,5 pantallas)
     sp = f' data-speed="{speed}"' if speed is not None else ''
     return (f'<figure class="m {cls}" style="--ar:{w}/{h};--c:{c["color"]};--lq:url({c["lqip"]})"{sp}{extra}>'
-            f'<picture><source type="image/avif" srcset="{srcset(files, "avif")}" sizes="{sizes}">'
-            f'<source type="image/webp" srcset="{srcset(files, "webp")}" sizes="{sizes}">'
-            f'<img src="{UP}{files["webp"][str(fb)]["path"]}" width="{w}" height="{h}" alt="{a_es}"'
+            f'<picture><source type="image/avif" {D}srcset="{srcset(files, "avif")}" sizes="{sizes}">'
+            f'<source type="image/webp" {D}srcset="{srcset(files, "webp")}" sizes="{sizes}">'
+            f'<img {D}src="{UP}{files["webp"][str(fb)]["path"]}" width="{w}" height="{h}" alt="{a_es}"'
             + (f' data-alt-en="{a_en}"' if alt else '') +
-            f' {load} decoding="async"></picture></figure>')
+            f' {load} decoding="async"></picture>'
+            + ('' if eager else f'<noscript><img src="{UP}{files["webp"][str(fb)]["path"]}" width="{w}" height="{h}" alt="{a_es}"></noscript>')
+            + '</figure>')
 
 
 def vid(id_, cls='', hero=False, extra=''):
@@ -198,7 +201,7 @@ body = f'''
 <section class="lugar claro" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "Restless souls who love colorssss!", 'h-lugar')}</div>
-    {vid('lugar-cintas', 'lugar__v reveal', extra=' data-speed="-0.12"')}
+    {vid('lugar-noche', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
   <div class="rincones" data-h>
     <div class="rincones__st">
@@ -253,9 +256,9 @@ body = f'''
       {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m reveal')}
       <span class="it__n">Tukulito Sakayama</span>{g('[Marinated tuna tataki]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
     </a>
-    <a class="it co__b" href="{C_GRE}" data-speed="0.08">
-      {vid('comida-cazuela', 'it__m reveal')}
-      <span class="it__n">Camarón que se duerme</span>{g('[Shrimp baked in a clay pot]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
+    <a class="it co__b" href="{C_PIC}" data-speed="0.08">
+      {vid('comida-con-tuti', 'it__m reveal')}
+      <span class="it__n">Con tuti si no pa qué!</span>{g('[Sharing board: cheeses, mushrooms, avocado, olives, nuts, fruit]', 'gloss gloss--s')}<span class="it__p">$ 19.900</span>
     </a>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
@@ -267,7 +270,7 @@ body = f'''
   <div class="quien__g">
     <div class="col" data-speed="-0.06">{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
     <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{vid('quien-brindis', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{vid('quien-multitud-1', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
   </div>
 </section>
 
@@ -286,7 +289,8 @@ body = f'''
 <section class="equipo" id="equipo" aria-labelledby="h-equipo">
   <div class="wrap">{title('Peazo de equipo que tenemos!', 'One heck of a team!', 'h-equipo')}</div>
   <ul class="eq" data-swipe>
-    {''.join(f'<li class="eq__p" style="--i:{k}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
+    <li class="eq__p eq__p--v" style="--i:0">{vid('equipo-duenos', 'reveal')}</li>
+    {''.join(f'<li class="eq__p" style="--i:{k + 1}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
   </ul>
   <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> <a href="{IG}cepaz/" target="_blank" rel="noopener">@cepaz</a> · <a href="{IG}rusio_mezclao/" target="_blank" rel="noopener">@rusio_mezclao</a></p>
 </section>

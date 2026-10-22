@@ -15,3 +15,6 @@
 2026-10-22 12:48:24 regenerado nueva/index.html y public/ (368 archivos); index.html raíz sin cambios
 2026-10-22 12:48:24 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, todos los videos en play y avanzando (sin retrocesos salvo la vuelta del loop); primer pantallazo celular 2.345 KB en 5 s (video 1.595 + póster 23)
 2026-10-22 12:48:24 entregables: _plan/v4/fase2/hoja-loops.jpg, _plan/v4/fase2/videos.md y filas 6–12 en _plan/v4/justificacion.md
+2026-10-22 19:40:22 ronda 2 (decisiones del cliente): inicio; portada-celular V017 pasa a Equipo como equipo-duenos; busco portada de bar lleno, 2 videos de multitud para Con quién y un plato con video para Comida
+2026-10-22 19:44:39 hojas nuevas y nitidez (varianza laplaciana a 540 px, mediana): terraza C3tFEcvJ80x 21,27–30,07 = 53 (V017 portada anterior = 33); multitud DM3n8lOy5qf 66,35–75,65 = 73 y 28,62–37,65 = 87; salón C9lH7qfSTfo 9,85–18,65 = 105; plato V047 = 738
+2026-10-22 19:45:29 equipo-duenos: el loop V017 32,9–42,9 s se mueve a Equipo renombrando archivos (sin recodificar); salen quien-brindis, lugar-cintas y comida-cazuela; tramos nuevos: portada-celular C3tFEcvJ80x 21,26–30,1 (fundido 0,8), lugar-noche C9lH7qfSTfo 9,8–18,68 (0,8), quien-multitud-1 DM3n8lOy5qf 66,32–75,7 (1,0), quien-multitud-2 DM3n8lOy5qf 28,62–37,7 (0,9), comida-con-tuti DY0AUvhlHjI_07 0,25–10,4 (1,0)

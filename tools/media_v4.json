@@ -3,29 +3,43 @@
  "credits": {},
  "videos": [
   {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720
+   ],
+   "crf_max": 32,
+   "vp9_crf_max": 48,
+   "budget_kb": 1250,
+   "budget_mp4_kb": 1300,
    "id": "portada-celular",
-   "ref": "V017",
-   "src": "assets/raw/ig/C9lH7qfSTfo_00.mp4",
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
    "section": "portada",
    "variant": "celular",
-   "segments": [[32.9, 42.9]],
-   "loop": "crossfade",
-   "xfade": 1.0,
+   "segments": [
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "xfade": 0.8,
    "ratio": "9:16",
-   "focal": [50, 50],
-   "widths": [720],
-   "crf_start": 21,
-   "crf_max": 30,
-   "vp9_crf_start": 30,
-   "vp9_crf_max": 44,
-   "budget_kb": 1600,
-   "budget_mp4_kb": 1800,
-   "poster_q": {"avif": 42, "webp": 62, "jpg": 72},
-   "alt": {
-    "es": "Frente al muro rosa de botellas un bartender bate la coctelera, se reparten shots y una clienta se ríe en la barra.",
-    "en": "In front of the pink bottle wall a bartender works the shaker, shots go around and a guest laughs at the bar."
+   "crf_start": 23,
+   "vp9_crf_start": 34,
+   "poster_q": {
+    "avif": 40,
+    "webp": 60,
+    "jpg": 70
    },
-   "note": "V017 (10 años, IG-098, jul-2024), tramo 32,9–42,9 s: bartender batiendo frente al muro rosa → shots y brindis → clienta riendo en la barra. Fundido 1,0 s de la risa al bartender."
+   "alt": {
+    "es": "La terraza techada repleta de gente bajo el techo de cintas de colores al atardecer, y una mesa de amigas de noche.",
+    "en": "The covered terrace packed with people under the colored-ribbon ceiling at sunset, then a table of friends at night."
+   },
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior."
   },
   {
    "id": "portada-escritorio",
@@ -33,12 +47,22 @@
    "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
    "section": "portada",
    "variant": "escritorio",
-   "segments": [[0.4, 10.45]],
+   "segments": [
+    [
+     0.4,
+     10.45
+    ]
+   ],
    "loop": "crossfade",
    "xfade": 1.0,
    "ratio": "orig",
-   "focal": [50, 50],
-   "widths": [1278],
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    1278
+   ],
    "crf_start": 19,
    "crf_max": 30,
    "vp9_crf_start": 26,
@@ -54,60 +78,60 @@
    "note": "V031 (IG-061, @estudiouno.prod), tramo 0,4–10,45 s: toda la apertura sin subtítulos (letrero → puerta → cintas → ojos → lámparas); termina antes del subtítulo de 10,5 s. Fundido 1,0 s de las lámparas al letrero."
   },
   {
-   "id": "lugar-cintas",
-   "ref": "V007",
-   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "id": "lugar-noche",
+   "ref": "V017",
+   "src": "assets/raw/ig/C9lH7qfSTfo_00.mp4",
    "section": "lugar",
-   "rincon": "techo de cintas",
-   "segments": [[21.27, 31.4]],
-   "loop": "crossfade",
-   "xfade": 1.0,
+   "rincon": "salón y terraza de noche",
+   "segments": [
+    [
+     9.8,
+     18.68
+    ]
+   ],
+   "xfade": 0.8,
    "ratio": "4:5",
-   "focal": [50, 40],
-   "widths": [720, 600],
-   "crf_max": 30,
-   "vp9_crf_max": 44,
-   "budget_kb": 1200,
-   "budget_mp4_kb": 1400,
    "alt": {
-    "es": "La cámara camina bajo el techo de cintas de colores de la terraza llena al atardecer, sale al patio con guirnaldas y termina con una clienta riendo.",
-    "en": "The camera walks under the colored-ribbon ceiling of the packed terrace at sunset, out to the string-lit patio, ending on a laughing guest."
+    "es": "El salón lleno bajo las flores del «10», la terraza con estufas, guirnaldas de luces de colores y la barra rosa trabajando.",
+    "en": "The packed dining room under the flower \"10\", the terrace with heaters, strings of colored lights and the busy pink bar."
    },
-   "note": "V007 (14F, IG-115, feb-2024), tramo 21,27–31,4 s: un solo plano caminando bajo el techo de cintas (21,24–27,3) → mesa de amigas de noche → clienta riendo. V009 (7,1 s) es demasiado corto para 8–10 s."
-  },
-  {
-   "id": "tragos-humo",
-   "ref": "V038",
-   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
-   "section": "tragos",
-   "carta_item": "Aquí te las traigo Peter",
-   "segments": [[7.0, 16.75]],
-   "loop": "crossfade",
-   "xfade": 1.0,
-   "ratio": "4:5",
-   "focal": [50, 55],
-   "widths": [720, 600],
-   "crf_max": 30,
-   "vp9_crf_max": 44,
-   "budget_kb": 1200,
-   "budget_mp4_kb": 1400,
-   "alt": {
-    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
-    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
-   },
-   "note": "V038 (IG-044), tramo 7,0–16,75 s: la burbuja crece (corte propio del reel en 12,16 s) y la mano la revienta. Es el trago «Aquí te las traigo Peter»: este slot cubre también tragos-peter."
+   "note": "Ronda 2: el plano de las cintas pasó a la portada; El lugar muestra el local lleno de noche (V017, IG-098, 9,8–18,68 s), nitidez 105."
   },
   {
    "id": "tragos-coctelera",
    "ref": "V032",
    "src": "assets/raw/ig/DGLxTmGJ3ZV_00.mp4",
    "section": "tragos",
-   "segments": [[0.6, 10.15]],
+   "segments": [
+    [
+     0.6,
+     10.15
+    ]
+   ],
    "loop": "crossfade",
    "xfade": 0.9,
    "ratio": "4:5",
-   "focal": [50, 40],
-   "widths": [720, 600],
+   "focal": [
+    50,
+    40
+   ],
+   "widths": [
+    720,
+    600
+   ],
    "crf_max": 30,
    "vp9_crf_max": 44,
    "budget_kb": 1200,
@@ -119,58 +143,194 @@
    "note": "V032 (IG-059, feb-2025, jornada propia de fotos y video), tramo 0,6–10,15 s: girasoles → barra → bartender batiendo y sirviendo (4,7–8,4) → techo de cintas. Cortes propios del reel, lentos y cinematográficos."
   },
   {
-   "id": "comida-cazuela",
-   "ref": "V049",
-   "src": "assets/raw/ig/DY0AUvhlHjI_12.mp4",
-   "section": "comida",
-   "segments": [[0.2, 9.9]],
+   "id": "tragos-humo",
+   "ref": "V038",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
+   "section": "tragos",
+   "carta_item": "Aquí te las traigo Peter",
+   "segments": [
+    [
+     7.0,
+     16.75
+    ]
+   ],
    "loop": "crossfade",
    "xfade": 1.0,
    "ratio": "4:5",
-   "focal": [50, 55],
-   "widths": [720, 600],
+   "focal": [
+    50,
+    55
+   ],
+   "widths": [
+    720,
+    600
+   ],
    "crf_max": 30,
    "vp9_crf_max": 44,
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "alt": {
-    "es": "En la cocina, un sartén de fierro saltea carne sobre el fuego y la mano del cocinero lo mueve.",
-    "en": "In the kitchen, a cast-iron pan sizzles with meat over the flame as the cook's hand shakes it."
+    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
+    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
    },
-   "note": "V049 (IG-022, may-2026: «una cocina sencilla pero más que sabrosona!»), tramo 0,2–9,9 s: un solo plano de cocina en acción. Las cazuelas propias (V052 4,1 s, V044 6,4 s, V040 8,3 s) no alcanzan 8 s con el fundido."
+   "note": "V038 (IG-044), tramo 7,0–16,75 s: la burbuja crece (corte propio del reel en 12,16 s) y la mano la revienta. Es el trago «Aquí te las traigo Peter»: este slot cubre también tragos-peter."
   },
   {
-   "id": "quien-brindis",
-   "ref": "V028",
-   "src": "assets/raw/ig/DEYU6RjyjoC_00.mp4",
-   "section": "con-quien",
-   "segments": [[0.25, 9.85]],
    "loop": "crossfade",
-   "xfade": 1.0,
-   "ratio": "4:5",
-   "focal": [50, 45],
-   "widths": [720, 600],
+   "focal": [
+    50,
+    62
+   ],
+   "widths": [
+    720,
+    600
+   ],
    "crf_max": 30,
    "vp9_crf_max": 44,
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
+   "id": "comida-con-tuti",
+   "ref": "V047",
+   "src": "assets/raw/ig/DY0AUvhlHjI_07.mp4",
+   "section": "comida",
+   "carta_item": "Con tuti si no pa qué!",
+   "segments": [
+    [
+     0.25,
+     10.4
+    ]
+   ],
+   "xfade": 1.0,
+   "ratio": "4:5",
    "alt": {
-    "es": "Amigos brindan con copas de vino y tragos en una mesa de la terraza, bajo el bambú, y conversan riendo.",
-    "en": "Friends clink wine glasses and cocktails at a terrace table under the bamboo, chatting and laughing."
+    "es": "En una mesa de la terraza, un cliente pica de la tabla «Con tuti si no pa qué!»: aceitunas, quesos, frutos secos, fruta y pancito.",
+    "en": "At a terrace table a guest picks from the \"Con tuti si no pa qué!\" sharing board: olives, cheeses, nuts, fruit and house bread."
    },
-   "note": "V028 (IG-065, ene-2025: «celebrar la vida, la amistad, el amors»), tramo 0,25–9,85 s: un solo plano de brindis en la mesa de la terraza."
+   "note": "V047 (IG-022, «una cocina sencilla pero más que sabrosona!»), 0,25–10,4 s, un solo plano. La tabla es la misma de la foto IG-066 «CON TUTI SI NO PA QUÉ!» que la carta asocia a ese plato."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "id": "quien-multitud-1",
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "con-quien",
+   "segments": [
+    [
+     66.32,
+     75.7
+    ]
+   ],
+   "xfade": 1.0,
+   "ratio": "4:5",
+   "alt": {
+    "es": "Una mesa larga de amigos levanta los vasos y brinda bajo el techo de cintas; risas en las mesas y la terraza llena.",
+    "en": "A long table of friends raises their glasses under the ribbon ceiling; laughter at every table and a full terrace."
+   },
+   "note": "V036 (11 años, IG-051 «nuestros fieles parroquianos»), 66,32–75,7 s: brindis de una mesa entera, risas, cintas y terraza llena (cortes propios de ~1 s)."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "id": "quien-multitud-2",
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "con-quien",
+   "segments": [
+    [
+     28.62,
+     37.7
+    ]
+   ],
+   "xfade": 0.9,
+   "ratio": "4:5",
+   "alt": {
+    "es": "Mesas llenas en el salón: grupos que conversan y se ríen, tragos que llegan y gente de pie entre las mesas.",
+    "en": "Full tables in the dining room: groups chatting and laughing, drinks arriving and people standing between tables."
+   },
+   "note": "V036 (IG-051), 28,62–37,7 s: grupos en mesas, risas y el salón lleno."
+  },
+  {
+   "id": "equipo-duenos",
+   "ref": "V017",
+   "src": "assets/raw/ig/C9lH7qfSTfo_00.mp4",
+   "section": "equipo",
+   "segments": [
+    [
+     32.9,
+     42.9
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "9:16",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720
+   ],
+   "crf_start": 21,
+   "crf_max": 30,
+   "vp9_crf_start": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1600,
+   "budget_mp4_kb": 1800,
+   "poster_q": {
+    "avif": 42,
+    "webp": 62,
+    "jpg": 72
+   },
+   "alt": {
+    "es": "Frente al muro rosa, un bartender bate la coctelera y los dueños reparten shots entre risas en la barra.",
+    "en": "In front of the pink wall a bartender works the shaker while the owners hand out shots and laughs at the bar."
+   },
+   "note": "Ronda 2 (decisión del cliente): el loop que era portada de celular (V017 32,9–42,9 s; bartender, Carmen Paz y Sylvain, los dueños) se reutiliza tal cual en Equipo. Archivos renombrados, sin recodificar."
   },
   {
    "id": "donde-terraza",
    "ref": "V007",
    "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
    "section": "donde",
-   "segments": [[0.0, 8.92]],
+   "segments": [
+    [
+     0.0,
+     8.92
+    ]
+   ],
    "loop": "crossfade",
    "xfade": 0.8,
    "ratio": "1:1",
-   "focal": [50, 55],
-   "widths": [720],
+   "focal": [
+    50,
+    55
+   ],
+   "widths": [
+    720
+   ],
    "crf_max": 30,
    "vp9_crf_max": 44,
    "budget_kb": 1200,
