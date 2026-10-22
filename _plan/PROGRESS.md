@@ -20,3 +20,4 @@
 - 2026-10-21 Fase 15 v2: correcciones ronda 1 (P0/P1 resueltos, ver critica-1/respuesta.md)
 - 2026-10-21 Fase 16 v2: correcciones del jurado aplicadas (ver jurado-2/respuesta.md)
 - 2026-10-21 Plan v3 (20 fases, meta Carmen Paz ≥18/20)
+- 2026-10-21 v3 fase 1: inventario (_plan/v3/01-inventario.md); agente Carmen Paz describiendo su marca
