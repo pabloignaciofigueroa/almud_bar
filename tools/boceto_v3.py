@@ -132,9 +132,9 @@ resenas = [
     ('es', 'La atención es muy cálida y cercana.', 'The service is very warm and personal.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
 ]
 
-creditos = ['catarsis.fotografia', 'estudiouno.prod', 'tamillanquileo', 'isosur.prod', 'rober.patagonico']
+creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
 
-ISO = svg_inline('almud-isotipo', 'iso')
+ISO = svg_inline('almud-isotipo', 'iso').replace('<path ', '<path pathLength="1" ')
 
 body = f'''
 <a class="skip" href="#lugar" data-en="Skip to content">Saltar al contenido</a>
@@ -192,7 +192,6 @@ body = f'''
       {item(*tragos[0], cls='it--a', speed='-0.08')}
       {item(*tragos[1], cls='it--b', speed='0.1')}
     </div>
-    {pic('tragos-old-fashioned', 'a', '18vw', 'tragos__mass reveal', speed='-0.25')}
     <div class="moc">
       <a class="moc__it" href="{CARTA}">{pic('carta-moto', 'a', '(min-width:1024px) 16vw, 38vw', 'moc__m reveal')}</a>
       <div class="moc__t">
@@ -279,7 +278,7 @@ body = f'''
 <footer class="pie">
   <div class="wrap pie__g">
     <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g('You deserve it!')}</p>
-    <div class="pie__iso" aria-hidden="true">{ISO}</div>
+    <div class="pie__logo">{svg_inline('almud-vertical-claro', 'pie__svg', label=True)}</div>
     <div class="pie__cr">
       <h2 class="kick" data-en="Images">Imágenes</h2>
       <ul>{''.join(f'<li><a href="{IG}{c}/" target="_blank" rel="noopener">@{c}</a></li>' for c in creditos)}</ul>
