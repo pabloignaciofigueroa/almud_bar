@@ -91,7 +91,7 @@
    ],
    "alt": {
     "es": "Una mujer ríe y aplaude en el rincón de sillones, con cojines estampados y baldosa hidráulica.",
-    "en": "A woman laughs and claps in the lounge corner, with patterned cushions and encaustic tiles."
+    "en": "A woman laughs and claps in the lounge corner, with patterned cushions and patterned cement tiles."
    },
    "rincon": "sillones",
    "note": "Única foto nítida del rincón (V014 9,3 s es un frame 720p casi negro y con cortes cada 0,5 s: no da loop). \"a\" sin recorte deja ver el sillón y los cojines estampados abajo a la izquierda; \"s\" 1:1 baja el encuadre para dar más sillón."
@@ -123,7 +123,7 @@
    ],
    "alt": {
     "es": "La terraza techada llena de gente bajo el techo de miles de cintas de colores, con estufas encendidas.",
-    "en": "The covered terrace packed with people under a ceiling of thousands of coloured ribbons, heaters glowing."
+    "en": "The covered terrace packed with people under a ceiling of thousands of colored ribbons, heaters glowing."
    },
    "rincon": "terraza techada",
    "note": "Favorita n.º 1 de Carmen. Ya no es la portada (la portada es video), así que encabeza El lugar. 1440 px: nunca a sangre en 1920."
@@ -445,7 +445,7 @@
    ],
    "alt": {
     "es": "Un grupo de amigas ríe y brinda en la barra con tragos de colores.",
-    "en": "A group of friends laughs and toasts at the bar with colourful drinks."
+    "en": "A group of friends laughs and toasts at the bar with colorful drinks."
    }
   },
   {
@@ -466,7 +466,7 @@
    ],
    "alt": {
     "es": "Una mujer ríe a carcajadas en la mesa, frente a un muro de cintas verticales de colores.",
-    "en": "A woman bursts out laughing at her table, in front of a wall of vertical coloured ribbons."
+    "en": "A woman bursts out laughing at her table, in front of a wall of colored ribbons hanging vertically."
    }
   },
   {
@@ -530,7 +530,7 @@
    ],
    "alt": {
     "es": "Una mesa brinda bajo el techo de cintas de colores, junto a una estufa de pilar encendida.",
-    "en": "A table toasts under the coloured-ribbon ceiling, next to a lit patio heater."
+    "en": "A table toasts under the colored-ribbon ceiling, next to a lit patio heater."
    }
   },
   {
@@ -596,7 +596,7 @@
    ],
    "alt": {
     "es": "La fondita de Almud: faroles de papel azul y naranja colgando entre las cintas, sobre la terraza llena.",
-    "en": "Almud's Fiestas Patrias \"fondita\": blue and orange paper lanterns hanging among the ribbons over the busy terrace."
+    "en": "Almud's \"fondita\" for Chile's Independence Day: blue and orange paper lanterns hanging among the ribbons over the busy terrace."
    },
    "evento": "Fondita"
   },
@@ -765,7 +765,7 @@
    ],
    "alt": {
     "es": "Un soplete ahúma un trago ámbar sobre un posavasos de madera.",
-    "en": "A torch smokes an amber drink on a wooden coaster."
+    "en": "A kitchen torch smokes an amber drink on a wooden coaster."
    },
    "carta_item": "Sagüer on Faia"
   },
@@ -933,7 +933,7 @@
    ],
    "alt": {
     "es": "Cazuela negra con camarones y champiñones en salsa cremosa.",
-    "en": "A black clay dish of prawns and mushrooms in a creamy sauce."
+    "en": "A black clay pot of shrimp and mushrooms in a creamy sauce."
    },
    "carta_item": "Camarón que se duerme"
   },
@@ -954,7 +954,7 @@
    ],
    "alt": {
     "es": "Una garzona del equipo sonríe mientras atiende una mesa, con abanicos de papel de colores detrás.",
-    "en": "A member of the floor team smiles while serving a table, colourful paper fans behind her."
+    "en": "A member of the floor team smiles while serving a table, colorful paper fans behind her."
    },
    "handle": "@milagroosjm",
    "tag_src": "IG-001 #1"
@@ -1195,7 +1195,7 @@
    "credit_src": "IG-061",
    "alt": {
     "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
-    "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
+    "en": "The colored-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
    },
    "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas. Boomerang (≈6,7 s) para que el loop no quede corto. Ronda 2b: cintas acortadas (4,6–5,6 s); arranca en las lámparas. Fase 16: lámparas a 0,75× (≈2,1 s) y cintas reducidas a 0,5 s (blandas al ampliar ×1,25).",
    "crf_start": 18,
@@ -1228,7 +1228,7 @@
    "budget_kb": 1200,
    "alt": {
     "es": "Paneo lento por el techo de miles de cintas de colores con luces cálidas.",
-    "en": "A slow pan across the ceiling of thousands of coloured ribbons and warm lights."
+    "en": "A slow pan across the ceiling of thousands of colored ribbons and warm lights."
    },
    "note": "Un solo plano de 7,1 s; boomerang de 3 s (6 s). Textura de cintas muy cara de comprimir: 720 px si cabe en 1,2 MB con CRF ≤28, si no 600 px."
   },
@@ -1291,7 +1291,7 @@
    "budget_kb": 1200,
    "alt": {
     "es": "Cazuela cremosa de mariscos burbujeando en greda negra, con cilantro picado.",
-    "en": "A creamy seafood stew bubbling in a black clay pot, with chopped coriander."
+    "en": "A creamy seafood stew bubbling in a black clay pot, topped with chopped cilantro."
    },
    "note": "Plano único de 4 s con acercamiento lento: boomerang."
   },
@@ -1321,7 +1321,7 @@
    "credit_src": "IG-061",
    "alt": {
     "es": "El letrero luminoso ALMUD BAR y la cámara que baja hasta la puerta de vidrio y madera de la entrada.",
-    "en": "The illuminated ALMUD BAR sign, the camera tilting down to the glass-and-wood entrance door."
+    "en": "The lit-up ALMUD BAR sign; the camera tilts down to the glass-and-wood front door."
    },
    "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2). Luego: recorte manual 958x540 (crop=958:540:160:0) sobre el loop, ver media.json."
   }
