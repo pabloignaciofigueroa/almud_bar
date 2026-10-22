@@ -426,3 +426,4 @@ html:not(.js) .m video{display:none}
   .cal .ev:nth-child(2){margin-top:6vh}
   .cal .ev__n{font-size:40px}
 }
+@media (min-width:1024px){.gs .rincones__tr,.rincones__tr{padding:0 var(--gut);gap:48px 24px}}

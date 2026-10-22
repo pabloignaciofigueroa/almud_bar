@@ -17,13 +17,13 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html', 'css/main.css', 'js/main.js', 'assets/og.jpg', 'v3/avance/index.html', 'v3/index.html', 'v3/carta/index.html',  # v1b: la v1 vuelve como portada
+INCLUDE_FILES = ['index.html', 'carta/index.html', 'assets/og.jpg',  # fase 20: la v3 es la portada (/ y /carta/); /v3/ redirige
                   # fase 15: la carta en su propia página
                  '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
 INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3']
 
-ALL_DIRS = ['assets/img', 'assets/video', 'v3/avance/img']
+ALL_DIRS = []
 
 BLOCKED_EXT = {'.md', '.py', '.csv', '.json', '.pyc', '.sh', '.ipynb'}
 BLOCKED_DIRS = {'assets/raw'}
@@ -63,6 +63,18 @@ HEADERS = """\
 /site.webmanifest
   Content-Type: application/manifest+json
   Cache-Control: public, max-age=86400
+
+/assets/v3/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+"""
+REDIRECTS = """/v3/ / 301
+/v3 / 301
+/v3/carta/ /carta/ 301
+/v3/carta /carta/ 301
+/v3/avance/ / 301
 """
 
 
@@ -74,7 +86,7 @@ def is_internal(rel: pathlib.PurePosixPath) -> str | None:
     for part in rel.parts:
         if part in BLOCKED_NAMES:
             return f'nombre bloqueado ({part})'
-        if part.startswith('_') and s != '_headers':
+        if part.startswith('_') and s not in ('_headers', '_redirects'):
             return f'nombre interno ({part})'
         if part.startswith('.'):
             return f'archivo oculto ({part})'
@@ -135,6 +147,7 @@ def copy_tree(stage: pathlib.Path) -> list[str]:
             if src.is_file() and not is_internal(rel):
                 (stage / rel).parent.mkdir(parents=True, exist_ok=True); shutil.copy2(src, stage / rel)
     (stage / '_headers').write_text(HEADERS)
+    (stage / '_redirects').write_text(REDIRECTS)
     return skipped
 
 
