@@ -427,3 +427,10 @@ html:not(.js) .m video{display:none}
   .cal .ev__n{font-size:40px}
 }
 @media (min-width:1024px){.gs .rincones__tr,.rincones__tr{padding:0 var(--gut);gap:48px 24px}}
+
+/* Botón carta: mismo rosa en nav, portada, Tragos y Comida */
+.nav__carta{min-height:44px;padding:0 16px;font-size:15px}
+.nav__carta:hover{background:var(--papel);color:var(--noche)}
+.ver-carta{grid-column:1/-1;display:flex;justify-content:center;margin:48px 0 0}
+.ver-carta .btn{box-shadow:0 0 0 2px var(--noche)}
+@media (min-width:1024px){.comida__g .ver-carta{grid-row:3;margin-top:64px}.tragos .ver-carta{margin-top:72px}}

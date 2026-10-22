@@ -169,7 +169,7 @@ body = f'''
 <header class="nav" data-nav>
   <a class="nav__logo" href="#top" aria-label="Almud Bar">{svg_inline('almud-nav-claro', 'nav__svg')}</a>
   <nav class="nav__r" aria-label="Principal" data-aria-en="Main">
-    <a class="nav__a" href="{CARTA}" data-en="Menu">Carta</a>
+    <a class="btn btn--rosa nav__carta" href="{CARTA}" data-en="Menu">Carta</a>
     <button class="nav__a nav__lang" type="button" data-lang aria-label="English" data-aria-en="Español"><span data-en="ES">EN</span></button>
   </nav>
 </header>
@@ -235,6 +235,7 @@ body = f'''
       </div>
     </div>
     </div>
+    <p class="ver-carta"><a class="btn btn--rosa" href="{C_CASA}" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
 </section>
 
@@ -254,6 +255,7 @@ body = f'''
       {vid('comida-cazuela', 'it__m reveal')}
       <span class="it__n">Camarón que se duerme</span>{g('[Shrimp baked in a clay pot]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
     </a>
+    <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
 </section>
 
