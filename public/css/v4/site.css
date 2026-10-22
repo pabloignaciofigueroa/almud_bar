@@ -186,7 +186,7 @@ html[lang="en"] .gloss--i{display:inline}
 .col{display:grid;gap:10px;align-content:start}
 .col--2{margin-top:24px}
 .col--3{display:none}
-@media (max-width:767px){.col--3{display:grid;grid-column:1/-1;margin-top:10px}.col--3>.m:not(.m--v){display:none}} /* v4 fase 2: en celular la columna 3 muestra solo el video del brindis */
+@media (max-width:767px){.col--3{display:grid;grid-template-columns:1fr 1fr;gap:10px;grid-column:1/-1;margin-top:10px}.col--3>.m:not(.m--v){display:none}.col--3>.m--v:nth-child(2){margin-top:24px}} /* v4 fase 2: en celular la columna 3 muestra solo los dos videos de multitud, lado a lado */
 @media (min-width:768px){
   .quien .ttl{font-size:clamp(72px,8.4vw,120px);max-width:none}
   .quien__g{grid-template-columns:repeat(3,1fr);gap:20px;padding-top:7vh}
@@ -219,7 +219,9 @@ html[lang="en"] .gloss--i{display:inline}
   .eq{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;overflow:visible;padding-top:7vh;max-width:1600px;margin-inline:auto}
   .eq__p:nth-child(even){margin-top:8vh}
   .eq{grid-template-columns:repeat(5,1fr)}
+  .eq{grid-template-columns:repeat(6,1fr)} /* v4 fase 2: + video de los dueños */
 }
+.eq__p--v .m{aspect-ratio:4/5} /* v4 fase 2: el loop 9:16 de los dueños se muestra 4:5, como los retratos */
 
 /* ═════ 8 · RESEÑAS ═════ */
 .resenas{background:var(--noche-2);padding-block:var(--sec)}
@@ -452,3 +454,6 @@ html:not(.js) .m video{display:none}
 .resenas{background:var(--c-crema)}
 .donde,.pie{background:#0e0c0b}
 .equipo,.quien{--papel-2:#f5e9db;--muro-2:#f5e9db}
+/* v4 fase 2: fotos diferidas (data-src) — sin JS se ve el <noscript>; con JS, el LQIP hasta que llega la foto */
+img[data-src]{visibility:hidden}
+html:not(.js) .m picture{display:none}

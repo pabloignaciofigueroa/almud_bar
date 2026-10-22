@@ -547,7 +547,7 @@
     "account": "@almud_bar",
     "text": "@almud_bar"
    },
-   "note": "V036 (IG-051), 28,62–37,7 s: grupos en mesas, risas y el salón lleno.",
+   "note": "V036 (IG-051), 27,6–37,7 s: un trago que se sirve y luego grupos en mesas, risas y el salón lleno. Arranca en el plano del trago para que el fundido no caiga justo antes de un corte.",
    "source_size": [
     720,
     1280
@@ -557,55 +557,55 @@
    "ratio": "4:5",
    "segments": [
     [
-     28.62,
+     27.6,
      37.7
     ]
    ],
    "loop": "crossfade",
-   "frames": 245,
+   "frames": 276,
    "fps": 30.0,
-   "duration": 8.17,
+   "duration": 9.2,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "within_budget": true,
    "xfade": 0.9,
-   "tramo_s": 9.08,
+   "tramo_s": 10.1,
    "seam": {
-    "last_vs_first": 51.9,
-    "typical_step": 8.85
+    "last_vs_first": 3.57,
+    "typical_step": 2.45
    },
    "files": {
     "webm": {
      "path": "assets/v4/video/quien-multitud-2-720.webm",
-     "bytes": 1217613,
+     "bytes": 1173008,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 32
+     "crf": 33
     },
     "mp4": {
      "path": "assets/v4/video/quien-multitud-2-720.mp4",
-     "bytes": 1376563,
+     "bytes": 1359580,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 22
+     "crf": 23
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v4/video/quien-multitud-2-poster.avif",
-     "bytes": 26696
+     "bytes": 9019
     },
     "webp": {
      "path": "assets/v4/video/quien-multitud-2-poster.webp",
-     "bytes": 36436
+     "bytes": 11452
     },
     "jpg": {
      "path": "assets/v4/video/quien-multitud-2-poster.jpg",
-     "bytes": 72556
+     "bytes": 32973
     }
    },
-   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwBACdASoTABgAPwFurVCrJiQiqA1RYCAJYgCdMswBgr48hejvXrLQpGyx2Aa47MwA9p8pLVQ4xLbPP9OwsK3t3qs6hGdTldSocb3K+XujvlgftPGyrhTZdS216NmmibIAf4wPHUeHR4FFh4h5lcLUhVwUEryJMEzz0DGBAAA=",
-   "color": "#361412"
+   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoTABgAPwF2slQrJyQjKAgBYCAJYwCxH0LBqSvPyyjVw1lJKkAoB9YAAP7ku+BljP5O9ldclTy2C18RJvgmm6kxqPj6UcIjQ2UTC1Iw0CjmT0r/GegxN99pIXr3mi7aQBn2gA8SCLLCSHzh9zq0JSN7KZYLa/sAAAA=",
+   "color": "#361a0c"
   },
   "equipo-duenos": {
    "ref": "V017",

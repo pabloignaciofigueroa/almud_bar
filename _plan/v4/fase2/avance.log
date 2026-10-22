@@ -19,3 +19,8 @@
 2026-10-22 19:44:39 hojas nuevas y nitidez (varianza laplaciana a 540 px, mediana): terraza C3tFEcvJ80x 21,27–30,07 = 53 (V017 portada anterior = 33); multitud DM3n8lOy5qf 66,35–75,65 = 73 y 28,62–37,65 = 87; salón C9lH7qfSTfo 9,85–18,65 = 105; plato V047 = 738
 2026-10-22 19:45:29 equipo-duenos: el loop V017 32,9–42,9 s se mueve a Equipo renombrando archivos (sin recodificar); salen quien-brindis, lugar-cintas y comida-cazuela; tramos nuevos: portada-celular C3tFEcvJ80x 21,26–30,1 (fundido 0,8), lugar-noche C9lH7qfSTfo 9,8–18,68 (0,8), quien-multitud-1 DM3n8lOy5qf 66,32–75,7 (1,0), quien-multitud-2 DM3n8lOy5qf 28,62–37,7 (0,9), comida-con-tuti DY0AUvhlHjI_07 0,25–10,4 (1,0)
 2026-10-22 20:02:01 quien-multitud-2: la costura caía justo antes de un corte del reel (salto tras el fundido); tramo corregido a 27,6–37,7 s y recodificado
+2026-10-22 20:06:23 hoja-loops-2.jpg y tiras del fundido revisadas a ojo: sin saltos en los 6 (5 nuevos + equipo-duenos movido)
+2026-10-22 20:09:53 integración ronda 2: boceto_v4.py (portada nueva, lugar-noche, comida-con-tuti rotulado «Con tuti si no pa qué!» $ 19.900, quien-multitud-1 y -2 en Con quién, equipo-duenos como primera tarjeta de Equipo), css/v4/site.css y js/v4/site.js (fotos diferidas con data-src hasta ≤0,5 pantallas)
+2026-10-22 20:09:53 regenerados nueva/index.html y public/ (374 archivos); index.html raíz sin cambios
+2026-10-22 20:09:53 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, los 10 videos en play y avanzando; primer pantallazo celular 1.619 KB sin compresión (≈1.450 KB con gzip), escritorio 2.774 KB
+2026-10-22 20:09:53 entregables ronda 2: hoja-loops-2.jpg, videos.md reescrito, filas 13–18 en justificacion.md
