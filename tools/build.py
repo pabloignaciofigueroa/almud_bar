@@ -110,6 +110,10 @@ def main():
     s, missing = expand_imgs(s)
     if missing:
         print('ERROR imágenes:', missing); sys.exit(1)
+    import hashlib  # cache-busting: css/js se sirven 'immutable', la versión va en la URL
+    for ref in ('css/main.css', 'js/main.js'):
+        h = hashlib.md5(open(os.path.join(ROOT, ref), 'rb').read()).hexdigest()[:10]
+        s = s.replace(f'"{ref}"', f'"{ref}?v={h}"')
     open(os.path.join(ROOT, 'index.html'), 'w').write(s)
     print('index.html', len(s) // 1024, 'KB')
 
