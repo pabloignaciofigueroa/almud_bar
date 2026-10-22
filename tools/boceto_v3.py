@@ -178,7 +178,7 @@ body = f'''
     {vid('portada-celular', 'hero__v hero__v--m', hero=True)}
     {vid('portada-escritorio', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
-    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}})(document)</script>
+    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}function go(){{if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}}if(d.readyState==='complete')go();else{{addEventListener('load',go);setTimeout(go,2500)}}}})(document)</script>
   </div>
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
   <div class="hero__in">
@@ -319,6 +319,8 @@ body = f'''
 </footer>
 '''
 
+IM_P = VI['portada-celular']['poster']['webp']['path']
+IM_L = VI['portada-escritorio']['poster']['webp']['path']
 page = f'''<!doctype html>
 <html lang="es">
 <head>
@@ -332,11 +334,16 @@ page = f'''<!doctype html>
 <link rel="preload" href="../assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../{IM_P}" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
+<link rel="preload" href="../{IM_L}" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
+<link rel="preload" href="../vendor/gsap.min.js" as="script">
+<link rel="preload" href="../vendor/ScrollTrigger.min.js" as="script">
+<link rel="preload" href="../js/v3/site.js?v={ver('js/v3/site.js')}" as="script">
 <link rel="stylesheet" href="../css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
 <link rel="stylesheet" href="../css/v3/site.css?v={ver('css/v3/site.css')}">
 <link rel="canonical" href="{SITE}/v3/">
 {OG}
-<script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else r.classList.add('intro')}})(document)</script>
+<script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{{r.classList.add('intro');setTimeout(function(){{if(!window.__almudIntro)r.classList.remove('intro')}},1400)}}}})(document)</script>
 </head>
 <body>
 {body}

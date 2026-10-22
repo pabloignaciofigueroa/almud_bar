@@ -11,8 +11,13 @@
 <link rel="preload" href="../assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/v3/video/portada-celular-poster.webp" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
+<link rel="preload" href="../assets/v3/video/portada-escritorio-poster.webp" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
+<link rel="preload" href="../vendor/gsap.min.js" as="script">
+<link rel="preload" href="../vendor/ScrollTrigger.min.js" as="script">
+<link rel="preload" href="../js/v3/site.js?v=9fcb9498" as="script">
 <link rel="stylesheet" href="../css/v3/tokens.css?v=b59f1ef1">
-<link rel="stylesheet" href="../css/v3/site.css?v=7bd1d193">
+<link rel="stylesheet" href="../css/v3/site.css?v=e7a13f54">
 <link rel="canonical" href="https://almudbar.pages.dev/v3/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Almud Bar">
@@ -27,7 +32,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://almudbar.pages.dev/assets/v3/og.jpg">
-<script>(function(d){var r=d.documentElement;r.classList.add('js');try{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}catch(e){}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else r.classList.add('intro')})(document)</script>
+<script>(function(d){var r=d.documentElement;r.classList.add('js');try{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}catch(e){}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{r.classList.add('intro');setTimeout(function(){if(!window.__almudIntro)r.classList.remove('intro')},1400)}})(document)</script>
 </head>
 <body>
 
@@ -47,7 +52,7 @@
     <figure class="m m--v hero__v hero__v--m" style="--ar:720/1280;--c:#7f242f;--lq:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoNABgAPwFqrU6rJiQiMAgBYCAJbACdMoACsuDvHYARazYVAAD+gdpOGilEeowIt5bf0oK8YUEgD3bGTxnJgL/KBpds0xft1mBuLpxR8eoug7NuFjU2pJB0Cq//CPVEsrh9V7yJzLdGqXUii4ms+vItAAA=)"><video class="v" autoplay muted loop playsinline preload="none" width="720" height="1280" data-poster="../assets/v3/video/portada-celular-poster.webp" data-webm="../assets/v3/video/portada-celular-720.webm" data-mp4="../assets/v3/video/portada-celular-720.mp4" data-hero aria-label="La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR." data-aria-en="The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."></video><noscript><img class="v" src="../assets/v3/video/portada-celular-poster.webp" width="720" height="1280" alt="La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR."></noscript></figure>
     <figure class="m m--v hero__v hero__v--d" style="--ar:1278/720;--c:#0c0204;--lq:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYAA4APwFqrU8rJiQiMAgBYCAJbAC06CHgHCkv2eikQaoAAP7yq2SJdZjtuw6PcRbfjaoDKrx2N0m6TnULwoXsed4EEp0VulVbo3Ok12P1qTlEJ5W9U6goW8AAAA==)"><video class="v" autoplay muted loop playsinline preload="none" width="1278" height="720" data-poster="../assets/v3/video/portada-escritorio-poster.webp" data-webm="../assets/v3/video/portada-escritorio-1278.webm" data-mp4="../assets/v3/video/portada-escritorio-1278.mp4" data-hero aria-label="El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro." data-aria-en="The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."></video><noscript><img class="v" src="../assets/v3/video/portada-escritorio-poster.webp" width="1278" height="720" alt="El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro."></noscript></figure>
     <div class="hero__veil" aria-hidden="true"></div>
-    <script>(function(d){var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');return}v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){})})(document)</script>
+    <script>(function(d){var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');return}function go(){if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){})}if(d.readyState==='complete')go();else{addEventListener('load',go);setTimeout(go,2500)}})(document)</script>
   </div>
   <div class="hero__iso" aria-hidden="true"><svg class="iso" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 660 940"><g fill="none" stroke="currentColor" stroke-width="26" stroke-linejoin="miter" stroke-miterlimit="10" stroke-linecap="butt"><path pathLength="1" d="M289 15.0L603.0 215L266 481.0L15.0 181Z"/><path pathLength="1" d="M287 76L512 217L271 409L87 192Z"/><path pathLength="1" d="M60 318L101 606"/><path pathLength="1" d="M549 290L446 650"/><path pathLength="1" d="M285 545L282 760"/><path pathLength="1" d="M62 600L53.0 676L285 883.0L480 712L476 652L285 806Z"/></g></svg></div>
   <div class="hero__in">
@@ -190,6 +195,6 @@
 <script src="../vendor/gsap.min.js" defer></script>
 <script src="../vendor/ScrollTrigger.min.js" defer></script>
 <script src="../vendor/lenis.min.js" defer></script>
-<script src="../js/v3/site.js?v=aa761229" defer></script>
+<script src="../js/v3/site.js?v=9fcb9498" defer></script>
 </body>
 </html>
