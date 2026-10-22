@@ -704,8 +704,8 @@
     720,
     1280
    ],
-   "width": 600,
-   "height": 750,
+   "width": 540,
+   "height": 674,
    "ratio": "4:5",
    "segments": [
     [
@@ -721,7 +721,7 @@
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
-   "within_budget": false,
+   "within_budget": true,
    "xfade": 0.9,
    "tramo_s": 9.0,
    "seam": {
@@ -730,33 +730,33 @@
    },
    "files": {
     "webm": {
-     "path": "assets/v4/video/eventos-jaloguin-600.webm",
-     "bytes": 1276217,
+     "path": "assets/v4/video/eventos-jaloguin-540.webm",
+     "bytes": 1153218,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 44
     },
     "mp4": {
-     "path": "assets/v4/video/eventos-jaloguin-600.mp4",
-     "bytes": 1323639,
+     "path": "assets/v4/video/eventos-jaloguin-540.mp4",
+     "bytes": 1298428,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 28
+     "crf": 27
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v4/video/eventos-jaloguin-poster.avif",
-     "bytes": 16518
+     "bytes": 14583
     },
     "webp": {
      "path": "assets/v4/video/eventos-jaloguin-poster.webp",
-     "bytes": 24342
+     "bytes": 21672
     },
     "jpg": {
      "path": "assets/v4/video/eventos-jaloguin-poster.jpg",
-     "bytes": 52173
+     "bytes": 45448
     }
    },
-   "lqip": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABQBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJZACdMoMqmBRGAzOIobBWBAm12v3Zs4MCywAA/TEH2UMWNFdWRth3n0wVdcPztwfxNvPK5jWhui9ByDMWVjOctXlY5XAbVpgAWqmCmaaj614QLuogY3ShlU37RKL4yX9XOKoDvG44hfOUNfzGgVe8168NsxcMJRBr5wtg6Fn7t3W4PobCt8hkPo54AAAA",
+   "lqip": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABQBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJZgCdMoMulBRGAzOIoaBrxsnLLVgDqIl3tAAA/TEH2UMWNFdWRth3n0wVdcPztwfxNvPK5jWhui9ByDMWelkWKwlGbzO8oIb/VDD67sJTdoD5b8AURRvP62Z5WlpQhXWCnWrz5ylsoh42Tvj1au+kYQtkrjeijl7KXvq3+tv1LGCg746/EKn0Hjv1gAAA",
    "color": "#6a3718"
   },
   "equipo-duenos": {
