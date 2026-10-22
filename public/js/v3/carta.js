@@ -89,7 +89,7 @@
     if (sub) {
       const tid = sub.closest('.panel').id;
       R.dataset.tab = tid; R.setAttribute('data-sub-' + tid, hash); paint();
-      if (how) { top(); enter(sub); }
+      if (how) { top(); enter(sub); } else requestAnimationFrame(() => sub.scrollIntoView());
       return true;
     }
   }

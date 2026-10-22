@@ -4788,7 +4788,7 @@
     "text": "Video: @estudiouno.prod para @almud_bar"
    },
    "variant": "escritorio",
-   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas. Boomerang (≈6,7 s) para que el loop no quede corto. Ronda 2b: cintas acortadas (4,6–5,6 s); arranca en las lámparas.",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas. Boomerang (≈6,7 s) para que el loop no quede corto. Ronda 2b: cintas acortadas (4,6–5,6 s); arranca en las lámparas. Fase 16: lámparas a 0,75× (≈2,1 s) y cintas reducidas a 0,5 s (blandas al ampliar ×1,25).",
    "source_size": [
     1278,
     720
@@ -4802,32 +4802,32 @@
      10.2
     ],
     [
-     4.6,
-     5.6
+     4.9,
+     5.4
     ]
    ],
    "loop": "boomerang",
-   "frames": 150,
+   "frames": 162,
    "fps": 30.0,
-   "duration": 5.0,
+   "duration": 5.4,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 2500,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 6.71,
-    "typical_step": 6.53
+    "last_vs_first": 5.08,
+    "typical_step": 4.66
    },
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-escritorio-1278.webm",
-     "bytes": 2426631,
+     "bytes": 2506311,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 25
+     "crf": 27
     },
     "mp4": {
      "path": "assets/v3/video/portada-escritorio-1278.mp4",
-     "bytes": 1925645,
+     "bytes": 2471745,
      "type": "video/mp4; codecs=\"avc1.640028\"",
      "crf": 18
     }

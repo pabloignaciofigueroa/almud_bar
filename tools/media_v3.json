@@ -1175,8 +1175,8 @@
      10.2
     ],
     [
-     4.6,
-     5.6
+     4.9,
+     5.4
     ]
    ],
    "loop": "boomerang",
@@ -1197,9 +1197,10 @@
     "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
     "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
    },
-   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas. Boomerang (≈6,7 s) para que el loop no quede corto. Ronda 2b: cintas acortadas (4,6–5,6 s); arranca en las lámparas.",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas. Boomerang (≈6,7 s) para que el loop no quede corto. Ronda 2b: cintas acortadas (4,6–5,6 s); arranca en las lámparas. Fase 16: lámparas a 0,75× (≈2,1 s) y cintas reducidas a 0,5 s (blandas al ampliar ×1,25).",
    "crf_start": 18,
-   "vp9_crf_start": 24
+   "vp9_crf_start": 24,
+   "speed": 0.75
   },
   {
    "id": "lugar-cintas",

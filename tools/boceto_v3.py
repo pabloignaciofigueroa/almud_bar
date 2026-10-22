@@ -43,7 +43,8 @@ def vid(id_, cls='', hero=False, extra=''):
             f'<video class="v" autoplay muted loop playsinline preload="none" width="{w}" height="{h}" data-poster="{poster}"'
             f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}"'
             + (' data-hero' if hero else '') +
-            f' aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video></figure>')
+            f' aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video>'
+            f'<noscript><img class="v" src="{poster}" width="{w}" height="{h}" alt="{E(v["alt"]["es"])}"></noscript></figure>')
 
 
 def ver(*paths):
@@ -108,7 +109,6 @@ CARTA = 'carta/'
 rincones = [
     ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'We really love our bar!'),
     ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'We roofed part of the terrace'),
-    ('lugar-salon', 'm', None, None, None, None),
     ('lugar-sillones', 'a', 'Sillones', 'Lounge', None, None),
     ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love the sunsets from our little terrace'),
     ('lugar-lampara-pinzas', 'a', 'Lámparas', 'The lamps', 'Nos gustan los brillitos, las luces', 'We love the sparkle, the lights'),

@@ -85,7 +85,8 @@ def peter():
     v = M['videos']['tragos-humo']
     return (f'<figure class="m m--v pr__m" style="--ar:{v["width"]}/{v["height"]};--c:{v["color"]};--lq:url({v["lqip"]})">'
             f'<video class="v" autoplay muted loop playsinline preload="none" width="{v["width"]}" height="{v["height"]}" data-poster="{UP}{v["poster"]["webp"]["path"]}"'
-            f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}" aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video></figure>')
+            f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}" aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video>'
+            f'<noscript><img class="v" src="{UP}{v["poster"]["webp"]["path"]}" width="{v["width"]}" height="{v["height"]}" alt="{E(v["alt"]["es"])}"></noscript></figure>')
 
 
 def g(en, cls='gloss'):
