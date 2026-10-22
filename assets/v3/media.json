@@ -4714,7 +4714,7 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Ronda 2: V020 (IG C-YrpVjpCqN), plano continuo 1,4–5,3 s antes del corte de 5,4 s: gente en las mesas, la barra y el muro rosa; sin terceros. Boomerang. 720 px, ≤1.000 KB (primer pantallazo ≤1,5 MB). Póster = primer cuadro (mesas con gente y barra).",
+   "note": "Ronda 2: V020 (IG C-YrpVjpCqN), plano continuo 2,0–5,3 s antes del corte de 5,4 s: gente en las mesas, la barra y el muro rosa; sin terceros. Boomerang. 720 px, ≤1.000 KB (primer pantallazo ≤1,5 MB). Póster = primer cuadro: la barra y el muro rosa bajo la lámpara tejida.",
    "source_size": [
     720,
     1280
@@ -4724,52 +4724,52 @@
    "ratio": "9:16",
    "segments": [
     [
-     1.4,
+     2.0,
      5.3
     ]
    ],
    "loop": "boomerang",
-   "frames": 232,
+   "frames": 196,
    "fps": 30.0,
-   "duration": 7.73,
+   "duration": 6.53,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1000,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 14.51,
-    "typical_step": 13.98
+    "last_vs_first": 18.03,
+    "typical_step": 9.81
    },
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-celular-720.webm",
-     "bytes": 981526,
+     "bytes": 956365,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 39
+     "crf": 37
     },
     "mp4": {
      "path": "assets/v3/video/portada-celular-720.mp4",
-     "bytes": 967410,
+     "bytes": 954977,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 30
+     "crf": 28
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v3/video/portada-celular-poster.avif",
-     "bytes": 17594
+     "bytes": 18809
     },
     "webp": {
      "path": "assets/v3/video/portada-celular-poster.webp",
-     "bytes": 22590
+     "bytes": 25462
     },
     "jpg": {
      "path": "assets/v3/video/portada-celular-poster.jpg",
-     "bytes": 57692
+     "bytes": 62639
     }
    },
-   "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoNABgAPwFqrE6rJiQiMAgBYCAJYgC7ACHfk90NI9EaNrKELAD+7oRnDAefbCB9I8wcXymlwmslAwAh3kiRpBdsUVxNnON6UQeFe3m58zSH5+eE2eGAAA==",
-   "color": "#2c1f1e"
+   "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoNABgAPwFsrU8rJiQiMAgBYCAJQBadA9KwH18rKbWQJu7gAP7uoTTHKq7Kxe1RIIH1y9hGNup/6cp3jaIUuD4zg6y7CUh4VwT2WZmiIqGR19wTnRff2MKdfvlnbuuQsAA=",
+   "color": "#473730"
   },
   "portada-escritorio": {
    "ref": "V031",
