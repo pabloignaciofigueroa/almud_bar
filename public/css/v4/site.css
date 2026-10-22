@@ -186,7 +186,7 @@ html[lang="en"] .gloss--i{display:inline}
 .col{display:grid;gap:10px;align-content:start}
 .col--2{margin-top:24px}
 .col--3{display:none}
-@media (max-width:767px){.col--3{display:grid;grid-template-columns:1fr 1fr;gap:10px;grid-column:1/-1;margin-top:10px}.col--3>.m:not(.m--v){display:none}.col--3>.m--v:nth-child(2){margin-top:24px}} /* v4 fase 2: en celular la columna 3 muestra solo los dos videos de multitud, lado a lado */
+@media (max-width:767px){.col--3{display:grid;grid-template-columns:1fr 1fr;gap:10px;grid-column:1/-1;margin-top:10px}.col--3>.m:nth-child(2){margin-top:24px}} /* v4 fase 2: en celular la columna 3 muestra solo los dos videos de multitud, lado a lado */
 @media (min-width:768px){
   .quien .ttl{font-size:clamp(72px,8.4vw,120px);max-width:none}
   .quien__g{grid-template-columns:repeat(3,1fr);gap:20px;padding-top:7vh}
@@ -457,3 +457,10 @@ html:not(.js) .m video{display:none}
 /* v4 fase 2: fotos diferidas (data-src) — sin JS se ve el <noscript>; con JS, el LQIP hasta que llega la foto */
 img[data-src]{visibility:hidden}
 html:not(.js) .m picture{display:none}
+/* v4 · Con quién: las 3 columnas terminan parejas (sin vacío), cada foto o video se estira dentro de su columna */
+@media (min-width:768px){
+  .quien__g{align-items:stretch}
+  .quien__g .col{display:flex;flex-direction:column}
+  .quien__g .col>.m{flex:1 1 0;aspect-ratio:auto;min-height:240px}
+  .quien__g .col--3{display:flex;margin-top:4vh}
+}
