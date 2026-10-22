@@ -1,0 +1,185 @@
+{
+ "_doc": "Fase 2 v4 · videos. Regla del cliente: 8–10 s por loop, siempre hacia adelante (sin boomerang ni reverse), velocidad real, fundido final→inicio (xfade 0,8–1,0 s). Duración del loop = tramo − xfade. budget_kb = tope WebM, budget_mp4_kb = tope MP4. Lo consume tools/media_v4.py.",
+ "credits": {},
+ "videos": [
+  {
+   "id": "portada-celular",
+   "ref": "V017",
+   "src": "assets/raw/ig/C9lH7qfSTfo_00.mp4",
+   "section": "portada",
+   "variant": "celular",
+   "segments": [[32.9, 42.9]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "9:16",
+   "focal": [50, 50],
+   "widths": [720],
+   "crf_start": 21,
+   "crf_max": 30,
+   "vp9_crf_start": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1600,
+   "budget_mp4_kb": 1800,
+   "poster_q": {"avif": 42, "webp": 62, "jpg": 72},
+   "alt": {
+    "es": "Frente al muro rosa de botellas un bartender bate la coctelera, se reparten shots y una clienta se ríe en la barra.",
+    "en": "In front of the pink bottle wall a bartender works the shaker, shots go around and a guest laughs at the bar."
+   },
+   "note": "V017 (10 años, IG-098, jul-2024), tramo 32,9–42,9 s: bartender batiendo frente al muro rosa → shots y brindis → clienta riendo en la barra. Fundido 1,0 s de la risa al bartender."
+  },
+  {
+   "id": "portada-escritorio",
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "variant": "escritorio",
+   "segments": [[0.4, 10.45]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "orig",
+   "focal": [50, 50],
+   "widths": [1278],
+   "crf_start": 19,
+   "crf_max": 30,
+   "vp9_crf_start": 26,
+   "vp9_crf_max": 44,
+   "budget_kb": 2500,
+   "budget_mp4_kb": 2600,
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "alt": {
+    "es": "El letrero luminoso ALMUD BAR, la puerta de entrada, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas.",
+    "en": "The glowing ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the lit clothespin lamps."
+   },
+   "note": "V031 (IG-061, @estudiouno.prod), tramo 0,4–10,45 s: toda la apertura sin subtítulos (letrero → puerta → cintas → ojos → lámparas); termina antes del subtítulo de 10,5 s. Fundido 1,0 s de las lámparas al letrero."
+  },
+  {
+   "id": "lugar-cintas",
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "lugar",
+   "rincon": "techo de cintas",
+   "segments": [[21.27, 31.4]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "4:5",
+   "focal": [50, 40],
+   "widths": [720, 600],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "La cámara camina bajo el techo de cintas de colores de la terraza llena al atardecer, sale al patio con guirnaldas y termina con una clienta riendo.",
+    "en": "The camera walks under the colored-ribbon ceiling of the packed terrace at sunset, out to the string-lit patio, ending on a laughing guest."
+   },
+   "note": "V007 (14F, IG-115, feb-2024), tramo 21,27–31,4 s: un solo plano caminando bajo el techo de cintas (21,24–27,3) → mesa de amigas de noche → clienta riendo. V009 (7,1 s) es demasiado corto para 8–10 s."
+  },
+  {
+   "id": "tragos-humo",
+   "ref": "V038",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
+   "section": "tragos",
+   "carta_item": "Aquí te las traigo Peter",
+   "segments": [[7.0, 16.75]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "4:5",
+   "focal": [50, 55],
+   "widths": [720, 600],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
+    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
+   },
+   "note": "V038 (IG-044), tramo 7,0–16,75 s: la burbuja crece (corte propio del reel en 12,16 s) y la mano la revienta. Es el trago «Aquí te las traigo Peter»: este slot cubre también tragos-peter."
+  },
+  {
+   "id": "tragos-coctelera",
+   "ref": "V032",
+   "src": "assets/raw/ig/DGLxTmGJ3ZV_00.mp4",
+   "section": "tragos",
+   "segments": [[0.6, 10.15]],
+   "loop": "crossfade",
+   "xfade": 0.9,
+   "ratio": "4:5",
+   "focal": [50, 40],
+   "widths": [720, 600],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "Girasoles en la barra, el muro rojo de botellas y un bartender con delantal ALMUD que bate y sirve; arriba, el techo de cintas.",
+    "en": "Sunflowers on the bar, the red bottle wall and a bartender in an ALMUD apron shaking and pouring; overhead, the ribbon ceiling."
+   },
+   "note": "V032 (IG-059, feb-2025, jornada propia de fotos y video), tramo 0,6–10,15 s: girasoles → barra → bartender batiendo y sirviendo (4,7–8,4) → techo de cintas. Cortes propios del reel, lentos y cinematográficos."
+  },
+  {
+   "id": "comida-cazuela",
+   "ref": "V049",
+   "src": "assets/raw/ig/DY0AUvhlHjI_12.mp4",
+   "section": "comida",
+   "segments": [[0.2, 9.9]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "4:5",
+   "focal": [50, 55],
+   "widths": [720, 600],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "En la cocina, un sartén de fierro saltea carne sobre el fuego y la mano del cocinero lo mueve.",
+    "en": "In the kitchen, a cast-iron pan sizzles with meat over the flame as the cook's hand shakes it."
+   },
+   "note": "V049 (IG-022, may-2026: «una cocina sencilla pero más que sabrosona!»), tramo 0,2–9,9 s: un solo plano de cocina en acción. Las cazuelas propias (V052 4,1 s, V044 6,4 s, V040 8,3 s) no alcanzan 8 s con el fundido."
+  },
+  {
+   "id": "quien-brindis",
+   "ref": "V028",
+   "src": "assets/raw/ig/DEYU6RjyjoC_00.mp4",
+   "section": "con-quien",
+   "segments": [[0.25, 9.85]],
+   "loop": "crossfade",
+   "xfade": 1.0,
+   "ratio": "4:5",
+   "focal": [50, 45],
+   "widths": [720, 600],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "Amigos brindan con copas de vino y tragos en una mesa de la terraza, bajo el bambú, y conversan riendo.",
+    "en": "Friends clink wine glasses and cocktails at a terrace table under the bamboo, chatting and laughing."
+   },
+   "note": "V028 (IG-065, ene-2025: «celebrar la vida, la amistad, el amors»), tramo 0,25–9,85 s: un solo plano de brindis en la mesa de la terraza."
+  },
+  {
+   "id": "donde-terraza",
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "donde",
+   "segments": [[0.0, 8.92]],
+   "loop": "crossfade",
+   "xfade": 0.8,
+   "ratio": "1:1",
+   "focal": [50, 55],
+   "widths": [720],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "La terraza del Almud de tarde: mesas llenas en el patio con Castro detrás, un trago rosado y la terraza techada con cintas de colores.",
+    "en": "Almud's terrace in the afternoon: a packed patio with Castro behind it, a pink cocktail and the covered terrace with colored ribbons."
+   },
+   "note": "V007 (IG-115), tramo 0,0–8,92 s (antes del corte a la pizza). Reemplaza al letrero: V031 solo tiene 10,4 s sin subtítulos y los usa enteros la portada de escritorio; repetirlo abajo duplicaría el mismo plano."
+  }
+ ]
+}

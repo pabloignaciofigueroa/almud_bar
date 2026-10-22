@@ -1,1 +1,11 @@
 2026-10-22 12:15:57 inicio fase 2 video: hojas de contacto (1 cuadro cada 0,5 s) de 30 reels en _plan/v4/fase2/hojas/
+2026-10-22 12:17:15 tools/media_v4.py creado (copia de media_v3.py; solo videos; lee tools/media_v4.json; escribe assets/v4/video y assets/v4/media-video.json; exige loop crossfade y velocidad real)
+2026-10-22 12:17:15 portada-celular: tramo elegido C9lH7qfSTfo (V017) 32,9–42,9 s, fundido 1,0 s
+2026-10-22 12:17:15 portada-escritorio: tramo elegido DFWLrRxyvVB (V031) 0,4–10,45 s, fundido 1,0 s (antes del subtítulo de 10,5 s)
+2026-10-22 12:17:15 lugar-cintas: tramo elegido C3tFEcvJ80x (V007) 21,27–31,4 s, fundido 1,0 s (V009 dura 7,1 s: no alcanza)
+2026-10-22 12:17:15 tragos-humo: tramo elegido DOO7fgniNI6 (V038) 7,0–16,75 s, fundido 1,0 s (cubre tragos-peter: es ese trago)
+2026-10-22 12:17:15 tragos-coctelera: tramo elegido DGLxTmGJ3ZV (V032) 0,6–10,15 s, fundido 0,9 s
+2026-10-22 12:17:15 comida-cazuela: tramo elegido DY0AUvhlHjI_12 (V049, cocina en acción) 0,2–9,9 s, fundido 1,0 s (cazuelas propias de 4–8 s no alcanzan)
+2026-10-22 12:17:15 quien-brindis: tramo elegido DEYU6RjyjoC (V028) 0,25–9,85 s, fundido 1,0 s
+2026-10-22 12:17:15 donde-terraza: tramo elegido C3tFEcvJ80x (V007) 0,0–8,92 s, fundido 0,8 s (reemplaza donde-letrero: V031 lo usa entero la portada)
+2026-10-22 12:17:15 lugar-terraza: no se crea aparte (la terraza ya sale en lugar-cintas y donde-terraza; sin otro plano propio de 8 s)
