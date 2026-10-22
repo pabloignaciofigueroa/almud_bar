@@ -34,7 +34,7 @@ Almud habla como la persona que atiende la barra y te conoce: trata de usté, in
 
 ---
 
-## 2. Frases que SUBEN el nivel (38 candidatas)
+## 2. Frases que SUBEN el nivel (40 candidatas)
 
 Son cortas y tienen ingenio, invitación, identidad u orgullo. Todas están verificadas (sección 7). La columna "Uso" es una sugerencia.
 
@@ -268,11 +268,11 @@ Rige para todo texto visible de la landing y de la página de la carta, salvo lo
 |---|---|---|---|
 | ★ | «tenemos pa todos los gustos!» | [IG-011] | 5 |
 | | «Tantos coctelcitos entre los cuales decidirse!» | [IG-046] | 6 |
-| | «En su Almudcito tenemos pa todos los gustos!» | [IG-011] | 8 |
+| | «pa todos los gustazos» | [IG-178] | 4 |
 
 - ★ “something for every taste!” [EN]
 - “So many cocktails to choose from!” [EN]
-- “At your Almud we've got something for every taste!” [EN] (gasta el único «Almudcito» permitido en la carta)
+- “for every kind of taste” [EN]
 - Rótulos de sección: los títulos literales de la carta, sin traducir el nombre y con glosa debajo: «Coctelería de la casa» [CARTA-2] “House cocktails” · «Cócteles del mundo mundial» [CARTA-3] “Cocktails from around the world” · «Comilona» [CARTA-1] “Food” · «Mocktails sin alcohol» [CARTA-5] “Alcohol-free” [EN].
 
 ### Resumen de favoritos
