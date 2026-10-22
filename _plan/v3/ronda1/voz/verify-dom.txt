@@ -1,0 +1,24 @@
+== home-m-es
+  NO APROBADO ('TITULAR', 'no somos ná sin ustedes! tirar la casa por la ventana!')
+== carta-m-es-casa
+  PROHIBIDO ('forma con @', 'p.pr__d', 'Un guarisnaque complejo pa l@s que disfrutan sabores más potentes: Mezcal, tequila, horchata de maní tostado y merkén, p')
+  PROHIBIDO ('letra triple', 'p.pr__d', 'Este es un cóctel sencillo, pero muuuuuy rico [y bonito]: va con Vodka Pera, un toque cítrico de limoncito, jarabe pal d')
+  PROHIBIDO ('signos en serie', 'p.pr__d', 'Este es un sour bien especial: va con Mistral Nobel Fire, limón y jarabe que complementa este cóctel especiado, medio pi')
+== carta-m-es-mundo
+  PROHIBIDO ('letra triple', 'a.chip', 'Red Bull te da aaalas')
+  PROHIBIDO ('Almudcito', 'p.gr__nota', '[Algunos recomendados de su Almudcito]')
+== carta-m-es-vinos
+  NO APROBADO ('p.pr__meta', 'Miguel Torres · [Valle Central]')
+  NO APROBADO ('p.pr__meta', 'Casa Bauzá · [Valle Central]')
+  NO APROBADO ('p.pr__meta', 'Koyle · [Valle de Colchagua]')
+  NO APROBADO ('p.pr__meta', 'Casa Bauzá · [Valle del Maipo]')
+  NO APROBADO ('p.pr__meta', 'Santa Ema · [Valle del Maipo]')
+  NO APROBADO ('p.pr__meta', 'Lapostolle · [Valle de Colchagua]')
+  NO APROBADO ('p.pr__meta', 'Salentein · [Valle de Uco, Mendoza]')
+  NO APROBADO ('p.pr__meta', 'Valle Secreto · [Valle de Cachapoal]')
+== carta-m-es-comilona
+  PROHIBIDO ('veto IG-139', 'p.pr__d', 'Tataki de lomo de atún marinado pa chuparse el bigoteli. Acompañado de pancito y salsa de la casa.')
+  PROHIBIDO ('veto IG-139', 'p.pr__d', 'Este es un cevichito pa chuparse el bigoteli. Atún rojo, pimentón amarillo, palta, cebolla morá, piña y rematamos con ci')
+
+Palabras visibles ES landing (390): 148
+Literales (verify_copy_v3 en ROOT): ver salida aparte

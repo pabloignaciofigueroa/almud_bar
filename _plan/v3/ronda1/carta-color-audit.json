@@ -1,0 +1,1948 @@
+{
+ "home_accents": {
+  "tragos": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#a8222d",
+     "h": 355,
+     "s": 0.66,
+     "l": 0.4,
+     "uses": {
+      "bg": 1
+     }
+    },
+    {
+     "hex": "#993517",
+     "h": 14,
+     "s": 0.74,
+     "l": 0.35,
+     "uses": {
+      "bg": 1
+     }
+    },
+    {
+     "hex": "#944c20",
+     "h": 23,
+     "s": 0.64,
+     "l": 0.35,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "comida": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#a8222d",
+     "h": 355,
+     "s": 0.66,
+     "l": 0.4,
+     "uses": {
+      "bg": 1
+     }
+    },
+    {
+     "hex": "#e5a05c",
+     "h": 30,
+     "s": 0.72,
+     "l": 0.63,
+     "uses": {
+      "text": 7
+     }
+    },
+    {
+     "hex": "#8c522b",
+     "h": 24,
+     "s": 0.53,
+     "l": 0.36,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "eventos": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#142a5c",
+     "h": 222,
+     "s": 0.64,
+     "l": 0.22,
+     "uses": {
+      "bg": 1
+     }
+    },
+    {
+     "hex": "#b9c9ea",
+     "h": 220,
+     "s": 0.54,
+     "l": 0.82,
+     "uses": {
+      "text": 4
+     }
+    },
+    {
+     "hex": "#8b3e27",
+     "h": 14,
+     "s": 0.56,
+     "l": 0.35,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "quien": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#142a5c",
+     "h": 222,
+     "s": 0.64,
+     "l": 0.22,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "donde": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    }
+   ]
+  },
+  "top": {
+   "body": "#160d0b",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 2
+     }
+    },
+    {
+     "hex": "#7e2736",
+     "h": 350,
+     "s": 0.53,
+     "l": 0.32,
+     "uses": {
+      "bg": 1
+     }
+    },
+    {
+     "hex": "#f24350",
+     "h": 356,
+     "s": 0.87,
+     "l": 0.61,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  }
+ },
+ "home_contrast": [
+  {
+   "fg": "#f7cfc4",
+   "bg": "#a8222d",
+   "ratio": 5.01,
+   "minFs": 15,
+   "large": false,
+   "n": 1,
+   "sample": "Mocktails",
+   "sel": "h3.kick",
+   "img": false
+  },
+  {
+   "fg": "#160d0b",
+   "bg": "#f24350",
+   "ratio": 5.19,
+   "minFs": 17,
+   "large": false,
+   "n": 2,
+   "sample": "Ver la carta",
+   "sel": "a.btn",
+   "img": false
+  },
+  {
+   "fg": "#f24350",
+   "bg": "#160d0b",
+   "ratio": 5.19,
+   "minFs": 56,
+   "large": true,
+   "n": 4,
+   "sample": "USTÉ",
+   "sel": "span.w__i",
+   "img": false
+  },
+  {
+   "fg": "#f5e9db",
+   "bg": "#a8222d",
+   "ratio": 5.99,
+   "minFs": 20,
+   "large": false,
+   "n": 14,
+   "sample": "$ 6.700",
+   "sel": "span.it__p",
+   "img": false
+  },
+  {
+   "fg": "#e5a05c",
+   "bg": "#22140f",
+   "ratio": 8.1,
+   "minFs": 44,
+   "large": true,
+   "n": 7,
+   "sample": "una",
+   "sel": "span.w__i",
+   "img": false
+  },
+  {
+   "fg": "#b9c9ea",
+   "bg": "#142a5c",
+   "ratio": 8.32,
+   "minFs": 15,
+   "large": false,
+   "n": 4,
+   "sample": "Feb",
+   "sel": "span.ev__mes",
+   "img": false
+  },
+  {
+   "fg": "#d8c2b0",
+   "bg": "#22140f",
+   "ratio": 10.44,
+   "minFs": 18,
+   "large": false,
+   "n": 1,
+   "sample": "Don't just take their word for it",
+   "sel": "span.gloss",
+   "img": false
+  },
+  {
+   "fg": "#d8c2b0",
+   "bg": "#160d0b",
+   "ratio": 11.18,
+   "minFs": 15,
+   "large": false,
+   "n": 20,
+   "sample": "Dorothee · Épinal, Francia · Tripadvisor",
+   "sel": "p.r__f",
+   "img": false
+  },
+  {
+   "fg": "#f5e9db",
+   "bg": "#142a5c",
+   "ratio": 11.59,
+   "minFs": 30,
+   "large": true,
+   "n": 10,
+   "sample": "14F",
+   "sel": "h3.ev__n",
+   "img": false
+  },
+  {
+   "fg": "#f5e9db",
+   "bg": "#22140f",
+   "ratio": 14.95,
+   "minFs": 20,
+   "large": false,
+   "n": 11,
+   "sample": "$ 15.900",
+   "sel": "span.it__p",
+   "img": false
+  },
+  {
+   "fg": "#160d0b",
+   "bg": "#f5e9db",
+   "ratio": 16.02,
+   "minFs": 18,
+   "large": false,
+   "n": 1,
+   "sample": "Saltar al contenido",
+   "sel": "a.skip",
+   "img": false
+  },
+  {
+   "fg": "#f5e9db",
+   "bg": "#160d0b",
+   "ratio": 16.02,
+   "minFs": 15,
+   "large": false,
+   "n": 50,
+   "sample": "Carta",
+   "sel": "a.nav__a",
+   "img": false
+  }
+ ],
+ "home_items": [
+  {
+   "sec": "tragos",
+   "price": "$ 6.700",
+   "ctx": "Aquí te las traigo Peter[pisco, elderflower, cranberry, bubble]$ 6.700",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "tragos",
+   "price": "$ 7.900",
+   "ctx": "Sagüer on Faia[spiced, slightly hot sour]$ 7.900",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "tragos",
+   "price": "$ 6.500",
+   "ctx": "Sangría Foreva![Carménère, aged pisco, cinnamon]$ 6.500",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "tragos",
+   "price": "$ 6.400",
+   "ctx": "La moto chantá[mango, passion fruit, cucumber]$ 6.400",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "tragos",
+   "link": "carta/",
+   "txt": "Aquí te las traigo Peter[pisco, elderflower, cranberry, bubble]$ 6.700"
+  },
+  {
+   "sec": "tragos",
+   "link": "carta/",
+   "txt": "Sagüer on Faia[spiced, slightly hot sour]$ 7.900"
+  },
+  {
+   "sec": "tragos",
+   "link": "carta/",
+   "txt": "Sangría Foreva![Carménère, aged pisco, cinnamon]$ 6.500"
+  },
+  {
+   "sec": "tragos",
+   "link": "carta/",
+   "txt": ""
+  },
+  {
+   "sec": "tragos",
+   "link": "carta/",
+   "txt": "La moto chantá[mango, passion fruit, cucumber]$ 6.400"
+  },
+  {
+   "sec": "comida",
+   "price": "$ 15.900",
+   "ctx": "Tukulito Sakayama$ 15.900",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "comida",
+   "price": "$ 15.900",
+   "ctx": "Camarón que se duerme$ 15.900",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "comida",
+   "price": "$ 12.500",
+   "ctx": "Pizza dulzona$ 12.500",
+   "cls": "it__p",
+   "color": "rgb(245, 233, 219)",
+   "fs": "20px"
+  },
+  {
+   "sec": "comida",
+   "link": "carta/",
+   "txt": "Tukulito Sakayama$ 15.900"
+  },
+  {
+   "sec": "comida",
+   "link": "carta/",
+   "txt": "Camarón que se duerme$ 15.900"
+  },
+  {
+   "sec": "comida",
+   "link": "carta/",
+   "txt": "Pizza dulzona$ 12.500"
+  }
+ ],
+ "tabs": {
+  "390": {
+   "casa": {
+    "vis": [
+     "casa"
+    ],
+    "subs": [],
+    "hash": "",
+    "bg": "color(srgb 0.258039 0.0756863 0.0831373)",
+    "sel": "true"
+   },
+   "mundo": {
+    "vis": [
+     "mundo"
+    ],
+    "subs": [
+     "cocteles-del-mundo-mundial-clasicos",
+     "cocteles-del-mundo-mundial-vermu",
+     "cocteles-del-mundo-mundial-mule",
+     "cocteles-del-mundo-mundial-negroni",
+     "cocteles-del-mundo-mundial-spritz",
+     "cocteles-del-mundo-mundial-saguer",
+     "cocteles-del-mundo-mundial-mojitos",
+     "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+    ],
+    "hash": "#mundo",
+    "bg": "color(srgb 0.198431 0.0785098 0.0783137)",
+    "sel": "true"
+   },
+   "espirituosos": {
+    "vis": [
+     "espirituosos"
+    ],
+    "subs": [
+     "espirituosos-piscolein-o-combinadito",
+     "espirituosos-vodkita",
+     "espirituosos-ron-poromponpon",
+     "espirituosos-whiscachos",
+     "espirituosos-amamos-el-gin",
+     "espirituosos-tequilazos-mezcalazos"
+    ],
+    "hash": "#espirituosos",
+    "bg": "color(srgb 0.183686 0.120157 0.0812549)",
+    "sel": "true"
+   },
+   "vinos": {
+    "vis": [
+     "vinos"
+    ],
+    "subs": [
+     "vinos-espumantes-tintelis",
+     "vinos-espumantes-blanquelis",
+     "vinos-espumantes-espumantes",
+     "vinos-espumantes-por-copa"
+    ],
+    "hash": "#vinos",
+    "bg": "color(srgb 0.206275 0.0633333 0.0943137)",
+    "sel": "true"
+   },
+   "sin": {
+    "vis": [
+     "sin"
+    ],
+    "subs": [
+     "mocktails-sin-alcohol-mocktails-de-la-casa",
+     "mocktails-sin-alcohol-mocktails-clasicos",
+     "jugos-bebidas-jugos-bebidas",
+     "cervezas-sin-alcohol-cervezas-sin-alcohol",
+     "bebidas-calientes-bebidas-calientes"
+    ],
+    "hash": "#sin",
+    "bg": "color(srgb 0.0814118 0.12149 0.240078)",
+    "sel": "true"
+   },
+   "comilona": {
+    "vis": [
+     "comilona"
+    ],
+    "subs": [
+     "comilona-picoteos",
+     "comilona-greditas",
+     "comilona-sanguches",
+     "comilona-pizzas-artesanales",
+     "comilona-pa-los-chichichos",
+     "comilona-somos-dulzones"
+    ],
+    "hash": "#comilona",
+    "bg": "color(srgb 0.286274 0.188235 0.119216)",
+    "sel": "true"
+   },
+   "promos": {
+    "vis": [
+     "promos"
+    ],
+    "subs": [],
+    "hash": "#promos",
+    "bg": "color(srgb 0.193333 0.133882 0.0727843)",
+    "sel": "true"
+   }
+  },
+  "768": {
+   "casa": {
+    "vis": [
+     "casa"
+    ],
+    "subs": [],
+    "hash": "",
+    "bg": "color(srgb 0.258039 0.0756863 0.0831373)",
+    "sel": "true"
+   },
+   "mundo": {
+    "vis": [
+     "mundo"
+    ],
+    "subs": [
+     "cocteles-del-mundo-mundial-clasicos",
+     "cocteles-del-mundo-mundial-vermu",
+     "cocteles-del-mundo-mundial-mule",
+     "cocteles-del-mundo-mundial-negroni",
+     "cocteles-del-mundo-mundial-spritz",
+     "cocteles-del-mundo-mundial-saguer",
+     "cocteles-del-mundo-mundial-mojitos",
+     "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+    ],
+    "hash": "#mundo",
+    "bg": "color(srgb 0.198431 0.0785098 0.0783137)",
+    "sel": "true"
+   },
+   "espirituosos": {
+    "vis": [
+     "espirituosos"
+    ],
+    "subs": [
+     "espirituosos-piscolein-o-combinadito",
+     "espirituosos-vodkita",
+     "espirituosos-ron-poromponpon",
+     "espirituosos-whiscachos",
+     "espirituosos-amamos-el-gin",
+     "espirituosos-tequilazos-mezcalazos"
+    ],
+    "hash": "#espirituosos",
+    "bg": "color(srgb 0.183686 0.120157 0.0812549)",
+    "sel": "true"
+   },
+   "vinos": {
+    "vis": [
+     "vinos"
+    ],
+    "subs": [
+     "vinos-espumantes-tintelis",
+     "vinos-espumantes-blanquelis",
+     "vinos-espumantes-espumantes",
+     "vinos-espumantes-por-copa"
+    ],
+    "hash": "#vinos",
+    "bg": "color(srgb 0.206275 0.0633333 0.0943137)",
+    "sel": "true"
+   },
+   "sin": {
+    "vis": [
+     "sin"
+    ],
+    "subs": [
+     "mocktails-sin-alcohol-mocktails-de-la-casa",
+     "mocktails-sin-alcohol-mocktails-clasicos",
+     "jugos-bebidas-jugos-bebidas",
+     "cervezas-sin-alcohol-cervezas-sin-alcohol",
+     "bebidas-calientes-bebidas-calientes"
+    ],
+    "hash": "#sin",
+    "bg": "color(srgb 0.0814118 0.12149 0.240078)",
+    "sel": "true"
+   },
+   "comilona": {
+    "vis": [
+     "comilona"
+    ],
+    "subs": [
+     "comilona-picoteos",
+     "comilona-greditas",
+     "comilona-sanguches",
+     "comilona-pizzas-artesanales",
+     "comilona-pa-los-chichichos",
+     "comilona-somos-dulzones"
+    ],
+    "hash": "#comilona",
+    "bg": "color(srgb 0.286274 0.188235 0.119216)",
+    "sel": "true"
+   },
+   "promos": {
+    "vis": [
+     "promos"
+    ],
+    "subs": [],
+    "hash": "#promos",
+    "bg": "color(srgb 0.193333 0.133882 0.0727843)",
+    "sel": "true"
+   }
+  },
+  "1440": {
+   "casa": {
+    "vis": [
+     "casa"
+    ],
+    "subs": [],
+    "hash": "",
+    "bg": "color(srgb 0.258039 0.0756863 0.0831373)",
+    "sel": "true"
+   },
+   "mundo": {
+    "vis": [
+     "mundo"
+    ],
+    "subs": [
+     "cocteles-del-mundo-mundial-clasicos",
+     "cocteles-del-mundo-mundial-vermu",
+     "cocteles-del-mundo-mundial-mule",
+     "cocteles-del-mundo-mundial-negroni",
+     "cocteles-del-mundo-mundial-spritz",
+     "cocteles-del-mundo-mundial-saguer",
+     "cocteles-del-mundo-mundial-mojitos",
+     "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+    ],
+    "hash": "#mundo",
+    "bg": "color(srgb 0.198431 0.0785098 0.0783137)",
+    "sel": "true"
+   },
+   "espirituosos": {
+    "vis": [
+     "espirituosos"
+    ],
+    "subs": [
+     "espirituosos-piscolein-o-combinadito",
+     "espirituosos-vodkita",
+     "espirituosos-ron-poromponpon",
+     "espirituosos-whiscachos",
+     "espirituosos-amamos-el-gin",
+     "espirituosos-tequilazos-mezcalazos"
+    ],
+    "hash": "#espirituosos",
+    "bg": "color(srgb 0.183686 0.120157 0.0812549)",
+    "sel": "true"
+   },
+   "vinos": {
+    "vis": [
+     "vinos"
+    ],
+    "subs": [
+     "vinos-espumantes-tintelis",
+     "vinos-espumantes-blanquelis",
+     "vinos-espumantes-espumantes",
+     "vinos-espumantes-por-copa"
+    ],
+    "hash": "#vinos",
+    "bg": "color(srgb 0.206275 0.0633333 0.0943137)",
+    "sel": "true"
+   },
+   "sin": {
+    "vis": [
+     "sin"
+    ],
+    "subs": [
+     "mocktails-sin-alcohol-mocktails-de-la-casa",
+     "mocktails-sin-alcohol-mocktails-clasicos",
+     "jugos-bebidas-jugos-bebidas",
+     "cervezas-sin-alcohol-cervezas-sin-alcohol",
+     "bebidas-calientes-bebidas-calientes"
+    ],
+    "hash": "#sin",
+    "bg": "color(srgb 0.0814118 0.12149 0.240078)",
+    "sel": "true"
+   },
+   "comilona": {
+    "vis": [
+     "comilona"
+    ],
+    "subs": [
+     "comilona-picoteos",
+     "comilona-greditas",
+     "comilona-sanguches",
+     "comilona-pizzas-artesanales",
+     "comilona-pa-los-chichichos",
+     "comilona-somos-dulzones"
+    ],
+    "hash": "#comilona",
+    "bg": "color(srgb 0.286274 0.188235 0.119216)",
+    "sel": "true"
+   },
+   "promos": {
+    "vis": [
+     "promos"
+    ],
+    "subs": [],
+    "hash": "#promos",
+    "bg": "color(srgb 0.193333 0.133882 0.0727843)",
+    "sel": "true"
+   }
+  }
+ },
+ "carta_accents": {
+  "casa": {
+   "body": "#421315",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#993517",
+     "h": 14,
+     "s": 0.74,
+     "l": 0.35,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "mundo": {
+   "body": "#331414",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    }
+   ]
+  },
+  "espirituosos": {
+   "body": "#2f1f15",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    }
+   ]
+  },
+  "vinos": {
+   "body": "#351018",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    }
+   ]
+  },
+  "sin": {
+   "body": "#151f3d",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#965e2b",
+     "h": 29,
+     "s": 0.55,
+     "l": 0.38,
+     "uses": {
+      "bg": 1
+     }
+    }
+   ]
+  },
+  "comilona": {
+   "body": "#49301e",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    }
+   ]
+  },
+  "promos": {
+   "body": "#312213",
+   "accents": [
+    {
+     "hex": "#36a3ff",
+     "h": 207,
+     "s": 1,
+     "l": 0.61,
+     "uses": {
+      "svg": 1
+     }
+    },
+    {
+     "hex": "#d9a441",
+     "h": 39,
+     "s": 0.67,
+     "l": 0.55,
+     "uses": {
+      "text": 4
+     }
+    }
+   ]
+  }
+ },
+ "carta_contrast": {
+  "casa": [
+   {
+    "fg": "#f24350",
+    "bg": "#421315",
+    "ratio": 4.26,
+    "minFs": 13,
+    "large": false,
+    "n": 2,
+    "sample": "Nuevo",
+    "sel": "span.tag",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#421315",
+    "ratio": 9.18,
+    "minFs": 17,
+    "large": false,
+    "n": 15,
+    "sample": "Un guarisnaque complejo pa l@s que disfr",
+    "sel": "p.pr__d",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#421315",
+    "ratio": 13.14,
+    "minFs": 16,
+    "large": false,
+    "n": 36,
+    "sample": "Cócteles del mundo mundial",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#371213",
+    "ratio": 13.99,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#1c0e0c",
+    "ratio": 15.72,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 2,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "mundo": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#331414",
+    "ratio": 9.82,
+    "minFs": 15,
+    "large": false,
+    "n": 9,
+    "sample": "Puedes pedirlo con gin frutilla!",
+    "sel": "p.pr__meta",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#331414",
+    "ratio": 14.06,
+    "minFs": 16,
+    "large": false,
+    "n": 28,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#2b1212",
+    "ratio": 14.62,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#1a0e0c",
+    "ratio": 15.79,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "Cócteles del mundo mundial",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "espirituosos": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#2f1f15",
+    "ratio": 9.27,
+    "minFs": 14,
+    "large": false,
+    "n": 55,
+    "sample": "NORMAL [90 cc]",
+    "sel": "span.pr__c",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#2f1f15",
+    "ratio": 13.27,
+    "minFs": 16,
+    "large": false,
+    "n": 92,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#291a12",
+    "ratio": 14.03,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#190f0c",
+    "ratio": 15.69,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "Espirituosos",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "vinos": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#351018",
+    "ratio": 9.91,
+    "minFs": 15,
+    "large": false,
+    "n": 17,
+    "sample": "Miguel Torres · [Valle Central]",
+    "sel": "p.pr__meta",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#351018",
+    "ratio": 14.19,
+    "minFs": 16,
+    "large": false,
+    "n": 28,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#2d0f15",
+    "ratio": 14.73,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#1a0d0d",
+    "ratio": 15.82,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "Vinos & espumantes",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "sin": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#151f3d",
+    "ratio": 9.47,
+    "minFs": 17,
+    "large": false,
+    "n": 8,
+    "sample": "COCTELCITOS SIN ALCOHOL",
+    "sel": "p.gr__nota",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#151f3d",
+    "ratio": 13.56,
+    "minFs": 16,
+    "large": false,
+    "n": 25,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#151a31",
+    "ratio": 14.3,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#161012",
+    "ratio": 15.77,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "Mocktails sin alcohol",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "comilona": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#49301e",
+    "ratio": 7.11,
+    "minFs": 17,
+    "large": false,
+    "n": 9,
+    "sample": "Porción de aceitunas aliñaditas ricas de",
+    "sel": "p.pr__d",
+    "img": false
+   },
+   {
+    "fg": "#9fd39a",
+    "bg": "#49301e",
+    "ratio": 7.11,
+    "minFs": 13,
+    "large": false,
+    "n": 3,
+    "sample": "Veggie",
+    "sel": "span.tag",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#49301e",
+    "ratio": 10.18,
+    "minFs": 16,
+    "large": false,
+    "n": 30,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#3c271a",
+    "ratio": 11.69,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#1d120e",
+    "ratio": 15.34,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "Comilona",
+    "sel": "a.tab",
+    "img": false
+   }
+  ],
+  "promos": [
+   {
+    "fg": "#160d0b",
+    "bg": "#f24350",
+    "ratio": 5.19,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Inicio",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#d9a441",
+    "bg": "#312213",
+    "ratio": 6.81,
+    "minFs": 15,
+    "large": false,
+    "n": 4,
+    "sample": "Martes",
+    "sel": "span.pr__dia",
+    "img": false
+   },
+   {
+    "fg": "#d8c2b0",
+    "bg": "#312213",
+    "ratio": 8.94,
+    "minFs": 16,
+    "large": false,
+    "n": 3,
+    "sample": "* Siempre sujeto a stock! *",
+    "sel": "p.gr__pie",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#312213",
+    "ratio": 12.8,
+    "minFs": 16,
+    "large": false,
+    "n": 16,
+    "sample": "Coctelería de la casa",
+    "sel": "a.tab",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#2a1d11",
+    "ratio": 13.69,
+    "minFs": 17,
+    "large": false,
+    "n": 1,
+    "sample": "Carta oficial (PDF)",
+    "sel": "a.btn",
+    "img": false
+   },
+   {
+    "fg": "#f5e9db",
+    "bg": "#1a100c",
+    "ratio": 15.64,
+    "minFs": 14,
+    "large": false,
+    "n": 2,
+    "sample": "Escríbenos por DM",
+    "sel": "a.nav__a",
+    "img": false
+   },
+   {
+    "fg": "#160d0b",
+    "bg": "#f5e9db",
+    "ratio": 16.02,
+    "minFs": 16,
+    "large": false,
+    "n": 2,
+    "sample": "Nuestras promos",
+    "sel": "a.tab",
+    "img": false
+   }
+  ]
+ },
+ "subs": {
+  "390": {
+   "cocteles-del-mundo-mundial-clasicos": [
+    "cocteles-del-mundo-mundial-clasicos"
+   ],
+   "cocteles-del-mundo-mundial-vermu": [
+    "cocteles-del-mundo-mundial-vermu"
+   ],
+   "cocteles-del-mundo-mundial-mule": [
+    "cocteles-del-mundo-mundial-mule"
+   ],
+   "cocteles-del-mundo-mundial-negroni": [
+    "cocteles-del-mundo-mundial-negroni"
+   ],
+   "cocteles-del-mundo-mundial-spritz": [
+    "cocteles-del-mundo-mundial-spritz"
+   ],
+   "cocteles-del-mundo-mundial-saguer": [
+    "cocteles-del-mundo-mundial-saguer"
+   ],
+   "cocteles-del-mundo-mundial-mojitos": [
+    "cocteles-del-mundo-mundial-mojitos"
+   ],
+   "cocteles-del-mundo-mundial-red-bull-te-da-aaalas": [
+    "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+   ],
+   "espirituosos-piscolein-o-combinadito": [
+    "espirituosos-piscolein-o-combinadito"
+   ],
+   "espirituosos-vodkita": [
+    "espirituosos-vodkita"
+   ],
+   "espirituosos-ron-poromponpon": [
+    "espirituosos-ron-poromponpon"
+   ],
+   "espirituosos-whiscachos": [
+    "espirituosos-whiscachos"
+   ],
+   "espirituosos-amamos-el-gin": [
+    "espirituosos-amamos-el-gin"
+   ],
+   "espirituosos-tequilazos-mezcalazos": [
+    "espirituosos-tequilazos-mezcalazos"
+   ],
+   "vinos-espumantes-tintelis": [
+    "vinos-espumantes-tintelis"
+   ],
+   "vinos-espumantes-blanquelis": [
+    "vinos-espumantes-blanquelis"
+   ],
+   "vinos-espumantes-espumantes": [
+    "vinos-espumantes-espumantes"
+   ],
+   "vinos-espumantes-por-copa": [
+    "vinos-espumantes-por-copa"
+   ],
+   "mocktails-sin-alcohol-mocktails-de-la-casa": [
+    "mocktails-sin-alcohol-mocktails-de-la-casa"
+   ],
+   "mocktails-sin-alcohol-mocktails-clasicos": [
+    "mocktails-sin-alcohol-mocktails-clasicos"
+   ],
+   "jugos-bebidas-jugos-bebidas": [
+    "jugos-bebidas-jugos-bebidas"
+   ],
+   "cervezas-sin-alcohol-cervezas-sin-alcohol": [
+    "cervezas-sin-alcohol-cervezas-sin-alcohol"
+   ],
+   "bebidas-calientes-bebidas-calientes": [
+    "bebidas-calientes-bebidas-calientes"
+   ],
+   "comilona-picoteos": [
+    "comilona-picoteos"
+   ],
+   "comilona-greditas": [
+    "comilona-greditas"
+   ],
+   "comilona-sanguches": [
+    "comilona-sanguches"
+   ],
+   "comilona-pizzas-artesanales": [
+    "comilona-pizzas-artesanales"
+   ],
+   "comilona-pa-los-chichichos": [
+    "comilona-pa-los-chichichos"
+   ],
+   "comilona-somos-dulzones": [
+    "comilona-somos-dulzones"
+   ]
+  },
+  "768": {
+   "cocteles-del-mundo-mundial-clasicos": [
+    "cocteles-del-mundo-mundial-clasicos"
+   ],
+   "cocteles-del-mundo-mundial-vermu": [
+    "cocteles-del-mundo-mundial-vermu"
+   ],
+   "cocteles-del-mundo-mundial-mule": [
+    "cocteles-del-mundo-mundial-mule"
+   ],
+   "cocteles-del-mundo-mundial-negroni": [
+    "cocteles-del-mundo-mundial-negroni"
+   ],
+   "cocteles-del-mundo-mundial-spritz": [
+    "cocteles-del-mundo-mundial-spritz"
+   ],
+   "cocteles-del-mundo-mundial-saguer": [
+    "cocteles-del-mundo-mundial-saguer"
+   ],
+   "cocteles-del-mundo-mundial-mojitos": [
+    "cocteles-del-mundo-mundial-mojitos"
+   ],
+   "cocteles-del-mundo-mundial-red-bull-te-da-aaalas": [
+    "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+   ],
+   "espirituosos-piscolein-o-combinadito": [
+    "espirituosos-piscolein-o-combinadito"
+   ],
+   "espirituosos-vodkita": [
+    "espirituosos-vodkita"
+   ],
+   "espirituosos-ron-poromponpon": [
+    "espirituosos-ron-poromponpon"
+   ],
+   "espirituosos-whiscachos": [
+    "espirituosos-whiscachos"
+   ],
+   "espirituosos-amamos-el-gin": [
+    "espirituosos-amamos-el-gin"
+   ],
+   "espirituosos-tequilazos-mezcalazos": [
+    "espirituosos-tequilazos-mezcalazos"
+   ],
+   "vinos-espumantes-tintelis": [
+    "vinos-espumantes-tintelis"
+   ],
+   "vinos-espumantes-blanquelis": [
+    "vinos-espumantes-blanquelis"
+   ],
+   "vinos-espumantes-espumantes": [
+    "vinos-espumantes-espumantes"
+   ],
+   "vinos-espumantes-por-copa": [
+    "vinos-espumantes-por-copa"
+   ],
+   "mocktails-sin-alcohol-mocktails-de-la-casa": [
+    "mocktails-sin-alcohol-mocktails-de-la-casa"
+   ],
+   "mocktails-sin-alcohol-mocktails-clasicos": [
+    "mocktails-sin-alcohol-mocktails-clasicos"
+   ],
+   "jugos-bebidas-jugos-bebidas": [
+    "jugos-bebidas-jugos-bebidas"
+   ],
+   "cervezas-sin-alcohol-cervezas-sin-alcohol": [
+    "cervezas-sin-alcohol-cervezas-sin-alcohol"
+   ],
+   "bebidas-calientes-bebidas-calientes": [
+    "bebidas-calientes-bebidas-calientes"
+   ],
+   "comilona-picoteos": [
+    "comilona-picoteos"
+   ],
+   "comilona-greditas": [
+    "comilona-greditas"
+   ],
+   "comilona-sanguches": [
+    "comilona-sanguches"
+   ],
+   "comilona-pizzas-artesanales": [
+    "comilona-pizzas-artesanales"
+   ],
+   "comilona-pa-los-chichichos": [
+    "comilona-pa-los-chichichos"
+   ],
+   "comilona-somos-dulzones": [
+    "comilona-somos-dulzones"
+   ]
+  },
+  "1440": {
+   "cocteles-del-mundo-mundial-clasicos": [
+    "cocteles-del-mundo-mundial-clasicos"
+   ],
+   "cocteles-del-mundo-mundial-vermu": [
+    "cocteles-del-mundo-mundial-vermu"
+   ],
+   "cocteles-del-mundo-mundial-mule": [
+    "cocteles-del-mundo-mundial-mule"
+   ],
+   "cocteles-del-mundo-mundial-negroni": [
+    "cocteles-del-mundo-mundial-negroni"
+   ],
+   "cocteles-del-mundo-mundial-spritz": [
+    "cocteles-del-mundo-mundial-spritz"
+   ],
+   "cocteles-del-mundo-mundial-saguer": [
+    "cocteles-del-mundo-mundial-saguer"
+   ],
+   "cocteles-del-mundo-mundial-mojitos": [
+    "cocteles-del-mundo-mundial-mojitos"
+   ],
+   "cocteles-del-mundo-mundial-red-bull-te-da-aaalas": [
+    "cocteles-del-mundo-mundial-red-bull-te-da-aaalas"
+   ],
+   "espirituosos-piscolein-o-combinadito": [
+    "espirituosos-piscolein-o-combinadito"
+   ],
+   "espirituosos-vodkita": [
+    "espirituosos-vodkita"
+   ],
+   "espirituosos-ron-poromponpon": [
+    "espirituosos-ron-poromponpon"
+   ],
+   "espirituosos-whiscachos": [
+    "espirituosos-whiscachos"
+   ],
+   "espirituosos-amamos-el-gin": [
+    "espirituosos-amamos-el-gin"
+   ],
+   "espirituosos-tequilazos-mezcalazos": [
+    "espirituosos-tequilazos-mezcalazos"
+   ],
+   "vinos-espumantes-tintelis": [
+    "vinos-espumantes-tintelis"
+   ],
+   "vinos-espumantes-blanquelis": [
+    "vinos-espumantes-blanquelis"
+   ],
+   "vinos-espumantes-espumantes": [
+    "vinos-espumantes-espumantes"
+   ],
+   "vinos-espumantes-por-copa": [
+    "vinos-espumantes-por-copa"
+   ],
+   "mocktails-sin-alcohol-mocktails-de-la-casa": [
+    "mocktails-sin-alcohol-mocktails-de-la-casa"
+   ],
+   "mocktails-sin-alcohol-mocktails-clasicos": [
+    "mocktails-sin-alcohol-mocktails-clasicos"
+   ],
+   "jugos-bebidas-jugos-bebidas": [
+    "jugos-bebidas-jugos-bebidas"
+   ],
+   "cervezas-sin-alcohol-cervezas-sin-alcohol": [
+    "cervezas-sin-alcohol-cervezas-sin-alcohol"
+   ],
+   "bebidas-calientes-bebidas-calientes": [
+    "bebidas-calientes-bebidas-calientes"
+   ],
+   "comilona-picoteos": [
+    "comilona-picoteos"
+   ],
+   "comilona-greditas": [
+    "comilona-greditas"
+   ],
+   "comilona-sanguches": [
+    "comilona-sanguches"
+   ],
+   "comilona-pizzas-artesanales": [
+    "comilona-pizzas-artesanales"
+   ],
+   "comilona-pa-los-chichichos": [
+    "comilona-pa-los-chichichos"
+   ],
+   "comilona-somos-dulzones": [
+    "comilona-somos-dulzones"
+   ]
+  }
+ },
+ "en": {
+  "lang": "en",
+  "title": "The menu",
+  "tabs": [
+   "Coctelería de la casa",
+   "Cócteles del mundo mundial",
+   "Espirituosos",
+   "Vinos & espumantes",
+   "Mocktails sin alcohol",
+   "Comilona",
+   "Nuestras promos"
+  ],
+  "names": [
+   "Pinche Güey",
+   "Aquí te las traigo Peter",
+   "Cómo te voy a olvidar",
+   "Guarever como seaNew"
+  ],
+  "dm": "Message us on Instagram",
+  "pie": [
+   "Official menu (PDF) -> https://uqr.to/ppvi",
+   "Home -> http://localhost:8843/v3/"
+  ]
+ },
+ "links": [
+  {
+   "t": "Saltar al contenido",
+   "href": "http://localhost:8843/v3/carta/#carta",
+   "target": ""
+  },
+  {
+   "t": "",
+   "href": "http://localhost:8843/v3/",
+   "target": ""
+  },
+  {
+   "t": "Escríbenos por DM",
+   "href": "https://ig.me/m/almud_bar",
+   "target": "_blank"
+  },
+  {
+   "t": "Coctelería de la casa",
+   "href": "http://localhost:8843/v3/carta/#casa",
+   "target": ""
+  },
+  {
+   "t": "Cócteles del mundo mundial",
+   "href": "http://localhost:8843/v3/carta/#mundo",
+   "target": ""
+  },
+  {
+   "t": "Espirituosos",
+   "href": "http://localhost:8843/v3/carta/#espirituosos",
+   "target": ""
+  },
+  {
+   "t": "Vinos & espumantes",
+   "href": "http://localhost:8843/v3/carta/#vinos",
+   "target": ""
+  },
+  {
+   "t": "Mocktails sin alcohol",
+   "href": "http://localhost:8843/v3/carta/#sin",
+   "target": ""
+  },
+  {
+   "t": "Comilona",
+   "href": "http://localhost:8843/v3/carta/#comilona",
+   "target": ""
+  },
+  {
+   "t": "Nuestras promos",
+   "href": "http://localhost:8843/v3/carta/#promos",
+   "target": ""
+  },
+  {
+   "t": "Clásicos",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-clasicos",
+   "target": ""
+  },
+  {
+   "t": "Vermú",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-vermu",
+   "target": ""
+  },
+  {
+   "t": "Mule",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-mule",
+   "target": ""
+  },
+  {
+   "t": "Negroni",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-negroni",
+   "target": ""
+  },
+  {
+   "t": "Spritz",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-spritz",
+   "target": ""
+  },
+  {
+   "t": "Sagüer",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-saguer",
+   "target": ""
+  },
+  {
+   "t": "Mojitos",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-mojitos",
+   "target": ""
+  },
+  {
+   "t": "Red Bull te da aaalas",
+   "href": "http://localhost:8843/v3/carta/#cocteles-del-mundo-mundial-red-bull-te-da-aaalas",
+   "target": ""
+  },
+  {
+   "t": "Piscolein o combinadito",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-piscolein-o-combinadito",
+   "target": ""
+  },
+  {
+   "t": "Vodkita",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-vodkita",
+   "target": ""
+  },
+  {
+   "t": "Ron poromponpon",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-ron-poromponpon",
+   "target": ""
+  },
+  {
+   "t": "Whiscachos",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-whiscachos",
+   "target": ""
+  },
+  {
+   "t": "Amamos el GIN!",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-amamos-el-gin",
+   "target": ""
+  },
+  {
+   "t": "Tequilazos & mezcalazos",
+   "href": "http://localhost:8843/v3/carta/#espirituosos-tequilazos-mezcalazos",
+   "target": ""
+  },
+  {
+   "t": "Tintelis",
+   "href": "http://localhost:8843/v3/carta/#vinos-espumantes-tintelis",
+   "target": ""
+  },
+  {
+   "t": "Blanquelis",
+   "href": "http://localhost:8843/v3/carta/#vinos-espumantes-blanquelis",
+   "target": ""
+  },
+  {
+   "t": "Espumantes",
+   "href": "http://localhost:8843/v3/carta/#vinos-espumantes-espumantes",
+   "target": ""
+  },
+  {
+   "t": "Por copa",
+   "href": "http://localhost:8843/v3/carta/#vinos-espumantes-por-copa",
+   "target": ""
+  },
+  {
+   "t": "Mocktails de la casa",
+   "href": "http://localhost:8843/v3/carta/#mocktails-sin-alcohol-mocktails-de-la-casa",
+   "target": ""
+  },
+  {
+   "t": "Mocktails clásicos",
+   "href": "http://localhost:8843/v3/carta/#mocktails-sin-alcohol-mocktails-clasicos",
+   "target": ""
+  },
+  {
+   "t": "Jugos & bebidas",
+   "href": "http://localhost:8843/v3/carta/#jugos-bebidas-jugos-bebidas",
+   "target": ""
+  },
+  {
+   "t": "Cervezas sin alcohol",
+   "href": "http://localhost:8843/v3/carta/#cervezas-sin-alcohol-cervezas-sin-alcohol",
+   "target": ""
+  },
+  {
+   "t": "Bebidas calientes",
+   "href": "http://localhost:8843/v3/carta/#bebidas-calientes-bebidas-calientes",
+   "target": ""
+  },
+  {
+   "t": "Picoteos",
+   "href": "http://localhost:8843/v3/carta/#comilona-picoteos",
+   "target": ""
+  },
+  {
+   "t": "Greditas",
+   "href": "http://localhost:8843/v3/carta/#comilona-greditas",
+   "target": ""
+  },
+  {
+   "t": "Sanguches",
+   "href": "http://localhost:8843/v3/carta/#comilona-sanguches",
+   "target": ""
+  },
+  {
+   "t": "Pizzas artesanales",
+   "href": "http://localhost:8843/v3/carta/#comilona-pizzas-artesanales",
+   "target": ""
+  },
+  {
+   "t": "Pa los chichichos",
+   "href": "http://localhost:8843/v3/carta/#comilona-pa-los-chichichos",
+   "target": ""
+  },
+  {
+   "t": "Somos dulzones",
+   "href": "http://localhost:8843/v3/carta/#comilona-somos-dulzones",
+   "target": ""
+  },
+  {
+   "t": "Carta oficial (PDF)",
+   "href": "https://uqr.to/ppvi",
+   "target": "_blank"
+  },
+  {
+   "t": "Inicio",
+   "href": "http://localhost:8843/v3/",
+   "target": ""
+  }
+ ],
+ "deeplinks": {
+  "comilona": {
+   "tab": "comilona",
+   "vis": [
+    "comilona"
+   ],
+   "subs": [
+    "cocteles-del-mundo-mundial-clasicos",
+    "espirituosos-piscolein-o-combinadito",
+    "vinos-espumantes-tintelis",
+    "mocktails-sin-alcohol-mocktails-de-la-casa",
+    "comilona-picoteos"
+   ]
+  },
+  "vinos": {
+   "tab": "vinos",
+   "vis": [
+    "vinos"
+   ],
+   "subs": [
+    "cocteles-del-mundo-mundial-clasicos",
+    "espirituosos-piscolein-o-combinadito",
+    "vinos-espumantes-tintelis",
+    "mocktails-sin-alcohol-mocktails-de-la-casa",
+    "comilona-picoteos"
+   ]
+  },
+  "comilona-pizzas-artesanales": {
+   "tab": "comilona",
+   "vis": [
+    "comilona"
+   ],
+   "subs": [
+    "cocteles-del-mundo-mundial-clasicos",
+    "espirituosos-piscolein-o-combinadito",
+    "vinos-espumantes-tintelis",
+    "mocktails-sin-alcohol-mocktails-de-la-casa",
+    "comilona-pizzas-artesanales"
+   ]
+  },
+  "espirituosos-amamos-el-gin": {
+   "tab": "espirituosos",
+   "vis": [
+    "espirituosos"
+   ],
+   "subs": [
+    "cocteles-del-mundo-mundial-clasicos",
+    "espirituosos-amamos-el-gin",
+    "vinos-espumantes-tintelis",
+    "mocktails-sin-alcohol-mocktails-de-la-casa",
+    "comilona-pizzas-artesanales"
+   ]
+  },
+  "bogus": {
+   "tab": "espirituosos",
+   "vis": [
+    "espirituosos"
+   ],
+   "subs": [
+    "cocteles-del-mundo-mundial-clasicos",
+    "espirituosos-amamos-el-gin",
+    "vinos-espumantes-tintelis",
+    "mocktails-sin-alcohol-mocktails-de-la-casa",
+    "comilona-pizzas-artesanales"
+   ]
+  }
+ },
+ "logo_to": "http://localhost:8843/v3/",
+ "kbd": {
+  "tab": "mundo",
+  "focus": "tab-mundo",
+  "ring": "rgb(42, 161, 248) 2px"
+ },
+ "dom_count": 256,
+ "json_count": 256,
+ "check": {
+  "missing": [],
+  "extra": [],
+  "pricediff": [],
+  "name_text_diff": [],
+  "name_text_diff_count": 0
+ },
+ "errors": []
+}
