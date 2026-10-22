@@ -1,0 +1,967 @@
+{
+ "init": {
+  "v0": [
+   {
+    "src": "portada-celular-720.webm",
+    "poster": "portada-celular-poster.webp",
+    "paused": false,
+    "t": 1.59,
+    "dur": 3.72,
+    "rs": 4,
+    "vw": 720,
+    "vh": 1280,
+    "top": 0,
+    "w": 390,
+    "h": 844,
+    "vis": true
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 0,
+    "w": 0,
+    "h": 0,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 1036,
+    "w": 422,
+    "h": 528,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 2757,
+    "w": 262,
+    "h": 327,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 4516,
+    "w": 204,
+    "h": 255,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 7514,
+    "w": 460,
+    "h": 518,
+    "vis": false
+   }
+  ],
+  "v1": [
+   {
+    "src": "portada-celular-720.webm",
+    "poster": "portada-celular-poster.webp",
+    "paused": false,
+    "t": 2.56,
+    "dur": 3.72,
+    "rs": 4,
+    "vw": 720,
+    "vh": 1280,
+    "top": 0,
+    "w": 390,
+    "h": 844,
+    "vis": true
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 0,
+    "w": 0,
+    "h": 0,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 1036,
+    "w": 422,
+    "h": 528,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 2757,
+    "w": 262,
+    "h": 327,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 4516,
+    "w": 204,
+    "h": 255,
+    "vis": false
+   },
+   {
+    "src": "",
+    "poster": "",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 7514,
+    "w": 460,
+    "h": 518,
+    "vis": false
+   }
+  ],
+  "rt": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 28
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 28
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 28
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 29
+   },
+   {
+    "n": "site.css?v=7bd1d193",
+    "t": "link",
+    "s": 22356,
+    "st": 29
+   },
+   {
+    "n": "gsap.min.js",
+    "t": "script",
+    "s": 72514,
+    "st": 29
+   },
+   {
+    "n": "lenis.min.js",
+    "t": "script",
+    "s": 13785,
+    "st": 29
+   },
+   {
+    "n": "ScrollTrigger.min.js",
+    "t": "script",
+    "s": 43680,
+    "st": 29
+   },
+   {
+    "n": "site.js?v=aa761229",
+    "t": "script",
+    "s": 9042,
+    "st": 29
+   },
+   {
+    "n": "portada-celular-poster.webp",
+    "t": "video",
+    "s": 36486,
+    "st": 128
+   },
+   {
+    "n": "portada-celular-720.webm",
+    "t": "video",
+    "s": 901112,
+    "st": 153
+   },
+   {
+    "n": "lugar-barra-a-960.avif",
+    "t": "img",
+    "s": 82421,
+    "st": 265
+   },
+   {
+    "n": "lugar-terraza-techada-a-960.avif",
+    "t": "img",
+    "s": 119253,
+    "st": 265
+   },
+   {
+    "n": "lugar-salon-m-712.avif",
+    "t": "img",
+    "s": 32311,
+    "st": 265
+   },
+   {
+    "n": "lugar-sillones-a-960.avif",
+    "t": "img",
+    "s": 35808,
+    "st": 265
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 458
+   }
+  ]
+ },
+ "steps": [
+  {
+   "y": 844,
+   "videos": [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t0": 1.66,
+     "t1": 2.37,
+     "rs": 4,
+     "w": 358,
+     "h": 448,
+     "vw": 600,
+     "vh": 750
+    }
+   ]
+  },
+  {
+   "y": 1688,
+   "videos": []
+  },
+  {
+   "y": 2532,
+   "videos": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t0": 1.64,
+     "t1": 2.35,
+     "rs": 4,
+     "w": 222,
+     "h": 277,
+     "vw": 720,
+     "vh": 900
+    }
+   ]
+  },
+  {
+   "y": 3376,
+   "videos": []
+  },
+  {
+   "y": 4220,
+   "videos": [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t0": 1.65,
+     "t1": 2.38,
+     "rs": 4,
+     "w": 173,
+     "h": 216,
+     "vw": 720,
+     "vh": 900
+    }
+   ]
+  },
+  {
+   "y": 5064,
+   "videos": []
+  },
+  {
+   "y": 5908,
+   "videos": []
+  },
+  {
+   "y": 6752,
+   "videos": [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t0": 1.75,
+     "t1": 2.47,
+     "rs": 4,
+     "w": 460,
+     "h": 518,
+     "vw": 958,
+     "vh": 540
+    }
+   ]
+  },
+  {
+   "y": 7596,
+   "videos": [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t0": 1.7,
+     "t1": 2.41,
+     "rs": 4,
+     "w": 390,
+     "h": 439,
+     "vw": 958,
+     "vh": 540
+    }
+   ]
+  },
+  {
+   "y": 8232,
+   "videos": []
+  }
+ ],
+ "imgs": [
+  {
+   "src": "lugar-barra-a-960.avif",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": true
+  },
+  {
+   "src": "lugar-terraza-techada-a-960.avif",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": true
+  },
+  {
+   "src": "lugar-salon-m-712.avif",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": true
+  },
+  {
+   "src": "lugar-sillones-a-960.avif",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": true
+  },
+  {
+   "src": "lugar-terraza-abierta-a-720.webp",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": false
+  },
+  {
+   "src": "lugar-lampara-pinzas-a-720.webp",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": false
+  },
+  {
+   "src": "lugar-ojo-piojo-m-720.webp",
+   "w": 296,
+   "h": 370,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "lugar",
+   "done": false
+  },
+  {
+   "src": "tragos-bartender-a-1280.avif",
+   "w": 358,
+   "h": 448,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "tragos",
+   "done": true
+  },
+  {
+   "src": "carta-saguer-a-720.avif",
+   "w": 173,
+   "h": 216,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "tragos",
+   "done": true
+  },
+  {
+   "src": "carta-sangria-a-720.avif",
+   "w": 173,
+   "h": 216,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "tragos",
+   "done": true
+  },
+  {
+   "src": "carta-moto-a-480.avif",
+   "w": 148,
+   "h": 185,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "tragos",
+   "done": true
+  },
+  {
+   "src": "comida-pizza-a-1280.avif",
+   "w": 358,
+   "h": 448,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "comida",
+   "done": true
+  },
+  {
+   "src": "carta-tukulito-a-720.avif",
+   "w": 173,
+   "h": 173,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "comida",
+   "done": true
+  },
+  {
+   "src": "con-quien-barra-a-720.avif",
+   "w": 174,
+   "h": 218,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "quien",
+   "done": true
+  },
+  {
+   "src": "con-quien-amigos-a-720.avif",
+   "w": 174,
+   "h": 139,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "quien",
+   "done": true
+  },
+  {
+   "src": "con-quien-brindis-a-720.avif",
+   "w": 174,
+   "h": 218,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "quien",
+   "done": true
+  },
+  {
+   "src": "con-quien-risa-a-720.avif",
+   "w": 174,
+   "h": 218,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "quien",
+   "done": true
+  },
+  {
+   "src": "con-quien-solo-a-720.webp",
+   "w": 0,
+   "h": 0,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "quien",
+   "done": false
+  },
+  {
+   "src": "eventos-10-anos-a-1280.avif",
+   "w": 358,
+   "h": 224,
+   "fit": "cover",
+   "pos": "50% 40%",
+   "sec": "eventos",
+   "done": true
+  },
+  {
+   "src": "eventos-12-anos-a-720.avif",
+   "w": 113,
+   "h": 141,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "eventos",
+   "done": true
+  },
+  {
+   "src": "eventos-fondita-a-720.avif",
+   "w": 113,
+   "h": 141,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "eventos",
+   "done": true
+  },
+  {
+   "src": "eventos-jaloguin-a-720.avif",
+   "w": 113,
+   "h": 141,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "eventos",
+   "done": true
+  },
+  {
+   "src": "equipo-milagros-a-854.avif",
+   "w": 242,
+   "h": 302,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "equipo",
+   "done": true
+  },
+  {
+   "src": "equipo-javier-a-960.avif",
+   "w": 242,
+   "h": 302,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "equipo",
+   "done": true
+  },
+  {
+   "src": "equipo-eduardo-a-960.avif",
+   "w": 242,
+   "h": 302,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "equipo",
+   "done": true
+  },
+  {
+   "src": "equipo-liz-a-960.avif",
+   "w": 242,
+   "h": 302,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "equipo",
+   "done": true
+  },
+  {
+   "src": "equipo-pablete-a-960.avif",
+   "w": 242,
+   "h": 302,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "equipo",
+   "done": true
+  }
+ ],
+ "vend": [
+  {
+   "src": "portada-celular-720.webm",
+   "poster": "portada-celular-poster.webp",
+   "paused": false,
+   "t": 2.73,
+   "dur": 3.72,
+   "rs": 4,
+   "vw": 720,
+   "vh": 1280,
+   "top": -8232,
+   "w": 390,
+   "h": 844,
+   "vis": false
+  },
+  {
+   "src": "",
+   "poster": "",
+   "paused": true,
+   "t": 0,
+   "dur": 0,
+   "rs": 0,
+   "vw": 0,
+   "vh": 0,
+   "top": 0,
+   "w": 0,
+   "h": 0,
+   "vis": false
+  },
+  {
+   "src": "lugar-cintas-600.webm",
+   "poster": "lugar-cintas-poster.webp",
+   "paused": false,
+   "t": 2.65,
+   "dur": 5.93,
+   "rs": 4,
+   "vw": 600,
+   "vh": 750,
+   "top": -7155,
+   "w": 358,
+   "h": 448,
+   "vis": false
+  },
+  {
+   "src": "tragos-humo-720.webm",
+   "poster": "tragos-humo-poster.webp",
+   "paused": false,
+   "t": 3.62,
+   "dur": 7.4,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -5450,
+   "w": 222,
+   "h": 277,
+   "vis": false
+  },
+  {
+   "src": "comida-cazuela-720.webm",
+   "poster": "comida-cazuela-poster.webp",
+   "paused": false,
+   "t": 3.29,
+   "dur": 7.8,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -3697,
+   "w": 173,
+   "h": 216,
+   "vis": false
+  },
+  {
+   "src": "donde-letrero-958.webm",
+   "poster": "donde-letrero-poster.webp",
+   "paused": false,
+   "t": 2.24,
+   "dur": 3.13,
+   "rs": 4,
+   "vw": 958,
+   "vh": 540,
+   "top": -678,
+   "w": 390,
+   "h": 439,
+   "vis": false
+  }
+ ],
+ "rt_end": [
+  {
+   "n": "big-shoulders-display-latin-wght-normal.woff2",
+   "t": "link",
+   "s": 35804,
+   "st": 28
+  },
+  {
+   "n": "barlow-condensed-latin-500-normal.woff2",
+   "t": "link",
+   "s": 21724,
+   "st": 28
+  },
+  {
+   "n": "barlow-condensed-latin-600-normal.woff2",
+   "t": "link",
+   "s": 22608,
+   "st": 28
+  },
+  {
+   "n": "tokens.css?v=b59f1ef1",
+   "t": "link",
+   "s": 2278,
+   "st": 29
+  },
+  {
+   "n": "site.css?v=7bd1d193",
+   "t": "link",
+   "s": 22356,
+   "st": 29
+  },
+  {
+   "n": "gsap.min.js",
+   "t": "script",
+   "s": 72514,
+   "st": 29
+  },
+  {
+   "n": "lenis.min.js",
+   "t": "script",
+   "s": 13785,
+   "st": 29
+  },
+  {
+   "n": "ScrollTrigger.min.js",
+   "t": "script",
+   "s": 43680,
+   "st": 29
+  },
+  {
+   "n": "site.js?v=aa761229",
+   "t": "script",
+   "s": 9042,
+   "st": 29
+  },
+  {
+   "n": "portada-celular-poster.webp",
+   "t": "video",
+   "s": 36486,
+   "st": 128
+  },
+  {
+   "n": "portada-celular-720.webm",
+   "t": "video",
+   "s": 901112,
+   "st": 153
+  },
+  {
+   "n": "lugar-barra-a-960.avif",
+   "t": "img",
+   "s": 82421,
+   "st": 265
+  },
+  {
+   "n": "lugar-terraza-techada-a-960.avif",
+   "t": "img",
+   "s": 119253,
+   "st": 265
+  },
+  {
+   "n": "lugar-salon-m-712.avif",
+   "t": "img",
+   "s": 32311,
+   "st": 265
+  },
+  {
+   "n": "lugar-sillones-a-960.avif",
+   "t": "img",
+   "s": 35808,
+   "st": 265
+  },
+  {
+   "n": "favicon.svg",
+   "t": "other",
+   "s": 725,
+   "st": 458
+  },
+  {
+   "n": "tragos-bartender-a-1280.avif",
+   "t": "img",
+   "s": 77492,
+   "st": 8852
+  },
+  {
+   "n": "lugar-cintas-poster.webp",
+   "t": "video",
+   "s": 42758,
+   "st": 8879
+  },
+  {
+   "n": "lugar-cintas-600.webm",
+   "t": "video",
+   "s": 1180688,
+   "st": 8880
+  },
+  {
+   "n": "carta-saguer-a-720.avif",
+   "t": "img",
+   "s": 31664,
+   "st": 12822
+  },
+  {
+   "n": "carta-sangria-a-720.avif",
+   "t": "img",
+   "s": 24546,
+   "st": 12822
+  },
+  {
+   "n": "carta-moto-a-480.avif",
+   "t": "img",
+   "s": 10554,
+   "st": 12823
+  },
+  {
+   "n": "carta-tukulito-a-720.avif",
+   "t": "img",
+   "s": 29489,
+   "st": 16154
+  },
+  {
+   "n": "comida-pizza-a-1280.avif",
+   "t": "img",
+   "s": 89471,
+   "st": 16154
+  },
+  {
+   "n": "tragos-humo-poster.webp",
+   "t": "video",
+   "s": 18730,
+   "st": 16155
+  },
+  {
+   "n": "tragos-humo-720.webm",
+   "t": "video",
+   "s": 564403,
+   "st": 16156
+  },
+  {
+   "n": "con-quien-barra-a-720.avif",
+   "t": "img",
+   "s": 27784,
+   "st": 19759
+  },
+  {
+   "n": "con-quien-amigos-a-720.avif",
+   "t": "img",
+   "s": 39467,
+   "st": 19761
+  },
+  {
+   "n": "con-quien-brindis-a-720.avif",
+   "t": "img",
+   "s": 58910,
+   "st": 19761
+  },
+  {
+   "n": "con-quien-risa-a-720.avif",
+   "t": "img",
+   "s": 24025,
+   "st": 19761
+  },
+  {
+   "n": "eventos-10-anos-a-1280.avif",
+   "t": "img",
+   "s": 109781,
+   "st": 23104
+  },
+  {
+   "n": "eventos-12-anos-a-720.avif",
+   "t": "img",
+   "s": 71716,
+   "st": 23104
+  },
+  {
+   "n": "eventos-fondita-a-720.avif",
+   "t": "img",
+   "s": 62901,
+   "st": 23104
+  },
+  {
+   "n": "eventos-jaloguin-a-720.avif",
+   "t": "img",
+   "s": 36933,
+   "st": 23104
+  },
+  {
+   "n": "comida-cazuela-poster.webp",
+   "t": "video",
+   "s": 34172,
+   "st": 23104
+  },
+  {
+   "n": "comida-cazuela-720.webm",
+   "t": "video",
+   "s": 1196622,
+   "st": 23105
+  },
+  {
+   "n": "equipo-milagros-a-854.avif",
+   "t": "img",
+   "s": 31994,
+   "st": 26656
+  },
+  {
+   "n": "equipo-eduardo-a-960.avif",
+   "t": "img",
+   "s": 60754,
+   "st": 26656
+  },
+  {
+   "n": "equipo-javier-a-960.avif",
+   "t": "img",
+   "s": 64372,
+   "st": 26656
+  },
+  {
+   "n": "equipo-pablete-a-960.avif",
+   "t": "img",
+   "s": 47029,
+   "st": 26657
+  },
+  {
+   "n": "equipo-liz-a-960.avif",
+   "t": "img",
+   "s": 31828,
+   "st": 26657
+  },
+  {
+   "n": "donde-letrero-poster.webp",
+   "t": "video",
+   "s": 15522,
+   "st": 33936
+  },
+  {
+   "n": "donde-letrero-958.webm",
+   "t": "video",
+   "s": 150215,
+   "st": 33938
+  }
+ ]
+}
