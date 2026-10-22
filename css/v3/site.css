@@ -144,7 +144,7 @@ html[lang="en"] .gloss--i{display:inline}
 .moc__l{margin:6px 0 14px;font-size:20px}
 .moc__n{display:block;text-decoration:none}
 .moc .kick{color:var(--muro-2)}
-@media (min-width:768px){
+@media (min-width:1024px){
   .tragos__g{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:0;align-items:start}
   .tragos__head{grid-column:1/7;grid-row:1;padding-bottom:40px}
   .it--hero{grid-column:1/6;grid-row:2/4}
@@ -159,7 +159,7 @@ html[lang="en"] .gloss--i{display:inline}
 .comida{background:var(--noche-2);padding-block:var(--sec)}
 .comida .ttl{color:var(--ambar)}
 .comida__g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.comida__head,.comida__v,.menu{grid-column:1/-1}
+.comida__head,.comida__v,.comida .menu{grid-column:1/-1}
 .comida__head{margin-bottom:16px}
 .comida__b{margin-top:40px}
 .menu{margin-top:28px}
@@ -176,7 +176,7 @@ html[lang="en"] .gloss--i{display:inline}
   .comida__v{grid-column:8/13;grid-row:1/4;height:84vh;width:auto;justify-self:end}
   .comida__a{grid-column:1/4;grid-row:2}
   .comida__b{grid-column:4/7;grid-row:2;margin-top:12vh}
-  .menu{grid-column:1/7;grid-row:3;margin-top:56px}
+  .comida .menu{grid-column:1/7;grid-row:3;margin-top:56px}
   .menu__n{font-size:34px}
 }
 
@@ -242,7 +242,7 @@ html[lang="en"] .gloss--i{display:inline}
 .datos__big{font:800 34px/1 var(--f-display);text-transform:uppercase}
 .datos__s{margin-top:6px;color:var(--papel-2)}
 .donde__btns{display:grid;gap:10px}
-@media (min-width:768px){
+@media (min-width:1024px){
   .donde{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);min-height:100vh;align-items:center}
   .donde__v{height:100%;min-height:100vh}
   .donde__t{padding:var(--sec) var(--gut)}
@@ -280,7 +280,7 @@ html[lang="en"] .gloss--i{display:inline}
 /* ronda juicio Carmen */
 .it--hero{display:grid;grid-template-columns:62% minmax(0,1fr);gap:16px;align-items:end}
 .it--hero .it__m{margin-bottom:0}
-@media (min-width:768px){.it--hero{display:block}.it--hero .it__m{margin-bottom:12px}}
+@media (min-width:1024px){.it--hero{display:block}.it--hero .it__m{margin-bottom:12px}}
 .own{margin-top:20px;font:500 16px/1.4 var(--f-body);color:var(--papel-2)}
 .own__k{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:15px;margin-right:6px}
 .own a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--papel)}
@@ -295,7 +295,7 @@ html[lang="en"] .gloss--i{display:inline}
 .donde__v video{object-position:50% 45%}
 @media (min-width:1024px){
 }
-@media (min-width:768px){
+@media (min-width:1024px){
   .donde{padding-block:var(--sec);column-gap:clamp(24px,4vw,64px);padding-left:var(--gut)}
   .donde__v{height:auto;min-height:0;aspect-ratio:958/540;border-radius:var(--radius);align-self:center}
   .donde__t{padding-block:0}
@@ -326,7 +326,7 @@ html[lang="en"] .gloss--i{display:inline}
 /* Comida: pizza 4:5 a la derecha, columnas parejas */
 @media (min-width:1024px){
   .comida__head{grid-column:1/7;grid-row:1;margin-bottom:32px}
-  .menu{grid-column:1/7;grid-row:2;margin-top:0}
+  .comida .menu{grid-column:1/7;grid-row:2;margin-top:0}
   .comida__a{grid-column:1/4;grid-row:3;margin-top:40px}
   .comida__b{grid-column:4/7;grid-row:3;margin-top:calc(40px + 6vh)}
   .comida__v{grid-column:7/13;grid-row:1/4;height:auto;width:100%;aspect-ratio:4/5;align-self:end;justify-self:stretch}
@@ -335,4 +335,4 @@ html[lang="en"] .gloss--i{display:inline}
 /* Con quién: tres columnas, la tercera con una foto centrada */
 @media (min-width:768px){.col:first-child{margin-top:6vh}.col--3{margin-top:18vw}}
 /* Dónde: titular sin huérfanos */
-@media (min-width:768px){.donde .ttl{font-size:clamp(56px,5.2vw,92px);max-width:none}}
+@media (min-width:1024px){.donde .ttl{font-size:clamp(56px,5.2vw,92px);max-width:none}}

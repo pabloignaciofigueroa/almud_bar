@@ -228,6 +228,7 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
     <a class="btn btn--ghost" href="../" data-en="Home">Inicio</a>
   </footer>
 </main>
+<script>(function(d){{if(d.documentElement.lang!=='en')return;d.querySelectorAll('body [data-en]').forEach(function(e){{e.dataset.es=e.textContent;e.textContent=e.dataset.en}})}})(document)</script>
 <script src="../../js/v3/carta.js?v={ver('js/v3/carta.js')}" defer></script>
 </body>
 </html>

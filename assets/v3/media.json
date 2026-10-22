@@ -4608,13 +4608,13 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB).",
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB). Ronda 1 (peso): 720 px y ≤1.000 KB para que el primer pantallazo del celular quede ≤1,5 MB.",
    "source_size": [
     1080,
     1920
    ],
-   "width": 900,
-   "height": 1600,
+   "width": 720,
+   "height": 1280,
    "ratio": "9:16",
    "segments": [
     [
@@ -4628,7 +4628,7 @@
    "duration": 4.15,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
-   "budget_kb": 1250,
+   "budget_kb": 1000,
    "within_budget": true,
    "seam": {
     "last_vs_first": 17.02,
@@ -4636,33 +4636,33 @@
    },
    "files": {
     "webm": {
-     "path": "assets/v3/video/portada-celular-900.webm",
-     "bytes": 1248655,
+     "path": "assets/v3/video/portada-celular-720.webm",
+     "bytes": 970701,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 40
     },
     "mp4": {
-     "path": "assets/v3/video/portada-celular-900.mp4",
-     "bytes": 1217468,
+     "path": "assets/v3/video/portada-celular-720.mp4",
+     "bytes": 966687,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 30
+     "crf": 29
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v3/video/portada-celular-poster.avif",
-     "bytes": 40896
+     "bytes": 31372
     },
     "webp": {
      "path": "assets/v3/video/portada-celular-poster.webp",
-     "bytes": 52812
+     "bytes": 40418
     },
     "jpg": {
      "path": "assets/v3/video/portada-celular-poster.jpg",
-     "bytes": 127031
+     "bytes": 92364
     }
    },
-   "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoNABgAPwFqrE6rJiQiMAgBYCAJbACdABVRkhg3EPzY2doAAP6qhKkCJ4PZqRIa/KxazrNrCDaiwYD2AOF21CLy1RLMMKuMyJ+HwBiWwvHKjKJN9WZpslSJNGfCcv0hQ1Pxdl7qxjiqlqAx6liWs3+xuIGYAAAA",
+   "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoNABgAPwFqrU8rJiQiMAgBYCAJbACdABVf7q/bQd156Vc7IAD+qoSpAieD2akSGv4BUAD8YCZu8BIaXYHj5MuERRVoUoGfiDBOl8xpsE51+mjpPDlH13N4SBnhLApB7TxaZZYACpRVS1AY+LO4tV/sYlm0gAAA",
    "color": "#7e2736"
   },
   "portada-escritorio": {

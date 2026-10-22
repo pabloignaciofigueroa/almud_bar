@@ -1,7 +1,7 @@
 /* Almud Bar · v3
    Videos: autoplay muted loop playsinline. El JS SOLO les pone el póster y la fuente: la portada
    (por orientación) ya la conectó el script en línea del HTML; el resto se conecta una sola vez cuando
-   está a ≤1,5 pantallas (IntersectionObserver SOLO para cargar). Una vez cargado, nunca se pausa ni se toca.
+   está a ≤0,6 pantallas (IntersectionObserver SOLO para cargar). Una vez cargado, nunca se pausa ni se toca.
    Con movimiento reducido: solo póster. */
 (() => {
   'use strict';
@@ -30,7 +30,7 @@
   const lazy = $$('video.v:not([data-hero])');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); attach(e.target); } }),
-      { rootMargin: '150% 0px' });
+      { rootMargin: '10% 0px 60% 0px' });
     lazy.forEach(v => io.observe(v));
   } else lazy.forEach(attach);
 

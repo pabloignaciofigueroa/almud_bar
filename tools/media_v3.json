@@ -1130,16 +1130,15 @@
     50
    ],
    "widths": [
-    900,
     720
    ],
    "crf_max": 30,
-   "budget_kb": 1250,
+   "budget_kb": 1000,
    "alt": {
     "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
     "en": "The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."
    },
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB)."
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB). Ronda 1 (peso): 720 px y ≤1.000 KB para que el primer pantallazo del celular quede ≤1,5 MB."
   },
   {
    "id": "portada-escritorio",
