@@ -1,0 +1,1290 @@
+{
+ "_doc": "Manifiesto de medios v3 (fase 7). Lo consume tools/media_v3.py, que escribe assets/v3/img, assets/v3/video y assets/v3/media.json. crops: ratio \"W:H\" u \"orig\"; focal = [x%, y%] del centro deseado; max = ancho tope; widths = anchos propios. Nunca se amplía. videos: segments = tramos [ini, fin] en s que se concatenan; loop boomerang (ida y vuelta) o crossfade (xfade s del final al inicio); widths = anchos a probar de mayor a menor hasta cumplir budget_kb con CRF <= crf_max; sin audio; póster = primer frame del loop. alt es/en descriptivos; solo Eventos nombra el evento. post se deduce del archivo; credits = fotógrafos por post.",
+ "widths": [
+  480,
+  720,
+  960,
+  1280,
+  1440,
+  1920
+ ],
+ "quality": {
+  "avif": 52,
+  "webp": 76
+ },
+ "images": [
+  {
+   "id": "lugar-barra",
+   "ref": "P093",
+   "src": "assets/raw/ig/DAMHps8JVVr_07.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "La barra curva de madera con frente de baldosa, el muro rojo de botellas, banderines y lámparas tejidas.",
+    "en": "The curved wooden bar with a tiled front, the red bottle wall, bunting and woven lamps."
+   },
+   "rincon": "barra"
+  },
+  {
+   "id": "lugar-salon",
+   "ref": "P076",
+   "src": "assets/raw/ig/C-V5Lc7SZ-K_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "d",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ]
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      40,
+      55
+     ]
+    }
+   ],
+   "alt": {
+    "es": "El salón interior de noche: mesas de madera, luz cálida y gente conversando tras una mampara de vidrio.",
+    "en": "The indoor room at night: wooden tables, warm light and people talking behind a glass partition."
+   },
+   "rincon": "salón"
+  },
+  {
+   "id": "lugar-sillones",
+   "ref": "P114",
+   "src": "assets/raw/ig/DBMtYELSzNS_14.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Una mujer ríe y aplaude en el rincón de sillones, con cojines estampados y baldosa hidráulica.",
+    "en": "A woman laughs and claps in the lounge corner, with patterned cushions and encaustic tiles."
+   },
+   "rincon": "sillones"
+  },
+  {
+   "id": "lugar-terraza-techada",
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      42
+     ],
+     "max": 1440
+    },
+    {
+     "name": "d",
+     "ratio": "16:9",
+     "focal": [
+      50,
+      36
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "La terraza techada llena de gente bajo el techo de miles de cintas de colores, con estufas encendidas.",
+    "en": "The covered terrace packed with people under a ceiling of thousands of coloured ribbons, heaters glowing."
+   },
+   "rincon": "terraza techada",
+   "note": "Favorita n.º 1 de Carmen. Ya no es la portada (la portada es video), así que encabeza El lugar. 1440 px: nunca a sangre en 1920."
+  },
+  {
+   "id": "lugar-terraza-abierta",
+   "ref": "P039",
+   "src": "assets/raw/ig/Cqn78DFp5Nm_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1332
+    }
+   ],
+   "alt": {
+    "es": "La terraza abierta de noche: ripio, árboles, guirnaldas de ampolletas y mesas de picnic llenas.",
+    "en": "The open terrace at night: gravel, trees, string lights and full picnic tables."
+   },
+   "rincon": "terraza abierta"
+  },
+  {
+   "id": "lugar-lampara-pinzas",
+   "ref": "V014-cover",
+   "src": "assets/raw/ig/C9BDvFvJk4z_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      28
+     ],
+     "max": 1080
+    }
+   ],
+   "alt": {
+    "es": "Lámparas hechas con pinzas de ropa de madera, encendidas sobre la barra.",
+    "en": "Lamps made from wooden clothespins, glowing above the bar."
+   },
+   "rincon": "luces",
+   "note": "Portada de reel sobremuestreada (3216x5712 desde un original menor): tope 1080 px."
+  },
+  {
+   "id": "lugar-ojo-piojo",
+   "ref": "V005-cover",
+   "src": "assets/raw/ig/C3BXBcjpJWA_00.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ]
+    },
+    {
+     "name": "m",
+     "ratio": "4:5",
+     "focal": [
+      58,
+      50
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Mural de cientos de ojos fotografiados, con una planta desenfocada delante.",
+    "en": "A mural of hundreds of photographed eyes, with an out-of-focus plant in front."
+   },
+   "rincon": "mural Ojo Piojo",
+   "note": "Foto que Carmen nombra para Ojo Piojo (IG-118). 902 px: solo tarjeta, nunca a sangre."
+  },
+  {
+   "id": "tragos-splash",
+   "ref": "P297",
+   "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1920
+    },
+    {
+     "name": "s",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Un cóctel rojo salpica fuera de una copa coupé sobre la barra de madera, con botellas desenfocadas detrás.",
+    "en": "A red cocktail splashes out of a coupe on the wooden bar, bottles blurred behind."
+   }
+  },
+  {
+   "id": "tragos-sours",
+   "ref": "P086",
+   "src": "assets/raw/ig/DAMHps8JVVr_00.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1366
+    }
+   ],
+   "alt": {
+    "es": "Tres copas con espuma y gypsophila seca sobre la barra.",
+    "en": "Three foamy coupes garnished with dried baby's breath on the bar."
+   }
+  },
+  {
+   "id": "tragos-copa-tallada",
+   "ref": "P097",
+   "src": "assets/raw/ig/DAMHps8JVVr_11.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1366
+    }
+   ],
+   "alt": {
+    "es": "Copa tallada con un trago naranja y espuma, frente al muro rosa de botellas desenfocado.",
+    "en": "A cut-glass coupe with an orange drink and foam against the blurred pink bottle wall."
+   }
+  },
+  {
+   "id": "tragos-old-fashioned",
+   "ref": "P003",
+   "src": "assets/raw/ig/Cmce2h1J3Wl_00.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 1280
+    }
+   ],
+   "alt": {
+    "es": "Un trago ámbar con hielo y una frutilla sobre el posavasos de Almud, en madera cálida.",
+    "en": "An amber drink on ice with a strawberry on an Almud coaster, on warm wood."
+   },
+   "note": "Carmen lo llama old fashioned; IG-178 no lo nombra: sin nombre de trago."
+  },
+  {
+   "id": "comida-pizza",
+   "ref": "P036",
+   "src": "assets/raw/ig/CqEI2nSJP2__00.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1332
+    }
+   ],
+   "alt": {
+    "es": "Una garzona sonríe a la cámara mientras sostiene una pizza recién salida.",
+    "en": "A server smiles at the camera holding a freshly baked pizza."
+   },
+   "note": "No se presenta como equipo (no está en IG-001)."
+  },
+  {
+   "id": "comida-ceviche",
+   "ref": "P298",
+   "src": "assets/raw/ig/DY0AUvhlHjI_00.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Ceviche de atún con palta, pimentón y cilantro en una greda negra, con pan tostado al lado.",
+    "en": "Tuna ceviche with avocado, pepper and coriander in a black clay bowl, with toasted bread."
+   },
+   "note": "Luz de día (la única de comida en alta). Parece «Todo que ver!» pero el post no lo nombra: sin nombre."
+  },
+  {
+   "id": "comida-hamburguesa",
+   "ref": "P305",
+   "src": "assets/raw/ig/DY0AUvhlHjI_13.jpg",
+   "section": "comida",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      42
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Hamburguesa en pan con sésamo, con cebolla caramelizada, hojas verdes y queso derretido.",
+    "en": "A sesame-bun burger with caramelised onion, greens and melted cheese."
+   }
+  },
+  {
+   "id": "con-quien-amigas",
+   "ref": "P254",
+   "src": "assets/raw/ig/DU35ZDPCBcH_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Dos amigas brindan con sus tragos frente al muro rosa de botellas iluminadas.",
+    "en": "Two friends toast with their drinks in front of the glowing pink bottle wall."
+   }
+  },
+  {
+   "id": "con-quien-barra",
+   "ref": "P031",
+   "src": "assets/raw/ig/CpVyxXJJrhO_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1332
+    }
+   ],
+   "alt": {
+    "es": "Un grupo de amigas ríe y brinda en la barra con tragos de colores.",
+    "en": "A group of friends laughs and toasts at the bar with colourful drinks."
+   }
+  },
+  {
+   "id": "con-quien-risa",
+   "ref": "P041",
+   "src": "assets/raw/ig/CrMRBMNpdIF_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "max": 1332
+    }
+   ],
+   "alt": {
+    "es": "Una mujer ríe a carcajadas en la mesa, frente a un muro de cintas verticales de colores.",
+    "en": "A woman bursts out laughing at her table, in front of a wall of vertical coloured ribbons."
+   }
+  },
+  {
+   "id": "con-quien-amigos",
+   "ref": "P259",
+   "src": "assets/raw/ig/DYiMMUrlBk1_03.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Tres amigos abrazados sonríen a la cámara; una de ellas sostiene una brocheta.",
+    "en": "Three friends hug and smile at the camera; one holds a skewer."
+   },
+   "note": "5:4 sin recorte: un 4:5 cortaba la cara de la derecha. Lleva flash (va en mosaico, no a sangre)."
+  },
+  {
+   "id": "con-quien-solo",
+   "ref": "P194",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_12.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Gente acodada en la barra bajo una lámpara de flecos dorados mientras el bartender prepara tragos.",
+    "en": "People leaning on the bar under a golden fringe lamp while the bartender mixes drinks."
+   }
+  },
+  {
+   "id": "con-quien-brindis",
+   "ref": "P182",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_00.jpg",
+   "section": "con-quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Una mesa brinda bajo el techo de cintas de colores, junto a una estufa de pilar encendida.",
+    "en": "A table toasts under the coloured-ribbon ceiling, next to a lit patio heater."
+   }
+  },
+  {
+   "id": "eventos-12-anos",
+   "ref": "P348",
+   "src": "assets/raw/ig/Dbg3ekilC4P_11.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "La celebración de los 12 años de Almud: la terraza repleta bajo los banderines, vista desde arriba.",
+    "en": "Almud's 12th anniversary: the terrace packed under the bunting, seen from above."
+   },
+   "evento": "12 años",
+   "note": "Violeta permitido solo en Eventos."
+  },
+  {
+   "id": "eventos-jaloguin",
+   "ref": "P234",
+   "src": "assets/raw/ig/DShtzZ0FD9H_05.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      38
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Jalogüín en Almud: una catrina con corona de flores levanta un trago rojo bajo la lámpara de flecos.",
+    "en": "Halloween at Almud: a Catrina with a flower crown raises a red drink under the fringe lamp."
+   },
+   "evento": "Jalogüín"
+  },
+  {
+   "id": "eventos-fondita",
+   "ref": "P090",
+   "src": "assets/raw/ig/DAMHps8JVVr_04.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1366
+    }
+   ],
+   "alt": {
+    "es": "La fondita de Almud: faroles de papel azul y naranja colgando entre las cintas, sobre la terraza llena.",
+    "en": "Almud's Fiestas Patrias \"fondita\": blue and orange paper lanterns hanging among the ribbons over the busy terrace."
+   },
+   "evento": "Fondita"
+  },
+  {
+   "id": "eventos-14f",
+   "ref": "V006-cover",
+   "src": "assets/raw/ig/C3VODtYsjNX_00.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1080
+    }
+   ],
+   "alt": {
+    "es": "14 de febrero en Almud: manos con uñas rosadas sostienen un trago rosa con una mariposa de papel.",
+    "en": "Valentine's Day at Almud: hands with pink nails hold a pink cocktail topped with a paper butterfly."
+   },
+   "evento": "14F",
+   "note": "Portada del reel 14F (IG-117), sobremuestreada: tope 1080 px. El afiche IG-116 tiene texto: descartado."
+  },
+  {
+   "id": "eventos-negroni-week",
+   "ref": "P226",
+   "src": "assets/raw/ig/DP7O0BElPhW_00.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      50
+     ],
+     "max": 1423
+    }
+   ],
+   "alt": {
+    "es": "Un bartender revuelve un negroni con hielo sobre la barra, con luz ámbar.",
+    "en": "A bartender stirs a negroni over ice on the bar, in amber light."
+   },
+   "evento": "Negroni Week",
+   "note": "HUECO: el post de Negroni Week (IG-005) solo tiene afiches con texto. Esta es un negroni de la casa (IG-042), no del evento: el alt no dice que sea la Negroni Week."
+  },
+  {
+   "id": "eventos-primavera",
+   "ref": "P102",
+   "src": "assets/raw/ig/DBMtYELSzNS_02.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Bienvenida a la primavera en Almud: mesas llenas bajo un techo de banderines de papel de colores.",
+    "en": "Welcoming spring at Almud: busy tables under a ceiling of colourful paper bunting."
+   },
+   "evento": "Primavera"
+  },
+  {
+   "id": "eventos-10-anos",
+   "ref": "P073",
+   "src": "assets/raw/ig/C9dHAAxJkSi_00.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1334
+    }
+   ],
+   "alt": {
+    "es": "Los 10 años de Almud: un gran número 10 hecho de flores bajo el techo de banderines.",
+    "en": "Almud's 10th anniversary: a giant number 10 made of flowers under the bunting."
+   },
+   "evento": "10 años",
+   "optional": true,
+   "note": "Extra opcional: la favorita de Carmen \"de evento\"."
+  },
+  {
+   "id": "equipo-garzona-abanicos",
+   "ref": "P391",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      42,
+      45
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Una garzona del equipo sonríe mientras atiende una mesa, con abanicos de papel de colores detrás.",
+    "en": "A member of the floor team smiles while serving a table, colourful paper fans behind her."
+   }
+  },
+  {
+   "id": "equipo-bartender-joven",
+   "ref": "P392",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_01.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      52,
+      32
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un bartender del equipo sirve concentrado frente al muro rojo de botellas y el cartel ALMUD.",
+    "en": "A bartender from the team pours, focused, in front of the red bottle wall and the ALMUD sign."
+   }
+  },
+  {
+   "id": "equipo-garzon",
+   "ref": "P393",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      32
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un garzón del equipo, tatuado, con camisa estampada y gorro, lleva un plato al salón.",
+    "en": "A tattooed server from the team, in a patterned shirt and cap, carries a plate to the room."
+   }
+  },
+  {
+   "id": "equipo-garzona-pizza",
+   "ref": "P394",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_03.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      32
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Una garzona del equipo sonríe con una pizza en cada mano.",
+    "en": "A server from the team smiles with a pizza in each hand."
+   },
+   "note": "Luz violeta (foto del posteo de equipo; no hay otra de ella)."
+  },
+  {
+   "id": "equipo-bartender-barba",
+   "ref": "P109",
+   "src": "assets/raw/ig/DBMtYELSzNS_09.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      35
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un bartender del equipo, con barba y camisa floreada, ríe mientras prepara un trago frente al muro rosa.",
+    "en": "A bearded bartender from the team, in a floral shirt, laughs while mixing a drink by the pink wall."
+   },
+   "note": "Es la misma foto que IG-001 #5 (repost a 1067 px); se usa el original de 1440 px.",
+   "post_override": "IG-001"
+  },
+  {
+   "id": "equipo-grupo",
+   "ref": "P157",
+   "src": "assets/raw/ig/DEP9IUpR9G4_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "El equipo de Almud posa al aire libre, con árboles y el mar de Castro detrás.",
+    "en": "The Almud team poses outdoors, with trees and the sea of Castro behind them."
+   },
+   "status": "por-confirmar",
+   "note": "Única foto grupal propia (IG-067, dic-2024). Puede incluir exempleados: Carmen debe confirmar antes de publicarla; si no, Equipo va sin foto grupal."
+  },
+  {
+   "id": "equipo-duo",
+   "ref": "P333",
+   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Dos garzonas del equipo sonríen con corbata, jockey y delantal.",
+    "en": "Two servers from the team smile in ties, caps and aprons."
+   },
+   "status": "por-confirmar",
+   "optional": true,
+   "note": "IG-014 (jul-2026) las nombra con @; no están en IG-001: confirmar."
+  },
+  {
+   "id": "donde-puerta",
+   "ref": "P199",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
+   "section": "donde",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "En la puerta de madera de Almud, una mujer con megáfono y polera «Te espero en la cuneta».",
+    "en": "At Almud's wooden door, a woman with a megaphone wears a \"Te espero en la cuneta\" T-shirt."
+   }
+  },
+  {
+   "id": "carta-olvidar",
+   "ref": "V057-cover",
+   "src": "assets/raw/ig/DeC9NEioZFw_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Vino tinto tiñe un vaso con una gran esfera de hielo y una lámina de manzana seca.",
+    "en": "Red wine streams into a glass with a large ice sphere and a dried apple slice."
+   },
+   "carta_item": "Cómo te voy a olvidar"
+  },
+  {
+   "id": "carta-saguer",
+   "ref": "V030-cover",
+   "src": "assets/raw/ig/DEieMaByhUU_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      60
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Un soplete ahúma un trago ámbar sobre un posavasos de madera.",
+    "en": "A torch smokes an amber drink on a wooden coaster."
+   },
+   "carta_item": "Sagüer on Faia"
+  },
+  {
+   "id": "carta-sangria",
+   "ref": "P228",
+   "src": "assets/raw/ig/DRkwz2OlC01_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Copa tallada con sangría roja, hielo y flores secas sobre la barra.",
+    "en": "A cut-glass goblet of red sangria with ice and dried flowers on the bar."
+   },
+   "carta_item": "Sangría Foreva!"
+  },
+  {
+   "id": "carta-coquette",
+   "ref": "P074",
+   "src": "assets/raw/ig/C9xrKP8Jehi_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      62,
+      50
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Una clienta sonriente recibe un trago rosado y cremoso con flores.",
+    "en": "A smiling guest receives a creamy pink drink topped with flowers."
+   },
+   "carta_item": "A veces me pongo Coquette"
+  },
+  {
+   "id": "carta-moto",
+   "ref": "P336",
+   "src": "assets/raw/ig/DaquSYCofM8_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Mocktail naranja de mango y maracuyá con borde de sal y una rodaja de pepino.",
+    "en": "An orange mango-passion fruit mocktail with a salted rim and a cucumber slice."
+   },
+   "carta_item": "La moto chantá"
+  },
+  {
+   "id": "carta-tukulito",
+   "ref": "P044",
+   "src": "assets/raw/ig/CsXCLdZpgB7_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Tataki de atún sellado en láminas con pan tostado y salsa, en plato de vidrio.",
+    "en": "Sliced seared tuna tataki with toasted bread and sauce on a glass plate."
+   },
+   "carta_item": "Tukulito Sakayama"
+  },
+  {
+   "id": "carta-contuti",
+   "ref": "P158",
+   "src": "assets/raw/ig/DEVtFfySKVY_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Tabla para compartir vista desde arriba: quesos, jamón, aceitunas, frutos secos y naranja.",
+    "en": "A sharing board from above: cheeses, ham, olives, nuts and orange."
+   },
+   "carta_item": "Con tuti si no pa qué!"
+  },
+  {
+   "id": "carta-camaron",
+   "ref": "P099",
+   "src": "assets/raw/ig/DAbw0xKSimd_00.jpg",
+   "section": "carta",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 960,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Cazuela negra con camarones y champiñones en salsa cremosa.",
+    "en": "A black clay dish of prawns and mushrooms in a creamy sauce."
+   },
+   "carta_item": "Camarón que se duerme"
+  }
+ ],
+ "videos": [
+  {
+   "id": "portada-celular",
+   "ref": "V021",
+   "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4",
+   "section": "portada",
+   "variant": "celular",
+   "segments": [
+    [
+     0.5,
+     4.4
+    ]
+   ],
+   "loop": "boomerang",
+   "ratio": "9:16",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    1080,
+    900,
+    720
+   ],
+   "crf_max": 30,
+   "budget_kb": 1380,
+   "alt": {
+    "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
+    "en": "The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."
+   },
+   "note": "Celular <900 px. Paneo continuo 0,5–4,4 s (antes del corte de 5,19 s; sin el guest bartender). Boomerang: el paneo vuelve, no salta. 1080p nativo. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster."
+  },
+  {
+   "id": "portada-escritorio",
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "variant": "escritorio",
+   "segments": [
+    [
+     4.3,
+     10.4
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 0.6,
+   "ratio": "orig",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    1278
+   ],
+   "crf_max": 30,
+   "budget_kb": 2500,
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "alt": {
+    "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
+    "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
+   },
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna."
+  },
+  {
+   "id": "lugar-cintas",
+   "ref": "V009",
+   "src": "assets/raw/ig/C5WAi8PLHni_00.mp4",
+   "section": "lugar",
+   "rincon": "techo de cintas",
+   "segments": [
+    [
+     0.3,
+     4.0
+    ]
+   ],
+   "loop": "boomerang",
+   "ratio": "4:5",
+   "focal": [
+    50,
+    45
+   ],
+   "widths": [
+    720
+   ],
+   "crf_max": 32,
+   "budget_kb": 1200,
+   "alt": {
+    "es": "Paneo lento por el techo de miles de cintas de colores con luces cálidas.",
+    "en": "A slow pan across the ceiling of thousands of coloured ribbons and warm lights."
+   },
+   "note": "Un solo plano de 7,1 s; boomerang de 3,7 s."
+  },
+  {
+   "id": "tragos-humo",
+   "ref": "V038",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
+   "section": "tragos",
+   "carta_item": "Aquí te las traigo Peter",
+   "segments": [
+    [
+     8.6,
+     12.1
+    ],
+    [
+     12.2,
+     16.7
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 0.6,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    55
+   ],
+   "widths": [
+    720
+   ],
+   "crf_max": 32,
+   "budget_kb": 1200,
+   "alt": {
+    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
+    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
+   },
+   "note": "Dos planos (burbuja creciendo / mano que la revienta, corte propio del reel en 12,16 s) y crossfade 0,6 s del humo a la copa. Es el trago «Aquí te las traigo Peter»: la carta enlaza a este loop (no se repite la portada del reel)."
+  },
+  {
+   "id": "comida-cazuela",
+   "ref": "V052",
+   "src": "assets/raw/ig/DZgLFzooZB__00.mp4",
+   "section": "comida",
+   "segments": [
+    [
+     0.0,
+     3.95
+    ]
+   ],
+   "loop": "boomerang",
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720
+   ],
+   "crf_max": 32,
+   "budget_kb": 1200,
+   "alt": {
+    "es": "Cazuela cremosa de mariscos burbujeando en greda negra, con cilantro picado.",
+    "en": "A creamy seafood stew bubbling in a black clay pot, with chopped coriander."
+   },
+   "note": "Plano único de 4 s con acercamiento lento: boomerang."
+  },
+  {
+   "id": "donde-letrero",
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "donde",
+   "segments": [
+    [
+     0.7,
+     4.15
+    ]
+   ],
+   "loop": "boomerang",
+   "ratio": "orig",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    1278
+   ],
+   "crf_max": 32,
+   "budget_kb": 1200,
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "alt": {
+    "es": "El letrero luminoso ALMUD BAR y la cámara que baja hasta la puerta de vidrio y madera de la entrada.",
+    "en": "The illuminated ALMUD BAR sign, the camera tilting down to the glass-and-wood entrance door."
+   },
+   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4)."
+  }
+ ],
+ "credits": {
+  "IG-050": "@estudiouno.prod",
+  "IG-075": "@estudiouno.prod",
+  "IG-061": "@estudiouno.prod",
+  "IG-100": "@estudiouno.prod",
+  "IG-144": "@catarsis.fotografia",
+  "IG-147": "@catarsis.fotografia",
+  "IG-141": "@catarsis.fotografia",
+  "IG-167": "@catarsis.fotografia",
+  "IG-009": "@isosur.prod",
+  "IG-178": "@tamillanquileo",
+  "IG-103": "@rober.patagonico"
+ },
+ "rejected": [
+  {
+   "ref": "V056",
+   "reason": "Reel de creadores externos (IG-007) con texto encima: contenido de terceros."
+  },
+  {
+   "ref": "V041/V042",
+   "reason": "Banda Isleños: terceros."
+  },
+  {
+   "ref": "P100/P111/P115/P116",
+   "reason": "Músicos invitados (terceros)."
+  },
+  {
+   "ref": "P283/P294",
+   "reason": "Rucalaf: terceros."
+  },
+  {
+   "ref": "P396 (IG-001 #6)",
+   "reason": "Retrato del equipo con corona y alas (disfraz) fuera de Eventos."
+  },
+  {
+   "ref": "P027",
+   "reason": "Despedida de un exbartender."
+  },
+  {
+   "ref": "P379/P380, P064",
+   "reason": "Afiches con texto (Negroni Week, 14F)."
+  },
+  {
+   "ref": "P229/P242/P136/P347",
+   "reason": "Disfraces y tortas fuera de Eventos; para Jalogüín se elige P234."
+  },
+  {
+   "ref": "V021 5,2–12 s",
+   "reason": "Guest bartender (tercero) y cortes rápidos."
+  },
+  {
+   "ref": "V031 >10,5 s",
+   "reason": "Subtítulos quemados."
+  },
+  {
+   "ref": "P362",
+   "reason": "Mismo bartender y misma sesión que P392 (IG-001), que va en Equipo: no se repite."
+  },
+  {
+   "ref": "P091",
+   "reason": "Cazuela: ya está el loop V052 y el ítem Camarón que se duerme; no se repite el motivo."
+  }
+ ]
+}
