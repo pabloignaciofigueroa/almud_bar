@@ -30,3 +30,7 @@
 2026-10-22 20:38:12 eventos-jaloguin: tramo elegido DCC4Xp3hZU- (V027, Jalogüín 2024) 34,15–43,15 s, fundido 0,9 s
 2026-10-22 20:48:00 eventos-jaloguin: a 720 y 600 px pasaba el tope de 1.200 KB (mucho detalle de disfraces); se codifica a 540 px, que basta para la ficha del calendario (≤ 300 px css)
 2026-10-22 20:51:32 hoja-loops-3.jpg y fundidos de los 3 loops revisados a ojo: sin saltos
+2026-10-22 20:53:27 integración ronda 3: boceto_v4.py (video de los 12 años en el banner de Eventos y video en la ficha de Jalogüín) y css/v4/site.css (Eventos: video a la izquierda y calendario en filas en escritorio; 4:5 a lo ancho en celular). No se tocó el bloque Con quién
+2026-10-22 20:53:27 regenerados nueva/index.html y public/ (390 archivos); index.html raíz sin cambios
+2026-10-22 20:53:27 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, los 11 videos visibles en play y avanzando; primer pantallazo celular 1.624 KB sin compresión (≈1.455 KB con gzip); sin huecos grandes en Eventos ni en Comida
+2026-10-22 20:53:27 entregables ronda 3: hoja-loops-3.jpg, videos.md y filas 19–21 en justificacion.md
