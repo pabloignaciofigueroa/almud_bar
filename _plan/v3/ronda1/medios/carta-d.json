@@ -1,0 +1,365 @@
+{
+ "init": {
+  "v0": [
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 1.42,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 605,
+    "w": 140,
+    "h": 175,
+    "vis": true,
+    "fit": "cover"
+   }
+  ],
+  "v1": [
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 2.71,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 605,
+    "w": 140,
+    "h": 175,
+    "vis": true,
+    "fit": "cover"
+   }
+  ],
+  "rt1500": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 32
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 32
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 33
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 33
+   },
+   {
+    "n": "site.css?v=d0709496",
+    "t": "link",
+    "s": 18308,
+    "st": 33
+   },
+   {
+    "n": "carta.css?v=e57235a9",
+    "t": "link",
+    "s": 5386,
+    "st": 33
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 33
+   },
+   {
+    "n": "carta.js?v=34fa90ef",
+    "t": "script",
+    "s": 4906,
+    "st": 33
+   },
+   {
+    "n": "carta-olvidar-a-360.avif",
+    "t": "img",
+    "s": 9706,
+    "st": 93
+   },
+   {
+    "n": "carta-saguer-a-360.avif",
+    "t": "img",
+    "s": 11495,
+    "st": 94
+   },
+   {
+    "n": "carta-sangria-a-360.avif",
+    "t": "img",
+    "s": 10435,
+    "st": 94
+   },
+   {
+    "n": "carta-coquette-a-360.avif",
+    "t": "img",
+    "s": 7297,
+    "st": 94
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 108
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 323
+   }
+  ],
+  "rt4000": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 32,
+    "d": 37
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 32,
+    "d": 37
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 33,
+    "d": 37
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 33,
+    "d": 14
+   },
+   {
+    "n": "site.css?v=d0709496",
+    "t": "link",
+    "s": 18308,
+    "st": 33,
+    "d": 19
+   },
+   {
+    "n": "carta.css?v=e57235a9",
+    "t": "link",
+    "s": 5386,
+    "st": 33,
+    "d": 30
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 33,
+    "d": 51
+   },
+   {
+    "n": "carta.js?v=34fa90ef",
+    "t": "script",
+    "s": 4906,
+    "st": 33,
+    "d": 52
+   },
+   {
+    "n": "carta-olvidar-a-360.avif",
+    "t": "img",
+    "s": 9706,
+    "st": 93,
+    "d": 45
+   },
+   {
+    "n": "carta-saguer-a-360.avif",
+    "t": "img",
+    "s": 11495,
+    "st": 94,
+    "d": 45
+   },
+   {
+    "n": "carta-sangria-a-360.avif",
+    "t": "img",
+    "s": 10435,
+    "st": 94,
+    "d": 45
+   },
+   {
+    "n": "carta-coquette-a-360.avif",
+    "t": "img",
+    "s": 7297,
+    "st": 94,
+    "d": 45
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 108,
+    "d": 35
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 323,
+    "d": 11
+   }
+  ],
+  "nav": {
+   "load": 320,
+   "dcl": 105,
+   "html": 106344
+  }
+ },
+ "steps": [
+  {
+   "y": 900,
+   "videos": []
+  },
+  {
+   "y": 1144,
+   "videos": []
+  }
+ ],
+ "imgs": [
+  {
+   "src": "carta-olvidar-a-360.avif",
+   "nw": 160,
+   "nh": 160,
+   "w": 140,
+   "h": 140,
+   "top": 817,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Vino tinto tiñe un vaso con una gran esfera de hie"
+  },
+  {
+   "src": "carta-saguer-a-360.avif",
+   "nw": 160,
+   "nh": 200,
+   "w": 140,
+   "h": 175,
+   "top": 1112,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Un soplete ahúma un trago ámbar sobre un posavasos"
+  },
+  {
+   "src": "carta-sangria-a-360.avif",
+   "nw": 160,
+   "nh": 200,
+   "w": 140,
+   "h": 175,
+   "top": 1324,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Copa tallada con sangría roja, hielo y flores seca"
+  },
+  {
+   "src": "carta-coquette-a-360.avif",
+   "nw": 160,
+   "nh": 200,
+   "w": 140,
+   "h": 175,
+   "top": 1654,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Una clienta sonriente recibe un trago rosado y cre"
+  },
+  {
+   "src": "carta-moto-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 1144,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "sin",
+   "alt": "Mocktail naranja de mango y maracuyá con borde de "
+  },
+  {
+   "src": "carta-tukulito-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 1144,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Tataki de atún sellado en láminas con pan tostado "
+  },
+  {
+   "src": "carta-contuti-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 1144,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Tabla para compartir vista desde arriba: quesos, j"
+  },
+  {
+   "src": "carta-camaron-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 1144,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Cazuela negra con camarones y champiñones en salsa"
+  }
+ ],
+ "videos_end": [
+  {
+   "cls": "v",
+   "src": "tragos-humo-720.webm",
+   "poster": "tragos-humo-poster.webp",
+   "paused": false,
+   "t": 4.62,
+   "dur": 7.4,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -539,
+   "w": 140,
+   "h": 175,
+   "vis": false,
+   "fit": "cover"
+  }
+ ]
+}
