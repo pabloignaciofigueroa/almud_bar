@@ -169,8 +169,8 @@ body = f'''
 <header class="nav" data-nav>
   <a class="nav__logo" href="#top" aria-label="Almud Bar">{svg_inline('almud-nav-claro', 'nav__svg')}</a>
   <nav class="nav__r" aria-label="Principal" data-aria-en="Main">
-    <button class="nav__a nav__lang" type="button" data-lang aria-label="English" data-aria-en="Español"><span data-en="ES">EN</span></button>
     <a class="btn btn--rosa nav__carta" href="{CARTA}" data-en="Menu">Carta</a>
+    <button class="nav__a nav__lang" type="button" data-lang aria-label="English" data-aria-en="Español"><span data-en="ES">EN</span></button>
   </nav>
 </header>
 
@@ -235,7 +235,7 @@ body = f'''
       </div>
     </div>
     </div>
-    <p class="ver-carta"><a class="btn btn--papel" href="{C_CASA}" data-en="See the full menu">Ver la carta completa</a></p>
+    <p class="ver-carta"><a class="btn btn--rosa" href="{C_CASA}" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
 </section>
 

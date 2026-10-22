@@ -1,0 +1,40 @@
+/* Almud Bar · paleta v3 · solo color. Fuente y contrastes: brand/palette-v3.md */
+:root{
+  /* base: la noche cálida del local */
+  --noche:#0e0c0b;          /* fondo principal */
+  --noche-2:#0e0c0b;        /* superficies: tarjetas, carta */
+  --noche-3:#2a2522;        /* superficie elevada, bordes, separadores */
+  --papel:#f5e9db;          /* texto principal / fondo de pantalla clara */
+  --papel-2:#d8c2b0;        /* texto secundario sobre noche (Carmen P: más claro) */
+  --letrero-blanco:#f9f8f9; /* logo ALMUD */
+
+  /* acentos: máximo 1-2 por pantalla */
+  --muro-rosa:#f24350;          /* ACENTO PRINCIPAL: CTA (texto --noche encima) y enlaces sobre noche */
+  --muro-rosa-tinta:#c41e34;    /* el mismo acento sobre --papel (texto o botón con texto --papel) */
+  --letrero-azul:#2aa1f8;       /* acento secundario: enlaces, foco, "BAR". Solo sobre noche */
+  --letrero-azul-tinta:#1d5fae; /* el acento 2 sobre --papel */
+
+  /* secciones: fondos planos (3 como máximo) */
+  --muro:#a8222d;   --muro-2:#f7cfc4;   /* Tragos: texto --papel, secundario --muro-2 */
+  --ambar:#e5a05c;  /* Comida: fondo --noche-2, ámbar SOLO como acento (Carmen P) */
+  --tinta:#142a5c;  --tinta-2:#b9c9ea;  /* Eventos: solo con foto/afiche encima; texto --papel */
+  --dorado:#d9a441; /* Eventos y aniversarios: marca de "próximo" (reemplaza al rosa sobre tinta) */
+
+  /* v4 · colores del local (cintas, muro, letrero) */
+  --c-rosa:#f24350; --c-rojo:#d7262b; --c-naranja:#f27a12; --c-amarillo:#f5c518; --c-verde:#0f8a5f; --c-lila:#a58ac9; --c-crema:#f5e9db;
+  /* roles semánticos */
+  --bg:var(--noche);
+  --surface:var(--noche-2);
+  --surface-2:var(--noche-3);
+  --text:var(--papel);
+  --text-2:var(--papel-2);
+  --accent:var(--muro-rosa);
+  --on-accent:var(--noche);
+  --accent-2:var(--letrero-azul);
+  --focus:var(--letrero-azul);
+  /* forma y tipo (Carmen P) */
+  --radius:4px; --btn-h:48px; --btn-w:600;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; /* 800, mayúsculas, títulos ≤120px, ≤3 líneas */
+  --f-body:"Barlow Condensed","Arial Narrow",Arial,sans-serif;           /* 500 a 18px/1.5, nunca <16px */
+  --price:var(--papel);
+}
