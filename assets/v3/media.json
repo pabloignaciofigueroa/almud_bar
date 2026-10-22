@@ -2,6 +2,153 @@
  "_doc": "Generado por tools/media_v3.py desde tools/media_v3.json. images[id].crops[name].files[avif|webp][ancho] = {path, bytes}; width/height = intrínsecos del mayor ancho. videos[id].files: webm (VP9) primero, mp4 (H.264, faststart) de respaldo; poster = primer frame del loop (avif/webp/jpg). alt.es/alt.en: solo Eventos nombra el evento. status \"por-confirmar\" = Carmen debe aprobar antes de publicar.",
  "images": {},
  "videos": {
+  "portada-celular": {
+   "ref": "V021",
+   "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
+    "en": "The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."
+   },
+   "credit": {
+    "post": "IG-090",
+    "date": "2024-08-09",
+    "url": "https://www.instagram.com/p/C-dwJHLyPpU/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "variant": "celular",
+   "note": "Celular <900 px. Paneo continuo 0,5–4,4 s (antes del corte de 5,19 s; sin el guest bartender). Boomerang: el paneo vuelve, no salta. 1080p nativo. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster.",
+   "source_size": [
+    1080,
+    1920
+   ],
+   "width": 720,
+   "height": 1280,
+   "ratio": "9:16",
+   "segments": [
+    [
+     0.5,
+     4.4
+    ]
+   ],
+   "loop": "boomerang",
+   "frames": 216,
+   "fps": 27.934,
+   "duration": 7.73,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1380,
+   "within_budget": false,
+   "seam": {
+    "last_vs_first": 18.7,
+    "typical_step": 21.1
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/portada-celular-720.webm",
+     "bytes": 1799182,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 40
+    },
+    "mp4": {
+     "path": "assets/v3/video/portada-celular-720.mp4",
+     "bytes": 1984047,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 28
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/portada-celular-poster.avif",
+     "bytes": 34683
+    },
+    "webp": {
+     "path": "assets/v3/video/portada-celular-poster.webp",
+     "bytes": 45524
+    },
+    "jpg": {
+     "path": "assets/v3/video/portada-celular-poster.jpg",
+     "bytes": 99549
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoNABgAPwFsrU8rJiQiMAgBYCAJbACdABuQ+Gry0NSSVf33cAAA/h6wi2DT/fStPQaHOrN2UkifID/tyjKI8qLQ3uNLJNmZyKREmLiQ2KoibN+v0Q4tNXADkmfmSrnazRkZP3R3GqhymfxSiEAAAA==",
+   "color": "#7d2832"
+  },
+  "portada-escritorio": {
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
+    "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
+   },
+   "credit": {
+    "post": "IG-061",
+    "date": "2025-01-27",
+    "url": "https://www.instagram.com/p/DFWLrRxyvVB/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Video: @estudiouno.prod para @almud_bar"
+   },
+   "variant": "escritorio",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna.",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 1278,
+   "height": 720,
+   "ratio": "1278:720",
+   "segments": [
+    [
+     4.3,
+     10.4
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 165,
+   "fps": 30.0,
+   "duration": 5.5,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 2500,
+   "within_budget": true,
+   "seam": {
+    "last_vs_first": 13.2,
+    "typical_step": 10.37
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/portada-escritorio-1278.webm",
+     "bytes": 1730246,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 30
+    },
+    "mp4": {
+     "path": "assets/v3/video/portada-escritorio-1278.mp4",
+     "bytes": 1557860,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 21
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/portada-escritorio-poster.avif",
+     "bytes": 39477
+    },
+    "webp": {
+     "path": "assets/v3/video/portada-escritorio-poster.webp",
+     "bytes": 52372
+    },
+    "jpg": {
+     "path": "assets/v3/video/portada-escritorio-poster.jpg",
+     "bytes": 108468
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQBACdASoYAA4APwFqrE6rJiQiMAgBYCAJbACdMoMxgDMSxkHF6Xfam9hIkoAA/tui5rGEMDdfVRsoxjgevA8X9uAC2xJH35TNfu35TFZOWat/zoH2dwOuGpS/kO0KW4nITLOM5YCzRZrPY+ogVhRvxCWAvNAA",
+   "color": "#7c3c32"
+  },
   "lugar-cintas": {
    "ref": "V009",
    "src": "assets/raw/ig/C5WAi8PLHni_00.mp4",
@@ -18,7 +165,80 @@
     "text": "@almud_bar"
    },
    "rincon": "techo de cintas",
-   "note": "Un solo plano de 7,1 s; boomerang de 3,7 s.",
+   "note": "Un solo plano de 7,1 s; boomerang de 3 s (6 s). Textura de cintas muy cara de comprimir: 720 px si cabe en 1,2 MB con CRF ≤28, si no 600 px.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 600,
+   "height": 750,
+   "ratio": "4:5",
+   "segments": [
+    [
+     0.3,
+     3.3
+    ]
+   ],
+   "loop": "boomerang",
+   "frames": 178,
+   "fps": 30.0,
+   "duration": 5.93,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "within_budget": true,
+   "seam": {
+    "last_vs_first": 14.07,
+    "typical_step": 18.61
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/lugar-cintas-600.webm",
+     "bytes": 1180388,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 40
+    },
+    "mp4": {
+     "path": "assets/v3/video/lugar-cintas-600.mp4",
+     "bytes": 1186375,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 27
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/lugar-cintas-poster.avif",
+     "bytes": 30875
+    },
+    "webp": {
+     "path": "assets/v3/video/lugar-cintas-poster.webp",
+     "bytes": 42458
+    },
+    "jpg": {
+     "path": "assets/v3/video/lugar-cintas-poster.jpg",
+     "bytes": 74397
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwBACdASoTABgAPvVmqU6qpaOiMAwBUB6JYgCdMoM6Jn/Ao7zVvI7Ahe61PU91rAAA/u9dAozGEbyZG+vFuvpy4+S/I3UMkM7U5Ju8Ad2+mSC4oknUU29Man00+5y2b7sEq7B9jIrIJ2VmBHNjsJeqirksdfhcIDUAToIfuOrsAA==",
+   "color": "#3f1c13"
+  },
+  "tragos-humo": {
+   "ref": "V038",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
+   "section": "tragos",
+   "alt": {
+    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
+    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
+   },
+   "credit": {
+    "post": "IG-044",
+    "date": "2025-09-05",
+    "url": "https://www.instagram.com/p/DOO7fgniNI6/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Aquí te las traigo Peter",
+   "note": "Dos planos (burbuja creciendo / mano que la revienta, corte propio del reel en 12,16 s) y crossfade 0,6 s del humo a la copa. Es el trago «Aquí te las traigo Peter»: la carta enlaza a este loop (no se repite la portada del reel).",
    "source_size": [
     720,
     1280
@@ -28,52 +248,56 @@
    "ratio": "4:5",
    "segments": [
     [
-     0.3,
-     4.0
+     8.6,
+     12.1
+    ],
+    [
+     12.2,
+     16.7
     ]
    ],
-   "loop": "boomerang",
-   "frames": 220,
-   "fps": 30.0,
-   "duration": 7.33,
+   "loop": "crossfade",
+   "frames": 185,
+   "fps": 25.0,
+   "duration": 7.4,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 14.07,
-    "typical_step": 17.55
+    "last_vs_first": 4.33,
+    "typical_step": 2.01
    },
    "files": {
     "webm": {
-     "path": "assets/v3/video/lugar-cintas-720.webm",
-     "bytes": 1213032,
+     "path": "assets/v3/video/tragos-humo-720.webm",
+     "bytes": 564103,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 44
+     "crf": 30
     },
     "mp4": {
-     "path": "assets/v3/video/lugar-cintas-720.mp4",
-     "bytes": 1137582,
+     "path": "assets/v3/video/tragos-humo-720.mp4",
+     "bytes": 867560,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 31
+     "crf": 21
     }
    },
    "poster": {
     "avif": {
-     "path": "assets/v3/video/lugar-cintas-poster.avif",
-     "bytes": 38107
+     "path": "assets/v3/video/tragos-humo-poster.avif",
+     "bytes": 13398
     },
     "webp": {
-     "path": "assets/v3/video/lugar-cintas-poster.webp",
-     "bytes": 51732
+     "path": "assets/v3/video/tragos-humo-poster.webp",
+     "bytes": 18430
     },
     "jpg": {
-     "path": "assets/v3/video/lugar-cintas-poster.jpg",
-     "bytes": 96207
+     "path": "assets/v3/video/tragos-humo-poster.jpg",
+     "bytes": 49427
     }
    },
-   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoTABgAPvVkqE6qpaOiMAwBUB6JYgCdMoGv/gUd5l4OLKwD88c8WcAA/u9dAozGEbyZG+vFuwtmJrsiaEozIltrGg/7nhO7IKnKXmChcEtFQBZO5FgKH4GwHIOlOkWx15lHfOQ30UuPDoKM12Qq+s8z3jmD9cdGrvXoAA==",
-   "color": "#401d14"
+   "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBQCdASoTABgAPwF2slOrJyQiqAgBYCAJZgCdMoSG+BKGW9I6AOfeVvJJXx7eN6SVbQAA/sAkUNH+bYl3ZBUH7d0ONaAi4L+ne2l99u/j4p5h9bB1E9IIxEhROuTHiSN+z9uHK6jcW9tAVlSRbvfQRL9vGjjNbriNk2gvClBS+0bgAAA=",
+   "color": "#993517"
   },
   "comida-cazuela": {
    "ref": "V052",
@@ -114,7 +338,7 @@
    "within_budget": true,
    "seam": {
     "last_vs_first": 13.85,
-    "typical_step": 5.08
+    "typical_step": 12.69
    },
    "files": {
     "webm": {
@@ -146,6 +370,79 @@
    },
    "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBACdASoTABgAPwF0r1IrJqQiqAqpYCAJZAC7AAmDm1mOOU48nptjxkmo8TcAAP38yieApWGv40z/Tr8mLQIIdDgJfcgWOlCgY80SRtU26N2m9aY0Ja61pTUyc/4r4EUOF3gNUBBXzrjDwu7wW4FIxMY2VD/cpnjVQOQao3jyCmKc7IOM28QRP6FigBb0KczDNNKIAAA=",
    "color": "#8e875c"
+  },
+  "donde-letrero": {
+   "ref": "V031",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "donde",
+   "alt": {
+    "es": "El letrero luminoso ALMUD BAR y la cámara que baja hasta la puerta de vidrio y madera de la entrada.",
+    "en": "The illuminated ALMUD BAR sign, the camera tilting down to the glass-and-wood entrance door."
+   },
+   "credit": {
+    "post": "IG-061",
+    "date": "2025-01-27",
+    "url": "https://www.instagram.com/p/DFWLrRxyvVB/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Video: @estudiouno.prod para @almud_bar"
+   },
+   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4).",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 1278,
+   "height": 720,
+   "ratio": "1278:720",
+   "segments": [
+    [
+     0.7,
+     4.15
+    ]
+   ],
+   "loop": "boomerang",
+   "frames": 206,
+   "fps": 30.0,
+   "duration": 6.87,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "within_budget": true,
+   "seam": {
+    "last_vs_first": 1.54,
+    "typical_step": 15.8
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/donde-letrero-1278.webm",
+     "bytes": 1170984,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 37
+    },
+    "mp4": {
+     "path": "assets/v3/video/donde-letrero-1278.mp4",
+     "bytes": 1201703,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 26
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/donde-letrero-poster.avif",
+     "bytes": 9441
+    },
+    "webp": {
+     "path": "assets/v3/video/donde-letrero-poster.webp",
+     "bytes": 16914
+    },
+    "jpg": {
+     "path": "assets/v3/video/donde-letrero-poster.jpg",
+     "bytes": 39875
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAgCdASoYAA4AA8BgJYwC7AEPhrCW0OxXcArcAAD++E6O3e5O7hb6/7oRQxSyLSS0Ko7fHvHXAB9gPNcvavSAAAA=",
+   "color": "#060207"
   }
  },
  "team_ig001": {
