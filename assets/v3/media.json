@@ -18,7 +18,7 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Celular <900 px. Paneo continuo 0,5–4,4 s (antes del corte de 5,19 s; sin el guest bartender). Boomerang: el paneo vuelve, no salta. 1080p nativo. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster.",
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster.",
    "source_size": [
     1080,
     1920
@@ -28,32 +28,32 @@
    "ratio": "9:16",
    "segments": [
     [
-     0.5,
-     4.4
+     0.6,
+     3.3
     ]
    ],
    "loop": "boomerang",
-   "frames": 216,
+   "frames": 150,
    "fps": 27.934,
-   "duration": 7.73,
+   "duration": 5.37,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1380,
-   "within_budget": false,
+   "within_budget": true,
    "seam": {
-    "last_vs_first": 18.7,
-    "typical_step": 21.1
+    "last_vs_first": 19.41,
+    "typical_step": 21.2
    },
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-celular-720.webm",
-     "bytes": 1799182,
+     "bytes": 1390286,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 40
+     "crf": 38
     },
     "mp4": {
      "path": "assets/v3/video/portada-celular-720.mp4",
-     "bytes": 1984047,
+     "bytes": 1363065,
      "type": "video/mp4; codecs=\"avc1.640028\"",
      "crf": 28
     }
@@ -61,19 +61,19 @@
    "poster": {
     "avif": {
      "path": "assets/v3/video/portada-celular-poster.avif",
-     "bytes": 34683
+     "bytes": 34178
     },
     "webp": {
      "path": "assets/v3/video/portada-celular-poster.webp",
-     "bytes": 45524
+     "bytes": 44394
     },
     "jpg": {
      "path": "assets/v3/video/portada-celular-poster.jpg",
-     "bytes": 99549
+     "bytes": 98562
     }
    },
-   "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoNABgAPwFsrU8rJiQiMAgBYCAJbACdABuQ+Gry0NSSVf33cAAA/h6wi2DT/fStPQaHOrN2UkifID/tyjKI8qLQ3uNLJNmZyKREmLiQ2KoibN+v0Q4tNXADkmfmSrnazRkZP3R3GqhymfxSiEAAAA==",
-   "color": "#7d2832"
+   "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoNABgAPwFsrU8rJiQiMAgBYCAJbACdMoR8eCKRglBnPPBcVQAA/h7QDmJNrXu4duFYv2Bqo17rHGBQZBpEyXOdJsdYLH/Ob/FmuS13qvGPzrShFBm9v3IgScQ9CjEsbizGNLvkTLNm+kIA",
+   "color": "#7e2730"
   },
   "portada-escritorio": {
    "ref": "V031",
@@ -121,15 +121,15 @@
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-escritorio-1278.webm",
-     "bytes": 1730246,
+     "bytes": 2431105,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 30
+     "crf": 25
     },
     "mp4": {
      "path": "assets/v3/video/portada-escritorio-1278.mp4",
-     "bytes": 1557860,
+     "bytes": 2046635,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 21
+     "crf": 18
     }
    },
    "poster": {
