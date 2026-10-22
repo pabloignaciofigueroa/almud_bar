@@ -31,3 +31,4 @@
 - 2026-10-21 v3 fase 7: medios (45 imágenes, 6 loops, media.json, 07-medios.jpg)
 - 2026-10-22 v3 fase 8: juicio Carmen boceto 15/20; aplicando cambios (horario en portada NO: decisión de Pablo)
 - 2026-10-22 v3 fase 8 aprobada: Carmen 19/20 al boceto. Bloque B completo.
+- 2026-10-22 v3 fases 9-14: construcción cerrada (detalles Carmen, versión ?v=, OG/lang, /v3/carta/ con pestañas). Bloque C completo.

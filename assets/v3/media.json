@@ -4977,13 +4977,13 @@
     "photo": "@estudiouno.prod",
     "text": "Video: @estudiouno.prod para @almud_bar"
    },
-   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2).",
+   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2). Recorte 958x540 (x=160,y=0) centrado en el letrero, hecho a mano con ffmpeg sobre la salida de media_v3.py (juicio Carmen r2): si se regenera, repetir el recorte.",
    "source_size": [
     1278,
     720
    ],
-   "width": 1278,
-   "height": 720,
+   "width": 958,
+   "height": 540,
    "ratio": "1278:720",
    "segments": [
     [
@@ -5005,14 +5005,14 @@
    },
    "files": {
     "webm": {
-     "path": "assets/v3/video/donde-letrero-1278.webm",
-     "bytes": 235634,
+     "path": "assets/v3/video/donde-letrero-958.webm",
+     "bytes": 149915,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 30
     },
     "mp4": {
-     "path": "assets/v3/video/donde-letrero-1278.mp4",
-     "bytes": 273836,
+     "path": "assets/v3/video/donde-letrero-958.mp4",
+     "bytes": 162404,
      "type": "video/mp4; codecs=\"avc1.640028\"",
      "crf": 21
     }
@@ -5020,15 +5020,15 @@
    "poster": {
     "avif": {
      "path": "assets/v3/video/donde-letrero-poster.avif",
-     "bytes": 405
+     "bytes": 8652
     },
     "webp": {
      "path": "assets/v3/video/donde-letrero-poster.webp",
-     "bytes": 1706
+     "bytes": 15222
     },
     "jpg": {
      "path": "assets/v3/video/donde-letrero-poster.jpg",
-     "bytes": 5926
+     "bytes": 30880
     }
    },
    "lqip": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAgCdASoYAA4APwFqrE6rJiQiMAgBYCAJaQAAeyAA/vDCf2goAAAA",

@@ -294,8 +294,13 @@ html[lang="en"] .gloss--i{display:inline}
 .own__k{font-size:16px}
 .own a{font-size:18px;font-weight:600}
 @media (min-width:1024px){.own{max-width:1600px;margin-inline:auto;margin-top:5vh}}
-.donde__v video{object-position:50% 30%}
+.donde__v video{object-position:50% 45%}
 @media (min-width:1024px){
   .comida__v{grid-row:1/4;align-self:stretch;height:auto;aspect-ratio:auto;width:100%;min-height:72vh}
   .comida__g{grid-template-rows:auto auto auto}
+}
+@media (min-width:768px){
+  .donde{padding-block:var(--sec);column-gap:clamp(24px,4vw,64px);padding-left:var(--gut)}
+  .donde__v{height:auto;min-height:0;aspect-ratio:958/540;border-radius:var(--radius);align-self:center}
+  .donde__t{padding-block:0}
 }

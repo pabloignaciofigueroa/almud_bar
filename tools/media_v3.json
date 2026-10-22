@@ -1296,7 +1296,7 @@
     "es": "El letrero luminoso ALMUD BAR y la cámara que baja hasta la puerta de vidrio y madera de la entrada.",
     "en": "The illuminated ALMUD BAR sign, the camera tilting down to the glass-and-wood entrance door."
    },
-   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2)."
+   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2). Luego: recorte manual 958x540 (crop=958:540:160:0) sobre el loop, ver media.json."
   }
  ],
  "credits": {
