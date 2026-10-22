@@ -33,3 +33,4 @@
 - 2026-10-22 v3 fase 8 aprobada: Carmen 19/20 al boceto. Bloque B completo.
 - 2026-10-22 v3 fases 9-14: construcción cerrada (detalles Carmen, versión ?v=, OG/lang, /v3/carta/ con pestañas). Bloque C completo.
 - 2026-10-22 v3 fase 15: ronda 1 aplicada (videos por cercanía sin pausa, carta en papel, fotos de Carmen en Tragos, EN completo)
+- Fase 16 ✅ ronda 2 cerrada: Voz 18 · Color 19 · Carta 18 · Imágenes/Video 18 (commit 11c0784)
