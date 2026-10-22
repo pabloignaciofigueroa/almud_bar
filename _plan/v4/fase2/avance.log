@@ -10,3 +10,4 @@
 2026-10-22 12:17:15 donde-terraza: tramo elegido C3tFEcvJ80x (V007) 0,0–8,92 s, fundido 0,8 s (reemplaza donde-letrero: V031 lo usa entero la portada)
 2026-10-22 12:17:15 lugar-terraza: no se crea aparte (la terraza ya sale en lugar-cintas y donde-terraza; sin otro plano propio de 8 s)
 2026-10-22 12:45:46 codificación lista: 8 loops en assets/v4/video (27 min); costuras medidas con seam_diff
+2026-10-22 12:46:04 revisión a ojo: hoja-loops.jpg + tiras del fundido de los 8 loops (sin saltos; costuras altas solo por cámara en movimiento)
