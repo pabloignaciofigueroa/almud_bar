@@ -259,7 +259,7 @@ def seam_diff(mid):
 
 def enc_mp4(mid, out, tw, th, cw, crf):
     vf = f'scale={tw}:{th}:flags=lanczos,unsharp=5:5:0.3:5:5:0.0,format=yuv420p' if tw < cw else 'format=yuv420p'
-    ff('-i', mid, '-an', '-vf', vf, '-c:v', 'libx264', '-preset', 'veryslow', '-crf', str(crf), '-profile:v', 'high',
+    ff('-i', mid, '-an', '-vf', vf, '-c:v', 'libx264', '-preset', 'slower', '-crf', str(crf), '-profile:v', 'high',
        '-level', '4.1' if th > 1280 or tw > 1280 else '4.0', '-tune', 'film', '-x264-params', 'keyint=60:min-keyint=30',
        *COLOR, '-movflags', '+faststart', out)
 
@@ -267,17 +267,27 @@ def enc_mp4(mid, out, tw, th, cw, crf):
 def enc_webm(mid, out, tw, th, cw, crf):
     vf = f'scale={tw}:{th}:flags=lanczos,unsharp=5:5:0.3:5:5:0.0,format=yuv420p' if tw < cw else 'format=yuv420p'
     ff('-i', mid, '-an', '-vf', vf, '-c:v', 'libvpx-vp9', '-crf', str(crf), '-b:v', '0', '-deadline', 'good',
-       '-cpu-used', '2', '-row-mt', '1', '-tile-columns', '1', '-g', '60', *COLOR, out)
+       '-cpu-used', '3', '-row-mt', '1', '-tile-columns', '1', '-g', '60', *COLOR, out)
 
 
 def search(fn, mid, out, tw, th, cw, start, stop, budget):
-    used = None
-    for crf in range(start, stop + 1):
+    """Bisección: el CRF más bajo (mejor calidad) en [start, stop] que cabe en el presupuesto."""
+    lo, hi, best, last = start, stop, None, None
+    while lo <= hi:
+        crf = (lo + hi) // 2
         fn(mid, out, tw, th, cw, crf)
-        used = crf
+        last = crf
         if os.path.getsize(out) <= budget:
-            return crf, True
-    return used, False
+            best, hi = crf, crf - 1
+        else:
+            lo = crf + 1
+    if best is None:
+        if last != stop:
+            fn(mid, out, tw, th, cw, stop)
+        return stop, False
+    if last != best:
+        fn(mid, out, tw, th, cw, best)  # el último intento no fue el elegido: reescribir
+    return best, True
 
 
 def do_video(v, credits):

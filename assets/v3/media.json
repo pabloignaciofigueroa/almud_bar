@@ -1,0 +1,150 @@
+{
+ "_doc": "Generado por tools/media_v3.py desde tools/media_v3.json. images[id].crops[name].files[avif|webp][ancho] = {path, bytes}; width/height = intrínsecos del mayor ancho. videos[id].files: webm (VP9) primero, mp4 (H.264, faststart) de respaldo; poster = primer frame del loop (avif/webp/jpg). alt.es/alt.en: solo Eventos nombra el evento. status \"por-confirmar\" = Carmen debe aprobar antes de publicar.",
+ "images": {},
+ "videos": {
+  "lugar-cintas": {
+   "ref": "V009",
+   "src": "assets/raw/ig/C5WAi8PLHni_00.mp4",
+   "section": "lugar",
+   "alt": {
+    "es": "Paneo lento por el techo de miles de cintas de colores con luces cálidas.",
+    "en": "A slow pan across the ceiling of thousands of coloured ribbons and warm lights."
+   },
+   "credit": {
+    "post": "IG-111",
+    "date": "2024-04-04",
+    "url": "https://www.instagram.com/p/C5WAi8PLHni/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "rincon": "techo de cintas",
+   "note": "Un solo plano de 7,1 s; boomerang de 3,7 s.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     0.3,
+     4.0
+    ]
+   ],
+   "loop": "boomerang",
+   "frames": 220,
+   "fps": 30.0,
+   "duration": 7.33,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "within_budget": true,
+   "seam": {
+    "last_vs_first": 14.07,
+    "typical_step": 17.55
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/lugar-cintas-720.webm",
+     "bytes": 1207993,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 44
+    },
+    "mp4": {
+     "path": "assets/v3/video/lugar-cintas-720.mp4",
+     "bytes": 1196377,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 30
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/lugar-cintas-poster.avif",
+     "bytes": 38107
+    },
+    "webp": {
+     "path": "assets/v3/video/lugar-cintas-poster.webp",
+     "bytes": 51732
+    },
+    "jpg": {
+     "path": "assets/v3/video/lugar-cintas-poster.jpg",
+     "bytes": 96207
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoTABgAPvVkqE6qpaOiMAwBUB6JYgCdMoGv/gUd5l4OLKwD88c8WcAA/u9dAozGEbyZG+vFuwtmJrsiaEozIltrGg/7nhO7IKnKXmChcEtFQBZO5FgKH4GwHIOlOkWx15lHfOQ30UuPDoKM12Qq+s8z3jmD9cdGrvXoAA==",
+   "color": "#401d14"
+  }
+ },
+ "team_ig001": {
+  "milagroosjm": "DeNQ8A2lDgg_00",
+  "javier.agmc": "DeNQ8A2lDgg_01",
+  "eduu.ardoo": "DeNQ8A2lDgg_02",
+  "lizzearellano": "DeNQ8A2lDgg_03",
+  "pablete_bartender_": "DeNQ8A2lDgg_04",
+  "elymar_bocarejo": "DeNQ8A2lDgg_05",
+  "_src": "usertags por foto en assets/raw/ig/posts_new.json"
+ },
+ "rejected": [
+  {
+   "ref": "V056",
+   "reason": "Reel de creadores externos (IG-007) con texto encima: contenido de terceros."
+  },
+  {
+   "ref": "V041/V042",
+   "reason": "Banda Isleños: terceros."
+  },
+  {
+   "ref": "P100/P111/P115/P116",
+   "reason": "Músicos invitados (terceros)."
+  },
+  {
+   "ref": "P283/P294",
+   "reason": "Rucalaf: terceros."
+  },
+  {
+   "ref": "P027",
+   "reason": "Despedida de un exbartender."
+  },
+  {
+   "ref": "P379/P380, P064",
+   "reason": "Afiches con texto (Negroni Week, 14F)."
+  },
+  {
+   "ref": "P229/P242/P136/P347",
+   "reason": "Disfraces y tortas fuera de Eventos; para Jalogüín se elige P234."
+  },
+  {
+   "ref": "V021 5,2–12 s",
+   "reason": "Guest bartender (tercero) y cortes rápidos."
+  },
+  {
+   "ref": "V031 >10,5 s",
+   "reason": "Subtítulos quemados."
+  },
+  {
+   "ref": "P362",
+   "reason": "Mismo bartender y misma sesión que P392 (IG-001), que va en Equipo: no se repite."
+  },
+  {
+   "ref": "P091",
+   "reason": "Cazuela: ya está el loop V052 y el ítem Camarón que se duerme; no se repite el motivo."
+  },
+  {
+   "ref": "P157",
+   "reason": "Foto grupal de dic-2024 al aire libre: muchos posibles exempleados; se prefiere la de la barra (C-bY0mLNYRz) por confirmar y el dúo P333."
+  },
+  {
+   "ref": "P394 (IG-001 #4)",
+   "reason": "Retrato de Liz en luz violeta; se usa IG-088 en luz cálida."
+  },
+  {
+   "ref": "P109 / P395",
+   "reason": "Pablete 2024 (repost en IG-001 #5); se usa IG-034 de 2026."
+  },
+  {
+   "ref": "V014 9,3 s",
+   "reason": "Sillones casi negro, 720p y cortes cada 0,5 s: sin loop posible."
+  }
+ ]
+}
