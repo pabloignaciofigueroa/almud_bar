@@ -96,6 +96,19 @@ def nl(t):
     return '<br>'.join(E(x) for x in t.split('\n'))
 
 
+# negritas de la carta impresa (tools/carta_negritas_v3.py): solo frases de ingredientes, sin precios ni cabeceras
+NEG = {k: [x for x in v if not re.search(r'\d', x) and x != x.upper()]
+       for k, v in json.loads((ROOT / 'content/carta-negritas-v3.json').read_text()).items()}
+CUR_SRC = ['']
+
+
+def bold(desc):
+    h = nl(desc)
+    for ph in NEG.get(CUR_SRC[0], []):
+        h = re.sub(r'(?<![\w>])(' + re.escape(E(ph)) + r')(?![\w<])', r'<b>\1</b>', h, count=1)
+    return h
+
+
 def item(it, cols):
     n = it['nombre']
     media = peter() if n == 'Aquí te las traigo Peter' else (pic(BYNAME[n]) if n in BYNAME else '')
@@ -111,7 +124,7 @@ def item(it, cols):
     meta = ''
     if it.get('bodega') or it.get('nota'):
         meta = '<p class="pr__meta">' + ' · '.join(E(x) for x in [it.get('bodega'), it.get('nota')] if x) + '</p>'
-    desc = f'<p class="pr__d">{nl(it["desc"])}</p>' if it.get('desc') else ''
+    desc = f'<p class="pr__d">{bold(it["desc"])}</p>' if it.get('desc') else ''
     return (f'<li class="pr{" pr--img" if media else ""}">{media}<div class="pr__t">{extra}'
             f'<h4 class="pr__n">{E(n)}{tags}</h4>{meta}{desc}</div>{pr}</li>')
 
@@ -130,7 +143,7 @@ def group(gr, sid, idx):
         th = ''.join(f'<th scope="col" class="tbl__c">{E(c)}</th>' for c in cols)
         rows = ''
         for it in gr['items']:
-            d = f'<span class="pr__d">{nl(it["desc"])}</span>' if it.get('desc') else ''
+            d = f'<span class="pr__d">{bold(it["desc"])}</span>' if it.get('desc') else ''
             tags = ''.join(f'<span class="tag tag--{t}" data-en="{TAG[t][1]}">{TAG[t][0]}</span>' for t in it.get('tags', []))
             rows += (f'<tr><th scope="row"><span class="pr__n">{E(it["nombre"])}{tags}</span>{d}</th>'
                      + ''.join(f'<td class="tbl__p">{E(it.get("precios", {}).get(c, "–"))}</td>' for c in cols) + '</tr>')
@@ -148,6 +161,7 @@ for tid, ttl, en, sids, col in TABS:
     cur = None
     for sid in sids:
         s = SEC[sid]
+        CUR_SRC[0] = s.get('fuente', '')
         multi = len(sids) > 1
         for i, gr in enumerate(s['grupos']):
             gid, h = group(gr if (gr.get('titulo') or not multi) else {**gr, 'titulo': s['titulo']}, sid, i)
