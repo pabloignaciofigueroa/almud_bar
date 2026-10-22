@@ -11,3 +11,7 @@
 2026-10-22 12:17:15 lugar-terraza: no se crea aparte (la terraza ya sale en lugar-cintas y donde-terraza; sin otro plano propio de 8 s)
 2026-10-22 12:45:46 codificación lista: 8 loops en assets/v4/video (27 min); costuras medidas con seam_diff
 2026-10-22 12:46:04 revisión a ojo: hoja-loops.jpg + tiras del fundido de los 8 loops (sin saltos; costuras altas solo por cámara en movimiento)
+2026-10-22 12:48:24 integración: tools/boceto_v4.py lee assets/v4/media-video.json; nuevos tragos-coctelera (banda de Tragos) y quien-brindis (Con quién); donde-terraza en Cuándo y dónde; 'assets/v4' en INCLUDE_DIRS de tools/publish.py
+2026-10-22 12:48:24 regenerado nueva/index.html y public/ (368 archivos); index.html raíz sin cambios
+2026-10-22 12:48:24 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, todos los videos en play y avanzando (sin retrocesos salvo la vuelta del loop); primer pantallazo celular 2.345 KB en 5 s (video 1.595 + póster 23)
+2026-10-22 12:48:24 entregables: _plan/v4/fase2/hoja-loops.jpg, _plan/v4/fase2/videos.md y filas 6–12 en _plan/v4/justificacion.md
