@@ -115,3 +115,7 @@ El mínimo exigido es 4,5:1 para texto normal y 3:1 para texto ≥24px o para el
 | `--pisco` y `--brasa` | `--ambar` |
 | `--azul` y `--cielo` | `--letrero-azul` y `--tinta` |
 | `--violeta`, `--magenta`, `--cinta`, `--rib` | se eliminan |
+
+
+## Cambios de Carmen Paz (validación fases 3-4)
+Ver `_plan/v3/03-04-validacion-carmen.md`. Aplicados en `css/v3/tokens.css`: papel-2 #d8c2b0; Comida sobre noche-2 con ámbar solo de acento; Eventos en tinta solo con foto o afiche; nuevo `--dorado` #d9a441 para "próximo"; azul solo en "BAR", foco y enlaces chicos; precios en papel; botones radio 4 px, 600, ≥48 px; sin "Reservar" (los botones son Ver la carta, Escríbenos por DM, Cómo llegar).

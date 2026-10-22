@@ -24,3 +24,4 @@
 - 2026-10-21 v3 fase 3: tipografía (brand/typography-v3.md, lámina 03-tipografia.jpg)
 - 2026-10-21 v3 fase 1 cerrada: agente Carmen Paz (01-carmen-instagram.md, rúbrica 0–20)
 - 2026-10-21 v3 fase 4: paleta (brand/palette-v3.md, css/v3/tokens.css, 04-paleta.jpg)
+- 2026-10-21 v3 fases 3-4 aprobadas con cambios por Carmen Paz; aplicados en tokens y docs

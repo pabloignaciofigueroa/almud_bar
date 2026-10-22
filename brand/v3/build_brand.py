@@ -179,7 +179,7 @@ def build():
              f'<path fill="{PAPEL}" d="M50 300L120 330L150 600L285 720L420 600L500 300L575 270L520 650L285 870L40 660Z"/>')
     write("favicon.svg", svg(f"{x:.0f} {y:.0f} {side:.0f} {side:.0f}", small, "Almud Bar"))
     # Grande (180/192/512, ícono de inicio): el isotipo completo con trazo reforzado.
-    write("favicon-detalle.svg", fav(sw=34, inner=True, legs=True, ring=True, size_pad=150))
+    write("favicon-detalle.svg", fav(sw=42, inner=True, legs=True, ring=True, size_pad=120))
 
 
 if __name__ == "__main__":

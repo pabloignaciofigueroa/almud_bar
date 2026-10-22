@@ -13,3 +13,10 @@ Tamaños de referencia (lámina `_plan/v3/03-tipografia.jpg`):
 - Nada en letra manuscrita en la web (Caveat fuera).
 
 Archivos autoalojados: `assets/fonts/six-caps-latin-400-normal.woff2`, `big-shoulders-display-latin-wght-normal.woff2`, `barlow-condensed-latin-400-normal.woff2`, `barlow-condensed-latin-600-normal.woff2`.
+
+
+## Cambios de Carmen Paz
+- El logo va siempre como SVG de `brand/` (Six Caps sale de la web).
+- Texto corrido en Barlow Condensed **500** a 18 px / 1,5; nada bajo 16 px.
+- Títulos: máximo 120 px y 3 líneas. Precios en papel.
+- Vetados como titulares: "Pa chuparse el bigoteli", "Mejor los tomamos todos!".

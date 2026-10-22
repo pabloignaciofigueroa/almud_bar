@@ -5,7 +5,7 @@
   --noche-2:#22140f;        /* superficies: tarjetas, carta */
   --noche-3:#3a2219;        /* superficie elevada, bordes, separadores */
   --papel:#f5e9db;          /* texto principal / fondo de pantalla clara */
-  --papel-2:#c8af9c;        /* texto secundario sobre noche */
+  --papel-2:#d8c2b0;        /* texto secundario sobre noche (Carmen P: más claro) */
   --letrero-blanco:#f9f8f9; /* logo ALMUD */
 
   /* acentos: máximo 1-2 por pantalla */
@@ -16,8 +16,9 @@
 
   /* secciones: fondos planos (3 como máximo) */
   --muro:#a8222d;   --muro-2:#f7cfc4;   /* Tragos: texto --papel, secundario --muro-2 */
-  --ambar:#e5a05c;  --ambar-2:#4d2a1c;  /* Comida: texto --noche, secundario --ambar-2 */
-  --tinta:#142a5c;  --tinta-2:#b9c9ea;  /* Eventos: texto --papel, secundario --tinta-2 */
+  --ambar:#e5a05c;  /* Comida: fondo --noche-2, ámbar SOLO como acento (Carmen P) */
+  --tinta:#142a5c;  --tinta-2:#b9c9ea;  /* Eventos: solo con foto/afiche encima; texto --papel */
+  --dorado:#d9a441; /* Eventos y aniversarios: marca de "próximo" (reemplaza al rosa sobre tinta) */
 
   /* roles semánticos */
   --bg:var(--noche);
@@ -29,4 +30,9 @@
   --on-accent:var(--noche);
   --accent-2:var(--letrero-azul);
   --focus:var(--letrero-azul);
+  /* forma y tipo (Carmen P) */
+  --radius:4px; --btn-h:48px; --btn-w:600;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; /* 800, mayúsculas, títulos ≤120px, ≤3 líneas */
+  --f-body:"Barlow Condensed","Arial Narrow",Arial,sans-serif;           /* 500 a 18px/1.5, nunca <16px */
+  --price:var(--papel);
 }
