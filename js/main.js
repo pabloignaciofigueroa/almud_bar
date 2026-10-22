@@ -26,13 +26,13 @@
     }));
     const md = $('meta[name="description"]');
     if (md) { if (!md.dataset.es) md.dataset.es = md.content; md.content = lang === 'en' ? md.dataset.metaEn : md.dataset.es; }
-    if (save) { try { localStorage.setItem('almud-lang', lang); } catch (e) {} }
+    if (save) { try { localStorage.setItem('almud-idioma', lang); } catch (e) {} }
     if (window.__swiper && window.__swiper.a11y) {
       $$('.reviews__swiper .swiper-slide').forEach((s, i, a) => s.setAttribute('aria-label', (i + 1) + ' / ' + a.length));
     }
     d.dispatchEvent(new CustomEvent('almud:lang'));
   }
-  let saved = 'es'; try { saved = localStorage.getItem('almud-lang') || 'es'; } catch (e) {}
+  let saved = 'es'; try { saved = localStorage.getItem('almud-idioma') || 'es'; } catch (e) {}
   if (saved === 'en') setLang('en', false);
   $('.lang').addEventListener('click', () => { setLang(root.lang === 'en' ? 'es' : 'en', true); if (hasGsap()) ScrollTrigger.refresh(); });
 
@@ -41,7 +41,7 @@
     if (v.dataset.loaded === base) return;
     v.dataset.loaded = base;
     if (poster) v.poster = poster;
-    v.innerHTML = '<source src="' + base + '.webm" type="video/webm"><source src="' + base + '.mp4" type="video/mp4">';
+    v.innerHTML = (v.hasAttribute('data-mp4only') ? '' : '<source src="' + base + '.webm" type="video/webm">') + '<source src="' + base + '.mp4" type="video/mp4">';
     v.load();
   }
   const heroV = $('.hero__video');
@@ -315,13 +315,6 @@
       /* revelados de líneas */
       $$('.h-display .line>span, .foot__besi .line>span').forEach(s => {
         gsap.from(s, { yPercent: 108, duration: 1.2, scrollTrigger: { trigger: s.closest('.line'), start: 'top 88%', once: true } });
-      });
-
-      /* flecos que se mecen */
-      $$('.fringe').forEach(f => {
-        const q = gsap.quickTo(f, 'skewX', { duration: .8, ease: 'power3.out' });
-        const t2 = () => q(gsap.utils.clamp(-14, 14, -vel() * .35));
-        gsap.ticker.add(t2); ctx.add(() => () => gsap.ticker.remove(t2));
       });
 
       /* HISTORIA: el almud se abre */

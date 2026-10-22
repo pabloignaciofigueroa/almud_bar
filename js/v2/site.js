@@ -28,7 +28,7 @@
     if (md) { if (!md.dataset.es) md.dataset.es = md.content; md.content = lang === 'en' ? md.dataset.metaEn : md.dataset.es; }
     $$('.lang-b').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     $$('.vid-b').forEach(paintVideoButton);
-    if (save) store.set('almud-lang', lang);
+    if (save) store.set('almud-idioma', lang);
   }
   $$('.lang-b').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang, true)));
 
@@ -71,7 +71,7 @@
   const done = (i) => { i.style.background = 'none'; };
   $$('.f img, .cover-img img').forEach((i) => { if (i.complete && i.naturalWidth) done(i); else i.addEventListener('load', () => done(i), { once: true }); });
 
-  const saved = store.get('almud-lang');
+  const saved = store.get('almud-idioma');
   if (saved === 'en' || root.lang === 'en') setLang('en', false);
 
   /* ───────── menú del teléfono (crítica 1, P0) ─────────

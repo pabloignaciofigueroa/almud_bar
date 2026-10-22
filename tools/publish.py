@@ -17,10 +17,13 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html',  # fase 15: la carta en su propia página
+INCLUDE_FILES = ['index.html', 'carta/index.html', 'css/main.css', 'js/main.js', 'assets/og.jpg',  # v1b: la v1 vuelve como portada
+                  # fase 15: la carta en su propia página
                  '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
 INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand']
+
+ALL_DIRS = ['assets/img', 'assets/video']
 
 BLOCKED_EXT = {'.md', '.py', '.csv', '.json', '.pyc', '.sh', '.ipynb'}
 BLOCKED_DIRS = {'assets/raw'}
@@ -126,6 +129,11 @@ def copy_tree(stage: pathlib.Path) -> list[str]:
             dst = stage / rel
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst)
+    for d in ALL_DIRS:  # v1b: medios de la v1 (sus rutas se arman en JS, el rastreo no las ve)
+        for src in sorted((ROOT / d).rglob('*')):
+            rel = pathlib.PurePosixPath(src.relative_to(ROOT).as_posix())
+            if src.is_file() and not is_internal(rel):
+                (stage / rel).parent.mkdir(parents=True, exist_ok=True); shutil.copy2(src, stage / rel)
     (stage / '_headers').write_text(HEADERS)
     return skipped
 

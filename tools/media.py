@@ -13,10 +13,10 @@ def f(pid, k=0, ext='jpg'):
 # nombre -> (archivo fuente, recorte opcional (x0,y0,x1,y1) en fracciones)
 IMAGES = {
  # rincones
- 'barra-botellas': (f('IG-108'), None), 'barra-equipo': (f('IG-091'), None),
- 'lamparas': (f('IG-103'), None), 'salon': (f('IG-173'), None),
- 'terraza-techada': (f('IG-004', 1), None), 'terraza-techada-noche': (f('IG-004', 3), None),
- 'fogon': (f('IG-004', 4), None), 'terraza-luces': (f('IG-109'), None), 'terraza-mesas': (f('IG-160'), None),
+ 'barra-botellas': (os.path.join(RAW,'DAMHps8JVVr_07.jpg'), None), 'barra-equipo': (f('IG-091'), None),
+ 'lamparas': (os.path.join(RAW,'C9BDvFvJk4z_00.jpg'), None), 'salon': (os.path.join(RAW,'C-V5Lc7SZ-K_00.jpg'), None),
+ 'terraza-techada': (os.path.join(RAW,'DM_Ih5dyVKH_07.jpg'), None), 'terraza-techada-noche': (f('IG-004', 3), None),
+ 'fogon': (f('IG-004', 4), None), 'terraza-luces': (os.path.join(RAW,'Cqn78DFp5Nm_00.jpg'), None), 'terraza-mesas': (f('IG-160'), None),
  'vista': (f('IG-163'), None), 'cintas': (f('IG-174'), None), 'cintas-salon': (f('IG-175'), None),
  'ojo-piojo': (f('IG-118'), None), 'flecos': (f('IG-090'), None), 'flecos-2': (f('IG-111'), None),
  # carta
@@ -25,13 +25,13 @@ IMAGES = {
  'c-tukulito': (f('IG-139'), None), 'c-contuti': (f('IG-066'), None), 'c-gredita': (f('IG-077'), None),
  'c-topiturron': (f('IG-040'), None), 'c-negroni': (f('IG-042'), None), 'c-piscolein': (f('IG-019'), None),
  # comilona (masas)
- 'm-pizza': (f('IG-154'), None), 'm-pizza-2': (f('IG-141'), None), 'm-tabla': (f('IG-066'), None),
- 'm-gredita': (f('IG-150'), None), 'm-tacos': (f('IG-105'), None), 'm-bowl': (f('IG-022', 1), None),
- 'm-trago-sol': (f('IG-064', 2), None), 'm-brindis': (f('IG-069'), None), 'm-trago-flor': (f('IG-046'), None),
+ 'm-pizza': (os.path.join(RAW,'CqEI2nSJP2__00.jpg'), None), 'm-pizza-2': (f('IG-141'), None), 'm-tabla': (os.path.join(RAW,'DeNQ8A2lDgg_02.jpg'), None),
+ 'm-gredita': (os.path.join(RAW,'DAMHps8JVVr_05.jpg'), None), 'm-tacos': (os.path.join(RAW,'DY0AUvhlHjI_13.jpg'), None), 'm-bowl': (f('IG-022', 1), None),
+ 'm-trago-sol': (os.path.join(RAW,'DYsZ0GNo_88_00.jpg'), None), 'm-brindis': (f('IG-069'), None), 'm-trago-flor': (f('IG-046'), None),
  # eventos
- 'e-12': (f('IG-009', 0), None), 'e-12b': (f('IG-008', 9), None), 'e-12c': (f('IG-010'), None),
+ 'e-12': (os.path.join(RAW,'Dbg3ekilC4P_11.jpg'), None), 'e-12b': (f('IG-008', 9), None), 'e-12c': (f('IG-010'), None),
  'e-jaloguin': (f('IG-038', 4), None), 'e-jaloguin-2': (f('IG-070', 8), None),
- 'e-fondita': (f('IG-079', 4), None), 'e-negroni': (f('IG-005', 0), None), 'e-tiki': (f('IG-053', 0), None),
+ 'e-fondita': (os.path.join(RAW,'DAMHps8JVVr_04.jpg'), None), 'e-negroni': (f('IG-005', 0), None), 'e-tiki': (f('IG-053', 0), None),
  'e-rucalaf': (f('IG-030'), None), 'e-desfile': (f('IG-057'), None), 'e-amor': (f('IG-116'), None),
  'e-primavera': (f('IG-075', 4), None), 'e-islenos': (f('IG-029'), None), 'e-10': (f('IG-100'), None),
  'e-fiesta': (f('IG-008', 4), None), 'e-fiesta-2': (f('IG-009', 15), None),
@@ -41,12 +41,12 @@ IMAGES = {
  't-chicas': (f('IG-014'), None), 't-bartender-1': (f('IG-001', 1), None), 't-bartender-2': (f('IG-001', 2), None),
  'team-pasto': (f('IG-179', 1), None),
  # hero / otros
- 'puerta': (f('IG-177'), None), 'posavaso': (f('IG-086'), None),
+ 'puerta': (os.path.join(RAW,'DM_Ih5dyVKH_17.jpg'), None), 'posavaso': (f('IG-086'), None),
 }
 VIDEOS = {
  # nombre: (fuente, inicio, duración, ancho, audio?)
  'hero': (f('IG-061', 0, 'mp4'), 1.0, 7.2, 1280, False),
- 'hero-movil': (f('IG-090', 0, 'mp4'), 0, 10, 720, False),
+ 'hero-movil': (os.path.join(RAW,'C5WAi8PLHni_00.mp4'), 0, 7, 720, False),
  'historia': (f('IG-061', 0, 'mp4'), 0, None, 1278, True, 'crop=1278:520:0:8'),
  'cintas': (f('IG-111', 0, 'mp4'), 0, None, 720, False),
 }

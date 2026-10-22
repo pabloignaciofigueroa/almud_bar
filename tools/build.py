@@ -102,8 +102,10 @@ def expand_imgs(s):
 
 def main():
     s = open(os.path.join(ROOT, 'src/index.html')).read()
-    c = (panel('coctel', carta['coctel'], True) + panel('mocktail', carta['mocktail'], False) +
-         panel('comilona', carta['comilona'], False) + promos())
+    NO = {'Con tuti si no pa qué!', 'Topiturrón'}  # fotos de versiones antiguas
+    dest = lambda k: [it for it in carta[k] if it.get('img') and it['n'] not in NO]  # solo destacados con foto
+    c = (panel('coctel', dest('coctel'), True) + panel('mocktail', dest('mocktail'), False) +
+         panel('comilona', dest('comilona'), False) + promos())
     s = s.replace('<!--CARTA-->', c).replace('<!--RESENAS-->', resenas()).replace('<!--LOGO_DEFS-->', logo_defs())
     s, missing = expand_imgs(s)
     if missing:

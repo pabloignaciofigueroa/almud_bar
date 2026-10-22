@@ -160,14 +160,6 @@ html[lang="es"] .lang__es,html[lang="en"] .lang__en{color:var(--pisco)}
 .manifesto__text .w{display:inline-block;opacity:.2;transition:none}
 .manifesto__sign{margin-top:.6em;font-size:clamp(28px,3vw,46px);color:var(--pisco);transform:rotate(-2deg);display:inline-block}
 
-/* flecos (papel picado) */
-.fringe{position:relative;z-index:4;height:clamp(70px,9vw,130px);margin-bottom:calc(clamp(70px,9vw,130px) * -.55);pointer-events:none;
-  background:repeating-linear-gradient(90deg,var(--barra) 0 14px,var(--pisco) 14px 28px,var(--cinta) 28px 42px,var(--cielo) 42px 56px,var(--violeta) 56px 70px,var(--brasa) 70px 84px,var(--magenta) 84px 98px);
-  -webkit-mask:linear-gradient(#000,#000) top/100% 22% no-repeat,repeating-linear-gradient(90deg,#000 0 5px,transparent 5px 7px) bottom/100% 80% no-repeat;
-  mask:linear-gradient(#000,#000) top/100% 22% no-repeat,repeating-linear-gradient(90deg,#000 0 5px,transparent 5px 7px) bottom/100% 80% no-repeat;
-  transform-origin:50% 0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
-.fringe--b{background:repeating-linear-gradient(90deg,var(--cinta) 0 18px,var(--pisco) 18px 36px,var(--barra) 36px 54px,var(--violeta) 54px 72px,var(--cielo) 72px 90px,var(--brasa) 90px 108px)}
-.fringe--top{position:absolute;left:0;right:0;top:0;margin:0}
 
 /* ═════ RINCONES ═════ */
 .nooks{position:relative;background:var(--noche-2)}
@@ -255,7 +247,7 @@ html[lang="es"] .lang__es,html[lang="en"] .lang__en{color:var(--pisco)}
 .food{position:relative;min-height:100svh;padding:clamp(120px,18vh,200px) var(--gut);display:grid;place-items:center;overflow:clip;background:var(--noche)}
 .food__masses{position:absolute;inset:0}
 .mass{position:absolute;margin:0;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
-.mass img{width:100%;height:100%;object-fit:cover}
+.mass img,.mass video{width:100%;height:100%;object-fit:cover;display:block}
 .m1{left:4%;top:8%;width:22vw;aspect-ratio:4/5}
 .m2{right:6%;top:6%;width:19vw;aspect-ratio:1}
 .m3{left:9%;bottom:6%;width:24vw;aspect-ratio:5/4}
@@ -436,3 +428,6 @@ html:not(.has-gsap) .nook{height:auto;max-height:none}
 html:not(.has-gsap) .nook__media{aspect-ratio:4/5;flex:none}
 html:not(.has-gsap) .manifesto__text .w{opacity:1}
 .foot__emoji{font-size:.42em;vertical-align:.55em;display:inline-block}
+/* carta: destacados + enlace a la carta completa */
+.btn--big{height:64px;padding:0 34px;font-size:clamp(18px,1.6vw,22px)}
+.menu-sec__foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}

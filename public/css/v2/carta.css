@@ -80,7 +80,7 @@ html { scroll-padding-top: 0; }
 .cp[data-tinte="amarillo"] { --tinte: var(--tinte-amarillo); }
 .cp[data-tinte="coral"] { --tinte: var(--tinte-coral); }
 .cp[data-tinte="verde"] { --tinte: var(--tinte-verde); }
-@media (max-width: 1023px) { .js .cp { min-height: calc(100svh - var(--tabs-h)); } }  /* en el teléfono el pie no salta al cambiar de pestaña */
+@media (max-width: 1023px) { .js .cp { min-height: calc(100vh - var(--tabs-h)); min-height: calc(100svh - var(--tabs-h)); } }  /* en el teléfono el pie no salta al cambiar de pestaña */
 .cp:focus-visible { outline-offset: calc(-1 * var(--focus-w)); }
 .cp-cab { padding-top: var(--sp-7); row-gap: var(--sp-1); }
 .cp-h { color: var(--carta-tinta); }
@@ -170,4 +170,37 @@ html { scroll-padding-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   .tab, .chip { transition-property: background-color, color, text-decoration-color; }
   .tab:active, .chip:active { transform: none; }
+}
+
+/* pulido 3: "Get directions" (EN) no se parte en dos líneas en la cabecera del teléfono */
+.nav-carta .nav-l { white-space: nowrap; }
+
+/* ================= impresa (pulido 3) =================
+   La carta vuelve a ser papel: todas las secciones y grupos a la vista, sin barras, sin láminas ni fotos de fila,
+   nombres en azul y precios en magenta (los colores de su carta impresa), sin cortar un ítem entre páginas. */
+@media print {
+  @page { margin: 14mm 12mm; }
+  html, body, .pag-carta { background: #fff; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .skip, .nav-carta, .tabs, .tabs-sent, .chips-w, .laminas, .lam-g, .fila-foto, .hoy-m, .pie-sitio .pie-logo-a, .carta-intro .acc, .vid-b { display: none !important; }
+  .js .cp, .js .csub { display: block !important; }
+  .cp, .cp[data-tinte] { --tinte: #fff; background: #fff; min-height: 0 !important; padding-bottom: var(--sp-6); }
+  .carta-cab { padding-block: 0 var(--sp-5); }
+  .cp-cab { padding-top: var(--sp-6); break-after: avoid; }
+  .cg-h, .cg-sub, .cp-h { break-after: avoid; }
+  .cg-h { font-size: 40px; }
+  .display { font-size: 72px; }
+  .fila.con-foto, .filas:has(.con-foto) > .fila { grid-template-columns: minmax(0, 1fr) auto; }
+  .con-foto .fn, .filas:has(.con-foto) > .fila > .fn { grid-column: 1; }
+  .con-foto .fps, .filas:has(.con-foto) > .fila > .fps { grid-column: 2; }
+  .con-foto .fd, .filas:has(.con-foto) > .fila > .fd { grid-column: 1 / -1; }
+  .filas { grid-template-columns: 1fr 1fr; gap: var(--sp-3) var(--sp-6); }
+  .cg-m .filas { grid-template-columns: 1fr; }
+  .fila, .csub > *, .promo { break-inside: avoid; }
+  .fn, .fp { font-size: 13pt; }
+  .fd { font-size: 10pt; line-height: 1.35; }
+  .pie-sitio { background: #fff; color: var(--carta-tinta); padding-top: var(--sp-6); }
+  .pie-sitio .firma, .pie-sitio .firma-gl { display: none; }
+  .pie-creditos { color: var(--carta-tinta); }
+  a { text-decoration: none; }
 }
