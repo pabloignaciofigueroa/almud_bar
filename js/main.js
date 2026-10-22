@@ -337,7 +337,7 @@
       const mt = $('.manifesto__text');
       if (!mt.dataset.split) {
         const cols = ['var(--barra)', 'var(--pisco)', 'var(--cinta)', 'var(--cielo)', 'var(--violeta)', 'var(--brasa)'];
-        mt.innerHTML = mt.textContent.split(' ').map((w, i) => '<span class="w"' + (i % 3 === 1 ? ' style="color:' + cols[(i / 3 | 0) % cols.length] + '"' : '') + '>' + w + '</span>').join(' ');
+        mt.innerHTML = mt.textContent.split(' ').map((w, i) => '<span class="w"' + '' + '>' + w + '</span>').join(' ');
         mt.dataset.split = '1';
       }
       gsap.to('.manifesto__text .w', { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: '.manifesto', start: 'top 75%', end: 'bottom 70%', scrub: true } });
@@ -364,14 +364,8 @@
       gsap.from('.food__copy', { scale: .85, opacity: 0, duration: 1.4, scrollTrigger: { trigger: '.food', start: 'top 60%', once: true } });
 
       /* tablero: alfileres caen */
-      $$('.pin').forEach((p, i) => gsap.from(p, { scale: .8, opacity: 0, duration: 1.2, scrollTrigger: { trigger: p, start: 'top 92%', once: true } }));
-
-      /* tendedero: balanceo con la velocidad */
-      const pols = $$('.polaroid');
-      const swing = () => { const v = gsap.utils.clamp(-10, 10, vel() * .25); pols.forEach((p, i) => gsap.to(p, { '--sw': (v * (i % 2 ? 1 : -1)).toFixed(2) + 'deg', duration: .9, ease: 'power3.out', overwrite: 'auto' })); };
-      let lastV = 0; const swingTick = () => { const v = Math.round(vel()); if (v !== lastV) { lastV = v; swing(); } };
-      gsap.ticker.add(swingTick);
-      gsap.from('.polaroid', { y: -60, opacity: 0, stagger: .08, duration: 1.2, ease: 'back.out(1.6)', scrollTrigger: { trigger: '.clothesline', start: 'top 85%', once: true } });
+      $$('.pin').forEach((p, i) => gsap.from(p, { y: 40, opacity: 0, duration: .9, scrollTrigger: { trigger: p, start: 'top 92%', once: true } }));
+      gsap.from('.polaroid', { y: 40, opacity: 0, stagger: .08, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '.clothesline', start: 'top 85%', once: true } });
 
       /* reseñas: número que sube */
       const big = $('.reviews__big');
