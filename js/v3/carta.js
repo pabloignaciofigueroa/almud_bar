@@ -39,7 +39,7 @@
     if (save) { try { localStorage.setItem('almud-idioma', lang); } catch (e) {} }
   }
   if (R.lang === 'en') setLang('en', false);
-  $('[data-lang]').addEventListener('click', () => setLang(R.lang === 'en' ? 'es' : 'en', true));
+  $('[data-lang]').addEventListener('click', () => { setLang(R.lang === 'en' ? 'es' : 'en', true); if (typeof paint === 'function') { tabsH(); paint(); } });
 
   /* pestañas */
   const tabs = $$('.tab'), list = $('.tabs__l');
@@ -56,14 +56,19 @@
     $$('.chips').forEach(cs => {
       const tid = cs.dataset.chips, chips = $$('.chip', cs);
       const s = R.getAttribute('data-sub-' + tid) || chips[0].dataset.sub;
-      chips.forEach(c => c.setAttribute('aria-current', c.dataset.sub === s ? 'true' : 'false'));
+      chips.forEach(c => { const on = c.dataset.sub === s; c.setAttribute('aria-current', on ? 'true' : 'false'); if (on && tid === cur) reveal(c); });
     });
   }
   function reveal(el) {
-    const l = el.offsetLeft - list.offsetLeft, r = l + el.offsetWidth;
-    if (l < list.scrollLeft + 16) list.scrollLeft = l - 16;
-    else if (r > list.scrollLeft + list.clientWidth - 16) list.scrollLeft = r - list.clientWidth + 16;
+    const bar = el.parentElement;
+    if (bar.scrollWidth <= bar.clientWidth) return;
+    const l = el.offsetLeft - bar.offsetLeft, r = l + el.offsetWidth;
+    if (l < bar.scrollLeft + 16) bar.scrollLeft = l - 16;
+    else if (r > bar.scrollLeft + bar.clientWidth - 72) bar.scrollLeft = r - bar.clientWidth + 72;
   }
+  const tabsBar = $('.tabs');
+  const tabsH = () => R.style.setProperty('--tabs-h', tabsBar.offsetHeight + 'px');
+  tabsH(); addEventListener('resize', tabsH);
   function top() {
     const y = sent.getBoundingClientRect().top + scrollY - nav();
     if (scrollY > y) scrollTo({ top: y, behavior: 'instant' });

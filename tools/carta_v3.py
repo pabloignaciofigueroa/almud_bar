@@ -30,11 +30,11 @@ def slug(t):
 # pestañas: (id, título ES literal, glosa EN, secciones que reúne, color de fondo)
 TABS = [
     ('casa', 'Coctelería de la casa', 'House cocktails', ['cocteleria-de-la-casa'], 'muro'),
-    ('mundo', 'Cócteles del mundo mundial', 'World classics', ['cocteles-del-mundo-mundial'], 'rosa'),
-    ('espirituosos', 'Espirituosos', 'Spirits', ['espirituosos'], 'ambar'),
-    ('vinos', 'Vinos & espumantes', 'Wines', ['vinos-espumantes'], 'vino'),
-    ('sin', 'Mocktails sin alcohol', 'Alcohol-free', ['mocktails-sin-alcohol', 'jugos-bebidas', 'cervezas-sin-alcohol', 'bebidas-calientes'], 'tinta'),
-    ('comilona', 'Comilona', 'Food', ['comilona'], 'ambar2'),
+    ('mundo', 'Cócteles del mundo mundial', 'World classics', ['cocteles-del-mundo-mundial'], 'muro'),
+    ('espirituosos', 'Espirituosos', 'Spirits', ['espirituosos'], 'papel'),
+    ('vinos', 'Vinos & espumantes', 'Wines', ['vinos-espumantes'], 'muro'),
+    ('sin', 'Mocktails sin alcohol', 'Alcohol-free', ['mocktails-sin-alcohol', 'jugos-bebidas', 'cervezas-sin-alcohol', 'bebidas-calientes'], 'papel'),
+    ('comilona', 'Comilona', 'Food', ['comilona'], 'dorado'),
     ('promos', 'Nuestras promos', 'Deals', ['nuestras-promos'], 'dorado'),
 ]
 GL = {'Tintelis': '[reds]', 'Blanquelis': '[whites]', 'Whiscachos': '[whiskies]', 'Ron poromponpon': '[rum]',
@@ -123,10 +123,22 @@ def group(gr, sid, idx):
     head = ''
     if t:
         lvl = 'h4' if gr.get('padre') else 'h3'
-        head = f'<{lvl} class="gr__t{" gr__t--sub" if gr.get("padre") else ""}">{E(t)}</{lvl}>' + (g(GL[t], 'gloss gloss--s') if t in GL else '')
+        head = f'<{lvl} class="gr__t{" gr__t--sub" if gr.get("padre") else ""}">{E(t)}</{lvl}>' + (g(GL[t], 'gloss gloss--s') if t in GL else (g(CHIP_EN[t], 'gloss gloss--s') if t in CHIP_EN else ''))
     nota = (f'<p class="gr__nota">{nl(gr["nota"])}' + (g(NOTA_EN[gr["nota"]], 'gloss gloss--s') if gr["nota"] in NOTA_EN else '') + '</p>') if gr.get('nota') else ''
     pie = (f'<p class="gr__pie">{nl(gr["nota_pie"])}' + (g(NOTA_EN[gr["nota_pie"]], 'gloss gloss--s') if gr["nota_pie"] in NOTA_EN else '') + '</p>') if gr.get('nota_pie') else ''
-    return gid, (f'<div class="gr" id="{gid}">{head}{nota}<ul class="prs">' + ''.join(item(i, cols) for i in gr['items']) + f'</ul>{pie}</div>')
+    if cols:
+        th = ''.join(f'<th scope="col" class="tbl__c">{E(c)}</th>' for c in cols)
+        rows = ''
+        for it in gr['items']:
+            d = f'<span class="pr__d">{nl(it["desc"])}</span>' if it.get('desc') else ''
+            tags = ''.join(f'<span class="tag tag--{t}" data-en="{TAG[t][1]}">{TAG[t][0]}</span>' for t in it.get('tags', []))
+            rows += (f'<tr><th scope="row"><span class="pr__n">{E(it["nombre"])}{tags}</span>{d}</th>'
+                     + ''.join(f'<td class="tbl__p">{E(it.get("precios", {}).get(c, "–"))}</td>' for c in cols) + '</tr>')
+        body = (f'<table class="tbl"><thead><tr><th scope="col"><span class="sr-only" data-en="Name">Nombre</span></th>{th}</tr></thead>'
+                f'<tbody>{rows}</tbody></table>')
+    else:
+        body = '<ul class="prs">' + ''.join(item(i, cols) for i in gr['items']) + '</ul>'
+    return gid, (f'<div class="gr" id="{gid}">{head}{nota}{body}{pie}</div>')
 
 
 panels, chipcss = [], []
@@ -223,7 +235,6 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
   <nav class="tabs" aria-label="Secciones de la carta" data-aria-en="Menu sections"><div class="tabs__l">{tabs_html}</div></nav>
   <div class="panels"><div class="hoja">{''.join(panels)}</div></div>
   <footer class="carta__pie wrap">
-    <a class="btn btn--rosa" href="https://ig.me/m/almud_bar" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
     <a class="btn btn--ghost" href="https://uqr.to/ppvi" target="_blank" rel="noopener" data-en="Official menu (PDF)">Carta oficial (PDF)</a>
     <a class="btn btn--ghost" href="../" data-en="Home">Inicio</a>
   </footer>

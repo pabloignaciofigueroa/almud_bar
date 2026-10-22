@@ -3,12 +3,10 @@
    Cada pestaña tiñe la hoja con un tinte MUY suave, solo de la paleta v3. */
 :root{
   --hoja-muro:color-mix(in srgb,var(--muro-rosa) 7%,var(--papel));
-  --hoja-rosa:color-mix(in srgb,var(--muro-2) 30%,var(--papel));
-  --hoja-ambar:color-mix(in srgb,var(--ambar) 10%,var(--papel));
-  --hoja-vino:color-mix(in srgb,var(--muro) 4%,var(--papel));
-  --hoja-tinta:color-mix(in srgb,var(--tinta-2) 22%,var(--papel));
-  --hoja-ambar2:color-mix(in srgb,var(--dorado) 9%,var(--papel));
-  --hoja-dorado:color-mix(in srgb,var(--dorado) 14%,var(--papel));
+  --hoja-papel:var(--papel);
+  --hoja-dorado:color-mix(in srgb,var(--dorado) 12%,var(--papel));
+  --carta-azul:#3a3ad8;   /* azul rey de su carta impresa: 6,32 sobre papel · 5,83 sobre tinte rosa · 5,81 sobre dorado */
+  --carta-rojo:#b01a2e;   /* NUEVO y días de promos: ≥5,3 sobre todos los tintes */
   --hoja:var(--papel);
   --tabs-h:60px;
 }
@@ -23,7 +21,7 @@
 .carta__t{margin:0;font:800 38px/.95 var(--f-display);text-transform:uppercase;letter-spacing:-.01em}
 .carta__b{margin:0;font-size:18px;color:var(--papel-2)}
 .carta__b .gloss{display:none}
-html[lang="en"] .carta__b .gloss{display:inline;margin-left:6px}
+html[lang="en"] .carta__b .gloss{display:block;margin:2px 0 0}
 @media (min-width:1024px){
   .carta{padding-top:calc(var(--nav) + 36px)}
   .carta__head{justify-content:space-between;align-items:end;max-width:1100px}
@@ -63,7 +61,7 @@ html[lang="en"] .carta__b .gloss{display:inline;margin-left:6px}
 /* grupos: cinta azul marino como en su carta */
 .gr{margin-top:26px}
 .gr__t{display:inline-block;margin:0;padding:8px 14px 7px;background:var(--tinta);color:var(--papel);border-radius:2px;font:800 24px/1 var(--f-display);text-transform:uppercase;letter-spacing:.01em}
-.gr__t--sub{display:block;background:none;color:var(--tinta);padding:14px 0 0;font-size:22px}
+.gr__t--sub{display:block;background:none;color:var(--carta-azul);padding:14px 0 0;font-size:22px}
 .gr>.gloss{margin-top:6px}
 .gr__nota{margin:10px 0 0;color:var(--ambar-2);font-size:17px;max-width:60ch}
 .gr__pie{margin:16px 0 0;color:var(--ambar-2);font-size:16px;max-width:60ch}
@@ -73,19 +71,47 @@ html[lang="en"] .carta__b .gloss{display:inline;margin-left:6px}
 .pr--img{grid-template-columns:96px minmax(0,1fr) auto}
 @media (min-width:1024px){.pr--img{grid-template-columns:136px minmax(0,1fr) auto}.pr{padding:20px 0}}
 .pr__m{width:100%}
-.pr__n{margin:0;font:800 23px/1.05 var(--f-display);text-transform:uppercase;letter-spacing:.005em;color:var(--letrero-azul-tinta)}
+.pr__n{margin:0;font:800 23px/1.05 var(--f-display);text-transform:uppercase;letter-spacing:.005em;color:var(--carta-azul)}
 .pr__d{margin:6px 0 0;color:var(--ambar-2);font-size:17px;line-height:1.45}
 .pr__meta{margin:4px 0 0;font:600 16px/1.3 var(--f-body);letter-spacing:.03em;text-transform:uppercase;color:var(--ambar-2)}
 .pr__p{font:600 20px/1.2 var(--f-body);color:var(--noche);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
 .pr__ps{display:grid;gap:8px;justify-items:end}
 .pr__ps .pr__p{display:grid;justify-items:end;gap:2px}
 .pr__c{font:600 16px/1.1 var(--f-body);letter-spacing:.02em;color:var(--ambar-2)}
-.pr__dia{display:block;font:600 16px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muro-rosa-tinta);margin-bottom:6px}
+.pr__dia{display:block;font:600 16px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--carta-rojo);margin-bottom:6px}
 .tag{display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 7px;border-radius:var(--radius);font:600 16px/1 var(--f-body);letter-spacing:.04em;text-transform:uppercase;border:1.5px solid currentColor}
-.tag--nuevo{color:var(--muro-rosa-tinta)}
-.tag--veggie,.tag--vegan{color:var(--letrero-azul-tinta)}
-.tag--picante{color:var(--muro-rosa-tinta)}
+.tag--nuevo{color:var(--carta-rojo)}
+.tag--veggie,.tag--vegan{color:var(--carta-azul)}
+.tag--picante{color:var(--carta-rojo)}
 .carta__pie{display:flex;flex-wrap:wrap;gap:10px;padding-top:28px;padding-bottom:56px;max-width:1100px}
 .carta .m{border-radius:var(--radius)}
 /* sin JS: todo apilado */
 html:not(.js) .tabs,html:not(.js) .chips{position:static}
+
+/* ronda 2 */
+.hoja :focus-visible{outline-color:var(--carta-azul)}
+/* filas deslizables: encaje por elemento + fundido ancho a la derecha */
+.tabs__l,.chips{scroll-snap-type:x mandatory}
+.tab,.chip{scroll-snap-align:start}
+.tabs__l{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 64px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 64px),transparent 100%)}
+.chips{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 64px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 64px),transparent 100%);scroll-padding-inline:var(--gut)}
+.chip:last-child{margin-right:56px}
+@media (min-width:1024px){
+  .tabs__l{max-width:none;justify-content:center;flex-wrap:wrap;-webkit-mask-image:none;mask-image:none;padding-inline:var(--gut)}
+  .tab{padding:0 12px;letter-spacing:.03em}
+  .tab:last-child{margin-right:0}
+  .chips{-webkit-mask-image:none;mask-image:none}
+  .chip:last-child{margin-right:0}
+  .hoja{max-width:880px}
+  .carta__head{max-width:880px}
+}
+/* tablas de medidas (Espirituosos, Vermú…), como la carta impresa */
+.tbl{width:100%;border-collapse:collapse;margin-top:10px;font-variant-numeric:tabular-nums}
+.tbl thead th{font:600 15px/1.15 var(--f-body);letter-spacing:.03em;color:var(--ambar-2);text-align:right;padding:6px 0 8px 12px;vertical-align:bottom;border-bottom:2px solid var(--tinta)}
+.tbl thead th:first-child{text-align:left;padding-left:0}
+.tbl .tbl__c{width:84px}
+@media (min-width:1024px){.tbl .tbl__c{width:140px;font-size:16px}}
+.tbl tbody th{text-align:left;font-weight:inherit;padding:12px 0;border-bottom:1px solid rgba(22,13,11,.14);vertical-align:top}
+.tbl tbody th .pr__n{display:block;font-size:21px}
+.tbl tbody th .pr__d{display:block;font-size:16px;margin-top:4px}
+.tbl__p{text-align:right;padding:12px 0 12px 12px;font:600 19px/1.2 var(--f-body);color:var(--noche);white-space:nowrap;vertical-align:top;border-bottom:1px solid rgba(22,13,11,.14)}

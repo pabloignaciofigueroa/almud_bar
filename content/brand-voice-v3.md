@@ -108,7 +108,7 @@ Todas son literales de Almud y en Instagram funcionan. En la web, frente a un tu
 
 ## 4. Palabras y expresiones PROHIBIDAS en la web
 
-Rige para todo texto visible de la landing y de la página de la carta, salvo los **nombres de ítems de la carta**, que se escriben tal cual («Crumblecito ito ito» [CARTA-1] es un nombre y se respeta).
+Rige para todo texto visible de la landing y de la página de la carta, salvo los **nombres, descripciones y notas impresas de la carta**, que se escriben tal cual, como en su carta impresa (copy-v3 §C) («Crumblecito ito ito» [CARTA-1] es un nombre y se respeta).
 
 **De marca**
 - "Almudcito ito ito" y cualquier "ito ito", "ita ita", "ucho ucho" u "ona ona" en cascada.

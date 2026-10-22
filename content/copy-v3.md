@@ -5,7 +5,8 @@
 > - **El lugar:** ‹Sillones› / “Lounge” vuelve al carrusel, porque ya hay foto (P114).
 > - **Tragos:** las fotos son las favoritas de Carmen (P297, P086, P097), sin rótulo. Los destacados Sagüer y Sangría van como lista con nombre y precio literales.
 > - **Comida:** «Pizza dulzona» se cambia por «Huerta sabrosa» (pizza salada, coherente con la foto P036).
-> - **Eventos:** sin ‹Próximo›.
+> - **Eventos:** sin ‹Próximo›. Ronda 2: sale 14F (no había foto propia segura); Aniversario usa P073 (el «10» de flores) y la foto de los 12 años va como imagen grande sin rótulo.
+> - **Tragos (ronda 2):** se suma P362 (bartender frente al muro rosa), la foto bandera de Carmen.
 > - **Equipo:** 5 personas (sale @elymar_bocarejo) y la línea ‹Los dueños› @cepaz · @rusio_mezclao.
 > - **Reseñas:** la glosa pasa a “See for yourself” y solo se ve en EN.
 > - **Glosas EN:** con mayúscula inicial.
@@ -129,8 +130,6 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
 | Titular | «tirar la casa por la ventana!» | [IG-010] | “Going all out!” | sí |
-| Mes | ‹Feb› | [UI] | “Feb” | sí |
-| Evento | «14F» | [IG-116] | “14F [Valentine's Day]” | sí |
 | Mes | ‹Jul› | [UI] | “Jul” | sí |
 | Evento | «Aniversario» | [IG-090] | “[Anniversary]” | sí |
 | Mes | ‹Sep› | [UI] | “Sep” | sí |

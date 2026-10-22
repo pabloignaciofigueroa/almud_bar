@@ -123,7 +123,7 @@ def rincon_li(r, i):
         name = (f'<h3 class="rin__n">{E(lab)} {g("[" + lab_en.split(" [")[1], "gloss gloss--i")}</h3>'
                 if '[' in lab_en else f'<h3 class="rin__n" data-en="{E(lab_en)}">{E(lab)}</h3>')
         cap = f'<figcaption class="rin__c">{name}' + (f'<p class="rin__l">{E(line)}{g(line_en)}</p>' if line else '') + '</figcaption>'
-    return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 60vh, 52vw', 'rin__m') + cap + '</li>')
+    return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 60vh, (min-width:768px) 44vw, 76vw', 'rin__m') + cap + '</li>')
 
 
 C_CASA = CARTA + '#casa'
@@ -140,8 +140,7 @@ def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', sp
 
 
 eventos = [
-    ('eventos-14f', 'Feb', 'Feb', '14F', '14F [Valentine\'s Day]', 2),
-    ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
+    ('eventos-10-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
     ('eventos-fondita', 'Sep', 'Sep', 'Fondita', 'Fondita [Fiestas Patrias party]', 9),
     ('eventos-jaloguin', 'Oct', 'Oct', 'Jalogüín', 'Jalogüín [Halloween]', 10),
 ]
@@ -195,7 +194,6 @@ body = f'''
 <section class="lugar" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "We're restless and we love colour!", 'h-lugar')}</div>
-    {pic('lugar-cuadros', 'a', '24vw', 'lugar__x reveal', speed='0.22')}
     {vid('lugar-cintas', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
   <div class="rincones" data-h>
@@ -211,6 +209,7 @@ body = f'''
 <section class="tragos" id="tragos" aria-labelledby="h-tragos">
   <div class="wrap tragos__g">
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'A lot of love, colour and hard work', 'h-tragos')}</div>
+    {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
     <a class="it it--hero" href="{C_CASA}">
       {vid('tragos-humo', 'it__m reveal')}
       <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
@@ -219,7 +218,6 @@ body = f'''
       {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 45vw', 'it--a reveal', speed='-0.08')}
       {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 45vw', 'it--b reveal', speed='0.1')}
     </div>
-    {pic('tragos-copa-tallada', 'a', '16vw', 'tragos__mass reveal', speed='-0.2')}
     <ul class="menu menu--tragos">
       <li><a href="{C_CASA}"><span class="menu__n">Sagüer on Faia</span><i></i><span class="it__p">$ 7.900</span></a>{g('[Spiced sour with a little heat]', 'gloss gloss--s')}</li>
       <li><a href="{C_CASA}"><span class="menu__n">Sangría Foreva!</span><i></i><span class="it__p">$ 6.500</span></a>{g('[Carménère wine, aged pisco, cinnamon]', 'gloss gloss--s')}</li>
@@ -261,6 +259,7 @@ body = f'''
 <section class="eventos" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
+    {pic('eventos-12-anos', 'a', '(min-width:1024px) 40vw, 100vw', 'ev__banner reveal')}
     <ol class="cal">
       {''.join('<li class="ev">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>
