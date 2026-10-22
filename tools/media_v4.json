@@ -182,8 +182,7 @@
     62
    ],
    "widths": [
-    720,
-    600
+    720
    ],
    "crf_max": 30,
    "vp9_crf_max": 44,
@@ -203,10 +202,16 @@
    "xfade": 1.0,
    "ratio": "4:5",
    "alt": {
-    "es": "En una mesa de la terraza, un cliente pica de la tabla «Con tuti si no pa qué!»: aceitunas, quesos, frutos secos, fruta y pancito.",
-    "en": "At a terrace table a guest picks from the \"Con tuti si no pa qué!\" sharing board: olives, cheeses, nuts, fruit and house bread."
+    "es": "La tabla «Con tuti si no pa qué!» al centro: aceitunas con cilantro, quesos, jamón, fruta y pancito, y manos que pican con palillos.",
+    "en": "The \"Con tuti si no pa qué!\" sharing board front and center: olives with cilantro, cheeses, ham, fruit and bread, with hands picking at it."
    },
-   "note": "V047 (IG-022, «una cocina sencilla pero más que sabrosona!»), 0,25–10,4 s, un solo plano. La tabla es la misma de la foto IG-066 «CON TUTI SI NO PA QUÉ!» que la carta asocia a ese plato."
+   "note": "Ronda 3: la comida al centro y sin caras. Mismo tramo de V047 (0,25–10,4 s), recortado a 384×480 px nativos (x 168, y 480) sobre la tabla y las manos que pican; no se amplía. Nitidez del recorte (varianza laplaciana, px nativos) 614. Es la tabla de la foto IG-066 «CON TUTI SI NO PA QUÉ!».",
+   "crop": [
+    168,
+    480,
+    384,
+    480
+   ]
   },
   {
    "loop": "crossfade",
@@ -271,6 +276,72 @@
     "en": "Full tables in the dining room: groups chatting and laughing, drinks arriving and people standing between tables."
    },
    "note": "V036 (IG-051), 27,6–37,7 s: un trago que se sirve y luego grupos en mesas, risas y el salón lleno. Arranca en el plano del trago para que el fundido no caiga justo antes de un corte."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "ratio": "4:5",
+   "id": "eventos-fiesta-12",
+   "ref": "V055",
+   "src": "assets/raw/ig/DbeSlSaonsM_00.mp4",
+   "section": "eventos",
+   "evento": "12 años (jul-2026)",
+   "segments": [
+    [
+     97.6,
+     106.9
+    ]
+   ],
+   "xfade": 1.0,
+   "alt": {
+    "es": "La fiesta de los 12 años: la terraza techada repleta celebra bajo las guirnaldas de luces, con las manos arriba.",
+    "en": "The 12th-anniversary party: the covered terrace is packed and celebrating under the string lights, hands in the air."
+   },
+   "note": "Ronda 3: reemplaza la foto del «10» de flores. V055 (IG-010, reel de los 12 años), 97,6–106,9 s: un solo plano de la terraza repleta celebrando (sin cortes entre 84,4 y 111,9 s). La story de la destacada «12 añitos» (V115) muestra lo mismo pero lleva el texto «Feliz Cumple @almud_bar» sobreimpreso."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "ratio": "4:5",
+   "id": "eventos-jaloguin",
+   "ref": "V027",
+   "src": "assets/raw/ig/DCC4Xp3hZU-_00.mp4",
+   "section": "eventos",
+   "evento": "Jalogüín 2024",
+   "segments": [
+    [
+     34.15,
+     43.15
+    ]
+   ],
+   "xfade": 0.9,
+   "alt": {
+    "es": "Jalogüín en el Almud: mesas llenas de gente disfrazada que se ríe, catrinas, una peluca rubia y la barra repleta.",
+    "en": "Jalogüín (Halloween) at Almud: tables full of laughing people in costume, catrinas, a blond wig and a packed bar."
+   },
+   "note": "Ronda 3: V027 (IG-072, Jalogüín 2024: «Lo dimos todoooo porque amamos jalogüinssss!»), 34,15–43,15 s: risas en las mesas, la terraza llena, disfraces y la barra repleta (en Eventos se permiten disfraces). Reemplaza la foto de Jalogüín en el calendario."
   },
   {
    "id": "equipo-duenos",
