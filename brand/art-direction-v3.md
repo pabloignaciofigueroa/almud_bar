@@ -249,3 +249,11 @@ Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 
   - Las 7 pestañas en una fila de 1024 a 1920 px.
   - Cabezal alineado a la hoja.
   - Día de promos en `--noche`.
+
+## Fase 19 (juicio de Carmen, 18/20 → pulido)
+- **Tragos:** una banda de ambiente sin nombres abre la sección: P362, P297 (salpicadura) y P086 (sours). Bajo un filo, los destacados nombrados: Peter, Sagüer, Sangría y La moto chantá; en escritorio, en fila de 4. Ya no queda el bloque rojo vacío.
+- **Portada celular:** V021 desde el cuadro más nítido (1,28 s, máxima varianza laplaciana, con el cartelito legible), a 0,8× por repetición de cuadros, sin mezcla. El póster es ese cuadro. WebM de 786 KB.
+- **El lugar en escritorio:** mosaico de 3×2. Se fue la galería sticky ligada al scroll; antes eran ≈3.900 px de recorrido.
+- **Eventos en escritorio:** el «10» a lo ancho (21:9) y las tres fichas en fila.
+- **Carta EN:** 55 glosas cortas de ingredientes (`content/carta-glosas-en-v3.json`), solo en EN y bajo la descripción literal.
+- **Fase 20:** preparada en `tools/fase20_v3.py` (ensayo por defecto; `--aplicar` solo con el OK).
