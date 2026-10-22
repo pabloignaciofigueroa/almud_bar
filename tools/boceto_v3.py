@@ -134,13 +134,13 @@ C_PIZ = CARTA + '#comilona-pizzas-artesanales'
 
 
 def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', speed=None):
-    return (f'<a class="it {cls}" href="{CARTA}"' + (f' data-speed="{speed}"' if speed is not None else '') + '>'
+    return (f'<a class="it {cls}" href="{C_CASA}"' + (f' data-speed="{speed}"' if speed is not None else '') + '>'
             + pic(id_, 'a', sizes, 'it__m reveal') +
             f'<span class="it__n">{E(name)}</span>{g(gl, "gloss gloss--s")}<span class="it__p">{E(price)}</span></a>')
 
 
 eventos = [
-    ('eventos-10-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
+    ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
     ('eventos-fondita', 'Sep', 'Sep', 'Fondita', 'Fondita [Fiestas Patrias party]', 9),
     ('eventos-jaloguin', 'Oct', 'Oct', 'Jalogüín', 'Jalogüín [Halloween]', 10),
 ]
@@ -215,17 +215,16 @@ body = f'''
       <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
     </a>
     <div class="tragos__pair">
-      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 45vw', 'it--a reveal', speed='-0.08')}
-      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 45vw', 'it--b reveal', speed='0.1')}
+      {item('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced sour with a little heat]', cls='it--a', speed='-0.08')}
+      {item('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère wine, aged pisco, cinnamon]', cls='it--b', speed='0.1')}
     </div>
-    <ul class="menu menu--tragos">
-      <li><a href="{C_CASA}"><span class="menu__n">Sagüer on Faia</span><i></i><span class="it__p">$ 7.900</span></a>{g('[Spiced sour with a little heat]', 'gloss gloss--s')}</li>
-      <li><a href="{C_CASA}"><span class="menu__n">Sangría Foreva!</span><i></i><span class="it__p">$ 6.500</span></a>{g('[Carménère wine, aged pisco, cinnamon]', 'gloss gloss--s')}</li>
-    </ul>
-    <div class="moc">
-      <h3 class="kick" data-en="Alcohol-free">Mocktails</h3>
-      <p class="moc__l">no dejamos a nadie ajuera{g('We leave nobody out')}</p>
-      <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
+    <div class="moc2">
+      <a class="moc2__m" href="{C_MOC}" tabindex="-1" aria-hidden="true">{pic('carta-moto', 'a', '(min-width:1024px) 14vw, 38vw', 'reveal')}</a>
+      <div class="moc2__t">
+        <h3 class="kick" data-en="Alcohol-free">Mocktails</h3>
+        <p class="moc__l">no dejamos a nadie ajuera{g('We leave nobody out')}</p>
+        <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -234,14 +233,18 @@ body = f'''
 <section class="comida" id="comida" aria-labelledby="h-comida">
   <div class="wrap comida__g">
     <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'A simple kitchen, but more than tasty!', 'h-comida')}</div>
-    {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'comida__v reveal')}
-    {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'comida__a reveal', speed='-0.1')}
-    {vid('comida-cazuela', 'comida__b reveal', extra=' data-speed="0.08"')}
-    <ul class="menu">
-      <li><a href="{C_PIC}"><span class="menu__n">Tukulito Sakayama</span><i></i><span class="it__p">$ 15.900</span></a>{g('[Marinated tuna tataki]', 'gloss gloss--s')}</li>
-      <li><a href="{C_GRE}"><span class="menu__n">Camarón que se duerme</span><i></i><span class="it__p">$ 15.900</span></a>{g('[Shrimp baked in a clay pot]', 'gloss gloss--s')}</li>
-      <li><a href="{C_PIZ}"><span class="menu__n">Huerta sabrosa</span><i></i><span class="it__p">$ 13.900</span></a>{g('[Pizza: cherry tomato, mushrooms, greens]', 'gloss gloss--s')}</li>
-    </ul>
+    <a class="it co__big" href="{C_PIZ}">
+      {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'it__m reveal')}
+      <span class="it__n">Pizzas artesanales</span>{g('[Artisan pizzas]', 'gloss gloss--s')}
+    </a>
+    <a class="it co__a" href="{C_PIC}" data-speed="-0.1">
+      {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m reveal')}
+      <span class="it__n">Tukulito Sakayama</span>{g('[Marinated tuna tataki]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
+    </a>
+    <a class="it co__b" href="{C_GRE}" data-speed="0.08">
+      {vid('comida-cazuela', 'it__m reveal')}
+      <span class="it__n">Camarón que se duerme</span>{g('[Shrimp baked in a clay pot]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
+    </a>
   </div>
 </section>
 
@@ -259,7 +262,7 @@ body = f'''
 <section class="eventos" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
-    {pic('eventos-12-anos', 'a', '(min-width:1024px) 40vw, 100vw', 'ev__banner reveal')}
+    {pic('eventos-10-anos', 'a', '(min-width:1024px) 46vw, 100vw', 'ev__banner reveal')}
     <ol class="cal">
       {''.join('<li class="ev">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>

@@ -52,6 +52,8 @@
 
   function paint() {
     const cur = R.dataset.tab;
+    const ch = $('#' + cur + ' .chips');
+    R.style.setProperty('--chips-h', (ch ? ch.offsetHeight : 0) + 'px');
     tabs.forEach(t => { const on = t.dataset.tab === cur; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on) reveal(t); });
     $$('.chips').forEach(cs => {
       const tid = cs.dataset.chips, chips = $$('.chip', cs);

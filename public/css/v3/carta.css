@@ -115,3 +115,15 @@ html:not(.js) .tabs,html:not(.js) .chips{position:static}
 .tbl tbody th .pr__n{display:block;font-size:21px}
 .tbl tbody th .pr__d{display:block;font-size:16px;margin-top:4px}
 .tbl__p{text-align:right;padding:12px 0 12px 12px;font:600 19px/1.2 var(--f-body);color:var(--noche);white-space:nowrap;vertical-align:top;border-bottom:1px solid rgba(22,13,11,.14)}
+/* ronda 2b */
+.pr__dia{color:var(--noche);font-weight:600;letter-spacing:.08em}
+.pr__d b,.tbl .pr__d b{font-weight:600;color:var(--noche)}
+.tbl thead th{position:sticky;top:calc(var(--nav) + var(--tabs-h) + var(--chips-h,0px));background:var(--hoja);z-index:5}
+@media (min-width:1024px) and (max-width:1279px){
+  .tab{padding:0 9px;font-size:15px;letter-spacing:.02em}
+  .tabs__l{gap:2px}
+}
+@media (min-width:1024px){
+  .carta__head{display:block;max-width:880px;padding-inline:clamp(32px,5vw,72px)}
+  .carta__b{margin-top:8px}
+}
