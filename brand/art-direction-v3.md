@@ -231,3 +231,21 @@ Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 
   - Hoja de 880 px en escritorio. La glosa EN del subtítulo va en línea propia y hay un solo DM (el de la nav).
   - Color: nombres `#3a3ad8`, solo en la hoja (≥5,81). Tres tintes cálidos (papel, rosa 7 %, dorado 12 %). «NUEVO» y los días van en `#b01a2e` (≥5,32) y los precios en negro.
 - **Guía de voz:** `brand-voice-v3 §4` exime nombres, descripciones y notas impresas de la carta.
+
+## Ronda 2b
+- **Portada celular:** V021 (1080p, nítida), tramo 0,9–2,4 s a 0,8× en boomerang (3,7 s).
+  - Peso: 720×1280, WebM 879 KB y MP4 913 KB.
+  - Póster tomado en 1,0 s del loop, con el cartelito ALMUD BAR.
+  - `media_v3.py` acepta ahora `speed`.
+  - Hoja de control: `_plan/v3/ronda2/portada-celular-v021.jpg`. Hay botellas con etiqueta en el muro, pero ninguna en primer plano dominante; queda para el visto bueno del director.
+- **Portada escritorio:** arranca en las lámparas de pinzas y las cintas se acortan (4,6–5,6 s).
+- **Cada foto con su nombre literal:**
+  - Tragos: Peter (loop), Sagüer on Faia y Sangría Foreva! con su foto de la carta, La moto chantá con la suya, y P362 grande con filo oscuro de 1 px. Salen el splash y los sours, porque no tienen nombre en sus captions.
+  - Comida: la pizza P036 (caption sin nombre) va rotulada con el grupo literal «Pizzas artesanales» y enlaza a ese subgrupo; Tukulito con su foto; Camarón que se duerme con el loop de la cazuela.
+- **Eventos:** P073 (el «10» de flores) grande; los 12 años en la ficha de Aniversario.
+- **Carta:**
+  - Negritas de ingredientes medidas en los PDF (`tools/carta_negritas_v3.py` → `content/carta-negritas-v3.json`).
+  - Cabecera de las tablas fija bajo los chips.
+  - Las 7 pestañas en una fila de 1024 a 1920 px.
+  - Cabezal alineado a la hoja.
+  - Día de promos en `--noche`.
