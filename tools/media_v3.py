@@ -248,10 +248,13 @@ def seam_diff(mid):
     ff('-i', mid, '-vf', f"select='eq(n\\,0)+eq(n\\,{n - 1})'", '-vsync', '0', tmp)
     a, b = Image.open(mid + '.1.png').convert('L'), Image.open(mid + '.2.png').convert('L')
     st = ImageStat.Stat(ImageChops.difference(a, b)).mean[0]
-    # referencia: diferencia típica entre dos frames consecutivos en el medio
-    ff('-i', mid, '-vf', f"select='eq(n\\,{n // 2})+eq(n\\,{n // 2 + 1})'", '-vsync', '0', tmp)
-    c, d = Image.open(mid + '.1.png').convert('L'), Image.open(mid + '.2.png').convert('L')
-    ref = ImageStat.Stat(ImageChops.difference(c, d)).mean[0]
+    # referencia: diferencia típica entre frames consecutivos al 25 % y al 75 % del loop
+    refs = []
+    for k in (n // 4, 3 * n // 4):
+        ff('-i', mid, '-vf', f"select='eq(n\\,{k})+eq(n\\,{k + 1})'", '-vsync', '0', tmp)
+        c, d = Image.open(mid + '.1.png').convert('L'), Image.open(mid + '.2.png').convert('L')
+        refs.append(ImageStat.Stat(ImageChops.difference(c, d)).mean[0])
+    ref = sum(refs) / len(refs)
     for i in (1, 2):
         os.remove(mid + f'.{i}.png')
     return round(st, 2), round(ref, 2), n

@@ -47,15 +47,15 @@
    "files": {
     "webm": {
      "path": "assets/v3/video/lugar-cintas-720.webm",
-     "bytes": 1207993,
+     "bytes": 1213032,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 44
     },
     "mp4": {
      "path": "assets/v3/video/lugar-cintas-720.mp4",
-     "bytes": 1196377,
+     "bytes": 1137582,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 30
+     "crf": 31
     }
    },
    "poster": {
@@ -74,6 +74,78 @@
    },
    "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoTABgAPvVkqE6qpaOiMAwBUB6JYgCdMoGv/gUd5l4OLKwD88c8WcAA/u9dAozGEbyZG+vFuwtmJrsiaEozIltrGg/7nhO7IKnKXmChcEtFQBZO5FgKH4GwHIOlOkWx15lHfOQ30UuPDoKM12Qq+s8z3jmD9cdGrvXoAA==",
    "color": "#401d14"
+  },
+  "comida-cazuela": {
+   "ref": "V052",
+   "src": "assets/raw/ig/DZgLFzooZB__00.mp4",
+   "section": "comida",
+   "alt": {
+    "es": "Cazuela cremosa de mariscos burbujeando en greda negra, con cilantro picado.",
+    "en": "A creamy seafood stew bubbling in a black clay pot, with chopped coriander."
+   },
+   "credit": {
+    "post": "IG-018",
+    "date": "2026-06-12",
+    "url": "https://www.instagram.com/p/DZgLFzooZB_/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "Plano único de 4 s con acercamiento lento: boomerang.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     0.0,
+     3.95
+    ]
+   ],
+   "loop": "boomerang",
+   "frames": 234,
+   "fps": 30.0,
+   "duration": 7.8,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "within_budget": true,
+   "seam": {
+    "last_vs_first": 13.85,
+    "typical_step": 5.08
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v3/video/comida-cazuela-720.webm",
+     "bytes": 1196322,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 31
+    },
+    "mp4": {
+     "path": "assets/v3/video/comida-cazuela-720.mp4",
+     "bytes": 1119514,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 24
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v3/video/comida-cazuela-poster.avif",
+     "bytes": 25759
+    },
+    "webp": {
+     "path": "assets/v3/video/comida-cazuela-poster.webp",
+     "bytes": 33872
+    },
+    "jpg": {
+     "path": "assets/v3/video/comida-cazuela-poster.jpg",
+     "bytes": 74745
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBACdASoTABgAPwF0r1IrJqQiqAqpYCAJZAC7AAmDm1mOOU48nptjxkmo8TcAAP38yieApWGv40z/Tr8mLQIIdDgJfcgWOlCgY80SRtU26N2m9aY0Ja61pTUyc/4r4EUOF3gNUBBXzrjDwu7wW4FIxMY2VD/cpnjVQOQao3jyCmKc7IOM28QRP6FigBb0KczDNNKIAAA=",
+   "color": "#8e875c"
   }
  },
  "team_ig001": {

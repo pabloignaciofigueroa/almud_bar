@@ -1134,7 +1134,7 @@
     900,
     720
    ],
-   "crf_max": 30,
+   "crf_max": 28,
    "budget_kb": 1380,
    "alt": {
     "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
@@ -1183,7 +1183,7 @@
    "segments": [
     [
      0.3,
-     4.0
+     3.3
     ]
    ],
    "loop": "boomerang",
@@ -1193,15 +1193,16 @@
     45
    ],
    "widths": [
-    720
+    720,
+    600
    ],
-   "crf_max": 32,
+   "crf_max": 28,
    "budget_kb": 1200,
    "alt": {
     "es": "Paneo lento por el techo de miles de cintas de colores con luces cálidas.",
     "en": "A slow pan across the ceiling of thousands of coloured ribbons and warm lights."
    },
-   "note": "Un solo plano de 7,1 s; boomerang de 3,7 s."
+   "note": "Un solo plano de 7,1 s; boomerang de 3 s (6 s). Textura de cintas muy cara de comprimir: 720 px si cabe en 1,2 MB con CRF ≤28, si no 600 px."
   },
   {
    "id": "tragos-humo",
@@ -1227,9 +1228,10 @@
     55
    ],
    "widths": [
-    720
+    720,
+    600
    ],
-   "crf_max": 32,
+   "crf_max": 28,
    "budget_kb": 1200,
    "alt": {
     "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
@@ -1257,7 +1259,7 @@
    "widths": [
     720
    ],
-   "crf_max": 32,
+   "crf_max": 28,
    "budget_kb": 1200,
    "alt": {
     "es": "Cazuela cremosa de mariscos burbujeando en greda negra, con cilantro picado.",
@@ -1285,7 +1287,7 @@
    "widths": [
     1278
    ],
-   "crf_max": 32,
+   "crf_max": 28,
    "budget_kb": 1200,
    "credit": "@estudiouno.prod",
    "credit_src": "IG-061",
