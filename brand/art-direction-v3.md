@@ -196,3 +196,24 @@ Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 
   - Fotos propias `carta-*` y el loop de Peter. Nombres, descripciones y precios literales; las etiquetas son Nuevo, Veggie, Vegan y Picante.
   - Abajo: «* Siempre sujeto a stock! *» (en Promos), ‹Carta oficial (PDF)› → uqr.to/ppvi e ‹Inicio›.
   - Sin JS, todo se ve apilado. Todos los «Ver la carta» y «Carta» de `/v3/` llevan a `carta/`.
+
+## Ronda 1 de calidad (imágenes y video 13, carta 14, color 16, voz 17)
+- **Videos:**
+  - La portada se elige por **orientación**: vertical → `portada-celular` 720×1280, 948 KB; horizontal (≥768 px) → `portada-escritorio`. La conecta un script en línea, con póster diferido.
+  - `portada-escritorio` arranca en las lámparas de pinzas de noche. Lleva velo más oscuro arriba y `contrast/saturate` suaves. Sobre 1.664 px queda centrada a ≤1,3x, con viñeta.
+  - El resto de los videos se conecta una sola vez, cuando entra a 0,15 pantallas del viewport (IO solo para cargar, nunca pausa).
+  - Con movimiento reducido: solo póster.
+  - Primer pantallazo del celular: 1,49 MB.
+- **Fotos:**
+  - Tragos usa las favoritas de Carmen: splash P297, sours P086 y copa tallada P097 (esta solo en escritorio). Sagüer y Sangría van como lista.
+  - En Comida, la pizza se muestra 4:5 con `sizes` corregido y la lista nombra «Huerta sabrosa».
+  - Con quién sin `con-quien-amigas`.
+  - Tragos, El lugar y Cuándo y dónde pasan a dos columnas recién desde 1024 px.
+- **Carta:**
+  - Hoja de papel con nombres en `--letrero-azul-tinta`, cinta `--tinta` en los grupos y precios en noche. Cada pestaña tiñe la hoja con un tinte de la paleta al 4–30 % (AA verificado: rosa-tinta ≥4,5 en todas).
+  - Cabezal compacto. Chips fijos bajo las pestañas, y tocar un chip vuelve al inicio. Las pestañas deslizan con fundido en los bordes.
+  - EN en pestañas, chips, días y notas de precio. Etiquetas a 16 px.
+  - Pie: DM rosa; PDF e Inicio en contorno.
+  - BAR del logo en `--letrero-azul`.
+- **Textos:** reseñas con “See for yourself” (solo EN), glosas con mayúscula, destacados con ancla a su pestaña o subgrupo, la nav cambia antes (sin solape con «Ver la carta») y «LE» ya no queda huérfano. `content/copy-v3.md` refleja el sitio.
+- **Pendiente:** `equipo-eduardo`. El jockey toca el borde superior en la foto original (el recorte ya parte en y=0), así que no hay aire que ganar sin otra foto.
