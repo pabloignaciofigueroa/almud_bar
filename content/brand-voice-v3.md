@@ -96,7 +96,7 @@ Todas son literales de Almud y en Instagram funcionan. En la web, frente a un tu
 | Alargamientos y signos en serie | «Besiiiii» [IG-003] · «con tutiiiiii!» [IG-024] · «muuuuuy rico» [IG-002] · «Viernes!!!!!» [IG-085] | Es formato de Instagram. En pantalla grande y tipografía display se ve como error. |
 | Despedida de caption | «Besi Besi» [IG-001] · «Muac muac» [IG-107] · «Siyuleiter» [IG-070] | Firma de posteo diario, no de sitio. |
 | Exceso y carrete | «pa empinar ese codo regalón» [IG-003] · «jornadas recreativas alineadoras de chakras» [IG-026] · «risas pa tirar a la chuña!» [IG-008] · «nos estamos cayendo al litreli nosotros!» [IG-067] · «lo mortal kombat que lo pasamos!» [IG-009] | Carmen: "suenan a carrete y a exceso". Una web premium invita a beber bien, no a beber mucho. |
-| Físico del equipo o de clientas | «Est@s guapetones» [IG-001] · «Garantizado por nuestras bombonas caribeñas!» [IG-031] · «nuestra rubia debilidá» [IG-088] · «la hermosa morocha» [IG-037] · «los bombonazos, secsiiiisss y mortales» [IG-171] | Habla del cuerpo de personas reales. Fuera de una broma entre conocidos, se lee mal y expone al equipo. |
+| Físico del equipo o de clientas | «Est@s guapetones» [IG-001] · «Garantizado por nuestras bombonas caribeñas!» [IG-031] · «nuestra rubia debilidá» [IG-088] · «la hermosa morocha» [IG-037] · «los bombonazos, secsiiiiisss y mortales» [IG-171] | Habla del cuerpo de personas reales. Fuera de una broma entre conocidos, se lee mal y expone al equipo. |
 | Chiste interno o de nicho | «Loh velmonnnntttt!» [IG-035] · «maldición gitana» [IG-158] · «lo habibi más habibi tunait!» [IG-114] · «PULENTO ALANCITO ITO ITO» [IG-156] | Solo lo entiende quien sigue la cuenta. |
 | Logística que espanta o promete | «llegue tempranito, no sea pavarotti» [IG-050] · «reserve su lugar» [IG-030] · «hasta la 9 no mais!» [IG-050] · «se vienen cositiiiiiis!!» [IG-071] · «Nos vemos en las próximas cositas que se vienennnn bomba» [IG-010] | Regla del cliente: nunca filas ni esperas, y nada de prometer eventos no anunciados. |
 | Fechas y promos de una noche | «promo de sour a 2 Lucas hasta las 21:00 hrs!» [IG-032] · «hoy es jueves con promo» [IG-012] · «todos los lunes abiertos!» [IG-038] | Caducan al día siguiente. Las únicas promos que van son las fijas de la carta, con «* Siempre sujeto a stock! *» [CARTA-7]. |
@@ -121,7 +121,7 @@ Rige para todo texto visible de la landing y de la página de la carta, salvo lo
 
 **De tono**
 - Carrete y exceso: "empinar ese codo regalón", "jornada recreativa", "alineadora de chakras", "pa tirar a la chuña", "cayendo al litreli", "agarrar perso", "dejar la patá", "maldición gitana", "mortal kombat", "choriflai", "chanchulín", "bailar hasta abajo".
-- Físico de personas: "guapetones", "bombonas", "bombonazos", "secsiiis", "rubia debilidá", "morocha", "regias, estupendas", "super hermosas", "encacha@s que yegua de circo".
+- Físico de personas: "guapetones", "bombonas", "bombonazos", "secsiii…", "rubia debilidá", "morocha", "regias, estupendas", "super hermosas", "encacha@s que yegua de circo".
 - Superlativos fríos: "experiencia única", "el mejor bar", "EL MEJOR BAR DE CASTRO", "lugar emblemático" (además es de terceros, IG-007 e IG-029), "imperdible", "de clase mundial". Los elogios van solo en las reseñas, citadas con autor.
 - "Experiencia" en general (aunque [VID-061] lo diga, en la web suena a folleto).
 
@@ -141,26 +141,26 @@ Rige para todo texto visible de la landing y de la página de la carta, salvo lo
 
 ## 5. Titulares por sección
 
-★ = favorito del agente Voz. Todos los titulares son literales y están verificados. Pasan a la aprobación (o veto) de Carmen Paz en esta misma fase. Regla de dosis: «Le esperamos» y «Usté se lo merece» van una sola vez cada uno en la página.
+★ = favorito del agente Voz. Todos los titulares son literales y están verificados. Pasan a la aprobación (o veto) de Carmen Paz en esta misma fase. Regla de dosis: «Le esperamos» y «Usté se lo merece» van una sola vez cada uno en la página. Ocho de los once favoritos tienen 6 palabras o menos. Los tres que se pasan (Portada 9, El lugar 7, Comida 7) se mantienen porque Carmen los nombró como suyos y no hay recorte que conserve el sentido; en el diseño se cortan en dos líneas.
 
 ### Portada
 | | Titular | Fuente | Palabras |
 |---|---|---|---|
-| ★ | «Coctelería de autor, comida & música bonita desde 2014» | [BIO] | 8 |
+| ★ | «Coctelería de autor, comida & música bonita desde 2014» | [BIO] | 9 |
 | | «de tchiloé pal mundo mundial» | [IG-137] | 5 |
 | | «Almud nace en el invierno de 2014» | [VID-061] | 7 |
 
 - ★ “Signature cocktails, food & lovely music since 2014” [EN]
 - “from Chiloé to the whole wide world” [EN]
 - “Almud was born in the winter of 2014” [EN]
-- Por qué ★: es el claim de Carmen y dice en 3 segundos qué es Almud y desde cuándo. Pasa de 6 palabras, pero no tiene reemplazo: la portada no lleva otro texto que el logo, esta frase y ‹Ver la carta› [UI].
+- Por qué ★: es el claim de Carmen y dice en 3 segundos qué es Almud y desde cuándo. Pasa de 6 palabras (9, contando el «&»), pero no tiene reemplazo: la portada no lleva otro texto que el logo, esta frase y ‹Ver la carta› [UI].
 
 ### El lugar
 | | Titular | Fuente | Palabras |
 |---|---|---|---|
 | ★ | «Somos inquietos y nos gusta el colorssss!» | [IG-111] | 7 |
 | | «Un lugar que fuera cálido, acogedor» | [VID-061] | 6 |
-| | «hecho con una tonelada de amor y colors!» | [IG-102] | 7 |
+| | «hecho con una tonelada de amor y colors!» | [IG-102] | 8 |
 
 - ★ “We're restless and we love colour!” [EN]
 - “A place meant to be warm and welcoming” [EN]
@@ -197,7 +197,7 @@ Rige para todo texto visible de la landing y de la página de la carta, salvo lo
 |---|---|---|---|
 | ★ | «no somos ná sin ustedes!» | [IG-026] | 5 |
 | | «Venga a celebrar la vida» | [IG-142] | 5 |
-| | «celebremos el amor en todas sus formas» | [IG-060] | 6 |
+| | «celebremos el amor en todas sus formas» | [IG-060] | 7 |
 
 - ★ “we're nothing without you!” [EN]
 - “Come and celebrate life” [EN]
@@ -312,3 +312,132 @@ Script: `/tmp/claude-0/-home-claude/011b3bf8-fa11-50bd-ba3e-4cc567dfb832/scratch
 Resultado: ver el bloque siguiente, que pega la salida del script.
 
 <!-- RESULTADO -->
+Salida del script (2026-10-21; las líneas `OK` se agrupan por literal único):
+
+```
+Literales revisados: 166 (108 únicos) · OK 166 · fallas 0
+OK             §1 [CARTA-1] «Comilona»
+OK             §1 [CARTA-1] «Tukulito Sakayama»
+OK             §1 [CARTA-2] «Cómo te voy a olvidar»
+OK             §1 [CARTA-2] «Te espero en la cuneta»
+OK             §1 [CARTA-2] «Tranquilein John Wayne»
+OK             §1 [CARTA-3] «Cócteles del mundo mundial»
+OK             §1 [CARTA-5] «Otra cosa mariposa»
+OK             §1 [IG-001] «Gracias totales! Se les quiere»
+OK             §1 [IG-004] «todo el colors y calor del mundo mundial»
+OK             §1 [IG-011] «no dejamos a nadie ajuera»
+OK             §1 [IG-011] «tenemos pa todos los gustos!»
+OK             §1 [IG-021] «innumerables horas de probar, probar y probar»
+OK             §1 [IG-022] «una cocina sencilla pero más que sabrosona!»
+OK             §1 [IG-026] «no somos ná sin ustedes!»
+OK             §1 [IG-045] «mucho amor, color y trabajo»
+OK             §1 [IG-048] «Peazo de equipo que tenemos!»
+OK             §1 [IG-060] «celebremos el amor en todas sus formas»
+OK             §1 [IG-084] «es como un jager, pero chilotito pué!»
+OK             §1 [IG-087] «Pucha que nos gusta nuestra barrita!»
+OK             §1 [IG-102] «hecho con una tonelada de amor y colors!»
+OK             §1 [IG-111] «Somos inquietos y nos gusta el colorssss!»
+OK             §1 [IG-123] «llueva, truene o relampaguee, aquí estamos»
+OK             §1 [IG-137] «Usté se lo merece!»
+OK             §1 [IG-137] «de tchiloé pal mundo mundial»
+OK             §1 [IG-145] «la lluvia se pasa aquí!»
+OK             §1 [IG-155] «Le esperamos desde las 18:00 hrs»
+OK             §1 [IG-163] «Le esperamos con los brazos abiertos»
+OK             §2 [BIO] «Coctelería de autor, comida & música bonita desde 2014»
+OK             §2 [CARTA-1] «Las masas de nuestras pizzas son hechas por nosotros!»
+OK             §2 [CARTA-1] «pan de masa mami y mucho amor»
+OK             §2 [CARTA-4] «Amamos el GIN!»
+OK             §2 [IG-004] «Techamos parte de la terraza»
+OK             §2 [IG-010] «Cuánto coctelcito ha pasado bajo este puente»
+OK             §2 [IG-010] «tirar la casa por la ventana!»
+OK             §2 [IG-024] «Que no se lo cuenten»
+OK             §2 [IG-024] «la sonajera de cocteleras»
+OK             §2 [IG-045] «En esta barrita pasan tantas maravillas»
+OK             §2 [IG-046] «mejor los tomamos todos!»
+OK             §2 [IG-084] «lo recibimos con un shotcito de bienvenida»
+OK             §2 [IG-091] «Puro talento!»
+OK             §2 [IG-118] «hecho con mucho amor, paciencia y tiempo»
+OK             §2 [IG-118] «una mirada vale más que mil palabras»
+OK             §2 [IG-139] «pa chuparse el bigoteli»
+OK             §2 [IG-142] «Venga a celebrar la vida»
+OK             §2 [IG-147] «Nos gustan los brillitos, las luces»
+OK             §2 [IG-160] «Tardes y nochecitas de terraza!»
+OK             §2 [IG-163] «Amamos los atardeceres desde nuestra terracita ita ita!»
+OK             §2 [IG-163] «Amamos los atardeceres desde nuestra terracita»
+OK             §2 [VID-061] «Almud nace en el invierno de 2014»
+OK             §2 [VID-061] «Un lugar que fuera cálido, acogedor»
+OK             §2 [VID-061] «de esas para sentarse y quedarse ahí»
+OK             §3 [CARTA-7] «* Siempre sujeto a stock! *»
+OK             §3 [IG-001] «Besi Besi»
+OK             §3 [IG-001] «Est@s guapetones»
+OK             §3 [IG-002] «muuuuuy rico»
+OK             §3 [IG-003] «Besiiiii»
+OK             §3 [IG-003] «pa empinar ese codo regalón»
+OK             §3 [IG-004] «calentit@»
+OK             §3 [IG-004] «disfrutar de su pucho tranquilein john wayne»
+OK             §3 [IG-008] «japi berdey»
+OK             §3 [IG-008] «risas pa tirar a la chuña!»
+OK             §3 [IG-009] «lo mortal kombat que lo pasamos!»
+OK             §3 [IG-010] «Nos vemos en las próximas cositas que se vienennnn bomba»
+OK             §3 [IG-012] «hoy es jueves con promo»
+OK             §3 [IG-013] «Véngase pal Almudcito ito ito»
+OK             §3 [IG-016] «Negronicito ito ito»
+OK             §3 [IG-024] «con tutiiiiii!»
+OK             §3 [IG-026] «jornadas recreativas alineadoras de chakras»
+OK             §3 [IG-026] «nuestro barsucho ucho ucho!»
+OK             §3 [IG-030] «reserve su lugar»
+OK             §3 [IG-031] «Garantizado por nuestras bombonas caribeñas!»
+OK             §3 [IG-032] «promo de sour a 2 Lucas hasta las 21:00 hrs!»
+OK             §3 [IG-035] «Loh velmonnnntttt!»
+OK             §3 [IG-037] «la hermosa morocha»
+OK             §3 [IG-038] «todos los lunes abiertos!»
+OK             §3 [IG-044] «refreskeichon»
+OK             §3 [IG-046] «Demasiada complikeichon elegir»
+OK             §3 [IG-046] «tumorrou es feriado»
+OK             §3 [IG-049] «celebreichon»
+OK             §3 [IG-050] «hasta la 9 no mais!»
+OK             §3 [IG-050] «llegue tempranito, no sea pavarotti»
+OK             §3 [IG-067] «nos estamos cayendo al litreli nosotros!»
+OK             §3 [IG-070] «Siyuleiter»
+OK             §3 [IG-071] «se vienen cositiiiiiis!!»
+OK             §3 [IG-085] «Viernes!!!!!»
+OK             §3 [IG-088] «nuestra rubia debilidá»
+OK             §3 [IG-092] «comilona ona ona!»
+OK             §3 [IG-107] «Muac muac»
+OK             §3 [IG-114] «lo habibi más habibi tunait!»
+OK             §3 [IG-139] «pa usté solit@ o pa compartir!»
+OK             §3 [IG-156] «PULENTO ALANCITO ITO ITO»
+OK             §3 [IG-158] «maldición gitana»
+OK             §3 [IG-171] «los bombonazos, secsiiiiisss y mortales»
+OK             §4 [CARTA-1] «Crumblecito ito ito»
+OK             §5 [BIO] «Abrimos de Mar a Sáb a las 18:00hrs»
+OK             §5 [BIO] «Serrano 325, Castro»
+OK             §5 [CARTA-1] «son hechas por nosotros!»
+OK             §5 [CARTA-2] «Coctelería de la casa»
+OK             §5 [CARTA-5] «Mocktails sin alcohol»
+OK             §5 [IG-001] «la atención más güena!»
+OK             §5 [IG-021] «probar, probar y probar»
+OK             §5 [IG-031] «Venga y compruébelo»
+OK             §5 [IG-046] «Tantos coctelcitos entre los cuales decidirse!»
+OK             §5 [IG-055] «una noche de esas pa recordar»
+OK             §5 [IG-067] «Somos una banda variada y multifacética»
+OK             §5 [IG-091] «Salud por ustedes!»
+OK             §5 [IG-160] «Venga venga, le esperamos!»
+OK             §5 [IG-178] «pa todos los gustazos»
+
+Reglas (secciones 2 y 5):
+LARGO 9 palabras (>8) §2 «Coctelería de autor, comida & música bonita desde 2014»
+LARGO 9 palabras (>8) §2 «Las masas de nuestras pizzas son hechas por nosotros!»
+LARGO 9 palabras (>6) titular Portada «Coctelería de autor, comida & música bonita desde 2014»
+LARGO 7 palabras (>6) titular Portada «Almud nace en el invierno de 2014»
+LARGO 7 palabras (>6) titular El lugar «Somos inquietos y nos gusta el colorssss!»
+LARGO 8 palabras (>6) titular El lugar «hecho con una tonelada de amor y colors!»
+LARGO 7 palabras (>6) titular Comida «una cocina sencilla pero más que sabrosona!»
+LARGO 7 palabras (>6) titular Con quién «celebremos el amor en todas sus formas»
+LARGO 7 palabras (>6) titular Eventos «Cuánto coctelcito ha pasado bajo este puente»
+
+Favoritos por sección: Portada=1, El lugar=1, Tragos=1, Comida=1, Con quién=1, Eventos=1, Equipo=1, Reseñas=1, Cuándo y dónde=1, Pie=1, Página Carta=1
+Secciones sin un único ★: ninguna
+```
+
+Lectura: 0 fallas, ninguna cita de terceros, ninguna palabra prohibida en las secciones 2 y 5, y un ★ por sección. Los avisos LARGO son los titulares de más de 6 palabras ya justificados en la sección 5. [PIEZA] no se usó: el texto de los afiches no está transcrito en el repo.
