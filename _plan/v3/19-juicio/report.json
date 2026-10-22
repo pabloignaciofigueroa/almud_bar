@@ -1,0 +1,474 @@
+{
+ "m_es_home": {
+  "H": 9076,
+  "sw": 390,
+  "shots": 12,
+  "errs": [],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 0.97,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 2.33,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.22,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.24,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.25,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 2.59,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 1.24,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.57,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   []
+  ]
+ },
+ "m_es_carta": {
+  "H": 3189,
+  "sw": 390,
+  "shots": 5,
+  "errs": [],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 4.77,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   []
+  ]
+ },
+ "m_en_home": {
+  "H": 9076,
+  "sw": 390,
+  "shots": 12,
+  "errs": [
+   "noENbtn Locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"butto"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 1.16,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 2.49,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.2,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.23,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.22,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 2.55,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 1.27,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.61,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   []
+  ]
+ },
+ "m_en_carta": {
+  "H": 3189,
+  "sw": 390,
+  "shots": 5,
+  "errs": [
+   "noENbtn Locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"butto"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.21,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   []
+  ]
+ },
+ "d_es_home": {
+  "H": 13453,
+  "sw": 1440,
+  "shots": 17,
+  "errs": [],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 4.76,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 0.73,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.22,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 2.63,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.27,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.64,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.23,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 1.17,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.54,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 0.79,
+     "controls": false,
+     "muted": true
+    }
+   ]
+  ]
+ },
+ "d_es_carta": {
+  "H": 2776,
+  "sw": 1440,
+  "shots": 4,
+  "errs": [],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 4.78,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   []
+  ]
+ },
+ "d_en_home": {
+  "H": 13453,
+  "sw": 1440,
+  "shots": 17,
+  "errs": [
+   "noENbtn Locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"butto"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 3.16,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 4.55,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.24,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 2.69,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.26,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.66,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.21,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 1.16,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.52,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 0.78,
+     "controls": false,
+     "muted": true
+    }
+   ]
+  ]
+ },
+ "d_en_carta": {
+  "H": 2776,
+  "sw": 1440,
+  "shots": 4,
+  "errs": [
+   "noENbtn Locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"butto"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.21,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   []
+  ]
+ }
+}

@@ -1,0 +1,243 @@
+{
+ "m_en_home": {
+  "H": 9584,
+  "sw": 390,
+  "shots": 13,
+  "errs": [
+   "ENvis_at_top {'top': 8, 'w': 39.9375, 'vis': 'visible', 'op': '1', 'navop': '1'}"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 1.99,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 3.33,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.23,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.21,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.55,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.26,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 2.6,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.57,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   []
+  ]
+ },
+ "m_en_carta": {
+  "H": 3216,
+  "sw": 390,
+  "shots": 5,
+  "errs": [
+   "ENvis_at_top {'top': 8, 'w': 39.9375, 'vis': 'visible', 'op': '1', 'navop': '1'}"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 5.66,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   []
+  ]
+ },
+ "d_en_home": {
+  "H": 13729,
+  "sw": 1440,
+  "shots": 17,
+  "errs": [
+   "ENvis_at_top {'top': 8, 'w': 39.9375, 'vis': 'visible', 'op': '1', 'navop': '1'}"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 0.23,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 1.6,
+     "controls": false,
+     "muted": true
+    },
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 1.23,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t": 2.7,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.25,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.64,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 1.22,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t": 2.62,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   [],
+   [],
+   [],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 1.25,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t": 2.62,
+     "controls": false,
+     "muted": true
+    }
+   ]
+  ]
+ },
+ "d_en_carta": {
+  "H": 2804,
+  "sw": 1440,
+  "shots": 4,
+  "errs": [
+   "ENvis_at_top {'top': 8, 'w': 39.9375, 'vis': 'visible', 'op': '1', 'navop': '1'}"
+  ],
+  "bad": [],
+  "vids": [
+   [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 5.63,
+     "controls": false,
+     "muted": true
+    }
+   ],
+   [],
+   [],
+   []
+  ]
+ }
+}

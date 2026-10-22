@@ -36,3 +36,4 @@
 - Fase 16 ✅ ronda 2 cerrada: Voz 18 · Color 19 · Carta 18 · Imágenes/Video 18 (commit 11c0784)
 - Fase 17 ✅ responsive/a11y: 24 combinaciones sin errores, sin JS legible, teclado ok
 - Fase 18 ✅ QA: public = raíz, 0 errores/4xx, CLS 0, LCP 4G lento 2,4–2,6 s, 1.386 KB primer pantallazo
+- Fase 19 ✅ juicio final Carmen 18/20 (A4 B3 C4 D4 E3)
