@@ -317,11 +317,10 @@
     50
    ],
    "widths": [
-    720,
-    600
+    540
    ],
    "crf_max": 30,
-   "vp9_crf_max": 44,
+   "vp9_crf_max": 46,
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "ratio": "4:5",

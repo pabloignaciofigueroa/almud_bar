@@ -28,3 +28,4 @@
 2026-10-22 20:38:12 comida-con-tuti: no hay otro reel de la tabla sin caras (DGLxTmGJ3ZV la muestra solo 2,8 s); mismo tramo de V047 0,25–10,4 s recortado a 384×480 px nativos sobre la tabla y las manos (sin cara, sin ampliar), nitidez 614
 2026-10-22 20:38:12 eventos-fiesta-12: tramo elegido DbeSlSaonsM (V055, reel 12 años) 97,6–106,9 s, terraza repleta celebrando, fundido 1,0 s (V115 de la destacada trae texto sobreimpreso)
 2026-10-22 20:38:12 eventos-jaloguin: tramo elegido DCC4Xp3hZU- (V027, Jalogüín 2024) 34,15–43,15 s, fundido 0,9 s
+2026-10-22 20:48:00 eventos-jaloguin: a 720 y 600 px pasaba el tope de 1.200 KB (mucho detalle de disfraces); se codifica a 540 px, que basta para la ficha del calendario (≤ 300 px css)

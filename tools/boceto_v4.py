@@ -278,9 +278,9 @@ body = f'''
 <section class="eventos claro" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
-    {pic('eventos-10-anos', 'a', '(min-width:1024px) 46vw, 100vw', 'ev__banner reveal')}
+    {vid('eventos-fiesta-12', 'ev__banner ev__banner--v reveal')}
     <ol class="cal">
-      {''.join('<li class="ev">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
+      {''.join('<li class="ev">' + (vid(i, 'ev__m reveal') if i in VI else pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal')) + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>
   </div>
 </section>
