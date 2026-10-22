@@ -210,8 +210,8 @@ def make_master(v, src, W, H, rate):
     segs = v['segments']
     parts, labels = [], []
     for i, (s, e) in enumerate(segs):
-        sp = v.get('speed')  # cámara lenta opcional (p. ej. 0.8): frames intermedios por mezcla
-        tempo = f'setpts=(PTS-STARTPTS)/{sp},framerate=fps={rate}' if sp else f'setpts=PTS-STARTPTS,fps={rate}'
+        sp = v.get('speed')  # cámara lenta opcional (p. ej. 0.8)
+        tempo = f'setpts=(PTS-STARTPTS)/{sp},fps={rate}' if sp else f'setpts=PTS-STARTPTS,fps={rate}'  # cámara lenta por repetición de cuadros: sin mezcla, sin desenfoque
         parts.append(f'[0:v]trim={s}:{e},{tempo},{cropf}format=yuv420p[s{i}]')
         labels.append(f'[s{i}]')
     if len(segs) > 1:

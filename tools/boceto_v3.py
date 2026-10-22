@@ -123,7 +123,7 @@ def rincon_li(r, i):
         name = (f'<h3 class="rin__n">{E(lab)} {g("[" + lab_en.split(" [")[1], "gloss gloss--i")}</h3>'
                 if '[' in lab_en else f'<h3 class="rin__n" data-en="{E(lab_en)}">{E(lab)}</h3>')
         cap = f'<figcaption class="rin__c">{name}' + (f'<p class="rin__l">{E(line)}{g(line_en)}</p>' if line else '') + '</figcaption>'
-    return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 60vh, (min-width:768px) 44vw, 76vw', 'rin__m') + cap + '</li>')
+    return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 30vw, (min-width:768px) 44vw, 76vw', 'rin__m') + cap + '</li>')
 
 
 C_CASA = CARTA + '#casa'
@@ -209,7 +209,12 @@ body = f'''
 <section class="tragos" id="tragos" aria-labelledby="h-tragos">
   <div class="wrap tragos__g">
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'A lot of love, colour and hard work', 'h-tragos')}</div>
-    {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
+    <div class="tragos__band" aria-hidden="false">
+      {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
+      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 reveal', speed='-0.1')}
+      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 reveal', speed='0.12')}
+    </div>
+    <div class="tragos__named">
     <a class="it it--hero" href="{C_CASA}">
       {vid('tragos-humo', 'it__m reveal')}
       <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
@@ -225,6 +230,7 @@ body = f'''
         <p class="moc__l">no dejamos a nadie ajuera{g('We leave nobody out')}</p>
         <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
       </div>
+    </div>
     </div>
   </div>
 </section>

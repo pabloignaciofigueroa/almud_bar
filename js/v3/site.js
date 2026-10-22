@@ -150,15 +150,5 @@
         scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
     });
   });
-  // Galería horizontal sticky (escritorio, sin pin)
-  mm.add('(min-width:1024px)', () => {
-    const wrap = $('[data-h]'), tr = $('[data-track]');
-    const dist = () => Math.max(0, tr.scrollWidth - innerWidth);
-    const size = () => { wrap.style.height = (dist() + innerHeight) + 'px'; };
-    size();
-    const tw = G.to(tr, { x: () => -dist(), ease: 'none',
-      scrollTrigger: { trigger: wrap, start: 'top top', end: 'bottom bottom', scrub: .6, invalidateOnRefresh: true, onRefreshInit: size } });
-    return () => { wrap.style.height = ''; tw.kill(); };
-  });
   addEventListener('load', () => ST.refresh());
 })();

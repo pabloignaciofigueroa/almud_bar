@@ -98,6 +98,7 @@ def nl(t):
 
 
 # negritas de la carta impresa (tools/carta_negritas_v3.py): solo frases de ingredientes, sin precios ni cabeceras
+GLOSA_EN = {k: v for k, v in json.loads((ROOT / 'content/carta-glosas-en-v3.json').read_text()).items() if not k.startswith('_')}
 NEG_STOP = {'hasta', 'años', 'para menores'}
 NEG_FIX = {'Especial pa': 'Especial pa compartir'}  # la línea siguiente del PDF ('compartir:') sigue en negrita
 NEG = {k: sorted({NEG_FIX.get(x, x) for x in v if not re.search(r'\d', x) and x != x.upper() and x.lower() not in NEG_STOP}, key=len, reverse=True)
@@ -128,6 +129,8 @@ def item(it, cols):
     if it.get('bodega') or it.get('nota'):
         meta = '<p class="pr__meta">' + ' · '.join(E(x) for x in [it.get('bodega'), it.get('nota')] if x) + '</p>'
     desc = f'<p class="pr__d">{bold(it["desc"])}</p>' if it.get('desc') else ''
+    if n in GLOSA_EN:
+        desc += g(GLOSA_EN[n], 'gloss gloss--s pr__g')
     return (f'<li class="pr{" pr--img" if media else ""}">{media}<div class="pr__t">{extra}'
             f'<h4 class="pr__n">{E(n)}{tags}</h4>{meta}{desc}</div>{pr}</li>')
 

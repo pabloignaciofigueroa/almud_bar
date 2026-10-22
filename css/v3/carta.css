@@ -138,3 +138,4 @@ html:not(.js) .tabs,html:not(.js) .chips{position:static}
 @media (min-width:1024px) and (max-width:1279px){.tab{font-size:16px;letter-spacing:0;padding:0 8px}}
 .sub,.gr{scroll-margin-top:calc(var(--nav) + var(--tabs-h) + var(--chips-h,0px) + 8px)}
 @media (max-width:1023px){.tabs__l{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 44px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 44px),transparent 100%)}}
+.pr__g{margin-top:4px;font-style:normal}
