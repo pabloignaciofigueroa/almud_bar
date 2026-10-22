@@ -1,6 +1,82 @@
 {
  "_doc": "Generado por tools/media_v4.py desde tools/media_v4.json (fase 2 v4). videos[id].files: webm (VP9) primero, mp4 (H.264, faststart) de respaldo; poster = primer frame del loop (avif/webp/jpg). Cada loop dura 8–10 s, avanza siempre (sin boomerang ni reverse) y cierra con un fundido final→inicio de xfade s.",
  "videos": {
+  "portada-celular": {
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "La terraza techada repleta de gente bajo el techo de cintas de colores al atardecer, y una mesa de amigas de noche.",
+    "en": "The covered terrace packed with people under the colored-ribbon ceiling at sunset, then a table of friends at night."
+   },
+   "credit": {
+    "post": "IG-115",
+    "date": "2024-02-23",
+    "url": "https://www.instagram.com/p/C3tFEcvJ80x/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "variant": "celular",
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 1280,
+   "ratio": "9:16",
+   "segments": [
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 229,
+   "fps": 28.484,
+   "duration": 8.04,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1250,
+   "budget_mp4_kb": 1300,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 8.84,
+   "seam": {
+    "last_vs_first": 25.3,
+    "typical_step": 4.51
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/portada-celular-720.webm",
+     "bytes": 1278182,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 38
+    },
+    "mp4": {
+     "path": "assets/v4/video/portada-celular-720.mp4",
+     "bytes": 1260896,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 29
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/portada-celular-poster.avif",
+     "bytes": 21212
+    },
+    "webp": {
+     "path": "assets/v4/video/portada-celular-poster.webp",
+     "bytes": 41198
+    },
+    "jpg": {
+     "path": "assets/v4/video/portada-celular-poster.jpg",
+     "bytes": 78360
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoNABgAPwFqrU8rJaQiMAgBYCAJQBOgAaLQmCmP4MwAAPcaaKhGWX5H/vUKMgZcHc8XT68A71UhNPcLb/YozfCWRPYePp0B4u81sDqE1KsGLAAA",
+   "color": "#645142"
+  },
   "portada-escritorio": {
    "ref": "V031",
    "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
@@ -78,23 +154,23 @@
    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoYAA4APwFurU6rJqQiMAgBYCAJZQAAW+v+xPlrHaQwAP7yo9fotE3CUbpYM5usEC+eO4WOc5ZzYQqd6AGbAAAA",
    "color": "#070408"
   },
-  "tragos-humo": {
-   "ref": "V038",
-   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
-   "section": "tragos",
+  "lugar-noche": {
+   "ref": "V017",
+   "src": "assets/raw/ig/C9lH7qfSTfo_00.mp4",
+   "section": "lugar",
    "alt": {
-    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
-    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
+    "es": "El salón lleno bajo las flores del «10», la terraza con estufas, guirnaldas de luces de colores y la barra rosa trabajando.",
+    "en": "The packed dining room under the flower \"10\", the terrace with heaters, strings of colored lights and the busy pink bar."
    },
    "credit": {
-    "post": "IG-044",
-    "date": "2025-09-05",
-    "url": "https://www.instagram.com/p/DOO7fgniNI6/",
+    "post": "IG-098",
+    "date": "2024-07-18",
+    "url": "https://www.instagram.com/p/C9lH7qfSTfo/",
     "account": "@almud_bar",
     "text": "@almud_bar"
    },
-   "carta_item": "Aquí te las traigo Peter",
-   "note": "V038 (IG-044), tramo 7,0–16,75 s: la burbuja crece (corte propio del reel en 12,16 s) y la mano la revienta. Es el trago «Aquí te las traigo Peter»: este slot cubre también tragos-peter.",
+   "rincon": "salón y terraza de noche",
+   "note": "Ronda 2: el plano de las cintas pasó a la portada; El lugar muestra el local lleno de noche (V017, IG-098, 9,8–18,68 s), nitidez 105.",
    "source_size": [
     720,
     1280
@@ -104,55 +180,55 @@
    "ratio": "4:5",
    "segments": [
     [
-     7.0,
-     16.75
+     9.8,
+     18.68
     ]
    ],
    "loop": "crossfade",
-   "frames": 217,
-   "fps": 25.0,
-   "duration": 8.68,
+   "frames": 243,
+   "fps": 30.0,
+   "duration": 8.1,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "within_budget": true,
-   "xfade": 1.0,
-   "tramo_s": 9.75,
+   "xfade": 0.8,
+   "tramo_s": 8.88,
    "seam": {
-    "last_vs_first": 3.35,
-    "typical_step": 2.04
+    "last_vs_first": 6.05,
+    "typical_step": 39.92
    },
    "files": {
     "webm": {
-     "path": "assets/v4/video/tragos-humo-720.webm",
-     "bytes": 633396,
+     "path": "assets/v4/video/lugar-noche-720.webm",
+     "bytes": 1209170,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 30
+     "crf": 35
     },
     "mp4": {
-     "path": "assets/v4/video/tragos-humo-720.mp4",
-     "bytes": 976568,
+     "path": "assets/v4/video/lugar-noche-720.mp4",
+     "bytes": 1398392,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 21
+     "crf": 24
     }
    },
    "poster": {
     "avif": {
-     "path": "assets/v4/video/tragos-humo-poster.avif",
-     "bytes": 14471
+     "path": "assets/v4/video/lugar-noche-poster.avif",
+     "bytes": 31076
     },
     "webp": {
-     "path": "assets/v4/video/tragos-humo-poster.webp",
-     "bytes": 19746
+     "path": "assets/v4/video/lugar-noche-poster.webp",
+     "bytes": 45278
     },
     "jpg": {
-     "path": "assets/v4/video/tragos-humo-poster.jpg",
-     "bytes": 51478
+     "path": "assets/v4/video/lugar-noche-poster.jpg",
+     "bytes": 88857
     }
    },
-   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBQCdASoTABgAPwF4tFQrJyUjKAgBYCAJZgCxHzRCmBKNCu9zJbdbFiE6cDr4WPf0cVgA/s120UWflLQgUDsdK2TGSk1G0YPjaa10u4PYg6oQHZnkfYEd1090LzMQc+Y5k+WBbeWOBFJa7J13i84GeKIAJbK2kilwMh0xVSWAAA==",
-   "color": "#953114"
+   "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoTABgAPwFyslIrJqSiqAqpYCAJYgCdMzLqmBojRW6gHUqlUxaiE1W/fwAAzETAsKSOSuZayaOf70ZA0qUkwkfCHd9iouUQhmzZx1w6ohzeHQlv23bds3be0pzROeozSpUcw7p6IdE26k0OsYF3csKh/Z1W1DtLmu4gCV/DbEPamLSF6PigM2nYV84qrPynPNa2lscUAAA=",
+   "color": "#86563c"
   },
   "tragos-coctelera": {
    "ref": "V032",
@@ -229,80 +305,307 @@
    "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoTABgAPwFurU8rJqQiMAgBYCAJbACdMu0BCIACaQEevKrTaZJMHbSc6gU+bwAA/u6GFe+ng9ZeRlVzW2a9deWXWi6EVvHz6Lydzz6/KfvscDB8/2JzZcxB2WSqD4qUcVcbvhJGW/gljFGddVt5pMR6bjsPuf3XgBWuLKEWfJBoVKAWzNfPp4xpzmSADACNsTh8A5tAAAA=",
    "color": "#321008"
   },
-  "donde-terraza": {
-   "ref": "V007",
-   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
-   "section": "donde",
+  "tragos-humo": {
+   "ref": "V038",
+   "src": "assets/raw/ig/DOO7fgniNI6_00.mp4",
+   "section": "tragos",
    "alt": {
-    "es": "La terraza del Almud de tarde: mesas llenas en el patio con Castro detrás, un trago rosado y la terraza techada con cintas de colores.",
-    "en": "Almud's terrace in the afternoon: a packed patio with Castro behind it, a pink cocktail and the covered terrace with colored ribbons."
+    "es": "Una burbuja de humo crece sobre una copa roja y una mano la revienta: el humo se escapa sobre la barra.",
+    "en": "A smoke bubble swells over a red coupe and a hand pops it, smoke spilling across the bar."
    },
    "credit": {
-    "post": "IG-115",
-    "date": "2024-02-23",
-    "url": "https://www.instagram.com/p/C3tFEcvJ80x/",
+    "post": "IG-044",
+    "date": "2025-09-05",
+    "url": "https://www.instagram.com/p/DOO7fgniNI6/",
     "account": "@almud_bar",
     "text": "@almud_bar"
    },
-   "note": "V007 (IG-115), tramo 0,0–8,92 s (antes del corte a la pizza). Reemplaza al letrero: V031 solo tiene 10,4 s sin subtítulos y los usa enteros la portada de escritorio; repetirlo abajo duplicaría el mismo plano.",
+   "carta_item": "Aquí te las traigo Peter",
+   "note": "V038 (IG-044), tramo 7,0–16,75 s: la burbuja crece (corte propio del reel en 12,16 s) y la mano la revienta. Es el trago «Aquí te las traigo Peter»: este slot cubre también tragos-peter.",
    "source_size": [
     720,
     1280
    ],
    "width": 720,
-   "height": 720,
-   "ratio": "1:1",
+   "height": 900,
+   "ratio": "4:5",
    "segments": [
     [
-     0.0,
-     8.92
+     7.0,
+     16.75
     ]
    ],
    "loop": "crossfade",
-   "frames": 232,
-   "fps": 28.484,
-   "duration": 8.14,
+   "frames": 217,
+   "fps": 25.0,
+   "duration": 8.68,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "within_budget": true,
-   "xfade": 0.8,
-   "tramo_s": 8.92,
+   "xfade": 1.0,
+   "tramo_s": 9.75,
    "seam": {
-    "last_vs_first": 17.92,
-    "typical_step": 29.13
+    "last_vs_first": 3.35,
+    "typical_step": 2.04
    },
    "files": {
     "webm": {
-     "path": "assets/v4/video/donde-terraza-720.webm",
-     "bytes": 1223957,
+     "path": "assets/v4/video/tragos-humo-720.webm",
+     "bytes": 633396,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 30
+    },
+    "mp4": {
+     "path": "assets/v4/video/tragos-humo-720.mp4",
+     "bytes": 976568,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 21
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/tragos-humo-poster.avif",
+     "bytes": 14471
+    },
+    "webp": {
+     "path": "assets/v4/video/tragos-humo-poster.webp",
+     "bytes": 19746
+    },
+    "jpg": {
+     "path": "assets/v4/video/tragos-humo-poster.jpg",
+     "bytes": 51478
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBQCdASoTABgAPwF4tFQrJyUjKAgBYCAJZgCxHzRCmBKNCu9zJbdbFiE6cDr4WPf0cVgA/s120UWflLQgUDsdK2TGSk1G0YPjaa10u4PYg6oQHZnkfYEd1090LzMQc+Y5k+WBbeWOBFJa7J13i84GeKIAJbK2kilwMh0xVSWAAA==",
+   "color": "#953114"
+  },
+  "comida-con-tuti": {
+   "ref": "V047",
+   "src": "assets/raw/ig/DY0AUvhlHjI_07.mp4",
+   "section": "comida",
+   "alt": {
+    "es": "En una mesa de la terraza, un cliente pica de la tabla «Con tuti si no pa qué!»: aceitunas, quesos, frutos secos, fruta y pancito.",
+    "en": "At a terrace table a guest picks from the \"Con tuti si no pa qué!\" sharing board: olives, cheeses, nuts, fruit and house bread."
+   },
+   "credit": {
+    "post": "IG-022",
+    "date": "2026-05-26",
+    "url": "https://www.instagram.com/p/DY0AUvhlHjI/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Con tuti si no pa qué!",
+   "note": "V047 (IG-022, «una cocina sencilla pero más que sabrosona!»), 0,25–10,4 s, un solo plano. La tabla es la misma de la foto IG-066 «CON TUTI SI NO PA QUÉ!» que la carta asocia a ese plato.",
+   "source_size": [
+    720,
+    960
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     0.25,
+     10.4
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 271,
+   "fps": 29.54,
+   "duration": 9.17,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 1.0,
+   "tramo_s": 10.15,
+   "seam": {
+    "last_vs_first": 3.02,
+    "typical_step": 7.24
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/comida-con-tuti-720.webm",
+     "bytes": 1171085,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 43
     },
     "mp4": {
-     "path": "assets/v4/video/donde-terraza-720.mp4",
-     "bytes": 1382292,
+     "path": "assets/v4/video/comida-con-tuti-720.mp4",
+     "bytes": 1296914,
      "type": "video/mp4; codecs=\"avc1.640028\"",
      "crf": 28
     }
    },
    "poster": {
     "avif": {
-     "path": "assets/v4/video/donde-terraza-poster.avif",
-     "bytes": 37548
+     "path": "assets/v4/video/comida-con-tuti-poster.avif",
+     "bytes": 42461
     },
     "webp": {
-     "path": "assets/v4/video/donde-terraza-poster.webp",
-     "bytes": 53426
+     "path": "assets/v4/video/comida-con-tuti-poster.webp",
+     "bytes": 64304
     },
     "jpg": {
-     "path": "assets/v4/video/donde-terraza-poster.jpg",
-     "bytes": 84737
+     "path": "assets/v4/video/comida-con-tuti-poster.jpg",
+     "bytes": 111408
     }
    },
-   "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABgAPvlkqk6qpaQiN/VYAVAfCWoAnTLevOgEuIXJkuLwXo9hYThNJoAA3L8Uq27bc0rOX39WHzibtx/t/EG/C6LJ/z7V9WNkEEuVwsz1MB34dTv1W0pGd5AJ4jGuTyOJvYY/16MvyO00mThqqxGbiRcujZ2DWJHmlyIbijRDQsjkDZtAAA==",
-   "color": "#455874"
+   "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoTABgAPwFqsFErJaSisBgIAWAgCWQAnQALpFUDM2NYHtJWrdk4dmxgIvWOAAD+5dAmcThq69Dq+qDBD/cTIBn2ofVxpQcpN4cFDJZdhyTuuTwzQzgLu8NPCRogftARwo+X6c7XeuDHYdggJzXW/S8X81OhSr7BKDw0ySib76c7B/JmavFTC8TI2WkTWbe8GGxgdkGAAAA=",
+   "color": "#89695c"
+  },
+  "quien-multitud-1": {
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "con-quien",
+   "alt": {
+    "es": "Una mesa larga de amigos levanta los vasos y brinda bajo el techo de cintas; risas en las mesas y la terraza llena.",
+    "en": "A long table of friends raises their glasses under the ribbon ceiling; laughter at every table and a full terrace."
+   },
+   "credit": {
+    "post": "IG-051",
+    "date": "2025-08-02",
+    "url": "https://www.instagram.com/p/DM3n8lOy5qf/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "V036 (11 años, IG-051 «nuestros fieles parroquianos»), 66,32–75,7 s: brindis de una mesa entera, risas, cintas y terraza llena (cortes propios de ~1 s).",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     66.32,
+     75.7
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 251,
+   "fps": 30.0,
+   "duration": 8.37,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 1.0,
+   "tramo_s": 9.38,
+   "seam": {
+    "last_vs_first": 16.16,
+    "typical_step": 11.37
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/quien-multitud-1-720.webm",
+     "bytes": 1201413,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 38
+    },
+    "mp4": {
+     "path": "assets/v4/video/quien-multitud-1-720.mp4",
+     "bytes": 1407934,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 26
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/quien-multitud-1-poster.avif",
+     "bytes": 17951
+    },
+    "webp": {
+     "path": "assets/v4/video/quien-multitud-1-poster.webp",
+     "bytes": 25356
+    },
+    "jpg": {
+     "path": "assets/v4/video/quien-multitud-1-poster.jpg",
+     "bytes": 59689
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADQBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJagCxHoR7Pf/gFqqFOa8h3C3YYF5ZeHjaDutJTeJQAP0AhgL47LiKYiqgE2e29mizkgIMYe/utGRWGN1bdHTk21ieOrSFkBI5FHyqtNF3qb32rOG/8SozF+zDUhEekbRSUbnggbB4TdMUm+tRb+2nKO1VcvfABLrTerQDDLRU/r7yugqeF9z/RT2/fUYAAAA=",
+   "color": "#965734"
+  },
+  "quien-multitud-2": {
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "con-quien",
+   "alt": {
+    "es": "Mesas llenas en el salón: grupos que conversan y se ríen, tragos que llegan y gente de pie entre las mesas.",
+    "en": "Full tables in the dining room: groups chatting and laughing, drinks arriving and people standing between tables."
+   },
+   "credit": {
+    "post": "IG-051",
+    "date": "2025-08-02",
+    "url": "https://www.instagram.com/p/DM3n8lOy5qf/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "V036 (IG-051), 28,62–37,7 s: grupos en mesas, risas y el salón lleno.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     28.62,
+     37.7
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 245,
+   "fps": 30.0,
+   "duration": 8.17,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.9,
+   "tramo_s": 9.08,
+   "seam": {
+    "last_vs_first": 51.9,
+    "typical_step": 8.85
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/quien-multitud-2-720.webm",
+     "bytes": 1217613,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 32
+    },
+    "mp4": {
+     "path": "assets/v4/video/quien-multitud-2-720.mp4",
+     "bytes": 1376563,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 22
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/quien-multitud-2-poster.avif",
+     "bytes": 26696
+    },
+    "webp": {
+     "path": "assets/v4/video/quien-multitud-2-poster.webp",
+     "bytes": 36436
+    },
+    "jpg": {
+     "path": "assets/v4/video/quien-multitud-2-poster.jpg",
+     "bytes": 72556
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwBACdASoTABgAPwFurVCrJiQiqA1RYCAJYgCdMswBgr48hejvXrLQpGyx2Aa47MwA9p8pLVQ4xLbPP9OwsK3t3qs6hGdTldSocb3K+XujvlgftPGyrhTZdS216NmmibIAf4wPHUeHR4FFh4h5lcLUhVwUEryJMEzz0DGBAAA=",
+   "color": "#361412"
   },
   "equipo-duenos": {
    "ref": "V017",
@@ -378,6 +681,81 @@
    },
    "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoNABgAPwFqrE8rJiQiMAgBYCAJaACdMoR4GCWWEER/CcqMPJAAAPqd0vy4r48pZT8wCiDFyuHJfsBB2aT/hXmC3TiWtGxOXIRfd+xh4fTMG9FrDpREcbp8HitCg4rmWk85Xa+diFzM/iEvWgeAAA==",
    "color": "#b17c5b"
+  },
+  "donde-terraza": {
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "donde",
+   "alt": {
+    "es": "La terraza del Almud de tarde: mesas llenas en el patio con Castro detrás, un trago rosado y la terraza techada con cintas de colores.",
+    "en": "Almud's terrace in the afternoon: a packed patio with Castro behind it, a pink cocktail and the covered terrace with colored ribbons."
+   },
+   "credit": {
+    "post": "IG-115",
+    "date": "2024-02-23",
+    "url": "https://www.instagram.com/p/C3tFEcvJ80x/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "V007 (IG-115), tramo 0,0–8,92 s (antes del corte a la pizza). Reemplaza al letrero: V031 solo tiene 10,4 s sin subtítulos y los usa enteros la portada de escritorio; repetirlo abajo duplicaría el mismo plano.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 720,
+   "ratio": "1:1",
+   "segments": [
+    [
+     0.0,
+     8.92
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 232,
+   "fps": 28.484,
+   "duration": 8.14,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 8.92,
+   "seam": {
+    "last_vs_first": 17.92,
+    "typical_step": 29.13
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/donde-terraza-720.webm",
+     "bytes": 1223957,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 43
+    },
+    "mp4": {
+     "path": "assets/v4/video/donde-terraza-720.mp4",
+     "bytes": 1382292,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 28
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/donde-terraza-poster.avif",
+     "bytes": 37548
+    },
+    "webp": {
+     "path": "assets/v4/video/donde-terraza-poster.webp",
+     "bytes": 53426
+    },
+    "jpg": {
+     "path": "assets/v4/video/donde-terraza-poster.jpg",
+     "bytes": 84737
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABgAPvlkqk6qpaQiN/VYAVAfCWoAnTLevOgEuIXJkuLwXo9hYThNJoAA3L8Uq27bc0rOX39WHzibtx/t/EG/C6LJ/z7V9WNkEEuVwsz1MB34dTv1W0pGd5AJ4jGuTyOJvYY/16MvyO00mThqqxGbiRcujZ2DWJHmlyIbijRDQsjkDZtAAA==",
+   "color": "#455874"
   }
  }
 }
