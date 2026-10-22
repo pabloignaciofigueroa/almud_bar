@@ -163,7 +163,11 @@ COLOR = ['-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt7
 
 def make_master(v, src, W, H, rate):
     """Concatena tramos, recorta y arma el loop en un máster sin pérdida a resolución de recorte. Devuelve (ruta, w, h)."""
-    x0, y0, x1, y1 = crop_box(W, H, v['ratio'], v['focal'])
+    if v.get('crop'):  # v4: recorte manual [x, y, ancho, alto] en px de la fuente (p. ej. llevar la comida al centro); nunca se amplía
+        x0, y0, cw0, ch0 = v['crop']
+        x1, y1 = x0 + cw0, y0 + ch0
+    else:
+        x0, y0, x1, y1 = crop_box(W, H, v['ratio'], v['focal'])
     cw, ch = (x1 - x0) // 2 * 2, (y1 - y0) // 2 * 2
     cropf = f'crop={cw}:{ch}:{x0}:{y0},' if (cw, ch) != (W, H) else ''
     segs = v['segments']
