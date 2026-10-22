@@ -268,9 +268,9 @@ body = f'''
 <section class="quien" id="quien" aria-labelledby="h-quien">
   <div class="wrap">{title('no somos ná sin ustedes!', "We're nothing without you!", 'h-quien', 'ttl--xl')}</div>
   <div class="quien__g">
-    <div class="col" data-speed="-0.06">{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{vid('quien-multitud-1', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col" data-speed="-0.06">{vid('quien-multitud-1', 'reveal')}{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-amigas', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
   </div>
 </section>
 
