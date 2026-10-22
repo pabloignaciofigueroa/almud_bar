@@ -515,35 +515,35 @@
  "E contraste 390 carta/": {
   "checked": 69,
   "worst": {
-   "txt": "Coctelería de la casa",
-   "cr": 1.09,
+   "txt": "Nuevo",
+   "cr": 5.33,
    "need": 4.5,
-   "fs": "15px"
+   "fs": "16px"
   }
  },
  "E contraste 1440 carta/": {
   "checked": 69,
   "worst": {
-   "txt": "Coctelería de la casa",
-   "cr": 1.09,
+   "txt": "Nuevo",
+   "cr": 5.33,
    "need": 4.5,
-   "fs": "15px"
+   "fs": "16px"
   }
  },
  "F celular 4G lento": {
-  "lcp_ms": 6956,
+  "lcp_ms": 2608,
   "cls": 0,
-  "load_ms": 4322,
+  "load_ms": 3467,
   "hero_paused": [
    false
   ],
   "versiones": [
    "tokens.css?v=b59f1ef1",
-   "site.css?v=7bd1d193",
+   "site.css?v=e7a13f54",
    "gsap.min.js",
    "ScrollTrigger.min.js",
    "lenis.min.js",
-   "site.js?v=aa761229"
+   "site.js?v=9fcb9498"
   ]
  }
 }

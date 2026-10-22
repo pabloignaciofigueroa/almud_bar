@@ -91,9 +91,9 @@ html[lang="en"] .gloss--i{display:inline}
 .intro .hero__win{clip-path:polygon(50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%)}
 .intro .hero__in>*{opacity:0}
 .intro .nav{opacity:0}
-.intro .hero__win{animation:fs-clip .01s 3.6s forwards}
-.intro .hero__in>*,.intro .nav{animation:fs-show .01s 3.6s forwards}
-.intro .hero__iso{animation:fs-hide .01s 3.6s forwards}
+.intro .hero__win{animation:fs-clip .01s 4.2s forwards}
+.intro .hero__in>*,.intro .nav{animation:fs-show .01s 4.2s forwards}
+.intro .hero__iso{animation:fs-hide .01s 4.2s forwards}
 @keyframes fs-clip{to{clip-path:inset(0)}}
 @keyframes fs-show{to{opacity:1}}
 @keyframes fs-hide{to{opacity:0}}
@@ -382,3 +382,6 @@ html[lang="en"] .gloss--i{display:inline}
   .comida .it .it__n{font-size:30px}
   .co__big .it__n{font-size:40px}
 }
+/* sin JS: póster en vez del video (Chrome muestra controles vacíos si no hay JS) */
+html:not(.js) .m video{display:none}
+.m noscript img{position:absolute;inset:0}

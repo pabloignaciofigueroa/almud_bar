@@ -382,3 +382,6 @@ html[lang="en"] .gloss--i{display:inline}
   .comida .it .it__n{font-size:30px}
   .co__big .it__n{font-size:40px}
 }
+/* sin JS: póster en vez del video (Chrome muestra controles vacíos si no hay JS) */
+html:not(.js) .m video{display:none}
+.m noscript img{position:absolute;inset:0}

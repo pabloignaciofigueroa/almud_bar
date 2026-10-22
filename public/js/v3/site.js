@@ -119,7 +119,8 @@
       .fromTo('.hero__btns', { opacity: 0, y: 24 }, { y: 0, opacity: 1, duration: .9, ease: EXPO }, 1.95)
       .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .6 }, 2.0);
   }
-  if (root.classList.contains('intro') && scrollY < 10) intro(); else root.classList.remove('intro');
+  // si el JS llega tarde (red lenta), no se hace esperar al turista: la portada aparece de inmediato
+  if (root.classList.contains('intro') && scrollY < 10 && performance.now() < 1400) { window.__almudIntro = true; intro(); } else root.classList.remove('intro');
 
   // Revelados de titulares
   $$('.ttl, .pie__f').forEach(t => {

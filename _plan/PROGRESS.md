@@ -34,3 +34,5 @@
 - 2026-10-22 v3 fases 9-14: construcción cerrada (detalles Carmen, versión ?v=, OG/lang, /v3/carta/ con pestañas). Bloque C completo.
 - 2026-10-22 v3 fase 15: ronda 1 aplicada (videos por cercanía sin pausa, carta en papel, fotos de Carmen en Tragos, EN completo)
 - Fase 16 ✅ ronda 2 cerrada: Voz 18 · Color 19 · Carta 18 · Imágenes/Video 18 (commit 11c0784)
+- Fase 17 ✅ responsive/a11y: 24 combinaciones sin errores, sin JS legible, teclado ok
+- Fase 18 ✅ QA: public = raíz, 0 errores/4xx, CLS 0, LCP 4G lento 2,4–2,6 s, 1.386 KB primer pantallazo

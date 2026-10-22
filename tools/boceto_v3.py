@@ -336,8 +336,8 @@ page = f'''<!doctype html>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../{IM_P}" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
 <link rel="preload" href="../{IM_L}" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
-<link rel="preload" href="../vendor/gsap.min.js" as="script">
-<link rel="preload" href="../vendor/ScrollTrigger.min.js" as="script">
+<link rel="preload" href="../vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" as="script">
+<link rel="preload" href="../vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" as="script">
 <link rel="preload" href="../js/v3/site.js?v={ver('js/v3/site.js')}" as="script">
 <link rel="stylesheet" href="../css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
 <link rel="stylesheet" href="../css/v3/site.css?v={ver('css/v3/site.css')}">
@@ -347,9 +347,9 @@ page = f'''<!doctype html>
 </head>
 <body>
 {body}
-<script src="../vendor/gsap.min.js" defer></script>
-<script src="../vendor/ScrollTrigger.min.js" defer></script>
-<script src="../vendor/lenis.min.js" defer></script>
+<script src="../vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" defer></script>
+<script src="../vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" defer></script>
+<script src="../vendor/lenis.min.js?v={ver('vendor/lenis.min.js')}" defer></script>
 <script src="../js/v3/site.js?v={ver('js/v3/site.js')}" defer></script>
 </body>
 </html>
