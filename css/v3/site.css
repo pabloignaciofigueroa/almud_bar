@@ -26,7 +26,7 @@ ul,ol{list-style:none}
 .ttl{font:800 44px/.93 var(--f-display);letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;max-width:14ch}
 @media (min-width:768px){.ttl{font-size:clamp(64px,7.2vw,120px)}}
 .ttl--xl{max-width:16ch}
-.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em .02em .08em;margin:-.16em -.02em -.08em}
 .w__i{display:inline-block;will-change:transform}
 .kick{font:600 15px/1.2 var(--f-body);letter-spacing:.06em;text-transform:uppercase}
 .gloss{display:none;font:500 18px/1.4 var(--f-body);letter-spacing:0;text-transform:none;color:var(--papel-2)}
@@ -74,8 +74,8 @@ html[lang="en"] .gloss--i{display:inline}
 .hero__svg{width:100%;height:auto}
 .hero__claim{margin:16px 0 22px;max-width:24ch;font-size:21px;line-height:1.3}
 .hero__claim .gloss{margin-top:4px}
-.hero__btns{display:flex;gap:10px}
-.hero__btns .btn{flex:1 1 0;padding:0 12px}
+.hero__btns{display:flex;justify-content:flex-end}
+.hero__btns .btn{padding:0 28px}
 @media (min-width:768px){
   .hero__in{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:end;column-gap:5vw;bottom:clamp(32px,6vh,64px)}
   .hero__logo{width:100%;max-width:760px}

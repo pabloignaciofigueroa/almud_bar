@@ -160,7 +160,6 @@ body = f'''
     <p class="hero__claim"><span class="hero__claim-t">Coctelería de autor, comida &amp; música bonita desde 2014</span>{g('Signature cocktails, food & lovely music since 2014')}</p>
     <div class="hero__btns">
       <a class="btn btn--rosa" href="{CARTA}" data-en="See the menu">Ver la carta</a>
-      <a class="btn btn--ghost" href="{MAPS}" target="_blank" rel="noopener" data-en="Get directions">Cómo llegar</a>
     </div>
   </div>
 </section>
@@ -268,7 +267,6 @@ body = f'''
     </dl>
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
-      <a class="btn btn--ghost" href="{MAPS}" target="_blank" rel="noopener" data-en="Get directions">Cómo llegar</a>
     </div>
   </div>
 </section>
