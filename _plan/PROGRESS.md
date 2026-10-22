@@ -19,3 +19,4 @@
 - 2026-10-21 Fase 15a v2: carta como página aparte /carta (pestañas, subgrupos, fondos suaves, fotos referenciales) + destacados en landing
 - 2026-10-21 Fase 15 v2: correcciones ronda 1 (P0/P1 resueltos, ver critica-1/respuesta.md)
 - 2026-10-21 Fase 16 v2: correcciones del jurado aplicadas (ver jurado-2/respuesta.md)
+- 2026-10-21 Plan v3 (20 fases, meta Carmen Paz ≥18/20)
