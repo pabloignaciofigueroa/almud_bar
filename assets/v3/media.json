@@ -2598,88 +2598,70 @@
    }
   },
   "eventos-14f": {
-   "ref": "V006-cover",
-   "src": "assets/raw/ig/C3VODtYsjNX_00.jpg",
+   "ref": "V-C3tFEcvJ80x@18.6s",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00_f186.jpg",
    "section": "eventos",
    "alt": {
-    "es": "14 de febrero en Almud: manos con uñas rosadas sostienen un trago rosa con una mariposa de papel.",
-    "en": "Valentine's Day at Almud: hands with pink nails hold a pink cocktail topped with a paper butterfly."
+    "es": "14 de febrero en Almud: una clienta ríe y levanta un trago rosado con una mariposa de papel.",
+    "en": "Valentine's Day at Almud: a guest laughs and raises a pink cocktail topped with a paper butterfly."
    },
    "credit": {
-    "post": "IG-117",
-    "date": "2024-02-14",
-    "url": "https://www.instagram.com/p/C3VODtYsjNX/",
+    "post": null,
+    "date": null,
+    "url": null,
     "account": "@almud_bar",
     "text": "@almud_bar"
    },
    "evento": "14F",
-   "note": "Portada del reel 14F (IG-117), sobremuestreada: tope 1080 px. El afiche IG-116 tiene texto: descartado.",
+   "note": "Frame 18,6 s del reel «El 14F estuvo hermoso!» (IG C3tFEcvJ80x, feb-2024): gente en vez de manos (juicio Carmen fase 8).",
    "source_size": [
-    2268,
-    4032
+    720,
+    1280
    ],
    "crops": {
     "a": {
      "ratio": "4:5",
      "focal": [
       50,
-      55
+      50
      ],
      "box": [
       0,
-      800,
-      2268,
-      3635
+      190,
+      720,
+      1090
      ],
      "crop_size": [
-      2268,
-      2835
+      720,
+      900
      ],
-     "width": 1080,
-     "height": 1350,
+     "width": 720,
+     "height": 900,
      "widths": [
       480,
-      720,
-      960,
-      1080
+      720
      ],
-     "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBQCdASoTABgAPwF4tFQrJySjKAgBYCAJaACdMyGBeW3/dy9dKbyC+x3hxtkurjwLJiFwAP7sQ8mzuGDwRQB2wlVDURd0fSt6Nfj6fNdqbFfg5+/BwDT9nD8xCO90EqaWepzd0mLov+s5r3BRcKiX/NcNRZi91azKocuZ/l9QLYfMavwWW2gAAAA=",
-     "color": "#a06972",
+     "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoTABgAPvVkq06qpaQiMAwBUB6JaAC7KIAB1VFsA2cAhXF5xPWu+wbf66zGQAD+nR0FfvlCOkBl9DIV0gSHgCKfcpP/0cB7flmTb2eBEijEOSmXTxp9miPCq9mk0EE7Jodw6QYGBGbJpN3CFHgMsgtVpme62n2DUKtdl2pUEinS1/byvtgx1d7VQAA=",
+     "color": "#7d5454",
      "files": {
       "avif": {
        "480": {
         "path": "assets/v3/img/eventos-14f-a-480.avif",
-        "bytes": 21619
+        "bytes": 14405
        },
        "720": {
         "path": "assets/v3/img/eventos-14f-a-720.avif",
-        "bytes": 41024
-       },
-       "960": {
-        "path": "assets/v3/img/eventos-14f-a-960.avif",
-        "bytes": 63431
-       },
-       "1080": {
-        "path": "assets/v3/img/eventos-14f-a-1080.avif",
-        "bytes": 75512
+        "bytes": 23645
        }
       },
       "webp": {
        "480": {
         "path": "assets/v3/img/eventos-14f-a-480.webp",
-        "bytes": 32270
+        "bytes": 19794
        },
        "720": {
         "path": "assets/v3/img/eventos-14f-a-720.webp",
-        "bytes": 57862
-       },
-       "960": {
-        "path": "assets/v3/img/eventos-14f-a-960.webp",
-        "bytes": 86160
-       },
-       "1080": {
-        "path": "assets/v3/img/eventos-14f-a-1080.webp",
-        "bytes": 99860
+        "bytes": 30646
        }
       }
      }
@@ -4626,62 +4608,62 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster.",
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar).",
    "source_size": [
     1080,
     1920
    ],
-   "width": 720,
-   "height": 1280,
+   "width": 900,
+   "height": 1600,
    "ratio": "9:16",
    "segments": [
     [
-     0.6,
-     3.3
+     1.5,
+     3.6
     ]
    ],
    "loop": "boomerang",
-   "frames": 150,
+   "frames": 116,
    "fps": 27.934,
-   "duration": 5.37,
+   "duration": 4.15,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1380,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 19.41,
-    "typical_step": 21.2
+    "last_vs_first": 17.02,
+    "typical_step": 21.93
    },
    "files": {
     "webm": {
-     "path": "assets/v3/video/portada-celular-720.webm",
-     "bytes": 1390286,
+     "path": "assets/v3/video/portada-celular-900.webm",
+     "bytes": 1347215,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 38
+     "crf": 39
     },
     "mp4": {
-     "path": "assets/v3/video/portada-celular-720.mp4",
-     "bytes": 1363065,
+     "path": "assets/v3/video/portada-celular-900.mp4",
+     "bytes": 1357147,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 28
+     "crf": 29
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v3/video/portada-celular-poster.avif",
-     "bytes": 34178
+     "bytes": 40896
     },
     "webp": {
      "path": "assets/v3/video/portada-celular-poster.webp",
-     "bytes": 44394
+     "bytes": 52812
     },
     "jpg": {
      "path": "assets/v3/video/portada-celular-poster.jpg",
-     "bytes": 98562
+     "bytes": 127031
     }
    },
-   "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoNABgAPwFsrU8rJiQiMAgBYCAJbACdMoR8eCKRglBnPPBcVQAA/h7QDmJNrXu4duFYv2Bqo17rHGBQZBpEyXOdJsdYLH/Ob/FmuS13qvGPzrShFBm9v3IgScQ9CjEsbizGNLvkTLNm+kIA",
-   "color": "#7e2730"
+   "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoNABgAPwFqrE6rJiQiMAgBYCAJbACdABVRkhg3EPzY2doAAP6qhKkCJ4PZqRIa/KxazrNrCDaiwYD2AOF21CLy1RLMMKuMyJ+HwBiWwvHKjKJN9WZpslSJNGfCcv0hQ1Pxdl7qxjiqlqAx6liWs3+xuIGYAAAA",
+   "color": "#7e2736"
   },
   "portada-escritorio": {
    "ref": "V031",

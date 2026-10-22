@@ -85,6 +85,7 @@ rincones = [
     ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'We really love our bar!'),
     ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'We roofed part of the terrace'),
     ('lugar-salon', 'm', None, None, None, None),
+    ('lugar-sillones', 'a', 'Sillones', 'Lounge', None, None),
     ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love the sunsets from our little terrace'),
     ('lugar-lampara-pinzas', 'a', 'Lámparas', 'The lamps', 'Nos gustan los brillitos, las luces', 'We love the sparkle, the lights'),
     ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [mural of eyes]', 'una mirada vale más que mil palabras', 'a look is worth a thousand words'),
@@ -97,7 +98,7 @@ def rincon_li(r, i):
     if lab:
         name = (f'<h3 class="rin__n">{E(lab)} {g("[" + lab_en.split(" [")[1], "gloss gloss--i")}</h3>'
                 if '[' in lab_en else f'<h3 class="rin__n" data-en="{E(lab_en)}">{E(lab)}</h3>')
-        cap = f'<figcaption class="rin__c">{name}<p class="rin__l">{E(line)}{g(line_en)}</p></figcaption>'
+        cap = f'<figcaption class="rin__c">{name}' + (f'<p class="rin__l">{E(line)}{g(line_en)}</p>' if line else '') + '</figcaption>'
     return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 60vh, 78vw', 'rin__m') + cap + '</li>')
 
 
@@ -121,7 +122,7 @@ eventos = [
 ]
 
 equipo = [('equipo-milagros', 'milagroosjm'), ('equipo-javier', 'javier.agmc'), ('equipo-eduardo', 'eduu.ardoo'),
-          ('equipo-liz', 'lizzearellano'), ('equipo-pablete', 'pablete_bartender_'), ('equipo-elymar', 'elymar_bocarejo')]
+          ('equipo-liz', 'lizzearellano'), ('equipo-pablete', 'pablete_bartender_')]
 
 resenas = [
     ('fr', 'Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!', 'Great night out in Castro! Friendly service, great atmosphere, really nice music!', 'Dorothee · Épinal, Francia · Tripadvisor', 'Dorothee · Épinal, France · Tripadvisor'),
@@ -168,7 +169,7 @@ body = f'''
 <section class="lugar" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "We're restless and we love colour!", 'h-lugar')}</div>
-    {pic('lugar-sillones', 's', '22vw', 'lugar__x reveal', speed='0.22')}
+    {pic('lugar-cuadros', 'a', '24vw', 'lugar__x reveal', speed='0.22')}
     {vid('lugar-cintas', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
   <div class="rincones" data-h>
@@ -186,7 +187,7 @@ body = f'''
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'a lot of love, colour and work', 'h-tragos')}</div>
     <a class="it it--hero" href="{CARTA}">
       {vid('tragos-humo', 'it__m reveal')}
-      <span class="it__n">Aquí te las traigo Peter</span>{g('[pisco, elderflower, cranberry, bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span>
+      <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[pisco, elderflower, cranberry, bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
     </a>
     <div class="tragos__pair">
       {item(*tragos[0], cls='it--a', speed='-0.08')}
@@ -207,9 +208,9 @@ body = f'''
 <section class="comida" id="comida" aria-labelledby="h-comida">
   <div class="wrap comida__g">
     <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'a simple kitchen, but more than tasty!', 'h-comida')}</div>
-    {vid('comida-cazuela', 'comida__v reveal')}
+    {pic('comida-pizza', 'a', '(min-width:768px) 36vw, 100vw', 'comida__v reveal')}
     {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'comida__a reveal', speed='-0.1')}
-    {pic('comida-pizza', 'a', '(min-width:1024px) 22vw, 45vw', 'comida__b reveal', speed='0.08')}
+    {vid('comida-cazuela', 'comida__b reveal', extra=' data-speed="0.08"')}
     <ul class="menu">
       <li><a href="{CARTA}"><span class="menu__n">Tukulito Sakayama</span><i></i><span class="it__p">$ 15.900</span></a>{g('[marinated tuna tataki]', 'gloss gloss--s')}</li>
       <li><a href="{CARTA}"><span class="menu__n">Camarón que se duerme</span><i></i><span class="it__p">$ 15.900</span></a>{g('[baked shrimp clay pot]', 'gloss gloss--s')}</li>
@@ -233,7 +234,7 @@ body = f'''
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'going all out!', 'h-eventos')}
     <ol class="cal">
-      {''.join(f'<li class="ev" data-mes="{m}">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span> <span class="ev__prox" data-en="Next">Próximo</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
+      {''.join('<li class="ev">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>
   </div>
 </section>
@@ -244,6 +245,7 @@ body = f'''
   <ul class="eq" data-swipe>
     {''.join(f'<li class="eq__p" style="--i:{k}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
   </ul>
+  <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> <a href="{IG}cepaz/" target="_blank" rel="noopener">@cepaz</a> · <a href="{IG}rusio_mezclao/" target="_blank" rel="noopener">@rusio_mezclao</a></p>
 </section>
 
 <!-- 8 · RESEÑAS -->

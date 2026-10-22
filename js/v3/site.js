@@ -46,13 +46,6 @@
   if (root.lang === 'en') setLang('en', false);
   $('[data-lang]').addEventListener('click', () => setLang(root.lang === 'en' ? 'es' : 'en', true));
 
-  /* ───────── Eventos: marca "Próximo" (mes en America/Santiago) ───────── */
-  try {
-    const mes = +new Intl.DateTimeFormat('en-US', { timeZone: 'America/Santiago', month: 'numeric' }).format(new Date());
-    const evs = $$('.ev');
-    (evs.find(e => +e.dataset.mes >= mes) || evs[0]).classList.add('is-next');
-  } catch (e) {}
-
   /* ───────── Nav: aparece al dejar la portada ───────── */
   const hero = $('.hero');
   const navState = () => root.classList.toggle('is-past', scrollY > hero.offsetHeight - 80);
@@ -123,14 +116,16 @@
   // Revelados de titulares
   $$('.ttl, .pie__f').forEach(t => {
     G.from(words(t), { yPercent: 110, duration: 1.05, ease: EXPO, stagger: .045,
-      scrollTrigger: { trigger: t, start: 'top 88%', once: true } });
+      scrollTrigger: { trigger: t, start: 'top 88%', once: true },
+      onComplete: () => $$('.w', t).forEach(w => { w.style.overflow = 'visible'; }) });
   });
   // Revelados con máscara (medios)
   $$('.reveal').forEach(m => {
     const inner = $('img, video', m);
     const tl = G.timeline({ scrollTrigger: { trigger: m, start: 'top 92%', once: true } });
     tl.to(m, { clipPath: 'inset(0% 0 0 0)', duration: 1.15, ease: EXPO })
-      .to(inner, { scale: 1, duration: 1.6, ease: EXPO }, 0);
+      .to(inner, { scale: 1, duration: 1.6, ease: EXPO }, 0)
+      .set(m, { clipPath: 'none' });
   });
   // Bloques de texto
   $$('.rin__c, .it__n, .menu li, .ev__t, .ev__n, .eq__at, .r__q, .datos > div, .donde__btns, .moc__t, .pie__cr').forEach(el => {
