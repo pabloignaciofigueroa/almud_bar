@@ -217,3 +217,17 @@ Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 
   - BAR del logo en `--letrero-azul`.
 - **Textos:** reseñas con “See for yourself” (solo EN), glosas con mayúscula, destacados con ancla a su pestaña o subgrupo, la nav cambia antes (sin solape con «Ver la carta») y «LE» ya no queda huérfano. `content/copy-v3.md` refleja el sitio.
 - **Pendiente:** `equipo-eduardo`. El jockey toca el borde superior en la foto original (el recorte ya parte en y=0), así que no hay aire que ganar sin otra foto.
+
+## Ronda 2 de calidad (voz 18, color 17, carta 16, imágenes y video 16)
+- **Portada celular:** nuevo loop V020 (IG C-YrpVjpCqN). Es un plano continuo de 2,85–5,35 s en boomerang (4,9 s), 720×1280 y 933 KB: el muro rosa de botellas con la lámpara tejida y gente en la barra. Ya no salen las botellas con marcas en primer plano. El póster es el primer cuadro.
+- **Portada escritorio:** sin el mural de ojos. Solo lámparas de pinzas y cintas, en boomerang de 6,7 s.
+- **Primer pantallazo del celular:** 1.444 KB con los textos comprimidos con gzip, como los sirve Cloudflare (1.596 KB sin comprimir en el servidor local).
+- **Tragos:** P362, el bartender frente al muro rosa con el cartelito ALMUD, es la foto grande de la sección (`tragos-bartender`, nueva en `media_v3.json`). Sale la copa tallada.
+- **El lugar:** `sizes` 76vw/44vw/60vh y sin `lugar-cuadros`.
+- **Eventos:** sale 14F. Aniversario usa P073 (el «10» de flores) y la foto de los 12 años va grande y sin rótulo. Calendario de 3 fechas.
+- **Carta:**
+  - Las medidas (Espirituosos, Vermú…) van en tabla, con las cabeceras literales del PDF.
+  - Pestañas: en escritorio entran las 7; en celular encajan por elemento, con fundido de 64 px. El chip activo queda visible al entrar por enlace.
+  - Hoja de 880 px en escritorio. La glosa EN del subtítulo va en línea propia y hay un solo DM (el de la nav).
+  - Color: nombres `#3a3ad8`, solo en la hoja (≥5,81). Tres tintes cálidos (papel, rosa 7 %, dorado 12 %). «NUEVO» y los días van en `#b01a2e` (≥5,32) y los precios en negro.
+- **Guía de voz:** `brand-voice-v3 §4` exime nombres, descripciones y notas impresas de la carta.
