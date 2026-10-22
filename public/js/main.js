@@ -68,17 +68,8 @@
   heroIO.observe(heroV);
 
   /* Sonido de la historia */
-  const storyV = $('.story__video'), soundBtn = $('.sound');
+  const storyV = $('.story__video');
   function storyVid() { return storyV; }
-  soundBtn.addEventListener('click', () => {
-    const on = soundBtn.getAttribute('aria-pressed') !== 'true';
-    setVideo(storyV, storyV.dataset.src, storyV.dataset.poster);
-    storyV.muted = !on;
-    if (on) { storyV.currentTime = 0; storyV.loop = false; storyV.play().catch(() => {}); }
-    else storyV.loop = true;
-    soundBtn.setAttribute('aria-pressed', String(on));
-  });
-  storyV.addEventListener('ended', () => { storyV.muted = true; storyV.loop = true; soundBtn.setAttribute('aria-pressed', 'false'); storyV.play().catch(() => {}); });
 
   /* ───────── Carta ───────── */
   const tabs = $$('.tab');
