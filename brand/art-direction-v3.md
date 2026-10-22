@@ -42,7 +42,7 @@ Duración total ≈ 2,6 s. Con `prefers-reduced-motion` o sin JS no hay intro: l
 
 ## Ritmo pantalla por pantalla
 
-Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 14,7 (incluye el recorrido de la galería sticky).
+Alto medido: celular 390×844 ≈ **10,5 pantallas**; escritorio 1440×900 ≈ 15,3 (incluye el recorrido de la galería sticky).
 
 ### Celular (390 px)
 
@@ -83,12 +83,12 @@ Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 1
 ┌──────────────────────┐ 6 EVENTOS · tinta + fotos · ~1 pant.
 │ TIRAR LA CASA POR LA │
 │ VENTANA!             │ 2×2: FEB 14F · JUL ANIVERSARIO ·
-│ [14F][Aniv.]         │ SEP FONDITA · OCT JALOGÜÍN [PRÓXIMO dorado]
-│ [Fondita][Jalogüín★] │
+│ [14F][Aniv.]         │ SEP FONDITA · OCT JALOGÜÍN (solo mes + nombre)
+│ [Fondita][Jalogüín]  │
 └──────────────────────┘
 ┌──────────────────────┐ 7 EQUIPO · noche · ~0,8 pant.
-│ PEAZO DE EQUIPO QUE  │ swipe de 6 retratos 4:5 con su @
-│ TENEMOS!  [■][■]→    │
+│ PEAZO DE EQUIPO QUE  │ swipe de 5 retratos 4:5 con su @
+│ TENEMOS!  [■][■]→    │ LOS DUEÑOS @cepaz · @rusio_mezclao
 └──────────────────────┘
 ┌──────────────────────┐ 8 RESEÑAS · noche-2 · ~0,8 pant.
 │ QUE NO SE LO CUENTEN │ + glosa EN siempre visible
@@ -131,8 +131,8 @@ Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 1
            │ [tukulito][pizza ↓]   │                   │
            │ lista carta 3 ítems   │                   │
 5 CON QUIÉN  titular a todo el ancho + 3 columnas a 3 velocidades
-6 EVENTOS    tinta · 4 tarjetas, pares bajan 9vh · próximo en dorado
-7 EQUIPO     6 retratos en fila, pares bajan 8vh
+6 EVENTOS    tinta · 4 tarjetas, pares bajan 9vh · solo mes + nombre
+7 EQUIPO     5 retratos en fila + línea de dueños, pares bajan 8vh
 8 RESEÑAS    grilla 3×2, la columna del medio baja 5vh
 9 DÓNDE    ┌───────────────────────────┬─────────────────┐
            │ loop letrero (100vh)      │ LE ESPERAMOS…   │
@@ -149,7 +149,7 @@ Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 1
 | 3 | Tragos | muro | papel, muro-2 | `tragos-humo`, `carta-saguer`, `carta-sangria`, `carta-moto` |
 | 4 | Comida | noche-2 | ámbar (titular y puntos) | `comida-cazuela`, `carta-tukulito`, `comida-pizza` |
 | 5 | Con quién | noche | — | 6 fotos `con-quien-*` (4 en celular) |
-| 6 | Eventos | tinta (siempre con foto) | dorado (próximo) | `eventos-14f`, `-12-anos`, `-fondita`, `-jaloguin` |
+| 6 | Eventos | tinta (siempre con foto) | tinta-2 (mes) | `eventos-14f`, `-12-anos`, `-fondita`, `-jaloguin` |
 | 7 | Equipo | noche | papel-2 (@) | 6 retratos `equipo-*` |
 | 8 | Reseñas | noche-2 | muro-rosa (filete) | — |
 | 9 | Dónde | noche | muro-rosa (DM) | `donde-letrero` |
@@ -158,11 +158,23 @@ Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 1
 ## Tipo y botones (Carmen P)
 Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 120 px en escritorio, lh 0,93. Texto Barlow Condensed 500 18/20 px · 1,5; nada bajo 16 px; rótulos 600 15 px +0,06 em; precios 600 20 px en papel. Botones radio 4 px, 600 17 px, 52 px de alto: **Ver la carta** (portada, sola y a la derecha) · **Escríbenos por DM** y **Cómo llegar** (solo en Cuándo y dónde). Sin RESERVAR.
 
+## Ronda tras el juicio de Carmen (15/20)
+- Eventos: sin «Próximo»; el calendario es solo mes + nombre (recuerdo, en pasado).
+- Acentos: la máscara de cada palabra tiene aire arriba (padding .26 em) y queda `overflow:visible` al terminar; revisado a 320/390/768/1440.
+- Peter: en celular, loop al 62 % con nombre y precio al lado (la copa entera cabe en una pantalla con el titular).
+- Comida: la pizza servida P036 es la imagen principal; la cazuela queda como loop chico, junto al Tukulito.
+- 14F: cuadro de 18,6 s del reel «El 14F estuvo hermoso!» (C3tFEcvJ80x): una clienta riendo con el trago. Reprocesado con `tools/media_v3.py`.
+- El lugar: Sillones (P114) entra al carrusel entre Salón y Terraza, con el rótulo [UI] ‹Sillones› / “Lounge”. La masa del encabezado de escritorio pasa a ser el muro de cuadros (P012).
+- Con quién: la primera foto (P254) va cuadrada y anclada abajo, sin la franja de repisa. En escritorio las columnas se compensan para que terminen parejas.
+- Equipo: sale @elymar_bocarejo (solo hay foto disfrazada). Bajo el carrusel va ‹Los dueños› @cepaz · @rusio_mezclao.
+- Ritmo: padding de sección de 72 px en celular y 96 px en escritorio; El lugar y Comida pasan a dos columnas recién desde 1024 px.
+- Portada celular: el loop arranca en 1,5 s, con el cartelito ALMUD BAR sobre el muro rosa (900 px, 1,35 MB).
+- La portada sigue con logo, claim y ‹Ver la carta›, sin horario ni dirección (decisión del cliente).
+
 ## Decisiones y pendientes
 - Portada: solo logo, claim y ‹Ver la carta› (corrección del cliente); horario y dirección viven en Cuándo y dónde.
 - Comida: las fotos son ambiente y la **lista** nombra los platos, porque no hay foto propia confirmada de la Pizza dulzona (no se inventa la relación foto-plato).
 - Créditos del pie: solo autores usados (@catarsis.fotografia, @estudiouno.prod, @isosur.prod, @rober.patagonico). Salen @tamillanquileo y @dosistudio (sus imágenes no se usan).
 - Mapa embebido: no va en el boceto; ‹Cómo llegar› abre Google Maps. Si se quiere el mapa al tocar, se agrega en fase 14.
-- `equipo-elymar` está **por confirmar** con Carmen (foto con disfraz).
 - El `<video>` de portada oculto (la otra variante) queda sin fuente y en pausa a propósito: no se descarga.
 - EN: etiquetas [UI] cambian; los literales quedan en español con glosa debajo; clave `almud-idioma`.
