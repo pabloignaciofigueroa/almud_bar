@@ -169,7 +169,16 @@ def build():
         return svg(f"{x:.0f} {y:.0f} {side:.0f} {side:.0f}",
                    rect + iso_group(PAPEL, sw=sw, inner=inner, legs=legs, chevron_ring=ring),
                    "Almud Bar")
-    write("favicon.svg", fav(sw=78, inner=False, legs=False, ring=False, size_pad=80))
+    # Chico: a 16 px las líneas finas desaparecen; se dibuja la tapa (rombo grueso) y el cuerpo
+    # del almud como una sola silueta llena con la V recortada. Lee igual a 16 que a 512.
+    pad = 40
+    side = ISO_H + 2 * pad
+    x, y = (ISO_W - side) / 2, -pad
+    small = (f'<rect x="{x:.0f}" y="{y:.0f}" width="{side:.0f}" height="{side:.0f}" rx="{side*.22:.0f}" fill="{NOCHE}"/>'
+             f'<path fill="none" stroke="{PAPEL}" stroke-width="78" stroke-linejoin="miter" d="M289 45L570 215L266 455L50 181Z"/>'
+             f'<path fill="{PAPEL}" d="M50 300L120 330L150 600L285 720L420 600L500 300L575 270L520 650L285 870L40 660Z"/>')
+    write("favicon.svg", svg(f"{x:.0f} {y:.0f} {side:.0f} {side:.0f}", small, "Almud Bar"))
+    # Grande (180/192/512, ícono de inicio): el isotipo completo con trazo reforzado.
     write("favicon-detalle.svg", fav(sw=34, inner=True, legs=True, ring=True, size_pad=150))
 
 
