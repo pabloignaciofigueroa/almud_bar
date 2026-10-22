@@ -21,3 +21,4 @@ _plan/v3/boceto/
 _plan/v3/ronda*/**/*.png
 _plan/v3/ronda*/**/*.jpg
 _plan/v3/fase20/ensayo/
+assets/v4/**/*.master.*
