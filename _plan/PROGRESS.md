@@ -26,3 +26,4 @@
 - 2026-10-21 v3 fase 4: paleta (brand/palette-v3.md, css/v3/tokens.css, 04-paleta.jpg)
 - 2026-10-21 v3 fases 3-4 aprobadas con cambios por Carmen Paz; aplicados en tokens y docs
 - 2026-10-21 v3 fase 5: logos vectoriales limpios, favicon legible, og.jpg + og-carta.jpg, simulación WhatsApp
+- 2026-10-21 v3 fase 2 cerrada: titulares aprobados por Carmen (02-titulares-aprobados.md). Bloque A completo.
