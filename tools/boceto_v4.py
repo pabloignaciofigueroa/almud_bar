@@ -110,12 +110,12 @@ CARTA = '/nueva/carta/'
 
 # ───────────────────────── secciones ─────────────────────────
 rincones = [
-    ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'We really love our bar!'),
-    ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'We roofed part of the terrace'),
+    ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'Gosh, we love our little bar!'),
+    ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'Part of the terrace has a roof now'),
     ('lugar-sillones', 'a', 'Sillones', 'Lounge', None, None),
-    ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love the sunsets from our little terrace'),
-    ('lugar-lampara-pinzas', 'a', 'Lámparas', 'The lamps', 'Nos gustan los brillitos, las luces', 'We love the sparkle, the lights'),
-    ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [Mural of eyes]', 'una mirada vale más que mil palabras', 'A look is worth a thousand words'),
+    ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love a sunset from our little terrace'),
+    ('lugar-lampara-pinzas', 'a', 'Lámparas', 'Lamps', 'Nos gustan los brillitos, las luces', 'We love a little sparkle and twinkly lights'),
+    ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [Heads up! · eye mural]', 'una mirada vale más que mil palabras', 'A look says more than a thousand words'),
 ]
 
 
@@ -144,7 +144,7 @@ def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', sp
 
 eventos = [
     ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
-    ('eventos-fondita', 'Sep', 'Sep', 'Fondita', 'Fondita [Fiestas Patrias party]', 9),
+    ('eventos-fondita', 'Sep', 'Sep', 'Fondita', "Fondita [Chile's Independence Day party]", 9),
     ('eventos-jaloguin', 'Oct', 'Oct', 'Jalogüín', 'Jalogüín [Halloween]', 10),
 ]
 
@@ -155,9 +155,9 @@ resenas = [
     ('fr', 'Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!', 'Great night out in Castro! Friendly service, great atmosphere, really nice music!', 'Dorothee · Épinal, Francia · Tripadvisor', 'Dorothee · Épinal, France · Tripadvisor'),
     ('en', 'Really cute place. Good menu including lots of vegetarian options', None, 'Rachael · Takaka, Nueva Zelanda · Tripadvisor', 'Rachael · Takaka, New Zealand · Tripadvisor'),
     ('es', 'De los mejores bares que he visitado. Tienen una terraza maravillosa.', "One of the best bars I've been to. They have a wonderful terrace.", 'Oscar · Santiago, Chile · Tripadvisor', 'Oscar · Santiago, Chile · Tripadvisor'),
-    ('fr', 'cela nous a fait bien plaisir de tomber sur un vrai bar', 'it made us very happy to come across a real bar', 'Emilie · París, Francia · Tripadvisor', 'Emilie · Paris, France · Tripadvisor'),
+    ('fr', 'cela nous a fait bien plaisir de tomber sur un vrai bar', 'we were so happy to stumble on a real bar', 'Emilie · París, Francia · Tripadvisor', 'Emilie · Paris, France · Tripadvisor'),
     ('en', 'Cool waiters, great food and comfy seats', None, 'Benjamín · Puerto Varas, Chile · Tripadvisor', 'Benjamín · Puerto Varas, Chile · Tripadvisor'),
-    ('es', 'La atención es muy cálida y cercana.', 'The service is very warm and personal.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
+    ('es', 'La atención es muy cálida y cercana.', 'The service is so warm and friendly.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
 ]
 
 creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
@@ -186,7 +186,7 @@ body = f'''
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
   <div class="hero__in">
     <h1 class="hero__logo"><span class="sr-only">Almud Bar</span>{svg_inline('almud-horizontal-claro', 'hero__svg')}</h1>
-    <p class="hero__claim"><span class="hero__claim-t">Coctelería de autor, comida &amp; música bonita desde 2014</span>{g('Signature cocktails, food & lovely music since 2014')}</p>
+    <p class="hero__claim"><span class="hero__claim-t">Coctelería de autor, comida &amp; música bonita desde 2014</span>{g('Signature cocktails, food & good music since 2014')}</p>
     <div class="hero__btns">
       <a class="btn btn--rosa" href="{CARTA}" data-en="See the menu">Ver la carta</a>
     </div>
@@ -196,7 +196,7 @@ body = f'''
 <!-- 2 · EL LUGAR -->
 <section class="lugar claro" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
-    <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "We're restless and we love colour!", 'h-lugar')}</div>
+    <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "Restless souls who love colorssss!", 'h-lugar')}</div>
     {vid('lugar-cintas', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
   <div class="rincones" data-h>
@@ -211,7 +211,7 @@ body = f'''
 <!-- 3 · TRAGOS -->
 <section class="tragos claro" id="tragos" aria-labelledby="h-tragos">
   <div class="wrap tragos__g">
-    <div class="tragos__head">{title('mucho amor, color y trabajo', 'A lot of love, colour and hard work', 'h-tragos')}</div>
+    <div class="tragos__head">{title('mucho amor, color y trabajo', 'Lots of love, color and hard work', 'h-tragos')}</div>
     <div class="tragos__band" aria-hidden="false">
       {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
       {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 reveal', speed='-0.1')}
@@ -223,14 +223,14 @@ body = f'''
       <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
     </a>
     <div class="tragos__pair">
-      {item('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced sour with a little heat]', cls='it--a', speed='-0.08')}
-      {item('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère wine, aged pisco, cinnamon]', cls='it--b', speed='0.1')}
+      {item('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced pisco sour with a little heat]', cls='it--a', speed='-0.08')}
+      {item('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon, fruit]', cls='it--b', speed='0.1')}
     </div>
     <div class="moc2">
       <a class="moc2__m" href="{C_MOC}" tabindex="-1" aria-hidden="true">{pic('carta-moto', 'a', '(min-width:1024px) 14vw, 38vw', 'reveal')}</a>
       <div class="moc2__t">
-        <h3 class="kick" data-en="Alcohol-free">Mocktails</h3>
-        <p class="moc__l">no dejamos a nadie ajuera{g('We leave nobody out')}</p>
+        <h3 class="kick" data-en="Mocktails">Mocktails</h3>
+        <p class="moc__l">no dejamos a nadie ajuera{g('Nobody gets left out!')}</p>
         <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
       </div>
     </div>
@@ -242,10 +242,10 @@ body = f'''
 <!-- 4 · COMIDA -->
 <section class="comida claro" id="comida" aria-labelledby="h-comida">
   <div class="wrap comida__g">
-    <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'A simple kitchen, but more than tasty!', 'h-comida')}</div>
+    <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'Simple food, but seriously tasty!', 'h-comida')}</div>
     <a class="it co__big" href="{C_PIZ}">
       {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'it__m reveal')}
-      <span class="it__n">Pizzas artesanales</span>{g('[Artisan pizzas]', 'gloss gloss--s')}
+      <span class="it__n">Pizzas artesanales</span>{g('[Handmade pizzas]', 'gloss gloss--s')}
     </a>
     <a class="it co__a" href="{C_PIC}" data-speed="-0.1">
       {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m reveal')}
@@ -282,7 +282,7 @@ body = f'''
 
 <!-- 7 · EQUIPO -->
 <section class="equipo" id="equipo" aria-labelledby="h-equipo">
-  <div class="wrap">{title('Peazo de equipo que tenemos!', "What a team we've got!", 'h-equipo')}</div>
+  <div class="wrap">{title('Peazo de equipo que tenemos!', 'One heck of a team!', 'h-equipo')}</div>
   <ul class="eq" data-swipe>
     {''.join(f'<li class="eq__p" style="--i:{k}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
   </ul>
@@ -304,10 +304,10 @@ body = f'''
 <section class="donde" id="donde" aria-labelledby="h-donde">
   {vid('donde-letrero', 'donde__v reveal')}
   <div class="donde__t">
-    {title('Le esperamos desde las 18:00 hrs', "See you from 6 pm", 'h-donde')}
+    {title('Le esperamos desde las 18:00 hrs', "Doors open at 6 pm — see you there!", 'h-donde')}
     <dl class="datos">
-      <div><dt class="sr-only" data-en="Days">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
-      <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Opposite the Castro Cultural Centre">Al frente del Centro Cultural de Castro</dd></div>
+      <div><dt class="sr-only" data-en="Open">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
+      <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Across from the Castro Cultural Center">Al frente del Centro Cultural de Castro</dd></div>
     </dl>
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
@@ -320,10 +320,10 @@ body = f'''
 <!-- 10 · PIE -->
 <footer class="pie">
   <div class="wrap pie__g">
-    <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g('You deserve it!')}</p>
+    <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g("You've earned it, friend!")}</p>
     <div class="pie__logo">{svg_inline('almud-vertical-claro', 'pie__svg', label=True)}</div>
     <div class="pie__cr">
-      <h2 class="kick" data-en="Images">Imágenes</h2>
+      <h2 class="kick" data-en="Photos &amp; video">Imágenes</h2>
       <ul>{''.join(f'<li><a href="{IG}{c}/" target="_blank" rel="noopener">@{c}</a></li>' for c in creditos)}</ul>
     </div>
   </div>
@@ -338,7 +338,7 @@ page = f'''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Almud Bar · Castro, Chiloé</title>
-<meta name="description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Serrano 325, Castro." data-en="Signature cocktails, food &amp; lovely music since 2014. Serrano 325, Castro.">
+<meta name="description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Serrano 325, Castro." data-en="Signature cocktails, food &amp; good music since 2014. Serrano 325, Castro, Chiloé.">
 <meta name="theme-color" content="#160d0b">
 <meta name="robots" content="noindex">
 <link rel="icon" href="{UP}brand/v3/favicon.svg" type="image/svg+xml">

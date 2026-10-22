@@ -34,27 +34,48 @@ def slug(t):
 # pestañas: (id, título ES literal, glosa EN, secciones que reúne, color de fondo)
 TABS = [
     ('casa', 'Coctelería de la casa', 'House cocktails', ['cocteleria-de-la-casa'], 'muro'),
-    ('mundo', 'Cócteles del mundo mundial', 'World classics', ['cocteles-del-mundo-mundial'], 'muro'),
+    ('mundo', 'Cócteles del mundo mundial', 'Classic cocktails', ['cocteles-del-mundo-mundial'], 'muro'),
     ('espirituosos', 'Espirituosos', 'Spirits', ['espirituosos'], 'papel'),
-    ('vinos', 'Vinos & espumantes', 'Wines', ['vinos-espumantes'], 'muro'),
+    ('vinos', 'Vinos & espumantes', 'Wine & bubbly', ['vinos-espumantes'], 'muro'),
     ('sin', 'Mocktails sin alcohol', 'Alcohol-free', ['mocktails-sin-alcohol', 'jugos-bebidas', 'cervezas-sin-alcohol', 'bebidas-calientes'], 'papel'),
     ('comilona', 'Comilona', 'Food', ['comilona'], 'dorado'),
-    ('promos', 'Nuestras promos', 'Deals', ['nuestras-promos'], 'dorado'),
+    ('promos', 'Nuestras promos', 'Happy hour', ['nuestras-promos'], 'dorado'),
 ]
-GL = {'Tintelis': '[reds]', 'Blanquelis': '[whites]', 'Whiscachos': '[whiskies]', 'Ron poromponpon': '[rum]',
-      'Vodkita': '[vodka]', 'Pa los chichichos': '[kids]', 'Somos dulzones': '[desserts]',
-      'Jugos & bebidas': 'Juices & soft drinks', 'Cervezas sin alcohol': 'Alcohol-free beers', 'Bebidas calientes': 'Hot drinks'}
+GL = {'Tintelis': '[Reds]', 'Blanquelis': '[Whites]', 'Whiscachos': '[Whiskies]', 'Ron poromponpon': '[Rum]',
+      'Vodkita': '[Vodka]', 'Pa los chichichos': '[Kids]', 'Somos dulzones': '[Desserts]',
+      'Red Bull te da aaalas': '[Red Bull gives you wiiings]',
+      'Jugos & bebidas': 'Juices & sodas', 'Cervezas sin alcohol': 'Alcohol-free beers', 'Bebidas calientes': 'Hot drinks'}
 CHIP_EN = {'Clásicos': 'Classics', 'Vermú': 'Vermouth', 'Sagüer': 'Sours', 'Tintelis': 'Reds', 'Blanquelis': 'Whites',
            'Espumantes': 'Sparkling', 'Por copa': 'By the glass', 'Mocktails de la casa': 'House mocktails',
-           'Mocktails clásicos': 'Classic mocktails', 'Jugos & bebidas': 'Juices & soft drinks', 'Cervezas sin alcohol': 'Alcohol-free beers',
-           'Bebidas calientes': 'Hot drinks', 'Picoteos': 'Small plates', 'Greditas': 'Clay pots', 'Sanguches': 'Sandwiches',
-           'Pizzas artesanales': 'Pizzas', 'Pa los chichichos': 'Kids', 'Somos dulzones': 'Desserts', 'Whiscachos': 'Whiskies',
-           'Ron poromponpon': 'Rum', 'Vodkita': 'Vodka', 'Amamos el GIN!': 'Gin', 'Tequilazos & mezcalazos': 'Tequila & mezcal',
+           'Mocktails clásicos': 'Classic mocktails', 'Jugos & bebidas': 'Juices & sodas', 'Cervezas sin alcohol': 'Alcohol-free beers',
+           'Bebidas calientes': 'Hot drinks', 'Picoteos': 'Small plates', 'Greditas': 'Clay-pot bakes', 'Sanguches': 'Sandwiches',
+           'Pizzas artesanales': 'Handmade pizzas', 'Pa los chichichos': 'Kids', 'Somos dulzones': 'Desserts', 'Whiscachos': 'Whiskies',
+           'Ron poromponpon': 'Rum', 'Vodkita': 'Vodka', 'Amamos el GIN!': 'We love gin!', 'Tequilazos & mezcalazos': 'Tequila & mezcal',
            'Piscolein o combinadito': 'Pisco & mixers'}
-NOTA_EN = {'Precio del corto normal o XL\nNO INCLUYE BEBIDA': 'Single or XL pour · mixer not included',
-           'Elija su medida 90 o 150 cc!': 'Choose 90 or 150 cc',
-           'Los whiscachos no incluyen bebida pal que le guste tomarlo puritano': '[No mixer included]',
-           'de 18:00 a 22:00 hrs': '6 to 10 pm · Always subject to stock!'}
+NOTA_EN = {'Precio del corto normal o XL\nNO INCLUYE BEBIDA': 'Regular or XL pour · mixer not included',
+           'Elija su medida 90 o 150 cc!': 'Pick your pour: 90 or 150 ml',
+           'Los whiscachos no incluyen bebida pal que le guste tomarlo puritano': '[No mixer — for those who like it neat]',
+           'de 18:00 a 22:00 hrs': '6–10 pm · While supplies last!',
+           'UN VERMUCITO CON UNA TÓNICA QUEDA PICHO CALUGA!': "[Vermouth & tonic? Chef's kiss!]",
+           'AGREGUE UNA TÓNICA FINOLI FENTIMANS POR $3.700 [TONIC WATER, ROSE LIMONADE O VALENCIAN ORANGE]': '[Add a Fentimans tonic for $3.700]',
+           'DESTILADO + GINGER BEER, JUGO DE LIMÓN, MENTA Y SODA': '[Spirit + ginger beer, lemon, mint & soda]',
+           'Puede pedir un corteli o el gin&tonic que viene con una tónica Fentimans [200 ml]\nVariedades: tónica tradicional, rose limonade o valencian orange':
+               '[Neat pour or G&T with a Fentimans tonic (200 ml): classic, rose lemonade or Valencian orange]',
+           'Shot de 75 cc acompañado de limón & sal': '[75 ml shot with lemon & salt]',
+           'Empezamos con la selección de lo más pituqueli que tenemos, estos vienen en cortos de 2 oz [60 ml]': '[Our fanciest pours · 2 oz (60 ml)]',
+           '[Para menores hasta 12 años]': '[Ages 12 and under]',
+           'Las masas de nuestras pizzas son hechas por nosotros! puedes pedir cualquiera miti mota, menos la Zorrona, la Terrible Pollo y la Blanquita':
+               '[Our dough is homemade! Any pizza can be half-and-half, except Zorrona, Terrible pollo and Blanquita]',
+           'Con base de pomodoro casera y queso mozzarella': '[Homemade tomato sauce & mozzarella base]',
+           'Base de papas en cubitos, al horno. Macanúo pa compartir!': '[On a bed of baked diced potatoes · great for sharing!]',
+           'Todas las salsitas de nuestros sanguches están elaboradas por nosotros, van con pan de masa mami y mucho amor':
+               '[All sauces made in-house, on sourdough bread, with lots of love]',
+           '[Algunos recomendados de su Almudcito]': '[A few favorites from your Almudcito]',
+           'COCTELCITOS SIN ALCOHOL': '[Alcohol-free cocktails]'}
+# glosas EN de notas por ítem (bodega · nota) y de cabeceras de columnas de precio
+ITEM_NOTA_EN = {'[sin alcohol]': '[alcohol-free]', '[botellita 187 cc]': '[187 ml mini bottle]',
+                'Puedes pedirlo con gin frutilla!': '[Also with strawberry gin]'}
+COL_EN = {'NORMAL [90 cc]': 'REGULAR [90 ml]', 'CORTO [90 cc]': 'REGULAR [90 ml]', 'CORTO XL [150 cc]': 'XL [150 ml]', 'GIN & TONIC': 'G&T'}
 DAY_EN = {'Martes': 'Tue', 'Miércoles': 'Wed', 'Jueves': 'Thu', 'Sábado': 'Sat', 'Viernes': 'Fri', 'Lunes': 'Mon'}
 TAG = {'nuevo': ('Nuevo', 'New'), 'veggie': ('Veggie', 'Veggie'), 'vegan': ('Vegan', 'Vegan'), 'picante': ('Picante', 'Spicy')}
 
@@ -131,7 +152,8 @@ def item(it, cols):
         extra += f'<span class="pr__dia" data-en="{DAY_EN.get(it["dia"], it["dia"])}">{E(it["dia"])}</span>'
     meta = ''
     if it.get('bodega') or it.get('nota'):
-        meta = '<p class="pr__meta">' + ' · '.join(E(x) for x in [it.get('bodega'), it.get('nota')] if x) + '</p>'
+        meta = ('<p class="pr__meta">' + ' · '.join(E(x) for x in [it.get('bodega'), it.get('nota')] if x)
+                + (g(ITEM_NOTA_EN[it['nota']], 'gloss gloss--s') if it.get('nota') in ITEM_NOTA_EN else '') + '</p>')
     desc = f'<p class="pr__d">{bold(it["desc"])}</p>' if it.get('desc') else ''
     if n in GLOSA_EN:
         desc += g(GLOSA_EN[n], 'gloss gloss--s pr__g')
@@ -150,7 +172,7 @@ def group(gr, sid, idx):
     nota = (f'<p class="gr__nota">{nl(gr["nota"])}' + (g(NOTA_EN[gr["nota"]], 'gloss gloss--s') if gr["nota"] in NOTA_EN else '') + '</p>') if gr.get('nota') else ''
     pie = (f'<p class="gr__pie">{nl(gr["nota_pie"])}' + (g(NOTA_EN[gr["nota_pie"]], 'gloss gloss--s') if gr["nota_pie"] in NOTA_EN else '') + '</p>') if gr.get('nota_pie') else ''
     if cols:
-        th = ''.join(f'<th scope="col" class="tbl__c">{E(c).replace(" [", "<br>[", 1)}</th>' for c in cols)
+        th = ''.join(f'<th scope="col" class="tbl__c">{E(c).replace(" [", "<br>[", 1)}' + (g(COL_EN[c], 'gloss gloss--s') if c in COL_EN else '') + '</th>' for c in cols)
         rows = ''
         for it in gr['items']:
             d = f'<span class="pr__d">{bold(it["desc"])}</span>' if it.get('desc') else ''
@@ -218,7 +240,7 @@ page = f'''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>La carta · Almud Bar, Castro</title>
-<meta name="description" content="tenemos pa todos los gustos! Coctelería de la casa, cócteles del mundo mundial, espirituosos, vinos, mocktails y comilona." data-en="Something for every taste! House cocktails, classics, spirits, wines, alcohol-free and food.">
+<meta name="description" content="tenemos pa todos los gustos! Coctelería de la casa, cócteles del mundo mundial, espirituosos, vinos, mocktails y comilona." data-en="Something for every taste! House cocktails, classics, spirits, wine, alcohol-free drinks and food.">
 <meta name="theme-color" content="#160d0b">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="{SITE}{PATH}">
