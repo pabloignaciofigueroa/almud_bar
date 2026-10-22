@@ -134,6 +134,9 @@ def rincon_li(r, i):
 
 
 C_CASA = CARTA + '#casa'
+_GL = json.loads((ROOT / 'content/carta-glosas-en-v3.json').read_text())
+GL_CARNE = _GL.get('La carne es débil', '[Sautéed beef, mushrooms and cherry tomatoes]')
+GL_QUESO = _GL.get('Una cosa poca', '[Baked cheese fondue with tomato, avocado and pesto]')
 C_MOC = CARTA + '#mocktails-sin-alcohol-mocktails-de-la-casa'
 C_PIC = CARTA + '#comilona-picoteos'
 C_GRE = CARTA + '#comilona-greditas'
@@ -252,13 +255,17 @@ body = f'''
       {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'it__m reveal')}
       <span class="it__n">Pizzas artesanales</span>{g('[Handmade pizzas]', 'gloss gloss--s')}
     </a>
-    <a class="it co__a" href="{C_PIC}" data-speed="-0.1">
+    <a class="it co__a" href="{C_PIC}">
       {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m reveal')}
       <span class="it__n">Tukulito Sakayama</span>{g('[Marinated tuna tataki]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
     </a>
-    <a class="it co__b" href="{C_PIC}" data-speed="0.08">
-      {vid('comida-con-tuti', 'it__m reveal')}
-      <span class="it__n">Con tuti si no pa qué!</span>{g('[Sharing board: cheeses, mushrooms, avocado, olives, nuts, fruit]', 'gloss gloss--s')}<span class="it__p">$ 19.900</span>
+    <a class="it co__b" href="{C_PIC}">
+      {vid('comida-carne', 'it__m reveal')}
+      <span class="it__n">La carne es débil</span>{g(GL_CARNE, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
+    </a>
+    <a class="it co__c" href="{C_PIC}">
+      {vid('comida-queso', 'it__m reveal')}
+      <span class="it__n">Una cosa poca</span>{g(GL_QUESO, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
     </a>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
@@ -269,8 +276,8 @@ body = f'''
   <div class="wrap">{title('no somos ná sin ustedes!', "We're nothing without you!", 'h-quien', 'ttl--xl')}</div>
   <div class="quien__g">
     <div class="col" data-speed="-0.06">{vid('quien-multitud-1', 'reveal')}{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-amigas', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigas', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-3', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
   </div>
 </section>
 

@@ -381,13 +381,13 @@
    "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBQCdASoTABgAPwF4tFQrJyUjKAgBYCAJZgCxHzRCmBKNCu9zJbdbFiE6cDr4WPf0cVgA/s120UWflLQgUDsdK2TGSk1G0YPjaa10u4PYg6oQHZnkfYEd1090LzMQc+Y5k+WBbeWOBFJa7J13i84GeKIAJbK2kilwMh0xVSWAAA==",
    "color": "#953114"
   },
-  "comida-con-tuti": {
-   "ref": "V047",
-   "src": "assets/raw/ig/DY0AUvhlHjI_07.mp4",
+  "comida-carne": {
+   "ref": "V049",
+   "src": "assets/raw/ig/DY0AUvhlHjI_12.mp4",
    "section": "comida",
    "alt": {
-    "es": "La tabla «Con tuti si no pa qué!» al centro: aceitunas con cilantro, quesos, jamón, fruta y pancito, y manos que pican con palillos.",
-    "en": "The \"Con tuti si no pa qué!\" sharing board front and center: olives with cilantro, cheeses, ham, fruit and bread, with hands picking at it."
+    "es": "En la cocina, la carne se saltea en un sartén de fierro sobre el fuego y la mano del cocinero lo mueve.",
+    "en": "In the kitchen, beef sizzles in a cast-iron pan over the flame as the cook shakes it."
    },
    "credit": {
     "post": "IG-022",
@@ -396,66 +396,142 @@
     "account": "@almud_bar",
     "text": "@almud_bar"
    },
-   "carta_item": "Con tuti si no pa qué!",
-   "note": "Ronda 3: la comida al centro y sin caras. Mismo tramo de V047 (0,25–10,4 s), recortado a 384×480 px nativos (x 168, y 480) sobre la tabla y las manos que pican; no se amplía. Nitidez del recorte (varianza laplaciana, px nativos) 614. Es la tabla de la foto IG-066 «CON TUTI SI NO PA QUÉ!».",
+   "carta_item": "La carne es débil",
+   "note": "Ronda 4 (decisión del cliente): V049 (IG-022) 0,2–9,9 s, encuadre original; el mismo loop de la ronda 1 (antes comida-cazuela). Rótulo literal «La carne es débil», $ 11.900 (Picoteos).",
    "source_size": [
     720,
     960
    ],
-   "width": 384,
-   "height": 480,
+   "width": 720,
+   "height": 900,
    "ratio": "4:5",
    "segments": [
     [
-     0.25,
-     10.4
+     0.2,
+     9.9
     ]
    ],
    "loop": "crossfade",
-   "frames": 271,
-   "fps": 29.54,
-   "duration": 9.17,
+   "frames": 258,
+   "fps": 29.626,
+   "duration": 8.71,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
    "within_budget": true,
    "xfade": 1.0,
-   "tramo_s": 10.15,
+   "tramo_s": 9.7,
    "seam": {
-    "last_vs_first": 4.32,
-    "typical_step": 9.0
+    "last_vs_first": 12.41,
+    "typical_step": 5.84
    },
    "files": {
     "webm": {
-     "path": "assets/v4/video/comida-con-tuti-384.webm",
-     "bytes": 1227049,
+     "path": "assets/v4/video/comida-carne-720.webm",
+     "bytes": 1176595,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 30
+     "crf": 42
     },
     "mp4": {
-     "path": "assets/v4/video/comida-con-tuti-384.mp4",
-     "bytes": 1016429,
+     "path": "assets/v4/video/comida-carne-720.mp4",
+     "bytes": 1341426,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 21
+     "crf": 28
     }
    },
    "poster": {
     "avif": {
-     "path": "assets/v4/video/comida-con-tuti-poster.avif",
-     "bytes": 14769
+     "path": "assets/v4/video/comida-carne-poster.avif",
+     "bytes": 17993
     },
     "webp": {
-     "path": "assets/v4/video/comida-con-tuti-poster.webp",
-     "bytes": 22896
+     "path": "assets/v4/video/comida-carne-poster.webp",
+     "bytes": 24506
     },
     "jpg": {
-     "path": "assets/v4/video/comida-con-tuti-poster.jpg",
-     "bytes": 37326
+     "path": "assets/v4/video/comida-carne-poster.jpg",
+     "bytes": 60558
     }
    },
-   "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoTABgAPwF0rVMrJqOiqAqpYCAJQBdmXkAif3oA53+0Ud5vpCoXnHCWl5PvRbgAAP11+lauAe8emzWECjaTUVVGF0mkGSiYzFLWk/WPe5DS8jvb1QdLX+LCAbZajyO+Cby+v9/CKxTlvBLmnEbi7d9wChmW4O5s7IjxpugWAC/x9jf4Lakl0K3mAeoIS5H5HkKYHbKcZ7+RgAAA",
-   "color": "#ca9a84"
+   "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASoTABgAPwFysVIrJqSiqAqpYCAJQBOgAPtnONlUBsrW2NPFNNfH+ABQDgDD/gN4rroI/rbH1UU4xQFQ0AErXyK5vRestWB2Pg7gi4CLk8Vz2IWcOjspmMkaiO7h85IAoH4+WBDiDN5tGM2VN94AHPugQXz2qg3sVJshlpND1jFkakZiEotte09Neb/uEAAA",
+   "color": "#9c715f"
+  },
+  "comida-queso": {
+   "ref": "V040",
+   "src": "assets/raw/ig/DTOQJp4iIbH_00.mp4",
+   "section": "comida",
+   "alt": {
+    "es": "El queso fundido se estira desde la gredita negra con hierbas, junto a un negroni, en una mesa de la terraza.",
+    "en": "Melted cheese stretches up from the black clay pot with herbs, next to a negroni on a terrace table."
+   },
+   "credit": {
+    "post": "IG-036",
+    "date": "2026-01-07",
+    "url": "https://www.instagram.com/p/DTOQJp4iIbH/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Una cosa poca",
+   "note": "Ronda 4 (decisión del cliente): V040 (IG-036) 0,23–8,27 s, el clip completo (corte propio en 0,2 s), con encuadre original y fundido de 0,6 s. El loop dura 7,33 s, bajo los 8 s, porque el reel no da para más. Rótulo literal «Una cosa poca», $ 11.900 (Picoteos).",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     0.23,
+     8.27
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 220,
+   "fps": 30.0,
+   "duration": 7.33,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.6,
+   "tramo_s": 8.04,
+   "seam": {
+    "last_vs_first": 5.07,
+    "typical_step": 3.07
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/comida-queso-720.webm",
+     "bytes": 1181172,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 32
+    },
+    "mp4": {
+     "path": "assets/v4/video/comida-queso-720.mp4",
+     "bytes": 1334781,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 22
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/comida-queso-poster.avif",
+     "bytes": 23851
+    },
+    "webp": {
+     "path": "assets/v4/video/comida-queso-poster.webp",
+     "bytes": 34398
+    },
+    "jpg": {
+     "path": "assets/v4/video/comida-queso-poster.jpg",
+     "bytes": 73891
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoTABgAPwF0sFKrJqQiqAqpYCAJYgC/OA6yO6LHKPOg+5+o7Hst/+/yJ7fUlsAA/trKzt+4Q51Mo+RlQEUEVvK/Vc3GBQXckSvdfmScJRRNzlfeRffmNkd9rTCI7u0l6weC1haWK7fxpw0vh/eHe9uBx9bPt2Bqc/uOo8q5zym6Dz/mmAVitpayhDGSQB1aAAA=",
+   "color": "#aa7d71"
   },
   "quien-multitud-1": {
    "ref": "V036",
@@ -606,6 +682,85 @@
    },
    "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoTABgAPwF2slQrJyQjKAgBYCAJYwCxH0LBqSvPyyjVw1lJKkAoB9YAAP7ku+BljP5O9ldclTy2C18RJvgmm6kxqPj6UcIjQ2UTC1Iw0CjmT0r/GegxN99pIXr3mi7aQBn2gA8SCLLCSHzh9zq0JSN7KZYLa/sAAAA=",
    "color": "#361a0c"
+  },
+  "quien-multitud-3": {
+   "ref": "V037",
+   "src": "assets/raw/ig/DNB7LK6y4i8_00.mp4",
+   "section": "con-quien",
+   "alt": {
+    "es": "La gente baila apretada en la fiesta de aniversario y la cámara pasa entre las mesas llenas.",
+    "en": "People dance shoulder to shoulder at the anniversary party as the camera moves through the packed tables."
+   },
+   "credit": {
+    "post": "IG-049",
+    "date": "2025-08-06",
+    "url": "https://www.instagram.com/p/DNB7LK6y4i8/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "Ronda 4: V037 (IG-049, segundo día de los 11 años, ago-2025: «no quedaba otra que darlo todo») 47,05–56,0 s: dos planos propios (multitud bailando y luego mesas y grupos), sin primeros planos de una sola persona. Orden de los planos invertido (mesas → baile) para que el póster y el arranque muestren grupos y no a una persona en el centro; el salto entre ambos coincide con un corte propio del reel.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     51.95,
+     56.7
+    ],
+    [
+     47.05,
+     51.85
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 259,
+   "fps": 30.0,
+   "duration": 8.63,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.9,
+   "tramo_s": 9.55,
+   "seam": {
+    "last_vs_first": 11.61,
+    "typical_step": 12.24
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/quien-multitud-3-720.webm",
+     "bytes": 1202898,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 38
+    },
+    "mp4": {
+     "path": "assets/v4/video/quien-multitud-3-720.mp4",
+     "bytes": 1427204,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 28
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/quien-multitud-3-poster.avif",
+     "bytes": 16916
+    },
+    "webp": {
+     "path": "assets/v4/video/quien-multitud-3-poster.webp",
+     "bytes": 22224
+    },
+    "jpg": {
+     "path": "assets/v4/video/quien-multitud-3-poster.jpg",
+     "bytes": 51011
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoTABgAPwFwrFGrJiQiqA1RYCAJagC7AAYJIHzciyja5pmhgAD+wGM+UPkz119d87CVRI9Y5h0YUjGDrEzfS7Q+eJFRw3FB64WvxxWVwSPgZaSqDIHPNZ62lRPQzKJQOkli9cM62rTH+VxbU49gPJ8xEuG+e29ZgAA=",
+   "color": "#3e182f"
   },
   "eventos-fiesta-12": {
    "ref": "V055",

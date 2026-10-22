@@ -34,3 +34,12 @@
 2026-10-22 20:53:27 regenerados nueva/index.html y public/ (390 archivos); index.html raíz sin cambios
 2026-10-22 20:53:27 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, los 11 videos visibles en play y avanzando; primer pantallazo celular 1.624 KB sin compresión (≈1.455 KB con gzip); sin huecos grandes en Eventos ni en Comida
 2026-10-22 20:53:27 entregables ronda 3: hoja-loops-3.jpg, videos.md y filas 19–21 en justificacion.md
+2026-10-22 23:11:46 ronda 4: inicio (Comida con 2 videos reales sin recorte; Con quién con 3 videos de multitud)
+2026-10-22 23:13:42 comida: sale comida-con-tuti (recorte) y su ítem; entra comida-carne (V049 0,2–9,9 s, el loop de la ronda 1 recuperado de git 70d778b, encuadre original) y comida-queso (V040 0,23–8,27 s, el clip completo con fundido 0,6 s: loop de 7,4 s)
+2026-10-22 23:13:42 quien-multitud-3: tramo elegido DNB7LK6y4i8 (V037, segundo día de los 11 años) 47,05–56,0 s, multitud bailando y mesas llenas, fundido 0,9 s
+2026-10-22 23:22:31 codificados comida-carne (8,71 s; mismos parámetros que la ronda 1, recodificado para rehacer su ficha), comida-queso (7,33 s: bajo 8 s, el reel completo no da más) y quien-multitud-3 (8,03 s)
+2026-10-22 23:23:09 quien-multitud-3: el arranque mostraba a una sola persona al centro; se invierte el orden de sus dos planos (51,95–56,7 + 47,05–51,85) para abrir con mesas y grupos
+2026-10-22 23:30:42 integración ronda 4: boceto_v4.py (Comida: Tukulito + La carne es débil + Una cosa poca, enlazados a Picoteos con glosas EN de la carta; Con quién: multitud 1 arriba a la izquierda, 2 al medio a la derecha, 3 abajo al centro) y css/v4/site.css (fila de 3 en Comida; columnas parejas en celular)
+2026-10-22 23:30:42 regenerados nueva/index.html y public/ (396 archivos); index.html raíz sin cambios
+2026-10-22 23:30:42 verificación Playwright 390x844 y 1440x900: 0 errores, 0 4xx, los 13 videos visibles en play y avanzando; primer pantallazo celular 1.627 KB sin compresión (≈1.46 MB con gzip)
+2026-10-22 23:30:42 capturas ronda4-comida-390/1440.jpg y ronda4-quien-390/1440.jpg, hoja-loops-4.jpg, videos.md y filas 22–23 en justificacion.md

@@ -179,39 +179,67 @@
    "loop": "crossfade",
    "focal": [
     50,
-    62
+    55
    ],
    "widths": [
-    720
+    720,
+    600
    ],
    "crf_max": 30,
    "vp9_crf_max": 44,
    "budget_kb": 1200,
    "budget_mp4_kb": 1400,
-   "id": "comida-con-tuti",
-   "ref": "V047",
-   "src": "assets/raw/ig/DY0AUvhlHjI_07.mp4",
+   "ratio": "4:5",
+   "id": "comida-carne",
+   "ref": "V049",
+   "src": "assets/raw/ig/DY0AUvhlHjI_12.mp4",
    "section": "comida",
-   "carta_item": "Con tuti si no pa qué!",
+   "carta_item": "La carne es débil",
    "segments": [
     [
-     0.25,
-     10.4
+     0.2,
+     9.9
     ]
    ],
    "xfade": 1.0,
-   "ratio": "4:5",
    "alt": {
-    "es": "La tabla «Con tuti si no pa qué!» al centro: aceitunas con cilantro, quesos, jamón, fruta y pancito, y manos que pican con palillos.",
-    "en": "The \"Con tuti si no pa qué!\" sharing board front and center: olives with cilantro, cheeses, ham, fruit and bread, with hands picking at it."
+    "es": "En la cocina, la carne se saltea en un sartén de fierro sobre el fuego y la mano del cocinero lo mueve.",
+    "en": "In the kitchen, beef sizzles in a cast-iron pan over the flame as the cook shakes it."
    },
-   "note": "Ronda 3: la comida al centro y sin caras. Mismo tramo de V047 (0,25–10,4 s), recortado a 384×480 px nativos (x 168, y 480) sobre la tabla y las manos que pican; no se amplía. Nitidez del recorte (varianza laplaciana, px nativos) 614. Es la tabla de la foto IG-066 «CON TUTI SI NO PA QUÉ!».",
-   "crop": [
-    168,
-    480,
-    384,
-    480
-   ]
+   "note": "Ronda 4 (decisión del cliente): V049 (IG-022) 0,2–9,9 s, encuadre original; el mismo loop de la ronda 1 (antes comida-cazuela). Rótulo literal «La carne es débil», $ 11.900 (Picoteos)."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "ratio": "4:5",
+   "id": "comida-queso",
+   "ref": "V040",
+   "src": "assets/raw/ig/DTOQJp4iIbH_00.mp4",
+   "section": "comida",
+   "carta_item": "Una cosa poca",
+   "segments": [
+    [
+     0.23,
+     8.27
+    ]
+   ],
+   "xfade": 0.6,
+   "alt": {
+    "es": "El queso fundido se estira desde la gredita negra con hierbas, junto a un negroni, en una mesa de la terraza.",
+    "en": "Melted cheese stretches up from the black clay pot with herbs, next to a negroni on a terrace table."
+   },
+   "note": "Ronda 4 (decisión del cliente): V040 (IG-036) 0,23–8,27 s, el clip completo (corte propio en 0,2 s), con encuadre original y fundido de 0,6 s. El loop dura 7,33 s, bajo los 8 s, porque el reel no da para más. Rótulo literal «Una cosa poca», $ 11.900 (Picoteos)."
   },
   {
    "loop": "crossfade",
@@ -276,6 +304,42 @@
     "en": "Full tables in the dining room: groups chatting and laughing, drinks arriving and people standing between tables."
    },
    "note": "V036 (IG-051), 27,6–37,7 s: un trago que se sirve y luego grupos en mesas, risas y el salón lleno. Arranca en el plano del trago para que el fundido no caiga justo antes de un corte."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "ratio": "4:5",
+   "id": "quien-multitud-3",
+   "ref": "V037",
+   "src": "assets/raw/ig/DNB7LK6y4i8_00.mp4",
+   "section": "con-quien",
+   "segments": [
+    [
+     51.95,
+     56.7
+    ],
+    [
+     47.05,
+     51.85
+    ]
+   ],
+   "xfade": 0.9,
+   "alt": {
+    "es": "La gente baila apretada en la fiesta de aniversario y la cámara pasa entre las mesas llenas.",
+    "en": "People dance shoulder to shoulder at the anniversary party as the camera moves through the packed tables."
+   },
+   "note": "Ronda 4: V037 (IG-049, segundo día de los 11 años, ago-2025: «no quedaba otra que darlo todo») 47,05–56,0 s: dos planos propios (multitud bailando y luego mesas y grupos), sin primeros planos de una sola persona. Orden de los planos invertido (mesas → baile) para que el póster y el arranque muestren grupos y no a una persona en el centro; el salto entre ambos coincide con un corte propio del reel."
   },
   {
    "loop": "crossfade",
