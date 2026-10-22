@@ -30,16 +30,28 @@ def slug(t):
 # pestañas: (id, título ES literal, glosa EN, secciones que reúne, color de fondo)
 TABS = [
     ('casa', 'Coctelería de la casa', 'House cocktails', ['cocteleria-de-la-casa'], 'muro'),
-    ('mundo', 'Cócteles del mundo mundial', 'Cocktails from all over the world', ['cocteles-del-mundo-mundial'], 'rosa'),
+    ('mundo', 'Cócteles del mundo mundial', 'World classics', ['cocteles-del-mundo-mundial'], 'rosa'),
     ('espirituosos', 'Espirituosos', 'Spirits', ['espirituosos'], 'ambar'),
-    ('vinos', 'Vinos & espumantes', 'Wines & sparkling', ['vinos-espumantes'], 'vino'),
+    ('vinos', 'Vinos & espumantes', 'Wines', ['vinos-espumantes'], 'vino'),
     ('sin', 'Mocktails sin alcohol', 'Alcohol-free', ['mocktails-sin-alcohol', 'jugos-bebidas', 'cervezas-sin-alcohol', 'bebidas-calientes'], 'tinta'),
-    ('comilona', 'Comilona', 'Comilona [food]', ['comilona'], 'ambar2'),
-    ('promos', 'Nuestras promos', 'Our deals', ['nuestras-promos'], 'dorado'),
+    ('comilona', 'Comilona', 'Food', ['comilona'], 'ambar2'),
+    ('promos', 'Nuestras promos', 'Deals', ['nuestras-promos'], 'dorado'),
 ]
 GL = {'Tintelis': '[reds]', 'Blanquelis': '[whites]', 'Whiscachos': '[whiskies]', 'Ron poromponpon': '[rum]',
       'Vodkita': '[vodka]', 'Pa los chichichos': '[kids]', 'Somos dulzones': '[desserts]',
       'Jugos & bebidas': 'Juices & soft drinks', 'Cervezas sin alcohol': 'Alcohol-free beers', 'Bebidas calientes': 'Hot drinks'}
+CHIP_EN = {'Clásicos': 'Classics', 'Vermú': 'Vermouth', 'Sagüer': 'Sours', 'Tintelis': 'Reds', 'Blanquelis': 'Whites',
+           'Espumantes': 'Sparkling', 'Por copa': 'By the glass', 'Mocktails de la casa': 'House mocktails',
+           'Mocktails clásicos': 'Classic mocktails', 'Jugos & bebidas': 'Juices & soft drinks', 'Cervezas sin alcohol': 'Alcohol-free beers',
+           'Bebidas calientes': 'Hot drinks', 'Picoteos': 'Small plates', 'Greditas': 'Clay pots', 'Sanguches': 'Sandwiches',
+           'Pizzas artesanales': 'Pizzas', 'Pa los chichichos': 'Kids', 'Somos dulzones': 'Desserts', 'Whiscachos': 'Whiskies',
+           'Ron poromponpon': 'Rum', 'Vodkita': 'Vodka', 'Amamos el GIN!': 'Gin', 'Tequilazos & mezcalazos': 'Tequila & mezcal',
+           'Piscolein o combinadito': 'Pisco & mixers'}
+NOTA_EN = {'Precio del corto normal o XL\nNO INCLUYE BEBIDA': 'Single or XL pour · mixer not included',
+           'Elija su medida 90 o 150 cc!': 'Choose 90 or 150 cc',
+           'Los whiscachos no incluyen bebida pal que le guste tomarlo puritano': '[No mixer included]',
+           'de 18:00 a 22:00 hrs': '6 to 10 pm · Always subject to stock!'}
+DAY_EN = {'Martes': 'Tue', 'Miércoles': 'Wed', 'Jueves': 'Thu', 'Sábado': 'Sat', 'Viernes': 'Fri', 'Lunes': 'Mon'}
 TAG = {'nuevo': ('Nuevo', 'New'), 'veggie': ('Veggie', 'Veggie'), 'vegan': ('Vegan', 'Vegan'), 'picante': ('Picante', 'Spicy')}
 
 # fotos propias por ítem (media.json carta-*), y el loop de Peter
@@ -72,7 +84,7 @@ def pic(id_):
 def peter():
     v = M['videos']['tragos-humo']
     return (f'<figure class="m m--v pr__m" style="--ar:{v["width"]}/{v["height"]};--c:{v["color"]};--lq:url({v["lqip"]})">'
-            f'<video class="v" autoplay muted loop playsinline preload="none" width="{v["width"]}" height="{v["height"]}" poster="{UP}{v["poster"]["webp"]["path"]}"'
+            f'<video class="v" autoplay muted loop playsinline preload="none" width="{v["width"]}" height="{v["height"]}" data-poster="{UP}{v["poster"]["webp"]["path"]}"'
             f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}" aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video></figure>')
 
 
@@ -95,7 +107,7 @@ def item(it, cols):
         pr = f'<span class="pr__p">{E(it.get("precio", ""))}</span>'
     extra = ''
     if it.get('dia'):
-        extra += f'<span class="pr__dia">{E(it["dia"])}</span>'
+        extra += f'<span class="pr__dia" data-en="{DAY_EN.get(it["dia"], it["dia"])}">{E(it["dia"])}</span>'
     meta = ''
     if it.get('bodega') or it.get('nota'):
         meta = '<p class="pr__meta">' + ' · '.join(E(x) for x in [it.get('bodega'), it.get('nota')] if x) + '</p>'
@@ -112,8 +124,8 @@ def group(gr, sid, idx):
     if t:
         lvl = 'h4' if gr.get('padre') else 'h3'
         head = f'<{lvl} class="gr__t{" gr__t--sub" if gr.get("padre") else ""}">{E(t)}</{lvl}>' + (g(GL[t], 'gloss gloss--s') if t in GL else '')
-    nota = f'<p class="gr__nota">{nl(gr["nota"])}</p>' if gr.get('nota') else ''
-    pie = f'<p class="gr__pie">{nl(gr["nota_pie"])}</p>' if gr.get('nota_pie') else ''
+    nota = (f'<p class="gr__nota">{nl(gr["nota"])}' + (g(NOTA_EN[gr["nota"]], 'gloss gloss--s') if gr["nota"] in NOTA_EN else '') + '</p>') if gr.get('nota') else ''
+    pie = (f'<p class="gr__pie">{nl(gr["nota_pie"])}' + (g(NOTA_EN[gr["nota_pie"]], 'gloss gloss--s') if gr["nota_pie"] in NOTA_EN else '') + '</p>') if gr.get('nota_pie') else ''
     return gid, (f'<div class="gr" id="{gid}">{head}{nota}<ul class="prs">' + ''.join(item(i, cols) for i in gr['items']) + f'</ul>{pie}</div>')
 
 
@@ -141,7 +153,7 @@ for tid, ttl, en, sids, col in TABS:
     chip_html = ''
     if use_chips:
         chip_html = (f'<div class="chips" data-chips="{tid}">' + ''.join(
-            f'<a class="chip" href="#{c}" data-sub="{c}" id="chip-{c}">{E(t)}</a>' for c, t in chips) + '</div>')
+            f'<a class="chip" href="#{c}" data-sub="{c}" id="chip-{c}"' + (f' data-en="{E(CHIP_EN[t])}"' if t in CHIP_EN else '') + f'>{E(t)}</a>' for c, t in chips) + '</div>')
         for c, _ in chips[1:]:
             pass
         first = chips[0][0]
@@ -150,16 +162,17 @@ for tid, ttl, en, sids, col in TABS:
 
     body = ''.join(f'<div class="sub" data-sub="{c}">{h}</div>' if (use_chips and c) else h for c, h in blocks)
     panels.append(f'<section class="panel" id="{tid}" data-bg="{col}" aria-labelledby="tab-{tid}">'
-                  f'<h2 class="panel__t">{E(ttl)}</h2>{g(en, "gloss gloss--s panel__g")}{chip_html}{body}</section>')
+                  f'<h2 class="panel__t">{E(ttl)}</h2>{chip_html}{body}</section>')
 
 tabcss = [f'html.js[data-tab="{t[0]}"] .panel:not(#{t[0]}){{display:none}}' for t in TABS]
 tabcss += [f'html.js[data-tab="{t[0]}"] #tab-{t[0]}{{color:var(--noche);background:var(--papel)}}' for t in TABS]
-tabcss += [f'html.js[data-tab="{t[0]}"] body{{background:var(--bg-{t[4]})}}' for t in TABS]
+tabcss += [f'html.js[data-tab="{t[0]}"] .panels{{--hoja:var(--hoja-{t[4]})}}' for t in TABS]
 
-tabs_html = ''.join(f'<a class="tab" id="tab-{t[0]}" href="#{t[0]}" data-tab="{t[0]}">{E(t[1])}</a>' for t in TABS)
+tabs_html = ''.join(f'<a class="tab" id="tab-{t[0]}" href="#{t[0]}" data-tab="{t[0]}" data-en="{E(t[2])}">{E(t[1])}</a>' for t in TABS)
 nav = (M and (ROOT / 'brand/v3/almud-nav-claro.svg').read_text().strip())
 nav = re.sub(r'<title>.*?</title>', '', nav).replace('<svg ', '<svg class="nav__svg" aria-hidden="true" focusable="false" ', 1)
 nav = re.sub(r' role="img"| aria-label="[^"]*"', '', nav)
+nav = nav.replace('fill="#36a3ff"', 'style="fill:var(--letrero-azul)"').replace('fill="#f6ecdc"', 'style="fill:var(--letrero-blanco)"').replace('stroke="#f6ecdc"', 'style="stroke:var(--letrero-blanco)"')
 ids = [t[0] for t in TABS]
 subs_known = json.dumps({t[0]: True for t in TABS})
 
@@ -208,10 +221,11 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
   </div>
   <div class="tabs-sent" aria-hidden="true"></div>
   <nav class="tabs" aria-label="Secciones de la carta" data-aria-en="Menu sections"><div class="tabs__l">{tabs_html}</div></nav>
-  <div class="wrap panels">{''.join(panels)}</div>
+  <div class="panels"><div class="hoja">{''.join(panels)}</div></div>
   <footer class="carta__pie wrap">
+    <a class="btn btn--rosa" href="https://ig.me/m/almud_bar" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
     <a class="btn btn--ghost" href="https://uqr.to/ppvi" target="_blank" rel="noopener" data-en="Official menu (PDF)">Carta oficial (PDF)</a>
-    <a class="btn btn--rosa" href="../" data-en="Home">Inicio</a>
+    <a class="btn btn--ghost" href="../" data-en="Home">Inicio</a>
   </footer>
 </main>
 <script src="../../js/v3/carta.js?v={ver('js/v3/carta.js')}" defer></script>

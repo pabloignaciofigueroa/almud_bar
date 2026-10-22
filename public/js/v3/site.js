@@ -1,30 +1,38 @@
-/* Almud Bar · v3 · boceto funcional (fase 8)
-   Videos: autoplay muted loop playsinline. Este JS SOLO les pone la fuente
-   (portada: la variante visible; resto: al cargar la página). Nunca los pausa
-   ni los reproduce según el scroll. El scroll es solo navegación. */
+/* Almud Bar · v3
+   Videos: autoplay muted loop playsinline. El JS SOLO les pone el póster y la fuente: la portada
+   (por orientación) ya la conectó el script en línea del HTML; el resto se conecta una sola vez cuando
+   está a ≤1,5 pantallas (IntersectionObserver SOLO para cargar). Una vez cargado, nunca se pausa ni se toca.
+   Con movimiento reducido: solo póster. */
 (() => {
   'use strict';
   const d = document, root = d.documentElement;
   const $ = (s, c = d) => c.querySelector(s);
   const $$ = (s, c = d) => [...c.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const desk = matchMedia('(min-width:768px)');
 
-  /* ───────── Videos: solo poner src ───────── */
+  /* ───────── Videos: solo poner póster y fuente ───────── */
   function attach(v) {
     if (!v || v.dataset.on) return;
     v.dataset.on = '1';
+    if (v.dataset.poster) v.poster = v.dataset.poster;
+    if (reduce) { v.removeAttribute('autoplay'); return; }
     v.preload = 'auto';
     v.insertAdjacentHTML('beforeend',
       '<source src="' + v.dataset.webm + '" type="video/webm"><source src="' + v.dataset.mp4 + '" type="video/mp4">');
     v.load();
     const p = v.play(); if (p && p.catch) p.catch(() => {});
   }
-  const heroVisible = () => $(desk.matches ? '.hero__v--d video' : '.hero__v--m video');
+  window.__almudAttach = attach;
+  const land = matchMedia('(orientation: landscape) and (min-width:768px)');
+  const heroVisible = () => $(land.matches ? '.hero__v--d video' : '.hero__v--m video');
   attach(heroVisible());
-  desk.addEventListener('change', () => attach(heroVisible()));
-  const rest = () => $$('video.v:not([data-hero])').forEach(attach);
-  if (d.readyState === 'complete') rest(); else addEventListener('load', rest, { once: true });
+  land.addEventListener('change', () => attach(heroVisible()));
+  const lazy = $$('video.v:not([data-hero])');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); attach(e.target); } }),
+      { rootMargin: '150% 0px' });
+    lazy.forEach(v => io.observe(v));
+  } else lazy.forEach(attach);
 
   /* ───────── Idioma (ES por defecto; EN solo si el usuario lo toca) ───────── */
   const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label']];
@@ -48,7 +56,7 @@
 
   /* ───────── Nav: aparece al dejar la portada ───────── */
   const hero = $('.hero');
-  const navState = () => root.classList.toggle('is-past', scrollY > hero.offsetHeight - 80);
+  const navState = () => root.classList.toggle('is-past', scrollY > hero.offsetHeight - 170);
   addEventListener('scroll', navState, { passive: true }); navState();
 
   /* ───────── Movimiento ───────── */

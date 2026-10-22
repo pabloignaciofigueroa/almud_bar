@@ -4608,7 +4608,7 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar).",
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB).",
    "source_size": [
     1080,
     1920
@@ -4628,7 +4628,7 @@
    "duration": 4.15,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
-   "budget_kb": 1380,
+   "budget_kb": 1250,
    "within_budget": true,
    "seam": {
     "last_vs_first": 17.02,
@@ -4637,15 +4637,15 @@
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-celular-900.webm",
-     "bytes": 1347215,
+     "bytes": 1248655,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 39
+     "crf": 40
     },
     "mp4": {
      "path": "assets/v3/video/portada-celular-900.mp4",
-     "bytes": 1357147,
+     "bytes": 1217468,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 29
+     "crf": 30
     }
    },
    "poster": {
@@ -4682,7 +4682,7 @@
     "text": "Video: @estudiouno.prod para @almud_bar"
    },
    "variant": "escritorio",
-   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna.",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado.",
    "source_size": [
     1278,
     720
@@ -4692,32 +4692,36 @@
    "ratio": "1278:720",
    "segments": [
     [
-     4.3,
-     10.4
+     8.65,
+     10.2
+    ],
+    [
+     4.4,
+     8.6
     ]
    ],
    "loop": "crossfade",
-   "frames": 165,
+   "frames": 154,
    "fps": 30.0,
-   "duration": 5.5,
+   "duration": 5.13,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 2500,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 13.2,
-    "typical_step": 10.37
+    "last_vs_first": 6.92,
+    "typical_step": 9.24
    },
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-escritorio-1278.webm",
-     "bytes": 2431105,
+     "bytes": 2401066,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 25
     },
     "mp4": {
      "path": "assets/v3/video/portada-escritorio-1278.mp4",
-     "bytes": 2046635,
+     "bytes": 2150981,
      "type": "video/mp4; codecs=\"avc1.640028\"",
      "crf": 18
     }
@@ -4725,19 +4729,19 @@
    "poster": {
     "avif": {
      "path": "assets/v3/video/portada-escritorio-poster.avif",
-     "bytes": 39477
+     "bytes": 31366
     },
     "webp": {
      "path": "assets/v3/video/portada-escritorio-poster.webp",
-     "bytes": 52372
+     "bytes": 48802
     },
     "jpg": {
      "path": "assets/v3/video/portada-escritorio-poster.jpg",
-     "bytes": 108468
+     "bytes": 96026
     }
    },
-   "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQBACdASoYAA4APwFqrE6rJiQiMAgBYCAJbACdMoMxgDMSxkHF6Xfam9hIkoAA/tui5rGEMDdfVRsoxjgevA8X9uAC2xJH35TNfu35TFZOWat/zoH2dwOuGpS/kO0KW4nITLOM5YCzRZrPY+ogVhRvxCWAvNAA",
-   "color": "#7c3c32"
+   "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoYAA4APwFqrk8rJiQiMAgBYCAJagAAW+zFMYOZnKzlbLjomgAA/vKpqnYdKApaM98fgN1Gkj174PdfAQ9n+7/7t+c/0fd8z0Y6FKUb7mTp0wb1XtJ2TO8ukqgAAA==",
+   "color": "#0e0305"
   },
   "lugar-cintas": {
    "ref": "V009",

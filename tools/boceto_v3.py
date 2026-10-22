@@ -40,7 +40,7 @@ def vid(id_, cls='', hero=False, extra=''):
     w, h = v['width'], v['height']
     poster = UP + v['poster']['webp']['path']
     return (f'<figure class="m m--v {cls}" style="--ar:{w}/{h};--c:{v["color"]};--lq:url({v["lqip"]})"{extra}>'
-            f'<video class="v" autoplay muted loop playsinline preload="none" width="{w}" height="{h}" poster="{poster}"'
+            f'<video class="v" autoplay muted loop playsinline preload="none" width="{w}" height="{h}" data-poster="{poster}"'
             f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}"'
             + (' data-hero' if hero else '') +
             f' aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video></figure>')
@@ -90,7 +90,8 @@ SVG = {n: (ROOT / f'brand/v3/{n}.svg').read_text().strip() for n in
 
 
 def svg_inline(name, cls, label=None):
-    s = SVG[name]
+    s = (SVG[name].replace('fill="#36a3ff"', 'style="fill:var(--letrero-azul)"').replace('fill="#f6ecdc"', 'style="fill:var(--letrero-blanco)"')
+             .replace('stroke="#f6ecdc"', 'style="stroke:var(--letrero-blanco)"'))
     s = re.sub(r'<title>.*?</title>', '', s)
     s = s.replace('<svg ', f'<svg class="{cls}" ' + ('aria-hidden="true" focusable="false" ' if not label else ''), 1)
     if not label:
@@ -111,7 +112,7 @@ rincones = [
     ('lugar-sillones', 'a', 'Sillones', 'Lounge', None, None),
     ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love the sunsets from our little terrace'),
     ('lugar-lampara-pinzas', 'a', 'Lámparas', 'The lamps', 'Nos gustan los brillitos, las luces', 'We love the sparkle, the lights'),
-    ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [mural of eyes]', 'una mirada vale más que mil palabras', 'a look is worth a thousand words'),
+    ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [Mural of eyes]', 'una mirada vale más que mil palabras', 'A look is worth a thousand words'),
 ]
 
 
@@ -125,10 +126,11 @@ def rincon_li(r, i):
     return (f'<li class="rin" style="--i:{i}">' + pic(id_, crop, '(min-width:1024px) 60vh, 78vw', 'rin__m') + cap + '</li>')
 
 
-tragos = [
-    ('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[spiced, slightly hot sour]'),
-    ('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon]'),
-]
+C_CASA = CARTA + '#casa'
+C_MOC = CARTA + '#mocktails-sin-alcohol-mocktails-de-la-casa'
+C_PIC = CARTA + '#comilona-picoteos'
+C_GRE = CARTA + '#comilona-greditas'
+C_PIZ = CARTA + '#comilona-pizzas-artesanales'
 
 
 def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', speed=None):
@@ -139,8 +141,8 @@ def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', sp
 
 eventos = [
     ('eventos-14f', 'Feb', 'Feb', '14F', '14F [Valentine\'s Day]', 2),
-    ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Anniversary', 7),
-    ('eventos-fondita', 'Sep', 'Sep', 'Fondita', 'Fondita [national holidays]', 9),
+    ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
+    ('eventos-fondita', 'Sep', 'Sep', 'Fondita', 'Fondita [Fiestas Patrias party]', 9),
     ('eventos-jaloguin', 'Oct', 'Oct', 'Jalogüín', 'Jalogüín [Halloween]', 10),
 ]
 
@@ -177,6 +179,7 @@ body = f'''
     {vid('portada-celular', 'hero__v hero__v--m', hero=True)}
     {vid('portada-escritorio', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
+    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}})(document)</script>
   </div>
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
   <div class="hero__in">
@@ -207,22 +210,24 @@ body = f'''
 <!-- 3 · TRAGOS -->
 <section class="tragos" id="tragos" aria-labelledby="h-tragos">
   <div class="wrap tragos__g">
-    <div class="tragos__head">{title('mucho amor, color y trabajo', 'a lot of love, colour and work', 'h-tragos')}</div>
-    <a class="it it--hero" href="{CARTA}">
+    <div class="tragos__head">{title('mucho amor, color y trabajo', 'A lot of love, colour and hard work', 'h-tragos')}</div>
+    <a class="it it--hero" href="{C_CASA}">
       {vid('tragos-humo', 'it__m reveal')}
-      <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[pisco, elderflower, cranberry, bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
+      <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
     </a>
     <div class="tragos__pair">
-      {item(*tragos[0], cls='it--a', speed='-0.08')}
-      {item(*tragos[1], cls='it--b', speed='0.1')}
+      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 45vw', 'it--a reveal', speed='-0.08')}
+      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 45vw', 'it--b reveal', speed='0.1')}
     </div>
+    {pic('tragos-copa-tallada', 'a', '16vw', 'tragos__mass reveal', speed='-0.2')}
+    <ul class="menu menu--tragos">
+      <li><a href="{C_CASA}"><span class="menu__n">Sagüer on Faia</span><i></i><span class="it__p">$ 7.900</span></a>{g('[Spiced sour with a little heat]', 'gloss gloss--s')}</li>
+      <li><a href="{C_CASA}"><span class="menu__n">Sangría Foreva!</span><i></i><span class="it__p">$ 6.500</span></a>{g('[Carménère wine, aged pisco, cinnamon]', 'gloss gloss--s')}</li>
+    </ul>
     <div class="moc">
-      <a class="moc__it" href="{CARTA}">{pic('carta-moto', 'a', '(min-width:1024px) 16vw, 38vw', 'moc__m reveal')}</a>
-      <div class="moc__t">
-        <h3 class="kick" data-en="Alcohol-free">Mocktails</h3>
-        <p class="moc__l">no dejamos a nadie ajuera{g('we leave nobody out')}</p>
-        <a class="moc__n" href="{CARTA}"><span class="it__n">La moto chantá</span>{g('[mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
-      </div>
+      <h3 class="kick" data-en="Alcohol-free">Mocktails</h3>
+      <p class="moc__l">no dejamos a nadie ajuera{g('We leave nobody out')}</p>
+      <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
     </div>
   </div>
 </section>
@@ -230,32 +235,32 @@ body = f'''
 <!-- 4 · COMIDA -->
 <section class="comida" id="comida" aria-labelledby="h-comida">
   <div class="wrap comida__g">
-    <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'a simple kitchen, but more than tasty!', 'h-comida')}</div>
-    {pic('comida-pizza', 'a', '(min-width:768px) 36vw, 100vw', 'comida__v reveal')}
+    <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'A simple kitchen, but more than tasty!', 'h-comida')}</div>
+    {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'comida__v reveal')}
     {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'comida__a reveal', speed='-0.1')}
     {vid('comida-cazuela', 'comida__b reveal', extra=' data-speed="0.08"')}
     <ul class="menu">
-      <li><a href="{CARTA}"><span class="menu__n">Tukulito Sakayama</span><i></i><span class="it__p">$ 15.900</span></a>{g('[marinated tuna tataki]', 'gloss gloss--s')}</li>
-      <li><a href="{CARTA}"><span class="menu__n">Camarón que se duerme</span><i></i><span class="it__p">$ 15.900</span></a>{g('[baked shrimp clay pot]', 'gloss gloss--s')}</li>
-      <li><a href="{CARTA}"><span class="menu__n">Pizza dulzona</span><i></i><span class="it__p">$ 12.500</span></a>{g('[sweet pizza: hazelnut, red berries]', 'gloss gloss--s')}</li>
+      <li><a href="{C_PIC}"><span class="menu__n">Tukulito Sakayama</span><i></i><span class="it__p">$ 15.900</span></a>{g('[Marinated tuna tataki]', 'gloss gloss--s')}</li>
+      <li><a href="{C_GRE}"><span class="menu__n">Camarón que se duerme</span><i></i><span class="it__p">$ 15.900</span></a>{g('[Shrimp baked in a clay pot]', 'gloss gloss--s')}</li>
+      <li><a href="{C_PIZ}"><span class="menu__n">Huerta sabrosa</span><i></i><span class="it__p">$ 13.900</span></a>{g('[Pizza: cherry tomato, mushrooms, greens]', 'gloss gloss--s')}</li>
     </ul>
   </div>
 </section>
 
 <!-- 5 · CON QUIÉN -->
 <section class="quien" id="quien" aria-labelledby="h-quien">
-  <div class="wrap">{title('no somos ná sin ustedes!', "we're nothing without you!", 'h-quien', 'ttl--xl')}</div>
+  <div class="wrap">{title('no somos ná sin ustedes!', "We're nothing without you!", 'h-quien', 'ttl--xl')}</div>
   <div class="quien__g">
-    <div class="col" data-speed="-0.06">{pic('con-quien-amigas', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col" data-speed="-0.06">{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
     <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
   </div>
 </section>
 
 <!-- 6 · EVENTOS -->
 <section class="eventos" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap">
-    {title('tirar la casa por la ventana!', 'going all out!', 'h-eventos')}
+    {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
     <ol class="cal">
       {''.join('<li class="ev">' + pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal') + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>
@@ -275,7 +280,7 @@ body = f'''
 <section class="resenas" id="resenas" aria-labelledby="h-resenas">
   <div class="wrap">
     <h2 class="ttl" id="h-resenas"><span class="ttl__t">Que no se lo cuenten</span></h2>
-    <p class="ttl-gloss ttl-gloss--on">{g("Don't just take their word for it", 'gloss gloss--on')}</p>
+    <p class="ttl-gloss">{g("See for yourself")}</p>
   </div>
   <ul class="rs" data-swipe>
     {''.join(f'<li class="r"><blockquote class="r__q" lang="{l}"><p>{E(q)}</p>' + (g(gl, 'gloss gloss--s') if gl else '') + f'</blockquote><p class="r__f" data-en="{E(fen)}">{E(f)}</p></li>' for l, q, gl, f, fen in resenas)}
@@ -286,9 +291,9 @@ body = f'''
 <section class="donde" id="donde" aria-labelledby="h-donde">
   {vid('donde-letrero', 'donde__v reveal')}
   <div class="donde__t">
-    {title('Le esperamos desde las 18:00 hrs', "We're expecting you from 6 pm", 'h-donde')}
+    {title('Le esperamos desde las 18:00 hrs', "See you from 6 pm", 'h-donde')}
     <dl class="datos">
-      <div><dt class="sr-only" data-en="Days">Días</dt><dd class="datos__big" data-en="Tue to Sat">Mar a Sáb</dd></div>
+      <div><dt class="sr-only" data-en="Days">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
       <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Opposite the Castro Cultural Centre">Al frente del Centro Cultural de Castro</dd></div>
     </dl>
     <div class="donde__btns">

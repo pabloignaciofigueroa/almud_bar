@@ -1,5 +1,18 @@
 # Textos de página v3 · Almud Bar
 
+> **Estado: refleja el sitio construido** (`/v3/` y `/v3/carta/`, ronda 1 de calidad). Cambios respecto al guion de fase 6, todos aprobados por Carmen o por el director:
+> - **Portada:** un solo botón, ‹Ver la carta›. ‹Cómo llegar› y ‹Escríbenos por DM› viven solo en Cuándo y dónde.
+> - **El lugar:** ‹Sillones› / “Lounge” vuelve al carrusel, porque ya hay foto (P114).
+> - **Tragos:** las fotos son las favoritas de Carmen (P297, P086, P097), sin rótulo. Los destacados Sagüer y Sangría van como lista con nombre y precio literales.
+> - **Comida:** «Pizza dulzona» se cambia por «Huerta sabrosa» (pizza salada, coherente con la foto P036).
+> - **Eventos:** sin ‹Próximo›.
+> - **Equipo:** 5 personas (sale @elymar_bocarejo) y la línea ‹Los dueños› @cepaz · @rusio_mezclao.
+> - **Reseñas:** la glosa pasa a “See for yourself” y solo se ve en EN.
+> - **Glosas EN:** con mayúscula inicial.
+> - **Créditos:** 4.
+> - **Carta:** ‹Escríbenos por DM› en la nav; pestañas y chips con EN; etiquetas ‹Nuevo›/“New”, ‹Veggie›, ‹Vegan›, ‹Picante›/“Spicy”; glosas de notas de precio (“Single or XL pour · mixer not included”, “Choose 90 or 150 cc”, “6 to 10 pm · Always subject to stock!”); días de promo en EN (Tue, Wed, Thu, Sat).
+> - **Destacados del home:** enlazan a su pestaña o subgrupo de la carta (`carta/#casa`, `#mocktails-sin-alcohol-mocktails-de-la-casa`, `#comilona-picoteos`, `#comilona-greditas`, `#comilona-pizzas-artesanales`).
+
 Fase 6 del plan v3 (`_plan/PLAN_v3.md`). Agente Textos de página. Aquí se decide qué palabras van en cada pantalla y cuáles sobran. La regla es mínimo texto: hablan las fotos y los videos. Cada texto tiene que ser claro para un turista y verse premium.
 
 **Manda sobre** `content/copy-v2.md`. De la v2 se reusan fuentes y hallazgos, no textos.
@@ -42,7 +55,6 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Logo | (SVG con isotipo; alt “Almud Bar”) | — | — | — |
 | Claim | «Coctelería de autor, comida & música bonita desde 2014» | [BIO] | “Signature cocktails, food & lovely music since 2014” | sí |
 | Botón principal (muro rosa) | ‹Ver la carta› | [UI] | “See the menu” | sí |
-| Botón 2 → mapa | ‹Cómo llegar› | [UI] | “Get directions” | sí |
 
 ---
 
@@ -59,8 +71,9 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | línea | «Amamos los atardeceres desde nuestra terracita» | [IG-163] | “We love the sunsets from our little terrace” | sí |
 | Rincón | ‹Lámparas› | [UI] | “The lamps” | sí |
 | línea | «Nos gustan los brillitos, las luces» | [IG-147] | “We love the sparkle, the lights” | sí |
-| Rincón | «Ojo Piojo» | [IG-118] | “Ojo Piojo [mural of eyes]” | sí |
-| línea | «una mirada vale más que mil palabras» | [IG-118] | “a look is worth a thousand words” | sí |
+| Rincón | ‹Sillones› | [UI] | “Lounge” | sí |
+| Rincón | «Ojo Piojo» | [IG-118] | “Ojo Piojo [Mural of eyes]” | sí |
+| línea | «una mirada vale más que mil palabras» | [IG-118] | “A look is worth a thousand words” | sí |
 
 - **Salón: va solo con foto, sin rótulo.** No tiene línea aprobada y su nombre no le dice nada al turista que la foto no muestre. Si fase 7 no consigue una foto clara del salón, el rincón se saca.
 - **Sobran:** ‹Sillones›. El material es poco y la foto P114 no muestra los sillones (crítica 1 de la v2). Vuelve, solo con su nombre, si fase 7 consigue una foto que los muestre.
@@ -72,13 +85,13 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «mucho amor, color y trabajo» | [IG-045] | “a lot of love, colour and work” | sí |
-| Destacado | «Aquí te las traigo Peter» · «$ 6.700» | [CARTA-2] | “[pisco, elderflower, cranberry, bubble]” | no·carta |
-| Destacado | «Sagüer on Faia» · «$ 7.900» | [CARTA-2] | “[spiced, slightly hot sour]” | no·carta |
-| Destacado | «Sangría Foreva!» · «$ 6.500» | [CARTA-2] | “[Carménère, aged pisco, cinnamon]” | no·carta |
+| Titular | «mucho amor, color y trabajo» | [IG-045] | “A lot of love, colour and hard work” | sí |
+| Destacado | «Aquí te las traigo Peter» · «$ 6.700» | [CARTA-2] | “[Pisco, elderflower, cranberry, smoke bubble]” | no·carta |
+| Destacado | «Sagüer on Faia» · «$ 7.900» | [CARTA-2] | “[Spiced sour with a little heat]” | no·carta |
+| Destacado | «Sangría Foreva!» · «$ 6.500» | [CARTA-2] | “[Carménère wine, aged pisco, cinnamon]” | no·carta |
 | Rótulo sin alcohol | ‹Mocktails› | [UI] | “Alcohol-free” | sí |
-| Línea sin alcohol | «no dejamos a nadie ajuera» | [IG-011] | “we leave nobody out” | sí |
-| Destacado sin alcohol | «La moto chantá» · «$ 6.400» | [CARTA-5] | “[mango, passion fruit, cucumber]” | no·carta |
+| Línea sin alcohol | «no dejamos a nadie ajuera» | [IG-011] | “We leave nobody out” | sí |
+| Destacado sin alcohol | «La moto chantá» · «$ 6.400» | [CARTA-5] | “[Mango, passion fruit, cucumber]” | no·carta |
 
 - **Bajada en reserva:** «innumerables horas de probar, probar y probar» [IG-021] · “countless hours of tasting, tasting and tasting”. Carmen la aprobó, pero se saca para cumplir la meta de 150 palabras: el titular ya cuenta el oficio y la foto del bartender (P362) lo muestra. Si otra sección pierde 6 palabras o más (por ejemplo, un crédito o un rincón que no tenga foto), esta bajada vuelve primero.
 - Sin botón propio: ‹Carta› va fija en la nav y cada destacado enlaza a su ítem en `carta/`.
@@ -91,10 +104,10 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «una cocina sencilla pero más que sabrosona!» | [IG-022] | “a simple kitchen, but more than tasty!” | sí |
-| Destacado | «Tukulito Sakayama» · «$ 15.900» | [CARTA-1] | “[marinated tuna tataki]” | no·carta |
-| Destacado | «Camarón que se duerme» · «$ 15.900» | [CARTA-1] | “[baked shrimp clay pot]” | no·carta |
-| Destacado | «Pizza dulzona» · «$ 12.500» | [CARTA-1] | “[sweet pizza: hazelnut, red berries]” | no·carta |
+| Titular | «una cocina sencilla pero más que sabrosona!» | [IG-022] | “A simple kitchen, but more than tasty!” | sí |
+| Destacado | «Tukulito Sakayama» · «$ 15.900» | [CARTA-1] | “[Marinated tuna tataki]” | no·carta |
+| Destacado | «Camarón que se duerme» · «$ 15.900» | [CARTA-1] | “[Shrimp baked in a clay pot]” | no·carta |
+| Destacado | «Huerta sabrosa» · «$ 13.900» | [CARTA-1] | “[Pizza: cherry tomato, mushrooms, greens]” | no·carta |
 
 - **Sobra:** «pa chuparse el bigoteli», que está vetada en todo el sitio. Como está dentro de la descripción del Tukulito en la carta, solo puede aparecer en `carta/`.
 
@@ -104,7 +117,7 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «no somos ná sin ustedes!» | [IG-026] | “we're nothing without you!” | sí |
+| Titular | «no somos ná sin ustedes!» | [IG-026] | “We're nothing without you!” | sí |
 
 - No lleva más texto. Las fotos de noches cualquiera dicen el "para qué".
 - **Sobran:** los rótulos de ocasión de la v2 (‹Solo›, ‹En pareja›…) y sus líneas: «pa usté solit@…» lleva @, y «Pa agarrar perso…» es de carrete.
@@ -115,16 +128,15 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «tirar la casa por la ventana!» | [IG-010] | “going all out!” | sí |
+| Titular | «tirar la casa por la ventana!» | [IG-010] | “Going all out!” | sí |
 | Mes | ‹Feb› | [UI] | “Feb” | sí |
 | Evento | «14F» | [IG-116] | “14F [Valentine's Day]” | sí |
 | Mes | ‹Jul› | [UI] | “Jul” | sí |
-| Evento | «Aniversario» | [IG-090] | “Anniversary” | sí |
+| Evento | «Aniversario» | [IG-090] | “[Anniversary]” | sí |
 | Mes | ‹Sep› | [UI] | “Sep” | sí |
-| Evento | «Fondita» | [IG-080] | “Fondita [national holidays]” | sí |
+| Evento | «Fondita» | [IG-080] | “[Fiestas Patrias party]” | sí |
 | Mes | ‹Oct› | [UI] | “Oct” | sí |
 | Evento | «Jalogüín» | [IG-071] | “Jalogüín [Halloween]” | sí |
-| Marca | ‹Próximo› | [UI] | “Next” | sí |
 
 - **Regla de ‹Próximo›.** Va en dorado (`--dorado`, cambio P2) en el primer evento del calendario cuyo mes sea igual o posterior al mes en curso, con la hora de `America/Santiago`. Si no queda ninguno, pasa al primero del año. Hoy, 21-10-2026, marca **Jalogüín (Oct)**. Sin JS no se marca nada.
 - El calendario solo muestra el mes y el nombre. No lleva días, años futuros ni frases de promesa: no se anuncia ninguna edición.
@@ -148,7 +160,7 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Foto 3 | «@eduu.ardoo» | [TAG-001] | = | sí |
 | Foto 4 | «@lizzearellano» | [TAG-001] | = | sí |
 | Foto 5 | «@pablete_bartender_» | [TAG-001] | = | sí |
-| Foto 6 | «@elymar_bocarejo» | [TAG-001] | = | sí |
+| Dueños | ‹Los dueños› · «@cepaz» · «@rusio_mezclao» | [UI] · [DATO] | “The owners” | sí |
 
 - **Quiénes siguen.** IG-001 (07-10-2026) es el último posteo de equipo. Su caption no trae @, pero cada una de sus 6 fotos etiqueta a una persona: `DeNQ8A2lDgg_00`…`_05`, en el orden de la tabla. Esas 6 personas son el equipo. Cada @ va bajo su propia foto y enlaza a su perfil.
 - **@lizzearellano** se escribe como en la etiqueta, que es la cuenta real. Con esto se resuelve la duda de la v2 entre «lizzearellano» y «lizzearellanol».
@@ -163,7 +175,7 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «Que no se lo cuenten» | [IG-024] | “Don't just take their word for it” (obligatoria) | sí |
+| Titular | «Que no se lo cuenten» | [IG-024] | “See for yourself” (solo en modo EN) | sí |
 | R1 `lang="fr"` | «Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!» | [RESEÑA:Dorothee M] | “Great night out in Castro! Friendly service, great atmosphere, really nice music!” | no·reseña |
 | firma | ‹Dorothee · Épinal, Francia · Tripadvisor› | [UI] | “Dorothee · Épinal, France · Tripadvisor” | no·reseña |
 | R2 `lang="en"` | «Really cute place. Good menu including lots of vegetarian options» | [RESEÑA:Rachael Fox] | (original) | no·reseña |
@@ -192,8 +204,8 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 
 | Elemento | ES visible | Fuente | EN | Cuenta |
 |---|---|---|---|---|
-| Titular | «Le esperamos desde las 18:00 hrs» | [IG-155] | “We're expecting you from 6 pm” | sí |
-| Días | «Mar a Sáb» | [BIO] | “Tue to Sat” | sí |
+| Titular | «Le esperamos desde las 18:00 hrs» | [IG-155] | “See you from 6 pm” | sí |
+| Días | «Mar a Sáb» | [BIO] | “Tue–Sat” | sí |
 | Dirección | «Serrano 325, Castro» | [BIO] | “Serrano 325, Castro” | sí |
 | Referencia | «Al frente del Centro Cultural de Castro» | [DATO] | “Opposite the Castro Cultural Centre” | sí |
 | Botón → `https://ig.me/m/almud_bar` | ‹Escríbenos por DM› | [UI] | “Message us on Instagram” | sí |
@@ -217,10 +229,8 @@ Logo, claim de la bio y botones, sin otra frase (nota 4 de Carmen). El video (te
 | Rótulo créditos | ‹Imágenes› | [UI] | “Images” | sí |
 | crédito | «@catarsis.fotografia» | [IG-163] | = | sí |
 | crédito | «@estudiouno.prod» | [IG-064] | = | sí |
-| crédito | «@tamillanquileo» | [IG-126] | = | sí |
 | crédito | «@isosur.prod» | [IG-009] | = | sí |
 | crédito | «@rober.patagonico» | [IG-103] | = | sí |
-| crédito | «@dosistudio» | [IG-081] | = | sí |
 
 - **Cómo acredita la marca.** Almud firma sus fotos con «📸: @…» y sus videos con «🎥: @…» o «Video: @…». Como los emoji no van en el texto visible, se agrupan bajo ‹Imágenes›, palabra que usa la propia marca: «las imágenes de @estudiouno.prod» [IG-050]. @dosistudio, que hace los afiches, entra en el mismo rótulo, porque la marca también le acredita imágenes: «Todas nuestras imágenes por la sequísima @dosistudio» [IG-101]. Así sobra un segundo rótulo (‹Afiches›).
 - **Qué créditos quedan.** Solo los autores cuyas fotos o videos use la fase 7. Si un autor no queda en el sitio, se borra su @. Cada @ enlaza a su perfil.

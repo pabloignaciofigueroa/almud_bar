@@ -6,12 +6,21 @@
   const $ = (s, c = d) => c.querySelector(s);
   const $$ = (s, c = d) => [...c.querySelectorAll(s)];
 
-  /* video: solo poner la fuente (autoplay muted loop playsinline) */
-  $$('video.v').forEach(v => {
+  /* video: póster y fuente cuando está a ≤1,5 pantallas (solo carga; nunca se pausa). Movimiento reducido: solo póster */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function attach(v) {
+    if (v.dataset.on) return; v.dataset.on = '1';
+    if (v.dataset.poster) v.poster = v.dataset.poster;
+    if (reduce) { v.removeAttribute('autoplay'); return; }
     v.preload = 'auto';
     v.insertAdjacentHTML('beforeend', '<source src="' + v.dataset.webm + '" type="video/webm"><source src="' + v.dataset.mp4 + '" type="video/mp4">');
     v.load(); const p = v.play(); if (p && p.catch) p.catch(() => {});
-  });
+  }
+  const vids = $$('video.v');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); attach(e.target); } }), { rootMargin: '150% 0px' });
+    vids.forEach(v => io.observe(v));
+  } else vids.forEach(attach);
 
   /* idioma */
   const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label']];
@@ -73,7 +82,7 @@
     if (sub) {
       const tid = sub.closest('.panel').id;
       R.dataset.tab = tid; R.setAttribute('data-sub-' + tid, hash); paint();
-      if (how) enter(sub);
+      if (how) { top(); enter(sub); }
       return true;
     }
   }

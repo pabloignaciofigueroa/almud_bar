@@ -1134,12 +1134,12 @@
     720
    ],
    "crf_max": 30,
-   "budget_kb": 1380,
+   "budget_kb": 1250,
    "alt": {
     "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
     "en": "The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."
    },
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar)."
+   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB)."
   },
   {
    "id": "portada-escritorio",
@@ -1149,8 +1149,12 @@
    "variant": "escritorio",
    "segments": [
     [
-     4.3,
-     10.4
+     8.65,
+     10.2
+    ],
+    [
+     4.4,
+     8.6
     ]
    ],
    "loop": "crossfade",
@@ -1171,7 +1175,7 @@
     "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
     "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
    },
-   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna.",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado.",
    "crf_start": 18,
    "vp9_crf_start": 24
   },
