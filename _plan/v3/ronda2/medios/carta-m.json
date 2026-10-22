@@ -1,0 +1,306 @@
+{
+ "init": {
+  "v0": [
+   {
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 1.45,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 456,
+    "w": 96,
+    "h": 120,
+    "vis": true
+   }
+  ],
+  "v1": [
+   {
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 2.65,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 456,
+    "w": 96,
+    "h": 120,
+    "vis": true
+   }
+  ],
+  "rt": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 24
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 24
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 25
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 25
+   },
+   {
+    "n": "site.css?v=195152d2",
+    "t": "link",
+    "s": 20184,
+    "st": 25
+   },
+   {
+    "n": "carta.css?v=f3ccfc1b",
+    "t": "link",
+    "s": 7140,
+    "st": 25
+   },
+   {
+    "n": "carta.js?v=d831d8bc",
+    "t": "script",
+    "s": 5508,
+    "st": 29
+   },
+   {
+    "n": "carta-olvidar-a-360.avif",
+    "t": "img",
+    "s": 9706,
+    "st": 91
+   },
+   {
+    "n": "carta-saguer-a-360.avif",
+    "t": "img",
+    "s": 11495,
+    "st": 91
+   },
+   {
+    "n": "carta-sangria-a-360.avif",
+    "t": "img",
+    "s": 10435,
+    "st": 91
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 123
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 129
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 187
+   }
+  ]
+ },
+ "steps": [
+  {
+   "y": 844,
+   "videos": []
+  },
+  {
+   "y": 1688,
+   "videos": []
+  },
+  {
+   "y": 2407,
+   "videos": []
+  }
+ ],
+ "imgs": [
+  {
+   "src": "carta-olvidar-a-360.avif",
+   "w": 96,
+   "h": 96,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "casa",
+   "done": true
+  },
+  {
+   "src": "carta-saguer-a-360.avif",
+   "w": 96,
+   "h": 120,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "casa",
+   "done": true
+  },
+  {
+   "src": "carta-sangria-a-360.avif",
+   "w": 96,
+   "h": 120,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "casa",
+   "done": true
+  },
+  {
+   "src": "carta-coquette-a-360.avif",
+   "w": 96,
+   "h": 120,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "casa",
+   "done": true
+  },
+  {
+   "src": "carta-moto-a-360.webp",
+   "w": 0,
+   "h": 0,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "sin",
+   "done": false
+  },
+  {
+   "src": "carta-tukulito-a-360.webp",
+   "w": 0,
+   "h": 0,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "comilona",
+   "done": false
+  },
+  {
+   "src": "carta-contuti-a-360.webp",
+   "w": 0,
+   "h": 0,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "comilona",
+   "done": false
+  },
+  {
+   "src": "carta-camaron-a-360.webp",
+   "w": 0,
+   "h": 0,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "sec": "comilona",
+   "done": false
+  }
+ ],
+ "vend": [
+  {
+   "src": "tragos-humo-720.webm",
+   "poster": "tragos-humo-poster.webp",
+   "paused": false,
+   "t": 6.67,
+   "dur": 7.4,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -1951,
+   "w": 96,
+   "h": 120,
+   "vis": false
+  }
+ ],
+ "rt_end": [
+  {
+   "n": "big-shoulders-display-latin-wght-normal.woff2",
+   "t": "link",
+   "s": 35804,
+   "st": 24
+  },
+  {
+   "n": "barlow-condensed-latin-500-normal.woff2",
+   "t": "link",
+   "s": 21724,
+   "st": 24
+  },
+  {
+   "n": "tokens.css?v=b59f1ef1",
+   "t": "link",
+   "s": 2278,
+   "st": 25
+  },
+  {
+   "n": "barlow-condensed-latin-600-normal.woff2",
+   "t": "link",
+   "s": 22608,
+   "st": 25
+  },
+  {
+   "n": "site.css?v=195152d2",
+   "t": "link",
+   "s": 20184,
+   "st": 25
+  },
+  {
+   "n": "carta.css?v=f3ccfc1b",
+   "t": "link",
+   "s": 7140,
+   "st": 25
+  },
+  {
+   "n": "carta.js?v=d831d8bc",
+   "t": "script",
+   "s": 5508,
+   "st": 29
+  },
+  {
+   "n": "carta-olvidar-a-360.avif",
+   "t": "img",
+   "s": 9706,
+   "st": 91
+  },
+  {
+   "n": "carta-saguer-a-360.avif",
+   "t": "img",
+   "s": 11495,
+   "st": 91
+  },
+  {
+   "n": "carta-sangria-a-360.avif",
+   "t": "img",
+   "s": 10435,
+   "st": 91
+  },
+  {
+   "n": "tragos-humo-poster.webp",
+   "t": "video",
+   "s": 18730,
+   "st": 123
+  },
+  {
+   "n": "tragos-humo-720.webm",
+   "t": "video",
+   "s": 564403,
+   "st": 129
+  },
+  {
+   "n": "favicon.svg",
+   "t": "other",
+   "s": 725,
+   "st": 187
+  },
+  {
+   "n": "carta-coquette-a-360.avif",
+   "t": "img",
+   "s": 7297,
+   "st": 6128
+  }
+ ]
+}
