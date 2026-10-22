@@ -8,7 +8,10 @@ import json, html, pathlib, re, hashlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 M = json.loads((ROOT / 'assets/v3/media.json').read_text())
 IM, VI = M['images'], M['videos']
-UP = '../'
+import os
+RAIZ = os.environ.get('ALMUD_RAIZ') == '1'   # fase 20: la v3 pasa a ser / (rutas absolutas)
+UP = '/' if RAIZ else '../'
+PATH = '/' if RAIZ else '/v3/'
 E = html.escape
 
 
@@ -59,7 +62,7 @@ OG = f'''<meta property="og:type" content="website">
 <meta property="og:site_name" content="Almud Bar">
 <meta property="og:title" content="Almud Bar · Castro, Chiloé">
 <meta property="og:description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Serrano 325, Castro.">
-<meta property="og:url" content="{SITE}/v3/">
+<meta property="og:url" content="{SITE}{PATH}">
 <meta property="og:image" content="{SITE}/assets/v3/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -103,7 +106,7 @@ def svg_inline(name, cls, label=None):
 IG = 'https://www.instagram.com/'
 MAPS = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro+Chile'
 DM = 'https://ig.me/m/almud_bar'
-CARTA = 'carta/'
+CARTA = '/carta/' if RAIZ else 'carta/'
 
 # ───────────────────────── secciones ─────────────────────────
 rincones = [
@@ -336,31 +339,31 @@ page = f'''<!doctype html>
 <meta name="description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Serrano 325, Castro." data-en="Signature cocktails, food &amp; lovely music since 2014. Serrano 325, Castro.">
 <meta name="theme-color" content="#160d0b">
 <meta name="robots" content="noindex">
-<link rel="icon" href="../brand/v3/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="../assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../{IM_P}" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
-<link rel="preload" href="../{IM_L}" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
-<link rel="preload" href="../vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" as="script">
-<link rel="preload" href="../vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" as="script">
-<link rel="preload" href="../js/v3/site.js?v={ver('js/v3/site.js')}" as="script">
-<link rel="stylesheet" href="../css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
-<link rel="stylesheet" href="../css/v3/site.css?v={ver('css/v3/site.css')}">
-<link rel="canonical" href="{SITE}/v3/">
+<link rel="icon" href="{UP}brand/v3/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{UP}assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{UP}{IM_P}" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
+<link rel="preload" href="{UP}{IM_L}" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
+<link rel="preload" href="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" as="script">
+<link rel="preload" href="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" as="script">
+<link rel="preload" href="{UP}js/v3/site.js?v={ver('js/v3/site.js')}" as="script">
+<link rel="stylesheet" href="{UP}css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
+<link rel="stylesheet" href="{UP}css/v3/site.css?v={ver('css/v3/site.css')}">
+<link rel="canonical" href="{SITE}{PATH}">
 {OG}
 <script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{{r.classList.add('intro');setTimeout(function(){{if(!window.__almudIntro)r.classList.remove('intro')}},1400)}}}})(document)</script>
 </head>
 <body>
 {body}
-<script src="../vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" defer></script>
-<script src="../vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" defer></script>
-<script src="../vendor/lenis.min.js?v={ver('vendor/lenis.min.js')}" defer></script>
-<script src="../js/v3/site.js?v={ver('js/v3/site.js')}" defer></script>
+<script src="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" defer></script>
+<script src="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" defer></script>
+<script src="{UP}vendor/lenis.min.js?v={ver('vendor/lenis.min.js')}" defer></script>
+<script src="{UP}js/v3/site.js?v={ver('js/v3/site.js')}" defer></script>
 </body>
 </html>
 '''
-out = ROOT / 'v3/index.html'
+out = pathlib.Path(os.environ.get('ALMUD_OUT', ROOT)) / ('index.html' if RAIZ else 'v3/index.html')
 out.parent.mkdir(exist_ok=True)
 out.write_text(page)
 print('ok', out, len(page))

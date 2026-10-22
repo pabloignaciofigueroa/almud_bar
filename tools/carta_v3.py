@@ -8,7 +8,11 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 C = json.loads((ROOT / 'content/carta-v2.json').read_text())
 M = json.loads((ROOT / 'assets/v3/media.json').read_text())
 E = html.escape
-UP = '../../'
+import os
+RAIZ = os.environ.get('ALMUD_RAIZ') == '1'   # fase 20: la carta v3 pasa a ser /carta/
+UP = '/' if RAIZ else '../../'
+HOME = '/' if RAIZ else '../'
+PATH = '/carta/' if RAIZ else '/v3/carta/'
 SITE = 'https://almudbar.pages.dev'
 SEC = {s['id']: s for s in C['secciones']}
 
@@ -217,21 +221,21 @@ page = f'''<!doctype html>
 <meta name="description" content="tenemos pa todos los gustos! Coctelería de la casa, cócteles del mundo mundial, espirituosos, vinos, mocktails y comilona." data-en="Something for every taste! House cocktails, classics, spirits, wines, alcohol-free and food.">
 <meta name="theme-color" content="#160d0b">
 <meta name="robots" content="noindex">
-<link rel="canonical" href="{SITE}/v3/carta/">
+<link rel="canonical" href="{SITE}{PATH}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Almud Bar">
 <meta property="og:title" content="La carta · Almud Bar">
 <meta property="og:description" content="tenemos pa todos los gustos!">
-<meta property="og:url" content="{SITE}/v3/carta/">
+<meta property="og:url" content="{SITE}{PATH}">
 <meta property="og:image" content="{SITE}/assets/v3/og-carta.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../brand/v3/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="../../assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../../assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
-<link rel="stylesheet" href="../../css/v3/site.css?v={ver('css/v3/site.css')}">
-<link rel="stylesheet" href="../../css/v3/carta.css?v={ver('css/v3/carta.css')}">
+<link rel="icon" href="{UP}brand/v3/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{UP}assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{UP}css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
+<link rel="stylesheet" href="{UP}css/v3/site.css?v={ver('css/v3/site.css')}">
+<link rel="stylesheet" href="{UP}css/v3/carta.css?v={ver('css/v3/carta.css')}">
 <style>{''.join(tabcss + chipcss)}</style>
 <script>(function(d){{var r=d.documentElement,T={json.dumps(ids)},h=(location.hash||'').slice(1);r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}
 var t=T.indexOf(h)>-1?h:null;if(!t&&h){{var el=null;try{{el=d.querySelector('[data-sub="'+h+'"]')}}catch(e){{}}}}
@@ -240,7 +244,7 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
 <body>
 <a class="skip" href="#carta" data-en="Skip to content">Saltar al contenido</a>
 <header class="nav nav--carta">
-  <a class="nav__logo" href="../" aria-label="Almud Bar · Inicio" data-aria-en="Almud Bar · Home">{nav}</a>
+  <a class="nav__logo" href="{HOME}" aria-label="Almud Bar · Inicio" data-aria-en="Almud Bar · Home">{nav}</a>
   <nav class="nav__r" aria-label="Carta" data-aria-en="Menu">
     <a class="nav__a nav__dm" href="https://ig.me/m/almud_bar" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
     <button class="nav__a nav__lang" type="button" data-lang aria-label="English" data-aria-en="Español"><span data-en="ES">EN</span></button>
@@ -256,15 +260,15 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
   <div class="panels"><div class="hoja">{''.join(panels)}</div></div>
   <footer class="carta__pie wrap">
     <a class="btn btn--ghost" href="https://uqr.to/ppvi" target="_blank" rel="noopener" data-en="Official menu (PDF)">Carta oficial (PDF)</a>
-    <a class="btn btn--ghost" href="../" data-en="Home">Inicio</a>
+    <a class="btn btn--ghost" href="{HOME}" data-en="Home">Inicio</a>
   </footer>
 </main>
 <script>(function(d){{if(d.documentElement.lang!=='en')return;d.querySelectorAll('body [data-en]').forEach(function(e){{e.dataset.es=e.textContent;e.textContent=e.dataset.en}})}})(document)</script>
-<script src="../../js/v3/carta.js?v={ver('js/v3/carta.js')}" defer></script>
+<script src="{UP}js/v3/carta.js?v={ver('js/v3/carta.js')}" defer></script>
 </body>
 </html>
 '''
-out = ROOT / 'v3/carta/index.html'
+out = pathlib.Path(os.environ.get('ALMUD_OUT', ROOT)) / ('carta/index.html' if RAIZ else 'v3/carta/index.html')
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(page)
 print('ok', out, len(page))

@@ -4714,7 +4714,7 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Fase 19: V021 (1080p) tramo 1,28–2,5 s, que parte en el cuadro más nítido (varianza laplaciana máxima con el cartelito ALMUD BAR a la vista), a 0,8× por repetición de cuadros (sin mezcla) y en boomerang. Póster = primer cuadro. 720×1280, ≤1.000 KB.",
+   "note": "Fase 19: V021 (1080p) tramo 1,28–2,5 s, que parte en el cuadro más nítido (varianza laplaciana máxima con el cartelito ALMUD BAR a la vista), a 0,8× por repetición de cuadros (sin mezcla) y en boomerang. Póster = primer cuadro. 720×1280, ≤1.000 KB. WebM recomprimido a CRF 33 (786 KB).",
    "source_size": [
     1080,
     1920
@@ -4743,7 +4743,7 @@
    "files": {
     "webm": {
      "path": "assets/v3/video/portada-celular-720.webm",
-     "bytes": 1006175,
+     "bytes": 805145,
      "type": "video/webm; codecs=\"vp9\"",
      "crf": 32
     },
