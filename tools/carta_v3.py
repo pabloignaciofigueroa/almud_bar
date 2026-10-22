@@ -97,7 +97,9 @@ def nl(t):
 
 
 # negritas de la carta impresa (tools/carta_negritas_v3.py): solo frases de ingredientes, sin precios ni cabeceras
-NEG = {k: [x for x in v if not re.search(r'\d', x) and x != x.upper()]
+NEG_STOP = {'hasta', 'años', 'para menores'}
+NEG_FIX = {'Especial pa': 'Especial pa compartir'}  # la línea siguiente del PDF ('compartir:') sigue en negrita
+NEG = {k: sorted({NEG_FIX.get(x, x) for x in v if not re.search(r'\d', x) and x != x.upper() and x.lower() not in NEG_STOP}, key=len, reverse=True)
        for k, v in json.loads((ROOT / 'content/carta-negritas-v3.json').read_text()).items()}
 CUR_SRC = ['']
 
@@ -140,7 +142,7 @@ def group(gr, sid, idx):
     nota = (f'<p class="gr__nota">{nl(gr["nota"])}' + (g(NOTA_EN[gr["nota"]], 'gloss gloss--s') if gr["nota"] in NOTA_EN else '') + '</p>') if gr.get('nota') else ''
     pie = (f'<p class="gr__pie">{nl(gr["nota_pie"])}' + (g(NOTA_EN[gr["nota_pie"]], 'gloss gloss--s') if gr["nota_pie"] in NOTA_EN else '') + '</p>') if gr.get('nota_pie') else ''
     if cols:
-        th = ''.join(f'<th scope="col" class="tbl__c">{E(c)}</th>' for c in cols)
+        th = ''.join(f'<th scope="col" class="tbl__c">{E(c).replace(" [", "<br>[", 1)}</th>' for c in cols)
         rows = ''
         for it in gr['items']:
             d = f'<span class="pr__d">{bold(it["desc"])}</span>' if it.get('desc') else ''
@@ -178,8 +180,8 @@ for tid, ttl, en, sids, col in TABS:
     use_chips = len(chips) > 1
     chip_html = ''
     if use_chips:
-        chip_html = (f'<div class="chips" data-chips="{tid}">' + ''.join(
-            f'<a class="chip" href="#{c}" data-sub="{c}" id="chip-{c}"' + (f' data-en="{E(CHIP_EN[t])}"' if t in CHIP_EN else '') + f'>{E(t)}</a>' for c, t in chips) + '</div>')
+        chip_html = (f'<div class="chips" data-chips="{tid}"><div class="chips__in">' + ''.join(
+            f'<a class="chip" href="#{c}" data-sub="{c}" id="chip-{c}"' + (f' data-en="{E(CHIP_EN[t])}"' if t in CHIP_EN else '') + f'>{E(t)}</a>' for c, t in chips) + '</div></div>')
         for c, _ in chips[1:]:
             pass
         first = chips[0][0]

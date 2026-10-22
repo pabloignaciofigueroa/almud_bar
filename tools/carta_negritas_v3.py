@@ -27,6 +27,8 @@ for pdf_path in sorted((ROOT / 'assets/raw/carta').glob('carta_*.pdf')):
                     if w:
                         a = im[int(w['top'] * S):int(w['bottom'] * S), int(w['x0'] * S):int(w['x1'] * S)]
                         bold = a.size and (a < 128).mean() >= TH
+                    if bold and re.search(r'[\d$]', w['text']):
+                        bold = False  # los precios en negrita cortan la frase
                     if bold:
                         run.append(w['text'])
                     elif run:
