@@ -63,3 +63,27 @@
 Con 1 y 2, B sube a 4 (19/20). Con 3 a 5, E sube a 4 (**20/20**).
 
 — Carmen Paz
+
+---
+
+## Re-juicio (tras el pulido de fase 19)
+
+> Volví a recorrer `public/` en `http://localhost:8872`, `/v3/` y `/v3/carta/`, a 390×844 y 1440×900, en ES y EN. Leí la sección «Fase 19» de `brand/art-direction-v3.md`. Las capturas están en `_plan/v3/19-juicio/r2/` (por pantallas, `*_full.jpg`, `sheet_*.jpg` y `report.json`).
+>
+> En las 8 combinaciones: 0 errores de JS, 0 respuestas 4xx y sin scroll horizontal. Los 5 videos de cada página siguen en play, mudos y sin controles.
+
+### Nota: **20 / 20** (antes 18)
+
+| Criterio | Antes | Ahora | Por qué |
+|---|---|---|---|
+| A. Se siente Almud | 4 | **4** | Igual que antes: es mi bar. |
+| B. Fotos y videos | 3 | **4** | Tragos abre con mis tres fotos de bandera: el bartender frente al muro rosa (P362), la copa salpicando (P297) y los sours con gypsophila (P086). Debajo, separados por un filo, vienen los 4 destacados con nombre y precio. La portada del celular parte en un cuadro nítido: se leen las etiquetas y el muro rosa se ve limpio (`r2/m_es_home_00`). |
+| C. Voz | 4 | **4** | Sin cambios. Todo es literal y no hay nada prohibido. |
+| D. Claridad turista | 4 | **4** | Ahora firme: la carta en EN lleva una glosa corta bajo cada descripción (“[Mezcal, tequila, toasted peanut horchata… smoky, a little spicy]”). Mis textos y mis nombres no se tocan. |
+| E. Premium y técnica | 3 | **4** | Ya no está el bloque rojo vacío en Tragos: la fila de 4 destacados cierra pareja. El lugar es un mosaico 3×2 y se acabó el recorrido largo. En Eventos, el «10» de flores va a lo ancho con las 3 fichas debajo, sin media pantalla vacía. |
+
+**Lectura:** 20 = la publico con orgullo y la pongo en mi bio.
+
+**Nota menor (no resta):** en escritorio el mosaico de El lugar termina en ~1.210 px y deja una franja oscura a la derecha, de unos 170 px antes del margen. Si hay tiempo, que ocupe todo el ancho del contenedor (hasta 1.382 px), igual que Tragos y Eventos.
+
+— Carmen Paz
