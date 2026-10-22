@@ -464,3 +464,15 @@ html:not(.js) .m picture{display:none}
   .quien__g .col>.m{flex:1 1 0;aspect-ratio:auto;min-height:240px}
   .quien__g .col--3{display:flex;margin-top:4vh}
 }
+/* v4 fase 2 · ronda 3 · Eventos: video de la fiesta de los 12 años (vertical 4:5) a la izquierda y el calendario en filas a la derecha (sin huecos) */
+.ev__banner--v{aspect-ratio:4/5}
+@media (min-width:1024px){
+  .eventos .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+  .eventos .ttl,.eventos .ttl-gloss{grid-column:1/7}
+  .ev__banner.ev__banner--v{grid-column:1/7;aspect-ratio:4/5;margin-top:40px}
+  .cal{grid-column:7/13;grid-row:1/4;grid-template-columns:1fr;gap:28px;margin-top:0;align-self:end}
+  .cal .ev{display:grid;grid-template-columns:44% minmax(0,1fr);gap:0 24px;align-items:end}
+  .cal .ev .ev__m{grid-row:1/4}
+  .cal .ev:nth-child(2){margin-top:0}
+  .cal .ev__n{font-size:44px}
+}
