@@ -1,0 +1,1131 @@
+{
+ "init": {
+  "v0": [
+   {
+    "cls": "v",
+    "src": "",
+    "poster": "portada-celular-poster.webp",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 0,
+    "w": 0,
+    "h": 0,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "portada-escritorio-1278.webm",
+    "poster": "portada-escritorio-poster.webp",
+    "paused": false,
+    "t": 1,
+    "dur": 5.5,
+    "rs": 2,
+    "vw": 1278,
+    "vh": 720,
+    "top": 0,
+    "w": 768,
+    "h": 1024,
+    "vis": true,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "lugar-cintas-600.webm",
+    "poster": "lugar-cintas-poster.webp",
+    "paused": false,
+    "t": 1.99,
+    "dur": 5.93,
+    "rs": 4,
+    "vw": 600,
+    "vh": 750,
+    "top": 1318,
+    "w": 834,
+    "h": 1042,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 1.68,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 3179,
+    "w": 331,
+    "h": 414,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "comida-cazuela-720.webm",
+    "poster": "comida-cazuela-poster.webp",
+    "paused": false,
+    "t": 1.56,
+    "dur": 7.8,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 4741,
+    "w": 410,
+    "h": 512,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "donde-letrero-958.webm",
+    "poster": "donde-letrero-poster.webp",
+    "paused": false,
+    "t": 1.54,
+    "dur": 3.13,
+    "rs": 4,
+    "vw": 958,
+    "vh": 540,
+    "top": 9350,
+    "w": 463,
+    "h": 261,
+    "vis": false,
+    "fit": "cover"
+   }
+  ],
+  "v1": [
+   {
+    "cls": "v",
+    "src": "",
+    "poster": "portada-celular-poster.webp",
+    "paused": true,
+    "t": 0,
+    "dur": 0,
+    "rs": 0,
+    "vw": 0,
+    "vh": 0,
+    "top": 0,
+    "w": 0,
+    "h": 0,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "portada-escritorio-1278.webm",
+    "poster": "portada-escritorio-poster.webp",
+    "paused": false,
+    "t": 1.88,
+    "dur": 5.5,
+    "rs": 4,
+    "vw": 1278,
+    "vh": 720,
+    "top": 0,
+    "w": 768,
+    "h": 1024,
+    "vis": true,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "lugar-cintas-600.webm",
+    "poster": "lugar-cintas-poster.webp",
+    "paused": false,
+    "t": 3.37,
+    "dur": 5.93,
+    "rs": 4,
+    "vw": 600,
+    "vh": 750,
+    "top": 1318,
+    "w": 834,
+    "h": 1042,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 3.06,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 3179,
+    "w": 331,
+    "h": 414,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "comida-cazuela-720.webm",
+    "poster": "comida-cazuela-poster.webp",
+    "paused": false,
+    "t": 2.94,
+    "dur": 7.8,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 4741,
+    "w": 410,
+    "h": 512,
+    "vis": false,
+    "fit": "cover"
+   },
+   {
+    "cls": "v",
+    "src": "donde-letrero-958.webm",
+    "poster": "donde-letrero-poster.webp",
+    "paused": false,
+    "t": 2.92,
+    "dur": 3.13,
+    "rs": 4,
+    "vw": 958,
+    "vh": 540,
+    "top": 9350,
+    "w": 463,
+    "h": 261,
+    "vis": false,
+    "fit": "cover"
+   }
+  ],
+  "rt1500": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 73
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 75
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 75
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 76
+   },
+   {
+    "n": "site.css?v=f27e6ddc",
+    "t": "link",
+    "s": 18308,
+    "st": 76
+   },
+   {
+    "n": "portada-celular-poster.webp",
+    "t": "video",
+    "s": 53112,
+    "st": 76
+   },
+   {
+    "n": "portada-escritorio-poster.webp",
+    "t": "video",
+    "s": 52672,
+    "st": 76
+   },
+   {
+    "n": "lugar-cintas-poster.webp",
+    "t": "video",
+    "s": 42758,
+    "st": 76
+   },
+   {
+    "n": "comida-cazuela-poster.webp",
+    "t": "video",
+    "s": 34172,
+    "st": 76
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 76
+   },
+   {
+    "n": "donde-letrero-poster.webp",
+    "t": "video",
+    "s": 15522,
+    "st": 76
+   },
+   {
+    "n": "gsap.min.js",
+    "t": "script",
+    "s": 72514,
+    "st": 76
+   },
+   {
+    "n": "ScrollTrigger.min.js",
+    "t": "script",
+    "s": 43680,
+    "st": 76
+   },
+   {
+    "n": "lenis.min.js",
+    "t": "script",
+    "s": 13785,
+    "st": 76
+   },
+   {
+    "n": "site.js?v=411d9df4",
+    "t": "script",
+    "s": 8543,
+    "st": 76
+   },
+   {
+    "n": "lugar-barra-a-1280.avif",
+    "t": "img",
+    "s": 117459,
+    "st": 140
+   },
+   {
+    "n": "lugar-terraza-techada-a-1280.avif",
+    "t": "img",
+    "s": 176522,
+    "st": 140
+   },
+   {
+    "n": "lugar-salon-m-712.avif",
+    "t": "img",
+    "s": 32311,
+    "st": 140
+   },
+   {
+    "n": "lugar-sillones-a-1280.avif",
+    "t": "img",
+    "s": 50339,
+    "st": 140
+   },
+   {
+    "n": "portada-escritorio-1278.webm",
+    "t": "video",
+    "s": 2431405,
+    "st": 376
+   },
+   {
+    "n": "lugar-cintas-600.webm",
+    "t": "video",
+    "s": 1180688,
+    "st": 512
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 514
+   },
+   {
+    "n": "comida-cazuela-720.webm",
+    "t": "video",
+    "s": 1196622,
+    "st": 514
+   },
+   {
+    "n": "donde-letrero-958.webm",
+    "t": "video",
+    "s": 150215,
+    "st": 516
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 517
+   }
+  ],
+  "rt4000": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 73,
+    "d": 31
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 75,
+    "d": 35
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 75,
+    "d": 31
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 76,
+    "d": 13
+   },
+   {
+    "n": "site.css?v=f27e6ddc",
+    "t": "link",
+    "s": 18308,
+    "st": 76,
+    "d": 18
+   },
+   {
+    "n": "portada-celular-poster.webp",
+    "t": "video",
+    "s": 53112,
+    "st": 76,
+    "d": 32
+   },
+   {
+    "n": "portada-escritorio-poster.webp",
+    "t": "video",
+    "s": 52672,
+    "st": 76,
+    "d": 103
+   },
+   {
+    "n": "lugar-cintas-poster.webp",
+    "t": "video",
+    "s": 42758,
+    "st": 76,
+    "d": 124
+   },
+   {
+    "n": "comida-cazuela-poster.webp",
+    "t": "video",
+    "s": 34172,
+    "st": 76,
+    "d": 112
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 76,
+    "d": 125
+   },
+   {
+    "n": "donde-letrero-poster.webp",
+    "t": "video",
+    "s": 15522,
+    "st": 76,
+    "d": 205
+   },
+   {
+    "n": "gsap.min.js",
+    "t": "script",
+    "s": 72514,
+    "st": 76,
+    "d": 218
+   },
+   {
+    "n": "ScrollTrigger.min.js",
+    "t": "script",
+    "s": 43680,
+    "st": 76,
+    "d": 215
+   },
+   {
+    "n": "lenis.min.js",
+    "t": "script",
+    "s": 13785,
+    "st": 76,
+    "d": 218
+   },
+   {
+    "n": "site.js?v=411d9df4",
+    "t": "script",
+    "s": 8543,
+    "st": 76,
+    "d": 233
+   },
+   {
+    "n": "lugar-barra-a-1280.avif",
+    "t": "img",
+    "s": 117459,
+    "st": 140,
+    "d": 186
+   },
+   {
+    "n": "lugar-terraza-techada-a-1280.avif",
+    "t": "img",
+    "s": 176522,
+    "st": 140,
+    "d": 196
+   },
+   {
+    "n": "lugar-salon-m-712.avif",
+    "t": "img",
+    "s": 32311,
+    "st": 140,
+    "d": 195
+   },
+   {
+    "n": "lugar-sillones-a-1280.avif",
+    "t": "img",
+    "s": 50339,
+    "st": 140,
+    "d": 199
+   },
+   {
+    "n": "portada-escritorio-1278.webm",
+    "t": "video",
+    "s": 2431405,
+    "st": 376,
+    "d": 66
+   },
+   {
+    "n": "lugar-cintas-600.webm",
+    "t": "video",
+    "s": 1180688,
+    "st": 512,
+    "d": 265
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 514,
+    "d": 264
+   },
+   {
+    "n": "comida-cazuela-720.webm",
+    "t": "video",
+    "s": 1196622,
+    "st": 514,
+    "d": 272
+   },
+   {
+    "n": "donde-letrero-958.webm",
+    "t": "video",
+    "s": 150215,
+    "st": 516,
+    "d": 215
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 517,
+    "d": 35
+   }
+  ],
+  "nav": {
+   "load": 501,
+   "dcl": 369,
+   "html": 77559
+  }
+ },
+ "steps": [
+  {
+   "y": 1024,
+   "videos": [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t0": 1.6,
+     "t1": 2.62,
+     "rs": 4,
+     "top": 328,
+     "w": 707,
+     "h": 883,
+     "vw": 600,
+     "vh": 750
+    }
+   ]
+  },
+  {
+   "y": 2048,
+   "videos": [
+    {
+     "src": "lugar-cintas-600.webm",
+     "paused": false,
+     "t0": 4.57,
+     "t1": 5.08,
+     "rs": 4,
+     "top": -762,
+     "w": 707,
+     "h": 883,
+     "vw": 600,
+     "vh": 750
+    }
+   ]
+  },
+  {
+   "y": 3072,
+   "videos": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t0": 2.78,
+     "t1": 3.2,
+     "rs": 4,
+     "top": 139,
+     "w": 280,
+     "h": 350,
+     "vw": 720,
+     "vh": 900
+    }
+   ]
+  },
+  {
+   "y": 4096,
+   "videos": [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t0": 5.45,
+     "t1": 5.72,
+     "rs": 4,
+     "top": 701,
+     "w": 347,
+     "h": 434,
+     "vw": 720,
+     "vh": 900
+    }
+   ]
+  },
+  {
+   "y": 5120,
+   "videos": [
+    {
+     "src": "comida-cazuela-720.webm",
+     "paused": false,
+     "t0": 1.75,
+     "t1": 2.29,
+     "rs": 4,
+     "top": -265,
+     "w": 347,
+     "h": 434,
+     "vw": 720,
+     "vh": 900
+    }
+   ]
+  },
+  {
+   "y": 6144,
+   "videos": []
+  },
+  {
+   "y": 7168,
+   "videos": []
+  },
+  {
+   "y": 8192,
+   "videos": []
+  },
+  {
+   "y": 9216,
+   "videos": [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t0": 1.54,
+     "t1": 2.29,
+     "rs": 4,
+     "top": 154,
+     "w": 393,
+     "h": 221,
+     "vw": 958,
+     "vh": 540
+    }
+   ]
+  },
+  {
+   "y": 9408,
+   "videos": [
+    {
+     "src": "donde-letrero-958.webm",
+     "paused": false,
+     "t0": 0.34,
+     "t1": 0.69,
+     "rs": 2,
+     "top": -38,
+     "w": 393,
+     "h": 221,
+     "vw": 958,
+     "vh": 540
+    }
+   ]
+  }
+ ],
+ "imgs": [
+  {
+   "src": "lugar-cuadros-a-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 9408,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "Gente conversando en la barra con el muro de marco"
+  },
+  {
+   "src": "lugar-barra-a-1280.avif",
+   "nw": 599,
+   "nh": 748,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "La barra curva de madera con frente de baldosa, el"
+  },
+  {
+   "src": "lugar-terraza-techada-a-1280.avif",
+   "nw": 599,
+   "nh": 748,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "La terraza techada llena de gente bajo el techo de"
+  },
+  {
+   "src": "lugar-salon-m-712.avif",
+   "nw": 599,
+   "nh": 748,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "El salón interior de noche: mesas de madera, luz c"
+  },
+  {
+   "src": "lugar-sillones-a-1280.avif",
+   "nw": 599,
+   "nh": 748,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "Una mujer ríe y aplaude en el rincón de sillones, "
+  },
+  {
+   "src": "lugar-terraza-abierta-a-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "La terraza abierta de noche: ripio, árboles, guirn"
+  },
+  {
+   "src": "lugar-lampara-pinzas-a-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "Lámparas hechas con pinzas de ropa de madera, ence"
+  },
+  {
+   "src": "lugar-ojo-piojo-m-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 338,
+   "h": 422,
+   "top": 2264,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "lugar",
+   "alt": "Mural de cientos de ojos fotografiados, con una pl"
+  },
+  {
+   "src": "carta-saguer-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 159,
+   "h": 198,
+   "top": 2941,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "tragos",
+   "alt": "Un soplete ahúma un trago ámbar sobre un posavasos"
+  },
+  {
+   "src": "carta-sangria-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 159,
+   "h": 198,
+   "top": 3197,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "tragos",
+   "alt": "Copa tallada con sangría roja, hielo y flores seca"
+  },
+  {
+   "src": "carta-moto-a-720.avif",
+   "nw": 291,
+   "nh": 364,
+   "w": 115,
+   "h": 144,
+   "top": 3539,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "tragos",
+   "alt": "Mocktail naranja de mango y maracuyá con borde de "
+  },
+  {
+   "src": "comida-pizza-a-720.avif",
+   "nw": 276,
+   "nh": 345,
+   "w": 495,
+   "h": 618,
+   "top": 4151,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comida",
+   "alt": "Una garzona sonríe a la cámara mientras sostiene u"
+  },
+  {
+   "src": "carta-tukulito-a-720.avif",
+   "nw": 345,
+   "nh": 345,
+   "w": 347,
+   "h": 347,
+   "top": 4730,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comida",
+   "alt": "Tataki de atún sellado en láminas con pan tostado "
+  },
+  {
+   "src": "con-quien-amigas-a-960.avif",
+   "nw": 360,
+   "nh": 451,
+   "w": 222,
+   "h": 222,
+   "top": 5869,
+   "fit": "cover",
+   "pos": "50% 85%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Dos amigas brindan con sus tragos frente al muro r"
+  },
+  {
+   "src": "con-quien-solo-a-960.avif",
+   "nw": 360,
+   "nh": 451,
+   "w": 222,
+   "h": 278,
+   "top": 6111,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Gente acodada en la barra bajo una lámpara de flec"
+  },
+  {
+   "src": "con-quien-brindis-a-960.avif",
+   "nw": 360,
+   "nh": 451,
+   "w": 222,
+   "h": 278,
+   "top": 5869,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Una mesa brinda bajo el techo de cintas de colores"
+  },
+  {
+   "src": "con-quien-risa-a-960.avif",
+   "nw": 360,
+   "nh": 451,
+   "w": 222,
+   "h": 278,
+   "top": 6167,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Una mujer ríe a carcajadas en la mesa, frente a un"
+  },
+  {
+   "src": "con-quien-barra-a-960.avif",
+   "nw": 360,
+   "nh": 451,
+   "w": 222,
+   "h": 278,
+   "top": 5922,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Un grupo de amigas ríe y brinda en la barra con tr"
+  },
+  {
+   "src": "con-quien-amigos-a-960.avif",
+   "nw": 360,
+   "nh": 288,
+   "w": 222,
+   "h": 178,
+   "top": 6219,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "quien",
+   "alt": "Tres amigos abrazados sonríen a la cámara; una de "
+  },
+  {
+   "src": "eventos-14f-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 152,
+   "h": 190,
+   "top": 6872,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "eventos",
+   "alt": "14 de febrero en Almud: una clienta ríe y levanta "
+  },
+  {
+   "src": "eventos-12-anos-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 178,
+   "h": 223,
+   "top": 6964,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "eventos",
+   "alt": "La celebración de los 12 años de Almud: la terraza"
+  },
+  {
+   "src": "eventos-fondita-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 152,
+   "h": 190,
+   "top": 6872,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "eventos",
+   "alt": "La fondita de Almud: faroles de papel azul y naran"
+  },
+  {
+   "src": "eventos-jaloguin-a-720.avif",
+   "nw": 345,
+   "nh": 432,
+   "w": 152,
+   "h": 190,
+   "top": 6964,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "eventos",
+   "alt": "Jalogüín en Almud: una catrina con corona de flore"
+  },
+  {
+   "src": "equipo-milagros-a-854.avif",
+   "nw": 476,
+   "nh": 594,
+   "w": 476,
+   "h": 595,
+   "top": 7617,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "equipo",
+   "alt": "Una garzona del equipo sonríe mientras atiende una"
+  },
+  {
+   "src": "equipo-javier-a-960.avif",
+   "nw": 476,
+   "nh": 595,
+   "w": 476,
+   "h": 595,
+   "top": 7617,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "equipo",
+   "alt": "Un bartender del equipo sirve concentrado frente a"
+  },
+  {
+   "src": "equipo-eduardo-a-960.avif",
+   "nw": 476,
+   "nh": 595,
+   "w": 476,
+   "h": 595,
+   "top": 7617,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "equipo",
+   "alt": "Un garzón del equipo, tatuado, con camisa estampad"
+  },
+  {
+   "src": "equipo-liz-a-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 476,
+   "h": 595,
+   "top": 7617,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "equipo",
+   "alt": "Una garzona del equipo, rubia, sonríe mientras dej"
+  },
+  {
+   "src": "equipo-pablete-a-720.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 476,
+   "h": 595,
+   "top": 7617,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "equipo",
+   "alt": "Un bartender del equipo, con barba, ríe mientras b"
+  }
+ ],
+ "videos_end": [
+  {
+   "cls": "v",
+   "src": "",
+   "poster": "portada-celular-poster.webp",
+   "paused": true,
+   "t": 0,
+   "dur": 0,
+   "rs": 0,
+   "vw": 0,
+   "vh": 0,
+   "top": 0,
+   "w": 0,
+   "h": 0,
+   "vis": false,
+   "fit": "cover"
+  },
+  {
+   "cls": "v",
+   "src": "portada-escritorio-1278.webm",
+   "poster": "portada-escritorio-poster.webp",
+   "paused": false,
+   "t": 5.5,
+   "dur": 5.5,
+   "rs": 4,
+   "vw": 1278,
+   "vh": 720,
+   "top": -9408,
+   "w": 768,
+   "h": 1024,
+   "vis": false,
+   "fit": "cover"
+  },
+  {
+   "cls": "v",
+   "src": "lugar-cintas-600.webm",
+   "poster": "lugar-cintas-poster.webp",
+   "paused": false,
+   "t": 2.33,
+   "dur": 5.93,
+   "rs": 4,
+   "vw": 600,
+   "vh": 750,
+   "top": -8133,
+   "w": 707,
+   "h": 883,
+   "vis": false,
+   "fit": "cover"
+  },
+  {
+   "cls": "v",
+   "src": "tragos-humo-720.webm",
+   "poster": "tragos-humo-poster.webp",
+   "paused": false,
+   "t": 6.92,
+   "dur": 7.4,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -6197,
+   "w": 280,
+   "h": 350,
+   "vis": false,
+   "fit": "cover"
+  },
+  {
+   "cls": "v",
+   "src": "comida-cazuela-720.webm",
+   "poster": "comida-cazuela-poster.webp",
+   "paused": false,
+   "t": 7.8,
+   "dur": 7.8,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -4546,
+   "w": 347,
+   "h": 434,
+   "vis": false,
+   "fit": "cover"
+  },
+  {
+   "cls": "v",
+   "src": "donde-letrero-958.webm",
+   "poster": "donde-letrero-poster.webp",
+   "paused": false,
+   "t": 1.03,
+   "dur": 3.13,
+   "rs": 4,
+   "vw": 958,
+   "vh": 540,
+   "top": -38,
+   "w": 393,
+   "h": 221,
+   "vis": true,
+   "fit": "cover"
+  }
+ ]
+}
