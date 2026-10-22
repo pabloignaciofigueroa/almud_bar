@@ -17,7 +17,7 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html', 'css/main.css', 'js/main.js', 'assets/og.jpg', 'v3/avance/index.html', 'v3/index.html',  # v1b: la v1 vuelve como portada
+INCLUDE_FILES = ['index.html', 'carta/index.html', 'css/main.css', 'js/main.js', 'assets/og.jpg', 'v3/avance/index.html', 'v3/index.html', 'v3/carta/index.html',  # v1b: la v1 vuelve como portada
                   # fase 15: la carta en su propia página
                  '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.

@@ -3,7 +3,7 @@
 Texto: solo content/copy-v3.md. Rutas relativas desde /v3/.
 Uso: python3 tools/boceto_v3.py
 """
-import json, html, pathlib, re
+import json, html, pathlib, re, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 M = json.loads((ROOT / 'assets/v3/media.json').read_text())
@@ -46,6 +46,29 @@ def vid(id_, cls='', hero=False, extra=''):
             f' aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video></figure>')
 
 
+def ver(*paths):
+    h = hashlib.md5()
+    for q in paths:
+        h.update((ROOT / q).read_bytes())
+    return h.hexdigest()[:8]
+
+
+SITE = 'https://almudbar.pages.dev'
+OG = f'''<meta property="og:type" content="website">
+<meta property="og:site_name" content="Almud Bar">
+<meta property="og:title" content="Almud Bar · Castro, Chiloé">
+<meta property="og:description" content="Coctelería de autor, comida &amp; música bonita desde 2014. Serrano 325, Castro.">
+<meta property="og:url" content="{SITE}/v3/">
+<meta property="og:image" content="{SITE}/assets/v3/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Almud Bar, Castro">
+<meta property="og:locale" content="es_CL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}/assets/v3/og.jpg">'''
+
+
 def t(es, en, tag='span', cls='', attrs=''):
     """Etiqueta [UI]: se reemplaza por EN."""
     c = f' class="{cls}"' if cls else ''
@@ -78,7 +101,7 @@ def svg_inline(name, cls, label=None):
 IG = 'https://www.instagram.com/'
 MAPS = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro+Chile'
 DM = 'https://ig.me/m/almud_bar'
-CARTA = '../carta/'
+CARTA = 'carta/'
 
 # ───────────────────────── secciones ─────────────────────────
 rincones = [
@@ -302,8 +325,10 @@ page = f'''<!doctype html>
 <link rel="preload" href="../assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../css/v3/tokens.css">
-<link rel="stylesheet" href="../css/v3/site.css">
+<link rel="stylesheet" href="../css/v3/tokens.css?v={ver('css/v3/tokens.css')}">
+<link rel="stylesheet" href="../css/v3/site.css?v={ver('css/v3/site.css')}">
+<link rel="canonical" href="{SITE}/v3/">
+{OG}
 <script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else r.classList.add('intro')}})(document)</script>
 </head>
 <body>
@@ -311,7 +336,7 @@ page = f'''<!doctype html>
 <script src="../vendor/gsap.min.js" defer></script>
 <script src="../vendor/ScrollTrigger.min.js" defer></script>
 <script src="../vendor/lenis.min.js" defer></script>
-<script src="../js/v3/site.js" defer></script>
+<script src="../js/v3/site.js?v={ver('js/v3/site.js')}" defer></script>
 </body>
 </html>
 '''

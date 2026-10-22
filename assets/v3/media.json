@@ -4977,7 +4977,7 @@
     "photo": "@estudiouno.prod",
     "text": "Video: @estudiouno.prod para @almud_bar"
    },
-   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4).",
+   "note": "Un plano continuo 0,7–4,15 s (letrero → fachada → puerta), antes del corte de 4,23 s. Boomerang. Es la única vista de fachada propia. No se repite con la portada de escritorio (tramo 4,3–10,4). Fase 9: solo el letrero encendido (0–1,6 s, boomerang), sin la bajada a la puerta (juicio Carmen r2).",
    "source_size": [
     1278,
     720
@@ -4987,52 +4987,52 @@
    "ratio": "1278:720",
    "segments": [
     [
-     0.7,
-     4.15
+     0.0,
+     1.6
     ]
    ],
    "loop": "boomerang",
-   "frames": 206,
+   "frames": 94,
    "fps": 30.0,
-   "duration": 6.87,
+   "duration": 3.13,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
    "budget_kb": 1200,
    "within_budget": true,
    "seam": {
-    "last_vs_first": 1.54,
-    "typical_step": 15.8
+    "last_vs_first": 0.0,
+    "typical_step": 1.58
    },
    "files": {
     "webm": {
      "path": "assets/v3/video/donde-letrero-1278.webm",
-     "bytes": 1170984,
+     "bytes": 235634,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 37
+     "crf": 30
     },
     "mp4": {
      "path": "assets/v3/video/donde-letrero-1278.mp4",
-     "bytes": 1201703,
+     "bytes": 273836,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 26
+     "crf": 21
     }
    },
    "poster": {
     "avif": {
      "path": "assets/v3/video/donde-letrero-poster.avif",
-     "bytes": 9441
+     "bytes": 405
     },
     "webp": {
      "path": "assets/v3/video/donde-letrero-poster.webp",
-     "bytes": 16914
+     "bytes": 1706
     },
     "jpg": {
      "path": "assets/v3/video/donde-letrero-poster.jpg",
-     "bytes": 39875
+     "bytes": 5926
     }
    },
-   "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAgCdASoYAA4AA8BgJYwC7AEPhrCW0OxXcArcAAD++E6O3e5O7hb6/7oRQxSyLSS0Ko7fHvHXAB9gPNcvavSAAAA=",
-   "color": "#060207"
+   "lqip": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAgCdASoYAA4APwFqrE6rJiQiMAgBYCAJaQAAeyAA/vDCf2goAAAA",
+   "color": "#010002"
   }
  },
  "team_ig001": {

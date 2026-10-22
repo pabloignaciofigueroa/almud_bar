@@ -178,3 +178,21 @@ Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 
 - Mapa embebido: no va en el boceto; ‹Cómo llegar› abre Google Maps. Si se quiere el mapa al tocar, se agrega en fase 14.
 - El `<video>` de portada oculto (la otra variante) queda sin fuente y en pausa a propósito: no se descarga.
 - EN: etiquetas [UI] cambian; los literales quedan en español con glosa debajo; clave `almud-idioma`.
+
+## Construcción (fases 9–14)
+- Detalles de Carmen r2 (escritorio):
+  - Comida: la pizza se estira a todo el alto de la columna izquierda, así que las dos columnas terminan parejas.
+  - Cuándo y dónde: el loop del letrero se recortó a 0–1,6 s (boomerang, solo el letrero encendido) y va anclado arriba (`object-position 50% 30%`).
+  - Equipo: «Los dueños» va a 16 px (los @ a 18 px), alineado con el carrusel.
+- Técnica:
+  - El CSS y el JS se cargan con `?v=<md5>`, que calculan los generadores, así el celular nunca usa una versión vieja en caché.
+  - `<html lang="es">`, favicon `brand/v3/favicon.svg`, OG/Twitter con la imagen absoluta `https://almudbar.pages.dev/assets/v3/og.jpg` y canonical.
+  - Todas las imágenes llevan `data-alt-en` y todos los videos `data-aria-en`.
+- Carta: `v3/carta/index.html`, generada por `tools/carta_v3.py` desde `content/carta-v2.json`, con `css/v3/carta.css` y `js/v3/carta.js`.
+  - Header con logo → `/v3/`, ‹Escríbenos por DM› y EN.
+  - 7 pestañas fijas (sticky) bajo el header; cada una muestra solo su sección. Sin alcohol reúne Mocktails, Jugos, Cervezas sin alcohol y Bebidas calientes.
+  - Las secciones largas tienen subgrupos filtrables (chips); los subgrupos de Whiscachos van dentro de su chip.
+  - Cada pestaña tiñe el fondo con `color-mix` de la paleta: muro, rosa, ámbar, vino, tinta, ámbar 2 y dorado.
+  - Fotos propias `carta-*` y el loop de Peter. Nombres, descripciones y precios literales; las etiquetas son Nuevo, Veggie, Vegan y Picante.
+  - Abajo: «* Siempre sujeto a stock! *» (en Promos), ‹Carta oficial (PDF)› → uqr.to/ppvi e ‹Inicio›.
+  - Sin JS, todo se ve apilado. Todos los «Ver la carta» y «Carta» de `/v3/` llevan a `carta/`.

@@ -288,3 +288,14 @@ html[lang="en"] .gloss--i{display:inline}
 .own a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--papel)}
 .own a:hover{color:var(--muro-rosa)}
 @media (max-width:767px){.pie{padding-top:56px}.quien{padding-bottom:var(--sec)}.rin{flex-basis:76vw}}
+
+/* fase 9 · detalles de Carmen r2 */
+.own{margin-top:24px;font-size:16px}
+.own__k{font-size:16px}
+.own a{font-size:18px;font-weight:600}
+@media (min-width:1024px){.own{max-width:1600px;margin-inline:auto;margin-top:5vh}}
+.donde__v video{object-position:50% 30%}
+@media (min-width:1024px){
+  .comida__v{grid-row:1/4;align-self:stretch;height:auto;aspect-ratio:auto;width:100%;min-height:72vh}
+  .comida__g{grid-template-rows:auto auto auto}
+}
