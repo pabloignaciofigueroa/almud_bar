@@ -18,3 +18,5 @@ _plan/v1b/shots/
 assets/v3/**/*.master.*
 _plan/v3/juicio-boceto*/
 _plan/v3/boceto/
+_plan/v3/ronda*/**/*.png
+_plan/v3/ronda*/**/*.jpg

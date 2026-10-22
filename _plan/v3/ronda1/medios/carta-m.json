@@ -1,0 +1,347 @@
+{
+ "init": {
+  "v0": [
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 1.54,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 636,
+    "w": 104,
+    "h": 130,
+    "vis": true,
+    "fit": "cover"
+   }
+  ],
+  "v1": [
+   {
+    "cls": "v",
+    "src": "tragos-humo-720.webm",
+    "poster": "tragos-humo-poster.webp",
+    "paused": false,
+    "t": 2.75,
+    "dur": 7.4,
+    "rs": 4,
+    "vw": 720,
+    "vh": 900,
+    "top": 636,
+    "w": 104,
+    "h": 130,
+    "vis": true,
+    "fit": "cover"
+   }
+  ],
+  "rt1500": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 103
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 103
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 103
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 103
+   },
+   {
+    "n": "carta.css?v=e57235a9",
+    "t": "link",
+    "s": 5386,
+    "st": 103
+   },
+   {
+    "n": "site.css?v=d0709496",
+    "t": "link",
+    "s": 18308,
+    "st": 103
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 103
+   },
+   {
+    "n": "carta.js?v=34fa90ef",
+    "t": "script",
+    "s": 4906,
+    "st": 103
+   },
+   {
+    "n": "carta-olvidar-a-360.avif",
+    "t": "img",
+    "s": 9706,
+    "st": 536
+   },
+   {
+    "n": "carta-saguer-a-360.avif",
+    "t": "img",
+    "s": 11495,
+    "st": 536
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 553
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 664
+   }
+  ],
+  "rt4000": [
+   {
+    "n": "big-shoulders-display-latin-wght-normal.woff2",
+    "t": "link",
+    "s": 35804,
+    "st": 103,
+    "d": 361
+   },
+   {
+    "n": "barlow-condensed-latin-500-normal.woff2",
+    "t": "link",
+    "s": 21724,
+    "st": 103,
+    "d": 354
+   },
+   {
+    "n": "barlow-condensed-latin-600-normal.woff2",
+    "t": "link",
+    "s": 22608,
+    "st": 103,
+    "d": 361
+   },
+   {
+    "n": "tokens.css?v=b59f1ef1",
+    "t": "link",
+    "s": 2278,
+    "st": 103,
+    "d": 183
+   },
+   {
+    "n": "carta.css?v=e57235a9",
+    "t": "link",
+    "s": 5386,
+    "st": 103,
+    "d": 242
+   },
+   {
+    "n": "site.css?v=d0709496",
+    "t": "link",
+    "s": 18308,
+    "st": 103,
+    "d": 243
+   },
+   {
+    "n": "tragos-humo-poster.webp",
+    "t": "video",
+    "s": 18730,
+    "st": 103,
+    "d": 362
+   },
+   {
+    "n": "carta.js?v=34fa90ef",
+    "t": "script",
+    "s": 4906,
+    "st": 103,
+    "d": 382
+   },
+   {
+    "n": "carta-olvidar-a-360.avif",
+    "t": "img",
+    "s": 9706,
+    "st": 536,
+    "d": 64
+   },
+   {
+    "n": "carta-saguer-a-360.avif",
+    "t": "img",
+    "s": 11495,
+    "st": 536,
+    "d": 66
+   },
+   {
+    "n": "tragos-humo-720.webm",
+    "t": "video",
+    "s": 564403,
+    "st": 553,
+    "d": 74
+   },
+   {
+    "n": "favicon.svg",
+    "t": "other",
+    "s": 725,
+    "st": 664,
+    "d": 6
+   }
+  ],
+  "nav": {
+   "load": 660,
+   "dcl": 545,
+   "html": 106344
+  }
+ },
+ "steps": [
+  {
+   "y": 844,
+   "videos": []
+  },
+  {
+   "y": 1688,
+   "videos": []
+  },
+  {
+   "y": 2532,
+   "videos": []
+  },
+  {
+   "y": 2634,
+   "videos": []
+  }
+ ],
+ "imgs": [
+  {
+   "src": "carta-olvidar-a-360.avif",
+   "nw": 103,
+   "nh": 103,
+   "w": 104,
+   "h": 104,
+   "top": 902,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Vino tinto tiñe un vaso con una gran esfera de hie"
+  },
+  {
+   "src": "carta-saguer-a-360.avif",
+   "nw": 103,
+   "nh": 129,
+   "w": 104,
+   "h": 130,
+   "top": 1886,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Un soplete ahúma un trago ámbar sobre un posavasos"
+  },
+  {
+   "src": "carta-sangria-a-360.avif",
+   "nw": 103,
+   "nh": 129,
+   "w": 104,
+   "h": 130,
+   "top": 2102,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Copa tallada con sangría roja, hielo y flores seca"
+  },
+  {
+   "src": "carta-coquette-a-360.avif",
+   "nw": 103,
+   "nh": 129,
+   "w": 104,
+   "h": 130,
+   "top": 2868,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "casa",
+   "alt": "Una clienta sonriente recibe un trago rosado y cre"
+  },
+  {
+   "src": "carta-moto-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 2634,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "sin",
+   "alt": "Mocktail naranja de mango y maracuyá con borde de "
+  },
+  {
+   "src": "carta-tukulito-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 2634,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Tataki de atún sellado en láminas con pan tostado "
+  },
+  {
+   "src": "carta-contuti-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 2634,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Tabla para compartir vista desde arriba: quesos, j"
+  },
+  {
+   "src": "carta-camaron-a-360.webp",
+   "nw": 0,
+   "nh": 0,
+   "w": 0,
+   "h": 0,
+   "top": 2634,
+   "fit": "cover",
+   "pos": "50% 50%",
+   "loading": "lazy",
+   "sec": "comilona",
+   "alt": "Cazuela negra con camarones y champiñones en salsa"
+  }
+ ],
+ "videos_end": [
+  {
+   "cls": "v",
+   "src": "tragos-humo-720.webm",
+   "poster": "tragos-humo-poster.webp",
+   "paused": false,
+   "t": 4.03,
+   "dur": 7.4,
+   "rs": 4,
+   "vw": 720,
+   "vh": 900,
+   "top": -1998,
+   "w": 104,
+   "h": 130,
+   "vis": false,
+   "fit": "cover"
+  }
+ ]
+}
