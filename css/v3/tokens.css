@@ -1,0 +1,32 @@
+/* Almud Bar · paleta v3 · solo color. Fuente y contrastes: brand/palette-v3.md */
+:root{
+  /* base: la noche cálida del local */
+  --noche:#160d0b;          /* fondo principal */
+  --noche-2:#22140f;        /* superficies: tarjetas, carta */
+  --noche-3:#3a2219;        /* superficie elevada, bordes, separadores */
+  --papel:#f5e9db;          /* texto principal / fondo de pantalla clara */
+  --papel-2:#c8af9c;        /* texto secundario sobre noche */
+  --letrero-blanco:#f9f8f9; /* logo ALMUD */
+
+  /* acentos: máximo 1-2 por pantalla */
+  --muro-rosa:#f24350;          /* ACENTO PRINCIPAL: CTA (texto --noche encima) y enlaces sobre noche */
+  --muro-rosa-tinta:#c41e34;    /* el mismo acento sobre --papel (texto o botón con texto --papel) */
+  --letrero-azul:#2aa1f8;       /* acento secundario: enlaces, foco, "BAR". Solo sobre noche */
+  --letrero-azul-tinta:#1d5fae; /* el acento 2 sobre --papel */
+
+  /* secciones: fondos planos (3 como máximo) */
+  --muro:#a8222d;   --muro-2:#f7cfc4;   /* Tragos: texto --papel, secundario --muro-2 */
+  --ambar:#e5a05c;  --ambar-2:#4d2a1c;  /* Comida: texto --noche, secundario --ambar-2 */
+  --tinta:#142a5c;  --tinta-2:#b9c9ea;  /* Eventos: texto --papel, secundario --tinta-2 */
+
+  /* roles semánticos */
+  --bg:var(--noche);
+  --surface:var(--noche-2);
+  --surface-2:var(--noche-3);
+  --text:var(--papel);
+  --text-2:var(--papel-2);
+  --accent:var(--muro-rosa);
+  --on-accent:var(--noche);
+  --accent-2:var(--letrero-azul);
+  --focus:var(--letrero-azul);
+}
