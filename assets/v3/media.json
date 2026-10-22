@@ -965,6 +965,112 @@
     }
    }
   },
+  "tragos-bartender": {
+   "ref": "P362",
+   "src": "assets/raw/ig/Dbok2NyFNdb_05.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Un bartender concentrado prepara tragos frente al muro rosa de botellas, bajo la lámpara de pinzas y junto al cartelito ALMUD BAR.",
+    "en": "A focused bartender mixes drinks by the pink bottle wall, under the clothespin lamp and next to the little ALMUD BAR sign."
+   },
+   "credit": {
+    "post": "IG-008",
+    "date": "2026-08-04",
+    "url": "https://www.instagram.com/p/Dbok2NyFNdb/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "Ronda 2: foto bandera de Carmen (P362), en grande en Tragos.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      48
+     ],
+     "box": [
+      0,
+      46,
+      3072,
+      3886
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJaACdM2RnAA5f856KS0wp0GVzjDrANJoGuX/AAP4IdIdnkJtrSciZHyMGWqE9GNc/b59vcv/lL51vgNJDV0s5Tc5fAkJOsnxeZj+BSMQb9NTRHFNPOMxSYZEtCjGLIzQU0qM4NPxnFY5SQkLRoil1j7KTRv5wa4/+OIZNmyuToR14FYGvYWTDjIqzIKHS0D4wfQAA",
+     "color": "#8e4432",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-bartender-a-480.avif",
+        "bytes": 21572
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-bartender-a-720.avif",
+        "bytes": 35926
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-bartender-a-960.avif",
+        "bytes": 51922
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-bartender-a-1280.avif",
+        "bytes": 77192
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-bartender-a-1440.avif",
+        "bytes": 93996
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-bartender-a-1920.avif",
+        "bytes": 151628
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-bartender-a-480.webp",
+        "bytes": 34854
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-bartender-a-720.webp",
+        "bytes": 55858
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-bartender-a-960.webp",
+        "bytes": 77664
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-bartender-a-1280.webp",
+        "bytes": 115108
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-bartender-a-1440.webp",
+        "bytes": 140474
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-bartender-a-1920.webp",
+        "bytes": 252868
+       }
+      }
+     }
+    }
+   }
+  },
   "tragos-splash": {
    "ref": "P297",
    "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",

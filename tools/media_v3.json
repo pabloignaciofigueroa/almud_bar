@@ -226,6 +226,28 @@
    "note": "Única foto propia del muro de cuadros (853x568): solo mosaico ≤600 px css. Lleva algo de luz azul."
   },
   {
+   "id": "tragos-bartender",
+   "ref": "P362",
+   "src": "assets/raw/ig/Dbok2NyFNdb_05.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      48
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Un bartender concentrado prepara tragos frente al muro rosa de botellas, bajo la lámpara de pinzas y junto al cartelito ALMUD BAR.",
+    "en": "A focused bartender mixes drinks by the pink bottle wall, under the clothespin lamp and next to the little ALMUD BAR sign."
+   },
+   "note": "Ronda 2: foto bandera de Carmen (P362), en grande en Tragos."
+  },
+  {
    "id": "tragos-splash",
    "ref": "P297",
    "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
@@ -1113,14 +1135,14 @@
  "videos": [
   {
    "id": "portada-celular",
-   "ref": "V021",
-   "src": "assets/raw/ig/C-dwJHLyPpU_00.mp4",
+   "ref": "V020",
+   "src": "assets/raw/ig/C-YrpVjpCqN_00.mp4",
    "section": "portada",
    "variant": "celular",
    "segments": [
     [
-     1.5,
-     3.6
+     1.4,
+     5.3
     ]
    ],
    "loop": "boomerang",
@@ -1135,10 +1157,10 @@
    "crf_max": 30,
    "budget_kb": 1000,
    "alt": {
-    "es": "La cámara recorre el muro rosa de botellas iluminadas y el cartelito ALMUD BAR.",
-    "en": "The camera glides along the glowing pink bottle wall and the little ALMUD BAR sign."
+    "es": "La cámara entra a Almud una noche llena: mesas con gente, la barra y el muro rosa de botellas bajo las lámparas tejidas.",
+    "en": "The camera walks into Almud on a busy night: full tables, the bar and the pink bottle wall under woven lamps."
    },
-   "note": "Celular <900 px. Paneo continuo 0,6–3,3 s (antes del corte de 5,19 s; sin el guest bartender), pasa por el cartelito ALMUD BAR. Boomerang: el paneo vuelve, no salta. Fuente 1080p; a 1080 y 900 px el paneo de botellas no cabe en 1,38 MB con calidad digna (1080: 3,5 MB a CRF 28), así que sale al mayor ancho que cabe. Presupuesto 1,38 MB para que el primer pantallazo quede ≤1,5 MB con póster. Fase 8: arranca en 1,5 s con el cartelito ALMUD BAR sobre el muro rosa (primer cuadro = bar). Ronda 1: presupuesto 1.250 KB (primer pantallazo ≤1,5 MB). Ronda 1 (peso): 720 px y ≤1.000 KB para que el primer pantallazo del celular quede ≤1,5 MB."
+   "note": "Ronda 2: V020 (IG C-YrpVjpCqN), plano continuo 1,4–5,3 s antes del corte de 5,4 s: gente en las mesas, la barra y el muro rosa; sin terceros. Boomerang. 720 px, ≤1.000 KB (primer pantallazo ≤1,5 MB). Póster = primer cuadro (mesas con gente y barra)."
   },
   {
    "id": "portada-escritorio",
@@ -1153,7 +1175,7 @@
     ],
     [
      4.4,
-     8.6
+     6.0
     ]
    ],
    "loop": "crossfade",
@@ -1174,7 +1196,7 @@
     "es": "El techo de cintas de colores, el mural de ojos y las lámparas de pinzas encendidas, uno tras otro.",
     "en": "The coloured-ribbon ceiling, the eye mural and the glowing clothespin lamps, one after another."
    },
-   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado.",
+   "note": "≥900 px. Tramo 4,3–10,4 s (cintas → ojos → lámparas), corta antes del subtítulo de 10,5 s; crossfade 0,6 s lámparas→cintas. 1278x720 nativo: el CSS lo estira (≈1,1x en 1440, 1,5x en 1920). Mitigar con overlay noche; alternativa: V021 vertical a alto completo en columna. Ronda 1: arranca en las lámparas de pinzas de noche (8,65–10,2 s) y sigue con cintas y ojos (4,4–8,6 s); así el primer cuadro no se ve lavado. Ronda 2: sin el tramo del mural de ojos; solo lámparas de pinzas y cintas.",
    "crf_start": 18,
    "vp9_crf_start": 24
   },
