@@ -21,7 +21,7 @@
   --dorado:#d9a441; /* Eventos y aniversarios: marca de "próximo" (reemplaza al rosa sobre tinta) */
 
   /* v4 · colores del local (cintas, muro, letrero) */
-  --c-rosa:#f24350; --c-rojo:#d7262b; --c-naranja:#f27a12; --c-amarillo:#f5c518; --c-verde:#0f8a5f; --c-lila:#a58ac9; --c-crema:#f5e9db;
+  --c-rosa:#f24350; --c-rojo:#c2202a; --c-naranja:#f27a12; --c-amarillo:#f5c518; --c-verde:#0b6e4b; --c-lila:#a58ac9; --c-crema:#f5e9db;
   /* roles semánticos */
   --bg:var(--noche);
   --surface:var(--noche-2);

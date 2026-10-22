@@ -106,7 +106,7 @@ def svg_inline(name, cls, label=None):
 IG = 'https://www.instagram.com/'
 MAPS = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro+Chile'
 DM = 'https://ig.me/m/almud_bar'
-CARTA = '/carta/' if RAIZ else 'carta/'
+CARTA = '/nueva/carta/'
 
 # ───────────────────────── secciones ─────────────────────────
 rincones = [

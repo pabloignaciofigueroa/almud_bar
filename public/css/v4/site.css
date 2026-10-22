@@ -437,7 +437,7 @@ html:not(.js) .m video{display:none}
 
 /* ═════ v4 · un color del local por sección ═════
    Secciones claras: se invierten texto y fondo localmente (texto negro). */
-.claro{--papel:#0e0c0b;--papel-2:#2b211a;--muro-2:#2b211a;--tinta-2:#2b211a;--noche:#f5e9db;--noche-2:rgba(14,12,11,.08);--noche-3:rgba(14,12,11,.25);--letrero-azul:#0e0c0b;--muro-rosa:#0e0c0b;color:#0e0c0b}
+.claro{--papel:#0e0c0b;--papel-2:#0e0c0b;--muro-2:#0e0c0b;--tinta-2:#0e0c0b;--ambar:#0e0c0b;--price:#0e0c0b;--noche:#f5e9db;--noche-2:rgba(14,12,11,.08);--noche-3:rgba(14,12,11,.25);--letrero-azul:#0e0c0b;--muro-rosa:#0e0c0b;color:#0e0c0b}
 .claro .btn--rosa,.claro .btn--papel{background:#0e0c0b;color:#f5e9db}
 .claro .btn--rosa:hover,.claro .btn--papel:hover{background:#f5e9db;color:#0e0c0b}
 .lugar{background:var(--c-amarillo)}
@@ -448,3 +448,4 @@ html:not(.js) .m video{display:none}
 .equipo{background:var(--c-rojo)}
 .resenas{background:var(--c-crema)}
 .donde,.pie{background:#0e0c0b}
+.equipo,.quien{--papel-2:#f5e9db;--muro-2:#f5e9db}
