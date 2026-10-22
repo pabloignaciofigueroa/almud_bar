@@ -7,7 +7,8 @@ import json, html, pathlib, re, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 M = json.loads((ROOT / 'assets/v3/media.json').read_text())
-IM, VI = M['images'], M['videos']
+IM = M['images']
+VI = json.loads((ROOT / 'assets/v4/media-video.json').read_text())['videos']  # v4 fase 2: loops de 8–10 s hacia adelante con fundido
 import os
 RAIZ = True  # v4: se construye en /nueva/ con rutas absolutas   # fase 20: la v3 pasa a ser / (rutas absolutas)
 UP = '/' if RAIZ else '../'
@@ -216,6 +217,7 @@ body = f'''
       {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
       {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 reveal', speed='-0.1')}
       {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 reveal', speed='0.12')}
+      {vid('tragos-coctelera', 'tragos__amb tragos__amb--3 reveal')}
     </div>
     <div class="tragos__named">
     <a class="it it--hero" href="{C_CASA}">
@@ -265,7 +267,7 @@ body = f'''
   <div class="quien__g">
     <div class="col" data-speed="-0.06">{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
     <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{vid('quien-brindis', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
   </div>
 </section>
 
@@ -302,7 +304,7 @@ body = f'''
 
 <!-- 9 · CUÁNDO Y DÓNDE -->
 <section class="donde" id="donde" aria-labelledby="h-donde">
-  {vid('donde-letrero', 'donde__v reveal')}
+  {vid('donde-terraza', 'donde__v reveal')}
   <div class="donde__t">
     {title('Le esperamos desde las 18:00 hrs', "Doors open at 6 pm — see you there!", 'h-donde')}
     <dl class="datos">

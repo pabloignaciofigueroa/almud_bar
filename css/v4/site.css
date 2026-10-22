@@ -186,6 +186,7 @@ html[lang="en"] .gloss--i{display:inline}
 .col{display:grid;gap:10px;align-content:start}
 .col--2{margin-top:24px}
 .col--3{display:none}
+@media (max-width:767px){.col--3{display:grid;grid-column:1/-1;margin-top:10px}.col--3>.m:not(.m--v){display:none}} /* v4 fase 2: en celular la columna 3 muestra solo el video del brindis */
 @media (min-width:768px){
   .quien .ttl{font-size:clamp(72px,8.4vw,120px);max-width:none}
   .quien__g{grid-template-columns:repeat(3,1fr);gap:20px;padding-top:7vh}
@@ -390,6 +391,8 @@ html:not(.js) .m video{display:none}
 .tragos__band{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
 .tragos__band .tragos__flag{grid-column:1/-1}
 .tragos__amb--2{margin-top:40px}
+.tragos__amb--3{grid-column:1/-1} /* v4 fase 2: video de la coctelera (sin parallax: solo las fotos se mueven) */
+@media (min-width:1024px){.tragos__band .tragos__amb--3{grid-column:7/10;grid-row:2;margin-top:4vh}}
 .tragos__named{display:grid;gap:28px;margin-top:44px;padding-top:36px;border-top:1px solid rgba(247,207,196,.35)}
 .tragos__named .tragos__pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (min-width:1024px){
