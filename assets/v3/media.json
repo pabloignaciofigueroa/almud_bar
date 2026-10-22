@@ -1,6 +1,4614 @@
 {
  "_doc": "Generado por tools/media_v3.py desde tools/media_v3.json. images[id].crops[name].files[avif|webp][ancho] = {path, bytes}; width/height = intrínsecos del mayor ancho. videos[id].files: webm (VP9) primero, mp4 (H.264, faststart) de respaldo; poster = primer frame del loop (avif/webp/jpg). alt.es/alt.en: solo Eventos nombra el evento. status \"por-confirmar\" = Carmen debe aprobar antes de publicar.",
- "images": {},
+ "images": {
+  "lugar-barra": {
+   "ref": "P093",
+   "src": "assets/raw/ig/DAMHps8JVVr_07.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "La barra curva de madera con frente de baldosa, el muro rojo de botellas, banderines y lámparas tejidas.",
+    "en": "The curved wooden bar with a tiled front, the red bottle wall, bunting and woven lamps."
+   },
+   "credit": {
+    "post": "IG-079",
+    "date": "2024-09-21",
+    "url": "https://www.instagram.com/p/DAMHps8JVVr/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "rincon": "barra",
+   "source_size": [
+    1440,
+    1701
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      39,
+      0,
+      1400,
+      1701
+     ],
+     "crop_size": [
+      1361,
+      1701
+     ],
+     "width": 1361,
+     "height": 1701,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1361
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJagCdMoABYcwfb+jdA+n9OKDeZ2Gw8AFaCdAA/tp3kU72WfImFs6yd3B1xUKELNUaUp0nViXzTXmFrWk5c+2Wztt01B0vMAqiYD8kqEfETHdaY/AefcQewM8HznOeLZswvp19tcldm0dv2lQJzLI5eNaopBfyvhGVmZqph1XUvNOAAAA=",
+     "color": "#6d321c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-barra-a-480.avif",
+        "bytes": 35614
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-barra-a-720.avif",
+        "bytes": 57830
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-barra-a-960.avif",
+        "bytes": 82121
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-barra-a-1280.avif",
+        "bytes": 117159
+       },
+       "1361": {
+        "path": "assets/v3/img/lugar-barra-a-1361.avif",
+        "bytes": 124378
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-barra-a-480.webp",
+        "bytes": 59516
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-barra-a-720.webp",
+        "bytes": 97462
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-barra-a-960.webp",
+        "bytes": 134838
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-barra-a-1280.webp",
+        "bytes": 182250
+       },
+       "1361": {
+        "path": "assets/v3/img/lugar-barra-a-1361.webp",
+        "bytes": 191452
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-salon": {
+   "ref": "P076",
+   "src": "assets/raw/ig/C-V5Lc7SZ-K_00.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "El salón interior de noche: mesas de madera, luz cálida y gente conversando tras una mampara de vidrio.",
+    "en": "The indoor room at night: wooden tables, warm light and people talking behind a glass partition."
+   },
+   "credit": {
+    "post": "IG-094",
+    "date": "2024-08-06",
+    "url": "https://www.instagram.com/p/C-V5Lc7SZ-K/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "rincon": "salón",
+   "source_size": [
+    1335,
+    890
+   ],
+   "crops": {
+    "d": {
+     "ratio": "1335:890",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1335,
+      890
+     ],
+     "crop_size": [
+      1335,
+      890
+     ],
+     "width": 1280,
+     "height": 853,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBACdASoYABAAPwForE6rJaQiMAgBYCAJagCdMoACsutNaaehqWkAwIaAAP4lhQDmfCL2aXtHvkqODAUSdSl1tArcgCIuDPkB7sh8/bLybg3XdpxE1FusNHwFsE3/bAsZCRVuRgz5yvCJW5+30AAA",
+     "color": "#3b1a0b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-salon-d-480.avif",
+        "bytes": 17274
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-salon-d-720.avif",
+        "bytes": 28476
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-salon-d-960.avif",
+        "bytes": 40447
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-salon-d-1280.avif",
+        "bytes": 56949
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-salon-d-480.webp",
+        "bytes": 27096
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-salon-d-720.webp",
+        "bytes": 44034
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-salon-d-960.webp",
+        "bytes": 61134
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-salon-d-1280.webp",
+        "bytes": 81342
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      40,
+      55
+     ],
+     "box": [
+      178,
+      0,
+      890,
+      890
+     ],
+     "crop_size": [
+      712,
+      890
+     ],
+     "width": 712,
+     "height": 890,
+     "widths": [
+      480,
+      712
+     ],
+     "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBQCdASoTABgAPwFwslIrJiSiqAqpYCAJbACdM1XBf+CBWuh4Yw5vzlB0k1fSMKYYAP58qT+igRhOAaCua5sZ9gIFj7QKGGj9VX5K4yBj93B0XVXXTxwFld0fQisebyAQxy0dAOSHAbKkcyJRMdcdsiz658g+n3xz/9hPupMxjzhjO7oBgQAAAAA=",
+     "color": "#311709",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-salon-m-480.avif",
+        "bytes": 20482
+       },
+       "712": {
+        "path": "assets/v3/img/lugar-salon-m-712.avif",
+        "bytes": 32011
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-salon-m-480.webp",
+        "bytes": 30540
+       },
+       "712": {
+        "path": "assets/v3/img/lugar-salon-m-712.webp",
+        "bytes": 45064
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-sillones": {
+   "ref": "P114",
+   "src": "assets/raw/ig/DBMtYELSzNS_14.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "Una mujer ríe y aplaude en el rincón de sillones, con cojines estampados y baldosa hidráulica.",
+    "en": "A woman laughs and claps in the lounge corner, with patterned cushions and encaustic tiles."
+   },
+   "credit": {
+    "post": "IG-075",
+    "date": "2024-10-16",
+    "url": "https://www.instagram.com/p/DBMtYELSzNS/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "rincon": "sillones",
+   "note": "Única foto nítida del rincón (V014 9,3 s es un frame 720p casi negro y con cortes cada 0,5 s: no da loop). \"a\" sin recorte deja ver el sillón y los cojines estampados abajo a la izquierda; \"s\" 1:1 baja el encuadre para dar más sillón.",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1440:1800",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBQCdASoTABgAPwFyr1KrJqQiqAqpYCAJYgC7M2QBpXPygC/9LanHPN+6KXZdm3rgAP7yqOiNn1EHx5SZIya7pp1m+V4LV/TojtBiRfJmJzlipPZy8mM0Bq9IWCGxtHcNih0IJuXmjK1RmqVcSYTRF1XInYOs4Iq0j2cUlYlMmXttlG8MhfnK8LKy4jDPdbbKyku6MAAAAA==",
+     "color": "#412a1a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-sillones-a-480.avif",
+        "bytes": 15947
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-sillones-a-720.avif",
+        "bytes": 25846
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-sillones-a-960.avif",
+        "bytes": 35508
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-sillones-a-1280.avif",
+        "bytes": 50039
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-sillones-a-1440.avif",
+        "bytes": 57356
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-sillones-a-480.webp",
+        "bytes": 23946
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-sillones-a-720.webp",
+        "bytes": 38070
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-sillones-a-960.webp",
+        "bytes": 51776
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-sillones-a-1280.webp",
+        "bytes": 71358
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-sillones-a-1440.webp",
+        "bytes": 82070
+       }
+      }
+     }
+    },
+    "s": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      48
+     ],
+     "box": [
+      0,
+      144,
+      1440,
+      1584
+     ],
+     "crop_size": [
+      1440,
+      1440
+     ],
+     "width": 1440,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwBQCdASoYABgAPwFwrVErJiQiqA1RYCAJZACsMtpBXI0rAFJdsPEQY+aQXb2hGtcLDsVwrAAA/u9kcTkflXLHISU5WNjiNOXToq1fOewYXvhoCbddwYn4or8wS95mDhowcaGZYIXn9k1lgVbfl4n/IcvPvCJJyn/CwQF7aY8WjI5lOpNumTsjs/Bd095tNeW28dZPuj9hm6pYyZlVl4QSyCiAAA==",
+     "color": "#412b19",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-sillones-s-480.avif",
+        "bytes": 13504
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-sillones-s-720.avif",
+        "bytes": 22319
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-sillones-s-960.avif",
+        "bytes": 30439
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-sillones-s-1280.avif",
+        "bytes": 42643
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-sillones-s-1440.avif",
+        "bytes": 49433
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-sillones-s-480.webp",
+        "bytes": 20616
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-sillones-s-720.webp",
+        "bytes": 32784
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-sillones-s-960.webp",
+        "bytes": 44582
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-sillones-s-1280.webp",
+        "bytes": 61230
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-sillones-s-1440.webp",
+        "bytes": 69784
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-terraza-techada": {
+   "ref": "P189",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_07.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "La terraza techada llena de gente bajo el techo de miles de cintas de colores, con estufas encendidas.",
+    "en": "The covered terrace packed with people under a ceiling of thousands of coloured ribbons, heaters glowing."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "rincon": "terraza techada",
+   "note": "Favorita n.º 1 de Carmen. Ya no es la portada (la portada es video), así que encabeza El lugar. 1440 px: nunca a sangre en 1920.",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      42
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABQBQCdASoTABgAPwF2slQrJySjKAgBYCAJZgCdIKnBJddoyyDHXsjh7M3qnRGRihtXjaAA/tA+Gg+/IfCWcNt70zUMWdaNKF4fUNJ0kk2RnSiXRP1dMU45u9prVoB0YgGMTUi0Mcxq3nBBhu2T0hdGzLsXye0HBRMGhxqlyq/uyYcIre5yqrF7xxBmuws0H+ax6PifY2zN7bURY5KSZFP8MgO70Fm2ALPGmEIneKe/o7CKw28IjZ8qlWHHAAAA",
+     "color": "#8f4e3d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-480.avif",
+        "bytes": 45163
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-720.avif",
+        "bytes": 82181
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-960.avif",
+        "bytes": 118953
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-1280.avif",
+        "bytes": 176222
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-1440.avif",
+        "bytes": 199569
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-480.webp",
+        "bytes": 76624
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-720.webp",
+        "bytes": 143030
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-960.webp",
+        "bytes": 204564
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-1280.webp",
+        "bytes": 299422
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-terraza-techada-a-1440.webp",
+        "bytes": 335166
+       }
+      }
+     }
+    },
+    "d": {
+     "ratio": "16:9",
+     "focal": [
+      50,
+      48
+     ],
+     "box": [
+      0,
+      516,
+      1440,
+      1326
+     ],
+     "crop_size": [
+      1440,
+      810
+     ],
+     "width": 1440,
+     "height": 810,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoYAA4APwFqrE6rJiQiMAgBYCAJagCdAB00MkaMYIB3NWxrgAD+jzxopAxb40Icenp/2gQrrwagZvj/hSuRMvIIx16bBZbxEYaNYMtzs+NXs7Ip8XD8j1ayEpNLS4U0aKQ2o36S/L7nDBro0TB6X3l/1SDSARme8syD6ldNOHUAAA==",
+     "color": "#a2614e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-480.avif",
+        "bytes": 22585
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-720.avif",
+        "bytes": 42003
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-960.avif",
+        "bytes": 61593
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-1280.avif",
+        "bytes": 91427
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-1440.avif",
+        "bytes": 103354
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-480.webp",
+        "bytes": 38804
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-720.webp",
+        "bytes": 73258
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-960.webp",
+        "bytes": 106674
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-1280.webp",
+        "bytes": 158172
+       },
+       "1440": {
+        "path": "assets/v3/img/lugar-terraza-techada-d-1440.webp",
+        "bytes": 176910
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-terraza-abierta": {
+   "ref": "P039",
+   "src": "assets/raw/ig/Cqn78DFp5Nm_00.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "La terraza abierta de noche: ripio, árboles, guirnaldas de ampolletas y mesas de picnic llenas.",
+    "en": "The open terrace at night: gravel, trees, string lights and full picnic tables."
+   },
+   "credit": {
+    "post": "IG-144",
+    "date": "2023-04-04",
+    "url": "https://www.instagram.com/p/Cqn78DFp5Nm/",
+    "account": "@almud_bar",
+    "photo": "@catarsis.fotografia",
+    "text": "Foto: @catarsis.fotografia para @almud_bar"
+   },
+   "rincon": "terraza abierta",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoTABgAPwFqsFGrJaSisBgIAWAgCWIArAAQvKdtCe5cEuXFX9rcQAD+7EJ7fxQ6BYy12v6knrwTQYACNJSqPTw62lOejLWzgtcs3BplGKdcixkk/ojbHDMvGUjc/5J5Nt9p6C2zRx1CNEXFQcCukXK/PMISIAAA",
+     "color": "#5d392e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-480.avif",
+        "bytes": 32265
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-720.avif",
+        "bytes": 56306
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-960.avif",
+        "bytes": 84079
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-1280.avif",
+        "bytes": 118908
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-480.webp",
+        "bytes": 51098
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-720.webp",
+        "bytes": 87632
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-960.webp",
+        "bytes": 127990
+       },
+       "1280": {
+        "path": "assets/v3/img/lugar-terraza-abierta-a-1280.webp",
+        "bytes": 172320
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-lampara-pinzas": {
+   "ref": "V014-cover",
+   "src": "assets/raw/ig/C9BDvFvJk4z_00.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "Lámparas hechas con pinzas de ropa de madera, encendidas sobre la barra.",
+    "en": "Lamps made from wooden clothespins, glowing above the bar."
+   },
+   "credit": {
+    "post": "IG-103",
+    "date": "2024-07-04",
+    "url": "https://www.instagram.com/p/C9BDvFvJk4z/",
+    "account": "@almud_bar",
+    "photo": "@rober.patagonico",
+    "text": "Foto: @rober.patagonico para @almud_bar"
+   },
+   "rincon": "luces",
+   "note": "Portada de reel sobremuestreada (3216x5712 desde un original menor): tope 1080 px.",
+   "source_size": [
+    3216,
+    5712
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      28
+     ],
+     "box": [
+      0,
+      0,
+      3216,
+      4020
+     ],
+     "crop_size": [
+      3216,
+      4020
+     ],
+     "width": 1080,
+     "height": 1350,
+     "widths": [
+      480,
+      720,
+      960,
+      1080
+     ],
+     "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwBACdASoTABgAPwF2s1OrJySiqAgBYCAJZACnFAx4CQKwmUpu7uUlKrWa9JirWQAA/u6bvLA9awjLtU6R+vkPiIur3wArDTj5c/kc8czdqbvyv9msG5lFCvZq+CVVK3YiP0EFY/qNfJQq501z04r4o+QuSHmmHMMye88WjgAAAA==",
+     "color": "#352c28",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-480.avif",
+        "bytes": 30120
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-720.avif",
+        "bytes": 58769
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-960.avif",
+        "bytes": 91443
+       },
+       "1080": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-1080.avif",
+        "bytes": 109414
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-480.webp",
+        "bytes": 48632
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-720.webp",
+        "bytes": 96548
+       },
+       "960": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-960.webp",
+        "bytes": 152724
+       },
+       "1080": {
+        "path": "assets/v3/img/lugar-lampara-pinzas-a-1080.webp",
+        "bytes": 184688
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-ojo-piojo": {
+   "ref": "V005-cover",
+   "src": "assets/raw/ig/C3BXBcjpJWA_00.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "Mural de cientos de ojos fotografiados, con una planta desenfocada delante.",
+    "en": "A mural of hundreds of photographed eyes, with an out-of-focus plant in front."
+   },
+   "credit": {
+    "post": "IG-118",
+    "date": "2024-02-06",
+    "url": "https://www.instagram.com/p/C3BXBcjpJWA/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "rincon": "mural Ojo Piojo",
+   "note": "Foto que Carmen nombra para Ojo Piojo (IG-118). 902 px: solo tarjeta, nunca a sangre.",
+   "source_size": [
+    902,
+    902
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      902,
+      902
+     ],
+     "crop_size": [
+      902,
+      902
+     ],
+     "width": 902,
+     "height": 902,
+     "widths": [
+      480,
+      720,
+      902
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoYABgAPwFyrlKrJqQiqAqpYCAJZgCxH47BQ3BcHsHfWtXhDlodXJKbNmFcIADdtC6H8Jnv2hRLit/TaPc0PpLyUMRPxMInMXAwwcNltBwxz+/iLdtbd0WDqnSWaFn4L9bjJnhzOGgv3JqYXn0rEw5gl6UQWMcxr3Qam8Qf3sZZ9eiMSpNJqFXiByncdc76p66+QSimYAA=",
+     "color": "#b16a4e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-480.avif",
+        "bytes": 17633
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-720.avif",
+        "bytes": 29321
+       },
+       "902": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-902.avif",
+        "bytes": 39476
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-480.webp",
+        "bytes": 26690
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-720.webp",
+        "bytes": 42036
+       },
+       "902": {
+        "path": "assets/v3/img/lugar-ojo-piojo-a-902.webp",
+        "bytes": 55654
+       }
+      }
+     }
+    },
+    "m": {
+     "ratio": "4:5",
+     "focal": [
+      58,
+      50
+     ],
+     "box": [
+      162,
+      0,
+      884,
+      902
+     ],
+     "crop_size": [
+      722,
+      902
+     ],
+     "width": 720,
+     "height": 900,
+     "widths": [
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwBACdASoTABgAPwFyr1KrJqQiqAqpYCAJaACdM47A0vqEssAILqF0rdJ4W2gAAGJrbAWZDpH58vLEOETws74HGlXrZWp6pDbQSM0+P/rwwYKoHVgepaArrHvfH5uc/tYF5LyPGmAJGAqlXefSsJr5oniFRaik9uAAAA==",
+     "color": "#b46a4d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-ojo-piojo-m-480.avif",
+        "bytes": 20028
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-ojo-piojo-m-720.avif",
+        "bytes": 32613
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-ojo-piojo-m-480.webp",
+        "bytes": 29692
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-ojo-piojo-m-720.webp",
+        "bytes": 46968
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-cuadros": {
+   "ref": "P012",
+   "src": "assets/raw/ig/CnFUpxNpG_E_03.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "Gente conversando en la barra con el muro de marcos de colores al fondo.",
+    "en": "People chatting at the bar, with the wall of colourful frames in the background."
+   },
+   "credit": {
+    "post": "IG-171",
+    "date": "2023-01-06",
+    "url": "https://www.instagram.com/p/CnFUpxNpG_E/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "rincon": "cuadros",
+   "note": "Única foto propia del muro de cuadros (853x568): solo mosaico ≤600 px css. Lleva algo de luz azul.",
+   "source_size": [
+    853,
+    568
+   ],
+   "crops": {
+    "a": {
+     "ratio": "853:568",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      853,
+      568
+     ],
+     "crop_size": [
+      853,
+      568
+     ],
+     "width": 853,
+     "height": 568,
+     "widths": [
+      480,
+      720,
+      853
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoYABAAPwFqrU8rJaQiMAgBYCAJbACdMoR3AB/uAmSvH65iM3+gAP5+PIW8xLhTaJYAvCnIrXfWIxaLhaw2Nar+XEOQNJ22Mxr31WwMEVth1Ces51j760sJYzwrnGvjq15EcsamTVcqZ4yzzhOg5EQ5Ktf4VAAA",
+     "color": "#582e23",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/lugar-cuadros-a-480.avif",
+        "bytes": 16322
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-cuadros-a-720.avif",
+        "bytes": 28727
+       },
+       "853": {
+        "path": "assets/v3/img/lugar-cuadros-a-853.avif",
+        "bytes": 35788
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/lugar-cuadros-a-480.webp",
+        "bytes": 26266
+       },
+       "720": {
+        "path": "assets/v3/img/lugar-cuadros-a-720.webp",
+        "bytes": 44516
+       },
+       "853": {
+        "path": "assets/v3/img/lugar-cuadros-a-853.webp",
+        "bytes": 53772
+       }
+      }
+     }
+    }
+   }
+  },
+  "tragos-splash": {
+   "ref": "P297",
+   "src": "assets/raw/ig/DYsZ0GNo_88_00.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Un cóctel rojo salpica fuera de una copa coupé sobre la barra de madera, con botellas desenfocadas detrás.",
+    "en": "A red cocktail splashes out of a coupe on the wooden bar, bottles blurred behind."
+   },
+   "credit": {
+    "post": "IG-023",
+    "date": "2026-05-23",
+    "url": "https://www.instagram.com/p/DYsZ0GNo_88/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    3177,
+    3177
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      317,
+      0,
+      2859,
+      3177
+     ],
+     "crop_size": [
+      2542,
+      3177
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASoTABgAPwF0r1KrJqQjqAqpYCAJbACdMuOBD6TcrIf4B49dUxsbCx/4dEdZsOQwAP7BCKKkCmqCOtl1ZYSbp2jIvGW3GiqtA08tMjxngVXKyVAI8Awrw9Gf0Guc8n1yuA5iGHa/iI+ggtAzOVuuEmSqeKMnFf1U7GDsWE2Sut0x5oHYr/rOHYWbvxJeNBrTWcSjAVnfU6BscZEgT/v+rpA8AROGsAAA",
+     "color": "#8a3013",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-splash-a-480.avif",
+        "bytes": 18226
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-splash-a-720.avif",
+        "bytes": 31989
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-splash-a-960.avif",
+        "bytes": 48938
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-splash-a-1280.avif",
+        "bytes": 73314
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-splash-a-1440.avif",
+        "bytes": 86742
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-splash-a-1920.avif",
+        "bytes": 137110
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-splash-a-480.webp",
+        "bytes": 28088
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-splash-a-720.webp",
+        "bytes": 50136
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-splash-a-960.webp",
+        "bytes": 75448
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-splash-a-1280.webp",
+        "bytes": 110072
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-splash-a-1440.webp",
+        "bytes": 130854
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-splash-a-1920.webp",
+        "bytes": 202616
+       }
+      }
+     }
+    },
+    "s": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      3177,
+      3177
+     ],
+     "crop_size": [
+      3177,
+      3177
+     ],
+     "width": 1920,
+     "height": 1920,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACQBQCdASoYABgAPwF0rlKrJqQiqAqpYCAJagCdMuN14P2xjXcACe28STuHE87OWRCbdEKXAAD+eOe7i5bxcwY7rrCkJNephMGtmOBtVOZPVKv2dfLmgWOjLIHKplsJs//yMajzb6vx69fWIbnr/EmA9KeaojiuTPORQwjmOqGX8fpjFcNPD0SOIUykH9AqGLWeWYYAbax1Et9VVB3fGIO4RznFpJG2QSTcwYpwO/HjnPwj5qJ8Na/kTIXgneRsAAA=",
+     "color": "#85300f",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-splash-s-480.avif",
+        "bytes": 14937
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-splash-s-720.avif",
+        "bytes": 26720
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-splash-s-960.avif",
+        "bytes": 40067
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-splash-s-1280.avif",
+        "bytes": 61095
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-splash-s-1440.avif",
+        "bytes": 72278
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-splash-s-1920.avif",
+        "bytes": 109045
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-splash-s-480.webp",
+        "bytes": 23094
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-splash-s-720.webp",
+        "bytes": 41258
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-splash-s-960.webp",
+        "bytes": 61668
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-splash-s-1280.webp",
+        "bytes": 92668
+       },
+       "1440": {
+        "path": "assets/v3/img/tragos-splash-s-1440.webp",
+        "bytes": 109612
+       },
+       "1920": {
+        "path": "assets/v3/img/tragos-splash-s-1920.webp",
+        "bytes": 162084
+       }
+      }
+     }
+    }
+   }
+  },
+  "tragos-sours": {
+   "ref": "P086",
+   "src": "assets/raw/ig/DAMHps8JVVr_00.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Tres copas con espuma y gypsophila seca sobre la barra.",
+    "en": "Three foamy coupes garnished with dried baby's breath on the bar."
+   },
+   "credit": {
+    "post": "IG-079",
+    "date": "2024-09-21",
+    "url": "https://www.instagram.com/p/DAMHps8JVVr/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    1440,
+    1708
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1366,
+     "height": 1708,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1366
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJagCdMyRT9Ab2pJEB+8ICiYl5TrnwI4HxKwmsAAD+wAGpKOQmceKIFJD0K4EDSQQqxzQkUG2fAm5qWUcwMP5X3aOOvKL/Dcos8+oIVF+99dkrjOQHIFsJAaxRrYjsKtKdBwXcgRu+aRn++hZ5YtS00wNdS73+IB7udAjEiKGgS42bSj4dk3pMy6MgFW76AAA=",
+     "color": "#814f27",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-sours-a-480.avif",
+        "bytes": 19136
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-sours-a-720.avif",
+        "bytes": 31496
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-sours-a-960.avif",
+        "bytes": 47787
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-sours-a-1280.avif",
+        "bytes": 77391
+       },
+       "1366": {
+        "path": "assets/v3/img/tragos-sours-a-1366.avif",
+        "bytes": 86878
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-sours-a-480.webp",
+        "bytes": 29238
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-sours-a-720.webp",
+        "bytes": 46622
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-sours-a-960.webp",
+        "bytes": 69272
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-sours-a-1280.webp",
+        "bytes": 102768
+       },
+       "1366": {
+        "path": "assets/v3/img/tragos-sours-a-1366.webp",
+        "bytes": 111638
+       }
+      }
+     }
+    }
+   }
+  },
+  "tragos-copa-tallada": {
+   "ref": "P097",
+   "src": "assets/raw/ig/DAMHps8JVVr_11.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Copa tallada con un trago naranja y espuma, frente al muro rosa de botellas desenfocado.",
+    "en": "A cut-glass coupe with an orange drink and foam against the blurred pink bottle wall."
+   },
+   "credit": {
+    "post": "IG-079",
+    "date": "2024-09-21",
+    "url": "https://www.instagram.com/p/DAMHps8JVVr/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    1440,
+    1708
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1366,
+     "height": 1708,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1366
+     ],
+     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACQBQCdASoTABgAPwFysFIrJqSiqAqpYCAJbACxHt687ZaQW6a6jdTGjYM7nAedK0ghY4nxAAD7myULOtrZkuLM8xUHyRKslCOc70xkNfJ/UvSKiVhUI70elBXHmIPL0V70Ju/F/u8EEzBH0Jtygi1BKhgXhlTk7wMuuKlMRh53imobAgQMKiEHQG8qTkTVpapfpvx0dAfmObiUkws520BmNz+NSFiZkJUo1KrBtuXZfLbkAAA=",
+     "color": "#e57d5f",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-480.avif",
+        "bytes": 13446
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-720.avif",
+        "bytes": 22882
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-960.avif",
+        "bytes": 39226
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-1280.avif",
+        "bytes": 71779
+       },
+       "1366": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-1366.avif",
+        "bytes": 80937
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-480.webp",
+        "bytes": 20620
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-720.webp",
+        "bytes": 35800
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-960.webp",
+        "bytes": 57844
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-1280.webp",
+        "bytes": 90096
+       },
+       "1366": {
+        "path": "assets/v3/img/tragos-copa-tallada-a-1366.webp",
+        "bytes": 99092
+       }
+      }
+     }
+    }
+   }
+  },
+  "tragos-old-fashioned": {
+   "ref": "P003",
+   "src": "assets/raw/ig/Cmce2h1J3Wl_00.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Un trago ámbar con hielo y una frutilla sobre el posavasos de Almud, en madera cálida.",
+    "en": "An amber drink on ice with a strawberry on an Almud coaster, on warm wood."
+   },
+   "credit": {
+    "post": "IG-178",
+    "date": "2022-12-21",
+    "url": "https://www.instagram.com/p/Cmce2h1J3Wl/",
+    "account": "@almud_bar",
+    "photo": "@tamillanquileo",
+    "text": "Foto: @tamillanquileo para @almud_bar"
+   },
+   "note": "Carmen lo llama old fashioned; IG-178 no lo nombra: sin nombre de trago.",
+   "source_size": [
+    1280,
+    1600
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1280,
+      1600
+     ],
+     "crop_size": [
+      1280,
+      1600
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBQCdASoTABgAPwFyrlArJyQisBgIAWAgCUATplAAJJ8Qy4vx8TsPlLREN1BmdjIkdtAAAP7uoK/bVyghtYqUxK7Qg/iKd9a37bBONSSmnM3uJWc4luVsbV/y2gSwHBq8/iiWQglicYlyEy59aBthdW+BpAAA",
+     "color": "#6b3824",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-480.avif",
+        "bytes": 10608
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-720.avif",
+        "bytes": 17750
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-960.avif",
+        "bytes": 26842
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-1280.avif",
+        "bytes": 41310
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-480.webp",
+        "bytes": 14252
+       },
+       "720": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-720.webp",
+        "bytes": 24284
+       },
+       "960": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-960.webp",
+        "bytes": 36012
+       },
+       "1280": {
+        "path": "assets/v3/img/tragos-old-fashioned-a-1280.webp",
+        "bytes": 53438
+       }
+      }
+     }
+    }
+   }
+  },
+  "comida-pizza": {
+   "ref": "P036",
+   "src": "assets/raw/ig/CqEI2nSJP2__00.jpg",
+   "section": "comida",
+   "alt": {
+    "es": "Una garzona sonríe a la cámara mientras sostiene una pizza recién salida.",
+    "en": "A server smiles at the camera holding a freshly baked pizza."
+   },
+   "credit": {
+    "post": "IG-147",
+    "date": "2023-03-21",
+    "url": "https://www.instagram.com/p/CqEI2nSJP2_/",
+    "account": "@almud_bar",
+    "photo": "@catarsis.fotografia",
+    "text": "Foto: @catarsis.fotografia para @almud_bar"
+   },
+   "note": "No se presenta como equipo (no está en IG-001).",
+   "source_size": [
+    1332,
+    1665
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBQCdASoTABgAPwFsrVErJaQisBgIAWAgCWwArDL1yoAW8e8A6dH3b3jgt8gthxj0GdjDiQAA/ujKJuwqcr4S7tAu3yv46s6NLz4BGjh3mifzUwOtY7mUoPGiqAMqkUNzJfp2O7zxZucm0EkuqmeC6/qw0vu3xY/wdAsTvsO3rW9Ixmut1DJmKoi/VjRFltegJZiMAAA=",
+     "color": "#8c522b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/comida-pizza-a-480.avif",
+        "bytes": 18889
+       },
+       "720": {
+        "path": "assets/v3/img/comida-pizza-a-720.avif",
+        "bytes": 32880
+       },
+       "960": {
+        "path": "assets/v3/img/comida-pizza-a-960.avif",
+        "bytes": 53033
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-pizza-a-1280.avif",
+        "bytes": 89171
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/comida-pizza-a-480.webp",
+        "bytes": 28302
+       },
+       "720": {
+        "path": "assets/v3/img/comida-pizza-a-720.webp",
+        "bytes": 48230
+       },
+       "960": {
+        "path": "assets/v3/img/comida-pizza-a-960.webp",
+        "bytes": 74286
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-pizza-a-1280.webp",
+        "bytes": 114906
+       }
+      }
+     }
+    }
+   }
+  },
+  "comida-ceviche": {
+   "ref": "P298",
+   "src": "assets/raw/ig/DY0AUvhlHjI_00.jpg",
+   "section": "comida",
+   "alt": {
+    "es": "Ceviche de atún con palta, pimentón y cilantro en una greda negra, con pan tostado al lado.",
+    "en": "Tuna ceviche with avocado, pepper and coriander in a black clay bowl, with toasted bread."
+   },
+   "credit": {
+    "post": "IG-022",
+    "date": "2026-05-26",
+    "url": "https://www.instagram.com/p/DY0AUvhlHjI/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "Luz de día (la única de comida en alta). Parece «Todo que ver!» pero el post no lo nombra: sin nombre.",
+   "source_size": [
+    3024,
+    4032
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      126,
+      3024,
+      3906
+     ],
+     "crop_size": [
+      3024,
+      3780
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJbACxHxgBb94HfWkEJmYeG3dtQUO8A3EfxUs/wAD+sQTd2co8Sjn8SRWbV5ij9IgUdAnGeHHPztJ8Gt3nxoRfdRZJTP8paw6ydv4mM5FRGerPK82eVY/0bjXl6oW5/mcvFDz/EceiEHW1eG+hOOMzLKdsPZPn3L3N8EM+AyAAAA==",
+     "color": "#988565",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/comida-ceviche-a-480.avif",
+        "bytes": 27083
+       },
+       "720": {
+        "path": "assets/v3/img/comida-ceviche-a-720.avif",
+        "bytes": 50041
+       },
+       "960": {
+        "path": "assets/v3/img/comida-ceviche-a-960.avif",
+        "bytes": 76217
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-ceviche-a-1280.avif",
+        "bytes": 114536
+       },
+       "1440": {
+        "path": "assets/v3/img/comida-ceviche-a-1440.avif",
+        "bytes": 133941
+       },
+       "1920": {
+        "path": "assets/v3/img/comida-ceviche-a-1920.avif",
+        "bytes": 187517
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/comida-ceviche-a-480.webp",
+        "bytes": 37588
+       },
+       "720": {
+        "path": "assets/v3/img/comida-ceviche-a-720.webp",
+        "bytes": 65868
+       },
+       "960": {
+        "path": "assets/v3/img/comida-ceviche-a-960.webp",
+        "bytes": 96932
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-ceviche-a-1280.webp",
+        "bytes": 136138
+       },
+       "1440": {
+        "path": "assets/v3/img/comida-ceviche-a-1440.webp",
+        "bytes": 157406
+       },
+       "1920": {
+        "path": "assets/v3/img/comida-ceviche-a-1920.webp",
+        "bytes": 214872
+       }
+      }
+     }
+    }
+   }
+  },
+  "comida-hamburguesa": {
+   "ref": "P305",
+   "src": "assets/raw/ig/DY0AUvhlHjI_13.jpg",
+   "section": "comida",
+   "alt": {
+    "es": "Hamburguesa en pan con sésamo, con cebolla caramelizada, hojas verdes y queso derretido.",
+    "en": "A sesame-bun burger with caramelised onion, greens and melted cheese."
+   },
+   "credit": {
+    "post": "IG-022",
+    "date": "2026-05-26",
+    "url": "https://www.instagram.com/p/DY0AUvhlHjI/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    3024,
+    4032
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      42
+     ],
+     "box": [
+      0,
+      0,
+      3024,
+      3780
+     ],
+     "crop_size": [
+      3024,
+      3780
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAQBgCdASoTABgAPwFurlCrJiQisBgIAWAgCWIAnTLdbsNAeiAAzsXszq82UPq22j7Rvl3T8gAaVsAA9yXe1samZSdrdoXrFx/W01edv1saCCGHgRGSnPgAe8YUs3bnRdZ+YIIlbHzIgaGL5oYe4O88aF2VU3NdeAV6owyH0DLkrPuQc6kZxqeqm5FDAd/oOQEemonVCiloOZEpX4AAAA==",
+     "color": "#7b4719",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/comida-hamburguesa-a-480.avif",
+        "bytes": 27614
+       },
+       "720": {
+        "path": "assets/v3/img/comida-hamburguesa-a-720.avif",
+        "bytes": 47365
+       },
+       "960": {
+        "path": "assets/v3/img/comida-hamburguesa-a-960.avif",
+        "bytes": 66837
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1280.avif",
+        "bytes": 92934
+       },
+       "1440": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1440.avif",
+        "bytes": 106556
+       },
+       "1920": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1920.avif",
+        "bytes": 144928
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/comida-hamburguesa-a-480.webp",
+        "bytes": 41316
+       },
+       "720": {
+        "path": "assets/v3/img/comida-hamburguesa-a-720.webp",
+        "bytes": 68198
+       },
+       "960": {
+        "path": "assets/v3/img/comida-hamburguesa-a-960.webp",
+        "bytes": 93470
+       },
+       "1280": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1280.webp",
+        "bytes": 126168
+       },
+       "1440": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1440.webp",
+        "bytes": 144120
+       },
+       "1920": {
+        "path": "assets/v3/img/comida-hamburguesa-a-1920.webp",
+        "bytes": 196348
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-amigas": {
+   "ref": "P254",
+   "src": "assets/raw/ig/DU35ZDPCBcH_00.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Dos amigas brindan con sus tragos frente al muro rosa de botellas iluminadas.",
+    "en": "Two friends toast with their drinks in front of the glowing pink bottle wall."
+   },
+   "credit": {
+    "post": "IG-031",
+    "date": "2026-02-17",
+    "url": "https://www.instagram.com/p/DU35ZDPCBcH/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoTABgAPwF0rlKrJqQiqAqpYCAJbACdMuOA/9LwcAWaThlcRieFD4mnyH4ui9nTAAD+oUHO14qaC9x0YdEkKNfl4Q30FGh9oWJBFG9QW/n8nhg832GOECbZdYsIRJJyuIndgzakPZjmph7CYTo3pFG4KJdEeiuuhAyy9pC7P0lkUtt3xdDW+fquWl7h1y8xrMsxtg25vm5ZVoaG5w3GRFmlAb8gINZYZ6QAAA==",
+     "color": "#934244",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-amigas-a-480.avif",
+        "bytes": 32272
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-amigas-a-720.avif",
+        "bytes": 63084
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-amigas-a-960.avif",
+        "bytes": 93912
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-amigas-a-1280.avif",
+        "bytes": 139423
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-amigas-a-1440.avif",
+        "bytes": 165498
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-amigas-a-480.webp",
+        "bytes": 54440
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-amigas-a-720.webp",
+        "bytes": 109080
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-amigas-a-960.webp",
+        "bytes": 158930
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-amigas-a-1280.webp",
+        "bytes": 231024
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-amigas-a-1440.webp",
+        "bytes": 258652
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-barra": {
+   "ref": "P031",
+   "src": "assets/raw/ig/CpVyxXJJrhO_00.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Un grupo de amigas ríe y brinda en la barra con tragos de colores.",
+    "en": "A group of friends laughs and toasts at the bar with colourful drinks."
+   },
+   "credit": {
+    "post": "IG-152",
+    "date": "2023-03-03",
+    "url": "https://www.instagram.com/p/CpVyxXJJrhO/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    1332,
+    1665
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdOUE68ATmz1MaJy2tGas5N+UGsSbqAPXHOzPaZh2KMHiAaKyDAmi+1aCxajXl4bnGvC95RdD6nDIwTG2aqrI4NKMPCGgUvWn+eAY61CAhNU0YgFBOPyxWSUSGN/gG526/moKxt8EAItxhcgEahzqLu9AO0N/9euLczRo/Tpjvm27HbiRKMA2QQy4ADxrG7gAA",
+     "color": "#924d31",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-barra-a-480.avif",
+        "bytes": 16577
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-barra-a-720.avif",
+        "bytes": 27484
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-barra-a-960.avif",
+        "bytes": 42480
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-barra-a-1280.avif",
+        "bytes": 70824
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-barra-a-480.webp",
+        "bytes": 25196
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-barra-a-720.webp",
+        "bytes": 40376
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-barra-a-960.webp",
+        "bytes": 59710
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-barra-a-1280.webp",
+        "bytes": 91928
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-risa": {
+   "ref": "P041",
+   "src": "assets/raw/ig/CrMRBMNpdIF_00.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Una mujer ríe a carcajadas en la mesa, frente a un muro de cintas verticales de colores.",
+    "en": "A woman bursts out laughing at her table, in front of a wall of vertical coloured ribbons."
+   },
+   "credit": {
+    "post": "IG-142",
+    "date": "2023-04-18",
+    "url": "https://www.instagram.com/p/CrMRBMNpdIF/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "source_size": [
+    1332,
+    1665
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1332,
+      1665
+     ],
+     "crop_size": [
+      1332,
+      1665
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBQCdASoTABgAPwFyr1KrJqQiqAqpYCAJYgCdM1XBoYfxnLXMgABwsc6fsftCm7qgANw9T+2IJSCbehM9CA9ZQ2XkkDQZ1yrhUQaQ6ko0VCoyuTTXx4ldIs86NKv00j5WCovPMZpmH5T/SHkHR9N1j1NbL1z/M/hY2llJfb9cC5bkb3iKfuror9CeiAoIe10/Ch1AAAA=",
+     "color": "#7d5235",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-risa-a-480.avif",
+        "bytes": 14285
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-risa-a-720.avif",
+        "bytes": 23725
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-risa-a-960.avif",
+        "bytes": 36733
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-risa-a-1280.avif",
+        "bytes": 60165
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-risa-a-480.webp",
+        "bytes": 20836
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-risa-a-720.webp",
+        "bytes": 33760
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-risa-a-960.webp",
+        "bytes": 50924
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-risa-a-1280.webp",
+        "bytes": 76658
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-amigos": {
+   "ref": "P259",
+   "src": "assets/raw/ig/DYiMMUrlBk1_03.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Tres amigos abrazados sonríen a la cámara; una de ellas sostiene una brocheta.",
+    "en": "Three friends hug and smile at the camera; one holds a skewer."
+   },
+   "credit": {
+    "post": "IG-026",
+    "date": "2026-05-19",
+    "url": "https://www.instagram.com/p/DYiMMUrlBk1/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "5:4 sin recorte: un 4:5 cortaba la cara de la derecha. Lleva flash (va en mosaico, no a sangre).",
+   "source_size": [
+    3276,
+    2621
+   ],
+   "crops": {
+    "a": {
+     "ratio": "3276:2621",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      3276,
+      2621
+     ],
+     "crop_size": [
+      3276,
+      2621
+     ],
+     "width": 1440,
+     "height": 1152,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACwBQCdASoYABMAPwF4tVQrJyUjKAgBYCAJQBWGQZaLQ/+6AAJkzbJACQhCP7WFL4TyUXcxyQAA/s8Ij5qIbj30UKcdghSQbkKv9x28wqqG2aSR73kHdMPL8wO+Td3u1wp+cFXI/xq0UBO1T34z39Ul/RqUTegAMHJ55gDtgRCR7VpqqTqPbQCTuOiMjf/kU+mGRkKcJcOpfKgA",
+     "color": "#38312c",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-amigos-a-480.avif",
+        "bytes": 19029
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-amigos-a-720.avif",
+        "bytes": 39167
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-amigos-a-960.avif",
+        "bytes": 69479
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-amigos-a-1280.avif",
+        "bytes": 131784
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-amigos-a-1440.avif",
+        "bytes": 172906
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-amigos-a-480.webp",
+        "bytes": 29394
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-amigos-a-720.webp",
+        "bytes": 61556
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-amigos-a-960.webp",
+        "bytes": 111456
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-amigos-a-1280.webp",
+        "bytes": 224646
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-amigos-a-1440.webp",
+        "bytes": 300414
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-solo": {
+   "ref": "P194",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_12.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Gente acodada en la barra bajo una lámpara de flecos dorados mientras el bartender prepara tragos.",
+    "en": "People leaning on the bar under a golden fringe lamp while the bartender mixes drinks."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "source_size": [
+    1440,
+    1919
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      50
+     ],
+     "box": [
+      0,
+      59,
+      1440,
+      1859
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoTABgAPwFosFGrJSSisBgIAWAgCWwAnTLT9GwfuVby6Ei3NuWUYOQORy1BwTG6csAA/ppO8+ccudk1cSOFXOxlEku02hSmhbCI7aOvy+8nPX0u612F4GujM5t3dQpKC5jfeLuDWRQLM4+UyAAJ4XY1DFbOZTKYv2OvhGNvB5bFAvmpKIL1+Aw4WRqJFxzJTOexBInSgqlWN1MBED+sU6waE0rqznAAAAA=",
+     "color": "#8a4c3d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-solo-a-480.avif",
+        "bytes": 26701
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-solo-a-720.avif",
+        "bytes": 45019
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-solo-a-960.avif",
+        "bytes": 64284
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-solo-a-1280.avif",
+        "bytes": 96008
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-solo-a-1440.avif",
+        "bytes": 112345
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-solo-a-480.webp",
+        "bytes": 44138
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-solo-a-720.webp",
+        "bytes": 73948
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-solo-a-960.webp",
+        "bytes": 103358
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-solo-a-1280.webp",
+        "bytes": 150564
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-solo-a-1440.webp",
+        "bytes": 180504
+       }
+      }
+     }
+    }
+   }
+  },
+  "con-quien-brindis": {
+   "ref": "P182",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_00.jpg",
+   "section": "con-quien",
+   "alt": {
+    "es": "Una mesa brinda bajo el techo de cintas de colores, junto a una estufa de pilar encendida.",
+    "en": "A table toasts under the coloured-ribbon ceiling, next to a lit patio heater."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoTABgAPwFwslGrJiSiqAqpYCAJQBOmUAArCrwlrsw0FWcKbJybAAAA4eMdCliI2fPLTFGXxw0T0KnXYw66SzpOPBHGIDJ6ZuDgf/Ywx25EVmSPt3ei/XuQqk9Z9trFQgojQFgzdhPeUHe09yhpenXrdjqD7ACwQNbee22vmEU+olK5lKkgAgAA",
+     "color": "#794334",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/con-quien-brindis-a-480.avif",
+        "bytes": 34232
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-brindis-a-720.avif",
+        "bytes": 58610
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-brindis-a-960.avif",
+        "bytes": 82545
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-brindis-a-1280.avif",
+        "bytes": 118401
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-brindis-a-1440.avif",
+        "bytes": 135323
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/con-quien-brindis-a-480.webp",
+        "bytes": 59378
+       },
+       "720": {
+        "path": "assets/v3/img/con-quien-brindis-a-720.webp",
+        "bytes": 100410
+       },
+       "960": {
+        "path": "assets/v3/img/con-quien-brindis-a-960.webp",
+        "bytes": 137540
+       },
+       "1280": {
+        "path": "assets/v3/img/con-quien-brindis-a-1280.webp",
+        "bytes": 192430
+       },
+       "1440": {
+        "path": "assets/v3/img/con-quien-brindis-a-1440.webp",
+        "bytes": 219028
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-12-anos": {
+   "ref": "P348",
+   "src": "assets/raw/ig/Dbg3ekilC4P_11.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "La celebración de los 12 años de Almud: la terraza repleta bajo los banderines, vista desde arriba.",
+    "en": "Almud's 12th anniversary: the terrace packed under the bunting, seen from above."
+   },
+   "credit": {
+    "post": "IG-009",
+    "date": "2026-08-01",
+    "url": "https://www.instagram.com/p/Dbg3ekilC4P/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "evento": "12 años",
+   "note": "Violeta permitido solo en Eventos.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoTABgAPwF2slQrJqQjKAgBYCAJaACxH0LBBvGWOu1dWtgBD5TEu6pvWZ7TAAD+7qGahD4t3VGYg4cPHV945VioisdliYpp45wIzgErfi1NQIMZqZ8rpMDKD8pO49DLlF1N6BxWDe4GUaKBHFC/RgqouSd+AScwX0uGxw8nOtCGgkNZbLwnDFsWLQvcri48Yk13oNI+AAA=",
+     "color": "#4b3149",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-12-anos-a-480.avif",
+        "bytes": 38131
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-12-anos-a-720.avif",
+        "bytes": 71416
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-12-anos-a-960.avif",
+        "bytes": 110957
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-12-anos-a-1280.avif",
+        "bytes": 170858
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-12-anos-a-1440.avif",
+        "bytes": 204676
+       },
+       "1920": {
+        "path": "assets/v3/img/eventos-12-anos-a-1920.avif",
+        "bytes": 304394
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-12-anos-a-480.webp",
+        "bytes": 61630
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-12-anos-a-720.webp",
+        "bytes": 116154
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-12-anos-a-960.webp",
+        "bytes": 175118
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-12-anos-a-1280.webp",
+        "bytes": 258946
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-12-anos-a-1440.webp",
+        "bytes": 305226
+       },
+       "1920": {
+        "path": "assets/v3/img/eventos-12-anos-a-1920.webp",
+        "bytes": 441172
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-jaloguin": {
+   "ref": "P234",
+   "src": "assets/raw/ig/DShtzZ0FD9H_05.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Jalogüín en Almud: una catrina con corona de flores levanta un trago rojo bajo la lámpara de flecos.",
+    "en": "Halloween at Almud: a Catrina with a flower crown raises a red drink under the fringe lamp."
+   },
+   "credit": {
+    "post": "IG-038",
+    "date": "2025-12-21",
+    "url": "https://www.instagram.com/p/DShtzZ0FD9H/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "evento": "Jalogüín",
+   "source_size": [
+    1440,
+    1919
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      38
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoTABgAPwF0rlKrJqQiqAqpYCAJZACo9A9aIPlHqztIYuqRyuRcuMAA9r1y0/b3YpKWD83OXRar5iNhdL5wq/Z6E6yqlxOZtuMpYyvhoXpzMknRejeawP9eH4MqMf5cahOUqIu1HzGm0R0/FGfQHzd4iA4HyrRVbUvCAA==",
+     "color": "#241516",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-jaloguin-a-480.avif",
+        "bytes": 21300
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-jaloguin-a-720.avif",
+        "bytes": 36633
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-jaloguin-a-960.avif",
+        "bytes": 51812
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-jaloguin-a-1280.avif",
+        "bytes": 76363
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-jaloguin-a-1440.avif",
+        "bytes": 87437
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-jaloguin-a-480.webp",
+        "bytes": 32544
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-jaloguin-a-720.webp",
+        "bytes": 54718
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-jaloguin-a-960.webp",
+        "bytes": 77430
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-jaloguin-a-1280.webp",
+        "bytes": 116082
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-jaloguin-a-1440.webp",
+        "bytes": 136090
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-fondita": {
+   "ref": "P090",
+   "src": "assets/raw/ig/DAMHps8JVVr_04.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "La fondita de Almud: faroles de papel azul y naranja colgando entre las cintas, sobre la terraza llena.",
+    "en": "Almud's Fiestas Patrias \"fondita\": blue and orange paper lanterns hanging among the ribbons over the busy terrace."
+   },
+   "credit": {
+    "post": "IG-079",
+    "date": "2024-09-21",
+    "url": "https://www.instagram.com/p/DAMHps8JVVr/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "evento": "Fondita",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      37,
+      0,
+      1403,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1366,
+     "height": 1708,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1366
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAADwBQCdASoTABgAPwF2s1OrJySiqAgBYCAJaACdOUFSNVH5AttgA9Sy8gVB8GojlPYzjVRVWd2lQAD+6RPYv0B84A9ZkB95lmCHqy93N8ZL0x6rLZs+a597vdqvTwNH6B83WH2bLsK2kxYPVdUPAd81gZ8InnbCM6N2E2CJ4YO/GkVQoXH7KSQ8hUAHHM8skQ/spngYtKsloCjf83F1CV4nhGL17CjvczcFUEXcLgAAAA==",
+     "color": "#8b3e27",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-fondita-a-480.avif",
+        "bytes": 38504
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-fondita-a-720.avif",
+        "bytes": 62601
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-fondita-a-960.avif",
+        "bytes": 89477
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-fondita-a-1280.avif",
+        "bytes": 129394
+       },
+       "1366": {
+        "path": "assets/v3/img/eventos-fondita-a-1366.avif",
+        "bytes": 139149
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-fondita-a-480.webp",
+        "bytes": 66412
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-fondita-a-720.webp",
+        "bytes": 105148
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-fondita-a-960.webp",
+        "bytes": 144478
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-fondita-a-1280.webp",
+        "bytes": 199324
+       },
+       "1366": {
+        "path": "assets/v3/img/eventos-fondita-a-1366.webp",
+        "bytes": 210758
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-14f": {
+   "ref": "V006-cover",
+   "src": "assets/raw/ig/C3VODtYsjNX_00.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "14 de febrero en Almud: manos con uñas rosadas sostienen un trago rosa con una mariposa de papel.",
+    "en": "Valentine's Day at Almud: hands with pink nails hold a pink cocktail topped with a paper butterfly."
+   },
+   "credit": {
+    "post": "IG-117",
+    "date": "2024-02-14",
+    "url": "https://www.instagram.com/p/C3VODtYsjNX/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "evento": "14F",
+   "note": "Portada del reel 14F (IG-117), sobremuestreada: tope 1080 px. El afiche IG-116 tiene texto: descartado.",
+   "source_size": [
+    2268,
+    4032
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      800,
+      2268,
+      3635
+     ],
+     "crop_size": [
+      2268,
+      2835
+     ],
+     "width": 1080,
+     "height": 1350,
+     "widths": [
+      480,
+      720,
+      960,
+      1080
+     ],
+     "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBQCdASoTABgAPwF4tFQrJySjKAgBYCAJaACdMyGBeW3/dy9dKbyC+x3hxtkurjwLJiFwAP7sQ8mzuGDwRQB2wlVDURd0fSt6Nfj6fNdqbFfg5+/BwDT9nD8xCO90EqaWepzd0mLov+s5r3BRcKiX/NcNRZi91azKocuZ/l9QLYfMavwWW2gAAAA=",
+     "color": "#a06972",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-14f-a-480.avif",
+        "bytes": 21619
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-14f-a-720.avif",
+        "bytes": 41024
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-14f-a-960.avif",
+        "bytes": 63431
+       },
+       "1080": {
+        "path": "assets/v3/img/eventos-14f-a-1080.avif",
+        "bytes": 75512
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-14f-a-480.webp",
+        "bytes": 32270
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-14f-a-720.webp",
+        "bytes": 57862
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-14f-a-960.webp",
+        "bytes": 86160
+       },
+       "1080": {
+        "path": "assets/v3/img/eventos-14f-a-1080.webp",
+        "bytes": 99860
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-negroni-week": {
+   "ref": "P226",
+   "src": "assets/raw/ig/DP7O0BElPhW_00.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Un bartender revuelve un negroni con hielo sobre la barra, con luz ámbar.",
+    "en": "A bartender stirs a negroni over ice on the bar, in amber light."
+   },
+   "credit": {
+    "post": "IG-042",
+    "date": "2025-10-17",
+    "url": "https://www.instagram.com/p/DP7O0BElPhW/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "evento": "Negroni Week",
+   "note": "HUECO: el post de Negroni Week (IG-005) solo tiene afiches con texto. Esta es un negroni de la casa (IG-042), no del evento: el alt no dice que sea la Negroni Week.",
+   "source_size": [
+    1423,
+    1897
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      50
+     ],
+     "box": [
+      0,
+      59,
+      1423,
+      1838
+     ],
+     "crop_size": [
+      1423,
+      1779
+     ],
+     "width": 1423,
+     "height": 1779,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1423
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBQCdASoTABgAPwF0rVKrJqOiqAqpYCAJZgCxGzwAipsBez2ttvgNL9Bk13ZQNzW44AAA/uXsdOD8hirEZNnEm2L98KIpwjAqExJ5KsC5nJ6QWyJRF1fgqSdIN1Rs1rSZThe/pdoO3N32q5HtNCqvbzSIyzpbnIA4pFQpDYTvFLRJUiT34wwLLFRYFzbtywkhJ6M1nD36mCIl5FIdjEMVWBAR0g5UAAA=",
+     "color": "#c76b45",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-negroni-week-a-480.avif",
+        "bytes": 15969
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-negroni-week-a-720.avif",
+        "bytes": 27069
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-negroni-week-a-960.avif",
+        "bytes": 42463
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-negroni-week-a-1280.avif",
+        "bytes": 69495
+       },
+       "1423": {
+        "path": "assets/v3/img/eventos-negroni-week-a-1423.avif",
+        "bytes": 86287
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-negroni-week-a-480.webp",
+        "bytes": 25230
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-negroni-week-a-720.webp",
+        "bytes": 41886
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-negroni-week-a-960.webp",
+        "bytes": 64230
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-negroni-week-a-1280.webp",
+        "bytes": 95578
+       },
+       "1423": {
+        "path": "assets/v3/img/eventos-negroni-week-a-1423.webp",
+        "bytes": 114970
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-primavera": {
+   "ref": "P102",
+   "src": "assets/raw/ig/DBMtYELSzNS_02.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Bienvenida a la primavera en Almud: mesas llenas bajo un techo de banderines de papel de colores.",
+    "en": "Welcoming spring at Almud: busy tables under a ceiling of colourful paper bunting."
+   },
+   "credit": {
+    "post": "IG-075",
+    "date": "2024-10-16",
+    "url": "https://www.instagram.com/p/DBMtYELSzNS/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "evento": "Primavera",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoTABgAPwF4s1QrJySjKAgBYCAJZACxFIAAm/gTx4LvQnFxVExaysK1Mo2kAADKK32vzPn3kS6WsGUoamg2xMh+L77P5SnHxz9OjoZVu+GEuq7Lf4wkBPsgJo81rCTMrmL5DS+9EQNm7sSTkQQJTQnU6pwP96ezWYsSIenIGP1VFx5gjkQqTa2+lpDFlHQWkr4u+OZQAAA=",
+     "color": "#5f3b37",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-primavera-a-480.avif",
+        "bytes": 36894
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-primavera-a-720.avif",
+        "bytes": 62651
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-primavera-a-960.avif",
+        "bytes": 85646
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-primavera-a-1280.avif",
+        "bytes": 119491
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-primavera-a-1440.avif",
+        "bytes": 135525
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-primavera-a-480.webp",
+        "bytes": 60330
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-primavera-a-720.webp",
+        "bytes": 104226
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-primavera-a-960.webp",
+        "bytes": 136710
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-primavera-a-1280.webp",
+        "bytes": 184862
+       },
+       "1440": {
+        "path": "assets/v3/img/eventos-primavera-a-1440.webp",
+        "bytes": 205894
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-10-anos": {
+   "ref": "P073",
+   "src": "assets/raw/ig/C9dHAAxJkSi_00.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Los 10 años de Almud: un gran número 10 hecho de flores bajo el techo de banderines.",
+    "en": "Almud's 10th anniversary: a giant number 10 made of flowers under the bunting."
+   },
+   "credit": {
+    "post": "IG-100",
+    "date": "2024-07-15",
+    "url": "https://www.instagram.com/p/C9dHAAxJkSi/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "evento": "10 años",
+   "optional": true,
+   "note": "Extra opcional: la favorita de Carmen \"de evento\".",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBACdASoTABgAPwFys1IrJqSiqAqpYCAJZACdMs8ftCPcPodtljx/tOwJSCd4AAD+mEBxlNHk+bQ+OZR5gxJ1O7yOQ8+i1UGm5TYWEzFWyKXwqgcxenjGYwlSpNjclhrwQ99zNcwvZ7Hc2WX83VuvLnP+qiSS+p8799hXqJmEMxx+YAZ4IKVxa0lLIcIy8yZeLeQjY6u6AAAA",
+     "color": "#895227",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/eventos-10-anos-a-480.avif",
+        "bytes": 31472
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-10-anos-a-720.avif",
+        "bytes": 54019
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-10-anos-a-960.avif",
+        "bytes": 78894
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-10-anos-a-1280.avif",
+        "bytes": 109481
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/eventos-10-anos-a-480.webp",
+        "bytes": 50122
+       },
+       "720": {
+        "path": "assets/v3/img/eventos-10-anos-a-720.webp",
+        "bytes": 87382
+       },
+       "960": {
+        "path": "assets/v3/img/eventos-10-anos-a-960.webp",
+        "bytes": 126692
+       },
+       "1280": {
+        "path": "assets/v3/img/eventos-10-anos-a-1280.webp",
+        "bytes": 170976
+       }
+      }
+     }
+    }
+   }
+  },
+  "donde-puerta": {
+   "ref": "P199",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
+   "section": "donde",
+   "alt": {
+    "es": "En la puerta de madera de Almud, una mujer con megáfono y polera «Te espero en la cuneta».",
+    "en": "At Almud's wooden door, a woman with a megaphone wears a \"Te espero en la cuneta\" T-shirt."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "source_size": [
+    1440,
+    1919
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoTABgAPwFysVIrJqSiqAqpYCAJbACdMoMeYCI1l+KMtrSnOI6xJqAq1a5oK5iNQADiQsRuThh0TEfadue9HqRZi4GxdKIxDwwOA1Q9PUBHe3E4ZedoYUB7iq+9otfLXBEWH0LSPRyz1XDcsKfxZg/0CBTO+GXzn9QEV+gFN17DUS0QfeFXayMQ7dwQzuCTjzIPu1KAZ5ENp/tKMYRtWFTHkzGLBh5FKioAAA==",
+     "color": "#af5d3a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/donde-puerta-a-480.avif",
+        "bytes": 24079
+       },
+       "720": {
+        "path": "assets/v3/img/donde-puerta-a-720.avif",
+        "bytes": 43428
+       },
+       "960": {
+        "path": "assets/v3/img/donde-puerta-a-960.avif",
+        "bytes": 68001
+       },
+       "1280": {
+        "path": "assets/v3/img/donde-puerta-a-1280.avif",
+        "bytes": 142418
+       },
+       "1440": {
+        "path": "assets/v3/img/donde-puerta-a-1440.avif",
+        "bytes": 184992
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/donde-puerta-a-480.webp",
+        "bytes": 39836
+       },
+       "720": {
+        "path": "assets/v3/img/donde-puerta-a-720.webp",
+        "bytes": 71730
+       },
+       "960": {
+        "path": "assets/v3/img/donde-puerta-a-960.webp",
+        "bytes": 119726
+       },
+       "1280": {
+        "path": "assets/v3/img/donde-puerta-a-1280.webp",
+        "bytes": 269616
+       },
+       "1440": {
+        "path": "assets/v3/img/donde-puerta-a-1440.webp",
+        "bytes": 366916
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-olvidar": {
+   "ref": "V057-cover",
+   "src": "assets/raw/ig/DeC9NEioZFw_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Vino tinto tiñe un vaso con una gran esfera de hielo y una lámina de manzana seca.",
+    "en": "Red wine streams into a glass with a large ice sphere and a dried apple slice."
+   },
+   "credit": {
+    "post": "IG-002",
+    "date": "2026-10-03",
+    "url": "https://www.instagram.com/p/DeC9NEioZFw/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Cómo te voy a olvidar",
+   "source_size": [
+    720,
+    720
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      720,
+      720
+     ],
+     "crop_size": [
+      720,
+      720
+     ],
+     "width": 720,
+     "height": 720,
+     "widths": [
+      360,
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoYABgAPwFsrlArJaQiqA1RYCAJZAC1COZBnFFncvXD9kI79SRGSkdBBgkwAP69lAqBDSmv/EHYGz5D8cR5wGS0T+0m0fSsY0Fn6vA2WqSwRGLjkmyyznSCR0J0g58wDfjhscyBcGFXRyoUWB7jiEdyg+rEfLOG28TFb3h8XbCngAAPg8qKk95AAAA=",
+     "color": "#b1977d",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-olvidar-a-360.avif",
+        "bytes": 9406
+       },
+       "480": {
+        "path": "assets/v3/img/carta-olvidar-a-480.avif",
+        "bytes": 13388
+       },
+       "720": {
+        "path": "assets/v3/img/carta-olvidar-a-720.avif",
+        "bytes": 25214
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-olvidar-a-360.webp",
+        "bytes": 12440
+       },
+       "480": {
+        "path": "assets/v3/img/carta-olvidar-a-480.webp",
+        "bytes": 16960
+       },
+       "720": {
+        "path": "assets/v3/img/carta-olvidar-a-720.webp",
+        "bytes": 28200
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-saguer": {
+   "ref": "V030-cover",
+   "src": "assets/raw/ig/DEieMaByhUU_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Un soplete ahúma un trago ámbar sobre un posavasos de madera.",
+    "en": "A torch smokes an amber drink on a wooden coaster."
+   },
+   "credit": {
+    "post": "IG-063",
+    "date": "2025-01-07",
+    "url": "https://www.instagram.com/p/DEieMaByhUU/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Sagüer on Faia",
+   "source_size": [
+    3794,
+    6738
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      60
+     ],
+     "box": [
+      0,
+      1671,
+      3794,
+      6413
+     ],
+     "crop_size": [
+      3794,
+      4742
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoTABgAPwFysFIrJqSiqAqpYCAJZACsAA35HQhRDYHso+YMUAAA/mwzMUtzPZZRFo0/SYbySGS3NT5v1n/tD4kjRM95v4QSwDgjP6VXniD7WxlG+/OhS09b/RDGtntWFOUUMSdDx7tCa4fkZkUwPeXS4Az0XOP3TsMYjjyPenhdPlniAAAAAA==",
+     "color": "#944c20",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-saguer-a-360.avif",
+        "bytes": 11195
+       },
+       "480": {
+        "path": "assets/v3/img/carta-saguer-a-480.avif",
+        "bytes": 17298
+       },
+       "720": {
+        "path": "assets/v3/img/carta-saguer-a-720.avif",
+        "bytes": 31364
+       },
+       "960": {
+        "path": "assets/v3/img/carta-saguer-a-960.avif",
+        "bytes": 47108
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-saguer-a-360.webp",
+        "bytes": 16212
+       },
+       "480": {
+        "path": "assets/v3/img/carta-saguer-a-480.webp",
+        "bytes": 24408
+       },
+       "720": {
+        "path": "assets/v3/img/carta-saguer-a-720.webp",
+        "bytes": 46012
+       },
+       "960": {
+        "path": "assets/v3/img/carta-saguer-a-960.webp",
+        "bytes": 70468
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-sangria": {
+   "ref": "P228",
+   "src": "assets/raw/ig/DRkwz2OlC01_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Copa tallada con sangría roja, hielo y flores secas sobre la barra.",
+    "en": "A cut-glass goblet of red sangria with ice and dried flowers on the bar."
+   },
+   "credit": {
+    "post": "IG-039",
+    "date": "2025-11-27",
+    "url": "https://www.instagram.com/p/DRkwz2OlC01/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Sangría Foreva!",
+   "source_size": [
+    1440,
+    1814
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBQCdASoTABgAPwF0r1KrJqQiqAqpYCAJagCdMtU8DZAAW5FlQz2p54+A1YT0JB5vv/CszQ6gAP7un2QuFOcw4YBg7XlPIbsFuPxpbSS4PI9yLCyPErNicBf/pOdttN4o7aiWFxO/jtDzPhkwNhj6hrRRsPojCIw91FzMa3xM7jpFSmwK5bqPptMUq8HhKlmKoGcSUFnygQ6FE17m8SwwDE9MaBTEfAAAAA==",
+     "color": "#8a5237",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-sangria-a-360.avif",
+        "bytes": 10135
+       },
+       "480": {
+        "path": "assets/v3/img/carta-sangria-a-480.avif",
+        "bytes": 14560
+       },
+       "720": {
+        "path": "assets/v3/img/carta-sangria-a-720.avif",
+        "bytes": 24246
+       },
+       "960": {
+        "path": "assets/v3/img/carta-sangria-a-960.avif",
+        "bytes": 33555
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-sangria-a-360.webp",
+        "bytes": 15896
+       },
+       "480": {
+        "path": "assets/v3/img/carta-sangria-a-480.webp",
+        "bytes": 22514
+       },
+       "720": {
+        "path": "assets/v3/img/carta-sangria-a-720.webp",
+        "bytes": 37328
+       },
+       "960": {
+        "path": "assets/v3/img/carta-sangria-a-960.webp",
+        "bytes": 51256
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-coquette": {
+   "ref": "P074",
+   "src": "assets/raw/ig/C9xrKP8Jehi_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Una clienta sonriente recibe un trago rosado y cremoso con flores.",
+    "en": "A smiling guest receives a creamy pink drink topped with flowers."
+   },
+   "credit": {
+    "post": "IG-096",
+    "date": "2024-07-23",
+    "url": "https://www.instagram.com/p/C9xrKP8Jehi/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "A veces me pongo Coquette",
+   "source_size": [
+    1067,
+    1067
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      62,
+      50
+     ],
+     "box": [
+      213,
+      0,
+      1067,
+      1067
+     ],
+     "crop_size": [
+      854,
+      1067
+     ],
+     "width": 854,
+     "height": 1067,
+     "widths": [
+      360,
+      480,
+      720,
+      854
+     ],
+     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACwBQCdASoTABgAPwF0sFKrJqSiqAqpYCAJbACdMyX4xtAA70e/mkXmReTg3dC7UOzN9/znIAAA/uXPOr8FWQmyi4CYYC1VW9tweXS5vgcsIYbiYcZHoWVxoqy7U1FzyoheHs7TJh4uhu+PIG3YsoQ6PW02EYR4QKFAW3/pWyyPXNDddrqhGxjoekXVOivK4SecHrWOqooEjnZSwsycDkLbLga/PWeC9cAAAA==",
+     "color": "#864124",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-coquette-a-360.avif",
+        "bytes": 6997
+       },
+       "480": {
+        "path": "assets/v3/img/carta-coquette-a-480.avif",
+        "bytes": 9695
+       },
+       "720": {
+        "path": "assets/v3/img/carta-coquette-a-720.avif",
+        "bytes": 15874
+       },
+       "854": {
+        "path": "assets/v3/img/carta-coquette-a-854.avif",
+        "bytes": 20385
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-coquette-a-360.webp",
+        "bytes": 10518
+       },
+       "480": {
+        "path": "assets/v3/img/carta-coquette-a-480.webp",
+        "bytes": 14096
+       },
+       "720": {
+        "path": "assets/v3/img/carta-coquette-a-720.webp",
+        "bytes": 22346
+       },
+       "854": {
+        "path": "assets/v3/img/carta-coquette-a-854.webp",
+        "bytes": 27660
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-moto": {
+   "ref": "P336",
+   "src": "assets/raw/ig/DaquSYCofM8_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Mocktail naranja de mango y maracuyá con borde de sal y una rodaja de pepino.",
+    "en": "An orange mango-passion fruit mocktail with a salted rim and a cucumber slice."
+   },
+   "credit": {
+    "post": "IG-011",
+    "date": "2026-07-11",
+    "url": "https://www.instagram.com/p/DaquSYCofM8/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "La moto chantá",
+   "source_size": [
+    1600,
+    2000
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      0,
+      1600,
+      2000
+     ],
+     "crop_size": [
+      1600,
+      2000
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoTABgAPwF0sFKrJqSiqAqpYCAJbACdL8KkDl/wBYi10JLgY9Kwvaap3TSkpHVAAPa9Vf054+IFUTBTMZEoxJc6mdb6+WXFBsi2UHlzkLd8ZWQFkHxJO6ljGUKTujDoxWHgOaZlqkaXCTVZqaZhN6YbOoKPgOdhz28YhdSEBXy1PDLYxloUvKAOnRXteBzL5uoPkZdyiotOn9gd1uGAAA==",
+     "color": "#965e2b",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-moto-a-360.avif",
+        "bytes": 7204
+       },
+       "480": {
+        "path": "assets/v3/img/carta-moto-a-480.avif",
+        "bytes": 10254
+       },
+       "720": {
+        "path": "assets/v3/img/carta-moto-a-720.avif",
+        "bytes": 16249
+       },
+       "960": {
+        "path": "assets/v3/img/carta-moto-a-960.avif",
+        "bytes": 23424
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-moto-a-360.webp",
+        "bytes": 10394
+       },
+       "480": {
+        "path": "assets/v3/img/carta-moto-a-480.webp",
+        "bytes": 14378
+       },
+       "720": {
+        "path": "assets/v3/img/carta-moto-a-720.webp",
+        "bytes": 23570
+       },
+       "960": {
+        "path": "assets/v3/img/carta-moto-a-960.webp",
+        "bytes": 33504
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-tukulito": {
+   "ref": "P044",
+   "src": "assets/raw/ig/CsXCLdZpgB7_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Tataki de atún sellado en láminas con pan tostado y salsa, en plato de vidrio.",
+    "en": "Sliced seared tuna tataki with toasted bread and sauce on a glass plate."
+   },
+   "credit": {
+    "post": "IG-139",
+    "date": "2023-05-17",
+    "url": "https://www.instagram.com/p/CsXCLdZpgB7/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Tukulito Sakayama",
+   "source_size": [
+    852,
+    852
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      852,
+      852
+     ],
+     "crop_size": [
+      852,
+      852
+     ],
+     "width": 852,
+     "height": 852,
+     "widths": [
+      360,
+      480,
+      720,
+      852
+     ],
+     "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBQCdASoYABgAPwFysFIrJqSiqAqpYCAJZgCdMzQ00BULJaFSJDYufZmU4MVJkYE4iH28/oAA+Mq+nYtMtZEvYPVFUR2c/MF3EZ1z34CO/00wbi47yhlwxDsxUXoddZf1qWX1zvC4+lTXpQVL5fvlSmjUg/AA8u/m16lbV7oItjaocZjNz8Pbvc2whxYGarkiVYAA",
+     "color": "#b89285",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-tukulito-a-360.avif",
+        "bytes": 12055
+       },
+       "480": {
+        "path": "assets/v3/img/carta-tukulito-a-480.avif",
+        "bytes": 17377
+       },
+       "720": {
+        "path": "assets/v3/img/carta-tukulito-a-720.avif",
+        "bytes": 29189
+       },
+       "852": {
+        "path": "assets/v3/img/carta-tukulito-a-852.avif",
+        "bytes": 36116
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-tukulito-a-360.webp",
+        "bytes": 19218
+       },
+       "480": {
+        "path": "assets/v3/img/carta-tukulito-a-480.webp",
+        "bytes": 27350
+       },
+       "720": {
+        "path": "assets/v3/img/carta-tukulito-a-720.webp",
+        "bytes": 44620
+       },
+       "852": {
+        "path": "assets/v3/img/carta-tukulito-a-852.webp",
+        "bytes": 53084
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-contuti": {
+   "ref": "P158",
+   "src": "assets/raw/ig/DEVtFfySKVY_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Tabla para compartir vista desde arriba: quesos, jamón, aceitunas, frutos secos y naranja.",
+    "en": "A sharing board from above: cheeses, ham, olives, nuts and orange."
+   },
+   "credit": {
+    "post": "IG-066",
+    "date": "2025-01-02",
+    "url": "https://www.instagram.com/p/DEVtFfySKVY/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Con tuti si no pa qué!",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADQBQCdASoTABgAPwFwrVErJiQiqA1RYCAJbACdMtU0kLWkqgGUI1BVhYDit/eBEHPkF9w9nAsAAPi9cx92+LQ9lroNvrTUDxFDhDm9iOA+x7LV//t4XrHRu1oTx1h7KzuCf6OuQ11U7Rq4Dv08bY+wxHVirWc5KbIa5+AdRlNFDAiRT5ikg9IJ/BIoKffSKovFOrQIS12ieA3gnnfIevatTvPAAA==",
+     "color": "#d28638",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-contuti-a-360.avif",
+        "bytes": 15836
+       },
+       "480": {
+        "path": "assets/v3/img/carta-contuti-a-480.avif",
+        "bytes": 22558
+       },
+       "720": {
+        "path": "assets/v3/img/carta-contuti-a-720.avif",
+        "bytes": 37101
+       },
+       "960": {
+        "path": "assets/v3/img/carta-contuti-a-960.avif",
+        "bytes": 51284
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-contuti-a-360.webp",
+        "bytes": 25434
+       },
+       "480": {
+        "path": "assets/v3/img/carta-contuti-a-480.webp",
+        "bytes": 35472
+       },
+       "720": {
+        "path": "assets/v3/img/carta-contuti-a-720.webp",
+        "bytes": 57288
+       },
+       "960": {
+        "path": "assets/v3/img/carta-contuti-a-960.webp",
+        "bytes": 77124
+       }
+      }
+     }
+    }
+   }
+  },
+  "carta-camaron": {
+   "ref": "P099",
+   "src": "assets/raw/ig/DAbw0xKSimd_00.jpg",
+   "section": "carta",
+   "alt": {
+    "es": "Cazuela negra con camarones y champiñones en salsa cremosa.",
+    "en": "A black clay dish of prawns and mushrooms in a creamy sauce."
+   },
+   "credit": {
+    "post": "IG-077",
+    "date": "2024-09-27",
+    "url": "https://www.instagram.com/p/DAbw0xKSimd/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "carta_item": "Camarón que se duerme",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 960,
+     "height": 1200,
+     "widths": [
+      360,
+      480,
+      720,
+      960
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBQCdASoTABgAPwF0rlKrJqOiqAqpYCAJbACdMoRwMNKBMHgjzE2gCUA+VoBr5EfOKifP3UAAAP7sHu4YhJIqOC/X0IuQSyXuFe33ryZimLumXPxRluBPjvqupz9sFi/Wck8T3ReLEcxrPqGmMSZsf/4CLrXT4v9mFZYbQ/BLx5NsZemEMkOppu8Xpak5OZIZDd1u0E8e6a73iJpfEqRXtq0lkYKQqPLn4u9kAAA=",
+     "color": "#79491c",
+     "files": {
+      "avif": {
+       "360": {
+        "path": "assets/v3/img/carta-camaron-a-360.avif",
+        "bytes": 11938
+       },
+       "480": {
+        "path": "assets/v3/img/carta-camaron-a-480.avif",
+        "bytes": 17453
+       },
+       "720": {
+        "path": "assets/v3/img/carta-camaron-a-720.avif",
+        "bytes": 28489
+       },
+       "960": {
+        "path": "assets/v3/img/carta-camaron-a-960.avif",
+        "bytes": 41151
+       }
+      },
+      "webp": {
+       "360": {
+        "path": "assets/v3/img/carta-camaron-a-360.webp",
+        "bytes": 20290
+       },
+       "480": {
+        "path": "assets/v3/img/carta-camaron-a-480.webp",
+        "bytes": 28414
+       },
+       "720": {
+        "path": "assets/v3/img/carta-camaron-a-720.webp",
+        "bytes": 45094
+       },
+       "960": {
+        "path": "assets/v3/img/carta-camaron-a-960.webp",
+        "bytes": 63236
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-milagros": {
+   "ref": "P391",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_00.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Una garzona del equipo sonríe mientras atiende una mesa, con abanicos de papel de colores detrás.",
+    "en": "A member of the floor team smiles while serving a table, colourful paper fans behind her."
+   },
+   "credit": {
+    "post": "IG-001",
+    "date": "2026-10-07",
+    "url": "https://www.instagram.com/p/DeNQ8A2lDgg/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@milagroosjm"
+   },
+   "handle": "@milagroosjm",
+   "tag_src": "IG-001 #1",
+   "source_size": [
+    1067,
+    1067
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      42,
+      45
+     ],
+     "box": [
+      21,
+      0,
+      875,
+      1067
+     ],
+     "crop_size": [
+      854,
+      1067
+     ],
+     "width": 854,
+     "height": 1067,
+     "widths": [
+      480,
+      720,
+      854
+     ],
+     "lqip": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoTABgAPwF4s1OrJySiqAgBYCAJbCzwAvnYtMDY+gm2D5DLSjDpBjVB6dqtCluaMjAA/vDTX55qkOTnXrQqUf895fKU+8Sgue/yHG2XEZeyObCOY2kBgfzPIPhf+o/5fie7F/cc9f/sAo74XLzVRYX2xI/+/6nAZ4p09tb9WmwQRLjWzei1hLguk+0c6QL0Co2QlUu37Kq2VArtXmkAKVhC3EqELaDTaPc7JC9pH5NxpP5eTFyDRf7S/2K9tCFr0YKzjMe6BKPNmcg3r4alWW3fQAA=",
+     "color": "#4d2010",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-milagros-a-480.avif",
+        "bytes": 15441
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-milagros-a-720.avif",
+        "bytes": 25190
+       },
+       "854": {
+        "path": "assets/v3/img/equipo-milagros-a-854.avif",
+        "bytes": 31694
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-milagros-a-480.webp",
+        "bytes": 24034
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-milagros-a-720.webp",
+        "bytes": 37090
+       },
+       "854": {
+        "path": "assets/v3/img/equipo-milagros-a-854.webp",
+        "bytes": 44944
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-javier": {
+   "ref": "P392",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_01.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Un bartender del equipo sirve concentrado frente al muro rojo de botellas y el cartel ALMUD.",
+    "en": "A bartender from the team pours, focused, in front of the red bottle wall and the ALMUD sign."
+   },
+   "credit": {
+    "post": "IG-001",
+    "date": "2026-10-07",
+    "url": "https://www.instagram.com/p/DeNQ8A2lDgg/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@javier.agmc"
+   },
+   "handle": "@javier.agmc",
+   "tag_src": "IG-001 #2",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      52,
+      32
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAABwBQCdASoTABgAPwF4s1OrJySiqAgBYCAJbACdIFzBcyrVKeSuKR+RLQu5bxV3aHZDP3AAAPqQuTMBZXc4I4L1Wjtg7oo4ZchxppTBXcgmsS+Hri8QfDffbzQBO5OJbot5icBNzducBQxm+JwuMJbuLWIQTGQV3zj6/4rea4oFmbWqJWHmLKlLZOYhJungaAw3pgQAE8Jy6j6ORZImbxH6FJZz+1TrizvB1ZdWL+Fxu3wrYmg3OqHFEIAAAA==",
+     "color": "#91453d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-javier-a-480.avif",
+        "bytes": 25914
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-javier-a-720.avif",
+        "bytes": 44326
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-javier-a-960.avif",
+        "bytes": 64072
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-javier-a-1280.avif",
+        "bytes": 93074
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-javier-a-1440.avif",
+        "bytes": 109191
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-javier-a-480.webp",
+        "bytes": 44502
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-javier-a-720.webp",
+        "bytes": 73152
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-javier-a-960.webp",
+        "bytes": 102648
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-javier-a-1280.webp",
+        "bytes": 144224
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-javier-a-1440.webp",
+        "bytes": 168136
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-eduardo": {
+   "ref": "P393",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Un garzón del equipo, tatuado, con camisa estampada y gorro, lleva un plato al salón.",
+    "en": "A tattooed server from the team, in a patterned shirt and cap, carries a plate to the room."
+   },
+   "credit": {
+    "post": "IG-001",
+    "date": "2026-10-07",
+    "url": "https://www.instagram.com/p/DeNQ8A2lDgg/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@eduu.ardoo"
+   },
+   "handle": "@eduu.ardoo",
+   "tag_src": "IG-001 #3",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      32
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABwBQCdASoTABgAPwF2s1OrJySiqAgBYCAJbACdMoPNJAwXgS/4WWAeqBu+bEwXym6HSygAAP7sJOU8mIYP/nhaqHnDSl2l30w+woGfX7e4WUFmHYyETZvxqCweuAdRmfd9/8+FgyoewkzvTehEA8EjqwjEePjYwzeO/Ly8h2DCMGneFowicRGDXCe4+W0JTsowUk3PNw/SA9xxgTTAb/9J+epf4hshT/lBYYkAo442AAAA",
+     "color": "#743729",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-eduardo-a-480.avif",
+        "bytes": 24936
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-eduardo-a-720.avif",
+        "bytes": 41451
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-eduardo-a-960.avif",
+        "bytes": 60454
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-eduardo-a-1280.avif",
+        "bytes": 90447
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-eduardo-a-1440.avif",
+        "bytes": 112045
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-eduardo-a-480.webp",
+        "bytes": 39106
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-eduardo-a-720.webp",
+        "bytes": 66188
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-eduardo-a-960.webp",
+        "bytes": 93798
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-eduardo-a-1280.webp",
+        "bytes": 148080
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-eduardo-a-1440.webp",
+        "bytes": 192390
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-liz": {
+   "ref": "P078",
+   "src": "assets/raw/ig/C-8zPyOp_4r_00.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Una garzona del equipo, rubia, sonríe mientras deja un trago en la mesa.",
+    "en": "A blonde server from the team smiles as she sets a drink on the table."
+   },
+   "credit": {
+    "post": "IG-088",
+    "date": "2024-08-21",
+    "url": "https://www.instagram.com/p/C-8zPyOp_4r/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@lizzearellano"
+   },
+   "handle": "@lizzearellano",
+   "tag_src": "IG-001 #4 (retrato en luz violeta); este es IG-088, que la nombra",
+   "note": "Se prefiere IG-088 (luz cálida) al retrato violeta de IG-001 #4.",
+   "source_size": [
+    1334,
+    1667
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1334,
+      1667
+     ],
+     "crop_size": [
+      1334,
+      1667
+     ],
+     "width": 1280,
+     "height": 1600,
+     "widths": [
+      480,
+      720,
+      960,
+      1280
+     ],
+     "lqip": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABwBQCdASoTABgAPwFyrFGrJqQiqA1RYCAJYgC1GxqAAAPYU4RLBgktHvzLsUqoDXnnA/BAAP7CPYCmNU8Gp/HFPnoksw23D5yCDtBb6/YBdG0hNI2E3y9ebNUdIiGhTcznruIRmH12RiMeuhLcAuo6SY+hLEsVqduHGlxToFQxuG/D2XH638w1ed8Etjg/JwCy9Fc0Fw1jpenk55Fw8xB5q9EZ8AAA",
+     "color": "#4b2e22",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-liz-a-480.avif",
+        "bytes": 13869
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-liz-a-720.avif",
+        "bytes": 22137
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-liz-a-960.avif",
+        "bytes": 31528
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-liz-a-1280.avif",
+        "bytes": 46211
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-liz-a-480.webp",
+        "bytes": 21182
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-liz-a-720.webp",
+        "bytes": 32948
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-liz-a-960.webp",
+        "bytes": 45892
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-liz-a-1280.webp",
+        "bytes": 64634
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-pablete": {
+   "ref": "P251",
+   "src": "assets/raw/ig/DUbvJQJCMV2_00.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Un bartender del equipo, con barba, ríe mientras bate la coctelera frente al muro rosa.",
+    "en": "A bearded bartender from the team laughs as he shakes a cocktail by the pink wall."
+   },
+   "credit": {
+    "post": "IG-034",
+    "date": "2026-02-06",
+    "url": "https://www.instagram.com/p/DUbvJQJCMV2/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@pablete_bartender_"
+   },
+   "handle": "@pablete_bartender_",
+   "tag_src": "IG-001 #5; este es IG-034, que lo nombra",
+   "note": "IG-001 #5 es un repost de 1067 px (original P109, 2024); IG-034 (feb-2026) es más nuevo y de 1440 px.",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACwBQCdASoTABgAPwF2s1QrJySjKAgBYCAJbACdMzQ1xfzAIH+4zs99BSjaIvRxY7hpO6BCXnwA/qr3ncVczGq3J8XyvufJIuntwo/INZ5OVWPFS4yF0np5eswcf3yqmB6VxIqJftBNbywu6BKBYu2hpaOXtxTMwxFTaif8Dx7y+ZuNcFLSw1Kd+MvJy8Plj88RDpR400h3CQcK80yXBtYwUGML0ykucp2DAf5OEJ/ixubYxQ/8C/aN7nCqT+k9jp91ge+cX7PJ9kAAAAA=",
+     "color": "#903923",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-pablete-a-480.avif",
+        "bytes": 20813
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-pablete-a-720.avif",
+        "bytes": 34164
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-pablete-a-960.avif",
+        "bytes": 46729
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-pablete-a-1280.avif",
+        "bytes": 66051
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-pablete-a-1440.avif",
+        "bytes": 75589
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-pablete-a-480.webp",
+        "bytes": 31628
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-pablete-a-720.webp",
+        "bytes": 51664
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-pablete-a-960.webp",
+        "bytes": 68802
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-pablete-a-1280.webp",
+        "bytes": 96960
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-pablete-a-1440.webp",
+        "bytes": 111344
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-elymar": {
+   "ref": "P396",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_05.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Una garzona del equipo sonríe frente al muro rosa, con delantal de Almud.",
+    "en": "A server from the team smiles by the pink wall, wearing an Almud apron."
+   },
+   "credit": {
+    "post": "IG-001",
+    "date": "2026-10-07",
+    "url": "https://www.instagram.com/p/DeNQ8A2lDgg/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@elymar_bocarejo"
+   },
+   "handle": "@elymar_bocarejo",
+   "tag_src": "IG-001 #6",
+   "status": "por-confirmar",
+   "note": "Su única foto lleva tiara y alas (disfraz). Carmen no acepta disfraces fuera de Eventos: confirmar con ella o pedir otro retrato. El recorte 4:5 no elimina la tiara.",
+   "source_size": [
+    1128,
+    1504
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ],
+     "box": [
+      0,
+      0,
+      1128,
+      1410
+     ],
+     "crop_size": [
+      1128,
+      1410
+     ],
+     "width": 1128,
+     "height": 1410,
+     "widths": [
+      480,
+      720,
+      960,
+      1128
+     ],
+     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoTABgAPwF4s1OrJySiqAgBYCAJZgC/aoABepp8QC50QP78sHFx8aiUljwGASYA/hiJKsfuKvePTRIX3EOA4mC1nhZbjY0/MYddJGyrcNC2LpSuGe+Wbm/I3MV/vJvPzDoiU6HZvqraFqoZTdjjheCOB+bVo33t/SmXOwv1tHiE/OO1ghzckEmiGKJisegAAAA=",
+     "color": "#522a43",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-elymar-a-480.avif",
+        "bytes": 18911
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-elymar-a-720.avif",
+        "bytes": 34575
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-elymar-a-960.avif",
+        "bytes": 54534
+       },
+       "1128": {
+        "path": "assets/v3/img/equipo-elymar-a-1128.avif",
+        "bytes": 70050
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-elymar-a-480.webp",
+        "bytes": 26618
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-elymar-a-720.webp",
+        "bytes": 46570
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-elymar-a-960.webp",
+        "bytes": 73708
+       },
+       "1128": {
+        "path": "assets/v3/img/equipo-elymar-a-1128.webp",
+        "bytes": 93666
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-duo": {
+   "ref": "P333",
+   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "Dos garzonas del equipo sonríen con corbata, jockey y delantal.",
+    "en": "Two servers from the team smile in ties, caps and aprons."
+   },
+   "credit": {
+    "post": "IG-014",
+    "date": "2026-07-03",
+    "url": "https://www.instagram.com/p/DaWM8rlo1FR/",
+    "account": "@almud_bar",
+    "text": "@almud_bar",
+    "person": "@milagroosjm @lizzearellano"
+   },
+   "handle": "@milagroosjm @lizzearellano",
+   "tag_src": "IG-014 (jul-2026)",
+   "note": "Equipo actual confirmado por IG-014 y IG-001; foto grupal segura (alta resolución).",
+   "source_size": [
+    3219,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "box": [
+      0,
+      0,
+      3219,
+      4024
+     ],
+     "crop_size": [
+      3219,
+      4024
+     ],
+     "width": 1920,
+     "height": 2400,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADwBQCdASoTABgAPwF0r1KrJqQiqAqpYCAJbACdMoR6eK7BN6Vbml1tcLKOKX3ev4UfBul/PKtGgAD+o2sha8lDLh/yKdw5RQxkr8EtLAZMRN8vIVVA5PtH7HqQCVLhmPoBRtUPVTfu4XPVq1caeh0ruwglATZeioCOXqTp/CTcWlzQ7hNP8IsIKFPquGVydcvQDCE0//qXfn6Jl8kcactnMskYkwAKrSEXTFYEtlFOMAAA",
+     "color": "#673c32",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-duo-a-480.avif",
+        "bytes": 21938
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-duo-a-720.avif",
+        "bytes": 37975
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-duo-a-960.avif",
+        "bytes": 54152
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-duo-a-1280.avif",
+        "bytes": 77770
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-duo-a-1440.avif",
+        "bytes": 90706
+       },
+       "1920": {
+        "path": "assets/v3/img/equipo-duo-a-1920.avif",
+        "bytes": 135465
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-duo-a-480.webp",
+        "bytes": 34634
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-duo-a-720.webp",
+        "bytes": 56296
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-duo-a-960.webp",
+        "bytes": 78798
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-duo-a-1280.webp",
+        "bytes": 111558
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-duo-a-1440.webp",
+        "bytes": 130606
+       },
+       "1920": {
+        "path": "assets/v3/img/equipo-duo-a-1920.webp",
+        "bytes": 202824
+       }
+      }
+     }
+    },
+    "d": {
+     "ratio": "3:2",
+     "focal": [
+      50,
+      32
+     ],
+     "box": [
+      0,
+      237,
+      3219,
+      2383
+     ],
+     "crop_size": [
+      3219,
+      2146
+     ],
+     "width": 1920,
+     "height": 1280,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440,
+      1920
+     ],
+     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoYABAAPwForE6rJaQiMAgBYCAJbACdMoRwACmZH/szTwkjkAD+firCx4++5PDIGv2HSsGevnglzDpIgnsY7aRusJgLea+Nx1AAqwKdI9BaiAlw04QR6uSLsLd8psy4PUKE78VVzbbaSSc6v+gOgK7iLW0lVQAA",
+     "color": "#633e33",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-duo-d-480.avif",
+        "bytes": 11519
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-duo-d-720.avif",
+        "bytes": 20188
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-duo-d-960.avif",
+        "bytes": 28569
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-duo-d-1280.avif",
+        "bytes": 41611
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-duo-d-1440.avif",
+        "bytes": 47774
+       },
+       "1920": {
+        "path": "assets/v3/img/equipo-duo-d-1920.avif",
+        "bytes": 71072
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-duo-d-480.webp",
+        "bytes": 17832
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-duo-d-720.webp",
+        "bytes": 29752
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-duo-d-960.webp",
+        "bytes": 41692
+       },
+       "1280": {
+        "path": "assets/v3/img/equipo-duo-d-1280.webp",
+        "bytes": 59764
+       },
+       "1440": {
+        "path": "assets/v3/img/equipo-duo-d-1440.webp",
+        "bytes": 67370
+       },
+       "1920": {
+        "path": "assets/v3/img/equipo-duo-d-1920.webp",
+        "bytes": 103800
+       }
+      }
+     }
+    }
+   }
+  },
+  "equipo-grupo": {
+   "ref": "P077",
+   "src": "assets/raw/ig/C-bY0mLNYRz_00.jpg",
+   "section": "equipo",
+   "alt": {
+    "es": "El equipo de Almud reunido tras la barra, frente al muro rosa de botellas.",
+    "en": "The Almud team gathered behind the bar, in front of the pink bottle wall."
+   },
+   "credit": {
+    "post": "IG-091",
+    "date": "2024-08-08",
+    "url": "https://www.instagram.com/p/C-bY0mLNYRz/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "status": "por-confirmar",
+   "note": "«Estuvimos todo el equipo juntos» (10 años, ago-2024, 1207 px). Puede incluir exempleados: Carmen confirma; si no, el grupo es equipo-duo.",
+   "source_size": [
+    1207,
+    805
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1207:805",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      1207,
+      805
+     ],
+     "crop_size": [
+      1207,
+      805
+     ],
+     "width": 1207,
+     "height": 805,
+     "widths": [
+      480,
+      720,
+      960,
+      1207
+     ],
+     "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwAwCdASoYABAAPwFqrE8rJiQiMAgBYCAJbACdMoMjbB77B0t3cco4APP8XgwGLzsEa4Qz19ndFjLK2+IcFPmWsA5LgjeJfS0H9zBCU9J5v3YTP53dtr8Px70GJYozTTVlkI5eOeDwKgT3ydgFfzMNkLFSo8LXpS1yzQWcvrCegAAA",
+     "color": "#a95838",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/v3/img/equipo-grupo-a-480.avif",
+        "bytes": 25296
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-grupo-a-720.avif",
+        "bytes": 43925
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-grupo-a-960.avif",
+        "bytes": 63819
+       },
+       "1207": {
+        "path": "assets/v3/img/equipo-grupo-a-1207.avif",
+        "bytes": 84357
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/v3/img/equipo-grupo-a-480.webp",
+        "bytes": 43026
+       },
+       "720": {
+        "path": "assets/v3/img/equipo-grupo-a-720.webp",
+        "bytes": 74472
+       },
+       "960": {
+        "path": "assets/v3/img/equipo-grupo-a-960.webp",
+        "bytes": 108412
+       },
+       "1207": {
+        "path": "assets/v3/img/equipo-grupo-a-1207.webp",
+        "bytes": 135962
+       }
+      }
+     }
+    }
+   }
+  }
+ },
  "videos": {
   "portada-celular": {
    "ref": "V021",

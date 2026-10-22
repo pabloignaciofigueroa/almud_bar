@@ -28,3 +28,4 @@
 - 2026-10-21 v3 fase 5: logos vectoriales limpios, favicon legible, og.jpg + og-carta.jpg, simulación WhatsApp
 - 2026-10-21 v3 fase 2 cerrada: titulares aprobados por Carmen (02-titulares-aprobados.md). Bloque A completo.
 - 2026-10-21 v3 fase 6: guion copy-v3.md (149 palabras, 116 literales OK); pendiente: sillones como rincón (pedido original de Pablo) y aprobación de Carmen
+- 2026-10-21 v3 fase 7: medios (45 imágenes, 6 loops, media.json, 07-medios.jpg)

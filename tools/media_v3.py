@@ -402,7 +402,7 @@ def qa():
         by[e['section']].append(('v', i, e))
     for i, e in media['images'].items():
         by[e['section']].append(('i', i, e))
-    CH, PAD, LAB, MAXW = 300, 12, 58, 2600
+    CH, PAD, LAB, MAXW = 300, 14, 74, 2600
     blocks = []
     for s in SECTIONS:
         cells = []
@@ -410,16 +410,16 @@ def qa():
             if kind == 'v':
                 im = Image.open(os.path.join(ROOT, e['poster']['jpg']['path'])).convert('RGB')
                 l1 = f"▶ {i}" + (f" ({e.get('variant')})" if e.get('variant') else '')
-                l2 = (f"{e['ref']} · {e['width']}x{e['height']} · {e['duration']} s {e['loop']} · "
-                      f"webm {K(e['files']['webm']['bytes'])} / mp4 {K(e['files']['mp4']['bytes'])} KB")
+                l2 = (f"{e['ref']} · {e['width']}x{e['height']} · {e['duration']} s {e['loop']}\n"
+                      f"webm {K(e['files']['webm']['bytes'])} / mp4 {K(e['files']['mp4']['bytes'])} KB · póster {K(e['poster']['avif']['bytes'])} KB")
                 cells.append((im, l1, l2, e.get('status'), True))
             else:
                 for cn, c in e['crops'].items():
                     w = str(c['width'])
                     im = Image.open(os.path.join(ROOT, c['files']['webp'][w]['path'])).convert('RGB')
                     tag = e.get('evento') or e.get('handle') or e.get('rincon') or e.get('carta_item') or ''
-                    l1 = f"{i} [{cn}]" + (f" · {tag}" if tag else '')
-                    l2 = f"{e['ref']} · {c['width']}x{c['height']} · avif {K(c['files']['avif'][w]['bytes'])} KB"
+                    l1 = f"{i} [{cn}]"
+                    l2 = (f"{tag}\n" if tag else '') + f"{e['ref']} · {c['width']}x{c['height']} · avif {K(c['files']['avif'][w]['bytes'])} KB"
                     cells.append((im, l1, l2, e.get('status'), False))
         blocks.append((SEC_NAME[s], cells))
     # maquetar
@@ -429,7 +429,7 @@ def qa():
         x, row = PAD, []
         for c in cells:
             im = c[0].copy(); im.thumbnail((CH * 2, CH))
-            w = max(im.width, 250)
+            w = max(im.width, 300)
             if x + w > MAXW - PAD and row:
                 rows_layout.append(('r', row, y)); y += CH + LAB + PAD; x, row = PAD, []
             row.append((x, im) + c[1:]); x += w + PAD
@@ -448,8 +448,11 @@ def qa():
                 d.rectangle((x, yy, x + im.width - 1, yy + im.height - 1), outline='#2aa1f8', width=4)
             if status:
                 d.rectangle((x, yy, x + 150, yy + 22), fill='#f24350'); d.text((x + 6, yy + 3), status.upper(), fill='#160d0b', font=small)
-            d.text((x, yy + CH + 6), l1, fill='#f5e9db', font=font)
-            d.text((x, yy + CH + 28), l2, fill='#c8af9c', font=small)
+            cw = max(im.width, 300)
+            fit = lambda t, f: t if d.textlength(t, font=f) <= cw else fit(t[:-2], f) if len(t) > 3 else t
+            d.text((x, yy + CH + 6), fit(l1, font), fill='#f5e9db', font=font)
+            for k, line in enumerate(l2.split('\n')):
+                d.text((x, yy + CH + 28 + 17 * k), fit(line, small), fill='#c8af9c', font=small)
     sheet.save(QA_JPG, quality=80, optimize=True, progressive=True)
     print('hoja', rel(QA_JPG), sheet.size, os.path.getsize(QA_JPG) // 1024, 'KB')
     table(media)
