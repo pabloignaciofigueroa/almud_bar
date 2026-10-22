@@ -168,6 +168,7 @@ body = f'''
 <section class="lugar" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "We're restless and we love colour!", 'h-lugar')}</div>
+    {pic('lugar-sillones', 's', '22vw', 'lugar__x reveal', speed='0.22')}
     {vid('lugar-cintas', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
   <div class="rincones" data-h>
@@ -267,6 +268,7 @@ body = f'''
     </dl>
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
+      <a class="btn btn--ghost" href="{MAPS}" target="_blank" rel="noopener" data-en="Get directions">Cómo llegar</a>
     </div>
   </div>
 </section>

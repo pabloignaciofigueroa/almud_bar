@@ -1,0 +1,168 @@
+# Dirección de arte v3 · Almud Bar
+
+Fase 8 del plan v3. Manda sobre `brand/art-direction.md` (v1).
+Boceto funcional: `v3/index.html` + `css/v3/site.css` + `js/v3/site.js` (generado por `tools/boceto_v3.py` desde `assets/v3/media.json`).
+Capturas: `_plan/v3/boceto/` · hojas `_plan/v3/08-boceto-390.jpg` y `_plan/v3/08-boceto-1440.jpg`.
+
+## Idea
+
+**Entrar a Almud un viernes.** La puerta es el almud: su boca se abre y adentro está el bar encendido. Después, el recorrido es el del cliente: el lugar, la barra (tragos), la cocina, la gente, las fiestas, el equipo, lo que dicen de nosotros y cómo llegar.
+
+- La noche marrón (`--noche`) es el piso; el color lo ponen las fotos y los videos, no la interfaz.
+- Tres pantallas cambian de luz, como cuando uno pasa de una sala a otra: **muro** (Tragos), **noche-2 con ámbar** (Comida) y **tinta** (Eventos).
+- Texto mínimo: 1 titular literal por pantalla, todo de `content/copy-v3.md`. Las fotos y los loops hablan.
+- Nada de flecos dibujados, polaroids, pinzas decorativas, rotaciones, emojis ni Six Caps. El logo es siempre SVG (`brand/v3/*-claro.svg`).
+
+## El momento memorable (uno solo)
+
+**El isotipo que se abre al video**, al cargar (no depende del scroll):
+
+1. 0,0–0,8 s: sobre negro se dibujan las líneas del isotipo (trazo papel, `stroke-dashoffset`).
+2. 0,5–1,05 s: la **boca del almud** (el rombo interior) se llena con el video de portada que ya está corriendo.
+3. 1,0–2,05 s: la boca se abre hasta la pantalla completa (`clip-path` de 8 vértices, `expo.inOut`), mientras las líneas del isotipo pasan "por al lado de la cámara" (escala 5,5 y se desvanecen). Sin texto encima.
+4. 1,7–2,6 s: entra el logotipo con máscara de izquierda a derecha, luego el claim y el botón.
+
+Duración total ≈ 2,6 s. Con `prefers-reduced-motion` o sin JS no hay intro: la portada aparece tal cual. Si el JS falla, un respaldo CSS deja todo visible a los 3,6 s. Por qué esta idea y no otra: el almud es la medida chilota que le da nombre al bar, y su boca abierta es literalmente "lo que se llena": la única vez que la marca se anima, y lo hace para dejar ver el bar real.
+
+## Sistema de movimiento
+
+| Pieza | Qué hace | Curva / tiempo |
+|---|---|---|
+| Titulares | cada palabra sube desde una máscara (`yPercent 110 → 0`), una vez | `expo.out` 1,05 s, desfase 0,045 s |
+| Fotos y loops | revelado con máscara de abajo hacia arriba (`clip-path inset`) + la imagen baja de escala 1,18 → 1 | `expo.out` 1,15 s / 1,6 s |
+| Textos chicos | suben 26 px y aparecen | `expo.out` 0,9 s |
+| Parallax (≥768 px) | masas a distinta velocidad con `data-speed` (−0,16 … +0,22) | `scrub`, lineal |
+| El lugar (≥1024 px) | galería horizontal en un contenedor **sticky** (sin pin): el scroll vertical la desplaza | `scrub .6` |
+| El lugar, Equipo, Reseñas (celular) | carrusel con el dedo (`scroll-snap`), nunca atado al scroll | nativo |
+| Hover (escritorio) | la foto crece 4 % | `cubic-bezier(.16,1,.3,1)` 1,1 s |
+
+- Lenis solo con mouse/trackpad; en táctil, scroll nativo. `ScrollTrigger` sincronizado con Lenis; nada de `pin`.
+- **Videos**: `autoplay muted loop playsinline` + póster. El JS solo les pone la fuente (portada: la variante visible, `portada-celular` <768 px y `portada-escritorio` ≥768 px; el resto al evento `load`). Nunca se pausan ni se reproducen por scroll ni por `IntersectionObserver`.
+- Todo se anima con `transform`, `opacity` y `clip-path`: CLS medido = 0.
+
+## Ritmo pantalla por pantalla
+
+Alto medido: celular 390×844 ≈ **11,5 pantallas**; escritorio 1440×900 ≈ 14,7 (incluye el recorrido de la galería sticky).
+
+### Celular (390 px)
+
+```
+┌──────────────────────┐ 1 PORTADA · noche · 100svh
+│ (isotipo→video)  CARTA EN│ video portada-celular (muro rosa de botellas)
+│                      │
+│ ALMUD BAR [iso]      │ logotipo SVG claro
+│ Coctelería de autor… │ claim [BIO]
+│          [VER LA CARTA]│ botón rosa a la derecha
+└──────────────────────┘
+┌──────────────────────┐ 2 EL LUGAR · noche · ~1,5 pant.
+│ SOMOS INQUIETOS Y    │ titular 44 px, 3 líneas
+│ NOS GUSTA EL COLORSSSS!│
+│ ▓▓ loop cintas 4:5 ▓▓│ lugar-cintas
+│ [barra][techada][…]→ │ swipe: Barra · Terraza techada · (salón) ·
+│ BARRA / línea        │ Terraza · Lámparas · Ojo Piojo
+└──────────────────────┘
+┌──────────────────────┐ 3 TRAGOS · muro #a8222d · ~1,5 pant.
+│ MUCHO AMOR, COLOR Y  │
+│ TRABAJO              │
+│ ▓ loop humo 4:5 ▓    │ = «Aquí te las traigo Peter» $ 6.700
+│ [Sagüer] [Sangría↓]  │ 2 tarjetas desfasadas
+│ ── MOCKTAILS ─────── │ moto chantá + «no dejamos a nadie ajuera»
+└──────────────────────┘
+┌──────────────────────┐ 4 COMIDA · noche-2, titular ámbar · ~1,4 pant.
+│ UNA COCINA SENCILLA… │
+│ ▓ loop cazuela 4:5 ▓ │
+│ [tukulito] [pizza↓]  │
+│ TUKULITO ……… $15.900 │ lista tipo carta, puntos ámbar
+│ CAMARÓN… ……… $15.900 │
+│ PIZZA DULZONA $12.500│
+└──────────────────────┘
+┌──────────────────────┐ 5 CON QUIÉN · noche · ~1 pant.
+│ NO SOMOS NÁ SIN      │
+│ USTEDES!             │ 2 columnas desfasadas, 4 fotos de gente
+└──────────────────────┘
+┌──────────────────────┐ 6 EVENTOS · tinta + fotos · ~1 pant.
+│ TIRAR LA CASA POR LA │
+│ VENTANA!             │ 2×2: FEB 14F · JUL ANIVERSARIO ·
+│ [14F][Aniv.]         │ SEP FONDITA · OCT JALOGÜÍN [PRÓXIMO dorado]
+│ [Fondita][Jalogüín★] │
+└──────────────────────┘
+┌──────────────────────┐ 7 EQUIPO · noche · ~0,8 pant.
+│ PEAZO DE EQUIPO QUE  │ swipe de 6 retratos 4:5 con su @
+│ TENEMOS!  [■][■]→    │
+└──────────────────────┘
+┌──────────────────────┐ 8 RESEÑAS · noche-2 · ~0,8 pant.
+│ QUE NO SE LO CUENTEN │ + glosa EN siempre visible
+│ [«Super soirée…»]→   │ swipe de 6 citas (fr/en/es), borde rosa
+└──────────────────────┘
+┌──────────────────────┐ 9 CUÁNDO Y DÓNDE · noche · ~1,2 pant.
+│ ▓ loop letrero ▓     │ 52svh
+│ LE ESPERAMOS DESDE   │
+│ LAS 18:00 HRS        │
+│ MAR A SÁB            │
+│ SERRANO 325, CASTRO  │ + «Al frente del Centro Cultural…»
+│ [ESCRÍBENOS POR DM]  │ rosa
+│ [CÓMO LLEGAR]        │ contorno
+└──────────────────────┘
+┌──────────────────────┐ 10 PIE · noche · ~0,8 pant.
+│ USTÉ SE LO MERECE!   │ display rosa (firma)
+│ [logo vertical]      │ ALMUD papel + BAR azul
+│ IMÁGENES @… @…       │
+└──────────────────────┘
+```
+
+### Escritorio (1440 px)
+
+```
+1 PORTADA  ┌───────────────────────────────────────────────┐
+           │ video portada-escritorio (cintas→ojos→pinzas)  │
+           │ ALMUD BAR [iso] (grande)        claim (derecha)│
+           │                                 [VER LA CARTA] │
+           └───────────────────────────────────────────────┘
+2 EL LUGAR ┌──────────────┬────────┬──────────────────┐
+           │   [sillones]↑ (masa rápida)  │ loop cintas 82vh │
+           │ SOMOS INQUIETOS…             │   (masa lenta)   │
+           └──────────────────────────────┴──────────────────┘
+           sticky 100vh → galería horizontal (6 rincones, alternan ±5vh)
+3 TRAGOS   ┌───────────────┬─────────────────────────────┐ muro
+           │ MUCHO AMOR…   │ [Sagüer]   [Sangría ↓16vh]  │
+           │ ▓ Peter loop ▓│ ── mocktails: moto + línea  │
+4 COMIDA   ┌───────────────────────┬──────────────────┐ noche-2
+           │ UNA COCINA… (ámbar)   │ loop cazuela 84vh │
+           │ [tukulito][pizza ↓]   │                   │
+           │ lista carta 3 ítems   │                   │
+5 CON QUIÉN  titular a todo el ancho + 3 columnas a 3 velocidades
+6 EVENTOS    tinta · 4 tarjetas, pares bajan 9vh · próximo en dorado
+7 EQUIPO     6 retratos en fila, pares bajan 8vh
+8 RESEÑAS    grilla 3×2, la columna del medio baja 5vh
+9 DÓNDE    ┌───────────────────────────┬─────────────────┐
+           │ loop letrero (100vh)      │ LE ESPERAMOS…   │
+           │                           │ datos + 2 botones│
+10 PIE       USTÉ SE LO MERECE! (180 px máx.) · logo vertical · créditos
+```
+
+## Color por pantalla
+
+| # | Pantalla | Fondo | Acento (1–2) | Medio |
+|---|---|---|---|---|
+| 1 | Portada | video + velo noche | muro-rosa (botón), letrero-azul (BAR del logo) | `portada-celular` / `portada-escritorio` |
+| 2 | El lugar | noche | — (color de las fotos) | `lugar-cintas`, barra, techada, salón, terraza, pinzas, Ojo Piojo, sillones (escr.) |
+| 3 | Tragos | muro | papel, muro-2 | `tragos-humo`, `carta-saguer`, `carta-sangria`, `carta-moto` |
+| 4 | Comida | noche-2 | ámbar (titular y puntos) | `comida-cazuela`, `carta-tukulito`, `comida-pizza` |
+| 5 | Con quién | noche | — | 6 fotos `con-quien-*` (4 en celular) |
+| 6 | Eventos | tinta (siempre con foto) | dorado (próximo) | `eventos-14f`, `-12-anos`, `-fondita`, `-jaloguin` |
+| 7 | Equipo | noche | papel-2 (@) | 6 retratos `equipo-*` |
+| 8 | Reseñas | noche-2 | muro-rosa (filete) | — |
+| 9 | Dónde | noche | muro-rosa (DM) | `donde-letrero` |
+| 10 | Pie | noche | muro-rosa (firma), letrero-azul (BAR) | logo vertical |
+
+## Tipo y botones (Carmen P)
+Titulares Big Shoulders 800 mayúsculas, 44 px en celular (≤ 3 líneas), tope 120 px en escritorio, lh 0,93. Texto Barlow Condensed 500 18/20 px · 1,5; nada bajo 16 px; rótulos 600 15 px +0,06 em; precios 600 20 px en papel. Botones radio 4 px, 600 17 px, 52 px de alto: **Ver la carta** (portada, sola y a la derecha) · **Escríbenos por DM** y **Cómo llegar** (solo en Cuándo y dónde). Sin RESERVAR.
+
+## Decisiones y pendientes
+- Portada: solo logo, claim y ‹Ver la carta› (corrección del cliente); horario y dirección viven en Cuándo y dónde.
+- Comida: las fotos son ambiente y la **lista** nombra los platos, porque no hay foto propia confirmada de la Pizza dulzona (no se inventa la relación foto-plato).
+- Créditos del pie: solo autores usados (@catarsis.fotografia, @estudiouno.prod, @isosur.prod, @rober.patagonico). Salen @tamillanquileo y @dosistudio (sus imágenes no se usan).
+- Mapa embebido: no va en el boceto; ‹Cómo llegar› abre Google Maps. Si se quiere el mapa al tocar, se agrega en fase 14.
+- `equipo-elymar` está **por confirmar** con Carmen (foto con disfraz).
+- El `<video>` de portada oculto (la otra variante) queda sin fuente y en pausa a propósito: no se descarga.
+- EN: etiquetas [UI] cambian; los literales quedan en español con glosa debajo; clave `almud-idioma`.
