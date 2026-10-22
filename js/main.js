@@ -318,11 +318,9 @@
         onEnter: () => { setVideo(storyV, storyV.dataset.src, storyV.dataset.poster); storyV.play().catch(() => {}); },
         onEnterBack: () => storyV.play().catch(() => {}), onLeave: () => storyV.pause(), onLeaveBack: () => storyV.pause() } });
       measure(); draw();
-      tl.to('.story__note', { opacity: 0, y: 20, duration: .05 }, 0)
-        .to(o, { t: 1, duration: .22, ease: 'power2.inOut', onUpdate: draw }, .02)
+      tl        .to(o, { t: 1, duration: .22, ease: 'power2.inOut', onUpdate: draw }, .02)
         .to(iso, { scale: 3.2, opacity: 0, duration: .2, ease: 'power2.in' }, .02)
         .fromTo('.story__video', { scale: 1.25 }, { scale: 1, duration: .3, ease: 'none' }, .02)
-        .to('.story__veil', { opacity: 1, duration: .1 }, .18)
         .to('.story__ui', { opacity: 1, duration: .05 }, .2)
         .to('.story__progress i', { scaleX: 1, ease: 'none', duration: .98 }, 0);
       const seg = .76 / lines.length;
@@ -332,16 +330,6 @@
         if (i < lines.length - 1) tl.to(li, { opacity: 0, yPercent: -30, duration: seg * .3, ease: 'power2.in' }, t0 + seg * .7);
       });
       ctx.add(() => () => { win.style.clipPath = ''; });
-
-      /* MANIFIESTO palabra por palabra */
-      const mt = $('.manifesto__text');
-      if (!mt.dataset.split) {
-        const cols = ['var(--barra)', 'var(--pisco)', 'var(--cinta)', 'var(--cielo)', 'var(--violeta)', 'var(--brasa)'];
-        mt.innerHTML = mt.textContent.split(' ').map((w, i) => '<span class="w"' + '' + '>' + w + '</span>').join(' ');
-        mt.dataset.split = '1';
-      }
-      gsap.to('.manifesto__text .w', { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: '.manifesto', start: 'top 75%', end: 'bottom 70%', scrub: true } });
-      gsap.from('.manifesto__sign', { rotate: -12, opacity: 0, scale: .7, duration: 1.2, ease: 'elastic.out(1,.6)', scrollTrigger: { trigger: '.manifesto__sign', start: 'top 90%', once: true } });
 
       /* RINCONES: galería horizontal (sticky, sin pin) */
       if (desk) {
