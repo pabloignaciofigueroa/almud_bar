@@ -72,10 +72,19 @@
    "crops": [
     {
      "name": "a",
-     "ratio": "4:5",
+     "ratio": "orig",
      "focal": [
-      45,
-      45
+      50,
+      50
+     ],
+     "max": 1440
+    },
+    {
+     "name": "s",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      62
      ],
      "max": 1440
     }
@@ -84,7 +93,8 @@
     "es": "Una mujer ríe y aplaude en el rincón de sillones, con cojines estampados y baldosa hidráulica.",
     "en": "A woman laughs and claps in the lounge corner, with patterned cushions and encaustic tiles."
    },
-   "rincon": "sillones"
+   "rincon": "sillones",
+   "note": "Única foto nítida del rincón (V014 9,3 s es un frame 720p casi negro y con cortes cada 0,5 s: no da loop). \"a\" sin recorte deja ver el sillón y los cojines estampados abajo a la izquierda; \"s\" 1:1 baja el encuadre para dar más sillón."
   },
   {
    "id": "lugar-terraza-techada",
@@ -192,6 +202,28 @@
    },
    "rincon": "mural Ojo Piojo",
    "note": "Foto que Carmen nombra para Ojo Piojo (IG-118). 902 px: solo tarjeta, nunca a sangre."
+  },
+  {
+   "id": "lugar-cuadros",
+   "ref": "P012",
+   "src": "assets/raw/ig/CnFUpxNpG_E_03.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Gente conversando en la barra con el muro de marcos de colores al fondo.",
+    "en": "People chatting at the bar, with the wall of colourful frames in the background."
+   },
+   "rincon": "cuadros",
+   "note": "Única foto propia del muro de cuadros (853x568): solo mosaico ≤600 px css. Lleva algo de luz azul."
   },
   {
    "id": "tragos-splash",
@@ -639,160 +671,6 @@
    "note": "Extra opcional: la favorita de Carmen \"de evento\"."
   },
   {
-   "id": "equipo-garzona-abanicos",
-   "ref": "P391",
-   "src": "assets/raw/ig/DeNQ8A2lDgg_00.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      42,
-      45
-     ]
-    }
-   ],
-   "alt": {
-    "es": "Una garzona del equipo sonríe mientras atiende una mesa, con abanicos de papel de colores detrás.",
-    "en": "A member of the floor team smiles while serving a table, colourful paper fans behind her."
-   }
-  },
-  {
-   "id": "equipo-bartender-joven",
-   "ref": "P392",
-   "src": "assets/raw/ig/DeNQ8A2lDgg_01.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      52,
-      32
-     ],
-     "max": 1440
-    }
-   ],
-   "alt": {
-    "es": "Un bartender del equipo sirve concentrado frente al muro rojo de botellas y el cartel ALMUD.",
-    "en": "A bartender from the team pours, focused, in front of the red bottle wall and the ALMUD sign."
-   }
-  },
-  {
-   "id": "equipo-garzon",
-   "ref": "P393",
-   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      50,
-      32
-     ],
-     "max": 1440
-    }
-   ],
-   "alt": {
-    "es": "Un garzón del equipo, tatuado, con camisa estampada y gorro, lleva un plato al salón.",
-    "en": "A tattooed server from the team, in a patterned shirt and cap, carries a plate to the room."
-   }
-  },
-  {
-   "id": "equipo-garzona-pizza",
-   "ref": "P394",
-   "src": "assets/raw/ig/DeNQ8A2lDgg_03.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      50,
-      32
-     ],
-     "max": 1440
-    }
-   ],
-   "alt": {
-    "es": "Una garzona del equipo sonríe con una pizza en cada mano.",
-    "en": "A server from the team smiles with a pizza in each hand."
-   },
-   "note": "Luz violeta (foto del posteo de equipo; no hay otra de ella)."
-  },
-  {
-   "id": "equipo-bartender-barba",
-   "ref": "P109",
-   "src": "assets/raw/ig/DBMtYELSzNS_09.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      55,
-      35
-     ],
-     "max": 1440
-    }
-   ],
-   "alt": {
-    "es": "Un bartender del equipo, con barba y camisa floreada, ríe mientras prepara un trago frente al muro rosa.",
-    "en": "A bearded bartender from the team, in a floral shirt, laughs while mixing a drink by the pink wall."
-   },
-   "note": "Es la misma foto que IG-001 #5 (repost a 1067 px); se usa el original de 1440 px.",
-   "post_override": "IG-001"
-  },
-  {
-   "id": "equipo-grupo",
-   "ref": "P157",
-   "src": "assets/raw/ig/DEP9IUpR9G4_00.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "orig",
-     "focal": [
-      50,
-      50
-     ],
-     "max": 1440
-    }
-   ],
-   "alt": {
-    "es": "El equipo de Almud posa al aire libre, con árboles y el mar de Castro detrás.",
-    "en": "The Almud team poses outdoors, with trees and the sea of Castro behind them."
-   },
-   "status": "por-confirmar",
-   "note": "Única foto grupal propia (IG-067, dic-2024). Puede incluir exempleados: Carmen debe confirmar antes de publicarla; si no, Equipo va sin foto grupal."
-  },
-  {
-   "id": "equipo-duo",
-   "ref": "P333",
-   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
-   "section": "equipo",
-   "crops": [
-    {
-     "name": "a",
-     "ratio": "4:5",
-     "focal": [
-      50,
-      35
-     ],
-     "max": 1920
-    }
-   ],
-   "alt": {
-    "es": "Dos garzonas del equipo sonríen con corbata, jockey y delantal.",
-    "en": "Two servers from the team smile in ties, caps and aprons."
-   },
-   "status": "por-confirmar",
-   "optional": true,
-   "note": "IG-014 (jul-2026) las nombra con @; no están en IG-001: confirmar."
-  },
-  {
    "id": "donde-puerta",
    "ref": "P199",
    "src": "assets/raw/ig/DM_Ih5dyVKH_17.jpg",
@@ -1036,6 +914,200 @@
     "en": "A black clay dish of prawns and mushrooms in a creamy sauce."
    },
    "carta_item": "Camarón que se duerme"
+  },
+  {
+   "id": "equipo-milagros",
+   "ref": "P391",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      42,
+      45
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Una garzona del equipo sonríe mientras atiende una mesa, con abanicos de papel de colores detrás.",
+    "en": "A member of the floor team smiles while serving a table, colourful paper fans behind her."
+   },
+   "handle": "@milagroosjm",
+   "tag_src": "IG-001 #1"
+  },
+  {
+   "id": "equipo-javier",
+   "ref": "P392",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_01.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      52,
+      32
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un bartender del equipo sirve concentrado frente al muro rojo de botellas y el cartel ALMUD.",
+    "en": "A bartender from the team pours, focused, in front of the red bottle wall and the ALMUD sign."
+   },
+   "handle": "@javier.agmc",
+   "tag_src": "IG-001 #2"
+  },
+  {
+   "id": "equipo-eduardo",
+   "ref": "P393",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_02.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      32
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un garzón del equipo, tatuado, con camisa estampada y gorro, lleva un plato al salón.",
+    "en": "A tattooed server from the team, in a patterned shirt and cap, carries a plate to the room."
+   },
+   "handle": "@eduu.ardoo",
+   "tag_src": "IG-001 #3"
+  },
+  {
+   "id": "equipo-liz",
+   "ref": "P078",
+   "src": "assets/raw/ig/C-8zPyOp_4r_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Una garzona del equipo, rubia, sonríe mientras deja un trago en la mesa.",
+    "en": "A blonde server from the team smiles as she sets a drink on the table."
+   },
+   "handle": "@lizzearellano",
+   "tag_src": "IG-001 #4 (retrato en luz violeta); este es IG-088, que la nombra",
+   "note": "Se prefiere IG-088 (luz cálida) al retrato violeta de IG-001 #4."
+  },
+  {
+   "id": "equipo-pablete",
+   "ref": "P251",
+   "src": "assets/raw/ig/DUbvJQJCMV2_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      45,
+      40
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un bartender del equipo, con barba, ríe mientras bate la coctelera frente al muro rosa.",
+    "en": "A bearded bartender from the team laughs as he shakes a cocktail by the pink wall."
+   },
+   "handle": "@pablete_bartender_",
+   "tag_src": "IG-001 #5; este es IG-034, que lo nombra",
+   "note": "IG-001 #5 es un repost de 1067 px (original P109, 2024); IG-034 (feb-2026) es más nuevo y de 1440 px."
+  },
+  {
+   "id": "equipo-elymar",
+   "ref": "P396",
+   "src": "assets/raw/ig/DeNQ8A2lDgg_05.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      40
+     ]
+    }
+   ],
+   "alt": {
+    "es": "Una garzona del equipo sonríe frente al muro rosa, con delantal de Almud.",
+    "en": "A server from the team smiles by the pink wall, wearing an Almud apron."
+   },
+   "handle": "@elymar_bocarejo",
+   "tag_src": "IG-001 #6",
+   "status": "por-confirmar",
+   "note": "Su única foto lleva tiara y alas (disfraz). Carmen no acepta disfraces fuera de Eventos: confirmar con ella o pedir otro retrato. El recorte 4:5 no elimina la tiara."
+  },
+  {
+   "id": "equipo-duo",
+   "ref": "P333",
+   "src": "assets/raw/ig/DaWM8rlo1FR_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      35
+     ],
+     "max": 1920
+    },
+    {
+     "name": "d",
+     "ratio": "3:2",
+     "focal": [
+      50,
+      32
+     ],
+     "max": 1920
+    }
+   ],
+   "alt": {
+    "es": "Dos garzonas del equipo sonríen con corbata, jockey y delantal.",
+    "en": "Two servers from the team smile in ties, caps and aprons."
+   },
+   "handle": "@milagroosjm @lizzearellano",
+   "tag_src": "IG-014 (jul-2026)",
+   "note": "Equipo actual confirmado por IG-014 y IG-001; foto grupal segura (alta resolución)."
+  },
+  {
+   "id": "equipo-grupo",
+   "ref": "P077",
+   "src": "assets/raw/ig/C-bY0mLNYRz_00.jpg",
+   "section": "equipo",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ]
+    }
+   ],
+   "alt": {
+    "es": "El equipo de Almud reunido tras la barra, frente al muro rosa de botellas.",
+    "en": "The Almud team gathered behind the bar, in front of the pink bottle wall."
+   },
+   "status": "por-confirmar",
+   "note": "«Estuvimos todo el equipo juntos» (10 años, ago-2024, 1207 px). Puede incluir exempleados: Carmen confirma; si no, el grupo es equipo-duo."
   }
  ],
  "videos": [
@@ -1255,10 +1327,6 @@
    "reason": "Rucalaf: terceros."
   },
   {
-   "ref": "P396 (IG-001 #6)",
-   "reason": "Retrato del equipo con corona y alas (disfraz) fuera de Eventos."
-  },
-  {
    "ref": "P027",
    "reason": "Despedida de un exbartender."
   },
@@ -1285,6 +1353,31 @@
   {
    "ref": "P091",
    "reason": "Cazuela: ya está el loop V052 y el ítem Camarón que se duerme; no se repite el motivo."
+  },
+  {
+   "ref": "P157",
+   "reason": "Foto grupal de dic-2024 al aire libre: muchos posibles exempleados; se prefiere la de la barra (C-bY0mLNYRz) por confirmar y el dúo P333."
+  },
+  {
+   "ref": "P394 (IG-001 #4)",
+   "reason": "Retrato de Liz en luz violeta; se usa IG-088 en luz cálida."
+  },
+  {
+   "ref": "P109 / P395",
+   "reason": "Pablete 2024 (repost en IG-001 #5); se usa IG-034 de 2026."
+  },
+  {
+   "ref": "V014 9,3 s",
+   "reason": "Sillones casi negro, 720p y cortes cada 0,5 s: sin loop posible."
   }
- ]
+ ],
+ "team_ig001": {
+  "milagroosjm": "DeNQ8A2lDgg_00",
+  "javier.agmc": "DeNQ8A2lDgg_01",
+  "eduu.ardoo": "DeNQ8A2lDgg_02",
+  "lizzearellano": "DeNQ8A2lDgg_03",
+  "pablete_bartender_": "DeNQ8A2lDgg_04",
+  "elymar_bocarejo": "DeNQ8A2lDgg_05",
+  "_src": "usertags por foto en assets/raw/ig/posts_new.json"
+ }
 }
