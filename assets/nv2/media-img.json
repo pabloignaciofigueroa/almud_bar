@@ -549,7 +549,7 @@
        },
        "960": {
         "path": "assets/nv2/img/quien-grupo-flecos-a-960.avif",
-        "bytes": 0
+        "bytes": 58278
        },
        "1280": {
         "path": "assets/nv2/img/quien-grupo-flecos-a-1280.avif",
@@ -878,13 +878,13 @@
     }
    }
   },
-  "eventos-brazos-arriba": {
-   "ref": "P349",
-   "src": "assets/raw/ig/Dbg3ekilC4P_12.jpg",
+  "eventos-cotillon-12": {
+   "ref": "P354",
+   "src": "assets/raw/ig/Dbg3ekilC4P_17.jpg",
    "section": "eventos",
    "alt": {
-    "es": "Los 12 años de Almud: la gente celebra con los brazos arriba y un megáfono.",
-    "en": "Almud turns 12: people celebrating with arms in the air and a megaphone."
+    "es": "Los 12 años de Almud: un grupo celebra con coronas, antifaces y lentes de fiesta junto a la estufa.",
+    "en": "Almud turns 12: a group celebrating in crowns, masks and party glasses by the heater."
    },
    "credit": {
     "post": "IG-009",
@@ -895,7 +895,7 @@
     "text": "Foto: @isosur.prod para @almud_bar"
    },
    "evento": "12 años",
-   "note": "IG-009 (@isosur.prod). Megáfono = el de la puerta.",
+   "note": "IG-009 (@isosur.prod). Cotillón de cumpleaños: solo en Eventos. Reemplaza a P349 (mismo instante que la foto de Aniversario, P348).",
    "source_size": [
     3072,
     4096
@@ -926,51 +926,51 @@
       1280,
       1440
      ],
-     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoTABgAPwFoq0+rJaOiMBgMAWAgCWgArDKAAaM69luV8fjshFuAVfuXPLef7vgAAP7stKK/wh78/2z2hBr6i/aBe61tpIAqvnFJZtoQj7TA7YQlyHd1XTjW+9DTySlXPFon2r2XqgP0ymiFk1H+januuc+st0YorT+y2rEzLJPNV5god1UdX+9lnOjCuznQB56he6U7DP8SiWDeIAnJF2/gzAA=",
-     "color": "#462a41",
+     "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADwBQCdASoTABgAPwFysFIrJqSiqAqpYCAJbACdMuOBCLksAAyfRZ3Llfzf7HTRZm3F7LAW4G8jAAD+0C6PGB0TNqhPGe+YcevZRqCWnFBLKtDRy3XgniQhRPojIPH/miW31O/XctXbyaJKdJAfp8M1yjO6GMoCK6PiCMQ/q0Sc8ALdnuJrUMiT7l5aih9yU4EfAHI3ApmYdtjrKtVGWvqf2reP4WJBY0PBBpcIQN24ETOVpQURdiW0sgoJ7IAA",
+     "color": "#363a66",
      "files": {
       "avif": {
        "480": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-480.avif",
-        "bytes": 27119
+        "path": "assets/nv2/img/eventos-cotillon-12-a-480.avif",
+        "bytes": 39752
        },
        "720": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-720.avif",
-        "bytes": 46657
+        "path": "assets/nv2/img/eventos-cotillon-12-a-720.avif",
+        "bytes": 71473
        },
        "960": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-960.avif",
-        "bytes": 68134
+        "path": "assets/nv2/img/eventos-cotillon-12-a-960.avif",
+        "bytes": 105943
        },
        "1280": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-1280.avif",
-        "bytes": 102697
+        "path": "assets/nv2/img/eventos-cotillon-12-a-1280.avif",
+        "bytes": 157000
        },
        "1440": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-1440.avif",
-        "bytes": 123672
+        "path": "assets/nv2/img/eventos-cotillon-12-a-1440.avif",
+        "bytes": 185009
        }
       },
       "webp": {
        "480": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-480.webp",
-        "bytes": 41414
+        "path": "assets/nv2/img/eventos-cotillon-12-a-480.webp",
+        "bytes": 64032
        },
        "720": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-720.webp",
-        "bytes": 68876
+        "path": "assets/nv2/img/eventos-cotillon-12-a-720.webp",
+        "bytes": 113944
        },
        "960": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-960.webp",
-        "bytes": 98014
+        "path": "assets/nv2/img/eventos-cotillon-12-a-960.webp",
+        "bytes": 167520
        },
        "1280": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-1280.webp",
-        "bytes": 142448
+        "path": "assets/nv2/img/eventos-cotillon-12-a-1280.webp",
+        "bytes": 252178
        },
        "1440": {
-        "path": "assets/nv2/img/eventos-brazos-arriba-a-1440.webp",
-        "bytes": 173452
+        "path": "assets/nv2/img/eventos-cotillon-12-a-1440.webp",
+        "bytes": 297892
        }
       }
      }
