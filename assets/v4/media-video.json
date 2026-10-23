@@ -93,7 +93,7 @@
     "text": "@almud_bar"
    },
    "variant": "celular",
-   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (tope 1.130/1.110 KB, CRF un poco más alto) para que el primer pantallazo del celular quede holgado bajo 1,5 MB.",
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (CRF fijo un paso más alto que el original: MP4 29→30, WebM 38→39) para que el primer pantallazo del celular quede holgado bajo 1,5 MB.",
    "source_size": [
     720,
     1280
@@ -113,9 +113,9 @@
    "duration": 8.04,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
-   "budget_kb": 1130,
-   "budget_mp4_kb": 1110,
-   "within_budget": true,
+   "budget_kb": 1150,
+   "budget_mp4_kb": 1150,
+   "within_budget": false,
    "xfade": 0.8,
    "tramo_s": 8.84,
    "seam": {
@@ -125,15 +125,15 @@
    "files": {
     "webm": {
      "path": "assets/v4/video/portada-celular-b-720.webm",
-     "bytes": 1093046,
+     "bytes": 1179561,
      "type": "video/webm; codecs=\"vp9\"",
-     "crf": 40
+     "crf": 39
     },
     "mp4": {
      "path": "assets/v4/video/portada-celular-b-720.mp4",
-     "bytes": 1024919,
+     "bytes": 1136938,
      "type": "video/mp4; codecs=\"avc1.640028\"",
-     "crf": 31
+     "crf": 30
     }
    },
    "poster": {
