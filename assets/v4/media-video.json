@@ -762,6 +762,102 @@
    "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoTABgAPwFwrFGrJiQiqA1RYCAJagC7AAYJIHzciyja5pmhgAD+wGM+UPkz119d87CVRI9Y5h0YUjGDrEzfS7Q+eJFRw3FB64WvxxWVwSPgZaSqDIHPNZ62lRPQzKJQOkli9cM62rTH+VxbU49gPJ8xEuG+e29ZgAA=",
    "color": "#3e182f"
   },
+  "eventos-fiesta": {
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "eventos",
+   "alt": {
+    "es": "El Almud en plena fiesta de aniversario: el salón lleno de mesas con gente sentada bajo el techo de cintas, la garzona entre las mesas, la barra trabajando y amigas brindando.",
+    "en": "Almud in full anniversary-party swing: a dining room packed with seated guests under the ribbon ceiling, servers between tables, the bar busy and friends toasting."
+   },
+   "credit": {
+    "post": "IG-051",
+    "date": "2025-08-02",
+    "url": "https://www.instagram.com/p/DM3n8lOy5qf/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "evento": "11 años (ago-2025)",
+   "note": "Fase 7: montaje de 6 planos propios del reel de los 11 años (V036, IG-051), cortados en sus propios cortes: salón lleno (3,12–4,71) → garzón entre mesas (11,89–13,21) → barra trabajando (13,25–14,81) → amigas en la barra con tragos (4,75–6,48) → mesa de amigas con molinillos (20,72–21,91) → salón lleno en plano general (86,56–88,0); fundido 0,8 s al salón inicial. No usa los tramos de Con quién (27,6–37,7 y 66,32–75,7). Reemplaza en /nueva_v6/ a eventos-fiesta-12 (que se conserva).",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     3.12,
+     4.71
+    ],
+    [
+     11.89,
+     13.21
+    ],
+    [
+     13.25,
+     14.81
+    ],
+    [
+     4.75,
+     6.48
+    ],
+    [
+     20.72,
+     21.91
+    ],
+    [
+     86.56,
+     88.0
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 242,
+   "fps": 30.0,
+   "duration": 8.07,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 8.83,
+   "seam": {
+    "last_vs_first": 10.03,
+    "typical_step": 10.27
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/eventos-fiesta-720.webm",
+     "bytes": 1203213,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 38
+    },
+    "mp4": {
+     "path": "assets/v4/video/eventos-fiesta-720.mp4",
+     "bytes": 1372494,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 25
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/eventos-fiesta-poster.avif",
+     "bytes": 30466
+    },
+    "webp": {
+     "path": "assets/v4/video/eventos-fiesta-poster.webp",
+     "bytes": 45530
+    },
+    "jpg": {
+     "path": "assets/v4/video/eventos-fiesta-poster.jpg",
+     "bytes": 87329
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBgCdASoTABgAPwF2s1OrJySiqAgBYCAJbACdMoSBCN+sABtvMO+gmHYJv9n/IDgo1sxMDfR+/7AA/VJN3gK67cI29XiLyoO+kXxZgB6k1DmizNHixReLPDSn41rnN6hSTXO4w456EiViS9zzpwyLuDn1sqos3rgQ5mBT7cfJOtOwjAQ4iIFp1phjN0P3da6kzim2TA+TcSJ25aPyRC5hyAvxXrJz0YRRK+JgNkDJO+hEXlpAAA==",
+   "color": "#562517"
+  },
   "eventos-fiesta-12": {
    "ref": "V055",
    "src": "assets/raw/ig/DbeSlSaonsM_00.mp4",

@@ -771,3 +771,6 @@ html:not(.js) .m picture{display:none}
   .comida__g .co__b{margin-bottom:0}
   .comida__g .co__b>.m{aspect-ratio:2/3}
 }
+
+/* 6b · la carta que vuela tiene su propia capa mientras vuela y vuelve al fondo */
+.bj .carta.is-vuela{will-change:transform}

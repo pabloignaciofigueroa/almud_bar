@@ -267,7 +267,7 @@ def do_video(v, credits):
     budget_mp4 = v.get('budget_mp4_kb', v['budget_kb']) * 1024
     base = os.path.join(OUT_VID, v['id'])
     for f in os.listdir(OUT_VID):  # anchos de una corrida anterior
-        if f.startswith(v['id'] + '-') and f.endswith(('.mp4', '.webm')):
+        if re.fullmatch(re.escape(v['id']) + r'-\d+\.(mp4|webm)', f):  # solo los anchos de ESTE id (no 'eventos-fiesta-12-…' al codificar 'eventos-fiesta')
             os.remove(os.path.join(OUT_VID, f))
     chosen = None
     for w in v['widths']:
