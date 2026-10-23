@@ -205,6 +205,53 @@ resenas = [
     ('es', 'La atención es muy cálida y cercana.', 'The service is so warm and friendly.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
 ]
 
+# v4 fase 8 · Equipo: el dorso de cada tarjeta. Lugar y frase literales de su IG (si no hay frase, solo el @)
+EQ_DORSO = {
+    'equipo-javier': ('javier.agmc', 'Barra', 'Bar', 'mente creadora de muchos cócteles', 'the mastermind behind lots of our cocktails', 'IG-045'),
+    'equipo-milagros': ('milagroosjm', 'Barra', 'Bar', 'la regia', 'our queen', 'IG-067'),
+    'equipo-pablete': ('pablete_bartender_', 'Barra', 'Bar', 'haciéndole los copetitos a usté', 'making your drinks, yes, yours', 'IG-034'),
+    'equipo-liz': ('lizzearellano', 'Salones', 'Floor', 'la amada', 'our beloved', 'IG-067'),
+    'equipo-eduardo': ('eduu.ardoo', 'Salones', 'Floor', 'el ondero', 'the cool one', 'IG-067'),
+}
+# v4 fase 8 · Reseñas en dos cintas: solo las que dicen su país (10 de content/reviews.json); las 6 aprobadas en v3 con su extracto y glosa, las otras 4 textuales
+FLAG = {
+    'FR': '<svg class="flag" viewBox="0 0 24 16" width="24" height="16" role="img" aria-label="Francia" data-aria-en="France"><rect width="8" height="16" fill="#1f3c99"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#e1262d"/></svg>',
+    'CL': '<svg class="flag" viewBox="0 0 24 16" width="24" height="16" role="img" aria-label="Chile" data-aria-en="Chile"><rect width="24" height="16" fill="#fff"/><rect y="8" width="24" height="8" fill="#d52b1e"/><rect width="8" height="8" fill="#0039a6"/><path d="M4 1.6l.94 2.9h3.05L5.52 6.3l.94 2.9L4 7.4 1.54 9.2l.94-2.9L.01 4.5h3.05z" transform="translate(0 -.4) scale(1 .92)" fill="#fff"/></svg>',
+    'NZ': '<svg class="flag" viewBox="0 0 24 16" width="24" height="16" role="img" aria-label="Nueva Zelanda" data-aria-en="New Zealand"><rect width="24" height="16" fill="#012169"/><path d="M0 0l12 8M12 0L0 8" stroke="#fff" stroke-width="1.6"/><path d="M0 0l12 8M12 0L0 8" stroke="#c8102e" stroke-width=".6"/><path d="M6 0v8M0 4h12" stroke="#fff" stroke-width="2.4"/><path d="M6 0v8M0 4h12" stroke="#c8102e" stroke-width="1.2"/><g fill="#c8102e" stroke="#fff" stroke-width=".4"><circle cx="18" cy="3.5" r=".9"/><circle cx="20.5" cy="7" r=".9"/><circle cx="16" cy="7.5" r=".9"/><circle cx="18" cy="12.5" r="1"/></g></svg>',
+}
+CINTAS = [
+    [('FR', 'fr', 'Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!', 'Great night out in Castro! Friendly service, great atmosphere, really nice music!', 'Dorothee · Épinal, Francia · Tripadvisor', 'Dorothee · Épinal, France · Tripadvisor'),
+     ('CL', 'es', 'De los mejores bares que he visitado. Tienen una terraza maravillosa.', "One of the best bars I've been to. They have a wonderful terrace.", 'Oscar · Santiago, Chile · Tripadvisor', 'Oscar · Santiago, Chile · Tripadvisor'),
+     ('NZ', 'en', 'Really cute place. Good menu including lots of vegetarian options', None, 'Rachael · Takaka, Nueva Zelanda · Tripadvisor', 'Rachael · Takaka, New Zealand · Tripadvisor'),
+     ('CL', 'es', 'Haber... corta, Chiloé: palafitos, curanto y Almud. Bar original y cálido. Tomé bajo consejo del barman, sabia decisión.', None, 'Pablof · Santiago, Chile · Tripadvisor', 'Pablof · Santiago, Chile · Tripadvisor'),
+     ('FR', 'fr', 'Des super cocktails bien fait, la nourriture est super aussi (je conseille le sandwich au poulet Pesto) le bar est décoré de façon originale et avec goût.', None, 'Pierre · Marsella, Francia · Tripadvisor', 'Pierre · Marseille, France · Tripadvisor')],
+    [('FR', 'fr', 'cela nous a fait bien plaisir de tomber sur un vrai bar', 'we were so happy to stumble on a real bar', 'Emilie · París, Francia · Tripadvisor', 'Emilie · Paris, France · Tripadvisor'),
+     ('CL', 'en', 'Cool waiters, great food and comfy seats', None, 'Benjamín · Puerto Varas, Chile · Tripadvisor', 'Benjamín · Puerto Varas, Chile · Tripadvisor'),
+     ('CL', 'es', 'La atención es muy cálida y cercana.', 'The service is so warm and friendly.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
+     ('CL', 'es', 'La raja el bar, totalmente recomendable. Ondero, buena música, tragos buenísimos y una barra tipo NYC!', None, 'Andres · Santiago, Chile · Tripadvisor', 'Andres · Santiago, Chile · Tripadvisor'),
+     ('CL', 'es', 'Estuve ahí cada día de mi estancia, porque es imposible no volver.', None, 'arqggodoy · Iquique, Chile · Tripadvisor', 'arqggodoy · Iquique, Chile · Tripadvisor')],
+]
+
+
+def flip(id_, sizes='(min-width:1024px) 22vw, 46vw'):
+    h, rol, rol_en, fr, fr_en, _ = EQ_DORSO[id_]
+    return (f'<div class="flip"><div class="flip__in"><div class="flip__front">' + pic(id_, 'a', sizes, 'reveal') + '</div>'
+            f'<div class="flip__back"><p class="flip__rol" data-en="{rol_en}">{rol}</p><p class="flip__q">«{E(fr)}»{g(fr_en, "gloss gloss--s")}</p>'
+            f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></div></div></div>')
+
+
+def flip_duo():
+    return ('<div class="flip"><div class="flip__in"><div class="flip__front">' + pic('equipo-duo', 'a', '(min-width:1024px) 22vw, 46vw', 'reveal') + '</div>'
+            f'<div class="flip__back"><p class="flip__q">«chicas super poderosas»{g("our powerpuff girls", "gloss gloss--s")}</p>'
+            f'<a class="eq__at" href="{IG}milagroosjm/" target="_blank" rel="noopener">@milagroosjm</a><a class="eq__at" href="{IG}lizzearellano/" target="_blank" rel="noopener">@lizzearellano</a></div></div></div>')
+
+
+def resena(r, dup=False):
+    fl, l, q, gl, f, fen = r
+    return (f'<li class="r"' + (' aria-hidden="true"' if dup else '') + f'><blockquote class="r__q" lang="{l}"><p>{E(q)}</p>' + (g(gl, 'gloss gloss--s') if gl else '') +
+            f'</blockquote><p class="r__f">{FLAG[fl]}<span data-en="{E(fen)}">{E(f)}</span></p></li>')
+
+
 creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
 
 ISO = svg_inline('almud-isotipo', 'iso').replace('<path ', '<path pathLength="1" ')
@@ -406,14 +453,19 @@ body = f'''
   </div>
 </section>
 
-<!-- 7 · EQUIPO -->
+<!-- 7 · EQUIPO · v4 fase 8: tarjetas que se dan vuelta (lugar, frase literal y @); el video de los dueños, fijo. Columnas con desfase -->
 <section class="equipo" id="equipo" aria-labelledby="h-equipo">
   <div class="wrap">{title('Peazo de equipo que tenemos!', 'One heck of a team!', 'h-equipo')}</div>
-  <ul class="eq" data-swipe>
-    <li class="eq__p eq__p--v" style="--i:0">{vid('equipo-duenos', 'reveal')}</li>
-    {''.join(f'<li class="eq__p" style="--i:{k + 1}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
-    <li class="eq__p eq__p--duo" style="--i:6">{pic('equipo-duo', 'a', '62vw', 'reveal', art=('d', '(min-width:1024px)', '46vw'))}</li>
-  </ul>
+  <div class="eqz wrap">
+    <div class="eqz__m eqz__m--1">
+      <div class="eqz__d eqz__d--1">{vid('equipo-duenos', 'eqz__v reveal')}</div>
+      <div class="eqz__d eqz__d--2">{flip('equipo-javier')}{flip('equipo-milagros')}</div>
+    </div>
+    <div class="eqz__m eqz__m--2">
+      <div class="eqz__d eqz__d--3">{flip('equipo-pablete')}{flip('equipo-liz')}</div>
+      <div class="eqz__d eqz__d--4">{flip('equipo-eduardo')}{flip_duo()}</div>
+    </div>
+  </div>
   <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> <a href="{IG}cepaz/" target="_blank" rel="noopener">@cepaz</a> · <a href="{IG}rusio_mezclao/" target="_blank" rel="noopener">@rusio_mezclao</a></p>
 </section>
 
@@ -423,9 +475,10 @@ body = f'''
     <h2 class="ttl" id="h-resenas"><span class="ttl__t">Que no se lo cuenten</span></h2>
     <p class="ttl-gloss">{g("See for yourself")}</p>
   </div>
-  <ul class="rs" data-swipe>
-    {''.join(f'<li class="r"><blockquote class="r__q" lang="{l}"><p>{E(q)}</p>' + (g(gl, 'gloss gloss--s') if gl else '') + f'</blockquote><p class="r__f" data-en="{E(fen)}">{E(f)}</p></li>' for l, q, gl, f, fen in resenas)}
-  </ul>
+  <!-- v4 fase 8: dos cintas que pasan solas en sentidos contrarios y se arrastran; cada reseña en su idioma, con la bandera de su país -->
+  <div class="cinta" data-cinta aria-label="Reseñas" data-aria-en="Reviews">
+    {''.join(f'<ul class="cinta__row" data-dir="{d}">' + ''.join(resena(r) for r in fila) + '</ul>' for fila, d in zip(CINTAS, (-1, 1)))}
+  </div>
 </section>
 
 <!-- 9 · CUÁNDO Y DÓNDE -->
@@ -451,7 +504,10 @@ body = f'''
 <!-- 10 · PIE -->
 <footer class="pie">
   <div class="wrap pie__g">
-    <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g("You've earned it, friend!")}</p>
+    <div class="pie__hero">
+      <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g("You've earned it, friend!")}</p>
+      <div class="brindis" aria-hidden="true"><div class="brindis__a">{ISO}</div><div class="brindis__b">{ISO}</div><svg class="brindis__chin" viewBox="0 0 60 40"><path d="M30 14V2M18 18 9 9M42 18l9-9"/></svg></div>
+    </div>
     <div class="pie__logo">{svg_inline('almud-vertical-claro', 'pie__svg', label=True)}</div>
     <div class="pie__cr">
       <h2 class="kick" data-en="Photos &amp; video">Imágenes</h2>
