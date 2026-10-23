@@ -417,11 +417,10 @@
     const cards = $$('.carta', dk), n = cards.length, live = $('.baraja__live', dk), hint = $('.baraja__hint', dk);
     dk.tabIndex = 0; dk.setAttribute('role', 'group');
     const R = G.utils.random;
-    let pila = [], busy = true, dealt = false, drag = null;
+    let pila = [], busy = true, dealt = false, drag = null, k = 1;
     const pose = c => ({ x: c._px, y: c._py, rotation: c._pr });
     const say = () => {
-      const k = n - pila.length + 1;
-      live.textContent = pila.length ? (root.lang === 'en' ? 'Photo ' + k + ' of ' + n : 'Foto ' + k + ' de ' + n) : '';
+      live.textContent = root.lang === 'en' ? 'Photo ' + k + ' of ' + n : 'Foto ' + k + ' de ' + n;
     };
     const top = () => pila[pila.length - 1];
     const mark = () => { cards.forEach(c => c.classList.remove('is-top')); if (top()) top().classList.add('is-top'); };
@@ -439,17 +438,25 @@
         // …y se intercalan, repartiéndose una a una sobre la pila
         .to(pila, { x: (i, c) => c._px, y: (i, c) => c._py, rotation: (i, c) => c._pr, duration: .55, ease: 'back.out(1.7)', stagger: .045 });
     }
+    // v4 fase 7 (6b) · baraja infinita: la foto lanzada sale volando hacia el lado del gesto, frena, gira y vuelve deslizándose
+    // POR DEBAJO de la pila hasta quedar última, con la rotación leve de las demás. La pila nunca se vacía ni se rearma de golpe.
+    const restack = () => pila.forEach((x, i) => { x.style.zIndex = i + 1; });
     function lanzar(dir, vx = 0, vy = 0) {
       const c = top(); if (!c || busy) return;
-      pila.pop(); mark();
-      const W = Math.max(dk.clientWidth, innerWidth * .6);
-      G.to(c, { x: '+=' + (dir * (W * .75 + 140) + vx * 160), y: '+=' + (vy * 160 + R(-50, 30)), rotation: '+=' + dir * R(16, 30), opacity: 0,
-        duration: .55, ease: 'power2.out', onComplete: () => { if (!pila.includes(c)) c.style.visibility = 'hidden'; } });   // si la pila ya se rearmó, no se esconde
+      pila.pop(); pila.unshift(c); mark();
+      G.killTweensOf(c);
+      c.classList.add('is-vuela');
+      const out = dir * (c.offsetWidth * 1.18 + 24) + G.utils.clamp(-120, 120, vx * 90);
+      c._px = R(-16, 16); c._py = R(-12, 12); c._pr = R(-7, 7);
+      G.timeline({ onComplete: () => c.classList.remove('is-vuela') })
+        .to(c, { x: out, y: '+=' + G.utils.clamp(-60, 60, vy * 90 + R(-24, 16)), rotation: dir * R(18, 28), duration: .36, ease: 'power3.out' })   // vuela y frena
+        .add(restack)                                                                                                                         // ya fuera: pasa al fondo del mazo
+        .to(c, { x: c._px, y: c._py, rotation: c._pr, scale: .96, duration: .58, ease: 'power3.inOut' })                                     // gira y vuelve por debajo
+        .to(c, { scale: 1, duration: .25, ease: 'power2.out' });
       const nx = top();
-      if (nx) G.fromTo(nx, { scale: .97 }, { scale: 1, duration: .5, ease: 'back.out(3)' });
+      if (nx && nx !== c && !G.isTweening(nx)) G.fromTo(nx, { scale: .97 }, { scale: 1, duration: .5, ease: 'back.out(3)' });
       if (hint) hint.classList.add('is-used');
-      say();
-      if (!pila.length) { busy = true; G.delayedCall(.7, deal); }   // después de que la última termina de volar
+      k = k % n + 1; say();
     }
     dk.addEventListener('pointerdown', e => {
       if (e.button > 0 || busy || !top()) return;

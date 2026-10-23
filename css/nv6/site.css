@@ -774,3 +774,6 @@ html:not(.js) .m picture{display:none}
 
 /* 6b · la carta que vuela tiene su propia capa mientras vuela y vuelve al fondo */
 .bj .carta.is-vuela{will-change:transform}
+
+/* 6b · todas las cartas en su capa: al volver una por debajo, el orden cambia sin repintar a las demás */
+.bj .carta{will-change:transform}
