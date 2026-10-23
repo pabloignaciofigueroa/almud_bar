@@ -3,7 +3,7 @@
 Principio del cliente: «la mejor manera de vender un bar es mostrar que siempre está lleno». La protagonista es la multitud, no el barman ni los dueños.
 
 - **Antes:** 27 fotos + 14 videos. **Después:** 52 fotos + 14 videos (los mismos videos, en el mismo lugar).
-- Fotos nuevas: 25. Trece ya tenían recorte en `assets/v3` y se reutilizan sin recodificar; doce son recortes nuevos en `assets/nv2/img`, hechos con `tools/media_nv2.py` desde `tools/media_nv2.json`.
+- Fotos nuevas: 25. Doce ya tenían recorte en `assets/v3` y se reutilizan sin recodificar; trece son recortes nuevos en `assets/nv2/img`, hechos con `tools/media_nv2.py` desde `tools/media_nv2.json`.
 - Los nombres y precios son literales de `content/carta-v2.json`. Un plato o trago lleva nombre solo si la foto muestra ese plato. Las glosas EN salen de `content/carta-glosas-en-v3.json`.
 - Todas las fotos nuevas cargan diferido (`data-src`/`data-srcset`), con `srcset` AVIF + WebP de 480 a 1440 px y `sizes` según su ancho real en la grilla.
 
@@ -22,7 +22,7 @@ Principio del cliente: «la mejor manera de vender un bar es mostrar que siempre
 | 9 | `carta-coquette` | C9xrKP8Jehi_00 · P074 | Tragos con nombre | **A veces me pongo Coquette** · $ 7.100 | [IG-096] #avecesmepongocoquette: el trago rosado y cremoso de la carta, entregado a una clienta |
 | 10 | `comida-ceviche` | DY0AUvhlHjI_00 · P298 | Comida | **Todo que ver!** · $ 16.000 | [IG-022] «una cocina sencilla pero más que sabrosona!». Se identifica por los ingredientes: es el único ceviche de la carta (atún rojo, pimentón amarillo, palta, cebolla morada, cilantro, pan de la casa) |
 | 11 | `comida-hamburguesa` | DY0AUvhlHjI_13 · P305 | Comida | **Chambreao** · $ 10.900 | [IG-022]. Hamburguesa de vacuno con queso derretido, cebolla caramelizada y hojas verdes: coincide con la descripción de la carta |
-| 12 | `carta-camaron` | DAbw0xKSimd_00 · P099 | Comida | **Camarón que se duerme** · $ 15.900 | [IG-077] «cáchese esta gredita». La greda tiene camarones, champiñones y salsa de queso crema |
+| 12 | `carta-camaron` | DAbw0xKSimd_00 · P099 | Comida (última de la fila de 4) | — (sin nombre) | [IG-077] «cáchese esta gredita… calentito pal buche». El post no nombra el plato y en la carta hay dos con camarones en salsa cremosa («Camarón que se duerme» y «Eres tan exótica»). Como no se puede confirmar, va sin nombre ni precio
 | 13 | `carta-contuti` | DEVtFfySKVY_00 · P158 | Comida | **Con tuti si no pa qué!** · $ 19.900 | [IG-066] el post se llama igual que el plato («CON TUTI SI NO PA QUÉ!»). Es la tabla para compartir: el plato de la multitud |
 | 14 | `quien-sillones-llenos` | Dbg3ekilC4P_19 · P356 | Con quién, columna 1 | — | [IG-009] 12 años: un grupo grande sentado junto, bajo los banderines |
 | 15 | `quien-carcajadas` | DAMHps8JVVr_09 · P095 | Con quién, columna 1 | — | [IG-079] «ya sabe ya que no somos ná sin ustedes»: una mesa riendo a carcajadas |
@@ -33,11 +33,11 @@ Principio del cliente: «la mejor manera de vender un bar es mostrar que siempre
 | 20 | `eventos-cotillon-12` | Dbg3ekilC4P_17 · P354 | Eventos, tira de fiestas | — | [IG-009] 12 años, «guanderful jornada recreativa cumpleañística». Coronas y antifaces: los disfraces solo van en Eventos. Reemplaza a P349, que era el mismo instante de la foto de Aniversario |
 | 21 | `eventos-baile-12` | Dbok2NyFNdb_18 · P375 | Eventos, tira | — | [IG-008] «muchísima energía fiestera y risas»: la gente baila apretada |
 | 22 | `eventos-primavera` | DBMtYELSzNS_02 · P102 | Eventos, tira | — | [IG-075] «nuestro día de bienvenida a la esperada primavera»: mesas llenas bajo los banderines |
-| 23 | `eventos-10-anos` | C9dHAAxJkSi_00 · P073 | Eventos, tira | — | [IG-100] «GRACIAS por estos 10 años». Ranking #2. Era la favorita de Carmen «de evento»; en la tira sí tiene contexto, junto a las otras fiestas |
+| 23 | `eventos-terraza-12` | Dbg3ekilC4P_06 · P343 | Eventos, tira | — | [IG-009] 12 años: la terraza repleta, con la estufa y las guirnaldas. Reemplaza al «10» de flores (P073), que el cliente sacó porque no tiene contexto: Almud ya cumplió 12
 | 24 | `equipo-duo` | DaWM8rlo1FR_00 · P333 | Equipo, cierra la fila (recorte 3:2 en escritorio) | — | [IG-014] «Nuestras chicas super poderosas… @milagroosjm y @lizzearellano». Es el equipo actual confirmado |
 | 25 | `donde-puerta` | DM_Ih5dyVKH_17 · P199 | Cuándo y dónde, junto a la dirección | — | Selección del jurado (Cuándo y dónde): la puerta de madera con el megáfono y la polera «Te espero en la cuneta». La puerta es justamente la dirección |
 
-Las fotos 4–6, 8–13, 22–25 vienen de `assets/v3` (ya estaban recortadas, pero la página no las mostraba). Las fotos 1–3, 7 y 14–21 son recortes nuevos en `assets/nv2`.
+Las fotos 4–6, 8–13, 22, 24 y 25 vienen de `assets/v3` (ya estaban recortadas, pero la página no las mostraba). Las fotos 1–3, 7, 14–21 y 23 son recortes nuevos en `assets/nv2`.
 
 ## Conteo por sección (fotos, sin videos)
 
@@ -59,9 +59,22 @@ Las fotos 4–6, 8–13, 22–25 vienen de `assets/v3` (ya estaban recortadas, p
 | `equipo-grupo` (C-bY0mLNYRz, IG-091) | Es de 2024 y etiqueta a personas que ya no figuran en el equipo de 2025 (IG-050), como @k.o_ds. **Duda para el cliente** |
 | `equipo-elymar` (P396) | Lleva disfraz (tiara y alas) fuera de Eventos |
 | P198 (hombre que brinda) | Primer plano de una sola persona que no es del equipo |
+| P073 (el «10» de flores, 10 años) | Lo pidió el cliente: no tiene contexto, porque Almud acaba de cumplir 12 |
 | P349 (brazos arriba, 12 años) | Mismo instante que la foto de Aniversario (P348) |
 | DM_Ih5dyVKH_01/02/09/18 (bartenders, 11 años) | [IG-050] agradece a bartenders invitados de @elgobernadorofficialcl: pueden ser terceros. Además, el protagonista no es el barman |
 | DJ de IG-050 y músicos de IG-075 | Terceros (músicos invitados) |
 | `lugar-salon`, `lugar-cuadros`, frames de 720 px | Baja resolución |
 | `eventos-14f`, afiches de Negroni Week | Llevan texto encima |
 | P242, P229, P234 (Jalogüín) | Disfraces: Jalogüín ya está como video en Eventos |
+
+## Verificación (Playwright, public/ servido en local)
+
+| Vista | Pantallas (antes → después) | Errores | 4xx | Desborde | Videos en play | Huecos en grillas |
+|---|---|---|---|---|---|---|
+| 390×844 | 12,3 → **17,2** | 0 | 0 | no | 13/13 | ninguno: lo que queda son los 12–40 px de gap y los escalones de diseño |
+| 768×1024 | 14,8 → 18,2 | 0 | 0 | no | 13/13 | ninguno |
+| 1440×900 | 13,6 → 18,8 | 0 | 0 | no | 13/13 | ninguno |
+
+Primer pantallazo del celular: 1.461 KB con gzip (1,43 MB; 1.669 KB sin compresión, 12 archivos). Ninguna foto nueva entra en él. La raíz y /nueva/ no cambian (`git diff --quiet -- public/index.html public/nueva/index.html public/css/v4`).
+
+Dudas para el cliente: (1) ¿la foto del equipo de 2024 (IG-091) tiene exempleados? (2) La identificación de «Todo que ver!» y «Chambreao» se hizo por los ingredientes, porque IG-022 no los nombra: hay que confirmarla.
