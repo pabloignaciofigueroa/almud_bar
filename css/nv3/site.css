@@ -583,7 +583,8 @@ html:not(.js) .m picture{display:none}
 .iso__veil{fill:var(--noche);fill-opacity:.58;stroke:none}
 .hero__svg{overflow:visible}
 .hero__svg .ltr{transform-box:fill-box;transform-origin:50% 100%}
-.ch{display:inline-block;will-change:transform}
+.ch{display:inline-block}
+.intro .ch{will-change:transform}
 .chw{display:inline-block;white-space:nowrap}
 /* El lugar: «colorssss!» */
 .ss{display:inline-block;transform-origin:50% 100%;will-change:transform}

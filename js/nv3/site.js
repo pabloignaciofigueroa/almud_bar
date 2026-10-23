@@ -216,6 +216,10 @@
     // boca del almud (rombo interior del isotipo) en píxeles
     const cx = r.left + (299.5 + 20) * k, cy = r.top + (242.5 + 20) * k, a = 212 * k, b = 166 * k;
     const W = innerWidth, H = hero.offsetHeight;
+    // el velo cubre justo la pantalla (+12 %): una capa chica que luego solo se escala en el compositor
+    const u = (px, o) => ((px - o) / k).toFixed(0);
+    const vx0 = u(-W * .12, r.left) - 20, vx1 = +u(W * 1.12, r.left) - 20, vy0 = u(-H * .12, r.top) - 20, vy1 = +u(H * 1.12, r.top) - 20;
+    $('.iso__veil', iso).setAttribute('d', 'M' + vx0 + ' ' + vy0 + 'H' + vx1 + 'V' + vy1 + 'H' + vx0 + 'ZM287 76L87 192L271 409L512 217Z');
     const S = 1.3 * Math.max(...[[0, 0], [W, 0], [0, H], [W, H]].map(([px, py]) => Math.abs(px - cx) / a + Math.abs(py - cy) / b));
     const ox = ((299.5 + 20) / 660 * 100).toFixed(2) + '%', oy = ((242.5 + 20) / 940 * 100).toFixed(2) + '%';
     const ltrs = $$('.hero__svg .ltr');
@@ -238,7 +242,6 @@
       .fromTo(win, { scale: 1.14 }, { scale: 1, duration: 1.7, ease: 'expo.out' }, .3)
       .to($$('.iso__g path', iso), { strokeDashoffset: 0, duration: .62, ease: 'power2.inOut', stagger: .035 }, 0)
       .to(iso, { scale: S, duration: .8, ease: 'power3.in' }, .72)
-      .to($('.iso__g', iso), { opacity: 0, duration: .32, ease: 'none' }, 1.18)
       .set(iso, { opacity: 0 }, 1.52)
       .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.12)
       .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.34)
