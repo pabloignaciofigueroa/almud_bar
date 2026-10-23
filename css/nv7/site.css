@@ -818,3 +818,64 @@ html:not(.bj) .baraja__p>.carta:nth-child(12){grid-column:1;grid-row:131/span 16
 
 /* 6c · los platos esperan su entrada ya girados: Comida recorta su desborde horizontal (como Con quién), sin desborde de página a 768 px */
 .comida{overflow-x:clip}
+
+/* ═════ v4 fase 7 · Eventos: el video de la fiesta, un slider de fiestas a pantalla completa y una coda de fotos ═════ */
+.eventos .wrap.ev7{display:flex;flex-direction:column}
+.eventos .ev7 .ev7__head{order:1}
+.eventos .ev7 .ev7__v{order:2;width:100%;margin-top:28px;aspect-ratio:4/5;grid-column:auto}
+.eventos .ev7 .fs{order:3}
+.eventos .ev7 .ev7__coda{order:4}
+/* coda: dos fotos en columnas independientes, la derecha más abajo, cada una en su proporción */
+.ev7__coda{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;align-items:start;margin-top:40px}
+.ev7__coda .m{aspect-ratio:var(--ar)}
+.ev7__col--2{margin-top:40px}
+@media (min-width:1024px){
+  .eventos .wrap.ev7{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:0;align-items:start}
+  .eventos .ev7 .ev7__head{grid-column:1/9;grid-row:1}
+  .eventos .ev7 .ev7__coda{grid-column:9/13;grid-row:1;margin-top:0;gap:0 20px}
+  .eventos .ev7 .ev7__v{grid-column:1/6;grid-row:2;margin-top:48px}
+  .eventos .ev7 .fs{grid-column:6/13;grid-row:2;margin-top:48px;align-self:stretch}
+}
+
+/* Las fiestas sin JS o con movimiento reducido: apiladas, cada una con su mes, su nombre y sus fotos (en su proporción, con desfase) */
+.fs{margin-top:44px}
+.fs__tr{display:grid;gap:56px}
+.fs__mes{font:600 16px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase}
+.fs__n{font:800 clamp(56px,16vw,150px)/.86 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin-top:8px}
+.fs__t .gloss{margin-top:8px}
+.fs__fotos{display:flex;gap:12px;align-items:flex-start;margin-top:20px}
+.fs__f .m{aspect-ratio:var(--ar)}
+.fs__s--3 .fs__f{flex:0 0 calc((100% - 24px) / 3)}
+.fs__s--2 .fs__f{flex:0 0 calc((100% - 12px) / 2)}
+.fs__s--1 .fs__f{flex:0 0 62%}
+.fs__f--2{margin-top:36px}
+.fs__f--3{margin-top:14px}
+.fs__dots[hidden]{display:none}
+
+/* Con JS y movimiento: slider a pantalla completa (celular ~100svh), se arrastra y avanza solo */
+.fs.is-on{position:relative;margin-left:calc(-1 * var(--gut));margin-right:calc(-1 * var(--gut));height:100svh;min-height:560px;overflow:hidden;touch-action:pan-y;container-type:inline-size;cursor:grab;-webkit-user-select:none;user-select:none;outline-offset:-4px}
+.fs.is-on.is-drag{cursor:grabbing}
+.fs.is-on .fs__tr{display:flex;gap:0;height:100%;will-change:transform}
+.fs.is-on .fs__s{flex:0 0 100%;height:100%;display:flex;flex-direction:column;padding:calc(var(--nav) + 12px) var(--gut) 76px}
+.fs.is-on .fs__n{font-size:min(calc((100cqw - 2 * var(--gut)) / (var(--len) * .5)),190px,24svh)}
+.fs.is-on .fs__fotos{position:relative;display:block;flex:1;margin-top:18px;container-type:size}
+.fs.is-on .fs__f{position:absolute;margin:0;width:var(--w);flex:none}
+.fs.is-on .fs__f .m{box-shadow:0 18px 36px -18px rgba(14,12,11,.55)}
+.fs.is-on .fs__s--3 .fs__f--1{--w:min(50cqw,62cqh * .8);left:0;top:0;rotate:-5deg}
+.fs.is-on .fs__s--3 .fs__f--2{--w:min(46cqw,58cqh * .8);right:0;top:12cqh;rotate:4deg}
+.fs.is-on .fs__s--3 .fs__f--3{--w:min(44cqw,52cqh * .8);left:calc(50cqw - var(--w) / 2 + 4cqw);bottom:0;rotate:-2deg}
+.fs.is-on .fs__s--2 .fs__f--1{--w:min(56cqw,72cqh * .8);left:0;top:0;rotate:-4deg}
+.fs.is-on .fs__s--2 .fs__f--2{--w:min(50cqw,64cqh * .8);right:0;bottom:0;rotate:5deg}
+.fs.is-on .fs__s--1 .fs__f--1{--w:min(72cqw,94cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625);rotate:-3deg}
+.fs.is-on img,.fs.is-on video{-webkit-user-drag:none;pointer-events:none}
+.fs__dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:4px;z-index:2}
+.fs__dot{display:flex;align-items:center;width:56px;height:44px;padding:0 6px;border:0;background:none;cursor:pointer}
+.fs__dot::before{content:"";position:absolute}
+.fs__bar{position:relative;display:block;width:100%;height:4px;border-radius:2px;background:rgba(14,12,11,.25);overflow:hidden}
+.fs__bar::after{content:"";position:absolute;inset:0;background:#0e0c0b;transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.fs__dot[aria-current="true"] .fs__bar::after{transform:scaleX(var(--p,1))}
+@media (min-width:1024px){
+  .fs.is-on{margin:48px 0 0;height:auto;min-height:min(84vh,720px)}
+  .fs.is-on .fs__s{padding:28px 28px 72px}
+  .fs.is-on .fs__n{font-size:min(calc(100cqw / (var(--len) * .5)),170px,20vh)}
+}

@@ -169,6 +169,24 @@ BARAJA = ['con-quien-barra', 'con-quien-amigos', 'quien-sillones-llenos', 'quien
 QB = '(min-width:1024px) 30vw, (min-width:768px) 60vw, 80vw'
 Q_W = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 92vw'
 
+# v4 fase 7 · fiestas del slider: nombre y mes literales del calendario v3 (content/copy-v3.md), fotos propias de la fase 3.
+# Negroni Week queda fuera (copy-v3: campaña internacional, sin foto propia); Bendita Primavera, también (una sola vez, en 2024,
+# y su IG no dice el mes: sería inventarlo). Su foto aprobada sigue en la coda.
+FIESTAS = [
+    ('Aniversario', 'Jul', 'Jul', '[Anniversary]', [('p', 'eventos-12-anos'), ('p', 'eventos-cotillon-12'), ('p', 'eventos-baile-12')]),
+    ('Fondita', 'Sep', 'Sep', "[Chile's Independence Day party]", [('p', 'eventos-fondita')]),
+    ('Jalogüín', 'Oct', 'Oct', '[Halloween]', [('v', 'eventos-jaloguin'), ('p', 'eventos-jaloguin')]),
+]
+
+
+def fiesta_li(f, k):
+    n, mes, mes_en, gl, fotos = f
+    fs = ''.join(f'<div class="fs__f fs__f--{j + 1}">' + (vid(i, 'fs__m') if t == 'v' else pic(i, 'a', '(min-width:1024px) 22vw, 56vw', 'fs__m')) + '</div>' for j, (t, i) in enumerate(fotos))
+    return (f'<li class="fs__s fs__s--{len(fotos)}" style="--len:{len(n)}" aria-label="{k + 1} / {len(FIESTAS)}">'
+            f'<div class="fs__t"><p class="fs__mes" data-en="{mes_en}">{mes}</p><h3 class="fs__n">{E(n)}</h3>{g(gl, "gloss gloss--s")}</div>'
+            f'<div class="fs__fotos">{fs}</div></li>')
+
+
 eventos = [
     ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
     ('eventos-fondita', 'Sep', 'Sep', 'Fondita', "Fondita [Chile's Independence Day party]", 9),
@@ -370,20 +388,21 @@ body = f'''
   </div>
 </section>
 
-<!-- 6 · EVENTOS -->
+<!-- 6 · EVENTOS · v4 fase 7: el video grande de la fiesta, un slider de fiestas a pantalla completa y una coda de fotos -->
 <section class="eventos claro" id="eventos" aria-labelledby="h-eventos">
-  <div class="wrap">
-    {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
-    {vid('eventos-fiesta', 'ev__banner ev__banner--v reveal')}
-    <div class="ev__mas">
-      {pic('eventos-cotillon-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
-      {pic('eventos-baile-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
-      {pic('eventos-primavera', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
-      {pic('eventos-terraza-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+  <div class="wrap ev7">
+    <div class="ev7__head">{title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}</div>
+    {vid('eventos-fiesta', 'ev__banner ev__banner--v ev7__v reveal')}
+    <div class="ev7__coda">
+      <div class="ev7__col">{pic('eventos-terraza-12', 'a', '(min-width:1024px) 18vw, 46vw', 'reveal')}</div>
+      <div class="ev7__col ev7__col--2">{pic('eventos-primavera', 'a', '(min-width:1024px) 18vw, 46vw', 'reveal')}</div>
     </div>
-    <ol class="cal">
-      {''.join('<li class="ev">' + (vid(i, 'ev__m reveal') if i in VI else pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal')) + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
-    </ol>
+    <div class="fs" data-fiestas aria-label="Fiestas de Almud" data-aria-en="Almud parties">
+      <ol class="fs__tr" data-track>
+        {''.join(fiesta_li(f, k) for k, f in enumerate(FIESTAS))}
+      </ol>
+      <div class="fs__dots" hidden>{''.join(f'<button class="fs__dot" type="button" aria-label="{E(f[0])}"><span class="fs__bar"></span></button>' for f in FIESTAS)}</div>
+    </div>
   </div>
 </section>
 
