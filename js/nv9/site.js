@@ -639,7 +639,7 @@
     const snapX = r => r.base + Math.round((r.x - r.base) / r.step) * r.step;
     const measure = () => rows.forEach(r => {
       const li = r.row.children; r.step = li[1].offsetLeft - li[0].offsetLeft; r.half = r.step * (li.length / 2);
-      r.base = parseFloat(getComputedStyle(cinta).getPropertyValue('--gut')) || 16;   // la tarjeta queda alineada al margen
+      r.base = 0;   // la cinta ya va dentro de los márgenes: la tarjeta queda alineada a su borde
       r.x = snapX(r); norm(r); set(r);
     });
     measure(); addEventListener('resize', measure);

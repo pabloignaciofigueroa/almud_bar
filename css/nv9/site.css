@@ -1026,3 +1026,23 @@ html:not(.fl) .flip__q{font-size:18px}
   .fs.is-on .fs__s--1 .fs__fotos{margin-top:0}
   .fs.is-on .fs__s--1 .fs__f--1{--w:min(96cqw,96cqh * .8);left:auto;right:2cqw;top:2cqh}
 }
+
+/* v4 fase 9 · Reseñas: tarjetas completas de color (los del local, rotando) con comilla gigante; en celular, una tarjeta a lo ancho */
+.cinta .r{position:relative;border-top:0;border-radius:10px;padding:56px 22px 18px;justify-content:space-between;background:var(--c-amarillo);color:#0e0c0b}
+.cinta .r::before{content:"“";position:absolute;left:16px;top:-6px;font:800 110px/1 var(--f-display);opacity:.9}
+.cinta .r .r__q p{font:500 20px/1.38 var(--f-body);color:#0e0c0b}
+.cinta .r .r__q .gloss{color:#0e0c0b;opacity:.85}
+.cinta .r .r__f{color:#0e0c0b}
+.cinta .r:nth-child(5n+2){background:var(--c-rosa)}
+.cinta .r:nth-child(5n+3){background:var(--c-naranja)}
+.cinta .r:nth-child(5n+4){background:var(--c-lila)}
+.cinta .r:nth-child(5n+5){background:var(--c-verde);color:#f5e9db}
+.cinta .r:nth-child(5n+5) .r__q p,.cinta .r:nth-child(5n+5) .r__f,.cinta .r:nth-child(5n+5) .r__q .gloss{color:#f5e9db}
+.cinta__row+.cinta__row .r:nth-child(5n+1){background:var(--c-naranja)}
+.cinta__row+.cinta__row .r:nth-child(5n+3){background:var(--c-amarillo)}
+.cn .cinta{margin-inline:var(--gut);max-width:calc(1600px - 2 * var(--gut));container-type:inline-size}
+@media (min-width:1600px){.cn .cinta{margin-inline:auto}}
+.cn .cinta .r{flex:0 0 100cqw}   /* en reposo, todas las tarjetas visibles quedan enteras: 1 en celular, 2 en tablet, 3 en escritorio */
+@media (min-width:768px){.cn .cinta .r{flex-basis:calc((100cqw - 16px) / 2)}}
+@media (min-width:1024px){.cn .cinta .r{flex-basis:calc((100cqw - 32px) / 3)}}
+@media (min-width:1024px){.cinta .r .r__q p{font-size:22px}}
