@@ -238,6 +238,51 @@
    },
    "evento": "12 años",
    "note": "IG-009 (@isosur.prod). Megáfono = el de la puerta."
+  },
+  {
+   "id": "tragos-brindis-copas",
+   "ref": "P108",
+   "src": "assets/raw/ig/DBMtYELSzNS_08.jpg",
+   "section": "tragos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Dos copas chocan en un brindis: una ámbar con hielo y otra azul.",
+    "en": "Two glasses clink in a toast: one amber over ice, one blue."
+   },
+   "note": "IG-075 (bienvenida a la primavera, @estudiouno.prod). Solo manos y copas."
+  },
+  {
+   "id": "eventos-baile-12",
+   "ref": "P375",
+   "src": "assets/raw/ig/Dbok2NyFNdb_18.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Los 12 años de Almud: la gente baila apretada bajo los banderines, con coronas de cumpleaños.",
+    "en": "Almud turns 12: people dancing close under the bunting, wearing birthday crowns."
+   },
+   "evento": "12 años",
+   "note": "IG-008 (@isosur.prod). Cotillón de cumpleaños: solo en Eventos."
   }
  ]
 }
