@@ -315,7 +315,7 @@ body = f'''
 <!-- 1 · PORTADA -->
 <section class="hero" aria-label="Almud Bar">
   <div class="hero__win" data-win>
-    {vid('portada-celular', 'hero__v hero__v--m', hero=True)}
+    {vid('portada-celular-b', 'hero__v hero__v--m', hero=True)}
     {vid('portada-escritorio', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
     <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}function go(){{if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}}if(d.documentElement.classList.contains('intro')||d.readyState==='complete')go();else{{addEventListener('load',go);setTimeout(go,2500)}}}})(document)</script>
@@ -439,7 +439,7 @@ body = f'''
     </div>
     <div class="qz__lado">
       {vid('quien-multitud-2', 'qz__v qz__v--2 reveal')}
-      {vid('quien-multitud-3', 'qz__v qz__v--3 reveal')}
+      {vid('quien-multitud-3-b', 'qz__v qz__v--3 reveal')}
     </div>
   </div>
 </section>
@@ -530,7 +530,7 @@ body = f'''
 </footer>
 '''
 
-IM_P = VI['portada-celular']['poster']['webp']['path']
+IM_P = VI['portada-celular-b']['poster']['webp']['path']
 IM_L = VI['portada-escritorio']['poster']['webp']['path']
 page = f'''<!doctype html>
 <html lang="es">

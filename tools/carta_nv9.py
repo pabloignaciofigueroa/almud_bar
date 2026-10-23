@@ -225,8 +225,12 @@ for tid, ttl, en, sids, col in TABS:
                   f'<h2 class="panel__t">{E(ttl)}</h2>{chip_html}{body}</section>')
 
 tabcss = [f'html.js[data-tab="{t[0]}"] .panel:not(#{t[0]}){{display:none}}' for t in TABS]
-tabcss += [f'html.js[data-tab="{t[0]}"] #tab-{t[0]}{{color:var(--noche);background:var(--papel)}}' for t in TABS]
-tabcss += [f'html.js[data-tab="{t[0]}"] .panels{{--hoja:var(--hoja-{t[4]})}}' for t in TABS]
+# v4 fase 9 · paleta nueva: cada pestaña lleva un color del local (cintas, muro, letrero); la activa se pinta entera
+COLOR_TAB = {'casa': ('rosa', 'noche'), 'mundo': ('amarillo', 'noche'), 'espirituosos': ('naranja', 'noche'),
+             'vinos': ('lila', 'noche'), 'sin': ('verde', 'papel'), 'comilona': ('rojo', 'papel'), 'promos': ('crema', 'noche')}
+tabcss += [f'#tab-{k}{{--tc:var(--c-{c});--tc-on:var(--{on})}}' for k, (c, on) in COLOR_TAB.items()]
+tabcss += [f'html.js[data-tab="{t[0]}"] #tab-{t[0]}{{color:var(--tc-on);background:var(--tc);box-shadow:none}}' for t in TABS]
+tabcss += [f'html.js[data-tab="{t[0]}"] .panels{{--hoja:color-mix(in srgb,var(--c-{COLOR_TAB[t[0]][0]}) 7%,var(--papel));--hoja-c:var(--c-{COLOR_TAB[t[0]][0]})}}' for t in TABS]
 
 tabs_html = ''.join(f'<a class="tab" id="tab-{t[0]}" href="#{t[0]}" data-tab="{t[0]}" data-en="{E(t[2])}">{E(t[1])}</a>' for t in TABS)
 nav = (M and (ROOT / 'brand/v3/almud-nav-claro.svg').read_text().strip())

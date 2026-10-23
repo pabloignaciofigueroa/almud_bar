@@ -82,7 +82,7 @@
   function go(hash, how) {
     if (ids.includes(hash)) {
       if (R.dataset.tab === hash) return;
-      R.dataset.tab = hash; paint(); if (how) { top(); enter($('#' + hash)); }
+      R.dataset.tab = hash; paint(); filas.forEach(bordes); if (how) { top(); enter($('#' + hash)); }
       return true;
     }
     const sub = hash && $('.sub[data-sub="' + CSS.escape(hash) + '"]');
@@ -101,7 +101,13 @@
     if (j === -2) return;
     e.preventDefault(); const k = (j + ids.length) % ids.length; go(ids[k]); tabs[k].focus();
   });
+  /* v4 fase 9 · fundido solo donde queda fila por deslizar */
+  const filas = [list, ...$$('.chips__in')];
+  function bordes(f) { const m = f.scrollWidth - f.clientWidth; f.classList.toggle('mas-i', f.scrollLeft > 2); f.classList.toggle('mas-d', m > 2 && f.scrollLeft < m - 2); }
+  filas.forEach(f => { f.addEventListener('scroll', () => bordes(f), { passive: true }); bordes(f); });
+  addEventListener('resize', () => filas.forEach(bordes));
   addEventListener('hashchange', () => go(location.hash.slice(1)));
   go(location.hash.slice(1));
   paint();
+  filas.forEach(bordes);
 })();

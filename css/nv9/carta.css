@@ -139,3 +139,42 @@ html:not(.js) .tabs,html:not(.js) .chips{position:static}
 .sub,.gr{scroll-margin-top:calc(var(--nav) + var(--tabs-h) + var(--chips-h,0px) + 8px)}
 @media (max-width:1023px){.tabs__l{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 44px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 44px),transparent 100%)}}
 .pr__g{margin-top:4px;font-style:normal}
+
+/* v4 fase 9 · paleta nueva: base negro único #0e0c0b + crema; pestañas con los colores del local; hoja centrada; nada bajo 16 px */
+.nav--carta{background:rgba(14,12,11,.94)}
+.tabs::before{background:rgba(14,12,11,.96);border-bottom-color:rgba(245,233,219,.14)}
+body{background:var(--noche)}
+/* pestañas: texto crema con una franja del color del local; la activa, entera de su color */
+.tab{color:var(--papel);box-shadow:inset 0 -3px 0 var(--tc,var(--papel));border-radius:var(--radius) var(--radius) 0 0;font-size:16px}
+.tab:hover{background:color-mix(in srgb,var(--tc,var(--papel)) 18%,transparent)}
+/* filas sin cortes: ni fundido que se coma la primera/última pestaña, ni pestaña pegada al borde */
+.tabs__l{-webkit-mask-image:none!important;mask-image:none!important;padding-inline:var(--gut);scroll-padding-inline:var(--gut)}
+.tab:last-child{margin-right:0}
+.tabs__l::after{content:"";flex:0 0 1px}
+@media (max-width:1023px){
+  .tabs__l{gap:6px}
+  .tab{padding:0 12px}
+}
+@media (min-width:1024px) and (max-width:1279px){.tab{font-size:16px;letter-spacing:0;padding:0 8px}.tabs__l{gap:4px}}
+/* la hoja centrada, con el color de la pestaña como cinta superior */
+.hoja{margin-inline:auto;border-top:6px solid var(--hoja-c,var(--c-rosa))}
+@media (min-width:1024px){
+  .hoja,.carta__head{max-width:880px;margin-inline:auto;box-sizing:border-box}
+  .carta__head{padding-inline:clamp(32px,5vw,72px)}
+  .carta__pie{max-width:880px;margin-inline:auto;padding-inline:clamp(32px,5vw,72px);box-sizing:border-box}
+}
+/* tipografía mínima 16 px */
+.nav__a,.nav__dm{font-size:16px}
+@media (max-width:420px){.nav__dm{font-size:16px;padding:0 8px;letter-spacing:.02em}}
+.kick{font-size:16px}
+.panel__t{font-size:16px;color:var(--noche)}
+.tbl thead th{font-size:16px}
+/* celular: fundido de 40 px solo del lado donde queda fila por deslizar (JS pone .mas-i / .mas-d); nunca se come la primera ni la última */
+@media (max-width:1023px){
+  .tabs__l.mas-d,.chips__in.mas-d{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent)!important;mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent)!important}
+  .tabs__l.mas-i,.chips__in.mas-i{-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px)!important;mask-image:linear-gradient(90deg,transparent,#000 40px)!important}
+  .tabs__l.mas-i.mas-d,.chips__in.mas-i.mas-d{-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)!important;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)!important}
+  .chips__in{-webkit-mask-image:none;mask-image:none}
+  .chip:last-child{margin-right:0}
+  .chips__in{padding-right:var(--gut)}
+}

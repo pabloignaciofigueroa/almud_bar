@@ -1066,3 +1066,5 @@ html:not(.fl) .flip__q{font-size:18px}
 .ev7__bajada{margin-top:16px;max-width:30ch;font:500 22px/1.32 var(--f-body)}
 .ev7__bajada .gloss{margin-top:6px;font-size:18px}
 @media (min-width:1024px){.ev7__bajada{font-size:26px;margin-top:22px}}
+/* v4 fase 9 · glosa EN de Peter sobre el video: chip oscuro, contraste AA garantizado sobre cualquier cuadro */
+.peter .gloss{display:table;background:rgba(14,12,11,.82);padding:4px 8px;border-radius:var(--radius)}
