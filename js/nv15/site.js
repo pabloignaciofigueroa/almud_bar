@@ -312,7 +312,7 @@
     // La boca se abre (0,65 s) y luego el isotipo y su boca crecen juntos hasta pasar la cámara (0,6 → 1,55 s).
     const H0 = window.__almudHero, EXP = .6 + .95, D = .45;   // D: las letras y el botón entran un poco después (misma animación)
     tl.set(inEls, { opacity: 1 }, 0)
-      .call(() => { root.classList.remove('carga'); if (H0) { H0.tAbre = performance.now(); H0.ctAbre = H0.v.currentTime; H0.play(); } }, null, 0)
+      .call(() => { root.classList.remove('carga'); root.classList.add('abre'); if (H0) { H0.tAbre = performance.now(); H0.ctAbre = H0.v.currentTime; H0.play(); } }, null, 0)
       .to(st, { k: 1, duration: .65, ease: 'power2.inOut', onUpdate: draw, onComplete: () => { if (H0) { H0.tRombo = performance.now(); H0.ctRombo = H0.v.currentTime; } } }, 0)   // la boca se abre
       .to(st, { p: 1, duration: .95, ease: 'power2.in', onUpdate: draw }, .6)              // isotipo y boca crecen juntos hasta pasar la cámara
       .call(() => { if (H0) { H0.tExp = performance.now(); H0.ctExp = H0.v.currentTime; } }, null, EXP)

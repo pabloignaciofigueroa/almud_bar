@@ -1144,6 +1144,8 @@ html:not(.fl) .flip__q{font-size:18px}
   font:600 18px/1 var(--f-body);letter-spacing:.06em;font-variant-numeric:tabular-nums;color:var(--papel)}
 /* respaldo CSS: si el JS se cae, todo se ve a los 11 s (la carga dura 8 s como máximo) */
 .intro .hero__win,.intro .hero__in>*,.intro .nav,.intro .hero__iso{animation-delay:11s}
+/* v4 fase 15: con la apertura ya en marcha (JS vivo) el respaldo no aplica: a los 11 s no debe cortar la animación */
+.intro.abre .hero__win,.intro.abre .hero__in>*,.intro.abre .nav,.intro.abre .hero__iso{animation:none}
 .carga__pct [data-pct]{display:inline-block;width:3ch;text-align:right}   /* el número crece sin mover nada (CLS 0) */
 .carga__pct{padding-right:1ch}
 /* v4 fase 13 · sin JS: el video de portada (en <noscript>) se ve y parte de inmediato desde 0 */
