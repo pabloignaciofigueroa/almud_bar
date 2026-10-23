@@ -44,3 +44,4 @@
 - Fase 5 ✅ /nueva_v4/: desfases, carrusel de tragos con letras, platos que giran (commit 3e13cd0, congelada)
 - Fase 6 ✅ /nueva_v5/: baraja de fotos en Con quién, videos fuera (commit c751445, congelada)
 - Fase 6b/6c ✅ /nueva_v6/: baraja infinita, orden del desorden sin recortes, video de fiesta con contexto (commit 7762713, congelada)
+- 2026-10-23 Dossier de diseño v6: primer borrador (20 láminas, dossier/build_dossier.py)
