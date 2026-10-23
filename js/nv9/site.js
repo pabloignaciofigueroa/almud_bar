@@ -623,39 +623,44 @@
     ST.create({ trigger: '.eqz', start: 'top 70%', once: true, onEnter: () => flips.forEach(f => f.classList.add('peek')) });
   }
 
-  /* ───────── Reseñas (crema): dos cintas en sentidos contrarios ───────── */
-  // Pasan solas (36 px/s), se pausan con hover o foco, se arrastran con el dedo o el mouse (con inercia) y solo corren en pantalla.
+  /* ───────── Reseñas (crema): dos cintas de tarjetas que se leen enteras ───────── */
+  // v4 fase 9: cada cinta avanza una tarjeta y se detiene 2,4 s con las tarjetas enteras en pantalla (alineadas al margen);
+  // las dos van en sentidos contrarios, se pausan con hover o foco y se arrastran con el dedo o el mouse (al soltar, encaja en una tarjeta).
   const cinta = $('[data-cinta]');
   if (cinta && window.PointerEvent) {
     root.classList.add('cn');
     cinta.setAttribute('role', 'region'); cinta.tabIndex = 0;
     const rows = $$('.cinta__row', cinta).map(row => {
       [...row.children].forEach(li => { const c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.querySelectorAll('[aria-label]').forEach(x => x.removeAttribute('aria-label')); row.appendChild(c); });
-      return { row, dir: +row.dataset.dir, x: 0, v: 0, half: 0 };
+      return { row, dir: +row.dataset.dir, x: 0, step: 0, half: 0, base: 0, tw: null };
     });
-    const measure = () => rows.forEach(r => { r.half = r.row.scrollWidth / 2 + 8; if (r.dir > 0 && r.x === 0) r.x = -r.half; });
+    const set = r => { r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)'; };
+    const norm = r => { while (r.x <= r.base - r.half) r.x += r.half; while (r.x > r.base) r.x -= r.half; };
+    const snapX = r => r.base + Math.round((r.x - r.base) / r.step) * r.step;
+    const measure = () => rows.forEach(r => {
+      const li = r.row.children; r.step = li[1].offsetLeft - li[0].offsetLeft; r.half = r.step * (li.length / 2);
+      r.base = parseFloat(getComputedStyle(cinta).getPropertyValue('--gut')) || 16;   // la tarjeta queda alineada al margen
+      r.x = snapX(r); norm(r); set(r);
+    });
     measure(); addEventListener('resize', measure);
-    let on = false, hold = false, drag = null, raf = 0, last = 0;
-    const wrap = r => { while (r.x <= -r.half) r.x += r.half; while (r.x > 0) r.x -= r.half; };
-    function tick(t) {
-      const dt = Math.min(50, last ? t - last : 16.7); last = t;
-      rows.forEach(r => {
-        if (drag && drag.r === r) return;
-        const auto = hold ? 0 : r.dir * .036 * dt;
-        r.x += auto + r.v * dt; r.v *= Math.pow(.94, dt / 16.7); if (Math.abs(r.v) < .002) r.v = 0;
-        wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+    let on = false, hold = false, drag = null;
+    const next = r => {
+      if (r.tw) r.tw.kill();
+      r.tw = G.delayedCall(2.4, () => {
+        if (!on || hold || drag) { next(r); return; }
+        const st = { x: r.x };
+        r.tw = G.to(st, { x: r.x + r.dir * r.step, duration: 1.05, ease: 'power3.inOut', onUpdate: () => { r.x = st.x; set(r); },
+          onComplete: () => { norm(r); set(r); next(r); } });
       });
-      raf = on ? requestAnimationFrame(tick) : 0; if (!raf) last = 0;
-    }
-    const run = () => { if (on && !raf) raf = requestAnimationFrame(tick); };
-    ST.create({ trigger: cinta, start: 'top bottom', end: 'bottom top', onToggle: self => { on = self.isActive; run(); } });
+    };
+    ST.create({ trigger: cinta, start: 'top bottom', end: 'bottom top', onToggle: self => { on = self.isActive; if (on) rows.forEach(r => { if (!r.tw) next(r); }); } });
     cinta.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hold = true; });
     cinta.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hold = false; });
     cinta.addEventListener('focusin', () => { hold = true; }); cinta.addEventListener('focusout', () => { hold = false; });
     cinta.addEventListener('pointerdown', e => {
       const row = e.target.closest('.cinta__row'); if (!row || e.button > 0) return;
-      drag = { id: e.pointerId, r: rows.find(r => r.row === row), x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s: 0 };
-      drag.s = drag.r.x;
+      const r = rows.find(q => q.row === row);
+      drag = { id: e.pointerId, r, x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s: r.x };
     });
     cinta.addEventListener('pointermove', e => {
       if (!drag || e.pointerId !== drag.id) return;
@@ -663,12 +668,18 @@
       if (!drag.on) {
         if (Math.hypot(dx, dy) < 6) return;
         if (e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // vertical: es scroll
-        drag.on = true; try { cinta.setPointerCapture(e.pointerId); } catch (_) {} cinta.classList.add('is-drag');
+        drag.on = true; if (drag.r.tw) drag.r.tw.kill(); try { cinta.setPointerCapture(e.pointerId); } catch (_) {} cinta.classList.add('is-drag');
       }
       const dt = Math.max(1, e.timeStamp - drag.t); drag.v = (e.clientX - drag.lx) / dt * .7 + drag.v * .3; drag.lx = e.clientX; drag.t = e.timeStamp;
-      const r = drag.r; r.x = drag.s + dx; wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+      const r = drag.r; r.x = drag.s + dx; norm(r); set(r);
     });
-    const soltar = e => { if (!drag || e.pointerId !== drag.id) return; if (drag.on) drag.r.v = G.utils.clamp(-2, 2, drag.v); drag = null; cinta.classList.remove('is-drag'); };
+    const soltar = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag; drag = null; cinta.classList.remove('is-drag');
+      if (!d.on) return;
+      const r = d.r, st = { x: r.x }, to = r.base + Math.round((r.x + d.v * 180 - r.base) / r.step) * r.step;   // inercia y encaje en una tarjeta
+      r.tw = G.to(st, { x: to, duration: .7, ease: 'power3.out', onUpdate: () => { r.x = st.x; set(r); }, onComplete: () => { norm(r); set(r); next(r); } });
+    };
     cinta.addEventListener('pointerup', soltar); cinta.addEventListener('pointercancel', soltar);
     cinta.addEventListener('lostpointercapture', e => { if (e.target === cinta) soltar(e); });
     cinta.addEventListener('dragstart', e => e.preventDefault());
