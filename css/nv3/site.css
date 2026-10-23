@@ -86,15 +86,14 @@ html[lang="en"] .gloss--i{display:inline}
 }
 @media (min-width:768px){.hero__right{display:block}}
 /* intro: el isotipo se abre al video */
+/* v4 fase 4: el póster se ve desde el primer cuadro (LCP); el isotipo se dibuja encima, con un velo que solo deja ver la boca
+   del almud, y luego crece (solo transform) hasta que la boca cubre la pantalla. Respaldo CSS: todo visible a los 3 s. */
 .intro .hero__iso{display:block}
-.intro .hero__iso path{stroke-dasharray:1;stroke-dashoffset:1}
-.intro .hero__win{clip-path:polygon(50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%)}
+.intro .hero__iso .iso__g path{stroke-dasharray:1;stroke-dashoffset:1}
 .intro .hero__in>*{opacity:0}
 .intro .nav{opacity:0}
-.intro .hero__win{animation:fs-clip .01s 4.2s forwards}
-.intro .hero__in>*,.intro .nav{animation:fs-show .01s 4.2s forwards}
-.intro .hero__iso{animation:fs-hide .01s 4.2s forwards}
-@keyframes fs-clip{to{clip-path:inset(0)}}
+.intro .hero__in>*,.intro .nav{animation:fs-show .01s 3s forwards}
+.intro .hero__iso{animation:fs-hide .01s 3s forwards}
 @keyframes fs-show{to{opacity:1}}
 @keyframes fs-hide{to{opacity:0}}
 
@@ -117,15 +116,7 @@ html[lang="en"] .gloss--i{display:inline}
   .lugar__x{display:block;grid-column:4/7;grid-row:1;align-self:start;width:100%;margin-top:-4vh}
   .lugar__v{grid-column:8/13;grid-row:1;max-height:82vh;width:auto;justify-self:end;height:82vh}
 }
-@media (min-width:1024px){
-  .gs .rincones{height:calc(100vh + 7 * 62vh + 6 * 3vw + 2 * var(--gut) - 100vw + 12vw);margin-top:0;padding-bottom:0}
-  .gs .rincones__st{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
-  .gs .rincones__tr{overflow:visible;gap:3vw;padding:0 calc(var(--gut) + 12vw) 0 var(--gut);will-change:transform}
-  .gs .rin{flex:0 0 58vh}
-  .gs .rin:nth-child(even){transform:translateY(5vh)}
-  .gs .rin:nth-child(odd){transform:translateY(-4vh)}
-  .rin__n{font-size:36px}
-}
+@media (min-width:1024px){.rin__n{font-size:36px}}
 
 /* ═════ 3 · TRAGOS ═════ */
 .tragos{background:var(--muro);color:var(--papel);padding-block:var(--sec)}
@@ -412,13 +403,12 @@ html:not(.js) .m video{display:none}
   .tragos__named .moc2{grid-column:auto;grid-row:auto;display:block;border-top:0;padding-top:0;margin-top:0}
   .tragos__named .moc2__m .m{margin-bottom:12px}
 }
-/* fase 19 · El lugar en escritorio: mosaico de 3 columnas, sin galería atada al scroll */
+/* fase 19 · El lugar en escritorio SIN JS: mosaico de 3 columnas (con JS es la ruleta que se arrastra, v4 fase 4) */
 @media (min-width:1024px){
-  .rincones,.gs .rincones{height:auto!important;margin-top:56px;padding-bottom:var(--sec)}
-  .rincones__st,.gs .rincones__st{position:static;height:auto;overflow:visible;display:block}
-  .rincones__tr{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px;overflow:visible;padding:0 var(--gut);max-width:1600px;margin:0 auto;transform:none!important}
-  .rin,.gs .rin{flex:none;transform:none}
-  .rin:nth-child(3n+2){margin-top:8vh}
+  html:not(.rul) .rincones__st{position:static;height:auto;overflow:visible;display:block}
+  html:not(.rul) .rincones__tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px;overflow:visible;padding:0 var(--gut);max-width:1600px;margin:0 auto}
+  html:not(.rul) .rin{flex:none}
+  html:not(.rul) .rin:nth-child(3n+2){margin-top:8vh}
 }
 /* fase 19 · Eventos en escritorio: el «10» a lo ancho y las tres fichas en fila */
 @media (min-width:1024px){
@@ -431,7 +421,6 @@ html:not(.js) .m video{display:none}
   .cal .ev:nth-child(2){margin-top:6vh}
   .cal .ev__n{font-size:40px}
 }
-@media (min-width:1024px){.gs .rincones__tr,.rincones__tr{padding:0 var(--gut);gap:48px 24px}}
 
 /* Botón carta: mismo rosa en nav, portada, Tragos y Comida */
 .nav__carta{min-height:44px;padding:0 16px;font-size:15px}
@@ -586,3 +575,31 @@ html:not(.js) .m picture{display:none}
 @media (min-width:768px){.lleno{padding-bottom:0}}
 .rincones,.gs .rincones{padding-bottom:var(--sec)!important;margin-top:40px}
 @media (min-width:1024px){.rincones,.gs .rincones{margin-top:72px}}
+
+/* ═════ v4 fase 4 · Portada y El lugar con juego ═════ */
+/* Portada: isotipo + velo (la boca del almud) */
+.hero__iso{will-change:transform}
+.hero__iso svg{overflow:visible}
+.iso__veil{fill:var(--noche);fill-opacity:.58;stroke:none}
+.hero__svg{overflow:visible}
+.hero__svg .ltr{transform-box:fill-box;transform-origin:50% 100%}
+.ch{display:inline-block;will-change:transform}
+.chw{display:inline-block;white-space:nowrap}
+/* El lugar: «colorssss!» */
+.ss{display:inline-block;transform-origin:50% 100%;will-change:transform}
+.lugar .ttl{cursor:default;-webkit-tap-highlight-color:transparent}
+/* El lugar: el local lleno se abre con la boca del almud (clip-path) */
+.gs .clipin{clip-path:polygon(50% 50%,50% 50%,50% 50%,50% 50%)}
+.gs .clipin img{transform:scale(1.28) rotate(-3deg)}
+/* La ruleta de rincones: se arrastra (dedo o mouse) con inercia; nunca atada al scroll vertical */
+.rul .rincones__st{overflow:hidden;touch-action:pan-y;cursor:grab;padding:28px 0 20px;margin:-28px 0 -20px;outline-offset:-4px;-webkit-user-select:none;user-select:none}
+.rul .rincones__st.is-drag{cursor:grabbing}
+.rul .rincones__tr{display:flex;overflow:visible;scroll-snap-type:none;gap:12px;padding:0 var(--gut);will-change:transform}
+.rul .rin{flex:0 0 76vw;transform-origin:50% 0;will-change:transform}
+.rul .rin img{-webkit-user-drag:none;user-select:none;pointer-events:none}
+@media (min-width:768px){.rul .rin{flex-basis:44vw}.rul .rincones__tr{gap:20px}}
+@media (min-width:1024px){
+  .rul .rincones__tr{gap:28px;align-items:flex-start}
+  .rul .rin{flex-basis:clamp(300px,27vw,460px)}
+  .rul .rin:nth-child(even){margin-top:7vh}
+}
