@@ -42,3 +42,4 @@
 - Fase 3 ✅ /nueva_v2/: 27→52 fotos, 12→17 pantallas en celular; El lugar con local lleno antes de la ruleta (commit d048ae7, congelada)
 - Fase 4 ✅ /nueva_v3/: intro en negro con boca del almud, letras con rebote; colorssss elástico; recortes en rombo; ruleta arrastrable (commit ad16efb, congelada)
 - Fase 5 ✅ /nueva_v4/: desfases, carrusel de tragos con letras, platos que giran (commit 3e13cd0, congelada)
+- Fase 6 ✅ /nueva_v5/: baraja de fotos en Con quién, videos fuera (commit c751445, congelada)
