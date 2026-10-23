@@ -48,7 +48,7 @@
   } else lazyImgs.forEach(loadImg);
 
   /* ───────── Idioma (ES por defecto; EN solo si el usuario lo toca) ───────── */
-  const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label']];
+  const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label'], ['data-title-en', 'title']];   // v4 fase 9 (M2): el title del iframe del mapa también
   function setLang(lang, save) {
     root.lang = lang;
     $$('[data-en]').forEach(el => {
@@ -69,7 +69,13 @@
 
   /* ───────── Nav: aparece al dejar la portada ───────── */
   const hero = $('.hero');
-  const navState = () => root.classList.toggle('is-past', scrollY > hero.offsetHeight - 170);
+  const navLogo = $('.nav__logo');
+  const navState = () => {
+    const past = scrollY > hero.offsetHeight - 170;
+    root.classList.toggle('is-past', past);
+    // v4 fase 9 (I2): mientras el logo de la barra es invisible (en la portada) no recibe foco
+    if (navLogo) { navLogo.tabIndex = past ? 0 : -1; navLogo.setAttribute('aria-hidden', past ? 'false' : 'true'); }
+  };
   addEventListener('scroll', navState, { passive: true }); navState();
 
   /* ───────── La ruleta de rincones (v4 fase 4) ─────────
@@ -178,16 +184,6 @@
   }
   $$('[data-ruleta]').forEach(ruleta);
 
-  /* ───────── Mapa del cierre (v4 fase 8c): sin iframe al cargar (no pesa, no toma el scroll); al tocarlo se inserta el de Google Maps ───────── */
-  const mapa = $('[data-mapa]');
-  if (mapa) $('.mapa__ph', mapa).addEventListener('click', () => {
-    const f = d.createElement('iframe');
-    f.src = mapa.dataset.src; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
-    f.title = root.lang === 'en' ? 'Map: Almud Bar, Serrano 325, Castro' : 'Mapa: Almud Bar, Serrano 325, Castro';
-    f.setAttribute('allowfullscreen', '');
-    mapa.replaceChildren(f);   // mismo contenedor y mismo alto: sin salto
-  }, { once: true });
-
   /* ───────── Movimiento ───────── */
   const G = window.gsap, ST = window.ScrollTrigger;
   if (!G || !ST || reduce) { root.classList.remove('intro'); return; }
@@ -295,13 +291,17 @@
     let busy = false, ready = false;
     const hiss = () => {
       if (busy || !ready) return; busy = true;
-      const fs = parseFloat(getComputedStyle(t).fontSize) || 44, dx = fs * .075;
+      // v4 fase 9: se estiran solo a lo ancho (sssssss…), nunca hacia arriba: ninguna letra pisa la línea de «GUSTA».
+      // Se separan de derecha a izquierda y vuelven de izquierda a derecha, sin pasarse: nunca se montan entre ellas.
+      const fs = parseFloat(getComputedStyle(t).fontSize) || 44, dx = fs * .2;
       const tl = G.timeline({ onComplete: () => { busy = false; G.set([...ss, bang].filter(Boolean), { clearProps: 'transform' }); } });
+      G.set(ss, { transformOrigin: '50% 100%' });
       tl
-        .to(ss, { scaleY: 1.6, scaleX: .82, yPercent: -6, x: i => (i + 1) * dx, duration: .2, ease: 'power2.out', stagger: .045 })
-        .to(ss, { scaleY: 1, scaleX: 1, yPercent: 0, x: 0, duration: 1.15, ease: 'elastic.out(1.15,.3)', stagger: .05 }, .3);
-      if (bang) tl.to(bang, { x: (ss.length + 1) * dx, rotation: 14, duration: .22, ease: 'power2.out' }, .1)
-        .to(bang, { x: 0, rotation: 0, duration: 1.1, ease: 'elastic.out(1.2,.3)' }, .45);
+        .to(ss, { scaleX: 1.4, scaleY: .94, x: i => (i + 1) * dx, duration: .24, ease: 'power2.out', stagger: { each: .04, from: 'end' } })
+        .to(ss, { x: 0, duration: .75, ease: 'power3.out', stagger: .06 }, .42)
+        .to(ss, { scaleX: 1, scaleY: 1, duration: .75, ease: 'back.out(2.5)', stagger: .06 }, .42);
+      if (bang) tl.to(bang, { x: (ss.length + 1) * dx, rotation: 14, duration: .24, ease: 'power2.out' }, 0)
+        .to(bang, { x: 0, rotation: 0, duration: .8, ease: 'power3.out' }, .42 + ss.length * .06);
     };
     t._in = () => { ready = true; hiss(); };
     ST.create({ trigger: t, start: 'top 85%', end: 'bottom 10%', onEnterBack: hiss, onEnter: () => { if (ready) hiss(); } });
@@ -366,6 +366,15 @@
     cards.forEach(li => io3.observe(li));
   }
 
+  // v4 fase 9 · el Peter: su nombre literal se arma letra por letra sobre el video y el precio cae en su sitio
+  const pe = $('.peter');
+  if (pe) {
+    const ch = splitChars($('.peter__n', pe)), pr = $('.peter__p', pe);
+    G.timeline({ scrollTrigger: { trigger: pe, start: 'top 60%', once: true } })
+      .from(ch, { yPercent: 120, opacity: 0, rotation: i => (i % 3 - 1) * 18, duration: .6, ease: 'back.out(2.6)', stagger: .045 })
+      .from(pr, { y: 40, opacity: 0, rotation: -8, duration: .8, ease: 'elastic.out(1.1,.45)', clearProps: 'transform,opacity' }, '-=.25');
+  }
+
   /* ───────── v4 fase 5 · Comida (naranja) ───────── */
   // Los platos llegan a la mesa: entran girando un poco (como cuando se sirven) y la foto se abre en redondo, como un plato
   $$('.plato').forEach((m, i) => {
@@ -384,11 +393,13 @@
     ws.forEach(w => w.classList.add('sabro'));
     let ready = false, on = false;
     const beat = G.timeline({ paused: true, repeat: -1, repeatDelay: 2.4 })
+      // v4 fase 9: late hacia abajo (origen arriba) y sin giro: «SABROSONA!» nunca sube sobre «PERO MÁS»
       .to(ws, { keyframes: [
-        { scale: 1.15, rotation: (i) => (i - 1) * 3, duration: .14, ease: 'power2.out' },
-        { scale: .97, rotation: 0, duration: .13, ease: 'power1.in' },
-        { scale: 1.08, duration: .12, ease: 'power2.out' },
-        { scale: 1, duration: .6, ease: 'elastic.out(1.1,.35)' }], stagger: .08 });
+        { scaleY: 1.08, scaleX: 1.025, duration: .14, ease: 'power2.out' },
+        { scaleY: .98, scaleX: 1, duration: .13, ease: 'power1.in' },
+        { scaleY: 1.045, scaleX: 1.012, duration: .12, ease: 'power2.out' },
+        { scaleY: 1, scaleX: 1, duration: .5, ease: 'power2.out' }], stagger: .08 });
+    G.set(ws, { transformOrigin: '50% 0%' });
     const sync = () => { if (ready && on) beat.play(); else beat.pause(0); };
     ct._in = () => { ready = true; sync(); };
     ST.create({ trigger: ct, start: 'top 85%', end: 'bottom 10%', onToggle: self => { on = self.isActive; sync(); } });
@@ -524,7 +535,9 @@
   if (et) {
     const ws = $$('.w', et);
     ws.forEach(w => { w.style.overflow = 'visible'; });
-    G.from(ws, { y: () => -(et.getBoundingClientRect().top - et.closest('.eventos').getBoundingClientRect().top + et.offsetHeight + 40),   // desde el borde superior de la sección (overflow: clip) rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
+    // y: desde el borde superior de la sección (overflow: clip)
+    G.from(ws, { y: () => -(et.getBoundingClientRect().top - et.closest('.eventos').getBoundingClientRect().top + et.offsetHeight + 40),
+      rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
       stagger: .11, clearProps: 'transform,opacity', scrollTrigger: { trigger: et, start: 'top 82%', once: true } });
   }
 
@@ -619,39 +632,44 @@
     ST.create({ trigger: '.eqz', start: 'top 70%', once: true, onEnter: () => flips.forEach(f => f.classList.add('peek')) });
   }
 
-  /* ───────── Reseñas (crema): dos cintas en sentidos contrarios ───────── */
-  // Pasan solas (36 px/s), se pausan con hover o foco, se arrastran con el dedo o el mouse (con inercia) y solo corren en pantalla.
+  /* ───────── Reseñas (crema): dos cintas de tarjetas que se leen enteras ───────── */
+  // v4 fase 9: cada cinta avanza una tarjeta y se detiene 2,4 s con las tarjetas enteras en pantalla (alineadas al margen);
+  // las dos van en sentidos contrarios, se pausan con hover o foco y se arrastran con el dedo o el mouse (al soltar, encaja en una tarjeta).
   const cinta = $('[data-cinta]');
   if (cinta && window.PointerEvent) {
     root.classList.add('cn');
     cinta.setAttribute('role', 'region'); cinta.tabIndex = 0;
     const rows = $$('.cinta__row', cinta).map(row => {
       [...row.children].forEach(li => { const c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.querySelectorAll('[aria-label]').forEach(x => x.removeAttribute('aria-label')); row.appendChild(c); });
-      return { row, dir: +row.dataset.dir, x: 0, v: 0, half: 0 };
+      return { row, dir: +row.dataset.dir, x: 0, step: 0, half: 0, base: 0, tw: null };
     });
-    const measure = () => rows.forEach(r => { r.half = r.row.scrollWidth / 2 + 8; if (r.dir > 0 && r.x === 0) r.x = -r.half; });
+    const set = r => { r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)'; };
+    const norm = r => { while (r.x <= r.base - r.half) r.x += r.half; while (r.x > r.base) r.x -= r.half; };
+    const snapX = r => r.base + Math.round((r.x - r.base) / r.step) * r.step;
+    const measure = () => rows.forEach(r => {
+      const li = r.row.children; r.step = li[1].offsetLeft - li[0].offsetLeft; r.half = r.step * (li.length / 2);
+      r.base = 0;   // la cinta ya va dentro de los márgenes: la tarjeta queda alineada a su borde
+      r.x = snapX(r); norm(r); set(r);
+    });
     measure(); addEventListener('resize', measure);
-    let on = false, hold = false, drag = null, raf = 0, last = 0;
-    const wrap = r => { while (r.x <= -r.half) r.x += r.half; while (r.x > 0) r.x -= r.half; };
-    function tick(t) {
-      const dt = Math.min(50, last ? t - last : 16.7); last = t;
-      rows.forEach(r => {
-        if (drag && drag.r === r) return;
-        const auto = hold ? 0 : r.dir * .036 * dt;
-        r.x += auto + r.v * dt; r.v *= Math.pow(.94, dt / 16.7); if (Math.abs(r.v) < .002) r.v = 0;
-        wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+    let on = false, hold = false, drag = null;
+    const next = r => {
+      if (r.tw) r.tw.kill();
+      r.tw = G.delayedCall(2.4, () => {
+        if (!on || hold || drag) { next(r); return; }
+        const st = { x: r.x };
+        r.tw = G.to(st, { x: r.x + r.dir * r.step, duration: 1.05, ease: 'power3.inOut', onUpdate: () => { r.x = st.x; set(r); },
+          onComplete: () => { norm(r); set(r); next(r); } });
       });
-      raf = on ? requestAnimationFrame(tick) : 0; if (!raf) last = 0;
-    }
-    const run = () => { if (on && !raf) raf = requestAnimationFrame(tick); };
-    ST.create({ trigger: cinta, start: 'top bottom', end: 'bottom top', onToggle: self => { on = self.isActive; run(); } });
+    };
+    ST.create({ trigger: cinta, start: 'top bottom', end: 'bottom top', onToggle: self => { on = self.isActive; if (on) rows.forEach(r => { if (!r.tw) next(r); }); } });
     cinta.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hold = true; });
     cinta.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hold = false; });
     cinta.addEventListener('focusin', () => { hold = true; }); cinta.addEventListener('focusout', () => { hold = false; });
     cinta.addEventListener('pointerdown', e => {
       const row = e.target.closest('.cinta__row'); if (!row || e.button > 0) return;
-      drag = { id: e.pointerId, r: rows.find(r => r.row === row), x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s: 0 };
-      drag.s = drag.r.x;
+      const r = rows.find(q => q.row === row);
+      drag = { id: e.pointerId, r, x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s: r.x };
     });
     cinta.addEventListener('pointermove', e => {
       if (!drag || e.pointerId !== drag.id) return;
@@ -659,12 +677,18 @@
       if (!drag.on) {
         if (Math.hypot(dx, dy) < 6) return;
         if (e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // vertical: es scroll
-        drag.on = true; try { cinta.setPointerCapture(e.pointerId); } catch (_) {} cinta.classList.add('is-drag');
+        drag.on = true; if (drag.r.tw) drag.r.tw.kill(); try { cinta.setPointerCapture(e.pointerId); } catch (_) {} cinta.classList.add('is-drag');
       }
       const dt = Math.max(1, e.timeStamp - drag.t); drag.v = (e.clientX - drag.lx) / dt * .7 + drag.v * .3; drag.lx = e.clientX; drag.t = e.timeStamp;
-      const r = drag.r; r.x = drag.s + dx; wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+      const r = drag.r; r.x = drag.s + dx; norm(r); set(r);
     });
-    const soltar = e => { if (!drag || e.pointerId !== drag.id) return; if (drag.on) drag.r.v = G.utils.clamp(-2, 2, drag.v); drag = null; cinta.classList.remove('is-drag'); };
+    const soltar = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag; drag = null; cinta.classList.remove('is-drag');
+      if (!d.on) return;
+      const r = d.r, st = { x: r.x }, to = r.base + Math.round((r.x + d.v * 180 - r.base) / r.step) * r.step;   // inercia y encaje en una tarjeta
+      r.tw = G.to(st, { x: to, duration: .7, ease: 'power3.out', onUpdate: () => { r.x = st.x; set(r); }, onComplete: () => { norm(r); set(r); next(r); } });
+    };
     cinta.addEventListener('pointerup', soltar); cinta.addEventListener('pointercancel', soltar);
     cinta.addEventListener('lostpointercapture', e => { if (e.target === cinta) soltar(e); });
     cinta.addEventListener('dragstart', e => e.preventDefault());

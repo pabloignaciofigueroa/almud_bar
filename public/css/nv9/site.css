@@ -300,7 +300,7 @@ html[lang="en"] .gloss--i{display:inline}
 /* ronda 1 */
 .hero__v--d video{filter:contrast(1.06) saturate(1.08)}
 .hero__veil{background:linear-gradient(180deg,rgba(14,12,11,.6) 0,rgba(14,12,11,.08) 20%,rgba(14,12,11,.05) 40%,rgba(14,12,11,.72) 70%,rgba(14,12,11,.95) 100%)}
-@media (min-width:1664px) and (orientation:landscape){.hero__v--d{left:50%;right:auto;width:1661px;transform:translateX(-50%)}.hero__v--d::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 120px 60px var(--noche)}}
+/* v4 fase 9: (antes, en pantallas de 1664 px o más el video quedaba en 1661 px con sombra negra: se quita; ver «Portada a sangre») */
 /* Tragos: favoritas de Carmen + lista */
 .tragos__pair .m{width:100%}
 .tragos__mass{display:none}
@@ -975,10 +975,6 @@ html:not(.fl) .flip__q{font-size:18px}
 .mapa{margin-top:28px;height:320px;border-radius:var(--radius);overflow:hidden;background:#2a2522}
 @media (min-width:768px){.mapa{height:360px}}
 /* fase 8d: el mapa está activo desde el inicio (también sin JS) */
-.mapa__ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:0;background:#2a2522;color:#f5e9db;font:600 18px/1.2 var(--f-body);letter-spacing:.04em;cursor:pointer}
-.mapa__ph:hover .mapa__pin{transform:translateY(-4px)}
-.mapa__pin{fill:var(--muro-rosa);transition:transform .4s var(--ease)}
-.mapa__pin circle{fill:#2a2522}
 .mapa iframe{display:block;width:100%;height:100%;border:0}
 .mapa__link{margin-top:10px}
 .mapa__link a{display:inline-flex;align-items:center;min-height:44px;font:600 16px/1 var(--f-body);color:var(--papel);text-decoration:underline;text-underline-offset:4px}
@@ -1006,3 +1002,69 @@ html:not(.fl) .flip__q{font-size:18px}
   .pie__g{flex-direction:row-reverse;justify-content:space-between;align-items:flex-end}
 }
 .cierre .donde__t{padding-bottom:0}
+
+/* v4 fase 9 (M1): foco visible en el mapa (el iframe recibe el foco dentro de su contenedor) */
+.mapa:focus-within{outline:2px solid var(--focus);outline-offset:3px}
+
+/* v4 fase 9 · Portada a sangre: el video cubre TODO el ancho y el alto de la portada en tablet y escritorio, a cualquier ancho
+   (object-fit: cover, aunque pixele). La boca del almud se abre centrada sobre ese video completo. */
+.hero .hero__v,.hero .hero__v--d,.hero .hero__v--m{position:absolute;inset:0;left:0;right:0;width:100%;height:100%;transform:none;max-width:none}
+.hero .hero__v video,.hero .hero__v img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+/* velo: arriba para la barra y abajo, más firme, para que el logo (izquierda) y la frase con «Ver la carta» (derecha) se lean sobre cualquier cuadro */
+@media (orientation:landscape) and (min-width:768px){
+  .hero__veil{background:linear-gradient(180deg,rgba(14,12,11,.6) 0,rgba(14,12,11,.1) 20%,rgba(14,12,11,.06) 40%,rgba(14,12,11,.55) 62%,rgba(14,12,11,.92) 86%,rgba(14,12,11,.97) 100%)}
+  .hero__claim{text-shadow:0 1px 18px rgba(14,12,11,.65)}
+}
+
+/* v4 fase 9 · Fondita (ficha de una sola foto): la foto llena la ficha sin vacío lila y sin recorte */
+.fs.is-on .fs__s--1 .fs__f--1{--w:min(94cqw,96cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625)}
+@media (min-width:1024px){
+  /* escritorio: el nombre gigante va en vertical junto al borde y la foto ocupa todo el alto de la ficha */
+  .fs.is-on .fs__s--1{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:28px;align-items:stretch}
+  .fs.is-on .fs__s--1 .fs__t{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:flex-start;gap:10px}
+  .fs.is-on .fs__s--1 .fs__n{margin:0;font-size:min(190px,calc((min(84vh,720px) - 120px) / (var(--len) * .44)))}
+  .fs.is-on .fs__s--1 .fs__fotos{margin-top:0}
+  .fs.is-on .fs__s--1 .fs__f--1{--w:min(96cqw,96cqh * .8);left:auto;right:2cqw;top:2cqh}
+}
+
+/* v4 fase 9 · Reseñas: tarjetas completas de color (los del local, rotando) con comilla gigante; en celular, una tarjeta a lo ancho */
+.cinta .r{position:relative;border-top:0;border-radius:10px;padding:56px 22px 18px;justify-content:space-between;background:var(--c-amarillo);color:#0e0c0b}
+.cinta .r::before{content:"“";position:absolute;left:16px;top:-6px;font:800 110px/1 var(--f-display);opacity:.9}
+.cinta .r .r__q p{font:500 20px/1.38 var(--f-body);color:#0e0c0b}
+.cinta .r .r__q .gloss{color:#0e0c0b;opacity:.85}
+.cinta .r .r__f{color:#0e0c0b}
+.cinta .r:nth-child(5n+2){background:var(--c-rosa)}
+.cinta .r:nth-child(5n+3){background:var(--c-naranja)}
+.cinta .r:nth-child(5n+4){background:var(--c-lila)}
+.cinta .r:nth-child(5n+5){background:var(--c-verde);color:#f5e9db}
+.cinta .r:nth-child(5n+5) .r__q p,.cinta .r:nth-child(5n+5) .r__f,.cinta .r:nth-child(5n+5) .r__q .gloss{color:#f5e9db}
+.cinta__row+.cinta__row .r:nth-child(5n+1){background:var(--c-naranja)}
+.cinta__row+.cinta__row .r:nth-child(5n+3){background:var(--c-amarillo)}
+.cn .cinta{margin-inline:var(--gut);max-width:calc(1600px - 2 * var(--gut));container-type:inline-size}
+@media (min-width:1600px){.cn .cinta{margin-inline:auto}}
+.cn .cinta .r{flex:0 0 100cqw}   /* en reposo, todas las tarjetas visibles quedan enteras: 1 en celular, 2 en tablet, 3 en escritorio */
+@media (min-width:768px){.cn .cinta .r{flex-basis:calc((100cqw - 16px) / 2)}}
+@media (min-width:1024px){.cn .cinta .r{flex-basis:calc((100cqw - 32px) / 3)}}
+@media (min-width:1024px){.cinta .r .r__q p{font-size:22px}}
+
+/* v4 fase 9 · Tragos: el Peter con su humo, casi a pantalla completa (en su 4:5, sin recorte), con su nombre armándose encima */
+.peter{position:relative;display:block;margin:32px calc(-1 * var(--gut)) 0;text-decoration:none;color:#f5e9db;container-type:inline-size}
+.peter .peter__v{aspect-ratio:var(--ar);border-radius:0}
+.peter::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,12,11,0) 45%,rgba(14,12,11,.78) 100%);pointer-events:none}
+.peter__cap{position:absolute;left:var(--gut);right:var(--gut);bottom:22px;z-index:1}
+.peter__n{display:block;font:800 clamp(44px,13cqw,150px)/.88 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;text-shadow:0 2px 24px rgba(14,12,11,.55)}
+.peter__n .chw{display:inline-block;white-space:nowrap}
+.peter .gloss{color:#f5e9db;margin-top:8px}
+.peter__p{display:inline-block;margin-top:12px;font:600 22px/1 var(--f-body);font-variant-numeric:tabular-nums;background:#0e0c0b;color:#f5e9db;padding:8px 12px;border-radius:var(--radius)}
+@media (min-width:1024px){
+  .peter{margin:56px auto 0;width:min(100%,calc(86vh * .8));border-radius:var(--radius);overflow:hidden}
+  .peter .peter__v{border-radius:var(--radius)}
+  .peter__cap{left:28px;right:28px;bottom:28px}
+}
+
+/* v4 fase 9 · bajada de Eventos (literal de su IG) */
+.ev7__bajada{margin-top:16px;max-width:30ch;font:500 22px/1.32 var(--f-body)}
+.ev7__bajada .gloss{margin-top:6px;font-size:18px}
+@media (min-width:1024px){.ev7__bajada{font-size:26px;margin-top:22px}}
+/* v4 fase 9 · glosa EN de Peter sobre el video: chip oscuro, contraste AA garantizado sobre cualquier cuadro */
+.peter .gloss{display:table;background:rgba(14,12,11,.82);padding:4px 8px;border-radius:var(--radius)}
