@@ -63,7 +63,6 @@ html[lang="en"] .gloss--i{display:inline}
 /* ═════ 1 · PORTADA ═════ */
 .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--noche);isolation:isolate}
 .hero__win{position:absolute;inset:0}
-.intro .hero__win{will-change:transform}
 .hero .m{position:absolute;inset:0;aspect-ratio:auto;border-radius:0}
 .hero__v--d{display:none}
 @media (orientation:landscape) and (min-width:768px){.hero__v--m{display:none}.hero__v--d{display:block}}

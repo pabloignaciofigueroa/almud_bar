@@ -211,7 +211,7 @@
     return $$('.ch', el);
   }
   function intro() {
-    const win = $('[data-win]'), iso = $('.hero__iso'), svg = $('svg', iso);
+    const iso = $('.hero__iso'), svg = $('svg', iso);
     const r = svg.getBoundingClientRect(), k = r.width / 660;
     // boca del almud (rombo interior del isotipo) en píxeles
     const cx = r.left + (299.5 + 20) * k, cy = r.top + (242.5 + 20) * k, a = 212 * k, b = 166 * k;
@@ -230,7 +230,7 @@
     const inEls = $$('.hero__in > *');
     const done = () => {
       root.classList.remove('intro');
-      G.set([...inEls, iso, '.nav', win, ...ltrs, ...chars, btn, logoIso].filter(Boolean), { clearProps: 'transform,opacity' });
+      G.set([...inEls, iso, '.nav', ...ltrs, ...chars, btn, logoIso].filter(Boolean), { clearProps: 'transform,opacity' });
       ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => removeEventListener(ev, skip));
       removeEventListener('scroll', skip);
     };
@@ -239,12 +239,11 @@
     if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.55);
     G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0, transformOrigin: ox + ' ' + oy });
     tl.set(inEls, { opacity: 1 }, 0)
-      .fromTo(window.__noWin ? {} : win, { scale: 1.14 }, { scale: 1, duration: 1.7, ease: 'expo.out' }, .3)
       .to($$('.iso__g path', iso), { strokeDashoffset: 0, duration: .62, ease: 'power2.inOut', stagger: .035 }, 0)
-      .to(window.__noIso ? {} : iso, { scale: S, duration: .8, ease: 'power3.in' }, .72)
+      .to(iso, { scale: S, duration: .8, ease: 'power3.in' }, .72)
       .set(iso, { opacity: 0 }, 1.52)
       .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.12)
-      .from(window.__noCh ? {} : chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.34)
+      .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.34)
       .fromTo(btn, { scale: .35, opacity: 0, rotation: -7 }, { scale: 1, opacity: 1, rotation: 0, duration: .6, ease: 'elastic.out(1.1,.45)' }, 1.9)
       .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .5 }, 1.6);
     function skip() { if (tl.progress() < 1) tl.progress(1); }
