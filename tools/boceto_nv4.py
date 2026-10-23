@@ -336,7 +336,7 @@ body = f'''
       {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
       {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
       {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
-      {pic('carta-camaron', 'a', '(min-width:1024px) 23vw, 46vw', 'co__sin plato')}
+      {item2('carta-camaron', 'Camarón que se duerme', '$ 15.900', _GL.get('Camarón que se duerme'), C_GRE, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
     </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
