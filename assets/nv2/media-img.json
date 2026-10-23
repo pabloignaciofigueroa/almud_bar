@@ -1,0 +1,981 @@
+{
+ "_doc": "Generado por tools/media_nv2.py desde tools/media_nv2.json. Mismo formato que assets/v3/media.json images.",
+ "images": {
+  "lugar-techada-llena": {
+   "ref": "P196",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_14.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "La terraza techada llena de mesas bajo el techo de cintas de colores y la estufa encendida.",
+    "en": "The covered terrace packed with tables under the rainbow ribbon ceiling, heater glowing."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "note": "IG-050, 11 años, día 1. Multitud: muchas mesas.",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      120,
+      1440,
+      1920
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBQCdASoTABgAPwFysFIrJqSiqAqpYCAJagCdMuI3fnVAQMXVz2Gxnf6HXyXTTgrZtjkhkZmAAP67xkgo3S8FUxf0oB91cmfM9FheST0A6BulYCcN8Pg31VwrHXPXYDxINuBzXxfmyp96d0QNjvo9Pn0deyeaYIvv7QPfMnaH29H6S+6iLLbphAxJcync5l0VFSl11vYoHtnoe6ohaB+NMcF662DSAKon6pucAAA=",
+     "color": "#85453b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-480.avif",
+        "bytes": 40999
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-720.avif",
+        "bytes": 75499
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-960.avif",
+        "bytes": 110647
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-1280.avif",
+        "bytes": 167194
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-1440.avif",
+        "bytes": 192070
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-480.webp",
+        "bytes": 69826
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-720.webp",
+        "bytes": 129740
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-960.webp",
+        "bytes": 187484
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-1280.webp",
+        "bytes": 279248
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-techada-llena-a-1440.webp",
+        "bytes": 316578
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-salon-lleno": {
+   "ref": "P185",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_03.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "Mesas llenas bajo las cintas de colores, con molinillos y la estufa entre la gente.",
+    "en": "Full tables under the colorful ribbons, with pinwheels and the heater among the crowd."
+   },
+   "credit": {
+    "post": "IG-050",
+    "date": "2025-08-05",
+    "url": "https://www.instagram.com/p/DM_Ih5dyVKH/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "note": "IG-050.",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "box": [
+      0,
+      120,
+      1440,
+      1920
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACwBQCdASoTABgAPwF2s1OrJySiqAgBYCAJZgCdMuIyhR0ANjxT2iF9FT18lW8frgg+oJ+2HwgA/W5ijP3GHNYvDDvK2E2u55+KN/rYXrOHwqnvj4LAH0sFHPRsGvq3+goojzENJVMYcN0g1Qs3XfXhR+B/kIZri5LdPjWo9yqf3gvfCUnmTjJ3A4YzFp5lLsSvxV5otFL1M1YhLlQvFwQORAVoCo1cC8AAAA==",
+     "color": "#633123",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-480.avif",
+        "bytes": 31700
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-720.avif",
+        "bytes": 56874
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-960.avif",
+        "bytes": 80513
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-1280.avif",
+        "bytes": 117610
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-1440.avif",
+        "bytes": 133697
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-480.webp",
+        "bytes": 53682
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-720.webp",
+        "bytes": 94722
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-960.webp",
+        "bytes": 132852
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-1280.webp",
+        "bytes": 191326
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-salon-lleno-a-1440.webp",
+        "bytes": 215630
+       }
+      }
+     }
+    }
+   }
+  },
+  "lugar-terraza-repleta": {
+   "ref": "P359",
+   "src": "assets/raw/ig/Dbok2NyFNdb_02.jpg",
+   "section": "lugar",
+   "alt": {
+    "es": "La terraza techada repleta vista desde arriba: banderines, luces y todas las mesas ocupadas.",
+    "en": "The covered terrace packed, seen from above: bunting, lights and every table taken."
+   },
+   "credit": {
+    "post": "IG-008",
+    "date": "2026-08-04",
+    "url": "https://www.instagram.com/p/Dbok2NyFNdb/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "note": "IG-008, 12 años (@isosur.prod). Luz violeta parcial.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      128,
+      3072,
+      3968
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABQBQCdASoTABgAPwF2slOrJySiqAgBYCAJbACdMoR09wGBVcW1T97EHJNE/ByMAEAf1AAA/qZ8r2WcVZeIdCEaHzm8Zcn84S3qtgM/c3kXTvp5AdIobwuqmW4Z+FIFQW4a8xyZQiZo76rMm5ZJJ6OfgUqOfeCyeh4lYfd2ooQFRTImbKySf/CQ4F2TfxxO9j+eTYcBePba5DMtwyWGxpskBYekPA3noh3GQAAA",
+     "color": "#441d63",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-480.avif",
+        "bytes": 38824
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-720.avif",
+        "bytes": 69206
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-960.avif",
+        "bytes": 101417
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-1280.avif",
+        "bytes": 147531
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-1440.avif",
+        "bytes": 171461
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-480.webp",
+        "bytes": 63402
+       },
+       "720": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-720.webp",
+        "bytes": 111194
+       },
+       "960": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-960.webp",
+        "bytes": 160860
+       },
+       "1280": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-1280.webp",
+        "bytes": 230838
+       },
+       "1440": {
+        "path": "assets/nv2/img/lugar-terraza-repleta-a-1440.webp",
+        "bytes": 265028
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-mesa-llena": {
+   "ref": "P266",
+   "src": "assets/raw/ig/DYiMMUrlBk1_10.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Una mesa larga de amigas brindando bajo los banderines y la estufa.",
+    "en": "A long table of friends toasting under the bunting and the heater."
+   },
+   "credit": {
+    "post": "IG-026",
+    "date": "2026-05-19",
+    "url": "https://www.instagram.com/p/DYiMMUrlBk1/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "IG-026 «no somos ná sin ustedes!»: las sociales de parroquianos.",
+   "source_size": [
+    2713,
+    2170
+   ],
+   "crops": {
+    "a": {
+     "ratio": "2713:2170",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      0,
+      2713,
+      2170
+     ],
+     "crop_size": [
+      2713,
+      2170
+     ],
+     "width": 1440,
+     "height": 1152,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADQBACdASoYABMAPwFws1GrJiSiqAqpYCAJagCdMySulAG/613AbMDnHxJG3eTQAAD+BNJ8Zqca/mBvmttkj5rJuJAi75KnJbMIruxbTo0PeAXgvZvyiENwVLmrLqWTXsw+pY+zK3/kSLdBXKZT2jrFpHCHAuCP927r0Hwg5EgW/z0Q+VbdAWJZVTTJjK46xzdTLvZubpz9BOU+gWrcqreK4DMXlpd9vOunYp0DgAYlHDJxS8AAAA==",
+     "color": "#92533e",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-480.avif",
+        "bytes": 26640
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-720.avif",
+        "bytes": 47242
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-960.avif",
+        "bytes": 71530
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-1280.avif",
+        "bytes": 107967
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-1440.avif",
+        "bytes": 123804
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-480.webp",
+        "bytes": 47614
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-720.webp",
+        "bytes": 84240
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-960.webp",
+        "bytes": 125262
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-1280.webp",
+        "bytes": 185320
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-mesa-llena-a-1440.webp",
+        "bytes": 209084
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-grupo-peter": {
+   "ref": "P260",
+   "src": "assets/raw/ig/DYiMMUrlBk1_04.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Un grupo de amigos abrazados y riendo; uno lleva la polera «Aquí te las traigo Peter».",
+    "en": "A group of friends hugging and laughing; one wears an «Aquí te las traigo Peter» T-shirt."
+   },
+   "credit": {
+    "post": "IG-026",
+    "date": "2026-05-19",
+    "url": "https://www.instagram.com/p/DYiMMUrlBk1/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "IG-026.",
+   "source_size": [
+    3273,
+    2616
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      328,
+      0,
+      2944,
+      2616
+     ],
+     "crop_size": [
+      2616,
+      2616
+     ],
+     "width": 1440,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAADwBQCdASoYABgAPwF2s1OrJySiqAgBYCAJYgC2yywA2e3OysM+m3qgJtJuq7g8kbHrJcIbek8WwAD+2r52xE++O4uwNh/YYXdE/152vilOA0faq0CvNjRYAeJ/c4C12Is9p9XR9yeethrbknl7vi5n+64s1IhE8uJ1rH1oiHMh/ERy7MH5LP2SjqGWrQmxM0mJtOSwFeRrgPzDC62PVlG26a6QO+TJWPCykCacybdNiiAA",
+     "color": "#3f2d36",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-480.avif",
+        "bytes": 20890
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-720.avif",
+        "bytes": 39617
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-960.avif",
+        "bytes": 64208
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-1280.avif",
+        "bytes": 110586
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-1440.avif",
+        "bytes": 133269
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-480.webp",
+        "bytes": 31308
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-720.webp",
+        "bytes": 57434
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-960.webp",
+        "bytes": 93404
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-1280.webp",
+        "bytes": 167314
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-grupo-peter-a-1440.webp",
+        "bytes": 203552
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-grupo-flecos": {
+   "ref": "P257",
+   "src": "assets/raw/ig/DYiMMUrlBk1_01.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Cuatro amigos sonríen juntos bajo las lámparas de flecos.",
+    "en": "Four friends smiling together under the fringe lamps."
+   },
+   "credit": {
+    "post": "IG-026",
+    "date": "2026-05-19",
+    "url": "https://www.instagram.com/p/DYiMMUrlBk1/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "IG-026.",
+   "source_size": [
+    3273,
+    2616
+   ],
+   "crops": {
+    "a": {
+     "ratio": "1:1",
+     "focal": [
+      52,
+      50
+     ],
+     "box": [
+      393,
+      0,
+      3009,
+      2616
+     ],
+     "crop_size": [
+      2616,
+      2616
+     ],
+     "width": 1440,
+     "height": 1440,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBQCdASoYABgAPwF0r1KrJqQiqAqpYCAJbACdMoR7WNgBLoP9XLjWGw0RFuEruuKxkdtAAAD+5ADqZWofGyamIAMgmQN6/WSzHHWyBfm5CtRBfsNeHsFxMoKDqW+ArgegPbW0Lh/93A07KRdQONYdCEuf2jMsdi/+b1KmJW7uMoHlXJkj7BbmK1qOXVyvR4P/mC4FruZBdyAvl8qiSfgv8MeRIQCJX35omsnQe2Lk06hira2H/CjoALkAAA==",
+     "color": "#553233",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-480.avif",
+        "bytes": 20344
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-720.avif",
+        "bytes": 37149
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-960.avif",
+        "bytes": 58278
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-1280.avif",
+        "bytes": 93251
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-1440.avif",
+        "bytes": 109893
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-480.webp",
+        "bytes": 31714
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-720.webp",
+        "bytes": 56786
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-960.webp",
+        "bytes": 87068
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-1280.webp",
+        "bytes": 134144
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-grupo-flecos-a-1440.webp",
+        "bytes": 155620
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-carcajadas": {
+   "ref": "P095",
+   "src": "assets/raw/ig/DAMHps8JVVr_09.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Un grupo ríe a carcajadas en una mesa bajo los faroles de papel.",
+    "en": "A group laughing out loud at a table under the paper lanterns."
+   },
+   "credit": {
+    "post": "IG-079",
+    "date": "2024-09-21",
+    "url": "https://www.instagram.com/p/DAMHps8JVVr/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "IG-079 (Fondita): «ya sabe ya que no somos ná sin ustedes».",
+   "source_size": [
+    1440,
+    1708
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      55,
+      55
+     ],
+     "box": [
+      74,
+      0,
+      1440,
+      1708
+     ],
+     "crop_size": [
+      1366,
+      1708
+     ],
+     "width": 1366,
+     "height": 1708,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1366
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoTABgAPwF0r1KrJqQiqAqpYCAJagCdMtCCmBPj0iwKGmIiWuIofY/G/dk1rD3wAOJPRaoWGFHDmcDnzgvgKcOIEleb6T6Y9tb9+deXZRcj0KAEdaUbOqta3oR3yAoHAqrBD9L+lsv/XpHFndU0UGmbtpWoF53SL0d4cOFswSoHudlKP8tXmfZhcTOUCIjQFwEAup04RPTsKL5Ej0gAAA==",
+     "color": "#824f24",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-carcajadas-a-480.avif",
+        "bytes": 18250
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-carcajadas-a-720.avif",
+        "bytes": 30324
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-carcajadas-a-960.avif",
+        "bytes": 45497
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-carcajadas-a-1280.avif",
+        "bytes": 67912
+       },
+       "1366": {
+        "path": "assets/nv2/img/quien-carcajadas-a-1366.avif",
+        "bytes": 74745
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-carcajadas-a-480.webp",
+        "bytes": 31382
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-carcajadas-a-720.webp",
+        "bytes": 51536
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-carcajadas-a-960.webp",
+        "bytes": 72714
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-carcajadas-a-1280.webp",
+        "bytes": 102600
+       },
+       "1366": {
+        "path": "assets/nv2/img/quien-carcajadas-a-1366.webp",
+        "bytes": 112734
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-copas-arriba": {
+   "ref": "P209",
+   "src": "assets/raw/ig/DNT1_BYS_Yf_06.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Amigos abrazados levantan sus copas y sonríen a la cámara.",
+    "en": "Friends arm in arm raise their glasses and smile at the camera."
+   },
+   "credit": {
+    "post": "IG-047",
+    "date": "2025-08-13",
+    "url": "https://www.instagram.com/p/DNT1_BYS_Yf/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "IG-047, 11 años, día 2.",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      60,
+      1440,
+      1860
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAAAQBQCdASoTABgAPwFyrFGrJqQiqA1RYCAJYgCo9AzoWwXB1TXbN5S1sydYoecTmY4AAP7dTwgOmkknEIptmn/pr67gv4C/JVRQqMkLJq0DdAD/AYx0lBTuttkiQOic3o2ylQ0OMRwXgX6sQ1ieBwxnysBctXtsTNzMVp2Jc9+l30BR3w1vnP/RsuVx+QNURXG1noYRnFfhpzkSPCOFNzyVZuNpQr8dgAA=",
+     "color": "#4e3c50",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-480.avif",
+        "bytes": 31964
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-720.avif",
+        "bytes": 63803
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-960.avif",
+        "bytes": 99010
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-1280.avif",
+        "bytes": 163071
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-1440.avif",
+        "bytes": 192750
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-480.webp",
+        "bytes": 52208
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-720.webp",
+        "bytes": 102040
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-960.webp",
+        "bytes": 154648
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-1280.webp",
+        "bytes": 252280
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-copas-arriba-a-1440.webp",
+        "bytes": 310494
+       }
+      }
+     }
+    }
+   }
+  },
+  "quien-sillones-llenos": {
+   "ref": "P356",
+   "src": "assets/raw/ig/Dbg3ekilC4P_19.jpg",
+   "section": "quien",
+   "alt": {
+    "es": "Un grupo de amigas y amigos sentados juntos en la terraza, bajo los banderines.",
+    "en": "A group of friends sitting together on the terrace, under the bunting."
+   },
+   "credit": {
+    "post": "IG-009",
+    "date": "2026-08-01",
+    "url": "https://www.instagram.com/p/Dbg3ekilC4P/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "note": "IG-009, 12 años (@isosur.prod).",
+   "source_size": [
+    3086,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      48
+     ],
+     "box": [
+      0,
+      37,
+      3086,
+      3895
+     ],
+     "crop_size": [
+      3086,
+      3858
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASoTABgAPwF0rlKrJqQiqAqpYCAJagCxHzLwtBqCR4DSimnoucxZ8MQAAP7u3nYiTb+EaSINAjqSSPjsxdAG/HqW9NlVckiOwVmTSwVOzDFlArwklJc3XjCGbIE0/5UXcsgBGvf19LDeyE+jK+gzhsVRET6Ve4nWBoAgj7SHLCAxt4vp+v++1Dw8s9M766ZPoYs5IZ+48NYISKph8xX3VvUAKK3dlAAA",
+     "color": "#61365a",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-480.avif",
+        "bytes": 36812
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-720.avif",
+        "bytes": 69769
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-960.avif",
+        "bytes": 107287
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-1280.avif",
+        "bytes": 165678
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-1440.avif",
+        "bytes": 198866
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-480.webp",
+        "bytes": 59818
+       },
+       "720": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-720.webp",
+        "bytes": 109660
+       },
+       "960": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-960.webp",
+        "bytes": 165990
+       },
+       "1280": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-1280.webp",
+        "bytes": 250918
+       },
+       "1440": {
+        "path": "assets/nv2/img/quien-sillones-llenos-a-1440.webp",
+        "bytes": 300184
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-brazos-arriba": {
+   "ref": "P349",
+   "src": "assets/raw/ig/Dbg3ekilC4P_12.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Los 12 años de Almud: la gente celebra con los brazos arriba y un megáfono.",
+    "en": "Almud turns 12: people celebrating with arms in the air and a megaphone."
+   },
+   "credit": {
+    "post": "IG-009",
+    "date": "2026-08-01",
+    "url": "https://www.instagram.com/p/Dbg3ekilC4P/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "evento": "12 años",
+   "note": "IG-009 (@isosur.prod). Megáfono = el de la puerta.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      3072,
+      3840
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoTABgAPwFoq0+rJaOiMBgMAWAgCWgArDKAAaM69luV8fjshFuAVfuXPLef7vgAAP7stKK/wh78/2z2hBr6i/aBe61tpIAqvnFJZtoQj7TA7YQlyHd1XTjW+9DTySlXPFon2r2XqgP0ymiFk1H+januuc+st0YorT+y2rEzLJPNV5god1UdX+9lnOjCuznQB56he6U7DP8SiWDeIAnJF2/gzAA=",
+     "color": "#462a41",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-480.avif",
+        "bytes": 27119
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-720.avif",
+        "bytes": 46657
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-960.avif",
+        "bytes": 68134
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-1280.avif",
+        "bytes": 102697
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-1440.avif",
+        "bytes": 123672
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-480.webp",
+        "bytes": 41414
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-720.webp",
+        "bytes": 68876
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-960.webp",
+        "bytes": 98014
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-1280.webp",
+        "bytes": 142448
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-brazos-arriba-a-1440.webp",
+        "bytes": 173452
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
