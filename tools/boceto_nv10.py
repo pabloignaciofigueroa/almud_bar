@@ -201,8 +201,7 @@ eventos = [
     ('eventos-jaloguin', 'Oct', 'Oct', 'Jalogüín', 'Jalogüín [Halloween]', 10),
 ]
 
-equipo = [('equipo-milagros', 'milagroosjm'), ('equipo-javier', 'javier.agmc'), ('equipo-eduardo', 'eduu.ardoo'),
-          ('equipo-liz', 'lizzearellano'), ('equipo-pablete', 'pablete_bartender_')]
+equipo = ['equipo-milagros', 'equipo-javier', 'equipo-eduardo', 'equipo-liz', 'equipo-pablete']
 
 resenas = [
     ('fr', 'Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!', 'Great night out in Castro! Friendly service, great atmosphere, really nice music!', 'Dorothee · Épinal, Francia · Tripadvisor', 'Dorothee · Épinal, France · Tripadvisor'),
@@ -213,13 +212,14 @@ resenas = [
     ('es', 'La atención es muy cálida y cercana.', 'The service is so warm and friendly.', 'Dana · Castro, Chile · Tripadvisor', 'Dana · Castro, Chile · Tripadvisor'),
 ]
 
-# v4 fase 8 · Equipo: el dorso de cada tarjeta. Lugar y frase literales de su IG (si no hay frase, solo el @)
+# v4 fase 10 · REGLA DEL CLIENTE: la página es de Almud, sin cuentas personales (ni @ ni links). El dorso lleva el nombre de pila
+# solo si sale literal en un posteo de Almud (Liz: IG-088 «grande Liz!»), el lugar literal («en esa barra», «por los salones», IG-067) y su frase literal
 EQ_DORSO = {
-    'equipo-javier': ('javier.agmc', 'Barra', 'Bar', 'mente creadora de muchos cócteles', 'the mastermind behind lots of our cocktails', 'IG-045'),
-    'equipo-milagros': ('milagroosjm', 'Barra', 'Bar', 'la regia', 'our queen', 'IG-067'),
-    'equipo-pablete': ('pablete_bartender_', 'Barra', 'Bar', 'haciéndole los copetitos a usté', 'making your drinks, yes, yours', 'IG-034'),
-    'equipo-liz': ('lizzearellano', 'Salones', 'Floor', 'la amada', 'our beloved', 'IG-067'),
-    'equipo-eduardo': ('eduu.ardoo', 'Salones', 'Floor', 'el ondero', 'the cool one', 'IG-067'),
+    'equipo-javier': (None, 'Barra', 'Bar', 'mente creadora de muchos cócteles', 'the mastermind behind lots of our cocktails', 'IG-045'),
+    'equipo-milagros': (None, 'Barra', 'Bar', 'la regia', 'our queen', 'IG-067'),
+    'equipo-pablete': (None, 'Barra', 'Bar', 'haciéndole los copetitos a usté', 'making your drinks, yes, yours', 'IG-034'),
+    'equipo-liz': ('Liz', 'Salones', 'Floor', 'la amada', 'our beloved', 'IG-067 · IG-088'),
+    'equipo-eduardo': (None, 'Salones', 'Floor', 'el ondero', 'the cool one', 'IG-067'),
 }
 # v4 fase 8 · Reseñas en dos cintas: solo las que dicen su país (10 de content/reviews.json); las 6 aprobadas en v3 con su extracto y glosa, las otras 4 textuales
 FLAG = {
@@ -242,16 +242,17 @@ CINTAS = [
 
 
 def flip(id_, sizes='(min-width:1024px) 22vw, 46vw'):
-    h, rol, rol_en, fr, fr_en, _ = EQ_DORSO[id_]
+    nom, rol, rol_en, fr, fr_en, _ = EQ_DORSO[id_]
+    n = f'<p class="flip__nom">{E(nom)}</p>' if nom else ''
     return (f'<div class="flip"><div class="flip__in"><div class="flip__front">' + pic(id_, 'a', sizes, 'reveal') + '</div>'
-            f'<div class="flip__back"><p class="flip__rol" data-en="{rol_en}">{rol}</p><p class="flip__q">«{E(fr)}»{g(fr_en, "gloss gloss--s")}</p>'
-            f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></div></div></div>')
+            f'<div class="flip__back">{n}<p class="flip__rol" data-en="{rol_en}">{rol}</p><p class="flip__q">«{E(fr)}»{g(fr_en, "gloss gloss--s")}</p>'
+            '</div></div></div>')
 
 
 def flip_duo():
     return ('<div class="flip"><div class="flip__in"><div class="flip__front">' + pic('equipo-duo', 'a', '(min-width:1024px) 22vw, 46vw', 'reveal') + '</div>'
             f'<div class="flip__back"><p class="flip__q">«chicas super poderosas»{g("our powerpuff girls", "gloss gloss--s")}</p>'
-            f'<a class="eq__at" href="{IG}milagroosjm/" target="_blank" rel="noopener">@milagroosjm</a><a class="eq__at" href="{IG}lizzearellano/" target="_blank" rel="noopener">@lizzearellano</a></div></div></div>')
+            '</div></div></div>')
 
 
 def resena(r, dup=False):
@@ -260,7 +261,7 @@ def resena(r, dup=False):
             f'</blockquote><p class="r__f">{FLAG[fl]}<span data-en="{E(fen)}">{E(f)}</span></p></li>')
 
 
-creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
+creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod']  # v4 fase 10: solo cuentas corporativas (fotógrafos y productoras)
 
 ISO = svg_inline('almud-isotipo', 'iso').replace('<path ', '<path pathLength="1" ')
 ISO = ISO.replace('<g ', '<g class="iso__g" ', 1)
@@ -475,7 +476,7 @@ body = f'''
       <div class="eqz__d eqz__d--4">{flip('equipo-eduardo')}{flip_duo()}</div>
     </div>
   </div>
-  <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> <a href="{IG}cepaz/" target="_blank" rel="noopener">@cepaz</a> · <a href="{IG}rusio_mezclao/" target="_blank" rel="noopener">@rusio_mezclao</a></p>
+  <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> «los papis del almud: el franchuto y la disharashera»{g("[the Almud's parents: the Frenchman and «la disharashera»]", "gloss gloss--s")}</p>
 </section>
 
 <!-- 8 · RESEÑAS -->

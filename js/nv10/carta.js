@@ -103,9 +103,21 @@
   });
   /* v4 fase 9 · fundido solo donde queda fila por deslizar */
   const filas = [list, ...$$('.chips__in')];
-  function bordes(f) { const m = f.scrollWidth - f.clientWidth; f.classList.toggle('mas-i', f.scrollLeft > 2); f.classList.toggle('mas-d', m > 2 && f.scrollLeft < m - 2); }
+  // v4 fase 10: oculta la pestaña (o chip) que queda a medias en cada borde; la flecha del contenedor dice que hay más
+  function bordes(f) {
+    const m = f.scrollWidth - f.clientWidth, L = f.scrollLeft > 2, D = m > 2 && f.scrollLeft < m - 2;
+    f.classList.toggle('mas-i', L); f.classList.toggle('mas-d', D);
+    const box = f.getBoundingClientRect(), its = [...f.children].map(c => c.getBoundingClientRect()).filter(r => r.width);
+    const enteras = its.filter(r => r.left >= box.left - .5 && r.right <= box.right - (D ? 30 : 0) + .5);   // 30 px: lugar de la flecha
+    const mi = L && enteras.length ? Math.max(0, enteras[0].left - box.left - 3) : 0;
+    const md = D && enteras.length ? Math.max(0, box.right - enteras[enteras.length - 1].right - 3) : 0;
+    f.style.setProperty('--mi', mi + 'px'); f.style.setProperty('--md', md + 'px');
+    const c = f.closest('.tabs, .chips'); if (c) { c.classList.toggle('hay-d', D); c.classList.toggle('hay-i', L); }
+  }
   filas.forEach(f => { f.addEventListener('scroll', () => bordes(f), { passive: true }); bordes(f); });
   addEventListener('resize', () => filas.forEach(bordes));
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(() => filas.forEach(bordes));   // v4 fase 10: re-medir con la fuente real
+  addEventListener('load', () => filas.forEach(bordes));
   addEventListener('hashchange', () => go(location.hash.slice(1)));
   go(location.hash.slice(1));
   paint();

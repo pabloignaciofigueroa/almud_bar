@@ -628,6 +628,9 @@
     flips.forEach((f, k) => {
       f.style.setProperty('--k', k % 3);
       f.addEventListener('click', e => { if (!e.target.closest('a')) f.classList.toggle('is-on'); });
+      // v4 fase 10: el dorso ya no tiene link (sin cuentas personales); la tarjeta misma recibe el foco del teclado
+      f.tabIndex = 0;
+      f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); f.classList.toggle('is-on'); } });
     });
     ST.create({ trigger: '.eqz', start: 'top 70%', once: true, onEnter: () => flips.forEach(f => f.classList.add('peek')) });
   }

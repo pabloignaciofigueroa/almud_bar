@@ -178,3 +178,17 @@ body{background:var(--noche)}
   .chip:last-child{margin-right:0}
   .chips__in{padding-right:var(--gut)}
 }
+
+/* v4 fase 10 · celular: en reposo ninguna pestaña ni chip queda cortado. El JS mide la primera y la última entera a la vista
+   (--mi / --md) y oculta lo que queda a medias; un fundido corto y una flecha indican que hay más */
+@media (max-width:1023px){
+  .tabs__l.mas-i,.tabs__l.mas-d,.chips__in.mas-i,.chips__in.mas-d,.tabs__l.mas-i.mas-d,.chips__in.mas-i.mas-d{
+    -webkit-mask-image:linear-gradient(90deg,transparent calc(var(--mi,0px) - 1px),#000 var(--mi,0px),#000 calc(100% - var(--md,0px)),transparent calc(100% - var(--md,0px) + 1px))!important;
+    mask-image:linear-gradient(90deg,transparent calc(var(--mi,0px) - 1px),#000 var(--mi,0px),#000 calc(100% - var(--md,0px)),transparent calc(100% - var(--md,0px) + 1px))!important}
+  .tabs,.chips{position:sticky}
+  .tabs.hay-d::after,.tabs.hay-i::before,.chips.hay-d::after{pointer-events:none}
+  .tabs.hay-d::after,.chips.hay-d::after{content:"→";position:absolute;right:calc(var(--gut) - 6px);top:50%;transform:translateY(-50%);font:600 22px/1 var(--f-body);color:var(--papel);animation:mas 1.6s var(--ease) infinite alternate}
+  .chips.hay-d::after{color:var(--noche);right:6px}
+  @keyframes mas{to{transform:translate(4px,-50%)}}
+  @media (prefers-reduced-motion:reduce){.tabs.hay-d::after,.chips.hay-d::after{animation:none}}
+}

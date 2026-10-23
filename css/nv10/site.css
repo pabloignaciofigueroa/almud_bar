@@ -1068,3 +1068,11 @@ html:not(.fl) .flip__q{font-size:18px}
 @media (min-width:1024px){.ev7__bajada{font-size:26px;margin-top:22px}}
 /* v4 fase 9 · glosa EN de Peter sobre el video: chip oscuro, contraste AA garantizado sobre cualquier cuadro */
 .peter .gloss{display:table;background:rgba(14,12,11,.82);padding:4px 8px;border-radius:var(--radius)}
+/* v4 fase 10 · Equipo sin cuentas personales: nombre de pila solo si es literal (Liz), la tarjeta recibe el foco */
+.flip__nom{margin:0 0 6px;font:800 30px/1 var(--f-display);text-transform:uppercase;letter-spacing:.01em;color:#f5e9db}
+.fl .flip:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:var(--radius)}
+/* v4 fase 10 · Reseñas: la comilla gigante va arriba, en su propia franja, sin tocar la cita; cada tarjeta mide lo que su texto */
+.cinta .r{padding:14px 22px 18px;justify-content:flex-start}
+.cinta .r::before{position:static;display:block;height:46px;margin:0 0 6px -4px;font:800 104px/1 var(--f-display);overflow:hidden;opacity:.9}
+.cinta .r .r__f{margin-top:auto}
+.cn .cinta__row{align-items:flex-start}

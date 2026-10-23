@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-v4 fase 9 · tools/carta_nv9.py: copia de carta_v4.py que genera /nueva_v10/carta/ con css/nv10 y js/nv10 (paleta nueva).
+v4 fase 9 · tools/carta_nv10.py (v4 fase 10): copia de carta_nv9.py que genera /nueva_v10/carta/ con css/nv10 y js/nv10 (paleta nueva).
 Carta v3 (fase 14): genera v3/carta/index.html desde content/carta-v2.json.
 Nombres, descripciones y precios literales. Rutas relativas desde /v3/carta/.
 Uso: python3 tools/carta_v3.py"""
