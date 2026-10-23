@@ -155,6 +155,16 @@ def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', sp
             f'<span class="it__n">{E(name)}</span>{g(gl, "gloss gloss--s")}<span class="it__p">{E(price)}</span></a>')
 
 
+def item2(id_, name, price, gl, href, cls='', sizes='(min-width:1024px) 22vw, 45vw'):
+    """v4 fase 3: ítem de carta con nombre y precio literales de content/carta-v2.json y su ancla en la carta."""
+    return (f'<a class="it {cls}" href="{href}">' + pic(id_, 'a', sizes, 'it__m reveal') +
+            f'<span class="it__n">{E(name)}</span>{g(gl, "gloss gloss--s")}<span class="it__p">{E(price)}</span></a>')
+
+
+C_SAN = CARTA + '#comilona-sanguches'
+Q = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 47vw'
+Q_W = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 92vw'
+
 eventos = [
     ('eventos-12-anos', 'Jul', 'Jul', 'Aniversario', 'Aniversario [Anniversary]', 7),
     ('eventos-fondita', 'Sep', 'Sep', 'Fondita', "Fondita [Chile's Independence Day party]", 9),
@@ -219,6 +229,11 @@ body = f'''
       </ul>
     </div>
   </div>
+  <div class="lleno wrap">
+    {pic('lugar-techada-llena', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 92vw', 'lleno__m lleno__m--1 reveal')}
+    {pic('lugar-salon-lleno', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--2 reveal')}
+    {pic('lugar-terraza-repleta', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--3 reveal')}
+  </div>
 </section>
 
 <!-- 3 · TRAGOS -->
@@ -230,6 +245,10 @@ body = f'''
       {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 reveal', speed='-0.1')}
       {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 reveal', speed='0.12')}
       {vid('tragos-coctelera', 'tragos__amb tragos__amb--3 reveal')}
+      {pic('tragos-copa-tallada', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--4 reveal')}
+      {pic('tragos-old-fashioned', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--5 reveal')}
+      {pic('eventos-negroni-week', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--6 reveal')}
+      {pic('tragos-brindis-copas', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--7 reveal')}
     </div>
     <div class="tragos__named">
     <a class="it it--hero" href="{C_CASA}">
@@ -239,6 +258,10 @@ body = f'''
     <div class="tragos__pair">
       {item('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced pisco sour with a little heat]', cls='it--a', speed='-0.08')}
       {item('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon, fruit]', cls='it--b', speed='0.1')}
+    </div>
+    <div class="tragos__pair tragos__pair--2">
+      {item2('carta-olvidar', 'Cómo te voy a olvidar', '$ 6.800', _GL.get('Cómo te voy a olvidar', '[Pear vodka, lemon, syrup, red wine float]'), C_CASA, cls='it--a', sizes='(min-width:1024px) 30vw, 45vw')}
+      {item2('carta-coquette', 'A veces me pongo Coquette', '$ 7.100', _GL.get('A veces me pongo Coquette', '[Berry pisco, whisky cream liqueur, raspberry, orange, cinnamon]'), C_CASA, cls='it--b', sizes='(min-width:1024px) 30vw, 45vw')}
     </div>
     <div class="moc2">
       <a class="moc2__m" href="{C_MOC}" tabindex="-1" aria-hidden="true">{pic('carta-moto', 'a', '(min-width:1024px) 14vw, 38vw', 'reveal')}</a>
@@ -273,6 +296,12 @@ body = f'''
       {vid('comida-queso', 'it__m reveal')}
       <span class="it__n">Una cosa poca</span>{g(GL_QUESO, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
     </a>
+    <div class="co__more">
+      {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
+      {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw')}
+      {item2('carta-camaron', 'Camarón que se duerme', '$ 15.900', _GL.get('Camarón que se duerme'), C_GRE, sizes='(min-width:1024px) 23vw, 46vw')}
+      {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
+    </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
 </section>
@@ -281,9 +310,9 @@ body = f'''
 <section class="quien" id="quien" aria-labelledby="h-quien">
   <div class="wrap">{title('no somos ná sin ustedes!', "We're nothing without you!", 'h-quien', 'ttl--xl')}</div>
   <div class="quien__g">
-    <div class="col" data-speed="-0.06">{vid('quien-multitud-1', 'reveal')}{pic('con-quien-barra', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigos', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
-    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{pic('con-quien-amigas', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-3', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', '(min-width:1024px) 31vw, 47vw', 'reveal')}</div>
+    <div class="col" data-speed="-0.06">{vid('quien-multitud-1', 'reveal')}{pic('con-quien-barra', 'a', Q, 'reveal')}{pic('con-quien-amigos', 'a', Q, 'reveal')}{pic('quien-sillones-llenos', 'a', Q, 'reveal')}{pic('quien-carcajadas', 'a', Q, 'reveal')}</div>
+    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', Q, 'reveal')}{pic('con-quien-amigas', 'a', Q, 'reveal')}{pic('quien-grupo-peter', 'a', Q, 'reveal')}{pic('quien-copas-arriba', 'a', Q, 'reveal')}{vid('quien-multitud-3', 'reveal')}</div>
+    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', Q, 'reveal')}{pic('quien-grupo-flecos', 'a', Q, 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', Q, 'reveal')}{pic('quien-mesa-llena', 'a', Q_W, 'reveal q__ancha')}</div>
   </div>
 </section>
 
@@ -292,6 +321,12 @@ body = f'''
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
     {vid('eventos-fiesta-12', 'ev__banner ev__banner--v reveal')}
+    <div class="ev__mas">
+      {pic('eventos-brazos-arriba', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+      {pic('eventos-baile-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+      {pic('eventos-primavera', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+      {pic('eventos-10-anos', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+    </div>
     <ol class="cal">
       {''.join('<li class="ev">' + (vid(i, 'ev__m reveal') if i in VI else pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal')) + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}
     </ol>
@@ -304,6 +339,7 @@ body = f'''
   <ul class="eq" data-swipe>
     <li class="eq__p eq__p--v" style="--i:0">{vid('equipo-duenos', 'reveal')}</li>
     {''.join(f'<li class="eq__p" style="--i:{k + 1}">' + pic(i, 'a', '(min-width:1024px) 15vw, 62vw', 'reveal') + f'<a class="eq__at" href="{IG}{h}/" target="_blank" rel="noopener">@{h}</a></li>' for k, (i, h) in enumerate(equipo))}
+    <li class="eq__p eq__p--duo" style="--i:6">{pic('equipo-duo', 'a', '62vw', 'reveal', art=('d', '(min-width:1024px)', '46vw'))}</li>
   </ul>
   <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> <a href="{IG}cepaz/" target="_blank" rel="noopener">@cepaz</a> · <a href="{IG}rusio_mezclao/" target="_blank" rel="noopener">@rusio_mezclao</a></p>
 </section>
@@ -324,10 +360,13 @@ body = f'''
   {vid('donde-terraza', 'donde__v reveal')}
   <div class="donde__t">
     {title('Le esperamos desde las 18:00 hrs', "Doors open at 6 pm — see you there!", 'h-donde')}
+    <div class="donde__d">
     <dl class="datos">
       <div><dt class="sr-only" data-en="Open">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
       <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Across from the Castro Cultural Center">Al frente del Centro Cultural de Castro</dd></div>
     </dl>
+    {pic('donde-puerta', 'a', '(min-width:1024px) 14vw, 40vw', 'donde__p reveal')}
+    </div>
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
       <a class="btn btn--ghost" href="{MAPS}" target="_blank" rel="noopener" data-en="Get directions">Cómo llegar</a>
