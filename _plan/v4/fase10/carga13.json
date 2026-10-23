@@ -1,0 +1,222 @@
+[
+{
+"w": 390,
+"red": "4g",
+"cache": "vacia",
+"t100_s": 4.96,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 5.0,
+"src": "portada-c-v-720.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-v-poster.webp",
+1,
+13
+],
+[
+"portada-c-v-720.webm",
+1,
+1318
+]
+],
+"video_desde_cache": [
+"portada-c-v-poster.webp",
+"portada-c-v-720.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 390,
+"red": "roaming",
+"cache": "vacia",
+"t100_s": 8.57,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0,
+"video_parte_s": 13.73,
+"src": "portada-c-v-720.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-v-poster.webp",
+1,
+13
+],
+[
+"portada-c-v-720.webm",
+1,
+1318
+]
+],
+"video_desde_cache": [
+"portada-c-v-poster.webp",
+"portada-c-v-720.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 390,
+"red": "libre",
+"cache": "vacia",
+"t100_s": 3.35,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 3.39,
+"src": "portada-c-v-720.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-v-poster.webp",
+1,
+13
+],
+[
+"portada-c-v-720.webm",
+1,
+1318
+]
+],
+"video_desde_cache": [
+"portada-c-v-poster.webp",
+"portada-c-v-720.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 390,
+"red": "libre",
+"cache": "llena",
+"t100_s": 3.34,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0,
+"video_parte_s": 3.37,
+"src": "portada-c-v-720.webm",
+"en_play": true,
+"video_red": [],
+"video_desde_cache": [
+"portada-c-v-poster.webp",
+"portada-c-v-720.webm",
+"portada-c-v-poster.webp"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 1440,
+"red": "4g",
+"cache": "vacia",
+"t100_s": 8.53,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0,
+"video_parte_s": 10.29,
+"src": "portada-c-h-1280.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-h-poster.webp",
+1,
+17
+],
+[
+"portada-c-h-1280.webm",
+1,
+2807
+]
+],
+"video_desde_cache": [
+"portada-c-h-poster.webp",
+"portada-c-h-1280.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 1440,
+"red": "roaming",
+"cache": "vacia",
+"t100_s": 8.64,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 27.11,
+"src": "portada-c-h-1280.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-h-poster.webp",
+1,
+17
+],
+[
+"portada-c-h-1280.webm",
+1,
+2807
+]
+],
+"video_desde_cache": [
+"portada-c-h-poster.webp",
+"portada-c-h-1280.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 1440,
+"red": "libre",
+"cache": "vacia",
+"t100_s": 3.38,
+"ct_al_abrir": 0,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 3.4,
+"src": "portada-c-h-1280.webm",
+"en_play": true,
+"video_red": [
+[
+"portada-c-h-poster.webp",
+1,
+17
+],
+[
+"portada-c-h-1280.webm",
+1,
+2807
+]
+],
+"video_desde_cache": [
+"portada-c-h-poster.webp",
+"portada-c-h-1280.webm"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+},
+{
+"w": 1440,
+"red": "libre",
+"cache": "llena",
+"t100_s": 3.34,
+"ct_al_abrir": 0.008,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 3.35,
+"src": "portada-c-h-1280.webm",
+"en_play": true,
+"video_red": [],
+"video_desde_cache": [
+"portada-c-h-poster.webp",
+"portada-c-h-1280.webm",
+"portada-c-h-poster.webp"
+],
+"duplicados": [],
+"errs": [],
+"4xx": []
+}
+]
