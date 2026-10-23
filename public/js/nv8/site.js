@@ -272,7 +272,7 @@
   if (root.classList.contains('intro') && scrollY < 10 && performance.now() < 1400) { window.__almudIntro = true; intro(); } else root.classList.remove('intro');
 
   // Revelados de titulares
-  $$('.ttl, .pie__f').filter(t => !t.closest('.quien') && !t.closest('.eventos')).forEach(t => {
+  $$('.ttl, .pie__f').filter(t => !t.closest('.quien') && !t.closest('.eventos') && !t.closest('.donde')).forEach(t => {
     G.from(words(t), { yPercent: 110, duration: 1.05, ease: EXPO, stagger: .045,
       scrollTrigger: { trigger: t, start: 'top 88%', once: true },
       onComplete: () => { $$('.w', t).forEach(w => { w.style.overflow = 'visible'; }); if (t._in) t._in(); } });
@@ -321,7 +321,7 @@
       .set(m, { clipPath: 'none' });
   });
   // Bloques de texto
-  $$('.rin__c, .it__n, .menu li, .ev__t, .ev__n, .eq__at, .r__q, .datos > div, .donde__btns, .moc__t, .pie__cr').filter(el => !el.closest('.carr')).forEach(el => {
+  $$('.rin__c, .it__n, .menu li, .ev__t, .ev__n, .eq__at, .r__q, .datos > div, .donde__btns, .moc__t, .pie__cr').filter(el => !el.closest('.carr') && !el.closest('.cinta')).forEach(el => {
     G.from(el, { y: 26, opacity: 0, duration: .9, ease: EXPO, scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
   });
 
@@ -596,6 +596,119 @@
         if (!prog) { if (onScreen) go(0, 0); return; }
         if (onScreen && !drag && !document.hidden) prog.resume(); else prog.pause();
       } });
+  }
+
+  /* ───────── v4 fase 8 · Equipo (rojo): tarjetas que se dan vuelta ───────── */
+  const flips = $$('.flip');
+  if (flips.length) {
+    root.classList.add('fl');
+    flips.forEach((f, k) => {
+      f.style.setProperty('--k', k % 3);
+      f.addEventListener('click', e => { if (!e.target.closest('a')) f.classList.toggle('is-on'); });
+    });
+    ST.create({ trigger: '.eqz', start: 'top 70%', once: true, onEnter: () => flips.forEach(f => f.classList.add('peek')) });
+  }
+
+  /* ───────── Reseñas (crema): dos cintas en sentidos contrarios ───────── */
+  // Pasan solas (36 px/s), se pausan con hover o foco, se arrastran con el dedo o el mouse (con inercia) y solo corren en pantalla.
+  const cinta = $('[data-cinta]');
+  if (cinta && window.PointerEvent) {
+    root.classList.add('cn');
+    cinta.setAttribute('role', 'region'); cinta.tabIndex = 0;
+    const rows = $$('.cinta__row', cinta).map(row => {
+      [...row.children].forEach(li => { const c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.querySelectorAll('[aria-label]').forEach(x => x.removeAttribute('aria-label')); row.appendChild(c); });
+      return { row, dir: +row.dataset.dir, x: 0, v: 0, half: 0 };
+    });
+    const measure = () => rows.forEach(r => { r.half = r.row.scrollWidth / 2 + 8; if (r.dir > 0 && r.x === 0) r.x = -r.half; });
+    measure(); addEventListener('resize', measure);
+    let on = false, hold = false, drag = null, raf = 0, last = 0;
+    const wrap = r => { while (r.x <= -r.half) r.x += r.half; while (r.x > 0) r.x -= r.half; };
+    function tick(t) {
+      const dt = Math.min(50, last ? t - last : 16.7); last = t;
+      rows.forEach(r => {
+        if (drag && drag.r === r) return;
+        const auto = hold ? 0 : r.dir * .036 * dt;
+        r.x += auto + r.v * dt; r.v *= Math.pow(.94, dt / 16.7); if (Math.abs(r.v) < .002) r.v = 0;
+        wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+      });
+      raf = on ? requestAnimationFrame(tick) : 0; if (!raf) last = 0;
+    }
+    const run = () => { if (on && !raf) raf = requestAnimationFrame(tick); };
+    ST.create({ trigger: cinta, start: 'top bottom', end: 'bottom top', onToggle: self => { on = self.isActive; run(); } });
+    cinta.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hold = true; });
+    cinta.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hold = false; });
+    cinta.addEventListener('focusin', () => { hold = true; }); cinta.addEventListener('focusout', () => { hold = false; });
+    cinta.addEventListener('pointerdown', e => {
+      const row = e.target.closest('.cinta__row'); if (!row || e.button > 0) return;
+      drag = { id: e.pointerId, r: rows.find(r => r.row === row), x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s: 0 };
+      drag.s = drag.r.x;
+    });
+    cinta.addEventListener('pointermove', e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.on) {
+        if (Math.hypot(dx, dy) < 6) return;
+        if (e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // vertical: es scroll
+        drag.on = true; try { cinta.setPointerCapture(e.pointerId); } catch (_) {} cinta.classList.add('is-drag');
+      }
+      const dt = Math.max(1, e.timeStamp - drag.t); drag.v = (e.clientX - drag.lx) / dt * .7 + drag.v * .3; drag.lx = e.clientX; drag.t = e.timeStamp;
+      const r = drag.r; r.x = drag.s + dx; wrap(r); r.row.style.transform = 'translate3d(' + r.x.toFixed(2) + 'px,0,0)';
+    });
+    const soltar = e => { if (!drag || e.pointerId !== drag.id) return; if (drag.on) drag.r.v = G.utils.clamp(-2, 2, drag.v); drag = null; cinta.classList.remove('is-drag'); };
+    cinta.addEventListener('pointerup', soltar); cinta.addEventListener('pointercancel', soltar);
+    cinta.addEventListener('lostpointercapture', e => { if (e.target === cinta) soltar(e); });
+    cinta.addEventListener('dragstart', e => e.preventDefault());
+  }
+
+  /* ───────── Cuándo y dónde (negro): «Le esperamos desde las 18:00 hrs» se escribe en vivo ───────── */
+  const dt_ = $('.donde .ttl'), dtt = dt_ && $('.ttl__t', dt_);
+  if (dtt) {
+    const chars = splitChars(dtt);
+    G.set(chars, { opacity: 0 });
+    const cur = document.createElement('span'); cur.className = 'tw-c'; cur.setAttribute('aria-hidden', 'true'); dt_.appendChild(cur);
+    const place = k => {   // el cursor va justo después de la última letra escrita (solo transform: no mueve nada)
+      const base = dt_.getBoundingClientRect(), c = chars[Math.max(0, k)].getBoundingClientRect();
+      cur.style.transform = 'translate(' + (k < 0 ? c.left - base.left : c.right - base.left + 2).toFixed(1) + 'px,' + (c.top - base.top + c.height * .08).toFixed(1) + 'px)';
+    };
+    place(-1);
+    ST.create({ trigger: dt_, start: 'top 80%', once: true, onEnter: () => {
+      let k = 0;
+      const typeOne = () => {
+        if (k >= chars.length) return;
+        chars[k].style.opacity = 1; place(k);
+        const ch = chars[k].textContent; k++;
+        G.delayedCall(ch === ' ' ? .02 : (/[,:]/.test(ch) ? .26 : .055 + Math.random() * .05), typeOne);   // ritmo de máquina, con pausa en «:»
+      };
+      typeOne();
+    } });
+    addEventListener('resize', () => place(chars.findIndex(c => c.style.opacity !== '1') - 1));
+  }
+
+  /* ───────── Pie: la frase respira y el almud brinda ───────── */
+  const pf = $('.pie__f'), br = $('.brindis');
+  if (pf && br) {
+    root.classList.add('br');
+    const ws = words(pf), A = $('.brindis__a', br), B = $('.brindis__b', br), chin = $('.brindis__chin', br);
+    const breath = G.to(ws, { scale: 1.035, duration: 2.2, ease: 'sine.inOut', yoyo: true, repeat: -1, stagger: { each: .18, yoyo: true, repeat: -1 }, paused: true });
+    let ready = false, visible = false;
+    pf._in = () => { ready = true; if (visible) breath.play(); };
+    const chinchin = () => G.timeline()
+      .to(A, { rotation: 16, x: 12, duration: .45, ease: 'power2.in' }, 0)
+      .to(B, { rotation: -16, x: -12, duration: .45, ease: 'power2.in' }, 0)
+      .fromTo(chin, { opacity: 1, scale: .4, transformOrigin: '50% 100%' }, { scale: 1.15, opacity: 0, duration: .55, ease: 'power2.out' }, .45)   // ¡chin chin!
+      .to([A, B], { rotation: 0, x: 0, duration: 1.1, ease: 'elastic.out(1.2,.32)' }, .47);
+    const draw = G.timeline({ paused: true })
+      .to($$('path', br), { strokeDashoffset: 0, duration: .8, ease: 'power3.inOut', stagger: .03 })
+      .add(chinchin, '+=.1');
+    let loop = null;
+    ST.create({ trigger: br, start: 'top 85%', end: 'bottom top',
+      onToggle: self => {
+        visible = self.isActive;
+        if (visible) { if (ready) breath.play(); if (draw.progress() === 0) draw.play(); if (!loop) loop = setInterval(() => { if (visible) chinchin(); }, 6000); }
+        else { breath.pause(); clearInterval(loop); loop = null; }
+      } });
+    $('.pie__hero').addEventListener('pointerenter', e => { if (e.pointerType === 'mouse' && draw.progress() === 1) chinchin(); });
+    $('.pie__hero').addEventListener('pointerdown', () => { if (draw.progress() === 1) chinchin(); });
   }
 
   const mm = G.matchMedia();
