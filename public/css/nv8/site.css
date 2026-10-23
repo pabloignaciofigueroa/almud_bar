@@ -995,3 +995,14 @@ html:not(.fl) .flip__q{font-size:18px}
   .donde.cierre .donde__t{padding-top:0;padding-right:var(--gut)}
   .donde.cierre .donde__d{margin-top:0}
 }
+/* fase 8e · cierre más corto entre el mapa y el logo; logo ALMUD BAR alineado a la derecha */
+.donde.cierre{padding-bottom:20px}
+.pie{padding-top:28px}
+.pie__g{display:flex;flex-direction:column;gap:32px}
+.pie__logo{align-self:flex-end}
+@media (min-width:1024px){
+  .donde.cierre{padding-bottom:40px}
+  .pie{padding-top:56px}
+  .pie__g{flex-direction:row-reverse;justify-content:space-between;align-items:flex-end}
+}
+.cierre .donde__t{padding-bottom:0}
