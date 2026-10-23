@@ -3,10 +3,10 @@
 "w": 390,
 "red": "4g",
 "cache": "vacia",
-"t100_s": 4.96,
+"t100_s": 4.34,
 "ct_al_abrir": 0,
 "primer_cuadro_media": 0.033,
-"video_parte_s": 5.0,
+"video_parte_s": 4.37,
 "src": "portada-c-v-720.webm",
 "en_play": true,
 "video_red": [
@@ -21,10 +21,7 @@
 1318
 ]
 ],
-"video_desde_cache": [
-"portada-c-v-poster.webp",
-"portada-c-v-720.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -33,10 +30,10 @@
 "w": 390,
 "red": "roaming",
 "cache": "vacia",
-"t100_s": 8.57,
+"t100_s": 7.92,
 "ct_al_abrir": 0,
-"primer_cuadro_media": 0,
-"video_parte_s": 13.73,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 7.95,
 "src": "portada-c-v-720.webm",
 "en_play": true,
 "video_red": [
@@ -48,13 +45,10 @@
 [
 "portada-c-v-720.webm",
 1,
-1318
+818
 ]
 ],
-"video_desde_cache": [
-"portada-c-v-poster.webp",
-"portada-c-v-720.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -63,10 +57,10 @@
 "w": 390,
 "red": "libre",
 "cache": "vacia",
-"t100_s": 3.35,
+"t100_s": 3.29,
 "ct_al_abrir": 0,
 "primer_cuadro_media": 0.033,
-"video_parte_s": 3.39,
+"video_parte_s": 3.32,
 "src": "portada-c-v-720.webm",
 "en_play": true,
 "video_red": [
@@ -81,10 +75,7 @@
 1318
 ]
 ],
-"video_desde_cache": [
-"portada-c-v-poster.webp",
-"portada-c-v-720.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -93,17 +84,16 @@
 "w": 390,
 "red": "libre",
 "cache": "llena",
-"t100_s": 3.34,
+"t100_s": 3.27,
 "ct_al_abrir": 0,
 "primer_cuadro_media": 0,
-"video_parte_s": 3.37,
+"video_parte_s": 3.3,
 "src": "portada-c-v-720.webm",
 "en_play": true,
 "video_red": [],
 "video_desde_cache": [
 "portada-c-v-poster.webp",
-"portada-c-v-720.webm",
-"portada-c-v-poster.webp"
+"portada-c-v-720.webm"
 ],
 "duplicados": [],
 "errs": [],
@@ -113,28 +103,25 @@
 "w": 1440,
 "red": "4g",
 "cache": "vacia",
-"t100_s": 8.53,
-"ct_al_abrir": 0,
-"primer_cuadro_media": 0,
-"video_parte_s": 10.29,
-"src": "portada-c-h-1280.webm",
+"t100_s": 4.17,
+"ct_al_abrir": 0.004,
+"primer_cuadro_media": 0.033,
+"video_parte_s": 4.18,
+"src": "portada-c-h-l-960.webm",
 "en_play": true,
 "video_red": [
 [
-"portada-c-h-poster.webp",
+"portada-c-h-l-poster.webp",
 1,
-17
+13
 ],
 [
-"portada-c-h-1280.webm",
+"portada-c-h-l-960.webm",
 1,
-2807
+1067
 ]
 ],
-"video_desde_cache": [
-"portada-c-h-poster.webp",
-"portada-c-h-1280.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -143,28 +130,25 @@
 "w": 1440,
 "red": "roaming",
 "cache": "vacia",
-"t100_s": 8.64,
+"t100_s": 7.97,
 "ct_al_abrir": 0,
 "primer_cuadro_media": 0.033,
-"video_parte_s": 27.11,
-"src": "portada-c-h-1280.webm",
+"video_parte_s": 7.98,
+"src": "portada-c-h-l-960.webm",
 "en_play": true,
 "video_red": [
 [
-"portada-c-h-poster.webp",
+"portada-c-h-l-poster.webp",
 1,
-17
+13
 ],
 [
-"portada-c-h-1280.webm",
+"portada-c-h-l-960.webm",
 1,
-2807
+440
 ]
 ],
-"video_desde_cache": [
-"portada-c-h-poster.webp",
-"portada-c-h-1280.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -173,28 +157,25 @@
 "w": 1440,
 "red": "libre",
 "cache": "vacia",
-"t100_s": 3.38,
-"ct_al_abrir": 0,
+"t100_s": 3.28,
+"ct_al_abrir": 0.005,
 "primer_cuadro_media": 0.033,
-"video_parte_s": 3.4,
-"src": "portada-c-h-1280.webm",
+"video_parte_s": 3.29,
+"src": "portada-c-h-l-960.webm",
 "en_play": true,
 "video_red": [
 [
-"portada-c-h-poster.webp",
+"portada-c-h-l-poster.webp",
 1,
-17
+13
 ],
 [
-"portada-c-h-1280.webm",
+"portada-c-h-l-960.webm",
 1,
-2807
+1296
 ]
 ],
-"video_desde_cache": [
-"portada-c-h-poster.webp",
-"portada-c-h-1280.webm"
-],
+"video_desde_cache": [],
 "duplicados": [],
 "errs": [],
 "4xx": []
@@ -203,17 +184,16 @@
 "w": 1440,
 "red": "libre",
 "cache": "llena",
-"t100_s": 3.34,
-"ct_al_abrir": 0.008,
+"t100_s": 3.27,
+"ct_al_abrir": 0.004,
 "primer_cuadro_media": 0.033,
-"video_parte_s": 3.35,
-"src": "portada-c-h-1280.webm",
+"video_parte_s": 3.28,
+"src": "portada-c-h-l-960.webm",
 "en_play": true,
 "video_red": [],
 "video_desde_cache": [
-"portada-c-h-poster.webp",
-"portada-c-h-1280.webm",
-"portada-c-h-poster.webp"
+"portada-c-h-l-poster.webp",
+"portada-c-h-l-960.webm"
 ],
 "duplicados": [],
 "errs": [],

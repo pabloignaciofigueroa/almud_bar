@@ -319,7 +319,7 @@ body = f'''
 <section class="hero" aria-label="Almud Bar">
   <div class="hero__win" data-win>
     {vid('portada-c-v', 'hero__v hero__v--m', hero=True)}
-    {vid('portada-c-h', 'hero__v hero__v--d', hero=True)}
+    {vid('portada-c-h-l', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
     <script type="application/json" id="carga-man">__CARGA_MAN__</script>
     <script>__CARGA_JS__</script>
@@ -537,7 +537,7 @@ body = f'''
 '''
 
 IM_P = VI['portada-c-v']['poster']['webp']['path']
-IM_L = VI['portada-c-h']['poster']['webp']['path']
+IM_L = VI['portada-c-h-l']['poster']['webp']['path']
 page = f'''<!doctype html>
 <html lang="es">
 <head>
@@ -575,7 +575,7 @@ page = f'''<!doctype html>
 def _b(u):
     q = ROOT / u.lstrip('/').split('?')[0]
     return q.stat().st_size if q.is_file() else 0
-_man = {k: {'webm': _b(VI[i]['files']['webm']['path']), 'mp4': _b(VI[i]['files']['mp4']['path'])} for k, i in (('v', 'portada-c-v'), ('h', 'portada-c-h'))}
+_man = {k: {'webm': _b(VI[i]['files']['webm']['path']), 'mp4': _b(VI[i]['files']['mp4']['path']), 'dur': VI[i]['duration']} for k, i in (('v', 'portada-c-v'), ('h', 'portada-c-h-l'))}   # v4 fase 13: escritorio con la versión liviana
 _pos = sorted(set(re.findall(r'data-poster="([^"]+)"', page)))
 _man['posters'] = [{'url': u, 'bytes': _b(u)} for u in _pos]
 _man['logo'] = {'url': UP + 'brand/v3/favicon.svg', 'bytes': _b('brand/v3/favicon.svg')}

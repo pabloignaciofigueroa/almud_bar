@@ -1480,6 +1480,87 @@
    },
    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoNABgAPwFqrE8rJiQiMAgBYCAJYwAAW+x7Hy0PNXLYAP7vQvJ331coN7N33KJGWgzSbeu85solHwRBNtAAAA==",
    "color": "#080509"
+  },
+  "portada-c-h-l": {
+   "ref": "V031+V007",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "El letrero ALMUD BAR, la puerta, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas; luego la terraza techada repleta de gente al atardecer.",
+    "en": "The ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the clothespin lamps; then the covered terrace packed with people at sunset."
+   },
+   "credit": {
+    "post": "IG-061",
+    "date": "2025-01-27",
+    "url": "https://www.instagram.com/p/DFWLrRxyvVB/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Video: @estudiouno.prod para @almud_bar"
+   },
+   "variant": "horizontal",
+   "note": "Fase 13 (liviana para escritorio con red lenta): el mismo montaje de portada-c-h re-codificado a 960×540 (lanczos), keyframe cada 2 s para arrancar rápido; WebM VP9 CRF 43, MP4 H.264 CRF 30 con faststart. Mismo contenido y loop que portada-c-h.",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 960,
+   "height": 540,
+   "ratio": "16:9",
+   "segments": [
+    [
+     0.4,
+     10.45
+    ],
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 518,
+   "fps": 30.0,
+   "duration": 17.27,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1500,
+   "budget_mp4_kb": 1500,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 18.89,
+   "seam": {
+    "last_vs_first": 6.24,
+    "typical_step": 12.02
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/portada-c-h-l-960.webm",
+     "bytes": 1326547,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 43
+    },
+    "mp4": {
+     "path": "assets/v4/video/portada-c-h-l-960.mp4",
+     "bytes": 1378966,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 30
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/portada-c-h-l-poster.avif",
+     "bytes": 3940
+    },
+    "webp": {
+     "path": "assets/v4/video/portada-c-h-l-poster.webp",
+     "bytes": 12660
+    },
+    "jpg": {
+     "path": "assets/v4/video/portada-c-h-l-poster.jpg",
+     "bytes": 19300
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoYAA4APwF6sFCrKKSisAgBYCAJYwAAXBuVUMw+BSeAAP7yo9i1tOzvym+R9vXqDurzDzNz3ab79uhS/hQAAA==",
+   "color": "#080508"
   }
  }
 }
