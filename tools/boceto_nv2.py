@@ -322,7 +322,7 @@ body = f'''
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
     {vid('eventos-fiesta-12', 'ev__banner ev__banner--v reveal')}
     <div class="ev__mas">
-      {pic('eventos-brazos-arriba', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+      {pic('eventos-cotillon-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-baile-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-primavera', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-10-anos', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}

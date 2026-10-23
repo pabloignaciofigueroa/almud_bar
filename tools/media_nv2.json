@@ -217,9 +217,9 @@
    "note": "IG-009, 12 años (@isosur.prod)."
   },
   {
-   "id": "eventos-brazos-arriba",
-   "ref": "P349",
-   "src": "assets/raw/ig/Dbg3ekilC4P_12.jpg",
+   "id": "eventos-cotillon-12",
+   "ref": "P354",
+   "src": "assets/raw/ig/Dbg3ekilC4P_17.jpg",
    "section": "eventos",
    "crops": [
     {
@@ -233,11 +233,11 @@
     }
    ],
    "alt": {
-    "es": "Los 12 años de Almud: la gente celebra con los brazos arriba y un megáfono.",
-    "en": "Almud turns 12: people celebrating with arms in the air and a megaphone."
+    "es": "Los 12 años de Almud: un grupo celebra con coronas, antifaces y lentes de fiesta junto a la estufa.",
+    "en": "Almud turns 12: a group celebrating in crowns, masks and party glasses by the heater."
    },
    "evento": "12 años",
-   "note": "IG-009 (@isosur.prod). Megáfono = el de la puerta."
+   "note": "IG-009 (@isosur.prod). Cotillón de cumpleaños: solo en Eventos. Reemplaza a P349 (mismo instante que la foto de Aniversario, P348)."
   },
   {
    "id": "tragos-brindis-copas",

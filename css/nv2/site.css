@@ -517,7 +517,7 @@ html:not(.js) .m picture{display:none}
 
 /* Tragos: banda de ambiente con 4 fotos más (copa tallada, old fashioned, negroni, brindis) */
 .tragos__amb--4,.tragos__amb--5,.tragos__amb--6,.tragos__amb--7{margin-top:0}
-.tragos__amb--4{margin-top:40px} /* mismo escalón que las copas de arriba */
+
 @media (min-width:1024px){
   .tragos__band{row-gap:40px}
   .tragos__band .tragos__flag{grid-column:1/7;grid-row:1/3}
