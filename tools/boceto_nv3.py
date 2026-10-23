@@ -186,8 +186,7 @@ resenas = [
 creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
 
 ISO = svg_inline('almud-isotipo', 'iso').replace('<path ', '<path pathLength="1" ')
-# v4 fase 4: velo con la boca del almud recortada (evenodd). Se escala con transform y deja ver el video que ya está detrás.
-ISO = ISO.replace('<g ', '<path class="iso__veil" fill-rule="evenodd" d="M-4000 -4000H4660V4940H-4000ZM287 76L87 192L271 409L512 217Z"/><g class="iso__g" ', 1)
+ISO = ISO.replace('<g ', '<g class="iso__g" ', 1)
 
 
 def _sub_bbox(sp):
@@ -242,7 +241,7 @@ body = f'''
     {vid('portada-celular', 'hero__v hero__v--m', hero=True)}
     {vid('portada-escritorio', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
-    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}function go(){{if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}}if(d.readyState==='complete')go();else{{addEventListener('load',go);setTimeout(go,2500)}}}})(document)</script>
+    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}function go(){{if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}}if(d.documentElement.classList.contains('intro')||d.readyState==='complete')go();else{{addEventListener('load',go);setTimeout(go,2500)}}}})(document)</script>
   </div>
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
   <div class="hero__in">

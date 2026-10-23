@@ -86,14 +86,16 @@ html[lang="en"] .gloss--i{display:inline}
 }
 @media (min-width:768px){.hero__right{display:block}}
 /* intro: el isotipo se abre al video */
-/* v4 fase 4: el póster se ve desde el primer cuadro (LCP); el isotipo se dibuja encima, con un velo que solo deja ver la boca
-   del almud, y luego crece (solo transform) hasta que la boca cubre la pantalla. Respaldo CSS: todo visible a los 3 s. */
+/* v4 fase 4 (corrección del cliente): se entra en negro; el isotipo se dibuja, su boca se abre y por ahí aparece el video. Respaldo CSS: todo visible a los 3,4 s. */
 .intro .hero__iso{display:block}
 .intro .hero__iso .iso__g path{stroke-dasharray:1;stroke-dashoffset:1}
+.intro .hero__win{clip-path:polygon(50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%,50% 44%)}
 .intro .hero__in>*{opacity:0}
 .intro .nav{opacity:0}
-.intro .hero__in>*,.intro .nav{animation:fs-show .01s 3s forwards}
-.intro .hero__iso{animation:fs-hide .01s 3s forwards}
+.intro .hero__win{animation:fs-clip .01s 3.4s forwards}
+.intro .hero__in>*,.intro .nav{animation:fs-show .01s 3.4s forwards}
+.intro .hero__iso{animation:fs-hide .01s 3.4s forwards}
+@keyframes fs-clip{to{clip-path:inset(0)}}
 @keyframes fs-show{to{opacity:1}}
 @keyframes fs-hide{to{opacity:0}}
 
@@ -580,7 +582,6 @@ html:not(.js) .m picture{display:none}
 /* Portada: isotipo + velo (la boca del almud) */
 .hero__iso{will-change:transform}
 .hero__iso svg{overflow:visible}
-.iso__veil{fill:var(--noche);fill-opacity:.58;stroke:none}
 .hero__svg{overflow:visible}
 .hero__svg .ltr{transform-box:fill-box;transform-origin:50% 100%}
 .ch{display:inline-block}

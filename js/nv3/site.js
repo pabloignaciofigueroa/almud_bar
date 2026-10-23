@@ -211,17 +211,24 @@
     return $$('.ch', el);
   }
   function intro() {
-    const iso = $('.hero__iso'), svg = $('svg', iso);
-    const r = svg.getBoundingClientRect(), k = r.width / 660;
-    // boca del almud (rombo interior del isotipo) en píxeles
-    const cx = r.left + (299.5 + 20) * k, cy = r.top + (242.5 + 20) * k, a = 212 * k, b = 166 * k;
+    // corrección del cliente (fase 4): se entra en NEGRO; el almud se dibuja, su BOCA se abre y por ahí aparece el video
+    const win = $('[data-win]'), iso = $('.hero__iso'), svg = $('svg', iso);
+    const r = svg.getBoundingClientRect();
     const W = innerWidth, H = hero.offsetHeight;
-    // el velo cubre justo la pantalla (+12 %): una capa chica que luego solo se escala en el compositor
-    const u = (px, o) => ((px - o) / k).toFixed(0);
-    const vx0 = u(-W * .12, r.left) - 20, vx1 = +u(W * 1.12, r.left) - 20, vy0 = u(-H * .12, r.top) - 20, vy1 = +u(H * 1.12, r.top) - 20;
-    $('.iso__veil', iso).setAttribute('d', 'M' + vx0 + ' ' + vy0 + 'H' + vx1 + 'V' + vy1 + 'H' + vx0 + 'ZM287 76L87 192L271 409L512 217Z');
-    const S = 1.3 * Math.max(...[[0, 0], [W, 0], [0, H], [W, H]].map(([px, py]) => Math.abs(px - cx) / a + Math.abs(py - cy) / b));
-    const ox = ((299.5 + 20) / 660 * 100).toFixed(2) + '%', oy = ((242.5 + 20) / 940 * 100).toFixed(2) + '%';
+    const P = (x, y) => [r.left + (x + 20) / 660 * r.width, r.top + (y + 20) / 940 * r.height];
+    const T = P(287, 76), R = P(512, 217), B = P(271, 409), L = P(87, 192);   // boca: rombo interior del isotipo
+    const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+    const rh = [T, mid(T, R), R, mid(R, B), B, mid(B, L), L, mid(L, T)];
+    const c = mid(T, B), o = 24;
+    const full = [[W / 2, -o], [W + o, -o], [W + o, H / 2], [W + o, H + o], [W / 2, H + o], [-o, H + o], [-o, H / 2], [-o, -o]];
+    const st = { k: 0, e: 0 };
+    const draw = () => {
+      win.style.clipPath = 'polygon(' + rh.map((q, i) => {
+        const x0 = c[0] + (q[0] - c[0]) * st.k, y0 = c[1] + (q[1] - c[1]) * st.k;
+        return (x0 + (full[i][0] - x0) * st.e).toFixed(1) + 'px ' + (y0 + (full[i][1] - y0) * st.e).toFixed(1) + 'px';
+      }).join(',') + ')';
+    };
+    draw();
     const ltrs = $$('.hero__svg .ltr');
     const chars = splitChars($('.hero__claim-t'));
     const gloss = $('.hero__claim .gloss');
@@ -229,23 +236,25 @@
     const logoIso = $('.hero__svg g g');   // el almudcito del logo: aterriza después de las letras
     const inEls = $$('.hero__in > *');
     const done = () => {
+      win.style.clipPath = '';
       root.classList.remove('intro');
       G.set([...inEls, iso, '.nav', ...ltrs, ...chars, btn, logoIso].filter(Boolean), { clearProps: 'transform,opacity' });
       ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => removeEventListener(ev, skip));
       removeEventListener('scroll', skip);
     };
     const tl = G.timeline({ onComplete: done });
-    if (gloss) tl.from(gloss, { opacity: 0, duration: .4 }, 1.9);
-    if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.55);
-    G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0, transformOrigin: ox + ' ' + oy });
+    G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0 });
     tl.set(inEls, { opacity: 1 }, 0)
-      .to($$('.iso__g path', iso), { strokeDashoffset: 0, duration: .62, ease: 'power2.inOut', stagger: .035 }, 0)
-      .to(iso, { scale: S, duration: .8, ease: 'power3.in' }, .72)
-      .set(iso, { opacity: 0 }, 1.52)
-      .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.12)
-      .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.34)
-      .fromTo(btn, { scale: .35, opacity: 0, rotation: -7 }, { scale: 1, opacity: 1, rotation: 0, duration: .6, ease: 'elastic.out(1.1,.45)' }, 1.9)
-      .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .5 }, 1.6);
+      .to($$('.iso__g path', iso), { strokeDashoffset: 0, duration: .66, ease: 'power3.inOut', stagger: .035 }, .05)
+      .to(st, { k: 1, duration: .5, ease: 'expo.out', onUpdate: draw }, .62)                 // la boca se abre: el video asoma
+      .to(st, { e: 1, duration: .95, ease: 'expo.inOut', onUpdate: draw }, 1.02)            // y se abre a toda la pantalla
+      .to(iso, { scale: 5.5, opacity: 0, duration: .95, ease: 'expo.in', transformOrigin: '50% 28%' }, 1.02)
+      .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.5)
+      .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.7)
+      .fromTo(btn, { scale: .35, opacity: 0, rotation: -7 }, { scale: 1, opacity: 1, rotation: 0, duration: .6, ease: 'elastic.out(1.1,.45)' }, 2.25)
+      .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .5 }, 1.95);
+    if (gloss) tl.from(gloss, { opacity: 0, duration: .4 }, 2.25);
+    if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.95);
     function skip() { if (tl.progress() < 1) tl.progress(1); }
     ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => addEventListener(ev, skip, { passive: true }));
     // un scroll real (no el de la restauración de la página) también la salta
