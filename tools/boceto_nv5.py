@@ -163,6 +163,10 @@ def item2(id_, name, price, gl, href, cls='', sizes='(min-width:1024px) 22vw, 45
 
 C_SAN = CARTA + '#comilona-sanguches'
 Q = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 47vw'
+# v4 fase 6 · Con quién: las 12 fotos de la baraja (mismo orden aprobado en la fase 3; los videos van aparte)
+BARAJA = ['con-quien-barra', 'con-quien-amigos', 'quien-sillones-llenos', 'quien-carcajadas', 'con-quien-brindis', 'con-quien-amigas',
+          'quien-grupo-peter', 'quien-copas-arriba', 'con-quien-risa', 'quien-grupo-flecos', 'con-quien-solo', 'quien-mesa-llena']
+QB = '(min-width:1024px) 30vw, (min-width:768px) 60vw, 80vw'
 Q_W = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 92vw'
 
 eventos = [
@@ -342,13 +346,22 @@ body = f'''
   </div>
 </section>
 
-<!-- 5 · CON QUIÉN -->
+<!-- 5 · CON QUIÉN · v4 fase 6: las fotos son una baraja que se lanza; los 3 videos de multitud quedan fijos fuera de ella -->
 <section class="quien" id="quien" aria-labelledby="h-quien">
   <div class="wrap">{title('no somos ná sin ustedes!', "We're nothing without you!", 'h-quien', 'ttl--xl')}</div>
-  <div class="quien__g">
-    <div class="col" data-speed="-0.06">{vid('quien-multitud-1', 'reveal')}{pic('con-quien-barra', 'a', Q, 'reveal')}{pic('con-quien-amigos', 'a', Q, 'reveal')}{pic('quien-sillones-llenos', 'a', Q, 'reveal')}{pic('quien-carcajadas', 'a', Q, 'reveal')}</div>
-    <div class="col col--2" data-speed="0.1">{pic('con-quien-brindis', 'a', Q, 'reveal')}{pic('con-quien-amigas', 'a', Q, 'reveal')}{pic('quien-grupo-peter', 'a', Q, 'reveal')}{pic('quien-copas-arriba', 'a', Q, 'reveal')}{vid('quien-multitud-3', 'reveal')}</div>
-    <div class="col col--3" data-speed="-0.16">{pic('con-quien-risa', 'a', Q, 'reveal')}{pic('quien-grupo-flecos', 'a', Q, 'reveal')}{vid('quien-multitud-2', 'reveal')}{pic('con-quien-solo', 'a', Q, 'reveal')}{pic('quien-mesa-llena', 'a', Q_W, 'reveal q__ancha')}</div>
+  <div class="qz wrap">
+    {vid('quien-multitud-1', 'qz__v qz__v--1 reveal')}
+    <div class="baraja" data-baraja aria-label="Fotos de la gente de Almud" data-aria-en="Photos of the Almud crowd">
+      <ul class="baraja__p">
+        {''.join('<li class="carta">' + pic(i, 'a', QB, 'carta__m') + '</li>' for i in BARAJA)}
+      </ul>
+      <p class="baraja__hint" aria-hidden="true"><svg class="baraja__mano" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.8-2.4L3.6 14.8a1.6 1.6 0 0 1 2.5-2L9 15"/></svg><span data-en="Swipe">Desliza</span></p>
+      <p class="sr-only baraja__live" aria-live="polite"></p>
+    </div>
+    <div class="qz__lado">
+      {vid('quien-multitud-2', 'qz__v qz__v--2 reveal')}
+      {vid('quien-multitud-3', 'qz__v qz__v--3 reveal')}
+    </div>
   </div>
 </section>
 
