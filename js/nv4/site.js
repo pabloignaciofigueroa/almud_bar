@@ -76,11 +76,12 @@
      Se arrastra con el dedo o el mouse (pointer events propios), con inercia y encaje en cada foto.
      touch-action: pan-y → el scroll vertical sigue siendo del navegador: la ruleta nunca lo secuestra ni lo escucha.
      Cada foto se inclina según la velocidad y vuelve a su sitio. Solo transform. Con movimiento reducido: arrastre sin inclinación ni giro de entrada. */
-  function ruleta() {
-    const vp = $('[data-ruleta]'), tr = vp && $('[data-track]', vp);
+  function ruleta(vp) {   // v4 fase 5: la misma lógica sirve a la ruleta de rincones y al carrusel de tragos
+    const tr = vp && $('[data-track]', vp);
     if (!vp || !tr || !window.PointerEvent) return;
     root.classList.add('rul');
-    const items = $$('.rin', tr);
+    const items = [...tr.children];
+    let moved = false;
     vp.setAttribute('role', 'region'); vp.tabIndex = 0;
     let x = 0, target = 0, min = 0, tilt = 0, vel = 0, raf = 0, drag = null, touched = false, last = 0;
     const gut = () => parseFloat(getComputedStyle(tr).paddingLeft) || 0;
@@ -115,8 +116,9 @@
     vp.addEventListener('pointerdown', e => {
       if (e.button > 0) return;
       touched = true;
-      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, s0: x, t: e.timeStamp, lx: e.clientX, v: 0, on: e.pointerType === 'mouse' };
-      if (drag.on) { vp.setPointerCapture(e.pointerId); vp.classList.add('is-drag'); }
+      moved = false;
+      // la captura se toma recién al moverse 6 px: un clic quieto sigue abriendo el enlace de la tarjeta
+      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, s0: x, t: e.timeStamp, lx: e.clientX, v: 0, on: false };
       loadAll(); kick();
     });
     vp.addEventListener('pointermove', e => {
@@ -124,7 +126,7 @@
       const dx = e.clientX - drag.x0;
       if (!drag.on) {               // en táctil: solo si el gesto es horizontal (si es vertical, el navegador ya hizo scroll y canceló)
         if (Math.abs(dx) < 6) return;
-        drag.on = true; try { vp.setPointerCapture(e.pointerId); } catch (_) {}
+        drag.on = true; moved = true; try { vp.setPointerCapture(e.pointerId); } catch (_) {}
         vp.classList.add('is-drag');
       }
       const dtm = Math.max(1, e.timeStamp - drag.t);
@@ -140,6 +142,11 @@
     vp.addEventListener('pointerup', end); vp.addEventListener('pointercancel', end);
     vp.addEventListener('lostpointercapture', e => { if (e.target === vp) end(e); });   // la captura implícita del li (táctil) también burbujea: se ignora
     vp.addEventListener('dragstart', e => e.preventDefault());
+    vp.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);   // un arrastre no es un clic
+    vp.addEventListener('focusin', e => {   // con teclado (Tab) la tarjeta enfocada entra en pantalla
+      const li = items.find(l => l.contains(e.target)); if (!li) return;
+      vp.scrollLeft = 0; target = Math.max(min, Math.min(0, -(li.offsetLeft - gut()))); kick();
+    });
     // trackpad con gesto horizontal: solo deltaX; el vertical nunca se toca
     let wheelT = 0;
     vp.addEventListener('wheel', e => {
@@ -169,7 +176,7 @@
       io.observe(vp);
     } else loadAll();
   }
-  ruleta();
+  $$('[data-ruleta]').forEach(ruleta);
 
   /* ───────── Movimiento ───────── */
   const G = window.gsap, ST = window.ScrollTrigger;
@@ -300,8 +307,8 @@
       .to(img, { scale: 1, rotation: 0, duration: 1.6, ease: EXPO }, 0)
       .set(m, { clipPath: 'none' });
   });
-  $$('[data-par]').forEach(el => {   // parallax solo de fotos
-    const s = parseFloat(el.dataset.par);
+  $$('[data-par]').forEach(el => {   // parallax solo de fotos (en celular, a la mitad: nunca pisa a la vecina)
+    const s = parseFloat(el.dataset.par) * (innerWidth < 768 ? .5 : 1);
     G.fromTo(el, { y: () => -s * innerHeight * .5 }, { y: () => s * innerHeight * .5, ease: 'none',
       scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: .6, invalidateOnRefresh: true } });
   });
@@ -314,8 +321,74 @@
       .set(m, { clipPath: 'none' });
   });
   // Bloques de texto
-  $$('.rin__c, .it__n, .menu li, .ev__t, .ev__n, .eq__at, .r__q, .datos > div, .donde__btns, .moc__t, .pie__cr').forEach(el => {
+  $$('.rin__c, .it__n, .menu li, .ev__t, .ev__n, .eq__at, .r__q, .datos > div, .donde__btns, .moc__t, .pie__cr').filter(el => !el.closest('.carr')).forEach(el => {
     G.from(el, { y: 26, opacity: 0, duration: .9, ease: EXPO, scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
+  });
+
+  /* ───────── v4 fase 5 · Tragos (rosa) ───────── */
+  // Las fotos de la banda se «sirven» de arriba abajo (clip-path), como un trago que se llena
+  $$('.pour').forEach((m, i) => {
+    const img = $('img', m);
+    G.timeline({ scrollTrigger: { trigger: m, start: 'top 90%', once: true } })
+      .to(m, { clipPath: 'inset(0% 0 0% 0)', duration: 1.2, ease: 'expo.out', delay: (i % 2) * .1 })
+      .to(img, { scale: 1, duration: 1.6, ease: EXPO }, 0)
+      .set(m, { clipPath: 'none' });
+  });
+  // Carrusel: al entrar cada tarjeta (por scroll o arrastrándola), su foto se sirve y su nombre literal se arma letra por letra
+  const cards = $$('.carr__c');
+  if (cards.length && 'IntersectionObserver' in window) {
+    const prep = li => {
+      const m = $('.m', li), n = $('.it__n', li);
+      const chars = n ? splitChars(n) : [];
+      G.set(chars, { yPercent: 110, opacity: 0, rotation: i => (i % 3 - 1) * 16 });
+      if (m) G.set(m, { clipPath: 'inset(0 0 100% 0)' });
+      return () => {
+        const tl = G.timeline();
+        if (m) tl.to(m, { clipPath: 'inset(0% 0 0% 0)', duration: 1, ease: 'expo.out' }).set(m, { clipPath: 'none' });
+        tl.to(chars, { yPercent: 0, opacity: 1, rotation: 0, duration: .5, ease: 'back.out(2.6)', stagger: .028 }, .18);
+      };
+    };
+    const go = new Map(cards.map(li => [li, prep(li)]));
+    const io3 = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      io3.unobserve(e.target); go.get(e.target)();
+    }), { threshold: .3 });
+    cards.forEach(li => io3.observe(li));
+  }
+
+  /* ───────── v4 fase 5 · Comida (naranja) ───────── */
+  // Los platos llegan a la mesa: entran girando un poco (como cuando se sirven) y la foto se abre en redondo, como un plato
+  $$('.plato').forEach((m, i) => {
+    const card = m.closest('.it') || m, inner = $('img, video', m);
+    const rot = [-7, 5, -4, 8][i % 4];
+    G.timeline({ scrollTrigger: { trigger: card, start: 'top 90%', once: true }, delay: (i % 3) * .09 })
+      .from(card, { rotation: rot, y: 46, opacity: 0, duration: 1.1, ease: 'back.out(1.5)', transformOrigin: '50% 60%', clearProps: 'transform,opacity' })
+      .to(m, { clipPath: 'circle(76% at 50% 55%)', duration: 1.1, ease: 'expo.out' }, 0)
+      .to(inner, { scale: 1, duration: 1.5, ease: EXPO }, 0)
+      .set(m, { clipPath: 'none' });
+  });
+  // «más que sabrosona!» late: un doble latido cada pocos segundos mientras el título está en pantalla (y al pasar el dedo o el mouse)
+  const ct = $('.comida .ttl');
+  if (ct) {
+    const ws = words(ct).slice(-3);
+    ws.forEach(w => w.classList.add('sabro'));
+    let ready = false, on = false;
+    const beat = G.timeline({ paused: true, repeat: -1, repeatDelay: 2.4 })
+      .to(ws, { keyframes: [
+        { scale: 1.15, rotation: (i) => (i - 1) * 3, duration: .14, ease: 'power2.out' },
+        { scale: .97, rotation: 0, duration: .13, ease: 'power1.in' },
+        { scale: 1.08, duration: .12, ease: 'power2.out' },
+        { scale: 1, duration: .6, ease: 'elastic.out(1.1,.35)' }], stagger: .08 });
+    const sync = () => { if (ready && on) beat.play(); else beat.pause(0); };
+    ct._in = () => { ready = true; sync(); };
+    ST.create({ trigger: ct, start: 'top 85%', end: 'bottom 10%', onToggle: self => { on = self.isActive; sync(); } });
+    const again = () => { if (ready) beat.play(0); };
+    ct.addEventListener('pointerenter', again); ct.addEventListener('pointerdown', again);
+  }
+  // «Ver la carta completa»: un micro rebote al aparecer
+  $$('.tragos .ver-carta .btn, .comida .ver-carta .btn').forEach(b => {
+    G.from(b, { scale: .55, rotation: -5, opacity: 0, duration: .95, ease: 'elastic.out(1.1,.42)', transformOrigin: '100% 50%',
+      clearProps: 'transform,opacity', scrollTrigger: { trigger: b, start: 'top 95%', once: true } });
   });
 
   const mm = G.matchMedia();

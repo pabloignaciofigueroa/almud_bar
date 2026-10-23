@@ -155,9 +155,9 @@ def item(id_, name, price, gl, cls='', sizes='(min-width:1024px) 22vw, 45vw', sp
             f'<span class="it__n">{E(name)}</span>{g(gl, "gloss gloss--s")}<span class="it__p">{E(price)}</span></a>')
 
 
-def item2(id_, name, price, gl, href, cls='', sizes='(min-width:1024px) 22vw, 45vw'):
+def item2(id_, name, price, gl, href, cls='', sizes='(min-width:1024px) 22vw, 45vw', rv=''):
     """v4 fase 3: ítem de carta con nombre y precio literales de content/carta-v2.json y su ancla en la carta."""
-    return (f'<a class="it {cls}" href="{href}">' + pic(id_, 'a', sizes, 'it__m reveal') +
+    return (f'<a class="it {cls}" href="{href}">' + pic(id_, 'a', sizes, 'it__m ' + rv) +
             f'<span class="it__n">{E(name)}</span>{g(gl, "gloss gloss--s")}<span class="it__p">{E(price)}</span></a>')
 
 
@@ -279,35 +279,34 @@ body = f'''
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'Lots of love, color and hard work', 'h-tragos')}</div>
     <div class="tragos__band" aria-hidden="false">
       {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
-      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 reveal', speed='-0.1')}
-      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 reveal', speed='0.12')}
+      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 pour', extra=' data-par="-0.04"')}
+      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 pour', extra=' data-par="0.05"')}
       {vid('tragos-coctelera', 'tragos__amb tragos__amb--3 reveal')}
-      {pic('tragos-copa-tallada', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--4 reveal')}
-      {pic('tragos-old-fashioned', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--5 reveal')}
-      {pic('eventos-negroni-week', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--6 reveal')}
-      {pic('tragos-brindis-copas', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--7 reveal')}
+      {pic('tragos-copa-tallada', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--4 pour', extra=' data-par="0.03"')}
+      {pic('tragos-old-fashioned', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--5 pour', extra=' data-par="-0.03"')}
+      {pic('eventos-negroni-week', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--6 pour', extra=' data-par="0.06"')}
+      {pic('tragos-brindis-copas', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--7 pour', extra=' data-par="-0.04"')}
     </div>
-    <div class="tragos__named">
-    <a class="it it--hero" href="{C_CASA}">
-      {vid('tragos-humo', 'it__m reveal')}
-      <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
-    </a>
-    <div class="tragos__pair">
-      {item('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced pisco sour with a little heat]', cls='it--a', speed='-0.08')}
-      {item('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon, fruit]', cls='it--b', speed='0.1')}
-    </div>
-    <div class="tragos__pair tragos__pair--2">
-      {item2('carta-olvidar', 'Cómo te voy a olvidar', '$ 6.800', _GL.get('Cómo te voy a olvidar', '[Pear vodka, lemon, syrup, red wine float]'), C_CASA, cls='it--a', sizes='(min-width:1024px) 30vw, 45vw')}
-      {item2('carta-coquette', 'A veces me pongo Coquette', '$ 7.100', _GL.get('A veces me pongo Coquette', '[Berry pisco, whisky cream liqueur, raspberry, orange, cinnamon]'), C_CASA, cls='it--b', sizes='(min-width:1024px) 30vw, 45vw')}
-    </div>
-    <div class="moc2">
-      <a class="moc2__m" href="{C_MOC}" tabindex="-1" aria-hidden="true">{pic('carta-moto', 'a', '(min-width:1024px) 14vw, 38vw', 'reveal')}</a>
-      <div class="moc2__t">
-        <h3 class="kick" data-en="Mocktails">Mocktails</h3>
-        <p class="moc__l">no dejamos a nadie ajuera{g('Nobody gets left out!')}</p>
-        <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
-      </div>
-    </div>
+    <!-- v4 fase 5: los destacados con nombre son un carrusel que se arrastra (dedo o mouse), con la lógica de la ruleta de rincones -->
+    <div class="tragos__named carr" data-ruleta aria-label="Tragos de la casa" data-aria-en="House cocktails">
+      <ul class="carr__tr" data-track>
+        <li class="carr__c"><a class="it it--hero" href="{C_CASA}">
+          {vid('tragos-humo', 'it__m')}
+          <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
+        </a></li>
+        <li class="carr__c">{item2('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced pisco sour with a little heat]', C_CASA, cls='it--a', sizes='(min-width:1024px) 26vw, 72vw')}</li>
+        <li class="carr__c">{item2('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon, fruit]', C_CASA, cls='it--b', sizes='(min-width:1024px) 26vw, 72vw')}</li>
+        <li class="carr__c">{item2('carta-olvidar', 'Cómo te voy a olvidar', '$ 6.800', _GL.get('Cómo te voy a olvidar', '[Pear vodka, lemon, syrup, red wine float]'), C_CASA, cls='it--a', sizes='(min-width:1024px) 26vw, 72vw')}</li>
+        <li class="carr__c">{item2('carta-coquette', 'A veces me pongo Coquette', '$ 7.100', _GL.get('A veces me pongo Coquette', '[Berry pisco, whisky cream liqueur, raspberry, orange, cinnamon]'), C_CASA, cls='it--b', sizes='(min-width:1024px) 26vw, 72vw')}</li>
+        <li class="carr__c"><div class="moc2">
+          <a class="moc2__m" href="{C_MOC}" tabindex="-1" aria-hidden="true">{pic('carta-moto', 'a', '(min-width:1024px) 26vw, 72vw', '')}</a>
+          <div class="moc2__t">
+            <h3 class="kick" data-en="Mocktails">Mocktails</h3>
+            <p class="moc__l">no dejamos a nadie ajuera{g('Nobody gets left out!')}</p>
+            <a class="moc__n" href="{C_MOC}"><span class="it__n">La moto chantá</span>{g('[Mango, passion fruit, cucumber]', 'gloss gloss--s')}<span class="it__p">$ 6.400</span></a>
+          </div>
+        </div></li>
+      </ul>
     </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{C_CASA}" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
@@ -318,26 +317,26 @@ body = f'''
   <div class="wrap comida__g">
     <div class="comida__head">{title('una cocina sencilla pero más que sabrosona!', 'Simple food, but seriously tasty!', 'h-comida')}</div>
     <a class="it co__big" href="{C_PIZ}">
-      {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'it__m reveal')}
+      {pic('comida-pizza', 'a', '(min-width:1024px) 46vw, (min-width:768px) 64vw, 100vw', 'it__m plato')}
       <span class="it__n">Pizzas artesanales</span>{g('[Handmade pizzas]', 'gloss gloss--s')}
     </a>
     <a class="it co__a" href="{C_PIC}">
-      {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m reveal')}
+      {pic('carta-tukulito', 'a', '(min-width:1024px) 22vw, 45vw', 'it__m plato')}
       <span class="it__n">Tukulito Sakayama</span>{g('[Marinated tuna tataki]', 'gloss gloss--s')}<span class="it__p">$ 15.900</span>
     </a>
     <a class="it co__b" href="{C_PIC}">
-      {vid('comida-carne', 'it__m reveal')}
+      {vid('comida-carne', 'it__m plato')}
       <span class="it__n">La carne es débil</span>{g(GL_CARNE, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
     </a>
     <a class="it co__c" href="{C_PIC}">
-      {vid('comida-queso', 'it__m reveal')}
+      {vid('comida-queso', 'it__m plato')}
       <span class="it__n">Una cosa poca</span>{g(GL_QUESO, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
     </a>
     <div class="co__more">
-      {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
-      {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw')}
-      {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
-      {pic('carta-camaron', 'a', '(min-width:1024px) 23vw, 46vw', 'co__sin reveal')}
+      {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      {pic('carta-camaron', 'a', '(min-width:1024px) 23vw, 46vw', 'co__sin plato')}
     </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
