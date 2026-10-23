@@ -549,7 +549,7 @@
        },
        "960": {
         "path": "assets/nv2/img/quien-grupo-flecos-a-960.avif",
-        "bytes": 58278
+        "bytes": 0
        },
        "1280": {
         "path": "assets/nv2/img/quien-grupo-flecos-a-1280.avif",
@@ -971,6 +971,203 @@
        "1440": {
         "path": "assets/nv2/img/eventos-brazos-arriba-a-1440.webp",
         "bytes": 173452
+       }
+      }
+     }
+    }
+   }
+  },
+  "tragos-brindis-copas": {
+   "ref": "P108",
+   "src": "assets/raw/ig/DBMtYELSzNS_08.jpg",
+   "section": "tragos",
+   "alt": {
+    "es": "Dos copas chocan en un brindis: una ámbar con hielo y otra azul.",
+    "en": "Two glasses clink in a toast: one amber over ice, one blue."
+   },
+   "credit": {
+    "post": "IG-075",
+    "date": "2024-10-16",
+    "url": "https://www.instagram.com/p/DBMtYELSzNS/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Foto: @estudiouno.prod para @almud_bar"
+   },
+   "note": "IG-075 (bienvenida a la primavera, @estudiouno.prod). Solo manos y copas.",
+   "source_size": [
+    1440,
+    1800
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "box": [
+      0,
+      0,
+      1440,
+      1800
+     ],
+     "crop_size": [
+      1440,
+      1800
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABQBQCdASoTABgAPwF0sFIrJqSiqAqpYCAJYgCdMzLw+CET+nAe8dK7RE2UtsGB3tJVHUAA9Gmqc06sqs7aA3aKRKybgW60qpxtzR+AhJ+/c0x33c5nItd5temoJ7+OX6MdcjZRAoDm6SVBxOgjpEw+wrGkxHulTSCB3N8jtdpvbJO9TiOrpfThf0WluP3TtLMjRJfKXuRu1N8P4XllX9AbQTUymdUghYxLpJEI83vWNqwIAAA=",
+     "color": "#30211b",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-480.avif",
+        "bytes": 13401
+       },
+       "720": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-720.avif",
+        "bytes": 22805
+       },
+       "960": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-960.avif",
+        "bytes": 32901
+       },
+       "1280": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-1280.avif",
+        "bytes": 49088
+       },
+       "1440": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-1440.avif",
+        "bytes": 58625
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-480.webp",
+        "bytes": 19590
+       },
+       "720": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-720.webp",
+        "bytes": 33232
+       },
+       "960": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-960.webp",
+        "bytes": 45830
+       },
+       "1280": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-1280.webp",
+        "bytes": 64646
+       },
+       "1440": {
+        "path": "assets/nv2/img/tragos-brindis-copas-a-1440.webp",
+        "bytes": 76580
+       }
+      }
+     }
+    }
+   }
+  },
+  "eventos-baile-12": {
+   "ref": "P375",
+   "src": "assets/raw/ig/Dbok2NyFNdb_18.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Los 12 años de Almud: la gente baila apretada bajo los banderines, con coronas de cumpleaños.",
+    "en": "Almud turns 12: people dancing close under the bunting, wearing birthday crowns."
+   },
+   "credit": {
+    "post": "IG-008",
+    "date": "2026-08-04",
+    "url": "https://www.instagram.com/p/Dbok2NyFNdb/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "evento": "12 años",
+   "note": "IG-008 (@isosur.prod). Cotillón de cumpleaños: solo en Eventos.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      128,
+      3072,
+      3968
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoTABgAPwF0sVOrJqQiqAgBYCAJbACdMtDBRnrlROp5+XsbDKkNInXncZgd1vZAAP66Up7FxkE5uYAahGpFXI0OqPHAvY6snewCmGSmKhiJt6hkP7lbCR4XGaK+bJhD0SYNoGHkSjhdIe3lx3lvWHb8LKLkbzmUyE9jL8zyuDWQjMxA6sApOYgEbM0oG2Er3kSKx6n/rM3z9l2c46AAAA==",
+     "color": "#48194d",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/eventos-baile-12-a-480.avif",
+        "bytes": 29072
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-baile-12-a-720.avif",
+        "bytes": 51378
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-baile-12-a-960.avif",
+        "bytes": 77492
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-baile-12-a-1280.avif",
+        "bytes": 117507
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-baile-12-a-1440.avif",
+        "bytes": 140356
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/eventos-baile-12-a-480.webp",
+        "bytes": 43856
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-baile-12-a-720.webp",
+        "bytes": 77380
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-baile-12-a-960.webp",
+        "bytes": 114988
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-baile-12-a-1280.webp",
+        "bytes": 172476
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-baile-12-a-1440.webp",
+        "bytes": 202848
        }
       }
      }

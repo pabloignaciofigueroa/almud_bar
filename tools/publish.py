@@ -21,7 +21,7 @@ INCLUDE_FILES = ['index.html', 'carta/index.html', 'nueva/index.html', 'nueva/ca
                   # fase 15: la carta en su propia página
                  '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
-INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3', 'css/v4', 'js/v4', 'assets/v4', 'css/nv2', 'js/nv2']
+INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3', 'css/v4', 'js/v4', 'assets/v4', 'css/nv2', 'js/nv2', 'assets/nv2']
 
 ALL_DIRS = []
 
