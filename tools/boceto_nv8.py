@@ -506,7 +506,6 @@ body = f'''
   <div class="wrap pie__g">
     <div class="pie__hero">
       <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g("You've earned it, friend!")}</p>
-      <div class="brindis" aria-hidden="true"><div class="brindis__a">{ISO}</div><div class="brindis__b">{ISO}</div><svg class="brindis__chin" viewBox="0 0 60 40"><path d="M30 14V2M18 18 9 9M42 18l9-9"/></svg></div>
     </div>
     <div class="pie__logo">{svg_inline('almud-vertical-claro', 'pie__svg', label=True)}</div>
     <div class="pie__cr">

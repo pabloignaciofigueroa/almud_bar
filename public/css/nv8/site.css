@@ -957,3 +957,8 @@ html:not(.fl) .flip__q{font-size:18px}
 /* Cuándo y dónde: el video de la terraza en su proporción (1:1), sin recorte */
 .donde .donde__v{aspect-ratio:1/1;height:auto;min-height:0}
 @media (min-width:1024px){.donde .donde__v{aspect-ratio:1/1;height:auto;min-height:0;max-height:none}}
+
+/* fase 8b · el pie cierra: título al tamaño de los demás, sin almudes que brindan ni pantalla completa */
+.pie__hero{min-height:0;display:block}
+.pie__f .ttl__t{font-size:44px;line-height:.93}
+@media (min-width:768px){.pie__f .ttl__t{font-size:clamp(56px,5.2vw,92px)}}
