@@ -177,6 +177,9 @@ Q_W = '(min-width:1024px) 31vw, (min-width:768px) 31vw, 92vw'
 # v4 fase 7 · fiestas del slider: nombre y mes literales del calendario v3 (content/copy-v3.md), fotos propias de la fase 3.
 # Negroni Week queda fuera (copy-v3: campaña internacional, sin foto propia); Bendita Primavera, también (una sola vez, en 2024,
 # y su IG no dice el mes: sería inventarlo). Su foto aprobada sigue en la coda.
+# v4 fase 9 · bajada de Eventos: literal de su IG, elegida por el cliente (candidatas en _plan/v4/fase9/bajada-eventos.md)
+BAJADA_EVENTOS = ('Se comió, se tomó, se bailó, quedamos con dolor de guata de tanto reír',
+                  'We ate, we drank, we danced, our bellies hurt from laughing so much', 'IG-072')
 FIESTAS = [
     ('Aniversario', 'Jul', 'Jul', '[Anniversary]', [('p', 'eventos-12-anos'), ('p', 'eventos-cotillon-12'), ('p', 'eventos-baile-12')]),
     ('Fondita', 'Sep', 'Sep', "[Chile's Independence Day party]", [('p', 'eventos-fondita')]),
@@ -351,6 +354,11 @@ body = f'''
 <section class="tragos claro" id="tragos" aria-labelledby="h-tragos">
   <div class="wrap tragos__g">
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'Lots of love, color and hard work', 'h-tragos')}</div>
+    <!-- v4 fase 9 · el momento WOW de Tragos: el Peter con su humo, grande, con su nombre literal armándose encima y su precio -->
+    <a class="peter" href="{C_CASA}">
+      {vid('tragos-humo', 'peter__v reveal')}
+      <span class="peter__cap"><span class="peter__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="peter__p">$ 6.700</span></span>
+    </a>
     <div class="tragos__band" aria-hidden="false">
       {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
       {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 pour', extra=' data-par="-0.03"')}
@@ -364,10 +372,6 @@ body = f'''
     <!-- v4 fase 5: los destacados con nombre son un carrusel que se arrastra (dedo o mouse), con la lógica de la ruleta de rincones -->
     <div class="tragos__named carr" data-ruleta aria-label="Tragos de la casa" data-aria-en="House cocktails">
       <ul class="carr__tr" data-track>
-        <li class="carr__c"><a class="it it--hero" href="{C_CASA}">
-          {vid('tragos-humo', 'it__m')}
-          <span class="it__cap"><span class="it__n">Aquí te las traigo Peter</span>{g('[Pisco, elderflower, cranberry, smoke bubble]', 'gloss gloss--s')}<span class="it__p">$ 6.700</span></span>
-        </a></li>
         <li class="carr__c">{item2('carta-saguer', 'Sagüer on Faia', '$ 7.900', '[Spiced pisco sour with a little heat]', C_CASA, cls='it--a', sizes='(min-width:1024px) 26vw, 72vw')}</li>
         <li class="carr__c">{item2('carta-sangria', 'Sangría Foreva!', '$ 6.500', '[Carménère, aged pisco, cinnamon, fruit]', C_CASA, cls='it--b', sizes='(min-width:1024px) 26vw, 72vw')}</li>
         <li class="carr__c">{item2('carta-olvidar', 'Cómo te voy a olvidar', '$ 6.800', _GL.get('Cómo te voy a olvidar', '[Pear vodka, lemon, syrup, red wine float]'), C_CASA, cls='it--a', sizes='(min-width:1024px) 26vw, 72vw')}</li>
@@ -443,7 +447,7 @@ body = f'''
 <!-- 6 · EVENTOS · v4 fase 7: el video grande de la fiesta, un slider de fiestas a pantalla completa y una coda de fotos -->
 <section class="eventos claro" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap ev7">
-    <div class="ev7__head">{title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}</div>
+    <div class="ev7__head">{title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}<p class="ev7__bajada">{E(BAJADA_EVENTOS[0])}{g(BAJADA_EVENTOS[1])}</p></div>
     {vid('eventos-fiesta', 'ev__banner ev__banner--v ev7__v reveal')}
     <div class="ev7__coda">
       <div class="ev7__col">{pic('eventos-terraza-12', 'a', '(min-width:1024px) 18vw, 46vw', 'reveal')}</div>

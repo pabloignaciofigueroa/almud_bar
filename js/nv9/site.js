@@ -366,6 +366,15 @@
     cards.forEach(li => io3.observe(li));
   }
 
+  // v4 fase 9 · el Peter: su nombre literal se arma letra por letra sobre el video y el precio cae en su sitio
+  const pe = $('.peter');
+  if (pe) {
+    const ch = splitChars($('.peter__n', pe)), pr = $('.peter__p', pe);
+    G.timeline({ scrollTrigger: { trigger: pe, start: 'top 60%', once: true } })
+      .from(ch, { yPercent: 120, opacity: 0, rotation: i => (i % 3 - 1) * 18, duration: .6, ease: 'back.out(2.6)', stagger: .045 })
+      .from(pr, { y: 40, opacity: 0, rotation: -8, duration: .8, ease: 'elastic.out(1.1,.45)', clearProps: 'transform,opacity' }, '-=.25');
+  }
+
   /* ───────── v4 fase 5 · Comida (naranja) ───────── */
   // Los platos llegan a la mesa: entran girando un poco (como cuando se sirven) y la foto se abre en redondo, como un plato
   $$('.plato').forEach((m, i) => {

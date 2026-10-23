@@ -1046,3 +1046,23 @@ html:not(.fl) .flip__q{font-size:18px}
 @media (min-width:768px){.cn .cinta .r{flex-basis:calc((100cqw - 16px) / 2)}}
 @media (min-width:1024px){.cn .cinta .r{flex-basis:calc((100cqw - 32px) / 3)}}
 @media (min-width:1024px){.cinta .r .r__q p{font-size:22px}}
+
+/* v4 fase 9 · Tragos: el Peter con su humo, casi a pantalla completa (en su 4:5, sin recorte), con su nombre armándose encima */
+.peter{position:relative;display:block;margin:32px calc(-1 * var(--gut)) 0;text-decoration:none;color:#f5e9db;container-type:inline-size}
+.peter .peter__v{aspect-ratio:var(--ar);border-radius:0}
+.peter::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,12,11,0) 45%,rgba(14,12,11,.78) 100%);pointer-events:none}
+.peter__cap{position:absolute;left:var(--gut);right:var(--gut);bottom:22px;z-index:1}
+.peter__n{display:block;font:800 clamp(44px,13cqw,150px)/.88 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;text-shadow:0 2px 24px rgba(14,12,11,.55)}
+.peter__n .chw{display:inline-block;white-space:nowrap}
+.peter .gloss{color:#f5e9db;margin-top:8px}
+.peter__p{display:inline-block;margin-top:12px;font:600 22px/1 var(--f-body);font-variant-numeric:tabular-nums;background:#0e0c0b;color:#f5e9db;padding:8px 12px;border-radius:var(--radius)}
+@media (min-width:1024px){
+  .peter{margin:56px auto 0;width:min(100%,calc(86vh * .8));border-radius:var(--radius);overflow:hidden}
+  .peter .peter__v{border-radius:var(--radius)}
+  .peter__cap{left:28px;right:28px;bottom:28px}
+}
+
+/* v4 fase 9 · bajada de Eventos (literal de su IG) */
+.ev7__bajada{margin-top:16px;max-width:30ch;font:500 22px/1.32 var(--f-body)}
+.ev7__bajada .gloss{margin-top:6px;font-size:18px}
+@media (min-width:1024px){.ev7__bajada{font-size:26px;margin-top:22px}}
