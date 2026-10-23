@@ -362,11 +362,15 @@
     ],
     [
      4.75,
-     6.48
+     5.55
     ],
     [
      20.72,
      21.91
+    ],
+    [
+     82.52,
+     83.88
     ],
     [
      86.56,
@@ -392,7 +396,7 @@
     "es": "El Almud en plena fiesta de aniversario: el salón lleno de mesas con gente sentada bajo el techo de cintas, la garzona entre las mesas, la barra trabajando y amigas brindando.",
     "en": "Almud in full anniversary-party swing: a dining room packed with seated guests under the ribbon ceiling, servers between tables, the bar busy and friends toasting."
    },
-   "note": "Fase 7: montaje de 6 planos propios del reel de los 11 años (V036, IG-051), cortados en sus propios cortes: salón lleno (3,12–4,71) → garzón entre mesas (11,89–13,21) → barra trabajando (13,25–14,81) → amigas en la barra con tragos (4,75–6,48) → mesa de amigas con molinillos (20,72–21,91) → salón lleno en plano general (86,56–88,0); fundido 0,8 s al salón inicial. No usa los tramos de Con quién (27,6–37,7 y 66,32–75,7). Reemplaza en /nueva_v6/ a eventos-fiesta-12 (que se conserva)."
+   "note": "Fase 7: montaje de 7 planos propios del reel de los 11 años (V036, IG-051), cortados en sus propios cortes: salón lleno con gente sentada bajo las cintas (3,12–4,71) → garzón entre mesas llenas (11,89–13,21) → barra trabajando (13,25–14,81) → dos amigas riendo con tragos en la barra (4,75–5,55, antes de que el plano quede en una sola persona) → mesa de amigas con molinillos (20,72–21,91) → garzonas saludando bajo el techo de cintas (82,52–83,88) → salón lleno en plano general (86,56–88,0); fundido 0,8 s al salón inicial. No usa los tramos de Con quién (27,6–37,7, 66,32–75,7 y V037). eventos-fiesta-12 se conserva para /nueva_v3–v5/."
   },
   {
    "loop": "crossfade",
