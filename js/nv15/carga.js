@@ -3,7 +3,7 @@
      para ARRANCAR: los primeros ~3 s del video de portada (c-v en celular, c-h-l desde 768) o su canplaythrough, el logo,
      los pósters de los videos y la primera foto de El lugar y de Tragos. El video se baja solo (una sola descarga, la del
      <video>), primero que todo; lo demás espera a que el video tenga sus 3 s. Mínimo 3 s (dibujo suavizado), tope 8 s desde que
-     se pidió la página. Al 100 %: la boca se abre y el video parte desde 0 (antes, quieto en el cuadro 0: el letrero); si aún
+     se pidió la página. Al 100 %: la boca se abre y el video parte desde 0 (v15: antes de eso, oculto; se ve solo por la boca); si aún
      no puede arrancar, la boca espera abierta y parte en cuanto pueda. Sin JS o con movimiento reducido: sin carga, video desde 0. */
   var r = d.documentElement, L = matchMedia('(min-width:768px)').matches;
   var v = d.querySelector(L ? '.hero__v--d video' : '.hero__v--m video');

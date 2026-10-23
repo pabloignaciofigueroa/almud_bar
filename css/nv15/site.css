@@ -1136,6 +1136,8 @@ html:not(.fl) .flip__q{font-size:18px}
 /* v4 fase 13 · CARGA = DIBUJO DEL ALMUD: sobre negro, el isotipo completo se recorta de abajo hacia arriba según la carga real
    (--load, 0 → 1) y el porcentaje va justo debajo. Sin JS o con movimiento reducido no existe. */
 .carga__pct{display:none}
+/* v4 fase 15: durante la carga el video está OCULTO (no solo pausado): recién se ve por la boca, al abrirse */
+.carga .hero__win{visibility:hidden}
 .carga .hero__iso .iso__g path{stroke-dasharray:none;stroke-dashoffset:0}
 .carga .hero__iso svg{clip-path:inset(calc((1 - var(--load, 0)) * 100%) -4% -4% -4%)}
 .carga .carga__pct{display:block;position:absolute;left:0;right:0;top:calc(44% + min(52vw, 34svh) * .72 + 18px);z-index:3;margin:0;text-align:center;

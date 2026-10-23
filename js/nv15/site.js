@@ -242,23 +242,52 @@
       txt.split(' ').map(w => '<span class="chw">' + [...w].map(c => '<span class="ch">' + c.replace('&', '&amp;') + '</span>').join('') + '</span>').join(' ') + '</span>';
     return $$('.ch', el);
   }
+  // v4 fase 15: polígono convexo con cada lado corrido dd unidades hacia ADENTRO (vértice = cruce de los lados vecinos)
+  function inset(p, dd) {
+    const n = p.length, cx = p.reduce((t, q) => t + q[0], 0) / n, cy = p.reduce((t, q) => t + q[1], 0) / n;
+    const Ls = p.map((a, i) => {
+      const b = p[(i + 1) % n]; let nx = b[1] - a[1], ny = a[0] - b[0]; const l = Math.hypot(nx, ny); nx /= l; ny /= l;
+      if (nx * (cx - a[0]) + ny * (cy - a[1]) < 0) { nx = -nx; ny = -ny; }
+      return [nx, ny, nx * a[0] + ny * a[1] + dd];
+    });
+    return p.map((_, i) => {
+      const [a1, b1, c1] = Ls[(i + n - 1) % n], [a2, b2, c2] = Ls[i], det = a1 * b2 - a2 * b1;
+      return [(c1 * b2 - c2 * b1) / det, (a1 * c2 - a2 * c1) / det];
+    });
+  }
   function intro() {
     // corrección del cliente (fase 4): se entra en NEGRO; el almud se dibuja, su BOCA se abre y por ahí aparece el video
+    // v4 fase 15 (revisión): la ventana del video ES la boca del isotipo, pegada a él: mismo centro, misma escala, mismo cuadro.
+    // Antes (v14) la ventana se estiraba a pantalla completa por su cuenta (expo.inOut desde 0,6 s) mientras el isotipo
+    // casi no crecía (expo.in, origen 50% 28%): a 0,85 s ya había video fuera de la boca y a 1,15 s cubría la pantalla
+    // con el isotipo todavía en primer plano (escala 1,2, opacidad 0,95). Ahora el video solo se ve dentro del rombo de la boca,
+    // que crece con el isotipo hasta pasar la cámara; recién cuando la boca contiene toda la pantalla el isotipo se apaga.
     const win = $('[data-win]'), iso = $('.hero__iso'), svg = $('svg', iso);
-    const r = svg.getBoundingClientRect();
-    const W = innerWidth, H = hero.offsetHeight;
-    const P = (x, y) => [r.left + (x + 20) / 660 * r.width, r.top + (y + 20) / 940 * r.height];
-    const T = P(287, 76), R = P(512, 217), B = P(271, 409), L = P(87, 192);   // boca: rombo interior del isotipo
-    const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-    const rh = [T, mid(T, R), R, mid(R, B), B, mid(B, L), L, mid(L, T)];
-    const c = mid(T, B), o = 24;
-    const full = [[W / 2, -o], [W + o, -o], [W + o, H / 2], [W + o, H + o], [W / 2, H + o], [-o, H + o], [-o, H / 2], [-o, -o]];
-    const st = { k: 0, e: 0 };
+    G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0, scale: 1, opacity: 1 });
+    const hr = hero.getBoundingClientRect(), r = svg.getBoundingClientRect(), ir = iso.getBoundingClientRect();
+    const W = hero.offsetWidth, H = hero.offsetHeight;
+    const P = q => [r.left - hr.left + (q[0] + 20) / 660 * r.width, r.top - hr.top + (q[1] + 20) / 940 * r.height];
+    // boca: rombo interior del isotipo, en el borde INTERNO de su trazo (eje − 13 u. de las 26 del trazo; 1,5 u. queda bajo el trazo)
+    const mouth = inset([[287, 76], [512, 217], [271, 409], [87, 192]], 11.5).map(P);
+    const c = [mouth.reduce((t, q) => t + q[0], 0) / 4, mouth.reduce((t, q) => t + q[1], 0) / 4];   // centro de la boca
+    // escala a la que la boca (escalada desde c) contiene toda la pantalla
+    let cover = 1;
+    mouth.forEach((a, i) => {
+      const b = mouth[(i + 1) % 4]; let nx = b[1] - a[1], ny = a[0] - b[0]; const l = Math.hypot(nx, ny); nx /= l; ny /= l;
+      let m = nx * (c[0] - a[0]) + ny * (c[1] - a[1]); if (m < 0) { nx = -nx; ny = -ny; m = -m; }
+      [[-2, -2], [W + 2, -2], [W + 2, H + 2], [-2, H + 2]].forEach(X => {
+        const dn = nx * (X[0] - c[0]) + ny * (X[1] - c[1]); if (dn < 0) cover = Math.max(cover, -dn / m);
+      });
+    });
+    const S1 = cover * 1.25;   // escala final del isotipo: ya pasó la cámara
+    // el isotipo escala desde el centro de su boca (su origen en px dentro de su propia caja)
+    G.set(iso, { transformOrigin: (c[0] - (ir.left - hr.left)).toFixed(2) + 'px ' + (c[1] - (ir.top - hr.top)).toFixed(2) + 'px' });
+    const st = { k: 0, p: 0 };
     const draw = () => {
-      win.style.clipPath = 'polygon(' + rh.map((q, i) => {
-        const x0 = c[0] + (q[0] - c[0]) * st.k, y0 = c[1] + (q[1] - c[1]) * st.k;
-        return (x0 + (full[i][0] - x0) * st.e).toFixed(1) + 'px ' + (y0 + (full[i][1] - y0) * st.e).toFixed(1) + 'px';
-      }).join(',') + ')';
+      const s = Math.exp(st.p * Math.log(S1)), f = st.k * s;   // s: escala del isotipo (zoom a ritmo constante); f: de la boca
+      win.style.clipPath = 'polygon(' + mouth.map(q => (c[0] + (q[0] - c[0]) * f).toFixed(1) + 'px ' + (c[1] + (q[1] - c[1]) * f).toFixed(1) + 'px').join(',') + ')';
+      // el isotipo sigue opaco mientras la boca no contiene la pantalla; después (sus trazos ya fuera de cuadro) se apaga
+      G.set(iso, { scale: s, opacity: s <= cover ? 1 : Math.max(0, 1 - (s - cover) / (S1 - cover)) });
     };
     draw();
     const ltrs = $$('.hero__svg .ltr');
@@ -276,25 +305,23 @@
       if (window.__almudAnticipar) window.__almudAnticipar();
     };
     // v4 fase 13: el almud ya lo dibujó la carga (de abajo hacia arriba, según los bytes); aquí parte en la BOCA.
-    // El video está quieto en el cuadro 0 (el letrero) y da play desde 0 justo cuando la boca empieza a abrirse.
     const tl = G.timeline({ paused: true, onComplete: done });
-    G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0 });
     G.set($$('.iso__g path', iso), { strokeDashoffset: 0 });
-    // v4 fase 14: el video queda QUIETO en el cuadro 0 (el letrero) mientras la boca se abre (rombo en 0,65 s) y se expande
-    // a pantalla completa (0,95 s); recién al terminar la expansión da play desde 0 (o en su primer canplay, si no está listo)
-    const H0 = window.__almudHero, EXP = .6 + .95;
+    // v4 fase 15: play desde 0 (cuadro 0 = el letrero) en el mismo instante en que la boca empieza a abrirse; antes de eso el
+    // video está OCULTO (ventana de área cero y, durante la carga, visibility:hidden), no solo pausado.
+    // La boca se abre (0,65 s) y luego el isotipo y su boca crecen juntos hasta pasar la cámara (0,6 → 1,55 s).
+    const H0 = window.__almudHero, EXP = .6 + .95, D = .45;   // D: las letras y el botón entran un poco después (misma animación)
     tl.set(inEls, { opacity: 1 }, 0)
-      .call(() => { root.classList.remove('carga'); if (H0) { H0.tAbre = performance.now(); H0.ctAbre = H0.v.currentTime; } }, null, 0)
-      .to(st, { k: 1, duration: .65, ease: 'power2.inOut', onUpdate: draw, onComplete: () => { if (H0) { H0.tRombo = performance.now(); H0.ctRombo = H0.v.currentTime; } } }, 0)   // la boca se abre: el letrero, quieto
-      .to(st, { e: 1, duration: .95, ease: 'expo.inOut', onUpdate: draw }, .6)              // y se expande a toda la pantalla
-      .to(iso, { scale: 5.5, opacity: 0, duration: .95, ease: 'expo.in', transformOrigin: '50% 28%' }, .6)
-      .call(() => { if (H0) { H0.tExp = performance.now(); H0.ctExp = H0.v.currentTime; H0.play(); } }, null, EXP)   // fin de la expansión: play desde 0
-      .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.08)
-      .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.28)
-      .fromTo(btn, { scale: .35, opacity: 0, rotation: -7 }, { scale: 1, opacity: 1, rotation: 0, duration: .6, ease: 'elastic.out(1.1,.45)' }, 1.83)
-      .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .5 }, 1.53);
-    if (gloss) tl.from(gloss, { opacity: 0, duration: .4 }, 1.83);
-    if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.53);
+      .call(() => { root.classList.remove('carga'); if (H0) { H0.tAbre = performance.now(); H0.ctAbre = H0.v.currentTime; H0.play(); } }, null, 0)
+      .to(st, { k: 1, duration: .65, ease: 'power2.inOut', onUpdate: draw, onComplete: () => { if (H0) { H0.tRombo = performance.now(); H0.ctRombo = H0.v.currentTime; } } }, 0)   // la boca se abre
+      .to(st, { p: 1, duration: .95, ease: 'power2.in', onUpdate: draw }, .6)              // isotipo y boca crecen juntos hasta pasar la cámara
+      .call(() => { if (H0) { H0.tExp = performance.now(); H0.ctExp = H0.v.currentTime; } }, null, EXP)
+      .from(ltrs, { y: 380, opacity: 0, rotation: i => (i % 2 ? 1 : -1) * (8 + i * 1.5), duration: .7, ease: 'back.out(2.4)', stagger: .055 }, 1.08 + D)
+      .from(chars, { yPercent: 115, opacity: 0, rotation: i => (i % 3 - 1) * 14, duration: .42, ease: 'back.out(3)', stagger: .011 }, 1.28 + D)
+      .fromTo(btn, { scale: .35, opacity: 0, rotation: -7 }, { scale: 1, opacity: 1, rotation: 0, duration: .6, ease: 'elastic.out(1.1,.45)' }, 1.83 + D)
+      .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: .5 }, 1.53 + D);
+    if (gloss) tl.from(gloss, { opacity: 0, duration: .4 }, 1.83 + D);
+    if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.53 + D);
     function skip() { if (tl.progress() < 1) tl.progress(1); }
     window.__almudIntroTL = tl;
     window.__almudOpen = () => {
