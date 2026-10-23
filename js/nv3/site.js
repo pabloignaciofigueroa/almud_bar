@@ -222,15 +222,17 @@
     const chars = splitChars($('.hero__claim-t'));
     const gloss = $('.hero__claim .gloss');
     const btn = $('.hero__btns .btn');
+    const logoIso = $('.hero__svg g g');   // el almudcito del logo: aterriza después de las letras
     const inEls = $$('.hero__in > *');
     const done = () => {
       root.classList.remove('intro');
-      G.set([...inEls, iso, '.nav', win, ...ltrs, ...chars, btn], { clearProps: 'all' });
+      G.set([...inEls, iso, '.nav', win, ...ltrs, ...chars, btn, logoIso].filter(Boolean), { clearProps: 'transform,opacity' });
       ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(ev => removeEventListener(ev, skip));
       removeEventListener('scroll', skip);
     };
     const tl = G.timeline({ onComplete: done });
     if (gloss) tl.from(gloss, { opacity: 0, duration: .4 }, 1.9);
+    if (logoIso) tl.from(logoIso, { scale: 0, rotation: -28, opacity: 0, transformOrigin: '50% 50%', duration: .7, ease: 'back.out(2.6)' }, 1.55);
     G.set(iso, { xPercent: -50, yPercent: -50, x: 0, y: 0, transformOrigin: ox + ' ' + oy });
     tl.set(inEls, { opacity: 1 }, 0)
       .fromTo(win, { scale: 1.14 }, { scale: 1, duration: 1.7, ease: 'expo.out' }, .3)

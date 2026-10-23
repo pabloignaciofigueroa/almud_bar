@@ -603,3 +603,5 @@ html:not(.js) .m picture{display:none}
   .rul .rin{flex-basis:clamp(300px,27vw,460px)}
   .rul .rin:nth-child(even){margin-top:7vh}
 }
+/* regla de la v4: ninguna letra bajo 16 px (rótulos que venían en 15 px) */
+.kick,.nav__a,.nav__carta,.ev__t,.cal .ev__t,.r__f,.own__k{font-size:16px}
