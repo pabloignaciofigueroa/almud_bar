@@ -41,3 +41,4 @@
 - Fase 20 ✅ v3 es la página principal (commit 61718ec), Cloudflare verde, verificada en línea: rutas, 301 /v3/→/, og, 5/5 videos en play
 - Fase 3 ✅ /nueva_v2/: 27→52 fotos, 12→17 pantallas en celular; El lugar con local lleno antes de la ruleta (commit d048ae7, congelada)
 - Fase 4 ✅ /nueva_v3/: intro en negro con boca del almud, letras con rebote; colorssss elástico; recortes en rombo; ruleta arrastrable (commit ad16efb, congelada)
+- Fase 5 ✅ /nueva_v4/: desfases, carrusel de tragos con letras, platos que giran (commit 3e13cd0, congelada)
