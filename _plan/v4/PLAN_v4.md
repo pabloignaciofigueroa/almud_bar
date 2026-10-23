@@ -150,5 +150,10 @@
   - verificación en línea de links, videos y miniatura de WhatsApp;
   - la bitácora queda lista para el dossier.
 - **Te muestro:** el link final, capturas y la bitácora.
+- **Estado (2026-10-23, aprobada por el cliente, preparada sin commit):** la v11 pasa a ser la portada.
+  - / y /carta/ se generan con tools/boceto_raiz.py y tools/carta_raiz.py (copias de boceto_nv11/carta_nv11, css/nv11 y js/nv11), sin noindex, canonical y og:url en https://almudbar.pages.dev/ y /carta/, og:image /assets/v3/og.jpg y og-carta.jpg (existen).
+  - La v3 que era portada queda archivada en /v3/ y /v3/carta/ (noindex, assets v3 intactos); salen los redirects /v3 → /.
+  - /nueva…/nueva_v11/ siguen publicadas, congeladas y con noindex. sitemap con lastmod 2026-10-23.
+  - Verificación local y capturas en _plan/v4/fase10/ (avance.log, qa-pub.json, raiz-390/1440, carta-390). Falta: commit, push y la verificación en línea (links, videos, miniatura de WhatsApp).
 
 **Punto de retorno (fase 2 cerrada):** commit 94c2eb1 · etiqueta local v4-fase2 (GitHub no permite subir etiquetas desde aquí). /nueva/ queda congelada; desde la fase 3 se trabaja en /nueva_v2/ (tools/boceto_nv2.py, css/nv2, js/nv2).

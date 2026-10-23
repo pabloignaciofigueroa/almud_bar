@@ -47,3 +47,5 @@
 - 2026-10-23 Dossier de diseño v6: primer borrador (20 láminas, dossier/build_dossier.py)
 - Fase 7 ✅ /nueva_v7/: Eventos con slider de fiestas, título que cae; portada a pantalla completa (commit 6bda065, congelada)
 - Fase 8 ✅ /nueva_v8/: Equipo que gira, reseñas en cinta, cierre único con 18:00 en vivo, mapa activo, logo a la derecha (commit fae053b, congelada)
+- Fase 9 ✅ /nueva_v9/ (portada a todo el ancho, Peter WOW, reseñas en tarjetas, carta en paleta nueva), 10 ✅ /nueva_v10/ (sin cuentas personales), 11 ✅ /nueva_v11/ (Peter a la izquierda, Equipo que siempre vuelve, reseñas ágiles); congeladas
+- 2026-10-23 v4 fase 10 · publicación preparada (sin commit): la v11 es / y /carta/ (tools/boceto_raiz.py, tools/carta_raiz.py); la v3 archivada en /v3/ y /v3/carta/ con noindex; publish.py y sitemap al día. Ver _plan/v4/fase10/avance.log
