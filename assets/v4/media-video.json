@@ -1318,6 +1318,168 @@
    },
    "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABgAPvlkqk6qpaQiN/VYAVAfCWoAnTLevOgEuIXJkuLwXo9hYThNJoAA3L8Uq27bc0rOX39WHzibtx/t/EG/C6LJ/z7V9WNkEEuVwsz1MB34dTv1W0pGd5AJ4jGuTyOJvYY/16MvyO00mThqqxGbiRcujZ2DWJHmlyIbijRDQsjkDZtAAA==",
    "color": "#455874"
+  },
+  "portada-c-h": {
+   "ref": "V031+V007",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "El letrero ALMUD BAR, la puerta, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas; luego la terraza techada repleta de gente al atardecer.",
+    "en": "The ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the clothespin lamps; then the covered terrace packed with people at sunset."
+   },
+   "credit": {
+    "post": "IG-061",
+    "date": "2025-01-27",
+    "url": "https://www.instagram.com/p/DFWLrRxyvVB/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Video: @estudiouno.prod para @almud_bar"
+   },
+   "variant": "horizontal",
+   "note": "Fase 10 (orden del cliente: un solo video de portada): V031 0,4–10,45 s tal cual (1278×720 → 1280×720) + fundido 0,8 s + V007 21,26–30,1 s recortado a 16:9 sobre la gente (720×404 desde y=580, ampliado: pixela) + fundido de loop 0,8 s.",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 1280,
+   "height": 720,
+   "ratio": "16:9",
+   "segments": [
+    [
+     0.4,
+     10.45
+    ],
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 518,
+   "fps": 30.0,
+   "duration": 17.27,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 3000,
+   "budget_mp4_kb": 3200,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 18.89,
+   "seam": {
+    "last_vs_first": 6.24,
+    "typical_step": 12.02
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/portada-c-h-1280.webm",
+     "bytes": 2873987,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 37
+    },
+    "mp4": {
+     "path": "assets/v4/video/portada-c-h-1280.mp4",
+     "bytes": 2966170,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 27
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/portada-c-h-poster.avif",
+     "bytes": 9857
+    },
+    "webp": {
+     "path": "assets/v4/video/portada-c-h-poster.webp",
+     "bytes": 17188
+    },
+    "jpg": {
+     "path": "assets/v4/video/portada-c-h-poster.jpg",
+     "bytes": 40836
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoYAA4APwF6sFCrKKSisAgBYCAJYwAAXBuVUMw+BSeAAP7yo9i1tOzvym+R9vXqDurzDzNz3ab79uhS/hQAAA==",
+   "color": "#080508"
+  },
+  "portada-c-v": {
+   "ref": "V031+V007",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "El letrero ALMUD BAR, la puerta, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas; luego la terraza techada repleta de gente al atardecer.",
+    "en": "The ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the clothespin lamps; then the covered terrace packed with people at sunset."
+   },
+   "credit": {
+    "post": "IG-061",
+    "date": "2025-01-27",
+    "url": "https://www.instagram.com/p/DFWLrRxyvVB/",
+    "account": "@almud_bar",
+    "photo": "@estudiouno.prod",
+    "text": "Video: @estudiouno.prod para @almud_bar"
+   },
+   "variant": "vertical",
+   "note": "Fase 10: el mismo montaje en vertical: V031 0,4–10,45 s recortado a 9:16 al centro (404×720 desde x=437, ampliado a 720×1280: pixela) + fundido 0,8 s + V007 21,26–30,1 s tal cual + fundido de loop 0,8 s.",
+   "source_size": [
+    1278,
+    720
+   ],
+   "width": 720,
+   "height": 1280,
+   "ratio": "9:16",
+   "segments": [
+    [
+     0.4,
+     10.45
+    ],
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 518,
+   "fps": 30.0,
+   "duration": 17.27,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1400,
+   "budget_mp4_kb": 1500,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 18.89,
+   "seam": {
+    "last_vs_first": 6.25,
+    "typical_step": 9.77
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/portada-c-v-720.webm",
+     "bytes": 1349417,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 47
+    },
+    "mp4": {
+     "path": "assets/v4/video/portada-c-v-720.mp4",
+     "bytes": 1465486,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 34
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/portada-c-v-poster.avif",
+     "bytes": 6169
+    },
+    "webp": {
+     "path": "assets/v4/video/portada-c-v-poster.webp",
+     "bytes": 12798
+    },
+    "jpg": {
+     "path": "assets/v4/video/portada-c-v-poster.jpg",
+     "bytes": 30864
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoNABgAPwFqrE8rJiQiMAgBYCAJYwAAW+x7Hy0PNXLYAP7vQvJ331coN7N33KJGWgzSbeu85solHwRBNtAAAA==",
+   "color": "#080509"
   }
  }
 }
