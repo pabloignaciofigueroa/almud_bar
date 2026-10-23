@@ -150,3 +150,5 @@
   - verificación en línea de links, videos y miniatura de WhatsApp;
   - la bitácora queda lista para el dossier.
 - **Te muestro:** el link final, capturas y la bitácora.
+
+**Punto de retorno (fase 2 cerrada):** commit 94c2eb1 · etiqueta local v4-fase2 (GitHub no permite subir etiquetas desde aquí). /nueva/ queda congelada; desde la fase 3 se trabaja en /nueva_v2/ (tools/boceto_nv2.py, css/nv2, js/nv2).
