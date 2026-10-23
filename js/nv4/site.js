@@ -308,7 +308,7 @@
       .set(m, { clipPath: 'none' });
   });
   $$('[data-par]').forEach(el => {   // parallax solo de fotos (en celular, a la mitad: nunca pisa a la vecina)
-    const s = parseFloat(el.dataset.par) * (innerWidth < 768 ? .5 : 1);
+    const s = parseFloat(el.dataset.par) * (innerWidth < 768 ? .3 : 1);
     G.fromTo(el, { y: () => -s * innerHeight * .5 }, { y: () => s * innerHeight * .5, ease: 'none',
       scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: .6, invalidateOnRefresh: true } });
   });
@@ -352,7 +352,7 @@
     const io3 = new IntersectionObserver(es => es.forEach(e => {
       if (!e.isIntersecting) return;
       io3.unobserve(e.target); go.get(e.target)();
-    }), { threshold: .3 });
+    }), { threshold: .12 });
     cards.forEach(li => io3.observe(li));
   }
 
