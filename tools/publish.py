@@ -17,11 +17,11 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html', 'nueva/index.html', 'nueva/carta/index.html', 'nueva_v2/index.html', 'nueva_v3/index.html', 'nueva_v4/index.html', 'nueva_v5/index.html', 'nueva_v6/index.html', 'assets/og.jpg',  # fase 20: la v3 es la portada (/ y /carta/); /v3/ redirige
+INCLUDE_FILES = ['index.html', 'carta/index.html', 'nueva/index.html', 'nueva/carta/index.html', 'nueva_v2/index.html', 'nueva_v3/index.html', 'nueva_v4/index.html', 'nueva_v5/index.html', 'nueva_v6/index.html', 'nueva_v7/index.html', 'assets/og.jpg',  # fase 20: la v3 es la portada (/ y /carta/); /v3/ redirige
                   # fase 15: la carta en su propia página
                  '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
 # v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
-INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3', 'css/v4', 'js/v4', 'assets/v4', 'css/nv2', 'js/nv2', 'css/nv3', 'js/nv3', 'css/nv4', 'js/nv4', 'css/nv5', 'js/nv5', 'css/nv6', 'js/nv6', 'assets/nv2']
+INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3', 'css/v4', 'js/v4', 'assets/v4', 'css/nv2', 'js/nv2', 'css/nv3', 'js/nv3', 'css/nv4', 'js/nv4', 'css/nv5', 'js/nv5', 'css/nv6', 'js/nv6', 'css/nv7', 'js/nv7', 'assets/nv2']
 
 ALL_DIRS = []
 

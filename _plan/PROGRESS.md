@@ -43,3 +43,4 @@
 - Fase 4 ✅ /nueva_v3/: intro en negro con boca del almud, letras con rebote; colorssss elástico; recortes en rombo; ruleta arrastrable (commit ad16efb, congelada)
 - Fase 5 ✅ /nueva_v4/: desfases, carrusel de tragos con letras, platos que giran (commit 3e13cd0, congelada)
 - Fase 6 ✅ /nueva_v5/: baraja de fotos en Con quién, videos fuera (commit c751445, congelada)
+- Fase 6b/6c ✅ /nueva_v6/: baraja infinita, orden del desorden sin recortes, video de fiesta con contexto (commit 7762713, congelada)
