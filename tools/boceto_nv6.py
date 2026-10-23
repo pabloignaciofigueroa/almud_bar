@@ -374,7 +374,7 @@ body = f'''
 <section class="eventos claro" id="eventos" aria-labelledby="h-eventos">
   <div class="wrap">
     {title('tirar la casa por la ventana!', 'Going all out!', 'h-eventos')}
-    {vid('eventos-fiesta-12', 'ev__banner ev__banner--v reveal')}
+    {vid('eventos-fiesta', 'ev__banner ev__banner--v reveal')}
     <div class="ev__mas">
       {pic('eventos-cotillon-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-baile-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
