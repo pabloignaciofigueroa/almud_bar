@@ -118,7 +118,7 @@ MAPS = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Ca
 DM = 'https://ig.me/m/almud_bar'
 MAPS_ABRIR = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro'   # v4 fase 8c: link bajo el mapa
 MAPS_EMBED = 'https://www.google.com/maps?q=Almud+Bar,+Serrano+325,+Castro,+Chile&output=embed'
-CARTA = '/nueva/carta/'
+CARTA = '/nueva_v9/carta/'   # v4 fase 9: la home v9 enlaza a su propia carta
 
 # ───────────────────────── secciones ─────────────────────────
 rincones = [

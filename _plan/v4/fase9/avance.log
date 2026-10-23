@@ -4,3 +4,4 @@
 9 video · 2026-10-23 17:34:50 inicio: busco el plano del alcohol vertido en la boca en quien-multitud-1/2/3 y preparo portada-celular-b
 9 video · 2026-10-23 17:35:19 encontrado: quien-multitud-3 (V037 DNB7LK6y4i8) tiene el plano de la botella vertida en la boca de 55,53 a 56,73 s (corte propio del reel), dentro de su tramo 51,95–56,7; quien-multitud-1 y -2 están limpios (hojas cada 0,25 s en _plan/v4/fase9/)
 9 video · 2026-10-23 17:35:32 quien-multitud-3-b: tramos 51,95–55,45 + 45,85–51,85 (se salta 55,53–56,73), fundido 0,9 s; portada-celular-b: mismo tramo con tope 1.130 KB WebM / 1.110 KB MP4
+2026-10-23 17:37:33 9 · paso 1 · carta propia de v9: tools/carta_nv9.py (copia de carta_v4.py) genera /nueva_v9/carta/ con css/nv9 y js/nv9; la home v9 y la carta se enlazan entre sí (19 enlaces /nueva_v9/carta/ y 2 a /nueva_v9/); publish.py la incluye y suma caché larga para /assets/v4/* (M8)
