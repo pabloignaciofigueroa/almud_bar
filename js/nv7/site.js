@@ -272,7 +272,7 @@
   if (root.classList.contains('intro') && scrollY < 10 && performance.now() < 1400) { window.__almudIntro = true; intro(); } else root.classList.remove('intro');
 
   // Revelados de titulares
-  $$('.ttl, .pie__f').filter(t => !t.closest('.quien')).forEach(t => {
+  $$('.ttl, .pie__f').filter(t => !t.closest('.quien') && !t.closest('.eventos')).forEach(t => {
     G.from(words(t), { yPercent: 110, duration: 1.05, ease: EXPO, stagger: .045,
       scrollTrigger: { trigger: t, start: 'top 88%', once: true },
       onComplete: () => { $$('.w', t).forEach(w => { w.style.overflow = 'visible'; }); if (t._in) t._in(); } });
@@ -506,6 +506,96 @@
       if (dealt) return; dealt = true;
       Promise.race([preparar(), new Promise(ok => setTimeout(ok, 700))]).then(deal);   // espera las fotos listas, como máximo 0,7 s
     } });
+  }
+
+  /* ───────── v4 fase 7 · Eventos (lila) ───────── */
+  // «tirar la casa por la ventana!»: las palabras caen desde arriba, como lanzadas por una ventana, y rebotan al llegar
+  const et = $('.eventos .ttl');
+  if (et) {
+    const ws = $$('.w', et);
+    ws.forEach(w => { w.style.overflow = 'visible'; });
+    G.from(ws, { y: () => -Math.min(innerHeight * .65, 560), rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
+      stagger: .11, clearProps: 'transform,opacity', scrollTrigger: { trigger: et, start: 'top 82%', once: true } });
+  }
+
+  // Slider de fiestas: a pantalla completa, avanza solo cada 5 s (con una barra de progreso en su indicador), se pausa mientras
+  // se arrastra o mientras no está en pantalla, y se mueve con el dedo, el mouse, las flechas o los indicadores.
+  // touch-action: pan-y → un deslizamiento vertical mueve la página. Cada fiesta entra con su nombre letra por letra y sus fotos repartiéndose.
+  const fsEl = $('[data-fiestas]');
+  if (fsEl && window.PointerEvent) {
+    const tr = $('[data-track]', fsEl), slides = [...tr.children], n = slides.length, dots = $$('.fs__dot', fsEl), bars = $$('.fs__bar', fsEl);
+    fsEl.classList.add('is-on'); $('.fs__dots', fsEl).hidden = false;
+    fsEl.tabIndex = 0; fsEl.setAttribute('role', 'region');
+    fsEl.setAttribute('aria-roledescription', 'carrusel');
+    slides.forEach(sl => sl.setAttribute('role', 'group'));
+    const names = slides.map(sl => { const h = $('.fs__n', sl); return h ? splitChars(h) : []; });
+    let i = 0, W = fsEl.clientWidth, drag = null, onScreen = false, prog = null, entered = new Set();
+    const listo = () => { $$('img[data-src]', fsEl).forEach(loadImg); $$('video', fsEl).forEach(v => window.__almudAttach && window.__almudAttach(v)); };
+    function enter(k) {
+      const sl = slides[k], fotos = $$('.fs__f', sl);
+      G.fromTo(names[k], { yPercent: 105, opacity: 0, rotation: j => (j % 3 - 1) * 12 }, { yPercent: 0, opacity: 1, rotation: 0, duration: .55, ease: 'back.out(2.4)', stagger: .035, overwrite: true });
+      G.fromTo(fotos, { y: () => innerHeight * .35, x: j => (j % 2 ? 60 : -60), rotation: j => (j % 2 ? 24 : -24), scale: .8, opacity: 0 },
+        { y: 0, x: 0, rotation: (j, f) => parseFloat(getComputedStyle(f).getPropertyValue('--rot')) || 0, scale: 1, opacity: 1, duration: .9, ease: 'back.out(1.5)', stagger: .12, delay: .15, overwrite: true });   // cada foto queda con su giro leve (--rot)
+      entered.add(k);
+    }
+    function play() {
+      if (prog) prog.kill();
+      bars.forEach((b, j) => b.style.setProperty('--p', j === i ? 0 : 0));
+      const st = { p: 0 };
+      prog = G.to(st, { p: 1, duration: 5, ease: 'none', paused: !onScreen || !!drag, onUpdate: () => bars[i].style.setProperty('--p', st.p.toFixed(3)), onComplete: () => go(i + 1) });
+    }
+    function go(k, dur = .95) {
+      i = (k + n) % n;
+      G.to(tr, { x: -i * W, duration: dur, ease: 'expo.out', overwrite: true });
+      dots.forEach((d, j) => d.setAttribute('aria-current', j === i ? 'true' : 'false'));
+      slides.forEach((sl, j) => sl.setAttribute('aria-hidden', j === i ? 'false' : 'true'));
+      enter(i); play();
+    }
+    dots.forEach((d, j) => d.addEventListener('click', () => go(j)));
+    fsEl.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(i + 1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1); }
+    });
+    fsEl.addEventListener('pointerdown', e => {
+      if (e.button > 0 || e.target.closest('.fs__dot')) return;
+      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, lx: e.clientX, t: e.timeStamp, v: 0, on: false, s0: -i * W };
+    });
+    fsEl.addEventListener('pointermove', e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.on) {
+        if (Math.hypot(dx, dy) < 6) return;
+        if (e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // vertical: es scroll
+        drag.on = true; try { fsEl.setPointerCapture(e.pointerId); } catch (_) {}
+        fsEl.classList.add('is-drag'); if (prog) prog.pause(); G.killTweensOf(tr);
+      }
+      const dt = Math.max(1, e.timeStamp - drag.t); drag.v = (e.clientX - drag.lx) / dt * .7 + drag.v * .3; drag.lx = e.clientX; drag.t = e.timeStamp;
+      let x = drag.s0 + dx; const min = -(n - 1) * W;
+      if (x > 0) x *= .35; else if (x < min) x = min + (x - min) * .35;
+      G.set(tr, { x });
+    });
+    const soltar = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag; drag = null; fsEl.classList.remove('is-drag');
+      if (!d.on) return;
+      const dx = e.clientX - d.x0;
+      if (e.type === 'pointerup' && (Math.abs(dx) > W * .18 || Math.abs(d.v) > .4)) go(i - Math.sign(Math.abs(d.v) > .4 ? d.v : dx));
+      else go(i);
+    };
+    fsEl.addEventListener('pointerup', soltar); fsEl.addEventListener('pointercancel', soltar);
+    fsEl.addEventListener('lostpointercapture', e => { if (e.target === fsEl) soltar(e); });
+    fsEl.addEventListener('dragstart', e => e.preventDefault());
+    addEventListener('resize', () => { W = fsEl.clientWidth; G.set(tr, { x: -i * W }); });
+    document.addEventListener('visibilitychange', () => { if (!prog) return; if (document.hidden) prog.pause(); else if (onScreen && !drag) prog.resume(); });
+    // fotos y video de las fichas: se piden al acercarse (nunca en el primer pantallazo); el video de Jalogüín queda en play desde ahí
+    ST.create({ trigger: fsEl, start: 'top 250%', once: true, onEnter: listo });
+    names.forEach(ch => G.set(ch, { yPercent: 105, opacity: 0 }));
+    G.set($$('.fs__f', fsEl), { opacity: 0 });
+    ST.create({ trigger: fsEl, start: 'top 75%', end: 'bottom 25%',
+      onToggle: self => {
+        onScreen = self.isActive;
+        if (!prog) { if (onScreen) go(0, 0); return; }
+        if (onScreen && !drag && !document.hidden) prog.resume(); else prog.pause();
+      } });
   }
 
   const mm = G.matchMedia();

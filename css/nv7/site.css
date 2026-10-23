@@ -61,7 +61,7 @@ html[lang="en"] .gloss--i{display:inline}
 .nav__a:hover{color:var(--muro-rosa)}
 
 /* ═════ 1 · PORTADA ═════ */
-.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--noche);isolation:isolate}
+.hero{position:relative;height:calc(100svh - var(--nav));min-height:540px;overflow:hidden;background:var(--noche);isolation:isolate}
 .hero__win{position:absolute;inset:0}
 .hero .m{position:absolute;inset:0;aspect-ratio:auto;border-radius:0}
 .hero__v--d{display:none}
@@ -853,29 +853,27 @@ html:not(.bj) .baraja__p>.carta:nth-child(12){grid-column:1;grid-row:131/span 16
 .fs__dots[hidden]{display:none}
 
 /* Con JS y movimiento: slider a pantalla completa (celular ~100svh), se arrastra y avanza solo */
-.fs.is-on{position:relative;margin-left:calc(-1 * var(--gut));margin-right:calc(-1 * var(--gut));height:100svh;min-height:560px;overflow:hidden;touch-action:pan-y;container-type:inline-size;cursor:grab;-webkit-user-select:none;user-select:none;outline-offset:-4px}
+.fs.is-on{position:relative;margin-left:calc(-1 * var(--gut));margin-right:calc(-1 * var(--gut));height:calc(100svh - var(--nav));min-height:540px;overflow:hidden;touch-action:pan-y;container-type:inline-size;cursor:grab;-webkit-user-select:none;user-select:none;outline-offset:-4px}
 .fs.is-on.is-drag{cursor:grabbing}
 .fs.is-on .fs__tr{display:flex;gap:0;height:100%;will-change:transform}
-.fs.is-on .fs__s{flex:0 0 100%;height:100%;display:flex;flex-direction:column;padding:calc(var(--nav) + 12px) var(--gut) 76px}
-.fs.is-on .fs__n{font-size:min(calc((100cqw - 2 * var(--gut)) / (var(--len) * .5)),190px,24svh)}
+.fs.is-on .fs__s{flex:0 0 100%;height:100%;display:flex;flex-direction:column;padding:20px var(--gut) 68px}   /* alto ~100svh: la pantalla menos la barra, con los indicadores siempre a la vista */
+.fs.is-on .fs__n{font-size:min(calc((100cqw - 2 * var(--gut)) / (var(--len) * .42)),200px,24svh)}
 .fs.is-on .fs__fotos{position:relative;display:block;flex:1;margin-top:18px;container-type:size}
 .fs.is-on .fs__f{position:absolute;margin:0;width:var(--w);flex:none}
 .fs.is-on .fs__f .m{box-shadow:0 18px 36px -18px rgba(14,12,11,.55)}
-.fs.is-on .fs__s--3 .fs__f--1{--w:min(50cqw,62cqh * .8);left:0;top:0;rotate:-5deg}
-.fs.is-on .fs__s--3 .fs__f--2{--w:min(46cqw,58cqh * .8);right:0;top:12cqh;rotate:4deg}
-.fs.is-on .fs__s--3 .fs__f--3{--w:min(44cqw,52cqh * .8);left:calc(50cqw - var(--w) / 2 + 4cqw);bottom:0;rotate:-2deg}
-.fs.is-on .fs__s--2 .fs__f--1{--w:min(56cqw,72cqh * .8);left:0;top:0;rotate:-4deg}
-.fs.is-on .fs__s--2 .fs__f--2{--w:min(50cqw,64cqh * .8);right:0;bottom:0;rotate:5deg}
-.fs.is-on .fs__s--1 .fs__f--1{--w:min(72cqw,94cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625);rotate:-3deg}
+.fs.is-on .fs__s--3 .fs__f--1{--w:min(58cqw,62cqh * .8);left:0;top:0;--rot:-5deg}
+.fs.is-on .fs__s--3 .fs__f--2{--w:min(52cqw,56cqh * .8);right:0;top:16cqh;--rot:4deg}
+.fs.is-on .fs__s--3 .fs__f--3{--w:min(50cqw,50cqh * .8);left:calc(50cqw - var(--w) / 2 - 6cqw);bottom:0;--rot:-2deg}
+.fs.is-on .fs__s--2 .fs__f--1{--w:min(64cqw,70cqh * .8);left:0;top:0;--rot:-4deg}
+.fs.is-on .fs__s--2 .fs__f--2{--w:min(58cqw,62cqh * .8);right:0;bottom:0;--rot:5deg}
+.fs.is-on .fs__s--1 .fs__f--1{--w:min(82cqw,94cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625);--rot:-3deg}
 .fs.is-on img,.fs.is-on video{-webkit-user-drag:none;pointer-events:none}
 .fs__dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:4px;z-index:2}
 .fs__dot{display:flex;align-items:center;width:56px;height:44px;padding:0 6px;border:0;background:none;cursor:pointer}
-.fs__dot::before{content:"";position:absolute}
 .fs__bar{position:relative;display:block;width:100%;height:4px;border-radius:2px;background:rgba(14,12,11,.25);overflow:hidden}
 .fs__bar::after{content:"";position:absolute;inset:0;background:#0e0c0b;transform-origin:0 50%;transform:scaleX(var(--p,0))}
-.fs__dot[aria-current="true"] .fs__bar::after{transform:scaleX(var(--p,1))}
 @media (min-width:1024px){
   .fs.is-on{margin:48px 0 0;height:auto;min-height:min(84vh,720px)}
   .fs.is-on .fs__s{padding:28px 28px 72px}
-  .fs.is-on .fs__n{font-size:min(calc(100cqw / (var(--len) * .5)),170px,20vh)}
+  .fs.is-on .fs__n{font-size:min(calc((100cqw - 56px) / (var(--len) * .42)),190px,22vh)}
 }
