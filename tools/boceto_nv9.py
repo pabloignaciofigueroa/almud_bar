@@ -493,7 +493,7 @@ body = f'''
   <div class="donde__t">
     <div class="donde__d">
       <div class="donde__info">
-        <p class="donde__sub"><span class="donde__sub-t">Le esperamos desde las 18:00 hrs</span></p>{g("Doors open at 6 pm — see you there!")}
+        <p class="donde__sub"><span class="donde__sub-t">Le esperamos desde las 18:00 hrs</span></p>{g("Doors open at 6 pm — see you there!")}
         <dl class="datos">
           <div><dt class="sr-only" data-en="Open">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
           <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Across from the Castro Cultural Center">Al frente del Centro Cultural de Castro</dd></div>

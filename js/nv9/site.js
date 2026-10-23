@@ -48,7 +48,7 @@
   } else lazyImgs.forEach(loadImg);
 
   /* ───────── Idioma (ES por defecto; EN solo si el usuario lo toca) ───────── */
-  const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label']];
+  const ATTR = [['data-alt-en', 'alt'], ['data-aria-en', 'aria-label'], ['data-title-en', 'title']];   // v4 fase 9 (M2): el title del iframe del mapa también
   function setLang(lang, save) {
     root.lang = lang;
     $$('[data-en]').forEach(el => {
@@ -69,7 +69,13 @@
 
   /* ───────── Nav: aparece al dejar la portada ───────── */
   const hero = $('.hero');
-  const navState = () => root.classList.toggle('is-past', scrollY > hero.offsetHeight - 170);
+  const navLogo = $('.nav__logo');
+  const navState = () => {
+    const past = scrollY > hero.offsetHeight - 170;
+    root.classList.toggle('is-past', past);
+    // v4 fase 9 (I2): mientras el logo de la barra es invisible (en la portada) no recibe foco
+    if (navLogo) { navLogo.tabIndex = past ? 0 : -1; navLogo.setAttribute('aria-hidden', past ? 'false' : 'true'); }
+  };
   addEventListener('scroll', navState, { passive: true }); navState();
 
   /* ───────── La ruleta de rincones (v4 fase 4) ─────────
@@ -178,16 +184,6 @@
   }
   $$('[data-ruleta]').forEach(ruleta);
 
-  /* ───────── Mapa del cierre (v4 fase 8c): sin iframe al cargar (no pesa, no toma el scroll); al tocarlo se inserta el de Google Maps ───────── */
-  const mapa = $('[data-mapa]');
-  if (mapa) $('.mapa__ph', mapa).addEventListener('click', () => {
-    const f = d.createElement('iframe');
-    f.src = mapa.dataset.src; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
-    f.title = root.lang === 'en' ? 'Map: Almud Bar, Serrano 325, Castro' : 'Mapa: Almud Bar, Serrano 325, Castro';
-    f.setAttribute('allowfullscreen', '');
-    mapa.replaceChildren(f);   // mismo contenedor y mismo alto: sin salto
-  }, { once: true });
-
   /* ───────── Movimiento ───────── */
   const G = window.gsap, ST = window.ScrollTrigger;
   if (!G || !ST || reduce) { root.classList.remove('intro'); return; }
@@ -295,13 +291,17 @@
     let busy = false, ready = false;
     const hiss = () => {
       if (busy || !ready) return; busy = true;
-      const fs = parseFloat(getComputedStyle(t).fontSize) || 44, dx = fs * .075;
+      // v4 fase 9: se estiran solo a lo ancho (sssssss…), nunca hacia arriba: ninguna letra pisa la línea de «GUSTA».
+      // Se separan de derecha a izquierda y vuelven de izquierda a derecha, sin pasarse: nunca se montan entre ellas.
+      const fs = parseFloat(getComputedStyle(t).fontSize) || 44, dx = fs * .2;
       const tl = G.timeline({ onComplete: () => { busy = false; G.set([...ss, bang].filter(Boolean), { clearProps: 'transform' }); } });
+      G.set(ss, { transformOrigin: '50% 100%' });
       tl
-        .to(ss, { scaleY: 1.6, scaleX: .82, yPercent: -6, x: i => (i + 1) * dx, duration: .2, ease: 'power2.out', stagger: .045 })
-        .to(ss, { scaleY: 1, scaleX: 1, yPercent: 0, x: 0, duration: 1.15, ease: 'elastic.out(1.15,.3)', stagger: .05 }, .3);
-      if (bang) tl.to(bang, { x: (ss.length + 1) * dx, rotation: 14, duration: .22, ease: 'power2.out' }, .1)
-        .to(bang, { x: 0, rotation: 0, duration: 1.1, ease: 'elastic.out(1.2,.3)' }, .45);
+        .to(ss, { scaleX: 1.4, scaleY: .94, x: i => (i + 1) * dx, duration: .24, ease: 'power2.out', stagger: { each: .04, from: 'end' } })
+        .to(ss, { x: 0, duration: .75, ease: 'power3.out', stagger: .06 }, .42)
+        .to(ss, { scaleX: 1, scaleY: 1, duration: .75, ease: 'back.out(2.5)', stagger: .06 }, .42);
+      if (bang) tl.to(bang, { x: (ss.length + 1) * dx, rotation: 14, duration: .24, ease: 'power2.out' }, 0)
+        .to(bang, { x: 0, rotation: 0, duration: .8, ease: 'power3.out' }, .42 + ss.length * .06);
     };
     t._in = () => { ready = true; hiss(); };
     ST.create({ trigger: t, start: 'top 85%', end: 'bottom 10%', onEnterBack: hiss, onEnter: () => { if (ready) hiss(); } });
@@ -384,11 +384,13 @@
     ws.forEach(w => w.classList.add('sabro'));
     let ready = false, on = false;
     const beat = G.timeline({ paused: true, repeat: -1, repeatDelay: 2.4 })
+      // v4 fase 9: late hacia abajo (origen arriba) y sin giro: «SABROSONA!» nunca sube sobre «PERO MÁS»
       .to(ws, { keyframes: [
-        { scale: 1.15, rotation: (i) => (i - 1) * 3, duration: .14, ease: 'power2.out' },
-        { scale: .97, rotation: 0, duration: .13, ease: 'power1.in' },
-        { scale: 1.08, duration: .12, ease: 'power2.out' },
-        { scale: 1, duration: .6, ease: 'elastic.out(1.1,.35)' }], stagger: .08 });
+        { scaleY: 1.08, scaleX: 1.025, duration: .14, ease: 'power2.out' },
+        { scaleY: .98, scaleX: 1, duration: .13, ease: 'power1.in' },
+        { scaleY: 1.045, scaleX: 1.012, duration: .12, ease: 'power2.out' },
+        { scaleY: 1, scaleX: 1, duration: .5, ease: 'power2.out' }], stagger: .08 });
+    G.set(ws, { transformOrigin: '50% 0%' });
     const sync = () => { if (ready && on) beat.play(); else beat.pause(0); };
     ct._in = () => { ready = true; sync(); };
     ST.create({ trigger: ct, start: 'top 85%', end: 'bottom 10%', onToggle: self => { on = self.isActive; sync(); } });
@@ -524,7 +526,9 @@
   if (et) {
     const ws = $$('.w', et);
     ws.forEach(w => { w.style.overflow = 'visible'; });
-    G.from(ws, { y: () => -(et.getBoundingClientRect().top - et.closest('.eventos').getBoundingClientRect().top + et.offsetHeight + 40),   // desde el borde superior de la sección (overflow: clip) rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
+    // y: desde el borde superior de la sección (overflow: clip)
+    G.from(ws, { y: () => -(et.getBoundingClientRect().top - et.closest('.eventos').getBoundingClientRect().top + et.offsetHeight + 40),
+      rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
       stagger: .11, clearProps: 'transform,opacity', scrollTrigger: { trigger: et, start: 'top 82%', once: true } });
   }
 
