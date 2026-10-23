@@ -504,8 +504,8 @@ body = f'''
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
     </div>
-    <div class="mapa" data-mapa data-src="{MAPS_EMBED}">
-      <button class="mapa__ph" type="button"><svg class="mapa__pin" viewBox="0 0 24 32" width="30" height="40" aria-hidden="true"><path d="M12 1C6 1 1.5 5.5 1.5 11.3 1.5 19 12 31 12 31s10.5-12 10.5-19.7C22.5 5.5 18 1 12 1z"/><circle cx="12" cy="11.5" r="4"/></svg><span data-en="Tap to activate the map">Toca para activar el mapa</span></button>
+    <div class="mapa">
+      <iframe src="{MAPS_EMBED}" title="Mapa: Almud Bar, Serrano 325, Castro" data-title-en="Map: Almud Bar, Serrano 325, Castro" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
     <p class="mapa__link"><a href="{MAPS_ABRIR}" target="_blank" rel="noopener" data-en="Open in Google Maps">Abrir en Google Maps</a></p>
   </div>
