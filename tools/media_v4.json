@@ -50,10 +50,10 @@
    "widths": [
     720
    ],
-   "crf_max": 32,
-   "vp9_crf_max": 48,
-   "budget_kb": 1130,
-   "budget_mp4_kb": 1110,
+   "crf_max": 30,
+   "vp9_crf_max": 39,
+   "budget_kb": 1150,
+   "budget_mp4_kb": 1150,
    "id": "portada-celular-b",
    "ref": "V007",
    "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
@@ -67,8 +67,8 @@
    ],
    "xfade": 0.8,
    "ratio": "9:16",
-   "crf_start": 23,
-   "vp9_crf_start": 34,
+   "crf_start": 30,
+   "vp9_crf_start": 39,
    "poster_q": {
     "avif": 40,
     "webp": 60,
@@ -78,7 +78,7 @@
     "es": "La terraza techada repleta de gente bajo el techo de cintas de colores al atardecer, y una mesa de amigas de noche.",
     "en": "The covered terrace packed with people under the colored-ribbon ceiling at sunset, then a table of friends at night."
    },
-   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (tope 1.130/1.110 KB, CRF un poco más alto) para que el primer pantallazo del celular quede holgado bajo 1,5 MB."
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (CRF fijo un paso más alto que el original: MP4 29→30, WebM 38→39) para que el primer pantallazo del celular quede holgado bajo 1,5 MB."
   },
   {
    "id": "portada-escritorio",

@@ -77,6 +77,82 @@
    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoNABgAPwFqrU8rJaQiMAgBYCAJQBOgAaLQmCmP4MwAAPcaaKhGWX5H/vUKMgZcHc8XT68A71UhNPcLb/YozfCWRPYePp0B4u81sDqE1KsGLAAA",
    "color": "#645142"
   },
+  "portada-celular-b": {
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "portada",
+   "alt": {
+    "es": "La terraza techada repleta de gente bajo el techo de cintas de colores al atardecer, y una mesa de amigas de noche.",
+    "en": "The covered terrace packed with people under the colored-ribbon ceiling at sunset, then a table of friends at night."
+   },
+   "credit": {
+    "post": "IG-115",
+    "date": "2024-02-23",
+    "url": "https://www.instagram.com/p/C3tFEcvJ80x/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "variant": "celular",
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (tope 1.130/1.110 KB, CRF un poco más alto) para que el primer pantallazo del celular quede holgado bajo 1,5 MB.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 1280,
+   "ratio": "9:16",
+   "segments": [
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 229,
+   "fps": 28.484,
+   "duration": 8.04,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1130,
+   "budget_mp4_kb": 1110,
+   "within_budget": true,
+   "xfade": 0.8,
+   "tramo_s": 8.84,
+   "seam": {
+    "last_vs_first": 25.3,
+    "typical_step": 4.51
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/portada-celular-b-720.webm",
+     "bytes": 1093046,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 40
+    },
+    "mp4": {
+     "path": "assets/v4/video/portada-celular-b-720.mp4",
+     "bytes": 1024919,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 31
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/portada-celular-b-poster.avif",
+     "bytes": 21212
+    },
+    "webp": {
+     "path": "assets/v4/video/portada-celular-b-poster.webp",
+     "bytes": 41198
+    },
+    "jpg": {
+     "path": "assets/v4/video/portada-celular-b-poster.jpg",
+     "bytes": 78360
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoNABgAPwFqrU8rJaQiMAgBYCAJQBOgAaLQmCmP4MwAAPcaaKhGWX5H/vUKMgZcHc8XT68A71UhNPcLb/YozfCWRPYePp0B4u81sDqE1KsGLAAA",
+   "color": "#645142"
+  },
   "portada-escritorio": {
    "ref": "V031",
    "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
@@ -756,6 +832,85 @@
     },
     "jpg": {
      "path": "assets/v4/video/quien-multitud-3-poster.jpg",
+     "bytes": 51011
+    }
+   },
+   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoTABgAPwFwrFGrJiQiqA1RYCAJagC7AAYJIHzciyja5pmhgAD+wGM+UPkz119d87CVRI9Y5h0YUjGDrEzfS7Q+eJFRw3FB64WvxxWVwSPgZaSqDIHPNZ62lRPQzKJQOkli9cM62rTH+VxbU49gPJ8xEuG+e29ZgAA=",
+   "color": "#3e182f"
+  },
+  "quien-multitud-3-b": {
+   "ref": "V037",
+   "src": "assets/raw/ig/DNB7LK6y4i8_00.mp4",
+   "section": "con-quien",
+   "alt": {
+    "es": "La gente baila apretada en la fiesta de aniversario y la cámara pasa entre las mesas llenas.",
+    "en": "People dance shoulder to shoulder at the anniversary party as the camera moves through the packed tables."
+   },
+   "credit": {
+    "post": "IG-049",
+    "date": "2025-08-06",
+    "url": "https://www.instagram.com/p/DNB7LK6y4i8/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "Fase 9: igual que quien-multitud-3 pero SIN el plano de la botella vertida en la boca de un cliente (V037 55,53–56,73 s, corte propio del reel). Tramos: 51,95–55,45 (mesas y grupos) + 45,85–51,85 (gente bailando apretada; el plano de 45,8 s se suma para mantener 8–10 s). Fundido 0,9 s.",
+   "source_size": [
+    720,
+    1280
+   ],
+   "width": 720,
+   "height": 900,
+   "ratio": "4:5",
+   "segments": [
+    [
+     51.95,
+     55.45
+    ],
+    [
+     45.85,
+     51.85
+    ]
+   ],
+   "loop": "crossfade",
+   "frames": 258,
+   "fps": 30.0,
+   "duration": 8.6,
+   "muted": true,
+   "attrs": "autoplay muted loop playsinline",
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "within_budget": true,
+   "xfade": 0.9,
+   "tramo_s": 9.5,
+   "seam": {
+    "last_vs_first": 11.61,
+    "typical_step": 12.24
+   },
+   "files": {
+    "webm": {
+     "path": "assets/v4/video/quien-multitud-3-b-720.webm",
+     "bytes": 1180627,
+     "type": "video/webm; codecs=\"vp9\"",
+     "crf": 38
+    },
+    "mp4": {
+     "path": "assets/v4/video/quien-multitud-3-b-720.mp4",
+     "bytes": 1385085,
+     "type": "video/mp4; codecs=\"avc1.640028\"",
+     "crf": 28
+    }
+   },
+   "poster": {
+    "avif": {
+     "path": "assets/v4/video/quien-multitud-3-b-poster.avif",
+     "bytes": 16916
+    },
+    "webp": {
+     "path": "assets/v4/video/quien-multitud-3-b-poster.webp",
+     "bytes": 22224
+    },
+    "jpg": {
+     "path": "assets/v4/video/quien-multitud-3-b-poster.jpg",
      "bytes": 51011
     }
    },
