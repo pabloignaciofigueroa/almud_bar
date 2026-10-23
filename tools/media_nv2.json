@@ -1,0 +1,243 @@
+{
+ "_doc": "Manifiesto de fotos nuevas de /nueva_v2/ (v4 fase 3). Lo consume tools/media_nv2.py (reutiliza las funciones de tools/media_v3.py) y escribe assets/nv2/img y assets/nv2/media-img.json. Mismo formato que media_v3.json: crops ratio \"W:H\" u \"orig\", focal [x%,y%], max = ancho tope; nunca se amplía. Las fotos que ya tenían recorte en assets/v3 (copa tallada, old fashioned, ceviche, hamburguesa, Coquette, Cómo te voy a olvidar, Camarón, Con tuti, primavera, dúo, puerta) se reutilizan desde assets/v3/media.json sin recodificar.",
+ "widths": [
+  480,
+  720,
+  960,
+  1280,
+  1440
+ ],
+ "quality": {
+  "avif": 52,
+  "webp": 76
+ },
+ "credits": {
+  "IG-050": "@estudiouno.prod",
+  "IG-075": "@estudiouno.prod",
+  "IG-009": "@isosur.prod",
+  "IG-008": "@isosur.prod"
+ },
+ "images": [
+  {
+   "id": "lugar-techada-llena",
+   "ref": "P196",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_14.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "La terraza techada llena de mesas bajo el techo de cintas de colores y la estufa encendida.",
+    "en": "The covered terrace packed with tables under the rainbow ribbon ceiling, heater glowing."
+   },
+   "note": "IG-050, 11 años, día 1. Multitud: muchas mesas."
+  },
+  {
+   "id": "lugar-salon-lleno",
+   "ref": "P185",
+   "src": "assets/raw/ig/DM_Ih5dyVKH_03.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Mesas llenas bajo las cintas de colores, con molinillos y la estufa entre la gente.",
+    "en": "Full tables under the colorful ribbons, with pinwheels and the heater among the crowd."
+   },
+   "note": "IG-050."
+  },
+  {
+   "id": "lugar-terraza-repleta",
+   "ref": "P359",
+   "src": "assets/raw/ig/Dbok2NyFNdb_02.jpg",
+   "section": "lugar",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "La terraza techada repleta vista desde arriba: banderines, luces y todas las mesas ocupadas.",
+    "en": "The covered terrace packed, seen from above: bunting, lights and every table taken."
+   },
+   "note": "IG-008, 12 años (@isosur.prod). Luz violeta parcial."
+  },
+  {
+   "id": "quien-mesa-llena",
+   "ref": "P266",
+   "src": "assets/raw/ig/DYiMMUrlBk1_10.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "orig",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Una mesa larga de amigas brindando bajo los banderines y la estufa.",
+    "en": "A long table of friends toasting under the bunting and the heater."
+   },
+   "note": "IG-026 «no somos ná sin ustedes!»: las sociales de parroquianos."
+  },
+  {
+   "id": "quien-grupo-peter",
+   "ref": "P260",
+   "src": "assets/raw/ig/DYiMMUrlBk1_04.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "1:1",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un grupo de amigos abrazados y riendo; uno lleva la polera «Aquí te las traigo Peter».",
+    "en": "A group of friends hugging and laughing; one wears an «Aquí te las traigo Peter» T-shirt."
+   },
+   "note": "IG-026."
+  },
+  {
+   "id": "quien-grupo-flecos",
+   "ref": "P257",
+   "src": "assets/raw/ig/DYiMMUrlBk1_01.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "1:1",
+     "focal": [
+      52,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Cuatro amigos sonríen juntos bajo las lámparas de flecos.",
+    "en": "Four friends smiling together under the fringe lamps."
+   },
+   "note": "IG-026."
+  },
+  {
+   "id": "quien-carcajadas",
+   "ref": "P095",
+   "src": "assets/raw/ig/DAMHps8JVVr_09.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      55,
+      55
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un grupo ríe a carcajadas en una mesa bajo los faroles de papel.",
+    "en": "A group laughing out loud at a table under the paper lanterns."
+   },
+   "note": "IG-079 (Fondita): «ya sabe ya que no somos ná sin ustedes»."
+  },
+  {
+   "id": "quien-copas-arriba",
+   "ref": "P209",
+   "src": "assets/raw/ig/DNT1_BYS_Yf_06.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Amigos abrazados levantan sus copas y sonríen a la cámara.",
+    "en": "Friends arm in arm raise their glasses and smile at the camera."
+   },
+   "note": "IG-047, 11 años, día 2."
+  },
+  {
+   "id": "quien-sillones-llenos",
+   "ref": "P356",
+   "src": "assets/raw/ig/Dbg3ekilC4P_19.jpg",
+   "section": "quien",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      48
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Un grupo de amigas y amigos sentados juntos en la terraza, bajo los banderines.",
+    "en": "A group of friends sitting together on the terrace, under the bunting."
+   },
+   "note": "IG-009, 12 años (@isosur.prod)."
+  },
+  {
+   "id": "eventos-brazos-arriba",
+   "ref": "P349",
+   "src": "assets/raw/ig/Dbg3ekilC4P_12.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      45
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Los 12 años de Almud: la gente celebra con los brazos arriba y un megáfono.",
+    "en": "Almud turns 12: people celebrating with arms in the air and a megaphone."
+   },
+   "evento": "12 años",
+   "note": "IG-009 (@isosur.prod). Megáfono = el de la puerta."
+  }
+ ]
+}
