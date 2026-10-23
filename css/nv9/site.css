@@ -1015,3 +1015,14 @@ html:not(.fl) .flip__q{font-size:18px}
   .hero__veil{background:linear-gradient(180deg,rgba(14,12,11,.6) 0,rgba(14,12,11,.1) 20%,rgba(14,12,11,.06) 40%,rgba(14,12,11,.55) 62%,rgba(14,12,11,.92) 86%,rgba(14,12,11,.97) 100%)}
   .hero__claim{text-shadow:0 1px 18px rgba(14,12,11,.65)}
 }
+
+/* v4 fase 9 · Fondita (ficha de una sola foto): la foto llena la ficha sin vacío lila y sin recorte */
+.fs.is-on .fs__s--1 .fs__f--1{--w:min(100cqw,100cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625)}
+@media (min-width:1024px){
+  /* escritorio: el nombre gigante va en vertical junto al borde y la foto ocupa todo el alto de la ficha */
+  .fs.is-on .fs__s--1{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:28px;align-items:stretch}
+  .fs.is-on .fs__s--1 .fs__t{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:flex-start;gap:10px}
+  .fs.is-on .fs__s--1 .fs__n{margin:0;font-size:min(190px,calc((min(84vh,720px) - 120px) / (var(--len) * .44)))}
+  .fs.is-on .fs__s--1 .fs__fotos{margin-top:0}
+  .fs.is-on .fs__s--1 .fs__f--1{--w:min(100cqw,100cqh * .8);left:auto;right:0;top:0}
+}

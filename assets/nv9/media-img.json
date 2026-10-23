@@ -1,0 +1,75 @@
+{
+ "_doc": "v4 fase 9: imágenes nuevas de /nueva_v9/ (mismo formato que assets/v3/media.json images), generadas con tools/media_v3.do_image desde material propio.",
+ "images": {
+  "lugar-sillones-b": {
+   "ref": "V014@9,4s",
+   "src": "assets/nv9/fuente/V014-sillones.png",
+   "section": "lugar",
+   "alt": {
+    "es": "El rincón de los sillones: un sillón capitoné de cuero, mesas redondas de madera, un espejo y guirnaldas de luces.",
+    "en": "The lounge corner: a tufted leather sofa, round wooden tables, a mirror and string lights."
+   },
+   "credit": {
+    "post": "IG-103",
+    "date": "2024-07-04",
+    "url": "https://www.instagram.com/p/C9BDvFvJk4z/",
+    "account": "@almud_bar",
+    "text": "@almud_bar"
+   },
+   "note": "v4 fase 9: cuadro del video propio V014 [IG-103] a los 9,4 s, el único material propio donde se ven los sillones (P114 muestra a una persona).",
+   "source_size": [
+    720,
+    1280
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      58
+     ],
+     "box": [
+      0,
+      292,
+      720,
+      1192
+     ],
+     "crop_size": [
+      720,
+      900
+     ],
+     "width": 720,
+     "height": 900,
+     "widths": [
+      480,
+      720
+     ],
+     "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAwCdASoTABgAPwFuqU8rJqOiMBgMAWAgCWUAxnwPSPCOYpEveAAA/vDff9NaKuABGmlb0zXN97ujLFtK9/3L/AAAAA==",
+     "color": "#080403",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv9/img/lugar-sillones-b-a-480.avif",
+        "bytes": 6971
+       },
+       "720": {
+        "path": "assets/nv9/img/lugar-sillones-b-a-720.avif",
+        "bytes": 10989
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv9/img/lugar-sillones-b-a-480.webp",
+        "bytes": 8616
+       },
+       "720": {
+        "path": "assets/nv9/img/lugar-sillones-b-a-720.webp",
+        "bytes": 13498
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

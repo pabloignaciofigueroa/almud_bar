@@ -11,6 +11,9 @@ IM = dict(M['images'])
 _NV2 = ROOT / 'assets/nv2/media-img.json'  # v4 fase 3: recortes nuevos de /nueva_v2/ (tools/media_nv2.py)
 if _NV2.exists():
     IM.update(json.loads(_NV2.read_text())['images'])
+_NV9 = ROOT / 'assets/nv9/media-img.json'  # v4 fase 9: imágenes nuevas de /nueva_v9/ (los sillones de verdad)
+if _NV9.exists():
+    IM.update(json.loads(_NV9.read_text())['images'])
 VI = json.loads((ROOT / 'assets/v4/media-video.json').read_text())['videos']  # v4 fase 2: loops de 8–10 s hacia adelante con fundido
 import os
 RAIZ = True  # v4: se construye en /nueva/ con rutas absolutas   # fase 20: la v3 pasa a ser / (rutas absolutas)
@@ -124,7 +127,7 @@ CARTA = '/nueva_v9/carta/'   # v4 fase 9: la home v9 enlaza a su propia carta
 rincones = [
     ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'Gosh, we love our little bar!'),
     ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'Part of the terrace has a roof now'),
-    ('lugar-sillones', 'a', 'Sillones', 'Lounge', None, None),
+    ('lugar-sillones-b', 'a', 'Sillones', 'Lounge', None, None),   # v4 fase 9: el rincón muestra los sillones (cuadro del video propio V014), no a una persona
     ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love a sunset from our little terrace'),
     ('lugar-lampara-pinzas', 'a', 'Lámparas', 'Lamps', 'Nos gustan los brillitos, las luces', 'We love a little sparkle and twinkly lights'),
     ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [Heads up! · eye mural]', 'una mirada vale más que mil palabras', 'A look says more than a thousand words'),
