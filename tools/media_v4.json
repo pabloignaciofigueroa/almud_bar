@@ -342,6 +342,59 @@
    "note": "Ronda 4: V037 (IG-049, segundo día de los 11 años, ago-2025: «no quedaba otra que darlo todo») 47,05–56,0 s: dos planos propios (multitud bailando y luego mesas y grupos), sin primeros planos de una sola persona. Orden de los planos invertido (mesas → baile) para que el póster y el arranque muestren grupos y no a una persona en el centro; el salto entre ambos coincide con un corte propio del reel."
   },
   {
+   "id": "eventos-fiesta",
+   "ref": "V036",
+   "src": "assets/raw/ig/DM3n8lOy5qf_00.mp4",
+   "section": "eventos",
+   "evento": "11 años (ago-2025)",
+   "segments": [
+    [
+     3.12,
+     4.71
+    ],
+    [
+     11.89,
+     13.21
+    ],
+    [
+     13.25,
+     14.81
+    ],
+    [
+     4.75,
+     6.48
+    ],
+    [
+     20.72,
+     21.91
+    ],
+    [
+     86.56,
+     88.0
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 0.8,
+   "ratio": "4:5",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "alt": {
+    "es": "El Almud en plena fiesta de aniversario: el salón lleno de mesas con gente sentada bajo el techo de cintas, la garzona entre las mesas, la barra trabajando y amigas brindando.",
+    "en": "Almud in full anniversary-party swing: a dining room packed with seated guests under the ribbon ceiling, servers between tables, the bar busy and friends toasting."
+   },
+   "note": "Fase 7: montaje de 6 planos propios del reel de los 11 años (V036, IG-051), cortados en sus propios cortes: salón lleno (3,12–4,71) → garzón entre mesas (11,89–13,21) → barra trabajando (13,25–14,81) → amigas en la barra con tragos (4,75–6,48) → mesa de amigas con molinillos (20,72–21,91) → salón lleno en plano general (86,56–88,0); fundido 0,8 s al salón inicial. No usa los tramos de Con quién (27,6–37,7 y 66,32–75,7). Reemplaza en /nueva_v6/ a eventos-fiesta-12 (que se conserva)."
+  },
+  {
    "loop": "crossfade",
    "focal": [
     50,
