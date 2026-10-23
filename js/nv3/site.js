@@ -138,7 +138,7 @@
       target = snap(x + v * (reduce ? 120 : 340)); kick();
     };
     vp.addEventListener('pointerup', end); vp.addEventListener('pointercancel', end);
-    vp.addEventListener('lostpointercapture', end);
+    vp.addEventListener('lostpointercapture', e => { if (e.target === vp) end(e); });   // la captura implícita del li (táctil) también burbujea: se ignora
     vp.addEventListener('dragstart', e => e.preventDefault());
     // trackpad con gesto horizontal: solo deltaX; el vertical nunca se toca
     let wheelT = 0;
