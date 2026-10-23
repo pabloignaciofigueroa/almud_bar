@@ -283,13 +283,13 @@ body = f'''
     <div class="tragos__head">{title('mucho amor, color y trabajo', 'Lots of love, color and hard work', 'h-tragos')}</div>
     <div class="tragos__band" aria-hidden="false">
       {pic('tragos-bartender', 'a', '(min-width:1024px) 46vw, 100vw', 'tragos__flag reveal')}
-      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 pour', extra=' data-par="-0.04"')}
-      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 pour', extra=' data-par="0.05"')}
+      {pic('tragos-splash', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--1 pour', extra=' data-par="-0.03"')}
+      {pic('tragos-sours', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--2 pour', extra=' data-par="0.04"')}
       {vid('tragos-coctelera', 'tragos__amb tragos__amb--3 reveal')}
-      {pic('tragos-copa-tallada', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--4 pour', extra=' data-par="0.03"')}
-      {pic('tragos-old-fashioned', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--5 pour', extra=' data-par="-0.03"')}
-      {pic('eventos-negroni-week', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--6 pour', extra=' data-par="0.06"')}
-      {pic('tragos-brindis-copas', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--7 pour', extra=' data-par="-0.04"')}
+      {pic('tragos-copa-tallada', 'a', '(min-width:1024px) 24vw, 47vw', 'tragos__amb tragos__amb--4 pour')}
+      {pic('tragos-old-fashioned', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--5 pour')}
+      {pic('eventos-negroni-week', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--6 pour', extra=' data-par="-0.03"')}
+      {pic('tragos-brindis-copas', 'a', '(min-width:1024px) 31vw, 47vw', 'tragos__amb tragos__amb--7 pour', extra=' data-par="0.04"')}
     </div>
     <!-- v4 fase 5: los destacados con nombre son un carrusel que se arrastra (dedo o mouse), con la lógica de la ruleta de rincones -->
     <div class="tragos__named carr" data-ruleta aria-label="Tragos de la casa" data-aria-en="House cocktails">
@@ -336,11 +336,16 @@ body = f'''
       {vid('comida-queso', 'it__m plato')}
       <span class="it__n">Una cosa poca</span>{g(GL_QUESO, 'gloss gloss--s')}<span class="it__p">$ 11.900</span>
     </a>
+    <!-- v4 fase 7 (6b): «el orden del desorden»: dos columnas independientes; la derecha parte más abajo y no se realinea -->
     <div class="co__more">
-      {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
-      {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
-      {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
-      {item2('carta-camaron', 'Camarón que se duerme', '$ 15.900', _GL.get('Camarón que se duerme'), C_GRE, sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      <div class="co__col co__col--1">
+        {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, cls='co__m1', sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+        {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, cls='co__m3', sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      </div>
+      <div class="co__col co__col--2">
+        {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, cls='co__m2', sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+        {item2('carta-camaron', 'Camarón que se duerme', '$ 15.900', _GL.get('Camarón que se duerme'), C_GRE, cls='co__m4', sizes='(min-width:1024px) 23vw, 46vw', rv='plato')}
+      </div>
     </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
