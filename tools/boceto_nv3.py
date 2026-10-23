@@ -186,6 +186,44 @@ resenas = [
 creditos = ['catarsis.fotografia', 'estudiouno.prod', 'isosur.prod', 'rober.patagonico']
 
 ISO = svg_inline('almud-isotipo', 'iso').replace('<path ', '<path pathLength="1" ')
+# v4 fase 4: velo con la boca del almud recortada (evenodd). Se escala con transform y deja ver el video que ya está detrás.
+ISO = ISO.replace('<g ', '<path class="iso__veil" fill-rule="evenodd" d="M-4000 -4000H4660V4940H-4000ZM287 76L87 192L271 409L512 217Z"/><g class="iso__g" ', 1)
+
+
+def _sub_bbox(sp):
+    """Rango x de un subtrazado con comandos absolutos M/L/H/V/Q/Z."""
+    toks = re.findall(r'[A-Za-z]|-?\d+(?:\.\d+)?(?:e-?\d+)?', sp)
+    vals, cmd = [], None
+    for t_ in toks:
+        if t_.isalpha():
+            cmd = t_
+        else:
+            vals.append((cmd, float(t_)))
+    xs, k = [], 0
+    while k < len(vals):
+        c_, v_ = vals[k]
+        if c_ == 'V':
+            k += 1
+        elif c_ == 'H':
+            xs.append(v_); k += 1
+        else:
+            xs.append(v_); k += 2
+    return min(xs), max(xs)
+
+
+def letras(svg):
+    """v4 fase 4: ALMUD y BAR pasan de 1 trazado a 1 trazado por letra (A L M U D · B A R), para que entren letra por letra."""
+    def rep(m):
+        attrs, d = m.group(1), m.group(2)
+        grupos = []
+        for sp in re.findall(r'M[^M]*', d):
+            x0, x1 = _sub_bbox(sp)
+            if grupos and x0 < grupos[-1][1]:
+                grupos[-1][0].append(sp); grupos[-1][1] = max(grupos[-1][1], x1)
+            else:
+                grupos.append([[sp], x1])
+        return ''.join(f'<path class="ltr"{attrs} d="{"".join(g_[0])}"/>' for g_ in grupos)
+    return re.sub(r'<path( style="fill:var\(--letrero-(?:blanco|azul)\)") d="([^"]+)"/>', rep, svg)
 
 body = f'''
 <a class="skip" href="#lugar" data-en="Skip to content">Saltar al contenido</a>
@@ -208,7 +246,7 @@ body = f'''
   </div>
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
   <div class="hero__in">
-    <h1 class="hero__logo"><span class="sr-only">Almud Bar</span>{svg_inline('almud-horizontal-claro', 'hero__svg')}</h1>
+    <h1 class="hero__logo"><span class="sr-only">Almud Bar</span>{letras(svg_inline('almud-horizontal-claro', 'hero__svg'))}</h1>
     <p class="hero__claim"><span class="hero__claim-t">Coctelería de autor, comida &amp; música bonita desde 2014</span>{g('Signature cocktails, food & good music since 2014')}</p>
     <div class="hero__btns">
       <a class="btn btn--rosa" href="{CARTA}" data-en="See the menu">Ver la carta</a>
@@ -220,15 +258,15 @@ body = f'''
 <section class="lugar claro" id="lugar" aria-labelledby="h-lugar">
   <div class="lugar__head wrap">
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "Restless souls who love colorssss!", 'h-lugar')}</div>
-    {vid('lugar-noche', 'lugar__v reveal', extra=' data-speed="-0.12"')}
+    {vid('lugar-noche', 'lugar__v reveal')}
   </div>
   <div class="lleno wrap">
-    {pic('lugar-techada-llena', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 92vw', 'lleno__m lleno__m--1 reveal')}
-    {pic('lugar-salon-lleno', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--2 reveal')}
-    {pic('lugar-terraza-repleta', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--3 reveal')}
+    {pic('lugar-techada-llena', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 92vw', 'lleno__m lleno__m--1 clipin', extra=' data-par="-0.03"')}
+    {pic('lugar-salon-lleno', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--2 clipin', extra=' data-par="0.06"')}
+    {pic('lugar-terraza-repleta', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--3 clipin', extra=' data-par="-0.05"')}
   </div>
   <div class="rincones" data-h>
-    <div class="rincones__st">
+    <div class="rincones__st" data-ruleta aria-label="Rincones de Almud" data-aria-en="Corners of Almud">
       <ul class="rincones__tr" data-track>
         {''.join(rincon_li(r, i) for i, r in enumerate(rincones))}
       </ul>
