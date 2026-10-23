@@ -39,3 +39,4 @@
 - Fase 19 ✅ juicio final Carmen 18/20 (A4 B3 C4 D4 E3)
 - Fase 19 ✅ re-juicio Carmen 20/20 (A4 B4 C4 D4 E4)
 - Fase 20 ✅ v3 es la página principal (commit 61718ec), Cloudflare verde, verificada en línea: rutas, 301 /v3/→/, og, 5/5 videos en play
+- Fase 3 ✅ /nueva_v2/: 27→52 fotos, 12→17 pantallas en celular; El lugar con local lleno antes de la ruleta (commit d048ae7, congelada)
