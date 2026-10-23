@@ -1173,6 +1173,105 @@
      }
     }
    }
+  },
+  "eventos-terraza-12": {
+   "ref": "P343",
+   "src": "assets/raw/ig/Dbg3ekilC4P_06.jpg",
+   "section": "eventos",
+   "alt": {
+    "es": "Los 12 años de Almud: la terraza repleta, con la estufa, guirnaldas de luces y mesas llenas.",
+    "en": "Almud turns 12: the terrace packed, with the heater, string lights and full tables."
+   },
+   "credit": {
+    "post": "IG-009",
+    "date": "2026-08-01",
+    "url": "https://www.instagram.com/p/Dbg3ekilC4P/",
+    "account": "@almud_bar",
+    "photo": "@isosur.prod",
+    "text": "Foto: @isosur.prod para @almud_bar"
+   },
+   "evento": "12 años",
+   "note": "IG-009 (@isosur.prod). Reemplaza al «10» de flores (P073): el cliente la sacó porque Almud ya cumplió 12.",
+   "source_size": [
+    3072,
+    4096
+   ],
+   "crops": {
+    "a": {
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "box": [
+      0,
+      128,
+      3072,
+      3968
+     ],
+     "crop_size": [
+      3072,
+      3840
+     ],
+     "width": 1440,
+     "height": 1800,
+     "widths": [
+      480,
+      720,
+      960,
+      1280,
+      1440
+     ],
+     "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAADQBQCdASoTABgAPwF2s1QrJySjKAgBYCAJbACdMuIw4KMAbJ/oHl4xdjnj2WUrYiLftrMoccjAAPYRveXwPjzhE0b1aT0fgPI/6NY8al+BZg15nJP3Eog1EYBheTvGT2owd9jw1cd5EafVP/v4V+oWZTzve57fWfBXHVhpGcCNgsgnazhG1LaZVBTGdFVWg2KdiqZgttOiXqKdOGtgxBqpcoXqqsDEmbopWssEizFpMgCOGGSaYWOkn5vbJaG5wAAAAA==",
+     "color": "#863a46",
+     "files": {
+      "avif": {
+       "480": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-480.avif",
+        "bytes": 37760
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-720.avif",
+        "bytes": 66215
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-960.avif",
+        "bytes": 97158
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-1280.avif",
+        "bytes": 141287
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-1440.avif",
+        "bytes": 166864
+       }
+      },
+      "webp": {
+       "480": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-480.webp",
+        "bytes": 65002
+       },
+       "720": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-720.webp",
+        "bytes": 111362
+       },
+       "960": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-960.webp",
+        "bytes": 157972
+       },
+       "1280": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-1280.webp",
+        "bytes": 226504
+       },
+       "1440": {
+        "path": "assets/nv2/img/eventos-terraza-12-a-1440.webp",
+        "bytes": 271282
+       }
+      }
+     }
+    }
+   }
   }
  }
 }

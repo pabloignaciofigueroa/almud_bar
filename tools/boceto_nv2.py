@@ -299,8 +299,8 @@ body = f'''
     <div class="co__more">
       {item2('comida-ceviche', 'Todo que ver!', '$ 16.000', _GL.get('Todo que ver!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
       {item2('comida-hamburguesa', 'Chambreao', '$ 10.900', _GL.get('Chambreao'), C_SAN, sizes='(min-width:1024px) 23vw, 46vw')}
-      {item2('carta-camaron', 'Camarón que se duerme', '$ 15.900', _GL.get('Camarón que se duerme'), C_GRE, sizes='(min-width:1024px) 23vw, 46vw')}
       {item2('carta-contuti', 'Con tuti si no pa qué!', '$ 19.900', _GL.get('Con tuti si no pa qué!'), C_PIC, sizes='(min-width:1024px) 23vw, 46vw')}
+      {pic('carta-camaron', 'a', '(min-width:1024px) 23vw, 46vw', 'co__sin reveal')}
     </div>
     <p class="ver-carta"><a class="btn btn--rosa" href="{CARTA}#comilona" data-en="See the full menu">Ver la carta completa</a></p>
   </div>
@@ -325,7 +325,7 @@ body = f'''
       {pic('eventos-cotillon-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-baile-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
       {pic('eventos-primavera', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
-      {pic('eventos-10-anos', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
+      {pic('eventos-terraza-12', 'a', '(min-width:1024px) 23vw, 46vw', 'reveal')}
     </div>
     <ol class="cal">
       {''.join('<li class="ev">' + (vid(i, 'ev__m reveal') if i in VI else pic(i, 'a', '(min-width:1024px) 22vw, 45vw', 'ev__m reveal')) + f'<p class="ev__t"><span class="ev__mes" data-en="{me}">{mes}</span></p><h3 class="ev__n">{E(n)}</h3>' + (g("[" + ne.split(" [")[1] if "[" in ne else ne, "gloss gloss--s") if ne != n else '') + '</li>' for i, mes, me, n, ne, m in eventos)}

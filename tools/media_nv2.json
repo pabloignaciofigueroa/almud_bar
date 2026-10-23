@@ -283,6 +283,29 @@
    },
    "evento": "12 años",
    "note": "IG-008 (@isosur.prod). Cotillón de cumpleaños: solo en Eventos."
+  },
+  {
+   "id": "eventos-terraza-12",
+   "ref": "P343",
+   "src": "assets/raw/ig/Dbg3ekilC4P_06.jpg",
+   "section": "eventos",
+   "crops": [
+    {
+     "name": "a",
+     "ratio": "4:5",
+     "focal": [
+      50,
+      50
+     ],
+     "max": 1440
+    }
+   ],
+   "alt": {
+    "es": "Los 12 años de Almud: la terraza repleta, con la estufa, guirnaldas de luces y mesas llenas.",
+    "en": "Almud turns 12: the terrace packed, with the heater, string lights and full tables."
+   },
+   "evento": "12 años",
+   "note": "IG-009 (@isosur.prod). Reemplaza al «10» de flores (P073): el cliente la sacó porque Almud ya cumplió 12."
   }
  ]
 }

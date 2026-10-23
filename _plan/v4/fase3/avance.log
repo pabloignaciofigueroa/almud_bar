@@ -3,3 +3,4 @@
 2026-10-23 00:24:41 paso 2 · 23 fotos nuevas ubicadas (11 recortes ya hechos en assets/v3 + 12 recortes nuevos en assets/nv2 con tools/media_nv2.py); publish.py incluye assets/nv2
 2026-10-23 00:32:36 paso 3 · más aire: --sec 88 px celular / 112 tablet / ~130 escritorio; grillas parejas en Lugar (franja lleno), Tragos (2x2 + fila de 3; nombrados 3+3), Comida (+4), Con quién (5 por columna), Eventos (tira de 4), Equipo (4+4), Dónde (puerta junto a la dirección)
 2026-10-23 00:36:17 corrección paso 2 · son 25 fotos nuevas (13 recortes de assets/v3 reutilizados + 12 nuevos en assets/nv2): 27 → 52 fotos
+2026-10-23 00:37:23 ajuste · Eventos: sale el «10» de flores (P073, sin contexto: Almud ya cumplió 12) y entra la terraza repleta de los 12 años (P343, IG-009). Comida: la greda de camarones (IG-077) va sin nombre, porque el post no la nombra y en la carta hay dos platos con camarones en crema («Camarón que se duerme» y «Eres tan exótica»)

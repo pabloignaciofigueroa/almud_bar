@@ -579,3 +579,5 @@ html:not(.js) .m picture{display:none}
 .donde__d{display:grid;grid-template-columns:minmax(0,1fr) 38%;gap:16px;align-items:center;margin:32px 0 30px}
 .donde__d .datos{margin:0}
 @media (min-width:1024px){.donde__d{grid-template-columns:minmax(0,1fr) 34%;gap:28px}}
+/* v4 fase 3: la greda de camarones va sin nombre (IG-077 no la nombra y la carta tiene dos platos con camarones y crema) */
+.co__more .co__sin{align-self:start}
