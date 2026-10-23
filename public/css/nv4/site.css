@@ -607,3 +607,67 @@ html:not(.js) .m picture{display:none}
 }
 /* regla de la v4: ninguna letra bajo 16 px (rótulos que venían en 15 px) */
 .kick,.nav__a,.nav__carta,.ev__t,.cal .ev__t,.r__f,.own__k{font-size:16px}
+
+/* ═════ v4 fase 5 · romper la grilla + Tragos y Comida con juego ═════ */
+/* A · desfases verticales («rompe la grilla convencional»): 1 o 2 por sección, con lado y medida distintos */
+/* Tragos · celular: la pareja splash/sours queda como está (40 px); la copa tallada baja 72 px a la izquierda */
+@media (max-width:1023px){.tragos__band{row-gap:16px}.tragos__band .tragos__amb--4{margin-top:72px}}
+/* Tragos · escritorio: los sours bajan 7vh (la pareja que gustó) y el negroni del medio baja 12vh */
+@media (min-width:1024px){
+  .tragos__band .tragos__amb--2{margin-top:7vh}
+  .tragos__band .tragos__amb--6{margin-top:12vh}
+}
+/* Comida · celular: «La carne es débil» baja 28 px; «Chambreao» baja 64 px a la derecha */
+@media (max-width:1023px){
+  .comida__g .co__b{margin-top:28px}
+  .co__more>:nth-child(2){margin-top:64px}
+}
+/* Comida · escritorio: «La carne es débil» sube 9vh y «Con tuti si no pa qué!» baja 12vh */
+@media (min-width:1024px){
+  .comida__g .co__b{margin-bottom:9vh}
+  .comida__g .co__more>:nth-child(3){margin-top:12vh}
+}
+/* Con quién: un respiro dentro de una columna (las columnas se estiran parejas: sin huecos al pie). Videos en su sitio */
+@media (max-width:767px){
+  .quien__g .col:not(.col--3)>.m{min-height:180px}
+  .quien__g .col:first-child>:nth-child(3){margin-top:44px}
+  .quien__g .col--2>:nth-child(4){margin-top:88px}
+}
+@media (min-width:768px){
+  .quien__g .col--2>:nth-child(3){margin-top:10vh}
+  .quien__g .col--3>:nth-child(4){margin-top:5vh}
+}
+
+/* B · Tragos: el carrusel de destacados (sin JS: scroll nativo con encaje; con JS: se arrastra, ver .rul) */
+.tragos .carr{display:block;margin:48px calc(-1 * var(--gut)) 0;padding-top:36px;border-top:1px solid rgba(247,207,196,.35);grid-template-columns:none}
+.carr__tr{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gut);scroll-padding-inline:var(--gut);scrollbar-width:none;overscroll-behavior-x:contain}
+.carr__tr::-webkit-scrollbar{display:none}
+.carr__c{flex:0 0 72vw;scroll-snap-align:start}
+.carr__c:nth-child(3){margin-top:48px}   /* el desfase del carrusel: una sola tarjeta baja */
+.tragos .carr .it,.tragos .carr .it--hero{display:block;margin:0;grid-column:auto;grid-row:auto}
+.tragos .carr .it__m,.tragos .carr .moc2__m .m{aspect-ratio:4/5;margin-bottom:12px}
+.tragos .carr .it__n{font-size:26px}
+.tragos .carr .moc2{display:block;border-top:0;padding-top:0;margin:0}
+.tragos .carr .moc2__m{display:block}
+@media (min-width:768px){.carr__c{flex-basis:40vw}.carr__tr{gap:22px}}
+@media (min-width:1024px){
+  .tragos .carr{margin-top:80px}
+  .carr__c{flex-basis:clamp(280px,24vw,400px)}
+  .carr__c:nth-child(3){margin-top:9vh}
+  .tragos .carr .it__n{font-size:30px}
+}
+.rul .carr{overflow:hidden;touch-action:pan-y;cursor:grab;padding-bottom:20px;-webkit-user-select:none;user-select:none;outline-offset:-4px}
+.rul .carr.is-drag{cursor:grabbing}
+.rul .carr__tr{overflow:visible;scroll-snap-type:none;will-change:transform}
+.rul .carr__c{transform-origin:50% 0;will-change:transform}
+.rul .carr img,.rul .carr video{-webkit-user-drag:none;pointer-events:none}
+.ch{display:inline-block}
+.it__n .chw,.moc__n .chw{display:inline-block;white-space:nowrap}
+/* B · revelados: Tragos se «sirve» de arriba abajo; Comida, como un plato redondo que llega a la mesa */
+.gs .pour{clip-path:inset(0 0 100% 0)}
+.gs .pour img{transform:scale(1.22)}
+.gs .plato{clip-path:circle(0% at 50% 55%)}
+.gs .plato img,.gs .plato video{transform:scale(1.25)}
+.sabro{display:inline-block;transform-origin:50% 85%}
+/* rendimiento: lo que se mueve en cada cuadro va en su propia capa (parallax de fotos y el latido del título) */
+.gs [data-par],.gs .sabro{will-change:transform}

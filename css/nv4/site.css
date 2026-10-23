@@ -669,3 +669,5 @@ html:not(.js) .m picture{display:none}
 .gs .plato{clip-path:circle(0% at 50% 55%)}
 .gs .plato img,.gs .plato video{transform:scale(1.25)}
 .sabro{display:inline-block;transform-origin:50% 85%}
+/* rendimiento: lo que se mueve en cada cuadro va en su propia capa (parallax de fotos y el latido del título) */
+.gs [data-par],.gs .sabro{will-change:transform}
