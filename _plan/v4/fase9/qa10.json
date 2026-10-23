@@ -1,0 +1,372 @@
+{
+"/nueva_v10/ 360 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "portada-celular-b-720.webm",
+"paused": false,
+"t": 3.2,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 360 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/ 360 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "",
+"paused": true,
+"t": 0,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 390 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "portada-celular-b-720.webm",
+"paused": false,
+"t": 3.2,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 390 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/ 390 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "",
+"paused": true,
+"t": 0,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 768 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "portada-celular-b-720.webm",
+"paused": false,
+"t": 3.2,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 768 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/ 768 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "",
+"paused": true,
+"t": 0,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 1440 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "portada-escritorio-1278.webm",
+"paused": false,
+"t": 3.2,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 1440 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/ 1440 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "",
+"paused": true,
+"t": 0,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 1920 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "portada-escritorio-1278.webm",
+"paused": false,
+"t": 3.2,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/ 1920 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/ 1920 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": [],
+"hero": {
+"src": "",
+"paused": true,
+"t": 0,
+"cover": "cover",
+"box": [
+0,
+0
+]
+}
+},
+"/nueva_v10/carta/ 360 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 360 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 360 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 390 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 390 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 390 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 768 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 768 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 768 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1440 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1440 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1440 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1920 js": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1920 nojs": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+},
+"/nueva_v10/carta/ 1920 rm": {
+"ov": 0,
+"cls": 0,
+"small": [],
+"hidden": 0,
+"errs": [],
+"bad": [],
+"paused": []
+}
+}
