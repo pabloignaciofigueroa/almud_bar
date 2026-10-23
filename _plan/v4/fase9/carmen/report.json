@@ -1,0 +1,1970 @@
+[
+ {
+  "name": "m_es_home",
+  "errs": [],
+  "bad": [],
+  "shots": 20,
+  "stats": {
+   "sw": 390,
+   "iw": 390,
+   "H": 13755,
+   "vids": [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 2.54,
+     "dur": 8,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 3.89,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 5.24,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 5.34,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 1.02,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 6.43,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 0.58,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 1.12,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 0.61,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 2.2,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 4.61,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ],
+   "small": [],
+   "nsmall": 0,
+   "secs": [
+    {
+     "id": "hero",
+     "h": 844,
+     "bg": "rgb(14, 12, 11)"
+    },
+    {
+     "id": "lugar",
+     "h": 2006,
+     "bg": "rgb(245, 197, 24)"
+    },
+    {
+     "id": "tragos",
+     "h": 1918,
+     "bg": "rgb(242, 67, 80)"
+    },
+    {
+     "id": "comida",
+     "h": 1926,
+     "bg": "rgb(242, 122, 18)"
+    },
+    {
+     "id": "quien",
+     "h": 1448,
+     "bg": "rgb(11, 110, 75)"
+    },
+    {
+     "id": "eventos",
+     "h": 1868,
+     "bg": "rgb(165, 138, 201)"
+    },
+    {
+     "id": "equipo",
+     "h": 1263,
+     "bg": "rgb(194, 32, 42)"
+    },
+    {
+     "id": "resenas",
+     "h": 740,
+     "bg": "rgb(245, 233, 219)"
+    },
+    {
+     "id": "donde",
+     "h": 1376,
+     "bg": "rgb(14, 12, 11)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "es"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 8.04,
+     "dur": 8,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 8.67,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 3.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 8.37,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 9.2,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 6.04,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 5.85,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 5.66,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 8.14,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "m_es_carta",
+  "errs": [],
+  "bad": [],
+  "shots": 5,
+  "stats": {
+   "sw": 390,
+   "iw": 390,
+   "H": 3189,
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 4.05,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ],
+   "small": [
+    "15px:Escríbenos por DM",
+    "15px:EN",
+    "15px:Coctelería de la casa"
+   ],
+   "nsmall": 3,
+   "secs": [
+    {
+     "id": "casa",
+     "h": 2756,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "mundo",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "espirituosos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "vinos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "sin",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "comilona",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "promos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "es"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 5.58,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "m_en_home",
+  "errs": [],
+  "bad": [],
+  "shots": 21,
+  "stats": {
+   "sw": 390,
+   "iw": 390,
+   "H": 14470,
+   "vids": [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 8.04,
+     "dur": 8,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 0.06,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 0.53,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 5.95,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 0.98,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 9.2,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 8.63,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 4.6,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ],
+   "small": [],
+   "nsmall": 0,
+   "secs": [
+    {
+     "id": "hero",
+     "h": 844,
+     "bg": "rgb(14, 12, 11)"
+    },
+    {
+     "id": "lugar",
+     "h": 2082,
+     "bg": "rgb(245, 197, 24)"
+    },
+    {
+     "id": "tragos",
+     "h": 2001,
+     "bg": "rgb(242, 67, 80)"
+    },
+    {
+     "id": "comida",
+     "h": 2253,
+     "bg": "rgb(242, 122, 18)"
+    },
+    {
+     "id": "quien",
+     "h": 1483,
+     "bg": "rgb(11, 110, 75)"
+    },
+    {
+     "id": "eventos",
+     "h": 1893,
+     "bg": "rgb(165, 138, 201)"
+    },
+    {
+     "id": "equipo",
+     "h": 1298,
+     "bg": "rgb(194, 32, 42)"
+    },
+    {
+     "id": "resenas",
+     "h": 793,
+     "bg": "rgb(245, 233, 219)"
+    },
+    {
+     "id": "donde",
+     "h": 1457,
+     "bg": "rgb(14, 12, 11)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "en"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 8.04,
+     "dur": 8,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 0,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 3.03,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 3.5,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 3.91,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 9.2,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 8.63,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 0.92,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 7.53,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "m_en_carta",
+  "errs": [],
+  "bad": [],
+  "shots": 6,
+  "stats": {
+   "sw": 390,
+   "iw": 390,
+   "H": 3921,
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 6.95,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ],
+   "small": [
+    "15px:Message us on Instagram",
+    "15px:ES",
+    "15px:Coctelería de la casa"
+   ],
+   "nsmall": 3,
+   "secs": [
+    {
+     "id": "casa",
+     "h": 3461,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "mundo",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "espirituosos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "vinos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "sin",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "comilona",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "promos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "en"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 0.8,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "d_es_home",
+  "errs": [],
+  "bad": [],
+  "shots": 18,
+  "stats": {
+   "sw": 1440,
+   "iw": 1440,
+   "H": 13647,
+   "vids": [
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 9.07,
+     "dur": 9.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 1278,
+     "h": 720,
+     "vis": true
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 8.67,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 8.68,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 0.48,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 2.61,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 1.08,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 0,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 2.99,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 2.61,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ],
+   "small": [],
+   "nsmall": 0,
+   "secs": [
+    {
+     "id": "hero",
+     "h": 900,
+     "bg": "rgb(14, 12, 11)"
+    },
+    {
+     "id": "lugar",
+     "h": 2410,
+     "bg": "rgb(245, 197, 24)"
+    },
+    {
+     "id": "tragos",
+     "h": 2319,
+     "bg": "rgb(242, 67, 80)"
+    },
+    {
+     "id": "comida",
+     "h": 1865,
+     "bg": "rgb(242, 122, 18)"
+    },
+    {
+     "id": "quien",
+     "h": 1141,
+     "bg": "rgb(11, 110, 75)"
+    },
+    {
+     "id": "eventos",
+     "h": 1321,
+     "bg": "rgb(165, 138, 201)"
+    },
+    {
+     "id": "equipo",
+     "h": 1451,
+     "bg": "rgb(194, 32, 42)"
+    },
+    {
+     "id": "resenas",
+     "h": 883,
+     "bg": "rgb(245, 233, 219)"
+    },
+    {
+     "id": "donde",
+     "h": 1079,
+     "bg": "rgb(14, 12, 11)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "es"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "portada-celular-720.webm",
+     "paused": false,
+     "t": 0,
+     "dur": 8,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": false
+    },
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 9.07,
+     "dur": 9.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 1278,
+     "h": 720,
+     "vis": true
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 8.67,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 8.68,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 6.44,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 8.37,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 9.2,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 8.63,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 6.85,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 0,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "d_es_carta",
+  "errs": [],
+  "bad": [],
+  "shots": 4,
+  "stats": {
+   "sw": 1440,
+   "iw": 1440,
+   "H": 2776,
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 1.64,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ],
+   "small": [
+    "15px:Escríbenos por DM",
+    "15px:EN",
+    "15px:Coctelería de la casa"
+   ],
+   "nsmall": 3,
+   "secs": [
+    {
+     "id": "casa",
+     "h": 2155,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "mundo",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "espirituosos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "vinos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "sin",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "comilona",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "promos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "es"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.71,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "d_en_home",
+  "errs": [],
+  "bad": [],
+  "shots": 19,
+  "stats": {
+   "sw": 1440,
+   "iw": 1440,
+   "H": 13926,
+   "vids": [
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 2.3,
+     "dur": 9.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 1278,
+     "h": 720,
+     "vis": true
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 8.67,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 8.68,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 0,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 1.23,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 8.63,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 0.58,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 2.89,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ],
+   "small": [],
+   "nsmall": 0,
+   "secs": [
+    {
+     "id": "hero",
+     "h": 900,
+     "bg": "rgb(14, 12, 11)"
+    },
+    {
+     "id": "lugar",
+     "h": 2435,
+     "bg": "rgb(245, 197, 24)"
+    },
+    {
+     "id": "tragos",
+     "h": 2374,
+     "bg": "rgb(242, 67, 80)"
+    },
+    {
+     "id": "comida",
+     "h": 1940,
+     "bg": "rgb(242, 122, 18)"
+    },
+    {
+     "id": "quien",
+     "h": 1176,
+     "bg": "rgb(11, 110, 75)"
+    },
+    {
+     "id": "eventos",
+     "h": 1321,
+     "bg": "rgb(165, 138, 201)"
+    },
+    {
+     "id": "equipo",
+     "h": 1486,
+     "bg": "rgb(194, 32, 42)"
+    },
+    {
+     "id": "resenas",
+     "h": 911,
+     "bg": "rgb(245, 233, 219)"
+    },
+    {
+     "id": "donde",
+     "h": 1104,
+     "bg": "rgb(14, 12, 11)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "en"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "",
+     "paused": true,
+     "t": 0,
+     "dur": 0,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 0,
+     "h": 0,
+     "vis": false
+    },
+    {
+     "src": "portada-escritorio-1278.webm",
+     "paused": false,
+     "t": 2.59,
+     "dur": 9.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 1278,
+     "h": 720,
+     "vis": true
+    },
+    {
+     "src": "lugar-noche-720.webm",
+     "paused": false,
+     "t": 8.1,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-coctelera-720.webm",
+     "paused": false,
+     "t": 8.67,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 8.68,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-carne-720.webm",
+     "paused": false,
+     "t": 8.71,
+     "dur": 8.7,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "comida-queso-720.webm",
+     "paused": false,
+     "t": 7.33,
+     "dur": 7.3,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-1-720.webm",
+     "paused": false,
+     "t": 1.96,
+     "dur": 8.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-2-720.webm",
+     "paused": false,
+     "t": 3.28,
+     "dur": 9.2,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "quien-multitud-3-720.webm",
+     "paused": false,
+     "t": 0.44,
+     "dur": 8.6,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-fiesta-720.webm",
+     "paused": false,
+     "t": 8.5,
+     "dur": 8.5,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    },
+    {
+     "src": "eventos-jaloguin-540.webm",
+     "paused": false,
+     "t": 3.56,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 540,
+     "h": 674,
+     "vis": true
+    },
+    {
+     "src": "equipo-duenos-720.webm",
+     "paused": false,
+     "t": 9,
+     "dur": 9,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 1280,
+     "vis": true
+    },
+    {
+     "src": "donde-terraza-720.webm",
+     "paused": false,
+     "t": 3.71,
+     "dur": 8.1,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 720,
+     "vis": true
+    }
+   ]
+  }
+ },
+ {
+  "name": "d_en_carta",
+  "errs": [],
+  "bad": [],
+  "shots": 4,
+  "stats": {
+   "sw": 1440,
+   "iw": 1440,
+   "H": 3041,
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 2.86,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ],
+   "small": [
+    "15px:Message us on Instagram",
+    "15px:ES",
+    "15px:Coctelería de la casa"
+   ],
+   "nsmall": 3,
+   "secs": [
+    {
+     "id": "casa",
+     "h": 2392,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "mundo",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "espirituosos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "vinos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "sin",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "comilona",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "id": "promos",
+     "h": 0,
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "broken": [],
+   "noalt": 0,
+   "lang": "en"
+  },
+  "after": {
+   "vids": [
+    {
+     "src": "tragos-humo-720.webm",
+     "paused": false,
+     "t": 3.66,
+     "dur": 7.4,
+     "loop": true,
+     "muted": true,
+     "controls": false,
+     "w": 720,
+     "h": 900,
+     "vis": true
+    }
+   ]
+  }
+ }
+]
