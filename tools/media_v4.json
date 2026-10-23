@@ -606,6 +606,145 @@
     "en": "Almud's terrace in the afternoon: a packed patio with Castro behind it, a pink cocktail and the covered terrace with colored ribbons."
    },
    "note": "V007 (IG-115), tramo 0,0–8,92 s (antes del corte a la pizza). Reemplaza al letrero: V031 solo tiene 10,4 s sin subtítulos y los usa enteros la portada de escritorio; repetirlo abajo duplicaría el mismo plano."
+  },
+  {
+   "ref": "V031+V007",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "segments": [
+    [
+     0.4,
+     10.45
+    ],
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 0.8,
+   "join_xfade": 0.8,
+   "focal": [
+    50,
+    50
+   ],
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "alt": {
+    "es": "El letrero ALMUD BAR, la puerta, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas; luego la terraza techada repleta de gente al atardecer.",
+    "en": "The ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the clothespin lamps; then the covered terrace packed with people at sunset."
+   },
+   "id": "portada-c-h",
+   "variant": "horizontal",
+   "ratio": "16:9",
+   "out": [
+    1280,
+    720
+   ],
+   "widths": [
+    1280
+   ],
+   "parts": [
+    {
+     "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+     "seg": [
+      0.4,
+      10.45
+     ]
+    },
+    {
+     "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+     "seg": [
+      21.26,
+      30.1
+     ],
+     "crop": [
+      0,
+      580,
+      720,
+      404
+     ]
+    }
+   ],
+   "crf_start": 21,
+   "crf_max": 32,
+   "vp9_crf_start": 30,
+   "vp9_crf_max": 46,
+   "budget_kb": 3000,
+   "budget_mp4_kb": 3200,
+   "note": "Fase 10 (orden del cliente: un solo video de portada): V031 0,4–10,45 s tal cual (1278×720 → 1280×720) + fundido 0,8 s + V007 21,26–30,1 s recortado a 16:9 sobre la gente (720×404 desde y=580, ampliado: pixela) + fundido de loop 0,8 s."
+  },
+  {
+   "ref": "V031+V007",
+   "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+   "section": "portada",
+   "segments": [
+    [
+     0.4,
+     10.45
+    ],
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "loop": "crossfade",
+   "xfade": 0.8,
+   "join_xfade": 0.8,
+   "focal": [
+    50,
+    50
+   ],
+   "credit": "@estudiouno.prod",
+   "credit_src": "IG-061",
+   "alt": {
+    "es": "El letrero ALMUD BAR, la puerta, el techo de cintas de colores, el mural de ojos y las lámparas de pinzas; luego la terraza techada repleta de gente al atardecer.",
+    "en": "The ALMUD BAR sign, the front door, the colored-ribbon ceiling, the eye mural and the clothespin lamps; then the covered terrace packed with people at sunset."
+   },
+   "id": "portada-c-v",
+   "variant": "vertical",
+   "ratio": "9:16",
+   "out": [
+    720,
+    1280
+   ],
+   "widths": [
+    720
+   ],
+   "parts": [
+    {
+     "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
+     "seg": [
+      0.4,
+      10.45
+     ],
+     "crop": [
+      437,
+      0,
+      404,
+      720
+     ]
+    },
+    {
+     "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+     "seg": [
+      21.26,
+      30.1
+     ]
+    }
+   ],
+   "crf_start": 23,
+   "crf_max": 34,
+   "vp9_crf_start": 34,
+   "vp9_crf_max": 50,
+   "budget_kb": 1400,
+   "budget_mp4_kb": 1500,
+   "poster_q": {
+    "avif": 40,
+    "webp": 60,
+    "jpg": 70
+   },
+   "note": "Fase 10: el mismo montaje en vertical: V031 0,4–10,45 s recortado a 9:16 al centro (404×720 desde x=437, ampliado a 720×1280: pixela) + fundido 0,8 s + V007 21,26–30,1 s tal cual + fundido de loop 0,8 s."
   }
  ]
 }

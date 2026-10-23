@@ -163,6 +163,8 @@ COLOR = ['-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt7
 
 def make_master(v, src, W, H, rate):
     """Concatena tramos, recorta y arma el loop en un máster sin pérdida a resolución de recorte. Devuelve (ruta, w, h)."""
+    if v.get('parts'):
+        return make_master_parts(v, rate)
     if v.get('crop'):  # v4: recorte manual [x, y, ancho, alto] en px de la fuente (p. ej. llevar la comida al centro); nunca se amplía
         x0, y0, cw0, ch0 = v['crop']
         x1, y1 = x0 + cw0, y0 + ch0
@@ -204,6 +206,41 @@ def make_master(v, src, W, H, rate):
     ff('-i', lin, '-filter_complex', g, '-map', '[out]', '-an', '-c:v', 'ffv1', mid)
     os.remove(lin)
     return mid, cw, ch, fps
+
+
+def make_master_parts(v, rate):
+    """v4 fase 10: montaje de tramos de reels distintos, cada uno con su recorte [x, y, w, h] y escalado a v['out'] = [W, H],
+    unidos con un fundido de v['join_xfade'] s y cerrados con el fundido de loop de siempre (v['xfade'])."""
+    OW, OH = v['out']
+    num, den = (float(x) for x in rate.split('/'))
+    fps = num / den
+    base = os.path.join(OUT_VID, v['id'])
+    ins, chains, durs = [], [], []
+    for k, prt in enumerate(v['parts']):
+        s0, e0 = prt['seg']
+        ins += ['-i', os.path.join(ROOT, prt['src'])]
+        cr = prt.get('crop')
+        cropf = f'crop={cr[2]}:{cr[3]}:{cr[0]}:{cr[1]},' if cr else ''
+        chains.append(f'[{k}:v]trim={s0}:{e0},setpts=PTS-STARTPTS,fps={rate},{cropf}scale={OW}:{OH}:flags=lanczos,setsar=1,format=yuv420p[p{k}]')
+        durs.append(round((e0 - s0) * fps) / fps)
+    jd = round(v['join_xfade'] * fps) / fps
+    last, acc = '[p0]', durs[0]
+    for k in range(1, len(durs)):
+        out = f'[j{k}]'
+        chains.append(f'{last}[p{k}]xfade=transition=fade:duration={jd:.4f}:offset={acc - jd:.4f}{out}')
+        last, acc = out, acc + durs[k] - jd
+    lin = base + '.lin.mkv'
+    ff(*ins, '-filter_complex', ';'.join(chains), '-map', last, '-an', '-c:v', 'ffv1', lin)
+    n = nframes(lin)
+    dn = round(v['xfade'] * fps)
+    dur = n / fps
+    g = (f'[0:v]split[a][b];[a]trim=start_frame={dn},setpts=PTS-STARTPTS[t];'
+         f'[b]trim=end_frame={dn},setpts=PTS-STARTPTS[h];'
+         f'[t][h]xfade=transition=fade:duration={dn / fps:.4f}:offset={dur - 2 * dn / fps:.4f}[out]')
+    mid = base + '.master.mkv'
+    ff('-i', lin, '-filter_complex', g, '-map', '[out]', '-an', '-c:v', 'ffv1', mid)
+    os.remove(lin)
+    return mid, OW, OH, fps
 
 
 def seam_diff(mid):
