@@ -116,6 +116,8 @@ def svg_inline(name, cls, label=None):
 IG = 'https://www.instagram.com/'
 MAPS = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro+Chile'
 DM = 'https://ig.me/m/almud_bar'
+MAPS_ABRIR = 'https://www.google.com/maps/search/?api=1&query=Almud+Bar+Serrano+325+Castro'   # v4 fase 8c: link bajo el mapa
+MAPS_EMBED = 'https://www.google.com/maps?q=Almud+Bar,+Serrano+325,+Castro,+Chile&output=embed'
 CARTA = '/nueva/carta/'
 
 # ───────────────────────── secciones ─────────────────────────
@@ -481,32 +483,37 @@ body = f'''
   </div>
 </section>
 
-<!-- 9 · CUÁNDO Y DÓNDE -->
-<section class="donde" id="donde" aria-labelledby="h-donde">
-  {vid('donde-terraza', 'donde__v reveal')}
+<!-- 9 · CIERRE · v4 fase 8c: «Cuándo y dónde» y el Pie en una sola sección: video, título, la frase en vivo con los datos, DM, mapa, logo y créditos -->
+<section class="donde cierre" id="donde" aria-labelledby="h-donde">
+  <div class="cierre__izq">
+    {vid('donde-terraza', 'donde__v reveal')}
+    <h2 class="ttl cierre__ttl" id="h-donde"><span class="ttl__t">USTÉ SE LO MERECE!</span></h2>
+    <p class="ttl-gloss">{g("You've earned it, friend!")}</p>
+  </div>
   <div class="donde__t">
-    {title('Le esperamos desde las 18:00 hrs', "Doors open at 6 pm — see you there!", 'h-donde')}
     <div class="donde__d">
-    <dl class="datos">
-      <div><dt class="sr-only" data-en="Open">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
-      <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Across from the Castro Cultural Center">Al frente del Centro Cultural de Castro</dd></div>
-    </dl>
-    {pic('donde-puerta', 'a', '(min-width:1024px) 14vw, 40vw', 'donde__p reveal')}
+      <div class="donde__info">
+        <p class="donde__sub"><span class="donde__sub-t">Le esperamos desde las 18:00 hrs</span></p>{g("Doors open at 6 pm — see you there!")}
+        <dl class="datos">
+          <div><dt class="sr-only" data-en="Open">Días</dt><dd class="datos__big" data-en="Tue–Sat">Mar a Sáb</dd></div>
+          <div><dt class="sr-only" data-en="Address">Dirección</dt><dd class="datos__big">Serrano 325, Castro</dd><dd class="datos__s" data-en="Across from the Castro Cultural Center">Al frente del Centro Cultural de Castro</dd></div>
+        </dl>
+      </div>
+      {pic('donde-puerta', 'a', '(min-width:1024px) 14vw, 40vw', 'donde__p reveal')}
     </div>
     <div class="donde__btns">
       <a class="btn btn--rosa" href="{DM}" target="_blank" rel="noopener" data-en="Message us on Instagram">Escríbenos por DM</a>
-      <a class="btn btn--ghost" href="{MAPS}" target="_blank" rel="noopener" data-en="Get directions">Cómo llegar</a>
     </div>
+    <div class="mapa" data-mapa data-src="{MAPS_EMBED}">
+      <button class="mapa__ph" type="button"><svg class="mapa__pin" viewBox="0 0 24 32" width="30" height="40" aria-hidden="true"><path d="M12 1C6 1 1.5 5.5 1.5 11.3 1.5 19 12 31 12 31s10.5-12 10.5-19.7C22.5 5.5 18 1 12 1z"/><circle cx="12" cy="11.5" r="4"/></svg><span data-en="Tap to activate the map">Toca para activar el mapa</span></button>
+    </div>
+    <p class="mapa__link"><a href="{MAPS_ABRIR}" target="_blank" rel="noopener" data-en="Open in Google Maps">Abrir en Google Maps</a></p>
   </div>
 </section>
 </main>
 
-<!-- 10 · PIE -->
 <footer class="pie">
   <div class="wrap pie__g">
-    <div class="pie__hero">
-      <p class="pie__f"><span class="ttl__t">USTÉ SE LO MERECE!</span>{g("You've earned it, friend!")}</p>
-    </div>
     <div class="pie__logo">{svg_inline('almud-vertical-claro', 'pie__svg', label=True)}</div>
     <div class="pie__cr">
       <h2 class="kick" data-en="Photos &amp; video">Imágenes</h2>

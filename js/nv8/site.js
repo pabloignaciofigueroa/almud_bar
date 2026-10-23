@@ -178,6 +178,16 @@
   }
   $$('[data-ruleta]').forEach(ruleta);
 
+  /* ───────── Mapa del cierre (v4 fase 8c): sin iframe al cargar (no pesa, no toma el scroll); al tocarlo se inserta el de Google Maps ───────── */
+  const mapa = $('[data-mapa]');
+  if (mapa) $('.mapa__ph', mapa).addEventListener('click', () => {
+    const f = d.createElement('iframe');
+    f.src = mapa.dataset.src; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
+    f.title = root.lang === 'en' ? 'Map: Almud Bar, Serrano 325, Castro' : 'Mapa: Almud Bar, Serrano 325, Castro';
+    f.setAttribute('allowfullscreen', '');
+    mapa.replaceChildren(f);   // mismo contenedor y mismo alto: sin salto
+  }, { once: true });
+
   /* ───────── Movimiento ───────── */
   const G = window.gsap, ST = window.ScrollTrigger;
   if (!G || !ST || reduce) { root.classList.remove('intro'); return; }
@@ -272,7 +282,7 @@
   if (root.classList.contains('intro') && scrollY < 10 && performance.now() < 1400) { window.__almudIntro = true; intro(); } else root.classList.remove('intro');
 
   // Revelados de titulares
-  $$('.ttl, .pie__f').filter(t => !t.closest('.quien') && !t.closest('.eventos') && !t.closest('.donde')).forEach(t => {
+  $$('.ttl, .pie__f').filter(t => !t.closest('.quien') && !t.closest('.eventos')).forEach(t => {
     G.from(words(t), { yPercent: 110, duration: 1.05, ease: EXPO, stagger: .045,
       scrollTrigger: { trigger: t, start: 'top 88%', once: true },
       onComplete: () => { $$('.w', t).forEach(w => { w.style.overflow = 'visible'; }); if (t._in) t._in(); } });
@@ -660,8 +670,8 @@
     cinta.addEventListener('dragstart', e => e.preventDefault());
   }
 
-  /* ───────── Cuándo y dónde (negro): «Le esperamos desde las 18:00 hrs» se escribe en vivo ───────── */
-  const dt_ = $('.donde .ttl'), dtt = dt_ && $('.ttl__t', dt_);
+  /* ───────── Cierre (negro): «Le esperamos desde las 18:00 hrs» se escribe en vivo ───────── */
+  const dt_ = $('.donde__sub'), dtt = dt_ && $('.donde__sub-t', dt_);   // 8c: ahora es el subtítulo del cierre
   if (dtt) {
     const chars = splitChars(dtt);
     G.set(chars, { opacity: 0 });
@@ -682,33 +692,6 @@
       typeOne();
     } });
     addEventListener('resize', () => place(chars.findIndex(c => c.style.opacity !== '1') - 1));
-  }
-
-  /* ───────── Pie: la frase respira y el almud brinda ───────── */
-  const pf = $('.pie__f'), br = $('.brindis');
-  if (pf && br) {
-    root.classList.add('br');
-    const ws = words(pf), A = $('.brindis__a', br), B = $('.brindis__b', br), chin = $('.brindis__chin', br);
-    const breath = G.to(ws, { scale: 1.035, duration: 2.2, ease: 'sine.inOut', yoyo: true, repeat: -1, stagger: { each: .18, yoyo: true, repeat: -1 }, paused: true });
-    let ready = false, visible = false;
-    pf._in = () => { ready = true; if (visible) breath.play(); };
-    const chinchin = () => G.timeline()
-      .to(A, { rotation: 16, x: 12, duration: .45, ease: 'power2.in' }, 0)
-      .to(B, { rotation: -16, x: -12, duration: .45, ease: 'power2.in' }, 0)
-      .fromTo(chin, { opacity: 1, scale: .4, transformOrigin: '50% 100%' }, { scale: 1.15, opacity: 0, duration: .55, ease: 'power2.out' }, .45)   // ¡chin chin!
-      .to([A, B], { rotation: 0, x: 0, duration: 1.1, ease: 'elastic.out(1.2,.32)' }, .47);
-    const draw = G.timeline({ paused: true })
-      .to($$('path', br), { strokeDashoffset: 0, duration: .8, ease: 'power3.inOut', stagger: .03 })
-      .add(chinchin, '+=.1');
-    let loop = null;
-    ST.create({ trigger: br, start: 'top 85%', end: 'bottom top',
-      onToggle: self => {
-        visible = self.isActive;
-        if (visible) { if (ready) breath.play(); if (draw.progress() === 0) draw.play(); if (!loop) loop = setInterval(() => { if (visible) chinchin(); }, 6000); }
-        else { breath.pause(); clearInterval(loop); loop = null; }
-      } });
-    $('.pie__hero').addEventListener('pointerenter', e => { if (e.pointerType === 'mouse' && draw.progress() === 1) chinchin(); });
-    $('.pie__hero').addEventListener('pointerdown', () => { if (draw.progress() === 1) chinchin(); });
   }
 
   const mm = G.matchMedia();
