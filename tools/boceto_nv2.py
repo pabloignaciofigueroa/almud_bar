@@ -7,7 +7,10 @@ import json, html, pathlib, re, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 M = json.loads((ROOT / 'assets/v3/media.json').read_text())
-IM = M['images']
+IM = dict(M['images'])
+_NV2 = ROOT / 'assets/nv2/media-img.json'  # v4 fase 3: recortes nuevos de /nueva_v2/ (tools/media_nv2.py)
+if _NV2.exists():
+    IM.update(json.loads(_NV2.read_text())['images'])
 VI = json.loads((ROOT / 'assets/v4/media-video.json').read_text())['videos']  # v4 fase 2: loops de 8–10 s hacia adelante con fundido
 import os
 RAIZ = True  # v4: se construye en /nueva/ con rutas absolutas   # fase 20: la v3 pasa a ser / (rutas absolutas)
@@ -20,7 +23,8 @@ def srcset(files, kind):
     return ', '.join(f"{UP}{v['path']} {w}w" for w, v in sorted(files[kind].items(), key=lambda kv: int(kv[0])))
 
 
-def pic(id_, crop='a', sizes='100vw', cls='', eager=False, alt=True, speed=None, extra=''):
+def pic(id_, crop='a', sizes='100vw', cls='', eager=False, alt=True, speed=None, extra='', art=None):
+    """art = (recorte, media, sizes): dirección de arte (otro recorte desde ese ancho; v4 fase 3)."""
     im = IM[id_]
     c = im['crops'][crop]
     w, h = c['width'], c['height']
@@ -33,7 +37,9 @@ def pic(id_, crop='a', sizes='100vw', cls='', eager=False, alt=True, speed=None,
     D = '' if eager else 'data-'  # v4 fase 2: las fotos no prioritarias se cargan por JS al acercarse (≤0,5 pantallas)
     sp = f' data-speed="{speed}"' if speed is not None else ''
     return (f'<figure class="m {cls}" style="--ar:{w}/{h};--c:{c["color"]};--lq:url({c["lqip"]})"{sp}{extra}>'
-            f'<picture><source type="image/avif" {D}srcset="{srcset(files, "avif")}" sizes="{sizes}">'
+            f'<picture>'
+            + (''.join(f'<source type="image/{k}" media="{art[1]}" {D}srcset="{srcset(im["crops"][art[0]]["files"], k)}" sizes="{art[2]}">' for k in ('avif', 'webp')) if art else '')
+            + f'<source type="image/avif" {D}srcset="{srcset(files, "avif")}" sizes="{sizes}">'
             f'<source type="image/webp" {D}srcset="{srcset(files, "webp")}" sizes="{sizes}">'
             f'<img {D}src="{UP}{files["webp"][str(fb)]["path"]}" width="{w}" height="{h}" alt="{a_es}"'
             + (f' data-alt-en="{a_en}"' if alt else '') +
