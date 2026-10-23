@@ -674,3 +674,38 @@ html:not(.js) .m picture{display:none}
 
 /* fase 5b · Comida: «Todo que ver!» baja igual que «Con tuti si no pa qué!» (escritorio) */
 @media (min-width:1024px){.comida__g .co__more>:nth-child(1){margin-top:12vh}}
+
+/* ═════ v4 fase 6 · Con quién: la baraja de fotos y los 3 videos fijos ═════ */
+/* Base (sin JS y con movimiento reducido): video, grilla quieta de 12 fotos y los otros dos videos; sin huecos */
+.qz{display:grid;gap:12px;margin-top:36px}
+.qz .qz__v{aspect-ratio:4/5;position:relative;z-index:3}   /* los videos nunca quedan bajo una foto */
+.baraja{position:relative;z-index:1;outline-offset:6px}
+.baraja__p{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.carta .m{aspect-ratio:4/5}
+.baraja__hint{display:none}
+.qz__lado{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (min-width:1024px){
+  .qz{grid-template-columns:4fr 5fr 3fr;gap:24px;align-items:stretch;margin-top:56px}
+  .qz .qz__v--1{aspect-ratio:auto;height:auto;margin-top:6vh}   /* el único desfase: el brindis largo parte más abajo */
+  .qz .qz__v--1 video{height:100%}
+  .qz__lado{display:flex;flex-direction:column;gap:24px}
+  .qz__lado .qz__v{flex:1 1 auto;aspect-ratio:auto;min-height:0}
+  .qz__lado .qz__v video{height:100%}   /* la columna de la derecha llega siempre al pie de la fila: sin huecos, con baraja o con grilla */
+  .baraja__p{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+}
+/* Con JS y movimiento: la baraja es una pila que se lanza */
+.bj .baraja{display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;padding:22px 0 8px}
+.bj .baraja.is-drag{cursor:grabbing}
+.bj .baraja__p{display:block;position:relative;width:min(80vw,400px);aspect-ratio:4/5}
+.bj .carta{position:absolute;inset:0;opacity:0}
+.bj .carta .m{height:100%;border-radius:6px;box-shadow:0 1px 0 rgba(14,12,11,.2),0 18px 36px -16px rgba(14,12,11,.65)}
+.bj .carta img{-webkit-user-drag:none;pointer-events:none}
+.bj .is-dealing .carta,.bj .carta.is-top{will-change:transform}   /* capas: las 12 solo mientras se reparten; después, solo la de arriba */
+.bj .baraja__hint{display:flex;align-items:center;gap:8px;margin-top:22px;font:600 16px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--papel);opacity:.9;transition:opacity .6s var(--ease)}
+.bj .baraja__hint.is-used{opacity:.55}
+.baraja__mano{flex:none;animation:mano 1.8s var(--ease) infinite}
+.is-used .baraja__mano{animation:none}
+@keyframes mano{0%,100%{transform:translateX(0) rotate(0)}35%{transform:translateX(10px) rotate(8deg)}60%{transform:translateX(-4px) rotate(-3deg)}}
+@media (min-width:1024px){
+  .bj .baraja__p{width:min(100%,400px)}
+}

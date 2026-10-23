@@ -700,7 +700,7 @@ html:not(.js) .m picture{display:none}
 .bj .carta{position:absolute;inset:0;opacity:0}
 .bj .carta .m{height:100%;border-radius:6px;box-shadow:0 1px 0 rgba(14,12,11,.2),0 18px 36px -16px rgba(14,12,11,.65)}
 .bj .carta img{-webkit-user-drag:none;pointer-events:none}
-.bj .carta.is-top{will-change:transform}
+.bj .is-dealing .carta,.bj .carta.is-top{will-change:transform}   /* capas: las 12 solo mientras se reparten; después, solo la de arriba */
 .bj .baraja__hint{display:flex;align-items:center;gap:8px;margin-top:22px;font:600 16px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--papel);opacity:.9;transition:opacity .6s var(--ease)}
 .bj .baraja__hint.is-used{opacity:.55}
 .baraja__mano{flex:none;animation:mano 1.8s var(--ease) infinite}

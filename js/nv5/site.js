@@ -431,7 +431,8 @@
       pila = G.utils.shuffle(cards.slice());
       pila.forEach((c, i) => { c.style.zIndex = i + 1; c.style.visibility = ''; c._px = R(-16, 16); c._py = R(-12, 12); c._pr = R(-7, 7); });
       const W = dk.clientWidth;
-      G.timeline({ onComplete: () => { busy = false; mark(); say(); } })
+      dk.classList.add('is-dealing');
+      G.timeline({ onComplete: () => { busy = false; dk.classList.remove('is-dealing'); mark(); say(); } })
         .fromTo(pila, { x: 0, y: -40, rotation: 0, scale: .9, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: .32, ease: 'power2.out', stagger: .012 })
         // barajar: dos mitades que se abren…
         .to(pila, { x: i => (i % 2 ? 1 : -1) * Math.min(W * .3, 170), rotation: i => (i % 2 ? 10 : -10), y: i => -i * 1.5, duration: .36, ease: 'power2.inOut' })
@@ -484,8 +485,20 @@
       if (e.key === 'Enter' || e.key === 'ArrowRight') { e.preventDefault(); lanzar(1); }
       else if (e.key === 'ArrowLeft') { e.preventDefault(); lanzar(-1); }
     });
-    ST.create({ trigger: dk, start: 'top 220%', once: true, onEnter: () => $$('img[data-src]', dk).forEach(loadImg) });   // sus fotos se piden 1 pantalla antes, nunca en el primer pantallazo
-    ST.create({ trigger: dk, start: 'top 78%', once: true, onEnter: () => { if (!dealt) { dealt = true; deal(); } } });
+    // sus fotos se piden 2 pantallas antes (nunca en el primer pantallazo) y se decodifican fuera del hilo principal: el reparto no se traba
+    let listas = null;
+    const preparar = () => {
+      if (listas) return listas;
+      $$('img[data-src]', dk).forEach(loadImg);
+      listas = Promise.all($$('img', dk).map(im => (im.complete ? Promise.resolve() : new Promise(ok => { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); }))
+        .then(() => (im.decode ? im.decode().catch(() => {}) : null))));
+      return listas;
+    };
+    ST.create({ trigger: dk, start: 'top 300%', once: true, onEnter: preparar });   // sus fotos se piden 1 pantalla antes, nunca en el primer pantallazo
+    ST.create({ trigger: dk, start: 'top 78%', once: true, onEnter: () => {
+      if (dealt) return; dealt = true;
+      Promise.race([preparar(), new Promise(ok => setTimeout(ok, 700))]).then(deal);   // espera las fotos listas, como máximo 0,7 s
+    } });
   }
 
   const mm = G.matchMedia();

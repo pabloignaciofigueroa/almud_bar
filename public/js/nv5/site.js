@@ -272,7 +272,7 @@
   if (root.classList.contains('intro') && scrollY < 10 && performance.now() < 1400) { window.__almudIntro = true; intro(); } else root.classList.remove('intro');
 
   // Revelados de titulares
-  $$('.ttl, .pie__f').forEach(t => {
+  $$('.ttl, .pie__f').filter(t => !t.closest('.quien')).forEach(t => {
     G.from(words(t), { yPercent: 110, duration: 1.05, ease: EXPO, stagger: .045,
       scrollTrigger: { trigger: t, start: 'top 88%', once: true },
       onComplete: () => { $$('.w', t).forEach(w => { w.style.overflow = 'visible'; }); if (t._in) t._in(); } });
@@ -390,6 +390,116 @@
     G.from(b, { scale: .55, rotation: -5, opacity: 0, duration: .95, ease: 'elastic.out(1.1,.42)', transformOrigin: '100% 50%',
       clearProps: 'transform,opacity', scrollTrigger: { trigger: b, start: 'top 95%', once: true } });
   });
+
+  /* ───────── v4 fase 6 · Con quién (verde) ───────── */
+  // El título entra como un brindis: «no somos ná» desde la izquierda y «sin ustedes!» desde la derecha; chocan, rebotan y vibran
+  const qt = $('.quien .ttl');
+  if (qt) {
+    const ws = $$('.w', qt);
+    ws.forEach(w => { w.style.overflow = 'visible'; });
+    const mid = Math.ceil(ws.length / 2), izq = ws.slice(0, mid), der = ws.slice(mid);
+    G.timeline({ scrollTrigger: { trigger: qt, start: 'top 86%', once: true } })
+      .from(izq, { x: () => -innerWidth * .7, rotation: -10, opacity: 0, duration: .62, ease: 'power3.in', stagger: { each: .05, from: 'end' } }, 0)
+      .from(der, { x: () => innerWidth * .7, rotation: 10, opacity: 0, duration: .62, ease: 'power3.in', stagger: .05 }, 0)
+      .to(izq, { x: -16, rotation: -3, duration: .08, ease: 'power2.out' }, .72)                 // ¡chin chin! el choque
+      .to(der, { x: 16, rotation: 3, duration: .08, ease: 'power2.out' }, .72)
+      .to(ws, { x: 0, rotation: 0, duration: .9, ease: 'elastic.out(1.3,.3)' }, .8)
+      .fromTo(qt, { scale: 1 }, { keyframes: [{ scale: 1.05, duration: .07, ease: 'power2.out' }, { scale: 1, duration: .6, ease: 'elastic.out(1,.35)' }], transformOrigin: '30% 60%' }, .72)
+      .set([...ws, qt], { clearProps: 'transform,opacity' });
+  }
+
+  // La baraja: al entrar se baraja (se parte en dos y se intercala) y se reparte en una pila con rotaciones leves.
+  // La foto de arriba se toma con el dedo o el mouse y se lanza con inercia; aparece la siguiente; al acabarse, la pila se arma sola.
+  // Clic o toque sin arrastre, Enter o flechas: pasa la foto. touch-action: pan-y → un deslizamiento vertical mueve la página.
+  const dk = $('[data-baraja]');
+  if (dk && window.PointerEvent) {
+    root.classList.add('bj');
+    const cards = $$('.carta', dk), n = cards.length, live = $('.baraja__live', dk), hint = $('.baraja__hint', dk);
+    dk.tabIndex = 0; dk.setAttribute('role', 'group');
+    const R = G.utils.random;
+    let pila = [], busy = true, dealt = false, drag = null;
+    const pose = c => ({ x: c._px, y: c._py, rotation: c._pr });
+    const say = () => {
+      const k = n - pila.length + 1;
+      live.textContent = pila.length ? (root.lang === 'en' ? 'Photo ' + k + ' of ' + n : 'Foto ' + k + ' de ' + n) : '';
+    };
+    const top = () => pila[pila.length - 1];
+    const mark = () => { cards.forEach(c => c.classList.remove('is-top')); if (top()) top().classList.add('is-top'); };
+    G.set(cards, { opacity: 0 });
+    function deal() {
+      busy = true;
+      pila = G.utils.shuffle(cards.slice());
+      pila.forEach((c, i) => { c.style.zIndex = i + 1; c.style.visibility = ''; c._px = R(-16, 16); c._py = R(-12, 12); c._pr = R(-7, 7); });
+      const W = dk.clientWidth;
+      dk.classList.add('is-dealing');
+      G.timeline({ onComplete: () => { busy = false; dk.classList.remove('is-dealing'); mark(); say(); } })
+        .fromTo(pila, { x: 0, y: -40, rotation: 0, scale: .9, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: .32, ease: 'power2.out', stagger: .012 })
+        // barajar: dos mitades que se abren…
+        .to(pila, { x: i => (i % 2 ? 1 : -1) * Math.min(W * .3, 170), rotation: i => (i % 2 ? 10 : -10), y: i => -i * 1.5, duration: .36, ease: 'power2.inOut' })
+        // …y se intercalan, repartiéndose una a una sobre la pila
+        .to(pila, { x: (i, c) => c._px, y: (i, c) => c._py, rotation: (i, c) => c._pr, duration: .55, ease: 'back.out(1.7)', stagger: .045 });
+    }
+    function lanzar(dir, vx = 0, vy = 0) {
+      const c = top(); if (!c || busy) return;
+      pila.pop(); mark();
+      const W = Math.max(dk.clientWidth, innerWidth * .6);
+      G.to(c, { x: '+=' + (dir * (W * .75 + 140) + vx * 160), y: '+=' + (vy * 160 + R(-50, 30)), rotation: '+=' + dir * R(16, 30), opacity: 0,
+        duration: .55, ease: 'power2.out', onComplete: () => { if (!pila.includes(c)) c.style.visibility = 'hidden'; } });   // si la pila ya se rearmó, no se esconde
+      const nx = top();
+      if (nx) G.fromTo(nx, { scale: .97 }, { scale: 1, duration: .5, ease: 'back.out(3)' });
+      if (hint) hint.classList.add('is-used');
+      say();
+      if (!pila.length) { busy = true; G.delayedCall(.7, deal); }   // después de que la última termina de volar
+    }
+    dk.addEventListener('pointerdown', e => {
+      if (e.button > 0 || busy || !top()) return;
+      const c = top();
+      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, lx: e.clientX, ly: e.clientY, t: e.timeStamp, vx: 0, vy: 0, on: false, c, p: pose(c), mouse: e.pointerType === 'mouse' };
+    });
+    dk.addEventListener('pointermove', e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.on) {
+        if (Math.hypot(dx, dy) < 6) return;
+        if (!drag.mouse && Math.abs(dy) > Math.abs(dx)) { drag = null; return; }   // gesto vertical: es scroll, no se toca
+        drag.on = true; try { dk.setPointerCapture(e.pointerId); } catch (_) {}
+        dk.classList.add('is-drag');
+      }
+      const dt = Math.max(1, e.timeStamp - drag.t);
+      drag.vx = (e.clientX - drag.lx) / dt * .7 + drag.vx * .3; drag.vy = (e.clientY - drag.ly) / dt * .7 + drag.vy * .3;
+      drag.lx = e.clientX; drag.ly = e.clientY; drag.t = e.timeStamp;
+      G.set(drag.c, { x: drag.p.x + dx, y: drag.p.y + dy * (drag.mouse ? 1 : .35), rotation: drag.p.rotation + dx * .06 });
+    });
+    const soltar = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag; drag = null; dk.classList.remove('is-drag');
+      if (!d.on) { if (e.type === 'pointerup') lanzar(1); return; }   // clic o toque: pasa la foto
+      const dx = e.clientX - d.x0;
+      if (e.type === 'pointerup' && (Math.abs(dx) > dk.clientWidth * .22 || Math.abs(d.vx) > .45)) lanzar(Math.sign(Math.abs(d.vx) > .45 ? d.vx : dx), d.vx, d.vy);
+      else G.to(d.c, { ...d.p, duration: .7, ease: 'elastic.out(1,.45)' });
+    };
+    dk.addEventListener('pointerup', soltar); dk.addEventListener('pointercancel', soltar);
+    dk.addEventListener('lostpointercapture', e => { if (e.target === dk) soltar(e); });
+    dk.addEventListener('dragstart', e => e.preventDefault());
+    dk.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === 'ArrowRight') { e.preventDefault(); lanzar(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); lanzar(-1); }
+    });
+    // sus fotos se piden 2 pantallas antes (nunca en el primer pantallazo) y se decodifican fuera del hilo principal: el reparto no se traba
+    let listas = null;
+    const preparar = () => {
+      if (listas) return listas;
+      $$('img[data-src]', dk).forEach(loadImg);
+      listas = Promise.all($$('img', dk).map(im => (im.complete ? Promise.resolve() : new Promise(ok => { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); }))
+        .then(() => (im.decode ? im.decode().catch(() => {}) : null))));
+      return listas;
+    };
+    ST.create({ trigger: dk, start: 'top 300%', once: true, onEnter: preparar });   // sus fotos se piden 1 pantalla antes, nunca en el primer pantallazo
+    ST.create({ trigger: dk, start: 'top 78%', once: true, onEnter: () => {
+      if (dealt) return; dealt = true;
+      Promise.race([preparar(), new Promise(ok => setTimeout(ok, 700))]).then(deal);   // espera las fotos listas, como máximo 0,7 s
+    } });
+  }
 
   const mm = G.matchMedia();
   // Parallax sutil: masas a distinta velocidad (≥768 px)
