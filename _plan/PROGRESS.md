@@ -46,3 +46,4 @@
 - Fase 6b/6c ✅ /nueva_v6/: baraja infinita, orden del desorden sin recortes, video de fiesta con contexto (commit 7762713, congelada)
 - 2026-10-23 Dossier de diseño v6: primer borrador (20 láminas, dossier/build_dossier.py)
 - Fase 7 ✅ /nueva_v7/: Eventos con slider de fiestas, título que cae; portada a pantalla completa (commit 6bda065, congelada)
+- Fase 8 ✅ /nueva_v8/: Equipo que gira, reseñas en cinta, cierre único con 18:00 en vivo, mapa activo, logo a la derecha (commit fae053b, congelada)
