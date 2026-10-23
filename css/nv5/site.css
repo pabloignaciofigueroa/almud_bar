@@ -688,7 +688,9 @@ html:not(.js) .m picture{display:none}
   .qz{grid-template-columns:4fr 5fr 3fr;gap:24px;align-items:stretch;margin-top:56px}
   .qz .qz__v--1{aspect-ratio:auto;height:auto;margin-top:6vh}   /* el único desfase: el brindis largo parte más abajo */
   .qz .qz__v--1 video{height:100%}
-  .qz__lado{grid-template-columns:1fr;gap:24px;align-content:start}
+  .qz__lado{display:flex;flex-direction:column;gap:24px}
+  .qz__lado .qz__v{flex:1 1 auto;aspect-ratio:auto;min-height:0}
+  .qz__lado .qz__v video{height:100%}   /* la columna de la derecha llega siempre al pie de la fila: sin huecos, con baraja o con grilla */
   .baraja__p{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 }
 /* Con JS y movimiento: la baraja es una pila que se lanza */
