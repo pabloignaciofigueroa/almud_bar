@@ -113,9 +113,9 @@
    "duration": 8.04,
    "muted": true,
    "attrs": "autoplay muted loop playsinline",
-   "budget_kb": 1150,
-   "budget_mp4_kb": 1150,
-   "within_budget": false,
+   "budget_kb": 1160,
+   "budget_mp4_kb": 1160,
+   "within_budget": true,
    "xfade": 0.8,
    "tramo_s": 8.84,
    "seam": {
