@@ -581,3 +581,8 @@ html:not(.js) .m picture{display:none}
 @media (min-width:1024px){.donde__d{grid-template-columns:minmax(0,1fr) 34%;gap:28px}}
 /* v4 fase 3: la greda de camarones va sin nombre (IG-077 no la nombra y la carta tiene dos platos con camarones y crema) */
 .co__more .co__sin{align-self:start}
+/* fase 3b · El lugar: primero las fotos del local lleno, la ruleta de rincones cierra la sección */
+.lleno,.lleno{padding-bottom:0}
+@media (min-width:768px){.lleno{padding-bottom:0}}
+.rincones,.gs .rincones{padding-bottom:var(--sec)!important;margin-top:40px}
+@media (min-width:1024px){.rincones,.gs .rincones{margin-top:72px}}

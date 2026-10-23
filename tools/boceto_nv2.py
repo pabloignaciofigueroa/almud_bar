@@ -222,17 +222,17 @@ body = f'''
     <div class="lugar__txt">{title('Somos inquietos y nos gusta el colorssss!', "Restless souls who love colorssss!", 'h-lugar')}</div>
     {vid('lugar-noche', 'lugar__v reveal', extra=' data-speed="-0.12"')}
   </div>
+  <div class="lleno wrap">
+    {pic('lugar-techada-llena', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 92vw', 'lleno__m lleno__m--1 reveal')}
+    {pic('lugar-salon-lleno', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--2 reveal')}
+    {pic('lugar-terraza-repleta', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--3 reveal')}
+  </div>
   <div class="rincones" data-h>
     <div class="rincones__st">
       <ul class="rincones__tr" data-track>
         {''.join(rincon_li(r, i) for i, r in enumerate(rincones))}
       </ul>
     </div>
-  </div>
-  <div class="lleno wrap">
-    {pic('lugar-techada-llena', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 92vw', 'lleno__m lleno__m--1 reveal')}
-    {pic('lugar-salon-lleno', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--2 reveal')}
-    {pic('lugar-terraza-repleta', 'a', '(min-width:1024px) 30vw, (min-width:768px) 30vw, 46vw', 'lleno__m lleno__m--3 reveal')}
   </div>
 </section>
 
