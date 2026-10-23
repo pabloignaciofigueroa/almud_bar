@@ -514,7 +514,7 @@
   if (et) {
     const ws = $$('.w', et);
     ws.forEach(w => { w.style.overflow = 'visible'; });
-    G.from(ws, { y: () => -Math.min(innerHeight * .65, 560), rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
+    G.from(ws, { y: () => -(et.getBoundingClientRect().top - et.closest('.eventos').getBoundingClientRect().top + et.offsetHeight + 40),   // desde el borde superior de la sección (overflow: clip) rotation: i => [-18, 12, -8, 16, -12][i % 5], opacity: 0, duration: 1.25, ease: 'bounce.out',
       stagger: .11, clearProps: 'transform,opacity', scrollTrigger: { trigger: et, start: 'top 82%', once: true } });
   }
 
@@ -534,7 +534,7 @@
     function enter(k) {
       const sl = slides[k], fotos = $$('.fs__f', sl);
       G.fromTo(names[k], { yPercent: 105, opacity: 0, rotation: j => (j % 3 - 1) * 12 }, { yPercent: 0, opacity: 1, rotation: 0, duration: .55, ease: 'back.out(2.4)', stagger: .035, overwrite: true });
-      G.fromTo(fotos, { y: () => innerHeight * .35, x: j => (j % 2 ? 60 : -60), rotation: j => (j % 2 ? 24 : -24), scale: .8, opacity: 0 },
+      G.fromTo(fotos, { y: () => innerHeight * .35, x: 0, rotation: j => (j % 2 ? 18 : -18), scale: .8, opacity: 0 },   // suben desde abajo: nunca se salen por los lados
         { y: 0, x: 0, rotation: (j, f) => parseFloat(getComputedStyle(f).getPropertyValue('--rot')) || 0, scale: 1, opacity: 1, duration: .9, ease: 'back.out(1.5)', stagger: .12, delay: .15, overwrite: true });   // cada foto queda con su giro leve (--rot)
       entered.add(k);
     }

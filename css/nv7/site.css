@@ -861,12 +861,12 @@ html:not(.bj) .baraja__p>.carta:nth-child(12){grid-column:1;grid-row:131/span 16
 .fs.is-on .fs__fotos{position:relative;display:block;flex:1;margin-top:18px;container-type:size}
 .fs.is-on .fs__f{position:absolute;margin:0;width:var(--w);flex:none}
 .fs.is-on .fs__f .m{box-shadow:0 18px 36px -18px rgba(14,12,11,.55)}
-.fs.is-on .fs__s--3 .fs__f--1{--w:min(58cqw,62cqh * .8);left:0;top:0;--rot:-5deg}
-.fs.is-on .fs__s--3 .fs__f--2{--w:min(52cqw,56cqh * .8);right:0;top:16cqh;--rot:4deg}
+.fs.is-on .fs__s--3 .fs__f--1{--w:min(54cqw,62cqh * .8);left:3cqw;top:2cqh;--rot:-5deg}
+.fs.is-on .fs__s--3 .fs__f--2{--w:min(48cqw,56cqh * .8);right:4cqw;top:16cqh;--rot:4deg}
 .fs.is-on .fs__s--3 .fs__f--3{--w:min(50cqw,50cqh * .8);left:calc(50cqw - var(--w) / 2 - 6cqw);bottom:0;--rot:-2deg}
-.fs.is-on .fs__s--2 .fs__f--1{--w:min(64cqw,70cqh * .8);left:0;top:0;--rot:-4deg}
-.fs.is-on .fs__s--2 .fs__f--2{--w:min(58cqw,62cqh * .8);right:0;bottom:0;--rot:5deg}
-.fs.is-on .fs__s--1 .fs__f--1{--w:min(82cqw,94cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625);--rot:-3deg}
+.fs.is-on .fs__s--2 .fs__f--1{--w:min(60cqw,68cqh * .8);left:3cqw;top:2cqh;--rot:-4deg}
+.fs.is-on .fs__s--2 .fs__f--2{--w:min(52cqw,60cqh * .8);right:5cqw;bottom:2cqh;--rot:5deg}
+.fs.is-on .fs__s--1 .fs__f--1{--w:min(80cqw,92cqh * .8);left:calc(50cqw - var(--w) / 2);top:calc(50cqh - var(--w) * .625);--rot:-3deg}
 .fs.is-on img,.fs.is-on video{-webkit-user-drag:none;pointer-events:none}
 .fs__dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:4px;z-index:2}
 .fs__dot{display:flex;align-items:center;width:56px;height:44px;padding:0 6px;border:0;background:none;cursor:pointer}
@@ -877,3 +877,6 @@ html:not(.bj) .baraja__p>.carta:nth-child(12){grid-column:1;grid-row:131/span 16
   .fs.is-on .fs__s{padding:28px 28px 72px}
   .fs.is-on .fs__n{font-size:min(calc((100cqw - 56px) / (var(--len) * .42)),190px,22vh)}
 }
+
+/* 7b · el título cae DENTRO de la sección lila: entra desde su borde superior, nunca encima de Con quién; y las fotos de cada fiesta, con su giro leve, quedan dentro de la pantalla */
+.eventos{overflow:clip}
