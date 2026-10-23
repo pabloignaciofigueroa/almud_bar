@@ -42,6 +42,45 @@
    "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior."
   },
   {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720
+   ],
+   "crf_max": 32,
+   "vp9_crf_max": 48,
+   "budget_kb": 1130,
+   "budget_mp4_kb": 1110,
+   "id": "portada-celular-b",
+   "ref": "V007",
+   "src": "assets/raw/ig/C3tFEcvJ80x_00.mp4",
+   "section": "portada",
+   "variant": "celular",
+   "segments": [
+    [
+     21.26,
+     30.1
+    ]
+   ],
+   "xfade": 0.8,
+   "ratio": "9:16",
+   "crf_start": 23,
+   "vp9_crf_start": 34,
+   "poster_q": {
+    "avif": 40,
+    "webp": 60,
+    "jpg": 70
+   },
+   "alt": {
+    "es": "La terraza techada repleta de gente bajo el techo de cintas de colores al atardecer, y una mesa de amigas de noche.",
+    "en": "The covered terrace packed with people under the colored-ribbon ceiling at sunset, then a table of friends at night."
+   },
+   "note": "Ronda 2: «la portada es el bar». V007 (IG-115) 21,26–30,1 s: un solo plano caminando por la terraza llena bajo las cintas (21,24–27,3) y una mesa de amigas de noche. Nitidez (mediana varianza laplaciana a 540 px) 53 vs 33 de la portada anterior. Fase 9: mismo tramo, ~120 KB más liviano en WebM y MP4 (tope 1.130/1.110 KB, CRF un poco más alto) para que el primer pantallazo del celular quede holgado bajo 1,5 MB."
+  },
+  {
    "id": "portada-escritorio",
    "ref": "V031",
    "src": "assets/raw/ig/DFWLrRxyvVB_00.mp4",
@@ -340,6 +379,42 @@
     "en": "People dance shoulder to shoulder at the anniversary party as the camera moves through the packed tables."
    },
    "note": "Ronda 4: V037 (IG-049, segundo día de los 11 años, ago-2025: «no quedaba otra que darlo todo») 47,05–56,0 s: dos planos propios (multitud bailando y luego mesas y grupos), sin primeros planos de una sola persona. Orden de los planos invertido (mesas → baile) para que el póster y el arranque muestren grupos y no a una persona en el centro; el salto entre ambos coincide con un corte propio del reel."
+  },
+  {
+   "loop": "crossfade",
+   "focal": [
+    50,
+    50
+   ],
+   "widths": [
+    720,
+    600
+   ],
+   "crf_max": 30,
+   "vp9_crf_max": 44,
+   "budget_kb": 1200,
+   "budget_mp4_kb": 1400,
+   "ratio": "4:5",
+   "id": "quien-multitud-3-b",
+   "ref": "V037",
+   "src": "assets/raw/ig/DNB7LK6y4i8_00.mp4",
+   "section": "con-quien",
+   "segments": [
+    [
+     51.95,
+     55.45
+    ],
+    [
+     45.85,
+     51.85
+    ]
+   ],
+   "xfade": 0.9,
+   "alt": {
+    "es": "La gente baila apretada en la fiesta de aniversario y la cámara pasa entre las mesas llenas.",
+    "en": "People dance shoulder to shoulder at the anniversary party as the camera moves through the packed tables."
+   },
+   "note": "Fase 9: igual que quien-multitud-3 pero SIN el plano de la botella vertida en la boca de un cliente (V037 55,53–56,73 s, corte propio del reel). Tramos: 51,95–55,45 (mesas y grupos) + 45,85–51,85 (gente bailando apretada; el plano de 45,8 s se suma para mantener 8–10 s). Fundido 0,9 s."
   },
   {
    "id": "eventos-fiesta",
