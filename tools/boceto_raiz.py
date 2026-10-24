@@ -223,6 +223,9 @@ EQ_DORSO = {
     'equipo-pablete': (None, 'Barra', 'Bar', 'haciéndole los copetitos a usté', 'making your drinks, yes, yours', 'IG-034'),
     'equipo-liz': ('Liz', 'Salones', 'Floor', 'la amada', 'our beloved', 'IG-067 · IG-088'),
     'equipo-eduardo': (None, 'Salones', 'Floor', 'el ondero', 'the cool one', 'IG-067'),
+    # v4 final · pedido del cliente: Elymar (etiquetada @elymar_bocarejo en IG-001) reemplaza a la tarjeta de las dos camareras;
+    # nombre confirmado por el cliente; lugar y frase de IG-001 («encargados de barra y salón: le ponen una sonrisota…»), en singular por pedido del cliente
+    'equipo-elymar': ('Elymar', 'Barra y salón', 'Bar & floor', 'le pone una sonrisota con cada cóctecito ito ito', 'she puts a big smile on every little cocktail', 'IG-001'),
 }
 # v4 fase 8 · Reseñas en dos cintas: solo las que dicen su país (10 de content/reviews.json); las 6 aprobadas en v3 con su extracto y glosa, las otras 4 textuales
 FLAG = {
@@ -479,7 +482,7 @@ body = f'''
     </div>
     <div class="eqz__m eqz__m--2">
       <div class="eqz__d eqz__d--3">{flip('equipo-pablete')}{flip('equipo-liz')}</div>
-      <div class="eqz__d eqz__d--4">{flip('equipo-eduardo')}{flip_duo()}</div>
+      <div class="eqz__d eqz__d--4">{flip('equipo-eduardo')}{flip('equipo-elymar')}</div>
     </div>
   </div>
   <p class="wrap own"><span class="own__k" data-en="The owners">Los dueños</span> «los papis del almud: el franchuto y la disharashera»{g("[the Almud's parents: the Frenchman and «la disharashera»]", "gloss gloss--s")}</p>
