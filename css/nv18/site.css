@@ -1138,8 +1138,8 @@ html:not(.fl) .flip__q{font-size:18px}
 .carga__pct{display:none}
 /* v4 fase 15: durante la carga el video está OCULTO (no solo pausado): recién se ve por la boca, al abrirse */
 .carga .hero__win{visibility:hidden}
-.carga .hero__iso .iso__g path{stroke-dasharray:none;stroke-dashoffset:0}
-.carga .hero__iso svg{clip-path:inset(calc((1 - var(--load, 0)) * 100%) -4% -4% -4%)}
+/* v4 final · el almud se DIBUJA trazo a trazo durante la carga (como un lápiz), en el orden del SVG; el JS mueve el dashoffset */
+.carga .hero__iso .iso__g path{stroke-dasharray:1;stroke-dashoffset:1}
 .carga .carga__pct{display:block;position:absolute;left:0;right:0;top:calc(44% + min(52vw, 34svh) * .72 + 18px);z-index:3;margin:0;text-align:center;
   font:600 18px/1 var(--f-body);letter-spacing:.06em;font-variant-numeric:tabular-nums;color:var(--papel)}
 /* respaldo CSS: si el JS se cae, todo se ve a los 11 s (la carga dura 8 s como máximo) */

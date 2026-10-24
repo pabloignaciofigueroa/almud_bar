@@ -14,9 +14,9 @@
 <link rel="preload" href="/assets/v4/video/portada-c-h-l-poster.webp" as="image" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 <link rel="preload" href="/vendor/gsap.min.js?v=47da594c" as="script">
 <link rel="preload" href="/vendor/ScrollTrigger.min.js?v=ba1fa78e" as="script">
-<link rel="preload" href="/js/nv17/site.js?v=ca9913cd" as="script">
-<link rel="stylesheet" href="/css/nv17/tokens.css?v=0172a6f2">
-<link rel="stylesheet" href="/css/nv17/site.css?v=c29a482d">
+<link rel="preload" href="/js/nv18/site.js?v=ca9913cd" as="script">
+<link rel="stylesheet" href="/css/nv18/tokens.css?v=0172a6f2">
+<link rel="stylesheet" href="/css/nv18/site.css?v=5ac04085">
 <link rel="canonical" href="https://almudbar.pages.dev/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Almud Bar">
@@ -149,7 +149,7 @@
     if (!iso) iso = d.querySelector('.hero__iso'); if (!pct) pct = d.querySelector('[data-pct]');
     var n = Math.floor(shown);
     if (pct) pct.textContent = n;
-    if (iso) iso.style.setProperty('--load', (shown / 100).toFixed(4));
+    if (iso) trazos(shown / 100);
     H.pct = n;
     last = now;
     if (shown >= 100 && finished) { clearInterval(iv); return listo(); }
@@ -157,6 +157,22 @@
   }
   // v4 fase 14: el dibujo va con rAF, pero un reloj real (setInterval) lo sigue moviendo si rAF se frena,
   // y un setTimeout fuerza el 100 % y la apertura a los 8 s pase lo que pase
+  // v4 final · trazo a trazo: el progreso f (0–1) se reparte entre los 6 trazos según su largo real;
+  // cada uno empieza donde termina el anterior (rombo exterior, boca, lados, palito y chevrón)
+  var TP = null, TL = null, TT = 0;
+  function trazos(f) {
+    if (!TP) {
+      TP = [].slice.call(iso.querySelectorAll('.iso__g path')); if (!TP.length) { TP = null; return; }
+      TL = TP.map(function (p) { var a = p.getAttribute('pathLength'); p.removeAttribute('pathLength'); var l = 1; try { l = p.getTotalLength() || 1; } catch (e) {} if (a) p.setAttribute('pathLength', a); return l; });
+      TT = TL.reduce(function (a, b) { return a + b; }, 0);
+    }
+    var acc = 0;
+    for (var i = 0; i < TP.length; i++) {
+      var a = acc / TT, b = (acc + TL[i]) / TT; acc += TL[i];
+      var k = Math.min(1, Math.max(0, (f - a) / (b - a)));
+      TP[i].style.strokeDashoffset = (1 - k).toFixed(4);
+    }
+  }
   var last = 0, raf = false;
   var iv = setInterval(function () { if (performance.now() - last > 80) tick(); }, 50);
   setTimeout(function () { fin(); shown = 100; tick(); listo(); }, Math.max(0, 8000 - performance.now()));
@@ -387,6 +403,6 @@
 <script src="/vendor/gsap.min.js?v=47da594c" defer></script>
 <script src="/vendor/ScrollTrigger.min.js?v=ba1fa78e" defer></script>
 <script src="/vendor/lenis.min.js?v=79e3a064" defer></script>
-<script src="/js/nv17/site.js?v=ca9913cd" defer></script>
+<script src="/js/nv18/site.js?v=ca9913cd" defer></script>
 </body>
 </html>

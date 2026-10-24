@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publicación final · la v17 es la portada: genera index.html (y 404.html) en la raíz con css/nv17 y js/nv17. Copia de boceto_nv17.py con PATH '/', enlaces a /carta/ y sin noindex."""
+"""Publicación final · la v17 es la portada: genera index.html (y 404.html) en la raíz con css/nv18 y js/nv18. Copia de boceto_nv18.py con PATH '/', enlaces a /carta/ y sin noindex."""
 """Boceto funcional v3 (fase 8): genera v3/index.html desde assets/v3/media.json.
 Texto: solo content/copy-v3.md. Rutas relativas desde /v3/.
 Uso: python3 tools/boceto_v3.py
@@ -555,9 +555,9 @@ page = f'''<!doctype html>
 <link rel="preload" href="{UP}{IM_L}" as="image" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 <link rel="preload" href="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" as="script">
 <link rel="preload" href="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" as="script">
-<link rel="preload" href="{UP}js/nv17/site.js?v={ver('js/nv17/site.js')}" as="script">
-<link rel="stylesheet" href="{UP}css/nv17/tokens.css?v={ver('css/nv17/tokens.css')}">
-<link rel="stylesheet" href="{UP}css/nv17/site.css?v={ver('css/nv17/site.css')}">
+<link rel="preload" href="{UP}js/nv18/site.js?v={ver('js/nv18/site.js')}" as="script">
+<link rel="stylesheet" href="{UP}css/nv18/tokens.css?v={ver('css/nv18/tokens.css')}">
+<link rel="stylesheet" href="{UP}css/nv18/site.css?v={ver('css/nv18/site.css')}">
 <link rel="canonical" href="{SITE}{PATH}">
 {OG}
 <script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{{r.classList.add('intro')}}}})(document)</script>
@@ -567,7 +567,7 @@ page = f'''<!doctype html>
 <script src="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" defer></script>
 <script src="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" defer></script>
 <script src="{UP}vendor/lenis.min.js?v={ver('vendor/lenis.min.js')}" defer></script>
-<script src="{UP}js/nv17/site.js?v={ver('js/nv17/site.js')}" defer></script>
+<script src="{UP}js/nv18/site.js?v={ver('js/nv18/site.js')}" defer></script>
 </body>
 </html>
 '''
@@ -584,7 +584,7 @@ for sec in ('id="lugar"', 'class="tragos__band"'):
     m = re.search(r'data-src="([^"]+)"', page[page.index(sec):])
     _f.append(_b(m.group(1)) if m else 60000)
 _man['fotos'] = _f
-page = page.replace('__CARGA_MAN__', json.dumps(_man, separators=(',', ':'))).replace('__CARGA_JS__', (ROOT / 'js/nv17/carga.js').read_text().strip())
+page = page.replace('__CARGA_MAN__', json.dumps(_man, separators=(',', ':'))).replace('__CARGA_JS__', (ROOT / 'js/nv18/carga.js').read_text().strip())
 out = ROOT / 'index.html'
 out.parent.mkdir(exist_ok=True)
 out.write_text(page)

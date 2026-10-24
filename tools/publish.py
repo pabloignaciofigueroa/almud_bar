@@ -22,7 +22,7 @@ OUT = ROOT / 'public'
 # _redirects las manda con 301 a / y a /carta/.
 INCLUDE_FILES = ['index.html', 'carta/index.html', '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']
 # De estas carpetas se copia solo lo que las páginas referencian de verdad (used_files sigue href/src/srcset/url() y rutas en JS).
-INCLUDE_DIRS = ['vendor', 'assets/fonts', 'brand', 'css/nv17', 'js/nv17', 'assets/v3', 'assets/v4', 'assets/nv2', 'assets/nv9']
+INCLUDE_DIRS = ['vendor', 'assets/fonts', 'brand', 'css/nv18', 'js/nv18', 'assets/v3', 'assets/v4', 'assets/nv2', 'assets/nv9']
 
 ALL_DIRS = []
 
