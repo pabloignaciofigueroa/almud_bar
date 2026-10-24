@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v4 fase 10 pub · la v11 pasa a ser la portada: genera index.html en la raíz (PATH '/', enlaces a /carta/) con css/nv11 y js/nv11. Copia de boceto_nv11.py; sin noindex."""
+"""Publicación final · la v17 es la portada: genera index.html (y 404.html) en la raíz con css/nv17 y js/nv17. Copia de boceto_nv17.py con PATH '/', enlaces a /carta/ y sin noindex."""
 """Boceto funcional v3 (fase 8): genera v3/index.html desde assets/v3/media.json.
 Texto: solo content/copy-v3.md. Rutas relativas desde /v3/.
 Uso: python3 tools/boceto_v3.py
@@ -12,14 +12,14 @@ IM = dict(M['images'])
 _NV2 = ROOT / 'assets/nv2/media-img.json'  # v4 fase 3: recortes nuevos de /nueva_v2/ (tools/media_nv2.py)
 if _NV2.exists():
     IM.update(json.loads(_NV2.read_text())['images'])
-_NV9 = ROOT / 'assets/nv9/media-img.json'  # v4 fase 9: imágenes nuevas de /nueva_v11/ (los sillones de verdad)
+_NV9 = ROOT / 'assets/nv9/media-img.json'  # v4 fase 9: imágenes nuevas de /nueva_v17/ (los sillones de verdad)
 if _NV9.exists():
     IM.update(json.loads(_NV9.read_text())['images'])
 VI = json.loads((ROOT / 'assets/v4/media-video.json').read_text())['videos']  # v4 fase 2: loops de 8–10 s hacia adelante con fundido
 import os
 RAIZ = True  # v4: se construye en /nueva/ con rutas absolutas   # fase 20: la v3 pasa a ser / (rutas absolutas)
 UP = '/' if RAIZ else '../'
-PATH = '/'   # v4 fase 10 pub: la v11 es la portada
+PATH = '/'   # publicación final: la v17 es la portada
 E = html.escape
 
 
@@ -61,7 +61,9 @@ def vid(id_, cls='', hero=False, extra=''):
             f' data-webm="{UP}{v["files"]["webm"]["path"]}" data-mp4="{UP}{v["files"]["mp4"]["path"]}"'
             + (' data-hero' if hero else '') +
             f' aria-label="{E(v["alt"]["es"])}" data-aria-en="{E(v["alt"]["en"])}"></video>'
-            f'<noscript><img class="v" src="{poster}" width="{w}" height="{h}" alt="{E(v["alt"]["es"])}"></noscript></figure>')
+            + (f'<noscript><video class="v" autoplay muted loop playsinline width="{w}" height="{h}" poster="{poster}" aria-label="{E(v["alt"]["es"])}">'
+               f'<source src="{UP}{v["files"]["webm"]["path"]}" type="video/webm"><source src="{UP}{v["files"]["mp4"]["path"]}" type="video/mp4"></video></noscript></figure>'
+               if hero else f'<noscript><img class="v" src="{poster}" width="{w}" height="{h}" alt="{E(v["alt"]["es"])}"></noscript></figure>'))
 
 
 def ver(*paths):
@@ -128,7 +130,7 @@ CARTA = '/carta/'   # v4 fase 9: la home v9 enlaza a su propia carta
 rincones = [
     ('lugar-barra', 'a', 'Barra', 'The bar', 'Pucha que nos gusta nuestra barrita!', 'Gosh, we love our little bar!'),
     ('lugar-terraza-techada', 'a', 'Terraza techada', 'Covered terrace', 'Techamos parte de la terraza', 'Part of the terrace has a roof now'),
-    ('lugar-sillones-b', 'a', 'Sillones', 'Lounge', None, None),   # v4 fase 9: el rincón muestra los sillones (cuadro del video propio V014), no a una persona
+    ('lugar-sillones', 'a', 'Sillones', 'Lounge', 'Felices, con el corazón llenifer!', 'Happy, with our hearts full!'),   # v4 fase 17 (cliente): vuelve P114, la foto de antes de la fase 9 (@estudiouno.prod, IG-075); bajada literal de IG-009 («❤️» → «corazón»)
     ('lugar-terraza-abierta', 'a', 'Terraza', 'Terrace', 'Amamos los atardeceres desde nuestra terracita', 'We love a sunset from our little terrace'),
     ('lugar-lampara-pinzas', 'a', 'Lámparas', 'Lamps', 'Nos gustan los brillitos, las luces', 'We love a little sparkle and twinkly lights'),
     ('lugar-ojo-piojo', 'm', 'Ojo Piojo', 'Ojo Piojo [Heads up! · eye mural]', 'una mirada vale más que mil palabras', 'A look says more than a thousand words'),
@@ -317,12 +319,14 @@ body = f'''
 <!-- 1 · PORTADA -->
 <section class="hero" aria-label="Almud Bar">
   <div class="hero__win" data-win>
-    {vid('portada-celular-b', 'hero__v hero__v--m', hero=True)}
-    {vid('portada-escritorio', 'hero__v hero__v--d', hero=True)}
+    {vid('portada-c-v', 'hero__v hero__v--m', hero=True)}
+    {vid('portada-c-h-l', 'hero__v hero__v--d', hero=True)}
     <div class="hero__veil" aria-hidden="true"></div>
-    <script>(function(d){{var L=matchMedia('(orientation: landscape) and (min-width:768px)').matches,v=d.querySelector(L?'.hero__v--d video':'.hero__v--m video');v.dataset.on='1';v.poster=v.dataset.poster;if(matchMedia('(prefers-reduced-motion: reduce)').matches){{v.removeAttribute('autoplay');return}}function go(){{if(v.dataset.src)return;v.dataset.src='1';v.preload='auto';v.innerHTML='<source src="'+v.dataset.webm+'" type="video/webm"><source src="'+v.dataset.mp4+'" type="video/mp4">';v.load();var q=v.play();if(q&&q.catch)q.catch(function(){{}})}}if(d.documentElement.classList.contains('intro')||d.readyState==='complete')go();else{{addEventListener('load',go);setTimeout(go,2500)}}}})(document)</script>
+    <script type="application/json" id="carga-man">__CARGA_MAN__</script>
+    <script>__CARGA_JS__</script>
   </div>
   <div class="hero__iso" aria-hidden="true">{ISO}</div>
+  <p class="carga__pct" aria-hidden="true"><span data-pct>0</span>&#8239;%</p>
   <div class="hero__in">
     <h1 class="hero__logo"><span class="sr-only">Almud Bar</span>{letras(svg_inline('almud-horizontal-claro', 'hero__svg'))}</h1>
     <p class="hero__claim"><span class="hero__claim-t">Coctelería de autor, comida &amp; música bonita desde 2014</span>{g('Signature cocktails, food & good music since 2014')}</p>
@@ -533,8 +537,8 @@ body = f'''
 </footer>
 '''
 
-IM_P = VI['portada-celular-b']['poster']['webp']['path']
-IM_L = VI['portada-escritorio']['poster']['webp']['path']
+IM_P = VI['portada-c-v']['poster']['webp']['path']
+IM_L = VI['portada-c-h-l']['poster']['webp']['path']
 page = f'''<!doctype html>
 <html lang="es">
 <head>
@@ -547,27 +551,75 @@ page = f'''<!doctype html>
 <link rel="preload" href="{UP}assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{UP}{IM_P}" as="image" type="image/webp" media="(orientation: portrait), (max-width: 767px)" fetchpriority="high">
-<link rel="preload" href="{UP}{IM_L}" as="image" type="image/webp" media="(orientation: landscape) and (min-width: 768px)" fetchpriority="high">
+<link rel="preload" href="{UP}{IM_P}" as="image" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" href="{UP}{IM_L}" as="image" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 <link rel="preload" href="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" as="script">
 <link rel="preload" href="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" as="script">
-<link rel="preload" href="{UP}js/nv11/site.js?v={ver('js/nv11/site.js')}" as="script">
-<link rel="stylesheet" href="{UP}css/nv11/tokens.css?v={ver('css/nv11/tokens.css')}">
-<link rel="stylesheet" href="{UP}css/nv11/site.css?v={ver('css/nv11/site.css')}">
+<link rel="preload" href="{UP}js/nv17/site.js?v={ver('js/nv17/site.js')}" as="script">
+<link rel="stylesheet" href="{UP}css/nv17/tokens.css?v={ver('css/nv17/tokens.css')}">
+<link rel="stylesheet" href="{UP}css/nv17/site.css?v={ver('css/nv17/site.css')}">
 <link rel="canonical" href="{SITE}{PATH}">
 {OG}
-<script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{{r.classList.add('intro');setTimeout(function(){{if(!window.__almudIntro)r.classList.remove('intro')}},1400)}}}})(document)</script>
+<script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');else{{r.classList.add('intro')}}}})(document)</script>
 </head>
 <body>
 {body}
 <script src="{UP}vendor/gsap.min.js?v={ver('vendor/gsap.min.js')}" defer></script>
 <script src="{UP}vendor/ScrollTrigger.min.js?v={ver('vendor/ScrollTrigger.min.js')}" defer></script>
 <script src="{UP}vendor/lenis.min.js?v={ver('vendor/lenis.min.js')}" defer></script>
-<script src="{UP}js/nv11/site.js?v={ver('js/nv11/site.js')}" defer></script>
+<script src="{UP}js/nv17/site.js?v={ver('js/nv17/site.js')}" defer></script>
 </body>
 </html>
 '''
+# v4 fase 13 · manifiesto de la carga: bytes de cada archivo que el almud espera
+def _b(u):
+    q = ROOT / u.lstrip('/').split('?')[0]
+    return q.stat().st_size if q.is_file() else 0
+_man = {k: {'webm': _b(VI[i]['files']['webm']['path']), 'mp4': _b(VI[i]['files']['mp4']['path']), 'dur': VI[i]['duration']} for k, i in (('v', 'portada-c-v'), ('h', 'portada-c-h-l'))}   # v4 fase 13: escritorio con la versión liviana
+_pos = sorted(set(re.findall(r'data-poster="([^"]+)"', page)))
+_man['posters'] = [{'url': u, 'bytes': _b(u)} for u in _pos]
+_man['logo'] = {'url': UP + 'brand/v3/favicon.svg', 'bytes': _b('brand/v3/favicon.svg')}
+_f = []
+for sec in ('id="lugar"', 'class="tragos__band"'):
+    m = re.search(r'data-src="([^"]+)"', page[page.index(sec):])
+    _f.append(_b(m.group(1)) if m else 60000)
+_man['fotos'] = _f
+page = page.replace('__CARGA_MAN__', json.dumps(_man, separators=(',', ':'))).replace('__CARGA_JS__', (ROOT / 'js/nv17/carga.js').read_text().strip())
 out = ROOT / 'index.html'
 out.parent.mkdir(exist_ok=True)
 out.write_text(page)
 print('ok', out, len(page))
+
+# Publicación final · la 404 de Cloudflare Pages con la piel de la v17 (antes usaba css/v2, que ya no se publica).
+# Solo líneas literales de Almud y etiquetas de interfaz; rutas absolutas porque se sirve en cualquier ruta inexistente.
+_css = re.findall(r'<link rel="stylesheet" href="([^"]+)">', page)
+p404 = f'''<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Almud Bar · Castro, Chiloé</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/brand/v3/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+{''.join(f'<link rel="stylesheet" href="{h}">' for h in _css)}
+<style>.e404{{min-height:100svh;display:grid;align-content:center;gap:22px;padding:calc(var(--nav,60px) + 32px) var(--gut,16px) 48px;max-width:900px;margin:0 auto}}
+.e404 h1{{margin:0;font:800 clamp(48px,11vw,120px)/.9 var(--f-display);text-transform:uppercase;color:#f5e9db}}
+.e404 p{{margin:0;font:500 22px/1.35 var(--f-body);color:#f5e9db}}.e404 .btns{{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}}body{{background:#0e0c0b}}</style>
+<script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}
+d.addEventListener('DOMContentLoaded',function(){{if(r.lang!=='en')return;[].forEach.call(d.querySelectorAll('[data-en]'),function(e){{e.textContent=e.getAttribute('data-en')}})}})}})(document)</script>
+</head>
+<body>
+<header class="nav nav--solid"><a class="nav__logo" href="/" aria-label="Almud Bar · Inicio">{svg_inline('almud-horizontal-claro', 'nav__svg')}</a>
+  <nav class="nav__r"><a class="btn btn--rosa nav__carta" href="/carta/" data-en="Menu">Carta</a></nav></header>
+<main class="e404">
+  <h1 data-en="This page doesn't exist">Esta página no existe</h1>
+  <p>Venga venga, le esperamos!{g('Come on over, we are waiting for you!')}</p>
+  <p data-en="Open Tue to Sat from 6 pm · Serrano 325, Castro">Abrimos de Mar a Sáb a las 18:00&nbsp;hrs · Serrano 325, Castro</p>
+  <div class="btns"><a class="btn btn--rosa" href="/" data-en="Home">Inicio</a><a class="btn btn--rosa" href="/carta/" data-en="See the menu">Ver la carta</a><a class="btn btn--rosa" href="{E(MAPS)}" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
+</main>
+</body>
+</html>
+'''
+(ROOT / '404.html').write_text(p404)
+print('ok', ROOT / '404.html', len(p404))

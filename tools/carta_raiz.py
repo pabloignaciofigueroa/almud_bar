@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-v4 fase 10 pub · tools/carta_raiz.py: copia de carta_nv11.py que genera /carta/ (la carta principal) con css/nv11 y js/nv11 (paleta nueva).
+Publicación final · tools/carta_raiz.py: copia de carta_nv17.py que genera /carta/ (la carta principal) con css/nv17 y js/nv17 (paleta nueva).
 Carta v3 (fase 14): genera v3/carta/index.html desde content/carta-v2.json.
 Nombres, descripciones y precios literales. Rutas relativas desde /v3/carta/.
 Uso: python3 tools/carta_v3.py"""
@@ -260,9 +260,9 @@ page = f'''<!doctype html>
 <link rel="preload" href="{UP}assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{UP}assets/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{UP}css/nv11/tokens.css?v={ver('css/nv11/tokens.css')}">
-<link rel="stylesheet" href="{UP}css/nv11/carta-base.css?v={ver('css/nv11/carta-base.css')}">
-<link rel="stylesheet" href="{UP}css/nv11/carta.css?v={ver('css/nv11/carta.css')}">
+<link rel="stylesheet" href="{UP}css/nv17/tokens.css?v={ver('css/nv17/tokens.css')}">
+<link rel="stylesheet" href="{UP}css/nv17/carta-base.css?v={ver('css/nv17/carta-base.css')}">
+<link rel="stylesheet" href="{UP}css/nv17/carta.css?v={ver('css/nv17/carta.css')}">
 <style>{''.join(tabcss + chipcss)}</style>
 <script>(function(d){{var r=d.documentElement,T={json.dumps(ids)},h=(location.hash||'').slice(1);r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}
 var t=T.indexOf(h)>-1?h:null;if(!t&&h){{var el=null;try{{el=d.querySelector('[data-sub="'+h+'"]')}}catch(e){{}}}}
@@ -291,7 +291,7 @@ r.setAttribute('data-tab',t||'casa');if(h&&!t){{r.setAttribute('data-pending-sub
   </footer>
 </main>
 <script>(function(d){{if(d.documentElement.lang!=='en')return;d.querySelectorAll('body [data-en]').forEach(function(e){{e.dataset.es=e.textContent;e.textContent=e.dataset.en}})}})(document)</script>
-<script src="{UP}js/nv11/carta.js?v={ver('js/nv11/carta.js')}" defer></script>
+<script src="{UP}js/nv17/carta.js?v={ver('js/nv17/carta.js')}" defer></script>
 </body>
 </html>
 '''

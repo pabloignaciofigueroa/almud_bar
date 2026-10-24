@@ -17,11 +17,12 @@ from urllib.parse import unquote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public'
 
-INCLUDE_FILES = ['index.html', 'carta/index.html', 'v3/index.html', 'v3/carta/index.html', 'nueva/index.html', 'nueva/carta/index.html', 'nueva_v2/index.html', 'nueva_v3/index.html', 'nueva_v4/index.html', 'nueva_v5/index.html', 'nueva_v6/index.html', 'nueva_v7/index.html', 'nueva_v8/index.html', 'nueva_v9/index.html', 'nueva_v9/carta/index.html', 'nueva_v10/index.html', 'nueva_v10/carta/index.html', 'nueva_v11/index.html', 'nueva_v11/carta/index.html', 'nueva_v12/index.html', 'nueva_v12/carta/index.html', 'nueva_v13/index.html', 'nueva_v13/carta/index.html', 'nueva_v14/index.html', 'nueva_v14/carta/index.html', 'nueva_v15/index.html', 'nueva_v15/carta/index.html', 'nueva_v16/index.html', 'nueva_v16/carta/index.html', 'nueva_v17/index.html', 'nueva_v17/carta/index.html', 'assets/og.jpg',  # fase 20: la v3 es la portada (/ y /carta/); /v3/ redirige
-                  # fase 15: la carta en su propia página
-                 '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']  # pulido 3: 404 de Pages, rastreo e íconos
-# v2: solo lo que el sitio nuevo usa. La v1 (css/main.css, js/main.js, assets/img, assets/video) queda en el repo por historia, fuera de public/.
-INCLUDE_DIRS = ['css/v2', 'js/v2', 'vendor', 'assets/v2', 'assets/fonts', 'brand', 'css/v3', 'js/v3', 'assets/v3', 'css/v4', 'js/v4', 'assets/v4', 'css/nv2', 'js/nv2', 'css/nv3', 'js/nv3', 'css/nv4', 'js/nv4', 'css/nv5', 'js/nv5', 'css/nv6', 'js/nv6', 'css/nv7', 'js/nv7', 'css/nv8', 'js/nv8', 'css/nv9', 'js/nv9', 'css/nv10', 'js/nv10', 'css/nv11', 'js/nv11', 'css/nv12', 'js/nv12', 'css/nv13', 'js/nv13', 'css/nv14', 'js/nv14', 'css/nv15', 'js/nv15', 'css/nv16', 'js/nv16', 'css/nv17', 'js/nv17', 'assets/nv2', 'assets/nv9']
+# Publicación final (v4): en almudbar.pages.dev queda SOLO la v17: / y /carta/ (generadas por tools/boceto_raiz.py y
+# tools/carta_raiz.py). Las /nueva…/nueva_v17/ y la /v3/ siguen en el repo (y en la rama respaldo-versiones), pero no se publican:
+# _redirects las manda con 301 a / y a /carta/.
+INCLUDE_FILES = ['index.html', 'carta/index.html', '404.html', 'robots.txt', 'sitemap.xml', 'site.webmanifest']
+# De estas carpetas se copia solo lo que las páginas referencian de verdad (used_files sigue href/src/srcset/url() y rutas en JS).
+INCLUDE_DIRS = ['vendor', 'assets/fonts', 'brand', 'css/nv17', 'js/nv17', 'assets/v3', 'assets/v4', 'assets/nv2', 'assets/nv9']
 
 ALL_DIRS = []
 
@@ -73,8 +74,79 @@ HEADERS = """\
 /vendor/*
   Cache-Control: public, max-age=31536000, immutable
 """
-# v4 fase 10 pub: la v11 es la portada (/ y /carta/); la v3 queda archivada en /v3/ y /v3/carta/ (noindex), así que ya no se redirige
-REDIRECTS = """/v3/avance/ / 301
+# Publicación final: toda versión vieja va con 301 a / (y su carta a /carta/); el #pestaña lo conserva el navegador
+REDIRECTS = """/nueva/carta/* /carta/ 301
+/nueva/carta /carta/ 301
+/nueva/* / 301
+/nueva / 301
+/nueva_v2/carta/* /carta/ 301
+/nueva_v2/carta /carta/ 301
+/nueva_v2/* / 301
+/nueva_v2 / 301
+/nueva_v3/carta/* /carta/ 301
+/nueva_v3/carta /carta/ 301
+/nueva_v3/* / 301
+/nueva_v3 / 301
+/nueva_v4/carta/* /carta/ 301
+/nueva_v4/carta /carta/ 301
+/nueva_v4/* / 301
+/nueva_v4 / 301
+/nueva_v5/carta/* /carta/ 301
+/nueva_v5/carta /carta/ 301
+/nueva_v5/* / 301
+/nueva_v5 / 301
+/nueva_v6/carta/* /carta/ 301
+/nueva_v6/carta /carta/ 301
+/nueva_v6/* / 301
+/nueva_v6 / 301
+/nueva_v7/carta/* /carta/ 301
+/nueva_v7/carta /carta/ 301
+/nueva_v7/* / 301
+/nueva_v7 / 301
+/nueva_v8/carta/* /carta/ 301
+/nueva_v8/carta /carta/ 301
+/nueva_v8/* / 301
+/nueva_v8 / 301
+/nueva_v9/carta/* /carta/ 301
+/nueva_v9/carta /carta/ 301
+/nueva_v9/* / 301
+/nueva_v9 / 301
+/nueva_v10/carta/* /carta/ 301
+/nueva_v10/carta /carta/ 301
+/nueva_v10/* / 301
+/nueva_v10 / 301
+/nueva_v11/carta/* /carta/ 301
+/nueva_v11/carta /carta/ 301
+/nueva_v11/* / 301
+/nueva_v11 / 301
+/nueva_v12/carta/* /carta/ 301
+/nueva_v12/carta /carta/ 301
+/nueva_v12/* / 301
+/nueva_v12 / 301
+/nueva_v13/carta/* /carta/ 301
+/nueva_v13/carta /carta/ 301
+/nueva_v13/* / 301
+/nueva_v13 / 301
+/nueva_v14/carta/* /carta/ 301
+/nueva_v14/carta /carta/ 301
+/nueva_v14/* / 301
+/nueva_v14 / 301
+/nueva_v15/carta/* /carta/ 301
+/nueva_v15/carta /carta/ 301
+/nueva_v15/* / 301
+/nueva_v15 / 301
+/nueva_v16/carta/* /carta/ 301
+/nueva_v16/carta /carta/ 301
+/nueva_v16/* / 301
+/nueva_v16 / 301
+/nueva_v17/carta/* /carta/ 301
+/nueva_v17/carta /carta/ 301
+/nueva_v17/* / 301
+/nueva_v17 / 301
+/v3/carta/* /carta/ 301
+/v3/carta /carta/ 301
+/v3/* / 301
+/v3 / 301
 """
 
 
