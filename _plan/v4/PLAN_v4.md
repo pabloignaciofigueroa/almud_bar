@@ -156,4 +156,9 @@
   - /nueva…/nueva_v11/ siguen publicadas, congeladas y con noindex. sitemap con lastmod 2026-10-23.
   - Verificación local y capturas en _plan/v4/fase10/ (avance.log, qa-pub.json, raiz-390/1440, carta-390). Falta: commit, push y la verificación en línea (links, videos, miniatura de WhatsApp).
 
+- **Publicación final (2026-10-24, aprobada por el cliente, preparada sin commit):** la v17 es la portada.
+  - / y /carta/ salen de tools/boceto_raiz.py y tools/carta_raiz.py (copias de boceto_nv17/carta_nv17, css/nv17 y js/nv17), sin noindex; canonical y og:url en https://almudbar.pages.dev/ y /carta/; og:image /assets/v3/og.jpg y og-carta.jpg (publicadas). La 404 pasa a la piel de la v17.
+  - public/ queda solo con la raíz, /carta/, la 404 y los assets que la v17 usa (dependencias seguidas desde el HTML/CSS/JS: 571 archivos, 0 sin referencia, 0 faltantes); antes 746 archivos y 120 MB, ahora 80 MB.
+  - Las /nueva…/nueva_v17/ y /v3/ siguen en el repo (fuentes) y en la rama respaldo-versiones, pero no se publican: _redirects las manda con 301 a / (y sus cartas a /carta/). sitemap solo / y /carta/; robots permite.
+
 **Punto de retorno (fase 2 cerrada):** commit 94c2eb1 · etiqueta local v4-fase2 (GitHub no permite subir etiquetas desde aquí). /nueva/ queda congelada; desde la fase 3 se trabaja en /nueva_v2/ (tools/boceto_nv2.py, css/nv2, js/nv2).

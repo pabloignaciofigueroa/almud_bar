@@ -1,5 +1,0 @@
-/* Almud Bar v2 · fuentes autoalojadas: Six Caps (display) + Oswald 300/400/600 (texto). Nada más. */
-@font-face { font-family: "Six Caps"; src: url("../../assets/fonts/six-caps-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Oswald"; src: url("../../assets/fonts/oswald-latin-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Oswald"; src: url("../../assets/fonts/oswald-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Oswald"; src: url("../../assets/fonts/oswald-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }

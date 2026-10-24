@@ -605,7 +605,7 @@ p404 = f'''<!doctype html>
 {''.join(f'<link rel="stylesheet" href="{h}">' for h in _css)}
 <style>.e404{{min-height:100svh;display:grid;align-content:center;gap:22px;padding:calc(var(--nav,60px) + 32px) var(--gut,16px) 48px;max-width:900px;margin:0 auto}}
 .e404 h1{{margin:0;font:800 clamp(48px,11vw,120px)/.9 var(--f-display);text-transform:uppercase;color:#f5e9db}}
-.e404 p{{margin:0;font:500 22px/1.35 var(--f-body);color:#f5e9db}}.e404 .btns{{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}}body{{background:#0e0c0b}}</style>
+.e404 p{{margin:0;font:500 22px/1.35 var(--f-body);color:#f5e9db}}.e404 .btns{{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}}body{{background:#0e0c0b}}.nav .nav__logo{{opacity:1!important;transform:none!important;pointer-events:auto}}.nav{{background:rgba(14,12,11,.94)}}</style>
 <script>(function(d){{var r=d.documentElement;r.classList.add('js');try{{if(localStorage.getItem('almud-idioma')==='en')r.lang='en'}}catch(e){{}}
 d.addEventListener('DOMContentLoaded',function(){{if(r.lang!=='en')return;[].forEach.call(d.querySelectorAll('[data-en]'),function(e){{e.textContent=e.getAttribute('data-en')}})}})}})(document)</script>
 </head>
