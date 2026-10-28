@@ -50,3 +50,4 @@
 - Fase 9 ✅ /nueva_v9/ (portada a todo el ancho, Peter WOW, reseñas en tarjetas, carta en paleta nueva), 10 ✅ /nueva_v10/ (sin cuentas personales), 11 ✅ /nueva_v11/ (Peter a la izquierda, Equipo que siempre vuelve, reseñas ágiles); congeladas
 - 2026-10-23 v4 fase 10 · publicación preparada (sin commit): la v11 es / y /carta/ (tools/boceto_raiz.py, tools/carta_raiz.py); la v3 archivada en /v3/ y /v3/carta/ con noindex; publish.py y sitemap al día. Ver _plan/v4/fase10/avance.log
 - 2026-10-24 v4 publicación final preparada (sin commit): la v17 es / y /carta/ (boceto_raiz/carta_raiz desde nv17); public/ solo con la v17 (80 MB, 571 archivos); versiones viejas con 301 a / y /carta/; fuentes de todas las versiones en el repo y en respaldo-versiones. Ver _plan/v4/fase10/avance.log («final ·»)
+- 2026-10-28 Dossier de diseño actualizado al sitio final (raíz, nv18): 20 láminas, capturas nuevas
