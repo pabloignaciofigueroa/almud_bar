@@ -35,9 +35,9 @@ _pre = RAIZ[RAIZ.index('rincones = ['):RAIZ.index("body = f'''")]
 _pre = _pre[:_pre.index('def flip_duo')] + _pre[_pre.index('def resena'):]  # la tarjeta del dúo ya no está en la página
 _ids = set(re.findall(r"(?:pic|vid|item2?|flip)\('([a-z0-9\-]+)'", _body)) | set(re.findall(r"'((?:con-quien|quien|lugar|eventos|equipo)-[a-z0-9\-]+)'", _pre))
 _ids = {i for i in _ids if i in IM or i in VI}
-N_FOTOS = sum(i in IM and i not in VI for i in _ids)
+N_FOTOS = sum(i in IM for i in _ids)   # «eventos-jaloguin» es foto y video a la vez: cuenta en ambos
 N_VIDEOS = len({VI[i]['ref'] if i.startswith('portada') else i for i in _ids if i in VI})  # tramos de video; el montaje de portada va en dos formatos y cuenta una vez
-N_POSTS_USADOS = len({(IM.get(i) or VI.get(i))['credit']['post'] for i in _ids})
+N_POSTS_USADOS = len({d[i]['credit']['post'] for d in (IM, VI) for i in _ids if i in d})
 CINTAS = re.findall(r"\('(FR|CL|NZ)', '(?:fr|es|en)'", RAIZ[RAIZ.index('CINTAS = ['):RAIZ.index('def flip(')])
 N_RES_SITIO = len(CINTAS)
 PAISES = {'FR': 'Francia', 'CL': 'Chile', 'NZ': 'Nueva Zelanda'}
@@ -223,7 +223,7 @@ lam(RJ, ''.join(pol(k, x, y, 1.85, r) for k, x, y, r in pols) +
     box(6.85, .6, 5.7, f'''<p class="k" style="color:rgba(255,255,255,.85)">De dónde viene todo</p>
   <h2 class="t" style="color:#fff">Todo esto <em style="color:{AM}">ya</em> era suyo</h2>
   <div class="bigs">{big(N_POSTS, f"publicaciones de su Instagram leídas completas, de las {N_PUB} de su perfil")}{big(N_ITEMS, f"tragos, platos y bebidas de sus {N_SECC} secciones de carta, al pie de la letra")}{big(N_REV, f"reseñas de sus clientes en Tripadvisor y Google; en el sitio, las {N_RES_SITIO} que dicen su país")}{big(N_FOTOS, f"fotos suyas y {N_VIDEOS} videos, de {N_POSTS_USADOS} publicaciones")}</div>
-  <p class="p" style="color:#fff">Cada texto del sitio tiene su origen identificado: qué post, qué línea de la bio, qué carta o qué reseña. Lo único que no viene de ustedes son las indicaciones de uso, como «Ver la carta» o «Escríbenos por DM», y las ayudas en inglés para el turista.</p>'''),
+  <p class="p" style="color:#fff">Cada texto del sitio tiene su origen identificado: qué post, qué línea de la bio, qué carta o qué reseña. Lo único que no sale de sus publicaciones son las indicaciones de uso, como «Ver la carta» o «Escríbenos por DM», las ayudas en inglés para el turista y la referencia «Al frente del Centro Cultural de Castro», que es como los ubican las guías de viaje.</p>'''),
     nc='rgba(255,255,255,.7)')
 
 # ═════════════════════════ 04 · LA MARCA ═════════════════════════
@@ -236,14 +236,14 @@ lam(CR, f'<div class="stripes">{sth}</div>' +
   <p class="spa">Somos inquietos</p><p class="spb">y nos gusta el</p><p class="spa" style="color:{RO}">colorssss!</p>
   <p class="cap2">Así lo dicen ustedes · {IG("IG-111")}</p>''') +
     box(.55, 4.7, 6.9, f'''<div class="cols3">
-  <div><h4 style="color:{TN}">Voz</h4><p>Viene de cómo escriben en Instagram: de usté, invitando, con juegos de palabras. Las cascadas como «ito ito», los «Besi» y las frases de carrete se quedan en Instagram, donde todos los conocen.</p></div>
-  <div><h4 style="color:{VE}">Letra</h4><p>Viene de su letrero y sus afiches: Big Shoulders Display, alta, angosta y gruesa como el «BAR», para gritar; Barlow Condensed, de la misma familia, para leer.</p></div>
+  <div><h4 style="color:{TN}">Voz</h4><p>Viene de cómo escriben en Instagram: de usté, invitando, con juegos de palabras. Las cascadas como «ito ito», los «Besi» y las frases de carrete se quedan en Instagram, donde todos los conocen; la única que entra es la frase de Elymar, escrita así por ustedes.</p></div>
+  <div><h4 style="color:{VE}">Letra</h4><p>Viene de su letrero y sus afiches: Big Shoulders Display, alta, angosta y gruesa como el «BAR», para gritar; Barlow Condensed, igual de angosta, para leer.</p></div>
   <div><h4 style="color:{TN}">Color</h4><p>Viene del techo de cintas, del muro rosa y del letrero azul. Cada sección tiene su cinta, y el texto se lee con holgura sobre cada una.</p></div></div>'''))
 
 # ═════════════════════════ 05 · RECORRIDO ═════════════════════════
-actos = [('d-apertura', 'Entrar', 'Su almud se dibuja, abre la boca y deja ver su letrero, con la frase con que se presentan y «Ver la carta».', -3),
+actos = [('d-apertura', 'Entrar', 'Su almud se dibuja, abre la boca y deja ver su letrero, con la frase con que abre su bio y «Ver la carta».', -3),
          ('d-tragos-peter', 'Pedir', 'Sus seis rincones; el Peter con su humo; tragos y platos con el nombre y el precio de su carta.', 2),
-         ('d-quien-b', 'Celebrar', 'La baraja de su gente, sus fiestas de cada temporada y el equipo con sus apodos.', -2),
+         ('d-quien-b', 'Celebrar', 'La baraja de su gente, sus fiestas de cada temporada y el equipo con sus frases.', -2),
          ('d-cierre-a', 'Volver', 'Reseñas en su idioma y su firma de cierre, con el día, la hora, el mapa y el DM.', 3)]
 ah = ''
 for i, (s_, t_, p_, r_) in enumerate(actos):
@@ -262,7 +262,7 @@ lam(NE, fr('d-carga-2', .55, 2.3, 3.6, -3, lt=True) + fr('d-apertura', 3.0, 3.95
     box(10.15, .6, 2.45, f'''<p class="p" style="color:{CR}">Su nombre es una medida chilota y su logo la dibuja, con la boca en rombo. Mientras carga la página, ese almud se traza sobre negro al ritmo de lo que va llegando, con el porcentaje debajo.</p>
   <p class="p" style="color:{CR}">Al completarse, la boca se abre y adentro ya corre su propio video: el letrero, la puerta, las cintas, los ojos, las lámparas y la terraza llena. Es el mismo en el celular y en el computador.</p>''') +
     box(10.15, 5.05, 2.45, Q('Hicimos este video pa contar un poquito de nuestro Almudcito!', IG('IG-061'), 'light') +
-        f'<p class="p" style="color:{CR}">Encima, solo el logo, la primera línea de su bio y un botón: «Ver la carta».</p>'),
+        f'<p class="p" style="color:{CR}">Encima, solo el logo, su presentación de Instagram y un botón: «Ver la carta».</p>'),
     nc='rgba(245,233,219,.55)')
 
 # ═════════════════════════ 07 · EL LUGAR ═════════════════════════
@@ -274,7 +274,7 @@ lam(AM, fr('d-lugar-c', 5.35, .6, 7.2, 1.5) + fr('d-lugar-b', 6.2, 4.6, 4.3, -2.
     box(.55, 3.3, 4.55, Q('Pucha que nos gusta nuestra barrita!', 'Barra · ' + IG('IG-087')) + Q('Felices, con el corazón llenifer!', 'Sillones · ' + IG('IG-009')) +
         Q('una mirada vale más que mil palabras', 'Ojo Piojo · ' + IG('IG-118')) +
         '''<p class="p">Su feed recorre el local de rincón en rincón, y cada rincón ya tenía su frase. Aquí se pasan con el dedo, como sus carruseles, y cada foto se balancea como las cintas del techo. Arriba, tres fotos de las salas repletas.</p>
-  <p class="p sm">En Sillones, «corazón» reemplaza al emoji del original.</p>'''))
+  <p class="p sm">En Barra queda un solo signo de exclamación; en Sillones, «corazón» reemplaza al emoji del original.</p>'''))
 
 # ═════════════════════════ 08 · TRAGOS ═════════════════════════
 tragos = ''.join(pill(f'{n_} · {p_}', c_, f_) for n_, p_, c_, f_ in [
@@ -286,7 +286,7 @@ lam(RO, fr('d-tragos-peter', .5, .55, 7.6, -1.5) + ph('m-tragos-c', 7.25, 4.1, 1
   <h2 class="t">El Peter <em style="color:{RO}">abre</em> la barra</h2>
   {Q("Aquí te las traigo Peter!", IG("IG-044"))}
   <p class="p">Su post lo presentó con un grito, y así entra: grande, con su burbuja de humo en movimiento y el nombre armándose letra por letra. Al lado, la barra en columnas que parten a distinta altura, como su feed de collage.</p>''', 'card', f'background:{CR};') +
-    box(.55, 6.45, 6.4, f'<p class="k" style="color:{NE}">Y cinco más de su Coctelería de la casa</p><div class="pills">{tragos}</div>'),
+    box(.55, 6.45, 6.4, f'<p class="k" style="color:{NE}">Y cinco más de su carta: cuatro de la casa y un mocktail</p><div class="pills">{tragos}</div>'),
     nc='rgba(14,12,11,.55)')
 
 # ═════════════════════════ 09 · COMIDA ═════════════════════════
@@ -298,7 +298,7 @@ lam(NA, plato('carta-tukulito', .75, 2.95, 1.8, 'Tukulito Sakayama', '$ 15.900',
   <h2 class="t">Platos que llegan <em style="color:{CR}">a la</em> mesa</h2>
   <p class="p">Como cuando se sirven, los platos entran girando un poco y su foto se abre en redondo. Cada video muestra el plato que nombra: el sartén es «La carne es débil» y el queso que se estira, «Una cosa poca».</p>''') +
     box(7.2, 4.4, 3.4, Q('Las masas de nuestras pizzas son hechas por nosotros!', 'Su carta · Comilona') +
-        '<p class="p">Ocho platos de su carta, con nombre y precio literales, en dos columnas que no se realinean: el orden del desorden.</p>'),
+        '<p class="p">Siete platos de su carta con nombre y precio literales, más sus pizzas. Los cuatro de abajo van en dos columnas que no se realinean: el orden del desorden.</p>'),
     nc='rgba(14,12,11,.55)')
 
 # ═════════════════════════ 10 · LA GENTE Y SUS FIESTAS ═════════════════════════
@@ -310,7 +310,7 @@ lam(VE, ''.join(pol(k, x, y, 3.2, r, z=2 + i) for i, (k, x, y, r) in enumerate(b
     box(.55, .55, 6.2, f'''<p class="k" style="color:{AM}">Con quién y cuándo</p>
   <h2 class="t" style="color:#fff">Siempre lleno, <em style="color:{AM}">todo</em> el año</h2>''') +
     box(4.25, 1.85, 1.85, Q('Ya saben que no somos ná sin ustedes!', IG('IG-026'), 'light') +
-        '<p class="p" style="color:#fff">«Faltan muuuchas más, pero no se pueden subir más de 20», dice el mismo post. Sus carruseles de gente son aquí una baraja que se lanza con el dedo; la foto vuelve por debajo y la pila no se vacía. Al lado, tres videos de mesas llenas.</p>') +
+        '<p class="p" style="color:#fff">«Faltan muuuchas más, pero no se pueden subir más de 20…», dice el mismo post. Sus carruseles de gente son aquí una baraja que se lanza con el dedo; la foto vuelve por debajo y la pila no se vacía. Al lado, tres videos de mesas llenas.</p>') +
     box(8.0, 4.75, 4.55, f'''<div class="pills">{fiestas}</div>
   <p class="p" style="color:#fff;margin-top:.12in">Las fiestas que vuelven cada año pasan solas, con su nombre enorme. Las de una sola vez y las campañas ajenas quedan fuera: nada que ustedes no hayan anunciado.</p>
   {Q("Se comió, se tomó, se bailó, quedamos con dolor de guata de tanto reír", IG("IG-072"), "light")}'''),
@@ -324,11 +324,11 @@ lam(RJ, fr('d-equipo-flip', .5, .6, 6.9, -1.5) + ph('m-equipo-flip', 6.0, 3.55, 
     box(.55, 5.3, 5.2, f'''<p class="qbig">«los papis del almud: el franchuto y la disharashera»</p>
   <p class="k" style="color:rgba(255,255,255,.75);margin-top:.08in">Así nombran a los dueños · {IG("IG-067")}</p>''') +
     box(8.05, .55, 4.5, f'''<p class="k" style="color:{AM}">El equipo</p>
-  <h2 class="t" style="color:#fff">Cada uno <em style="color:{AM}">con</em> su apodo</h2>
-  <p class="p" style="color:#fff">Ustedes presentan al equipo con cariño y por su lugar en el bar: «en esa barra…», «por los salones…». Cada tarjeta se da vuelta al tocarla y muestra justo eso.</p>
+  <h2 class="t" style="color:#fff">Cada uno <em style="color:{AM}">en</em> su lugar</h2>
+  <p class="p" style="color:#fff">Ustedes presentan al equipo con cariño y por su lugar en el bar: «en esa barra…», «por los salones…». Cada tarjeta se da vuelta al tocarla y muestra justo eso, con la frase que ustedes le dedicaron.</p>
   <div class="apodos">{aph}</div>
   <p class="p" style="color:#fff">El sitio habla por el local: no enlaza perfiles personales, ni del equipo ni de ustedes. El video con ustedes dos vive aquí, para que la portada sea del bar.</p>
-  <p class="p sm" style="color:rgba(255,255,255,.8)">Frases publicadas el {FECHA("IG-045")}, {FECHA("IG-067")}, {FECHA("IG-034")} y {FECHA("IG-001")}. La de Elymar va en singular; el original dice «le ponen». Del post de los dueños se omiten sus cuentas.</p>'''),
+  <p class="p sm" style="color:rgba(255,255,255,.8)">Frases publicadas el {FECHA("IG-045")}, {FECHA("IG-067")}, {FECHA("IG-034")} y {FECHA("IG-001")}. La de Elymar va en singular; el original dice «le ponen». Del post de los dueños se omiten sus cuentas. Elymar aparece etiquetada en el post del {FECHA("IG-001")}.</p>'''),
     nc='rgba(255,255,255,.7)')
 
 # ═════════════════════════ 12 · RESEÑAS Y DESPEDIDA ═════════════════════════
@@ -347,7 +347,7 @@ lam(CR, cintas(0, 13, 0, 60, .5) + '<p class="qq" style="left:.35in;top:.5in">�
 dcol = [RO, AM, VE, LI, AZ]
 phs = ''.join(ph(k, .65 + i * 2.45, .5 + (0, .3, 0, .3, 0)[i], 2.05, (-4, 3, -2, 4, -3)[i]) for i, k in enumerate(['m-carta', 'm-en-lugar', 'm-tragos-c', 'm-equipo-b', 'm-resenas']))
 dots = ''.join(f'<div class="dot" style="left:{.45 + i * 2.45}in;top:{1.4 + (0, .3, 0, .3, 0)[i]}in;background:{c_}"></div>' for i, c_ in enumerate(dcol))
-det = [('La carta, aparte', f'Sus {N_ITEMS} ítems, tal como en su carta impresa, en una página propia. Las siete pestañas se ven siempre completas, cada una con el color de una cinta, y cada trago o plato del inicio abre su lugar exacto.', RO),
+det = [('La carta, aparte', f'Sus {N_ITEMS} ítems, tal como en su carta impresa, en una página propia. Las siete pestañas se ven siempre completas, cada una con el color de una cinta, y cada trago o plato del inicio abre su sección de la carta.', RO),
        ('Español e inglés', 'Un botón «EN» arriba. Sus frases y los nombres de la carta no se traducen: llevan debajo una ayuda para el turista, con el mismo humor.', AM),
        ('Videos que no paran', 'Corren solos desde que se ven y siguen corriendo al bajar por la página. Los de la sección siguiente ya están listos al llegar.', VE),
        ('Con el dedo', 'Rincones, tragos, baraja, tarjetas y reseñas se mueven con el dedo, y deslizar hacia abajo siempre mueve la página. Con el movimiento reducido, todo queda quieto y completo.', LI)]
