@@ -1,34 +1,61 @@
 #!/usr/bin/env python3
-"""Dossier de decisiones de diseño · Almud Bar (sitio final, almudbar.pages.dev).
-Genera dossier/almud-dossier-diseno.html (autocontenido). PDF con dossier/render.js.
+"""Dossier-brochure de decisiones de diseño · Almud Bar (sitio final, almudbar.pages.dev).
+Formato de la skill dossier-brochure-web-regalo (caso de referencia: chiloe_magico_tours/dossier).
+Genera dossier/almud-dossier-diseno.html (autocontenido). PDF y PNG con dossier/render.js.
 Uso: python3 dossier/build_dossier.py
 """
-import base64, html, io, json, pathlib
-from PIL import Image, ImageOps
+import base64, html, io, json, pathlib, random, re, subprocess, tempfile
+from PIL import Image, ImageFilter, ImageOps
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = ROOT / 'dossier'
 SH = D / 'shots'
 E = html.escape
 
-# ───────── medios del sitio (los mismos archivos que usa la página principal) ─────────
+# ───────── datos (desde los archivos, nunca de memoria) ─────────
 IM = dict(json.loads((ROOT / 'assets/v3/media.json').read_text())['images'])
 IM.update(json.loads((ROOT / 'assets/nv2/media-img.json').read_text())['images'])
 IM.update(json.loads((ROOT / 'assets/nv9/media-img.json').read_text())['images'])
 VI = json.loads((ROOT / 'assets/v4/media-video.json').read_text())['videos']
-POSTS = {p['id']: p for p in json.loads((ROOT / 'content/ig_posts.json').read_text())}
+POSTS_L = json.loads((ROOT / 'content/ig_posts.json').read_text())
+POSTS = {p['id']: p for p in POSTS_L}
+N_POSTS = len(POSTS_L)
+CARTA = json.loads((ROOT / 'content/carta-v2.json').read_text())['secciones']
+N_SECC = len(CARTA)
+N_ITEMS = sum(len(g.get('items', [])) for s in CARTA for g in s.get('grupos', [s]))
+REV = json.loads((ROOT / 'content/reviews.json').read_text())
+N_REV = len(REV)
+BIO = (ROOT / 'content/bio.txt').read_text()
+N_PUB = int(re.search(r'(\d+) publicaciones', BIO).group(1))
+
+# Lo que usa la página principal (tools/boceto_raiz.py genera index.html)
+RAIZ = (ROOT / 'tools/boceto_raiz.py').read_text()
+_body = RAIZ[RAIZ.index("body = f'''"):]
+_pre = RAIZ[RAIZ.index('rincones = ['):RAIZ.index("body = f'''")]
+_pre = _pre[:_pre.index('def flip_duo')] + _pre[_pre.index('def resena'):]  # la tarjeta del dúo ya no está en la página
+_ids = set(re.findall(r"(?:pic|vid|item2?|flip)\('([a-z0-9\-]+)'", _body)) | set(re.findall(r"'((?:con-quien|quien|lugar|eventos|equipo)-[a-z0-9\-]+)'", _pre))
+_ids = {i for i in _ids if i in IM or i in VI}
+N_FOTOS = sum(i in IM and i not in VI for i in _ids)
+N_VIDEOS = len({VI[i]['ref'] if i.startswith('portada') else i for i in _ids if i in VI})  # tramos de video; el montaje de portada va en dos formatos y cuenta una vez
+N_POSTS_USADOS = len({(IM.get(i) or VI.get(i))['credit']['post'] for i in _ids})
+CINTAS = re.findall(r"\('(FR|CL|NZ)', '(?:fr|es|en)'", RAIZ[RAIZ.index('CINTAS = ['):RAIZ.index('def flip(')])
+N_RES_SITIO = len(CINTAS)
+PAISES = {'FR': 'Francia', 'CL': 'Chile', 'NZ': 'Nueva Zelanda'}
+N_PAIS = {k: CINTAS.count(k) for k in ('CL', 'FR', 'NZ')}
+
 MES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
 
 
-def fecha(iso):
-    y, m, d = iso.split('-')
-    return f'{int(d)} {MES[int(m) - 1]} {y}'
+def IG(pid):
+    y, m, d = POSTS[pid]['date'].split('-')
+    return f'Instagram · {int(d)} {MES[int(m) - 1]} {y}'
 
 
-def ig(pid):
-    return 'Instagram · ' + fecha(POSTS[pid]['date'])
+def FECHA(pid):
+    return IG(pid).split(' · ')[1]
 
 
+# ───────── imágenes ─────────
 def b64img(img, w, q=80):
     img = img.convert('RGB')
     if img.width > w:
@@ -38,33 +65,32 @@ def b64img(img, w, q=80):
     return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
 
 
-def shot(name, w=1500):
-    p = SH / f'{name}.jpg'
-    return b64img(Image.open(p), w) if p.exists() else ''
+def shot(name, w=1500, crop=None):
+    im = Image.open(SH / f'{name}.jpg')
+    if crop:  # fracción del alto que se conserva, desde arriba
+        im = im.crop((0, 0, im.width, round(im.height * crop)))
+    return b64img(im, w)
 
 
-def _best(files):
-    ws = sorted(int(x) for x in files['webp'])
-    return ROOT / files['webp'][str(ws[-1])]['path']
-
-
-def med(id_, w=480, crop='a'):
-    """Imagen del sitio (foto o póster del video), tal como está publicada."""
-    if id_ in VI:
-        p = ROOT / VI[id_]['poster']['webp']['path']
+def med(key, w=1400, crop='a', q=80):
+    """La foto tal como la publica el sitio (recorte más grande) o el póster del video."""
+    if key in VI:
+        p = ROOT / VI[key]['poster']['webp']['path']
     else:
-        c = IM[id_]['crops']
-        p = _best((c.get(crop) or next(iter(c.values())))['files'])
-    return b64img(ImageOps.exif_transpose(Image.open(p)), w, 78)
+        c = IM[key]['crops']
+        f = (c.get(crop) or next(iter(c.values())))['files']['webp']
+        p = ROOT / f[str(max(int(x) for x in f))]['path']
+    return b64img(ImageOps.exif_transpose(Image.open(p)), w, q)
 
 
-def origen(id_):
-    d = IM.get(id_) or VI.get(id_)
-    return ig(d['credit']['post'])
-
-
-def plan(name, w=700):
-    return b64img(Image.open(ROOT / '_plan/v4' / f'{name}.jpg'), w, 80)
+def frame(video, t, w=2600):
+    """Un cuadro del video de portada, a su resolución completa."""
+    with tempfile.TemporaryDirectory() as td:
+        out = pathlib.Path(td) / 'f.png'
+        subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', str(t), '-i', str(ROOT / video), '-frames:v', '1', str(out)], check=True)
+        im = Image.open(out).convert('RGB')
+        im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.6, 60, 2))
+        return b64img(im, w, 86)
 
 
 def png(rel, w=900):
@@ -79,38 +105,12 @@ def font(name):
     return 'data:font/woff2;base64,' + base64.b64encode((ROOT / 'assets/fonts' / f'{name}.woff2').read_bytes()).decode()
 
 
-# ───────── piezas ─────────
-COL = {'amarillo': '#f5c518', 'rosa': '#f24350', 'naranja': '#f27a12', 'verde': '#0b6e4b', 'lila': '#a58ac9',
-       'rojo': '#c2202a', 'crema': '#f5e9db', 'negro': '#0e0c0b', 'azul': '#2aa1f8'}
-OSCUROS = {'verde', 'rojo', 'negro'}  # texto crema encima
-RECORRIDO = ['La espera', 'Portada', 'El lugar', 'Tragos', 'Comida', 'Con quién', 'Eventos', 'Equipo', 'Reseñas', 'Usté se lo merece']
-LOGO_C = png('brand/v3/png/almud-horizontal-claro.png', 900)
-LOGO_O = png('brand/v3/png/almud-horizontal-oscuro.png', 900)
+# ───────── paleta del sitio (css/nv18/tokens.css) ─────────
+C = dict(amarillo='#f5c518', rosa='#f24350', naranja='#f27a12', verde='#0b6e4b', lila='#a58ac9', rojo='#c2202a',
+         crema='#f5e9db', negro='#0e0c0b', azul='#2aa1f8', tinta='#c41e34', gris='#6d6159')
+AM, RO, NA, VE, LI, RJ, CR, NE, AZ, TN, GR = (C[k] for k in ('amarillo', 'rosa', 'naranja', 'verde', 'lila', 'rojo', 'crema', 'negro', 'azul', 'tinta', 'gris'))
 
-
-def quote(text, source, big=False):
-    return f'<blockquote class="q{" big" if big else ""}"><p>{text}</p><cite>{E(source)}</cite></blockquote>'
-
-
-def thumbs(items, cls=''):
-    out = ''.join(f'<figure class="th"><img src="{med(i)}" alt=""><figcaption>{cap}<b>{E(origen(i))}</b></figcaption></figure>'
-                  for i, cap in items)
-    return f'<div class="ths {cls}">{out}</div>'
-
-
-def block(title, body, cls=''):
-    return f'<section class="bk {cls}"><h4>{title}</h4>{body}</section>'
-
-
-def recorrido(cur):
-    li = ''.join(f'<li class="{"on" if r == cur else ""}">{E(r)}</li>' for r in RECORRIDO)
-    return f'<div class="recw"><p class="lab">Lugar en el recorrido</p><ol class="rec">{li}</ol></div>'
-
-
-def PIE(n):
-    return f'<footer class="pf"><span>ALMUD BAR · Decisiones de diseño del sitio</span><span>{n:02d}</span></footer>'
-
-
+# ───────── piezas de layout (en pulgadas) ─────────
 L, N = [], [0]
 
 
@@ -119,314 +119,256 @@ def nx():
     return N[0]
 
 
-def lamina(left, right, lc='negro', rc='crema'):
-    n = nx()
-    L.append(f'<article class="lam"><div class="L c-{lc}{" dk" if lc in OSCUROS else ""}">{left}</div>'
-             f'<div class="R c-{rc}{" dk" if rc in OSCUROS else ""}">{right}{PIE(n)}</div></article>')
+def lam(bg, inner, nc='rgba(14,12,11,.45)'):
+    k = nx()
+    L.append(f'<article class="lam" style="background:{bg}">{inner}<span class="no" style="color:{nc}">{k:02d}</span></article>')
 
 
-def fig(name, cap, cls='', w=1500):
-    return f'<figure class="sh {cls}"><img src="{shot(name, w)}" alt=""><figcaption>{cap}</figcaption></figure>'
+def box(x, y, w, inner, cls='', st=''):
+    return f'<div class="tx {cls}" style="left:{x}in;top:{y}in;width:{w}in;{st}">{inner}</div>'
 
 
-def figc(name, cap, frac, cls='', w=1500):
-    """Captura recortada desde arriba (frac = fracción del alto que se conserva)."""
-    p = SH / f'{name}.jpg'
-    im = Image.open(p)
-    im = im.crop((0, 0, im.width, round(im.height * frac)))
-    return f'<figure class="sh {cls}"><img src="{b64img(im, w)}" alt=""><figcaption>{cap}</figcaption></figure>'
+def fr(name, x, y, w, rot=0, z=2, crop=None, lt=False):
+    return f'<div class="fr{' lt' if lt else ''}" style="left:{x}in;top:{y}in;width:{w}in;transform:rotate({rot}deg);z-index:{z}"><img src="{shot(name, 1400, crop)}" alt=""></div>'
 
 
-def seccion(nombre, kick, titulo, fuente, lead, left, bloques, lc):
-    right = (f'<p class="kick">{kick}</p><h2>{titulo}</h2><p class="src">{E(fuente)}</p>'
-             f'<p class="lead">{lead}</p><div class="grid">{"".join(bloques)}</div>')
-    lamina(f'<p class="lab">El sitio</p>{left}{recorrido(nombre)}', right, lc)
+def ph(name, x, y, w, rot=0, z=3):
+    return f'<div class="ph" style="left:{x}in;top:{y}in;width:{w}in;transform:rotate({rot}deg);z-index:{z}"><img src="{shot(name, 560)}" alt=""></div>'
 
 
-def precios(rows):
-    return '<table class="pt">' + ''.join(f'<tr><td class="n">{E(a)}</td><td>{E(b)}</td></tr>' for a, b in rows) + '</table>'
+def photo(key, x, y, w, h, r=.24, pos='50% 50%', z=1, rot=0):
+    return f'<div class="pic" style="left:{x}in;top:{y}in;width:{w}in;height:{h}in;border-radius:{r}in;transform:rotate({rot}deg);z-index:{z}"><img src="{med(key, 1500)}" style="object-position:{pos}" alt=""></div>'
 
+
+def pill(t, bg, fg='#fff'):
+    return f'<span class="pill" style="background:{bg};color:{fg}">{E(t)}</span>'
+
+
+def plato(key, x, y, d, nombre, precio, rot=0):
+    """Plato en redondo, como se abre su foto en el sitio, con su nombre y precio en una cápsula."""
+    return (f'<div class="plato" style="left:{x}in;top:{y}in;width:{d}in;height:{d}in;transform:rotate({rot}deg)"><img src="{med(key, 700)}" alt=""></div>'
+            f'<div class="tx tag" style="left:{x - .35}in;top:{y + d - .2}in;width:{d + .7}in">{pill(nombre + " · " + precio, NE, CR)}</div>')
+
+
+def rombo(x, y, d, bg, fg, inner, fs=12, z=5):
+    """Medallón con la forma de la boca del almud (un rombo)."""
+    return (f'<div class="rb" style="left:{x}in;top:{y}in;width:{d}in;height:{d}in;z-index:{z}">'
+            f'<span class="rb-bg" style="background:{bg}"></span><div style="color:{fg};font-size:{fs}pt">{inner}</div></div>')
+
+
+def pol(key, x, y, w, rot, z=2):
+    return f'<div class="pol" style="left:{x}in;top:{y}in;width:{w}in;transform:rotate({rot}deg);z-index:{z}"><img src="{med(key, 620, q=78)}" alt=""></div>'
+
+
+def Q(text, source, cls=''):
+    return f'<blockquote class="q2 {cls}"><p>«{text}»</p><cite>{E(source)}</cite></blockquote>'
+
+
+def cintas(x0, x1, top=0, n=46, hmax=1.0, seed=7):
+    """Las cintas de su techo colgando del borde superior: sus colores, largos dispares."""
+    r = random.Random(seed)
+    cols = [AM, RO, NA, VE, LI, RJ, AZ]
+    w = (x1 - x0) / n
+    return ''.join(f'<span class="cinta" style="left:{x0 + i * w:.3f}in;top:{top}in;width:{w * .78:.3f}in;height:{hmax * r.uniform(.35, 1):.2f}in;background:{r.choice(cols)}"></span>' for i in range(n))
+
+
+def seal(x, y, d, rot=-8):
+    ring = 'PARA ALMUD BAR ★ HECHO EN CASTRO ★ OCTUBRE 2026 ★ '
+    return f'''<svg class="seal" viewBox="0 0 200 200" style="left:{x}in;top:{y}in;width:{d}in;height:{d}in;transform:rotate({rot}deg)">
+  <defs><path id="sr" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+  <circle cx="100" cy="100" r="98" fill="{RJ}"/>
+  <circle cx="100" cy="100" r="91" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="100" cy="100" r="58" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text font-family="BC" font-weight="600" font-size="12.5" fill="#fff"><textPath href="#sr" textLength="462" lengthAdjust="spacing">{ring}</textPath></text>
+  <text x="100" y="98" text-anchor="middle" font-family="BSD" font-weight="800" font-size="34" fill="#fff">UN</text>
+  <text x="100" y="131" text-anchor="middle" font-family="BSD" font-weight="800" font-size="34" fill="#fff">REGALO</text>
+</svg>'''
+
+
+LOGO_O = png('brand/v3/png/almud-horizontal-oscuro.png', 900)
+ISO_O = png('brand/v3/png/almud-isotipo-oscuro.png', 300)
 
 # ═════════════════════════ 01 · PORTADA ═════════════════════════
-lamina(
-    f'<img class="bleed" src="{med("tragos-bartender", 1400)}" alt="" style="object-position:50% 40%">',
-    f'''<div class="cover">
-  <img class="cv-logo" src="{LOGO_C}" alt="Almud Bar">
-  <p class="cv-sub">Decisiones de diseño del sitio web</p>
-  <h1>De su Instagram<br><span>a su sitio</span></h1>
-  <p class="cv-for">Preparado para Carmen Paz y Sylvain</p>
-  <p class="cv-meta">Serrano 325 · Castro, Chiloé · octubre 2026</p>
-  <p class="cv-meta">almudbar.pages.dev</p>
-</div>''', 'negro', 'negro')
+# La misma imagen con que se abre el sitio: el primer cuadro de su video de portada (el letrero), dentro de la boca del almud.
+nx()
+L.append(f'''<article class="lam" style="background:{NE}">
+  <img class="bleed" src="{frame('assets/v4/video/portada-c-h-1280.mp4', 0.0)}" style="object-position:50% 45%" alt="">
+  <div class="spread-tab"><img class="spread-logo" src="{LOGO_O}" alt="Almud Bar"></div>
+</article>''')
 
 # ═════════════════════════ 02 · CARTA ═════════════════════════
-lamina(
-    f'<img class="bleed" src="{med("lugar-techada-llena", 1400)}" alt="" style="object-position:50% 40%">',
-    f'''<p class="kick">Antes de empezar</p><h2>Un sitio hecho con lo que ustedes ya dijeron</h2>
-<div class="letter">
-<p>Carmen Paz, Sylvain:</p>
-<p>Este sitio nació de mirar con atención lo que Almud ya publica. No hay frases inventadas ni promesas de agencia: cada título sale de sus posts de Instagram, de su bio, de su carta o de lo que sus clientes escribieron en Tripadvisor. Lo que hicimos fue ordenarlo, darle aire y ponerlo en movimiento.</p>
-<p>Tampoco hay fotos de banco de imágenes. Todas las fotos y los videos son de Almud, y los colores salen de su propio local: las cintas del techo, el muro rosa de la barra y el letrero.</p>
-<p>Este documento explica, sección por sección, qué se decidió y por qué. En cada lámina, a la izquierda está la sección tal como se ve en el sitio, en computador y en celular. A la derecha, de dónde salió cada texto e imagen, qué letra y qué color se usó, cómo se mueve y por qué va en ese lugar del recorrido.</p>
-<p>Es un regalo. Ojalá lo disfruten tanto como nosotros disfrutamos haciéndolo.</p>
-<p class="sign">Pablo Figueroa G.<br><span>Director de estudio</span></p>
-</div>''', 'rosa', 'crema')
+lam(CR,
+    photo('lugar-techada-llena', .45, .45, 5.55, 7.6, pos='50% 40%', z=2) +
+    seal(8.65, 5.75, 2.3) +
+    box(6.55, .6, 6.0, f'''<p class="k" style="color:{TN}">Antes de empezar</p>
+  <h2 class="t">Un sitio hecho <em style="color:{RO}">con</em> lo que ustedes ya dijeron</h2>
+  <div class="letter">
+  <p>Carmen Paz, Sylvain:</p>
+  <p>Todo lo que van a ver ya era suyo. Cada título sale de sus posts, de su bio, de su carta o de lo que sus clientes escribieron en Tripadvisor; el sitio solo lo ordena, le da aire y lo pone en movimiento.</p>
+  <p>Las imágenes también: las {N_FOTOS} fotos y los {N_VIDEOS} videos salen de su Instagram, sin fotos de banco. La letra, los colores y el logo vienen de su letrero, de sus afiches y de las cintas de su techo.</p>
+  <p>Este documento cuenta, sección por sección, de dónde viene cada cosa. Es un regalo. Ojalá lo disfruten tanto como nosotros disfrutamos haciéndolo.</p>
+  <p class="sign">Pablo Figueroa G.</p></div>'''))
 
 # ═════════════════════════ 03 · DE DÓNDE VIENE TODO ═════════════════════════
-grid15 = ['lugar-barra', 'tragos-bartender', 'lugar-terraza-techada', 'con-quien-brindis', 'comida-pizza',
-          'eventos-12-anos', 'tragos-splash', 'quien-grupo-peter', 'lugar-ojo-piojo', 'carta-sangria',
-          'lugar-sillones', 'lugar-terraza-abierta', 'eventos-fondita', 'comida-ceviche', 'donde-puerta']
-lamina(
-    f'''<p class="lab">Algunas de sus fotos · Instagram @almud_bar</p>
-<div class="igrid">{"".join(f'<img src="{med(i, 360)}" alt="">' for i in grid15)}</div>
-<p class="lab" style="margin-top:.18in">Su carta, en su propia página del sitio</p>
-<div class="pair2"><img src="{shot("m-carta", 700)}" alt=""><img src="{shot("m-carta2", 700)}" alt=""></div>''',
-    f'''<p class="kick">Materia prima</p><h2>De dónde viene todo</h2>
-<p class="lead">Antes de diseñar, reunimos lo que Almud ya había publicado y lo ordenamos: el local, la barra, la cocina, la gente, las fiestas, el equipo y la carta.</p>
-<div class="grid">
-{block("Instagram @almud_bar", "<p>Su perfil tiene <b>759 publicaciones</b>. Leímos completas las <b>180 más recientes</b>, de diciembre de 2022 a octubre de 2026, con sus textos y <b>57 videos</b>. De ahí salen los títulos y todas las imágenes del sitio: <b>52 fotos y 13 videos</b>, de 38 publicaciones distintas.</p>")}
-{block("La carta", "<p>Las <b>7 cartas oficiales</b> del enlace de su bio: <b>10 secciones y 256 tragos, platos y bebidas</b>. Los nombres, las descripciones y los precios del sitio están al pie de la letra.</p>")}
-{block("Lo que dicen de ustedes", "<p><b>18 reseñas</b> citables de Tripadvisor y Google, en español, inglés y francés. En el sitio van las <b>10</b> que dicen de dónde venía quien la escribió.</p>")}
-{block("Quién hizo las imágenes", "<p>Al pie van las productoras que ustedes mismos acreditan en sus posts: @catarsis.fotografia, @estudiouno.prod e @isosur.prod.</p>")}
-{block("La regla", "<p>Cada texto del sitio tiene su origen identificado: qué post, qué línea de la bio, qué carta o qué reseña. Lo único escrito por nosotros son las indicaciones de uso: «Carta», «Ver la carta», «Escríbenos por DM», «Abrir en Google Maps», los nombres de los rincones y las ayudas en inglés para el turista.</p>", "wide")}
-</div>''', 'negro', 'crema')
+pols = [('tragos-bartender', .55, .7, -8), ('lugar-barra', 2.55, .45, 5), ('quien-grupo-peter', 4.4, .85, -3),
+        ('comida-pizza', .75, 3.1, 4), ('lugar-ojo-piojo', 2.8, 2.95, -6), ('eventos-fondita', 4.6, 3.3, 7),
+        ('lugar-sillones', 1.0, 5.5, -4), ('carta-sangria', 3.15, 5.35, 3)]
 
-# ═════════════════════════ 04 · VOZ ═════════════════════════
-lamina(
-    f'''<p class="lab">El sitio</p>
-{fig("d-lugar-a", "Su frase, como título de El lugar · en el computador")}
-<div class="row2 r4">{fig("m-en-lugar", "La misma sección en inglés", "mob")}
-<div class="lnote"><p>En inglés, sus frases no se traducen: quedan en español y llevan debajo una ayuda corta para el turista, con el mismo humor: «Restless souls who love colorssss!».</p></div></div>''',
-    f'''<p class="kick">Sistema · voz</p><h2>Escribir como Almud</h2>
-<p class="lead">El sitio no agrega adjetivos ni promesas: habla como habla Almud, de usté, con cariño y con juego de palabras. Y elige, de todo lo que publican, lo que mejor recibe a alguien que llega por primera vez.</p>
-{quote("Somos inquietos y nos gusta el colorssss!", ig("IG-111"), True)}
-<div class="grid">
-{block("De usté, invitando", quote("Le esperamos desde las 18:00 hrs", ig("IG-155")) + quote("USTÉ SE LO MERECE!", ig("IG-087")) + "<p>Las invitaciones con que cierran sus posts cierran también el sitio.</p>")}
-{block("El oficio, con humildad", quote("mucho amor, color y trabajo", ig("IG-045")) + "<p>Nunca dicen «mixología»: hablan de amor y de horas de trabajo. Así se presentan los tragos.</p>")}
-{block("Nadie queda afuera", quote("no dejamos a nadie ajuera", ig("IG-011")) + "<p>La frase acompaña a los tragos sin alcohol, en su propio rincón del carrusel.</p>")}
-{block("Lo que se quedó en Instagram", "<p>Las cascadas («Almudcito ito ito»), las palabras en «-eichon», los «Besi» y las frases de carrete funcionan en sus posts, donde todos los conocen. En una vitrina para alguien que llega por primera vez, restan. La única excepción es la frase de Elymar, en Equipo, que ustedes escribieron así.</p>")}
-</div>''', 'amarillo', 'crema')
 
-# ═════════════════════════ 05 · TIPOGRAFÍA ═════════════════════════
-lamina(
-    f'''<p class="lab">El sitio</p>
-{fig("d-tragos-c", "Los nombres de sus tragos, en la letra de los títulos · en el computador")}
-<div class="spec">
-  <p class="sp1">Aquí te las traigo Peter</p><p class="cap">Big Shoulders Display · títulos y nombres</p>
-  <p class="sp2">Pisco, elderflower, cranberry y burbuja de humo. $ 6.700</p><p class="cap">Barlow Condensed · textos, precios y botones</p>
-</div>''',
-    f'''<p class="kick">Sistema · tipografía</p><h2>Letras angostas, como su letrero</h2>
-<p class="lead">El letrero de Almud y su logotipo son letras altas y angostas, y sus afiches gritan los títulos en mayúsculas gruesas. El sitio usa dos letras de esa misma familia: una para gritar y otra para leer.</p>
-<div class="grid">
-{block("Big Shoulders Display · títulos", "<p>Condensada y gruesa, en mayúsculas, como el «BAR» de su logotipo y los títulos de sus afiches. Va en los títulos de cada sección y en los nombres de los rincones, de los tragos, de los platos y de las fiestas.</p>")}
-{block("Barlow Condensed · lectura", "<p>De la misma familia angosta, pero tranquila. Va en los textos, los precios, los botones y las ayudas en inglés. Se lee cómoda en el celular, incluso de noche y con poca luz.</p>")}
-{block("El logo no se escribe", "<p>La letra del «ALMUD» del letrero es preciosa pero se lee mal a tamaño de texto. Por eso no se usa para escribir: el logotipo va siempre dibujado, tal como es.</p>")}
-{block("Primero, que se lea", "<p>Ningún texto es chico, los títulos no pasan de tres líneas y los precios van en el mismo color del texto, sin competir con el nombre. Las letras viajan con el sitio, así que nunca cambian de forma mientras se lee.</p>")}
-</div>''', 'rosa', 'crema')
+def big(nm, cap):
+    return f'<div class="bign"><b>{nm}</b><span>{cap}</span></div>'
 
-# ═════════════════════════ 06 · PALETA ═════════════════════════
-SW = [('Amarillo cinta', 'amarillo', 'El lugar'), ('Rosa muro', 'rosa', 'Tragos'), ('Naranja cinta', 'naranja', 'Comida'),
-      ('Verde cinta', 'verde', 'Con quién'), ('Lila cinta', 'lila', 'Eventos'), ('Rojo cinta', 'rojo', 'Equipo'),
-      ('Crema', 'crema', 'Reseñas'), ('Negro', 'negro', 'Portada y cierre'), ('Azul letrero', 'azul', 'el «BAR»')]
-sw_html = ''.join(f'<span class="sw c-{k}{" dk" if k in OSCUROS else ""}"><b>{E(n)}</b><i>{COL[k]}</i><em>{E(s)}</em></span>' for n, k, s in SW)
-lamina(
-    f'''<p class="lab">El sitio</p>
-<div class="mrow3">{fig("m-lugar-a", "El lugar", "mob")}{fig("m-tragos-a", "Tragos", "mob")}{fig("m-quien-a", "Con quién", "mob")}</div>
-<p class="lnote" style="margin-top:.1in">Amarillo, rosa muro y verde cinta · en el celular. Cada sala tiene su color.</p>''',
-    f'''<p class="kick">Sistema · color</p><h2>La paleta está colgando del techo</h2>
-<p class="lead">Almud es color puro: el techo de miles de cintas, el muro rosa de botellas, los banderines y el letrero azul. En vez de inventar colores, se tomaron de ahí, uno por sección.</p>
-<div class="sws">{sw_html}</div>
-<p class="lab dkl">De estas fotos de su Instagram salen los colores</p>
-<div class="srcp">
- <figure><img src="{plan("cintas")}" alt=""><figcaption>Techo de cintas<b>{ig("IG-050")}</b></figcaption></figure>
- <figure><img src="{plan("muro")}" alt=""><figcaption>Muro rosa<b>{ig("IG-008")}</b></figcaption></figure>
- <figure><img src="{plan("barra")}" alt=""><figcaption>Barra y banderines<b>{ig("IG-079")}</b></figcaption></figure>
-</div>
-<div class="grid">
-{block("Un color por sala", "<p>Pasar de una sección a otra es como pasar de la barra a la terraza: cambia la luz. La carta usa los mismos colores, uno por pestaña.</p>")}
-{block("Un solo negro y un azul", "<p>El negro es el de sus videos y afiches. El azul es el del letrero y solo pinta el «BAR» del logo.</p>")}
-{block("Contraste", "<p>El rojo y el verde quedaron un poco más hondos que en las cintas, para que el texto crema se lea con holgura. Sobre los colores claros, el texto va en negro. Se revisó texto por texto, en el inicio y en la carta.</p>", "wide")}
-</div>''', 'negro', 'crema')
 
-# ═════════════════════════ 07 · LOGO ═════════════════════════
-lamina(
-    f'''<div class="logos">
-  <div class="lg dark wide"><img src="{LOGO_C}" alt=""></div>
-  <div class="lg cream wide"><img src="{LOGO_O}" alt=""></div>
-  <div class="lg dark"><img src="{png("brand/v3/png/almud-vertical-claro.png", 600)}" alt=""></div>
-  <div class="lg yel"><img src="{png("brand/v3/png/almud-isotipo-oscuro.png", 400)}" alt=""></div>
-</div>''',
-    f'''<p class="kick">Sistema · logo</p><h2>El almud del letrero</h2>
-<p class="lead">El logotipo ALMUD BAR y su isotipo, el almud, se redibujaron siguiendo los trazos de su carta y su letrero, para que se vean nítidos a cualquier tamaño: desde el ícono de la pestaña del navegador hasta un letrero.</p>
-<div class="grid">
-{block("Trazos respetados", "<p>ALMUD alto y fino en blanco, BAR grueso en azul letrero, y el almud con su boca de rombo. Nada se estiró ni se simplificó.</p>")}
-{block("Variantes", "<p>Horizontal y vertical, en claro para la noche y en oscuro para el crema de la carta, más el almud solo para el ícono y para la imagen que aparece al compartir el enlace por WhatsApp.</p>")}
-{block("Letra por letra", "<p>El logotipo se separó en sus ocho letras para que en la portada entren una a una, con rebote, como cuando ustedes escriben «V I E R N E S».</p>" + quote("V I E R N E S", ig("IG-107")))}
-{block("Dónde aparece", "<p>El almud se dibuja trazo a trazo mientras carga la página y luego abre la portada. El logotipo vive en la barra de arriba, encabeza la portada a gran escala y cierra el pie en su versión vertical.</p>")}
-</div>''', 'negro', 'crema')
+lam(RJ, ''.join(pol(k, x, y, 1.85, r) for k, x, y, r in pols) +
+    box(6.85, .6, 5.7, f'''<p class="k" style="color:rgba(255,255,255,.85)">De dónde viene todo</p>
+  <h2 class="t" style="color:#fff">Todo esto <em style="color:{AM}">ya</em> era suyo</h2>
+  <div class="bigs">{big(N_POSTS, f"publicaciones de su Instagram leídas completas, de las {N_PUB} de su perfil")}{big(N_ITEMS, f"tragos, platos y bebidas de sus {N_SECC} secciones de carta, al pie de la letra")}{big(N_REV, f"reseñas de sus clientes en Tripadvisor y Google; en el sitio, las {N_RES_SITIO} que dicen su país")}{big(N_FOTOS, f"fotos suyas y {N_VIDEOS} videos, de {N_POSTS_USADOS} publicaciones")}</div>
+  <p class="p" style="color:#fff">Cada texto del sitio tiene su origen identificado: qué post, qué línea de la bio, qué carta o qué reseña. Lo único que no viene de ustedes son las indicaciones de uso, como «Ver la carta» o «Escríbenos por DM», y las ayudas en inglés para el turista.</p>'''),
+    nc='rgba(255,255,255,.7)')
 
-# ═════════════════════════ 08 · RECORRIDO ═════════════════════════
-strip = [('d-carga-2', '1 · La espera'), ('d-hero', '2 · Portada'), ('d-lugar-b', '3 · El lugar'),
-         ('d-tragos-b', '4 · Tragos'), ('d-comida-a', '5 · Comida'), ('d-quien-a', '6 · Con quién'),
-         ('d-eventos-a', '7 · Eventos'), ('d-equipo-a', '8 · Equipo'), ('d-resenas', '9 · Reseñas')]
-lamina(
-    '<p class="lab">El sitio</p><div class="strip">' + ''.join(f'<figure><img src="{shot(s, 640)}" alt=""><figcaption>{c}</figcaption></figure>' for s, c in strip)
-    + '</div><p class="lnote">El recorrido de arriba hacia abajo · en el computador. Lo cierra «Usté se lo merece!» (10).</p>',
-    f'''<p class="kick">Sistema · recorrido</p><h2>Entrar a Almud un viernes</h2>
-<p class="lead">El orden de la página no es una lista de servicios: es la visita de un cliente. Se abre la puerta, se ve el local lleno, se pide en la barra, se come, se brinda con la gente y al final se sabe cómo volver.</p>
-<div class="grid acts">
-{block("<em>1</em> Entrar", "<p>La espera, con el almud que se dibuja y abre la boca, y la portada: el local en movimiento, el logo y su bio. Un solo botón: «Ver la carta».</p>")}
-{block("<em>2</em> Pedir", "<p>El lugar y sus seis rincones; después la barra, con el Peter y cinco tragos más de la carta, y la cocina, con ocho platos.</p>")}
-{block("<em>3</em> Celebrar", "<p>La gente, las fiestas del año y el equipo que atiende. Es la parte más larga, porque Almud es su gente.</p>")}
-{block("<em>4</em> Volver", "<p>Lo que dicen sus clientes de otros países y, al final, «Usté se lo merece!» con el día, la hora, la dirección, el mapa y cómo escribirles.</p>")}
-{block("Ritmo", "<p>Cada sección cambia de color y de forma: una ruleta que se arrastra, columnas desordenadas a propósito, una baraja de fotos, un carrusel de fiestas, tarjetas que se dan vuelta, cintas de reseñas. Ninguna composición se repite dos veces seguidas.</p>", "wide")}
-</div>''', 'crema', 'crema')
+# ═════════════════════════ 04 · LA MARCA ═════════════════════════
+stripes = [('amarillo', 'Amarillo cinta', NE), ('rosa', 'Rosa muro', NE), ('naranja', 'Naranja cinta', NE), ('verde', 'Verde cinta', CR),
+           ('lila', 'Lila cinta', NE), ('rojo', 'Rojo cinta', CR), ('crema', 'Crema', NE), ('negro', 'Negro', CR), ('azul', 'Azul letrero', NE)]
+sth = ''.join(f'<div class="stripe" style="background:{C[k]};color:{fg}"><span class="sn">{nm}</span><span class="sh">{C[k]}</span></div>' for k, nm, fg in stripes)
+lam(CR, f'<div class="stripes">{sth}</div>' +
+    f'<img class="abs" src="{LOGO_O}" style="left:.55in;top:.5in;width:2.3in" alt="">' +
+    box(.55, 1.35, 6.9, f'''<p class="k" style="color:{TN}">La marca · voz, letra y color</p>
+  <p class="spa">Somos inquietos</p><p class="spb">y nos gusta el</p><p class="spa" style="color:{RO}">colorssss!</p>
+  <p class="cap2">Así lo dicen ustedes · {IG("IG-111")}</p>''') +
+    box(.55, 4.7, 6.9, f'''<div class="cols3">
+  <div><h4 style="color:{TN}">Voz</h4><p>Viene de cómo escriben en Instagram: de usté, invitando, con juegos de palabras. Las cascadas como «ito ito», los «Besi» y las frases de carrete se quedan en Instagram, donde todos los conocen.</p></div>
+  <div><h4 style="color:{VE}">Letra</h4><p>Viene de su letrero y sus afiches: Big Shoulders Display, alta, angosta y gruesa como el «BAR», para gritar; Barlow Condensed, de la misma familia, para leer.</p></div>
+  <div><h4 style="color:{TN}">Color</h4><p>Viene del techo de cintas, del muro rosa y del letrero azul. Cada sección tiene su cinta, y el texto se lee con holgura sobre cada una.</p></div></div>'''))
 
-# ═════════════════════════ 09 · LA ESPERA ═════════════════════════
-seccion('La espera', '01 · La espera antes de entrar', 'Almud Bar · Serrano 325', 'Su isotipo y su logotipo',
-        'Mientras la página carga, la pantalla está en negro y el almud se dibuja de abajo hacia arriba. Al completarse, su boca se abre y por ahí aparece el bar.',
-        f'<div class="two">{fig("d-carga-2", "El almud se dibuja según lo que ya cargó, con el porcentaje debajo", w=1100)}{fig("d-apertura", "Al 100 %, la boca se abre y adentro ya corre el video", w=1100)}</div>',
-        [block("Qué se ve", "<p>Sobre negro, el almud se dibuja trazo a trazo, al ritmo de lo que de verdad va bajando: el video de la portada, el logo y las primeras fotos. Debajo, solo el porcentaje. Al llegar al cien, la boca de rombo se abre hasta llenar la pantalla y el video parte desde el comienzo.</p>"),
-         block("Tiempos", "<p>Dura al menos tres segundos, para que el dibujo se alcance a ver, y nunca más de ocho: si la conexión es lenta, el almud se completa igual y lo demás sigue cargando por detrás. Quien tenga el movimiento reducido en su equipo entra directo a la portada.</p>"),
-         block("Por qué así", "<p>El almud es la medida chilota que le da nombre al bar, y su boca abierta es justamente «lo que se llena». En vez de una pantalla vacía, la espera es su logo dibujándose; al terminar, el almud se abre y deja ver el bar lleno.</p>", 'wide')],
-        'negro')
+# ═════════════════════════ 05 · RECORRIDO ═════════════════════════
+actos = [('d-apertura', 'Entrar', 'Su almud se dibuja, abre la boca y deja ver su letrero, con la frase con que se presentan y «Ver la carta».', -3),
+         ('d-tragos-peter', 'Pedir', 'Sus seis rincones; el Peter con su humo; tragos y platos con el nombre y el precio de su carta.', 2),
+         ('d-quien-b', 'Celebrar', 'La baraja de su gente, sus fiestas de cada temporada y el equipo con sus apodos.', -2),
+         ('d-cierre-a', 'Volver', 'Reseñas en su idioma y su firma de cierre, con el día, la hora, el mapa y el DM.', 3)]
+ah = ''
+for i, (s_, t_, p_, r_) in enumerate(actos):
+    x = .5 + i * 3.1
+    ah += fr(s_, x, 3.2, 2.85, r_) + rombo(x + 2.0, 2.5, 1.1, AM, NE, f'<b class="rbn">{i + 1}</b>', z=5)
+    ah += box(x, 5.45, 2.8, f'<h3 class="t3" style="color:#fff">{t_}</h3><p class="p" style="color:rgba(255,255,255,.9)">{p_}</p>')
+lam(VE, box(.5, .6, 10, f'''<p class="k" style="color:rgba(255,255,255,.8)">El recorrido</p>
+  <h2 class="t" style="color:#fff">Un viernes en Almud, <em style="color:{AM}">en</em> cuatro actos</h2>''') + ah,
+    nc='rgba(255,255,255,.7)')
 
-# ═════════════════════════ 10 · PORTADA ═════════════════════════
-seccion('Portada', '02 · Portada', 'Coctelería de autor, comida &amp; música bonita desde 2014', 'Bio de Instagram',
-        'El local a pantalla completa, en movimiento. Encima, solo el logotipo, la frase de su bio y un botón.',
-        f'<div class="row2">{fig("d-hero", "En el computador")}{fig("m-hero", "En el celular", "mob")}</div>',
-        [block("Textos", "<p>La única frase es la primera línea de su bio, tal cual. El botón es uno solo: «Ver la carta». La dirección y el horario quedaron para el final, donde se buscan.</p>"),
-         block("Imágenes", thumbs([("portada-c-h-l", "Su video institucional, hecho por @estudiouno.prod · "), ("lugar-techada-llena", "La terraza techada llena · ")])),
-         block("Movimiento", "<p>Un solo montaje, igual en el computador, la tablet y el celular: los flecos y el letrero de su video institucional, y después la cámara caminando por la terraza techada llena, bajo las cintas. El video avanza siempre y se funde del final al comienzo, sin cortes.</p>"),
-         block("Por qué así", "<p>La mejor manera de presentar un bar es mostrarlo lleno. La portada es el bar, no una persona: el barman y ustedes tienen su lugar en Equipo. Y parte igual en cualquier pantalla, para que todos entren por la misma puerta.</p>")],
-        'negro')
+# ═════════════════════════ 06 · LA ESPERA Y LA PORTADA ═════════════════════════
+lam(NE, fr('d-carga-2', .55, 2.3, 3.6, -3, lt=True) + fr('d-apertura', 3.0, 3.95, 4.7, 2, z=3, lt=True) + ph('m-hero', 8.05, 2.85, 1.75, -4, z=4) +
+    rombo(3.55, 1.65, 1.15, RO, NE, '<span class="rbs">Al cien<br>por ciento</span>', fs=11, z=6) +
+    box(.55, .55, 7.2, f'''<p class="k" style="color:{RO}">La espera y la portada</p>
+  <h2 class="t" style="color:{CR}">El almud se abre <em style="color:{AZ}">y</em> aparece el bar</h2>''') +
+    box(10.15, .6, 2.45, f'''<p class="p" style="color:{CR}">Su nombre es una medida chilota y su logo la dibuja, con la boca en rombo. Mientras carga la página, ese almud se traza sobre negro al ritmo de lo que va llegando, con el porcentaje debajo.</p>
+  <p class="p" style="color:{CR}">Al completarse, la boca se abre y adentro ya corre su propio video: el letrero, la puerta, las cintas, los ojos, las lámparas y la terraza llena. Es el mismo en el celular y en el computador.</p>''') +
+    box(10.15, 5.05, 2.45, Q('Hicimos este video pa contar un poquito de nuestro Almudcito!', IG('IG-061'), 'light') +
+        f'<p class="p" style="color:{CR}">Encima, solo el logo, la primera línea de su bio y un botón: «Ver la carta».</p>'),
+    nc='rgba(245,233,219,.55)')
 
-# ═════════════════════════ 11 · EL LUGAR ═════════════════════════
-seccion('El lugar', '03 · El lugar', 'Somos inquietos y nos gusta el colorssss!', ig('IG-111'),
-        'Sobre amarillo cinta: el local lleno de noche, tres fotos de las salas repletas y una ruleta con sus seis rincones.',
-        f'<div class="two">{fig("d-lugar-b", "El local lleno, en tres fotos", w=1100)}{fig("d-lugar-c", "La ruleta de rincones", w=1100)}</div>',
-        [block("Textos · un rincón, una frase suya",
-               quote("Pucha que nos gusta nuestra barrita!", 'Barra · ' + ig('IG-087')) + quote("Techamos parte de la terraza", 'Terraza techada · ' + ig('IG-004'))
-               + quote("Felices, con el corazón llenifer!", 'Sillones · ' + ig('IG-009') + ' · «corazón» en lugar del emoji')
-               + quote("Amamos los atardeceres desde nuestra terracita", 'Terraza · ' + ig('IG-163')) + quote("Nos gustan los brillitos, las luces", 'Lámparas · ' + ig('IG-147'))
-               + quote("una mirada vale más que mil palabras", 'Ojo Piojo · ' + ig('IG-118'))),
-         block("Imágenes", thumbs([("lugar-barra", "Barra · "), ("lugar-sillones", "Sillones · @estudiouno.prod · "), ("lugar-lampara-pinzas", "Lámparas · "), ("lugar-ojo-piojo", "Ojo Piojo · ")])),
-         block("Movimiento", "<p>Cada «s» de «colorssss!» se estira y rebota, al entrar y al pasar el dedo. Las fotos del local lleno se abren en rombo, como la boca del almud. La ruleta se arrastra con el dedo o el mouse y cada foto se balancea, como colgada del techo. Las seis fotos ya están listas antes de llegar: ninguna aparece vacía.</p>"),
-         block("Por qué así", "<p>«colorssss» es su juego de palabras más reconocible y su frase es el manifiesto del lugar. Los rincones muestran el espacio, y la franja de fotos repletas muestra que siempre está lleno.</p>")],
-        'amarillo')
+# ═════════════════════════ 07 · EL LUGAR ═════════════════════════
+rinc = ''.join(pill(n_, c_, f_) for n_, c_, f_ in [('Barra', NE, CR), ('Terraza techada', RO, NE), ('Sillones', VE, CR), ('Terraza', NA, NE), ('Lámparas', LI, NE), ('Ojo Piojo', RJ, CR)])
+lam(AM, fr('d-lugar-c', 5.35, .6, 7.2, 1.5) + fr('d-lugar-b', 6.2, 4.6, 4.3, -2.5, z=3) + ph('m-lugar-c', 10.9, 3.9, 1.6, 4, z=4) +
+    box(.55, .55, 4.6, f'''<p class="k" style="color:{TN}">El lugar</p>
+  <h2 class="t">Seis rincones, <em style="color:{TN}">una</em> frase cada uno</h2>
+  <div class="pills">{rinc}</div>''') +
+    box(.55, 3.3, 4.55, Q('Pucha que nos gusta nuestra barrita!', 'Barra · ' + IG('IG-087')) + Q('Felices, con el corazón llenifer!', 'Sillones · ' + IG('IG-009')) +
+        Q('una mirada vale más que mil palabras', 'Ojo Piojo · ' + IG('IG-118')) +
+        '''<p class="p">Su feed recorre el local de rincón en rincón, y cada rincón ya tenía su frase. Aquí se pasan con el dedo, como sus carruseles, y cada foto se balancea como las cintas del techo. Arriba, tres fotos de las salas repletas.</p>
+  <p class="p sm">En Sillones, «corazón» reemplaza al emoji del original.</p>'''))
 
-# ═════════════════════════ 12 · TRAGOS ═════════════════════════
-seccion('Tragos', '04 · Tragos', 'mucho amor, color y trabajo', ig('IG-045'),
-        'Sobre rosa muro: el Peter con su burbuja de humo, grande y en movimiento; a su lado, la barra en columnas desordenadas, y debajo un carrusel con cinco tragos más de la carta.',
-        f'<div class="two">{fig("d-tragos-peter", "El Peter, con su nombre armándose sobre el humo", w=1100)}{fig("d-tragos-c", "El carrusel de tragos con nombre y precio", w=1100)}</div>',
-        [block("Los seis de la carta", precios([("Aquí te las traigo Peter", "$ 6.700"), ("Sagüer on Faia", "$ 7.900"), ("Sangría Foreva!", "$ 6.500"),
-                                                 ("Cómo te voy a olvidar", "$ 6.800"), ("A veces me pongo Coquette", "$ 7.100"), ("La moto chantá", "$ 6.400")])
-               + '<p class="small">Nombres y precios de su Coctelería de la casa y de sus mocktails, al pie de la letra.</p>'),
-         block("Imágenes", thumbs([("tragos-humo", "El Peter · "), ("tragos-bartender", "Frente al muro · "), ("carta-saguer", "Sagüer · "), ("carta-moto", "Moto chantá · ")])),
-         block("Movimiento", "<p>«Aquí te las traigo Peter» se arma letra por letra sobre el video del humo. Las fotos se «sirven» de arriba abajo, como un vaso que se llena. En el carrusel, cada nombre también se arma al entrar; se arrastra con el dedo o el mouse, y un toque abre ese trago en la carta.</p>"),
-         block("Por qué así", "<p>El Peter es su trago más llamativo y su nombre ya es un grito, así que abre la sección.</p>" + quote("Aquí te las traigo Peter!", ig('IG-044')) + "<p>Un trago lleva nombre solo si la foto es ese trago y el nombre sigue en la carta.</p>")],
-        'rosa')
+# ═════════════════════════ 08 · TRAGOS ═════════════════════════
+tragos = ''.join(pill(f'{n_} · {p_}', c_, f_) for n_, p_, c_, f_ in [
+    ('Sagüer on Faia', '$ 7.900', NE, CR), ('Sangría Foreva!', '$ 6.500', CR, NE), ('Cómo te voy a olvidar', '$ 6.800', NE, CR),
+    ('A veces me pongo Coquette', '$ 7.100', CR, NE), ('La moto chantá', '$ 6.400', AM, NE)])
+lam(RO, fr('d-tragos-peter', .5, .55, 7.6, -1.5) + ph('m-tragos-c', 7.25, 4.1, 1.6, 5, z=4) +
+    rombo(6.6, .15, 1.25, AM, NE, '<span class="rbs">$ 6.700</span>', fs=15, z=6) +
+    box(8.75, .6, 3.85, f'''<p class="k" style="color:{TN}">La barra</p>
+  <h2 class="t">El Peter <em style="color:{RO}">abre</em> la barra</h2>
+  {Q("Aquí te las traigo Peter!", IG("IG-044"))}
+  <p class="p">Su post lo presentó con un grito, y así entra: grande, con su burbuja de humo en movimiento y el nombre armándose letra por letra. Al lado, la barra en columnas que parten a distinta altura, como su feed de collage.</p>''', 'card', f'background:{CR};') +
+    box(.55, 6.45, 6.4, f'<p class="k" style="color:{NE}">Y cinco más de su Coctelería de la casa</p><div class="pills">{tragos}</div>'),
+    nc='rgba(14,12,11,.55)')
 
-# ═════════════════════════ 13 · COMIDA ═════════════════════════
-seccion('Comida', '05 · Comida', 'una cocina sencilla pero más que sabrosona!', ig('IG-022'),
-        'Sobre naranja cinta: la pizza recién salida, dos platos en video y cuatro más en dos columnas, cada uno con su nombre y precio.',
-        f'<div class="two">{fig("d-comida-a", "La pizza y los platos en video", w=1100)}{fig("d-comida-b", "El orden del desorden", w=1100)}</div>',
-        [block("De su carta", precios([("Tukulito Sakayama", "$ 15.900"), ("La carne es débil", "$ 11.900"), ("Una cosa poca", "$ 11.900"), ("Todo que ver!", "$ 16.000"),
-                                        ("Con tuti si no pa qué!", "$ 19.900"), ("Chambreao", "$ 10.900"), ("Camarón que se duerme", "$ 15.900")])
-               + '<p class="small">Más sus Pizzas artesanales, que abren la sección.</p>'),
-         block("Imágenes", thumbs([("comida-pizza", "Pizza · @catarsis.fotografia · "), ("comida-ceviche", "Todo que ver! · "), ("comida-hamburguesa", "Chambreao · "), ("carta-contuti", "Con tuti · ")])),
-         block("Movimiento", "<p>Los platos llegan girando un poco, como cuando se sirven en la mesa, y su foto se abre en redondo, como un plato. «más que sabrosona!» late cada pocos segundos.</p>"),
-         block("Por qué así", "<p>Cada video muestra el plato que nombra: el sartén es «La carne es débil» y el queso que se estira es «Una cosa poca». Las columnas parten a distinta altura y no se realinean: un orden del desorden.</p>")],
-        'naranja')
+# ═════════════════════════ 09 · COMIDA ═════════════════════════
+lam(NA, plato('carta-tukulito', .75, 2.95, 1.8, 'Tukulito Sakayama', '$ 15.900', -6) + plato('comida-ceviche', 2.85, 2.7, 1.8, 'Todo que ver!', '$ 16.000', 5) +
+    plato('comida-hamburguesa', 4.95, 3.05, 1.8, 'Chambreao', '$ 10.900', -3) + plato('carta-contuti', 1.8, 5.45, 1.8, 'Con tuti si no pa qué!', '$ 19.900', 7) +
+    plato('carta-camaron', 3.95, 5.5, 1.8, 'Camarón que se duerme', '$ 15.900', -5) +
+    fr('d-comida-a', 7.2, .6, 5.35, 2) + ph('m-comida-b', 10.9, 3.95, 1.6, -4, z=4) +
+    box(.55, .55, 6.3, f'''<p class="k" style="color:{NE}">La cocina</p>
+  <h2 class="t">Platos que llegan <em style="color:{CR}">a la</em> mesa</h2>
+  <p class="p">Como cuando se sirven, los platos entran girando un poco y su foto se abre en redondo. Cada video muestra el plato que nombra: el sartén es «La carne es débil» y el queso que se estira, «Una cosa poca».</p>''') +
+    box(7.2, 4.4, 3.4, Q('Las masas de nuestras pizzas son hechas por nosotros!', 'Su carta · Comilona') +
+        '<p class="p">Ocho platos de su carta, con nombre y precio literales, en dos columnas que no se realinean: el orden del desorden.</p>'),
+    nc='rgba(14,12,11,.55)')
 
-# ═════════════════════════ 14 · CON QUIÉN ═════════════════════════
-seccion('Con quién', '06 · Con quién', 'no somos ná sin ustedes!', ig('IG-026'),
-        'Sobre verde cinta: tres videos de mesas llenas y, al centro, una baraja de doce fotos de su gente que se lanza con el dedo.',
-        f'<div class="row2">{fig("d-quien-b", "La baraja entre los videos · en el computador")}{fig("m-quien-b", "En el celular", "mob")}</div>',
-        [block("Textos", quote("Ya saben que no somos ná sin ustedes! Faltan muuuchas más, pero no se pueden subir más de 20", ig('IG-026'))
-               + "<p>El título es la única frase. Las fotos dicen el resto.</p>"),
-         block("Imágenes", thumbs([("quien-grupo-peter", "Polera Peter · "), ("con-quien-brindis", "Brindis · @estudiouno.prod · "), ("quien-carcajadas", "Carcajadas · "), ("quien-mesa-llena", "Mesa llena · ")])),
-         block("Movimiento", "<p>El título entra como un brindis: «no somos ná» llega por la izquierda, «sin ustedes!» por la derecha, y chocan. La foto de arriba se lanza, sale volando y vuelve por debajo de la pila: la baraja nunca se acaba. Los videos siguen corriendo al lado.</p>" + quote("Venga a hacer chin chin que esta vida es una sola!", ig('IG-157'))),
-         block("Por qué así", "<p>Sus posts de gente son carruseles de hasta veinte fotos que se pasan con el dedo; la baraja convierte ese gesto en juego. La sección es de la gente, en plural: los videos son de mesas llenas, grupos y baile, y se dejó fuera un plano que la fiesta no necesitaba.</p>")],
-        'verde')
+# ═════════════════════════ 10 · LA GENTE Y SUS FIESTAS ═════════════════════════
+baraja = [('con-quien-brindis', .6, 2.4, -9), ('quien-carcajadas', .8, 2.3, 6), ('quien-mesa-llena', .65, 2.35, -3), ('quien-grupo-peter', .75, 2.25, 4)]
+fiestas = ''.join(pill(t_, c_, f_) for t_, c_, f_ in [('Aniversario · julio', AM, NE), ('Fondita · septiembre', RO, NE), ('Jalogüín · octubre', NA, NE)])
+lam(VE, ''.join(pol(k, x, y, 3.2, r, z=2 + i) for i, (k, x, y, r) in enumerate(baraja)) +
+    rombo(3.35, 5.75, 1.15, AM, NE, '<span class="rbs">Nunca<br>se acaba</span>', fs=11, z=7) +
+    fr('d-eventos-a', 7.0, .6, 5.55, -2) + ph('m-eventos-b', 6.2, 3.45, 1.5, 4, z=4) +
+    box(.55, .55, 6.2, f'''<p class="k" style="color:{AM}">Con quién y cuándo</p>
+  <h2 class="t" style="color:#fff">Siempre lleno, <em style="color:{AM}">todo</em> el año</h2>''') +
+    box(4.25, 1.85, 1.85, Q('Ya saben que no somos ná sin ustedes!', IG('IG-026'), 'light') +
+        '<p class="p" style="color:#fff">«Faltan muuuchas más, pero no se pueden subir más de 20», dice el mismo post. Sus carruseles de gente son aquí una baraja que se lanza con el dedo; la foto vuelve por debajo y la pila no se vacía. Al lado, tres videos de mesas llenas.</p>') +
+    box(8.0, 4.75, 4.55, f'''<div class="pills">{fiestas}</div>
+  <p class="p" style="color:#fff;margin-top:.12in">Las fiestas que vuelven cada año pasan solas, con su nombre enorme. Las de una sola vez y las campañas ajenas quedan fuera: nada que ustedes no hayan anunciado.</p>
+  {Q("Se comió, se tomó, se bailó, quedamos con dolor de guata de tanto reír", IG("IG-072"), "light")}'''),
+    nc='rgba(255,255,255,.7)')
 
-# ═════════════════════════ 15 · EVENTOS ═════════════════════════
-seccion('Eventos', '07 · Eventos', 'tirar la casa por la ventana!', ig('IG-010'),
-        'Sobre lila cinta: la fiesta de aniversario en video, una frase suya sobre cómo se vive una fiesta en Almud y un carrusel con las tres fiestas que se repiten cada año.',
-        f'<div class="two">{fig("d-eventos-a", "El título, la bajada y el Aniversario", w=1100)}{fig("d-eventos-b", "La Fondita, en el carrusel de fiestas", w=1100)}</div>',
-        [block("Textos", quote("Se comió, se tomó, se bailó, quedamos con dolor de guata de tanto reír", ig('IG-072'))
-               + precios([("Aniversario", "julio"), ("Fondita", "septiembre"), ("Jalogüín", "octubre")])
-               + '<p class="small">Solo el mes y el nombre, sin fechas ni promesas: nada que ustedes no hayan anunciado.</p>'),
-         block("Imágenes", thumbs([("eventos-12-anos", "12 años · @isosur.prod · "), ("eventos-baile-12", "El baile · @isosur.prod · "), ("eventos-fondita", "La fondita · "), ("eventos-jaloguin", "Jalogüín · ")])),
-         block("Movimiento", "<p>Cada palabra del título cae desde arriba con un giro y rebota, como lanzada por la ventana. Las fiestas pasan solas cada pocos segundos: el nombre se arma letra por letra, enorme, y las fotos se reparten con un giro leve. Se pueden pasar con el dedo, el mouse o las flechas. Jalogüín va en video, con disfraces y la barra llena.</p>"),
-         block("Por qué así", "<p>Almud acaba de cumplir 12 años y el título es su propia frase sobre esa fiesta. La bajada la eligieron entre sus frases porque resume la fiesta mejor que cualquier frase nuestra. Quedaron fuera las fiestas de una sola vez y las campañas que no son suyas: el carrusel muestra lo que vuelve cada año.</p>")],
-        'lila')
+# ═════════════════════════ 11 · EQUIPO ═════════════════════════
+apodos = [('Barra', 'mente creadora de muchos cócteles'), ('Barra', 'la regia'), ('Barra', 'haciéndole los copetitos a usté'),
+          ('Liz · Salones', 'la amada'), ('Salones', 'el ondero'), ('Elymar · Barra y salón', 'le pone una sonrisota con cada cóctecito ito ito')]
+aph = ''.join(f'<div class="apodo"><span>{E(a)}</span><b>«{E(b)}»</b></div>' for a, b in apodos)
+lam(RJ, fr('d-equipo-flip', .5, .6, 6.9, -1.5) + ph('m-equipo-flip', 6.0, 3.55, 1.6, 4, z=4) +
+    box(.55, 5.3, 5.2, f'''<p class="qbig">«los papis del almud: el franchuto y la disharashera»</p>
+  <p class="k" style="color:rgba(255,255,255,.75);margin-top:.08in">Así nombran a los dueños · {IG("IG-067")}</p>''') +
+    box(8.05, .55, 4.5, f'''<p class="k" style="color:{AM}">El equipo</p>
+  <h2 class="t" style="color:#fff">Cada uno <em style="color:{AM}">con</em> su apodo</h2>
+  <p class="p" style="color:#fff">Ustedes presentan al equipo con cariño y por su lugar en el bar: «en esa barra…», «por los salones…». Cada tarjeta se da vuelta al tocarla y muestra justo eso.</p>
+  <div class="apodos">{aph}</div>
+  <p class="p" style="color:#fff">El sitio habla por el local: no enlaza perfiles personales, ni del equipo ni de ustedes. El video con ustedes dos vive aquí, para que la portada sea del bar.</p>
+  <p class="p sm" style="color:rgba(255,255,255,.8)">Frases publicadas el {FECHA("IG-045")}, {FECHA("IG-067")}, {FECHA("IG-034")} y {FECHA("IG-001")}. La de Elymar va en singular; el original dice «le ponen». Del post de los dueños se omiten sus cuentas.</p>'''),
+    nc='rgba(255,255,255,.7)')
 
-# ═════════════════════════ 16 · EQUIPO ═════════════════════════
-seccion('Equipo', '08 · Equipo', 'Peazo de equipo que tenemos!', ig('IG-048'),
-        'Sobre rojo cinta: el video del cumpleaños número 10 con ustedes dos y seis tarjetas del equipo que se dan vuelta al tocarlas.',
-        f'<div class="row2">{fig("d-equipo-flip", "Dos tarjetas dadas vuelta · en el computador")}{fig("m-equipo-flip", "En el celular", "mob")}</div>',
-        [block("Al dar vuelta la tarjeta", precios([("Barra", "«mente creadora de muchos cócteles»"), ("Barra", "«la regia»"), ("Barra", "«haciéndole los copetitos a usté»"),
-                                                     ("Liz · Salones", "«la amada»"), ("Salones", "«el ondero»"), ("Elymar · Barra y salón", "«le pone una sonrisota con cada cóctecito ito ito»")])
-               + '<p class="small">Frases de sus posts (' + ig('IG-045') + ', ' + ig('IG-067') + ', ' + ig('IG-034') + ' y ' + ig('IG-001') + '). La de Elymar pasa al singular, porque aquí habla de ella sola (el original dice «le ponen»).</p>', 'wide'),
-         block("Los dueños", quote("los papis del almud: el franchuto y la disharashera", ig('IG-067')) + "<p>Al pie de la sección, con sus propias palabras.</p><p class='small'>El post nombra también sus cuentas de Instagram; en el sitio se omiten.</p>"),
-         block("Por qué así", "<p>El sitio habla por el local, no expone a su gente: no hay cuentas personales de Instagram, ni del equipo ni de ustedes. Cada uno aparece con su lugar en el bar y el apodo cariñoso que ustedes le dieron. El video con ustedes dos está aquí y no en la portada, para que la portada sea del local.</p>")],
-        'rojo')
+# ═════════════════════════ 12 · RESEÑAS Y DESPEDIDA ═════════════════════════
+paises = ''.join(pill(f'{PAISES[k]} · {v}', c_, f_) for (k, v), c_, f_ in zip(N_PAIS.items(), (VE, AZ, LI), (CR, NE, NE)))
+lam(CR, cintas(0, 13, 0, 60, .5) + '<p class="qq" style="left:.35in;top:.5in">“</p>' +
+    box(.6, 1.7, 5.9, f'''<p class="qbig" style="color:{NE}">Estuve ahí cada día de mi estancia, porque es imposible no volver.</p>
+  <p class="k" style="color:{TN};margin-top:.1in">arqggodoy · Iquique, Chile · Tripadvisor</p>
+  <h2 class="t" style="margin-top:.28in">Diez voces <em style="color:{RO}">y</em> una despedida</h2>
+  <div class="pills">{paises}</div>
+  <p class="p" style="margin-top:.14in">Sus clientes hablan de la terraza, de la atención, de la música y de encontrar «un vrai bar». En el sitio van las reseñas que dicen de dónde venía quien escribió, cada una en su idioma, en dos cintas que pasan solas.</p>
+  <p class="p">Al final, su despedida de siempre en grande. Al lado, «Le esperamos desde las 18:00 hrs» se escribe en vivo, con los días y la dirección de su bio, el mapa y un solo botón: escribirles por DM, porque así conversan ustedes. No hay «Reservar».</p>''') +
+    fr('d-resenas', 7.0, 1.0, 5.55, 2) + fr('d-cierre-b', 7.25, 4.75, 5.3, -2, z=3, crop=.56) +
+    rombo(11.55, 3.6, 1.25, RO, NE, '<span class="rbs">Usté se lo<br>merece!</span>', fs=10.5, z=6))
 
-# ═════════════════════════ 17 · RESEÑAS ═════════════════════════
-seccion('Reseñas', '09 · Reseñas', 'Que no se lo cuenten', ig('IG-024'),
-        'Sobre crema, como el papel de la carta: diez reseñas de clientes en dos cintas que pasan solas en sentidos contrarios, cada una en su idioma y con la bandera de su país.',
-        f'{fig("d-resenas", "Diez voces, tres idiomas · en el computador")}',
-        [block("Lo que dicen", quote("Super soirée à Castro ! Le service est sympa, super ambiance, avec musique très sympa!", 'Dorothee · Épinal, Francia · Tripadvisor')
-               + quote("La raja el bar, totalmente recomendable. Ondero, buena música, tragos buenísimos y una barra tipo NYC!", 'Andres · Santiago, Chile · Tripadvisor')
-               + quote("Estuve ahí cada día de mi estancia, porque es imposible no volver.", 'arqggodoy · Iquique, Chile · Tripadvisor'), 'wide'),
-         block("Cómo se mueven", "<p>Las dos cintas avanzan de a una tarjeta y se detienen un momento para leer, desfasadas: siempre hay una quieta. Se pueden arrastrar con el dedo o el mouse, y se detienen al pasar el cursor encima.</p>"),
-         block("Por qué así", "<p>Van solo las reseñas que dicen de dónde venía quien las escribió: Francia, Nueva Zelanda y varias ciudades de Chile. Cada una en su idioma y con su ortografía («Castro !»). Repiten lo que más elogian sus clientes: la terraza, la atención, la música y la sorpresa de encontrar «un vrai bar». Ninguna habla de esperas.</p>")],
-        'crema')
+# ═════════════════════════ 13 · DETALLES ═════════════════════════
+dcol = [RO, AM, VE, LI, AZ]
+phs = ''.join(ph(k, .65 + i * 2.45, .5 + (0, .3, 0, .3, 0)[i], 2.05, (-4, 3, -2, 4, -3)[i]) for i, k in enumerate(['m-carta', 'm-en-lugar', 'm-tragos-c', 'm-equipo-b', 'm-resenas']))
+dots = ''.join(f'<div class="dot" style="left:{.45 + i * 2.45}in;top:{1.4 + (0, .3, 0, .3, 0)[i]}in;background:{c_}"></div>' for i, c_ in enumerate(dcol))
+det = [('La carta, aparte', f'Sus {N_ITEMS} ítems, tal como en su carta impresa, en una página propia. Las siete pestañas se ven siempre completas, cada una con el color de una cinta, y cada trago o plato del inicio abre su lugar exacto.', RO),
+       ('Español e inglés', 'Un botón «EN» arriba. Sus frases y los nombres de la carta no se traducen: llevan debajo una ayuda para el turista, con el mismo humor.', AM),
+       ('Videos que no paran', 'Corren solos desde que se ven y siguen corriendo al bajar por la página. Los de la sección siguiente ya están listos al llegar.', VE),
+       ('Con el dedo', 'Rincones, tragos, baraja, tarjetas y reseñas se mueven con el dedo, y deslizar hacia abajo siempre mueve la página. Con el movimiento reducido, todo queda quieto y completo.', LI)]
+deth = ''.join(box(.55 + i * 3.1, 5.75, 2.85, f'<div class="bar" style="background:{c_}"></div><h3 class="t4" style="color:{CR}">{t_}</h3><p class="p" style="color:rgba(245,233,219,.88)">{p_}</p>') for i, (t_, p_, c_) in enumerate(det))
+lam(NE, dots + phs + deth, nc='rgba(245,233,219,.55)')
 
-# ═════════════════════════ 18 · CIERRE ═════════════════════════
-seccion('Usté se lo merece', '10 · Cierre', 'USTÉ SE LO MERECE!', ig('IG-087'),
-        'Una sola sección de noche para cerrar: la terraza de tarde, su firma en grande y, al lado, cuándo y dónde, con el mapa y el botón para escribirles. Al pie, el logo y los créditos.',
-        f'<div class="row2">{figc("d-cierre-b", "Cierre · en el computador", 0.66)}{fig("m-cierre-a", "En el celular", "mob")}</div>',
-        [block("Datos", quote("Le esperamos desde las 18:00 hrs", ig('IG-155')) + "<p><b>Mar a Sáb · Serrano 325, Castro.</b> Son los de su bio. Debajo, la referencia que usan todos: «Al frente del Centro Cultural de Castro».</p>"),
-         block("Imágenes", thumbs([("donde-terraza", "La terraza de tarde · "), ("donde-puerta", "La puerta · @estudiouno.prod · ")])),
-         block("Movimiento", "<p>«Le esperamos desde las 18:00 hrs» se escribe en vivo, letra por letra, con un cursor rosa que la sigue. El video de la terraza va entero, sin recortes. El mapa de Google está en la misma página, en el punto exacto, con un enlace para abrirlo en el celular.</p>"),
-         block("Por qué así", "<p>Lo práctico llega cuando ya se decidió. No hay «Reservar»: Almud conversa por mensaje directo, así que el botón lleva ahí. Y el cierre es su firma de siempre, con su ortografía: usté se lo merece.</p>")],
-        'negro')
-
-# ═════════════════════════ 19 · DETALLES ═════════════════════════
-lamina(
-    f'''<p class="lab">El sitio</p>
-{fig("d-carta", "La carta, en su propia página · en el computador")}
-<div class="mrow3">{fig("m-carta", "La carta en el celular", "mob")}{fig("m-en-lugar", "Modo inglés", "mob")}{fig("m-comida-b", "Comida", "mob")}</div>''',
-    f'''<p class="kick">Detalles en todo el sitio</p><h2>Lo que no se ve, pero se siente</h2>
-<p class="lead">Pequeñas decisiones que no se notan una por una, pero que hacen que el sitio se sienta cuidado de principio a fin.</p>
-<div class="grid">
-{block("La carta, perfecta", "<p>Una página aparte con sus 256 ítems al pie de la letra. Las siete pestañas se ven siempre completas, en cualquier pantalla, cada una con un color de las cintas. Cada trago y plato del inicio abre su lugar exacto en ella.</p>")}
-{block("Dos idiomas", "<p>Un botón «EN» arriba. Sus frases y los nombres de la carta no se traducen: llevan debajo una ayuda en inglés. La elección queda recordada para la próxima visita.</p>")}
-{block("Los videos nunca se detienen", "<p>Corren solos desde que se ven y siguen corriendo al bajar. Los de la sección siguiente se preparan antes de llegar, así que ninguno se ve quieto.</p>")}
-{block("Pensado para el celular", "<p>Ruletas, carruseles, la baraja, las tarjetas y las reseñas se manejan con el dedo, y un deslizamiento vertical siempre mueve la página.</p>")}
-{block("Solo cuentas de Almud", "<p>No hay perfiles personales en ninguna parte del sitio. Solo enlazan Almud y las productoras que hicieron las fotos y los videos.</p>")}
-{block("Al compartir", "<p>Al mandar el enlace por WhatsApp aparece una imagen con el logo y la frase de la bio, no un cuadro vacío. Quien tenga el movimiento reducido ve el sitio completo y quieto.</p>")}
-</div>''', 'naranja', 'crema')
-
-# ═════════════════════════ 20 · CIERRE ═════════════════════════
-lamina(
-    f'<img class="bleed" src="{med("lugar-terraza-repleta", 1400)}" alt="" style="object-position:50% 50%">',
-    f'''<div class="close">
-  <img class="cl-logo" src="{LOGO_C}" alt="">
-  <p class="kick">Lo que sigue</p><h2>Hacerlo suyo</h2>
-  <p class="lead">Este sitio se hizo solo con lo que ya estaba publicado. Con un par de conversaciones podría ir mucho más lejos:</p>
+# ═════════════════════════ 14 · CIERRE ═════════════════════════
+k14 = nx()
+L.append(f'''<article class="lam" style="background:{NE}"><img class="bleed" src="{med("lugar-terraza-repleta", 1950, q=82)}" style="object-position:50% 50%" alt="">''' +
+         box(6.75, .5, 5.75, f'''<img class="mk" src="{ISO_O}" alt="">
+  <p class="k" style="color:{TN}">Lo que sigue</p><h2 class="t">Hacerlo <em style="color:{RO}">suyo</em></h2>
+  <p class="p">Este sitio se hizo solo con lo que ya estaba publicado. Con un par de conversaciones podría ir mucho más lejos:</p>
   <ul class="next"><li>Fotografía propia de cada rincón, como los sillones llenos de gente, y de ustedes dos</li>
     <li>Sus videos originales en alta, horizontales y verticales, para una portada aún más nítida</li>
     <li>Dominio propio .cl y alojamiento a nombre de Almud</li>
     <li>La carta y las fiestas del año al día, actualizadas desde el mismo sitio</li></ul>
   <p class="invite">Cuando quieran, lo conversamos.</p>
-  <p class="who">Pablo Figueroa G.</p>
-  <p class="role">Director de estudio</p>
+  <p class="who">Pablo Figueroa G.</p><p class="role">Director de estudio</p>
   <p class="contact"><a href="mailto:pablo@bergerac.cl">pablo@bergerac.cl</a> · <a href="tel:+56975892096">+56 9 7589 2096</a></p>
-  <p class="link"><a href="https://bergerac.cl">Bergerac.cl</a></p>
-</div>''', 'negro', 'negro')
+  <p class="link"><a href="https://bergerac.cl">Bergerac.cl</a></p>''', 'card', f'background:{CR};padding:.45in .5in;') +
+         f'<span class="no" style="color:rgba(255,255,255,.75)">{k14:02d}</span></article>')
 
 # ═════════════════════════ CSS ═════════════════════════
 CSS = f'''
@@ -435,133 +377,89 @@ CSS = f'''
 @font-face{{font-family:"BC";font-weight:500;src:url({font("barlow-condensed-latin-500-normal")}) format("woff2")}}
 @font-face{{font-family:"BC";font-weight:600;src:url({font("barlow-condensed-latin-600-normal")}) format("woff2")}}
 @page{{size:13in 8.5in;margin:0}}
-:root{{--neg:#0e0c0b;--cre:#f5e9db;--rosa:#f24350;--tinta:#c41e34;--gris:#6d6159}}
 *{{box-sizing:border-box;margin:0;padding:0}}
 html,body{{background:#3a3532}}
-body{{font-family:"BC",Arial Narrow,sans-serif;font-weight:500;color:var(--neg);-webkit-print-color-adjust:exact;print-color-adjust:exact}}
-.lam{{width:13in;height:8.5in;display:grid;grid-template-columns:6.5in 6.5in;overflow:hidden;margin:0 auto .3in;page-break-after:always;break-after:page;position:relative}}
+body{{font-family:"BC","Arial Narrow",sans-serif;font-weight:500;color:{NE};-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.lam{{width:13in;height:8.5in;overflow:hidden;margin:0 auto .3in;position:relative;page-break-after:always;break-after:page}}
 @media print{{html,body{{background:none}}.lam{{margin:0}}}}
-{"".join(f".c-{k}{{background:{v}}}" for k, v in COL.items())}
-.L{{padding:.42in .4in .36in;display:flex;flex-direction:column;gap:.13in;overflow:hidden;color:var(--neg);position:relative}}
-.L.dk{{color:var(--cre)}}
-.L:has(.bleed){{padding:0}}
-.bleed{{width:100%;height:100%;object-fit:cover;display:block}}
-.R{{position:relative;padding:.46in .52in .66in;display:flex;flex-direction:column;overflow:hidden;color:var(--neg)}}
-.R.dk{{color:var(--cre)}}
-.lab{{font-family:"BC";font-weight:600;font-size:7pt;letter-spacing:.22em;text-transform:uppercase}}
-.sh{{display:flex;flex-direction:column;gap:3pt;min-width:0}}
-.sh img{{width:100%;display:block;border-radius:3pt;box-shadow:0 6pt 18pt rgba(0,0,0,.28)}}
-.sh figcaption{{font-size:7.6pt;font-weight:500;opacity:.85}}
-.two{{display:flex;flex-direction:column;gap:.14in}}
-.two .sh{{align-items:center}}
-.two .sh img{{width:auto;max-width:100%;max-height:2.42in}}
-.two .sh figcaption{{align-self:stretch}}
-.row2{{display:flex;gap:.2in;align-items:flex-start}}
-.row2>.sh:first-child{{flex:1}}
-.sh.mob{{width:1.55in;flex:none}}
-.r4 .sh.mob{{width:1.25in}}
-.r4 .sh.mob img{{max-height:2.45in;object-fit:cover;object-position:top}}
-.mrow3 .sh.mob img{{max-height:3.3in;object-fit:cover;object-position:top}}
-.mrow3{{display:flex;gap:.16in;justify-content:center}}
-.mrow3 .sh.mob{{width:1.7in}}
-.lnote{{font-size:9pt;line-height:1.4;flex:1;align-self:center;opacity:.9}}
-.recw{{margin-top:auto}}
-.rec{{list-style:none;columns:2;column-gap:.2in;font-size:8.4pt;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.7;margin-top:4pt}}
-.rec li{{opacity:.45;break-inside:avoid}}
-.rec li.on{{opacity:1}}
-.rec li.on::before{{content:"";display:inline-block;width:6pt;height:6pt;background:currentColor;margin-right:5pt;transform:rotate(45deg);vertical-align:1pt}}
-.kick{{font-weight:600;font-size:7.6pt;letter-spacing:.26em;text-transform:uppercase;color:var(--tinta);margin-bottom:.08in}}
-.R.dk .kick{{color:var(--rosa)}}
-h1,h2{{font-family:"BSD";font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:.005em}}
-h2{{font-size:30pt;margin-bottom:.06in}}
-.src{{font-weight:600;font-size:7.4pt;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta);margin-bottom:.1in}}
-.lead{{font-size:12pt;line-height:1.35;margin:.04in 0 .17in;max-width:5.4in}}
-.grid{{display:grid;grid-template-columns:1fr 1fr;gap:.16in .28in;align-content:start}}
-.bk h4{{font-weight:600;font-size:7.4pt;letter-spacing:.2em;text-transform:uppercase;padding-bottom:3pt;border-bottom:1pt solid currentColor;margin-bottom:5pt}}
-.bk h4 em{{font-family:"BSD";font-weight:800;font-style:normal;font-size:20pt;letter-spacing:0;color:var(--tinta);margin-right:4pt;vertical-align:-3pt}}
-.bk p{{font-size:9.6pt;line-height:1.4;margin-bottom:4pt}}
-.bk p.small{{font-size:7.6pt;color:var(--gris)}}
-.bk.wide{{grid-column:1/-1}}
-.q{{margin:0 0 5pt}}
-.q p{{font-family:"BSD";font-weight:700;font-size:12pt;line-height:1.08;text-transform:uppercase;margin-bottom:1pt}}
-.q p::before{{content:"«"}}.q p::after{{content:"»"}}
-.q.big p{{font-size:24pt;font-weight:800}}
-.q.big{{margin:.02in 0 .16in}}
-.q cite{{display:block;font-style:normal;font-weight:600;font-size:6.8pt;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta)}}
-.R.dk .q cite{{color:var(--rosa)}}
-.bk .q p{{font-size:10.4pt}}
-.ths{{display:grid;grid-template-columns:repeat(4,1fr);gap:5pt}}
-.bk .ths:has(.th:nth-child(2):last-child){{grid-template-columns:repeat(2,1fr)}}
-.th img{{width:100%;height:.82in;object-fit:cover;display:block;border-radius:2pt}}
-.th figcaption{{font-size:6.6pt;line-height:1.2;margin-top:2pt;color:var(--gris)}}
-.th figcaption b{{display:block;font-weight:600;color:var(--tinta)}}
-.pt{{width:100%;border-collapse:collapse;margin-bottom:3pt}}
-.pt td{{font-size:9.2pt;padding:2.2pt 0;border-bottom:.5pt solid rgba(14,12,11,.25)}}
-.pt td.n{{font-family:"BSD";font-weight:700;text-transform:uppercase;font-size:9.6pt}}
-.pt td:last-child{{text-align:right;font-weight:600}}
-.pf{{position:absolute;left:.52in;right:.52in;bottom:.28in;display:flex;justify-content:space-between;font-weight:600;font-size:6.6pt;letter-spacing:.22em;text-transform:uppercase;opacity:.65;border-top:.5pt solid currentColor;padding-top:5pt}}
-/* portada */
-.cover{{display:flex;flex-direction:column;justify-content:center;height:100%;gap:.12in}}
-.cv-logo{{width:3.1in;margin-bottom:.2in}}
-.cv-sub{{font-weight:600;font-size:9pt;letter-spacing:.3em;text-transform:uppercase;color:#f5c518}}
-.cover h1{{font-size:56pt}}
-.cover h1 span{{color:var(--rosa)}}
-.cv-for{{font-family:"BSD";font-weight:700;font-size:17pt;text-transform:uppercase;margin-top:.2in;color:#2aa1f8}}
-.cv-meta{{font-size:10.5pt;opacity:.8}}
-/* carta */
-.letter p{{font-size:10.6pt;line-height:1.5;margin-bottom:7pt;max-width:5.3in}}
-.letter .sign{{font-family:"BSD";font-weight:800;font-size:15pt;text-transform:uppercase;margin-top:8pt;line-height:1.1}}
-.letter .sign span{{font-family:"BC";font-weight:500;font-size:9.4pt;text-transform:none}}
-/* materia prima */
-.igrid{{display:grid;grid-template-columns:repeat(5,1fr);gap:4pt}}
-.igrid img{{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:2pt}}
-.pair2{{display:flex;gap:.14in}}
-.pair2 img{{width:1.7in;height:2.6in;object-fit:cover;object-position:top;border-radius:3pt}}
-/* tipografía */
-.spec{{background:var(--cre);color:var(--neg);padding:.18in .22in;border-radius:3pt;margin-top:.1in}}
-.sp1{{font-family:"BSD";font-weight:800;font-size:30pt;text-transform:uppercase;line-height:.95;color:#1d5fae}}
-.sp2{{font-size:14pt;line-height:1.3;margin-top:.12in}}
-.spec .cap{{font-weight:600;font-size:6.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);margin-top:3pt}}
-/* paleta */
-.sws{{display:grid;grid-template-columns:repeat(9,1fr);gap:3pt;margin-bottom:.12in}}
-.sw{{height:1.02in;padding:4pt;display:flex;flex-direction:column;justify-content:flex-end;gap:1pt;color:var(--neg);border-radius:2pt;outline:.5pt solid rgba(14,12,11,.2)}}
-.sw.dk{{color:var(--cre)}}
-.sw b{{font-family:"BSD";font-weight:800;text-transform:uppercase;font-size:7.4pt;line-height:1}}
-.sw i{{font-style:normal;font-size:6.4pt}}
-.sw em{{font-style:normal;font-size:6.2pt;opacity:.85}}
-.srcp{{display:grid;grid-template-columns:repeat(3,1fr);gap:5pt;margin:4pt 0 .12in}}
-.srcp img{{width:100%;height:.95in;object-fit:cover;display:block;border-radius:2pt}}
-.srcp figcaption{{font-size:7pt;margin-top:2pt}}
-.srcp figcaption b{{display:block;font-weight:600;color:var(--tinta);font-size:6.6pt}}
-.dkl{{color:var(--tinta);margin-bottom:2pt}}
-/* logos */
-.logos{{display:grid;grid-template-columns:1fr 1fr;gap:6pt;padding:.42in .4in;height:100%;align-content:center}}
-.lg{{display:grid;place-items:center;height:1.9in;padding:.25in;border-radius:3pt}}
-.lg.dark{{background:#000;outline:.5pt solid #333}}.lg.cream{{background:var(--cre)}}.lg.yel{{background:#f5c518}}
-.lg.wide{{grid-column:1/-1;height:1.45in}}
-.lg img{{max-width:100%;max-height:1.35in;width:auto;height:auto;display:block}}
-.lg.wide img{{max-height:.8in}}
-/* recorrido */
-.strip{{display:grid;grid-template-columns:repeat(3,1fr);gap:7pt}}
-.strip img{{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-radius:2pt}}
-.strip figcaption{{font-weight:600;font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;margin-top:3pt}}
-/* cierre */
-.close{{display:flex;flex-direction:column;justify-content:center;height:100%;gap:.07in}}
-.cl-logo{{width:2.2in;margin-bottom:.22in}}
-.next{{list-style:none;margin:.02in 0 .2in}}
-.next li{{font-size:12pt;line-height:1.4;padding:5pt 0;border-bottom:.5pt solid rgba(245,233,219,.35)}}
-.close a{{color:inherit;text-decoration:none}}
-.invite{{font-family:"BSD";font-weight:700;font-size:18pt;text-transform:uppercase;color:#f5c518;margin-bottom:.06in}}
-.who{{font-weight:600;font-size:10pt;letter-spacing:.24em;text-transform:uppercase}}
-.role{{font-size:10pt;margin-top:-3pt}}
-.contact{{font-size:9pt;opacity:.7}}
-.link{{font-family:"BSD";font-weight:800;font-size:20pt;letter-spacing:.06em;text-transform:uppercase;color:var(--rosa);margin-top:.1in}}
+.bleed{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}}
+.abs{{position:absolute;display:block;z-index:4}}
+.spread-tab{{position:absolute;left:0;top:.45in;background:#fff;opacity:.75;padding:.2in .36in .2in .5in;border-radius:0 .18in .18in 0}}
+.spread-logo{{width:1.9in;display:block}}
+.no{{position:absolute;right:.4in;bottom:.28in;font-weight:600;font-size:7.5pt;letter-spacing:.2em;z-index:20}}
+.tx{{position:absolute;z-index:4}}
+.tx.tag{{text-align:center;z-index:5}}
+.card{{border-radius:.22in;padding:.3in .34in;box-shadow:0 10pt 30pt rgba(0,0,0,.2)}}
+.k{{font-weight:600;font-size:8pt;letter-spacing:.24em;text-transform:uppercase;margin-bottom:.1in}}
+.t{{font-family:"BSD";font-weight:800;font-size:40pt;line-height:.95;text-transform:uppercase;margin-bottom:.18in}}
+.t em{{font-style:normal}}
+.t3{{font-family:"BSD";font-weight:800;font-size:26pt;text-transform:uppercase;margin-bottom:.05in}}
+.t4{{font-family:"BSD";font-weight:800;font-size:19pt;text-transform:uppercase;margin:.1in 0 .05in}}
+.p{{font-size:10.6pt;line-height:1.42;margin-bottom:.08in}}
+.p.sm{{font-size:9pt;color:{GR}}}
+.q2{{margin:.04in 0 .1in}}
+.q2 p{{font-family:"BSD";font-weight:700;font-size:13.5pt;line-height:1.08;text-transform:uppercase;margin-bottom:3pt}}
+.q2 cite{{font-style:normal;font-weight:600;font-size:7.4pt;letter-spacing:.16em;text-transform:uppercase;color:{TN}}}
+.q2.light p{{color:#fff}}.q2.light cite{{color:rgba(255,255,255,.8)}}
+.letter p{{font-size:13.2pt;line-height:1.45;margin-bottom:.12in}}
+.sign{{font-family:"BSD";font-weight:800;font-size:16pt;text-transform:uppercase;letter-spacing:.04em}}
+.seal{{position:absolute;z-index:6;filter:drop-shadow(0 8pt 18pt rgba(0,0,0,.25))}}
+.pic{{position:absolute;overflow:hidden;box-shadow:0 12pt 34pt rgba(0,0,0,.22)}}
+.pic img{{width:100%;height:100%;object-fit:cover;display:block}}
+.fr{{position:absolute;border-radius:8pt;overflow:hidden;box-shadow:0 14pt 34pt rgba(0,0,0,.32);background:#111}}
+.fr img{{width:100%;display:block}}
+.fr.lt{{outline:2.5pt solid rgba(245,233,219,.45);outline-offset:-2.5pt}}
+.ph{{position:absolute;border-radius:16pt;overflow:hidden;border:4pt solid #111;box-shadow:0 14pt 30pt rgba(0,0,0,.35);background:#111}}
+.ph img{{width:100%;display:block;border-radius:12pt}}
+.rb{{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center}}
+.rb-bg{{position:absolute;inset:14%;transform:rotate(45deg);border-radius:6pt;box-shadow:0 8pt 20pt rgba(0,0,0,.25)}}
+.rb>div{{position:relative;font-family:"BSD";font-weight:800;text-transform:uppercase;line-height:.98}}
+.rbn{{font-size:30pt;font-weight:800}}
+.rbs{{display:block}}
+.pol{{position:absolute;background:#fff;padding:.08in .08in .3in;box-shadow:0 10pt 24pt rgba(0,0,0,.32)}}
+.pol img{{width:100%;aspect-ratio:1;object-fit:cover;display:block}}
+.plato{{position:absolute;border-radius:50%;overflow:hidden;border:5pt solid {CR};box-shadow:0 12pt 26pt rgba(0,0,0,.3);z-index:2}}
+.plato img{{width:100%;height:100%;object-fit:cover;display:block}}
+.bigs{{display:grid;grid-template-columns:1fr 1fr;gap:.14in .3in;margin:.04in 0 .2in}}
+.bign b{{display:block;font-family:"BSD";font-weight:800;font-size:58pt;line-height:.95;color:{AM}}}
+.bign span{{display:block;font-size:10pt;line-height:1.3;color:#fff;margin-top:.03in}}
+.stripes{{position:absolute;right:0;top:0;bottom:0;width:5.1in;display:flex}}
+.stripe{{flex:1;position:relative}}
+.stripe .sn{{position:absolute;left:50%;top:.55in;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-weight:600;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}}
+.stripe .sh{{position:absolute;left:0;right:0;bottom:.55in;font-weight:600;font-size:7pt;letter-spacing:.06em;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;width:100%}}
+.spa{{font-family:"BSD";font-weight:800;font-size:66pt;line-height:.92;text-transform:uppercase}}
+.spb{{font-family:"BSD";font-weight:800;font-size:34pt;line-height:1;text-transform:uppercase;color:{TN};margin:.02in 0}}
+.cap2{{font-weight:600;font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:{GR};margin-top:.16in}}
+.cols3{{display:grid;grid-template-columns:repeat(3,1fr);gap:.28in}}
+.cols3 h4{{font-family:"BSD";font-weight:800;font-size:19pt;text-transform:uppercase;margin-bottom:.05in}}
+.cols3 p{{font-size:10pt;line-height:1.42}}
+.pills{{display:flex;flex-wrap:wrap;gap:6pt}}
+.pill{{display:inline-block;padding:5pt 11pt;border-radius:999px;font-family:"BSD";font-weight:700;font-size:10.5pt;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 3pt 8pt rgba(0,0,0,.12)}}
+.apodos{{display:grid;grid-template-columns:1fr 1fr;gap:6pt;margin:.06in 0 .14in}}
+.apodo{{background:{NE};color:{CR};border-radius:6pt;padding:6pt 9pt}}
+.apodo span{{display:block;font-weight:600;font-size:7.4pt;letter-spacing:.18em;text-transform:uppercase;color:{AM}}}
+.apodo b{{display:block;font-family:"BSD";font-weight:700;font-size:11pt;line-height:1.05;text-transform:uppercase}}
+.qq{{position:absolute;font-family:"BSD";font-weight:800;font-size:170pt;line-height:1;color:{RO};z-index:1}}
+.qbig{{font-family:"BSD";font-weight:800;font-size:26pt;line-height:1.02;text-transform:uppercase;color:#fff}}
+.cinta{{position:absolute;display:block;border-radius:0 0 2pt 2pt;z-index:1}}
+.dot{{position:absolute;width:2.6in;height:2.6in;border-radius:50%;opacity:.95;z-index:1}}
+.bar{{width:.6in;height:4pt;border-radius:2pt}}
+.mk{{width:.5in;display:block;margin-bottom:.14in}}
+.next{{list-style:none;margin:.04in 0 .18in}}
+.next li{{font-size:10.6pt;line-height:1.4;padding:5pt 0;border-bottom:.5pt solid rgba(14,12,11,.2)}}
+.invite{{font-size:14pt;font-style:italic;margin-bottom:.06in}}
+.who{{font-family:"BSD";font-weight:800;font-size:12pt;letter-spacing:.16em;text-transform:uppercase}}
+.role{{font-size:10pt}}
+.contact{{font-size:9pt;color:{GR}}}
+.card a{{color:inherit;text-decoration:none}}
+.link{{font-family:"BSD";font-weight:800;font-size:20pt;letter-spacing:.12em;text-transform:uppercase;color:{RO};margin-top:.1in}}
 '''
 
 DOC = f'''<!doctype html><html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Almud Bar · Decisiones de diseño del sitio web</title><style>{CSS}</style></head>
-<body>{"".join(L)}</body></html>'''
+<body>{''.join(L)}</body></html>'''
 out = D / 'almud-dossier-diseno.html'
 out.write_text(DOC, encoding='utf-8')
-print('ok', out, len(L), 'láminas', round(len(DOC) / 1e6, 1), 'MB')
+print('ok', len(L), 'láminas', round(len(DOC) / 1e6, 1), 'MB',
+      dict(fotos=N_FOTOS, videos=N_VIDEOS, posts_usados=N_POSTS_USADOS, posts=N_POSTS, items=N_ITEMS, rev=N_REV, rev_sitio=N_RES_SITIO, paises=N_PAIS))
